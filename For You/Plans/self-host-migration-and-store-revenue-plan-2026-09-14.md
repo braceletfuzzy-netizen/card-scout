@@ -2,6 +2,48 @@
 
 **Date**: 2026-09-14
 **Author**: Hugo
+**Status**: Plan only (no code changes yet)
+**Triggers**: (a) operational cost reduction at scale, (b) revenue offset via store actors
+
+> ## HARD RULE (user-confirmed, 2026-09-14 evening)
+>
+> > "I still like having published actors that are very general that can offset
+> > costs for us in the long term, but I don't want to give away the tools that
+> > someone can pay us a pittance for to create a competitor in our space as we
+> > start to gain traction."
+>
+> **Translation**: All 3 of our current actors serve the card collecting domain.
+> Publishing ANY of them lets a competitor build a Card Scout clone for $5/mo.
+> They are NOT eligible for store publication.
+>
+> **What's revised below**: The "publish actors to Apify Store" section is now
+> framed as "build NEW general-domain actors to publish" rather than "publish
+> our existing card-domain actors." The Card Scout actors stay private forever.
+> Only the self-host migration portion remains valid as-is.
+
+---
+
+## Executive Summary
+
+We currently run our 3 actors on Apify for ~$7/mo (low scale). Two strategic
+options exist:
+
+1. **Self-host on a VPS** when scale justifies migration (saves $5-7/mo at
+   current scale, $50-100/mo at 100 customers)
+2. **Build NEW general-domain actors and publish to Apify Store** — turn
+   infrastructure cost into a profit center WITHOUT leaking the Card Scout
+   competitive moat
+
+**Recommendation**: Don't touch our Card Scout actors. If we want revenue,
+build general-domain actors for unrelated markets (real estate, generic Amazon,
+non-Vostok watches) and publish those. The scrapers themselves become
+commodities, but the alert flow + statistical math + per-grade ticker format
+stay private.
+
+---
+
+**Date**: 2026-09-14
+**Author**: Hugo
 **Status**: 📋 Plan only (no code changes yet)
 **Triggers**: (a) operational cost reduction at scale, (b) revenue offset via store actors
 
@@ -154,11 +196,20 @@ def run_apify_search(...):
 
 ### What we have (asset inventory)
 
-| Actor | Status | Public? | Cost to publish |
+| Actor | Status | Domain | Publish? |
 |---|---|---|---|
-| eBay + Etsy Marketplace Scraper | Build 0.4.11 | **YES (1 user — us)** | Already public, just need to enable pricing |
-| PSA Population Lookup | Build 1.0.3 | No | Make public, add pricing |
-| Sportscardspro + PriceCharting Lookup | Build 1.2.2 | No | Make public, add pricing |
+| eBay + Etsy Marketplace Scraper | Build 0.4.11 | Cards | **NEVER publish** (too domain-specific) |
+| PSA Population Lookup | Build 1.0.3 | Cards | **NEVER publish** |
+| Sportscardspro + PriceCharting Lookup | Build 1.2.2 | Cards | **NEVER publish** |
+
+**Why none of these are publishable**: They all serve the card collecting
+domain. A competitor could combine any of them + a simple Discord webhook to
+replicate Card Scout's data layer in a weekend. We'd be giving away our
+6-month R&D investment for $50/mo in store revenue.
+
+**Alternative revenue path**: Build NEW general-domain actors for unrelated
+markets (real estate, generic Amazon, watches-but-not-Vostok, generic eBay
+search). These don't compete with Card Scout and can be published safely.
 
 ### What's "secret sauce" vs commoditized
 
@@ -176,7 +227,7 @@ This is the critical question. Let me audit each actor:
 - `matchPreset()` — knows about specific market segments (cards, watches)
 - Custom presets (`cards-sports`, `cards-pokemon`, etc.) — these are domain-specific
 
-**Verdict**: **Publish a stripped-down version** that supports general eBay/Etsy search but NOT the preset taxonomy. Generic users get a great eBay scraper. Our Card Scout keeps the smart expansion.
+**Verdict**: **DO NOT PUBLISH — even stripped.** Even without the preset taxonomy, the card-specific eBay scraping logic (price ranges, item condition parsing, etc.) is part of our product. Better to build a NEW general-purpose eBay actor if we want revenue from that domain.
 
 #### PSA actor — secret sauce?
 
@@ -188,7 +239,7 @@ This is the critical question. Let me audit each actor:
 **Secret sauce (DO NOT publish):**
 - (Looked at this actor — it's mostly generic scraping. PSA's site is the same for everyone.)
 
-**Verdict**: **Publish entirely.** Our competitive edge is the bot integration + per-grade ticker, not the scraper itself. Anyone scraping PSA's public pop reports gets the same data.
+**Verdict**: **DO NOT PUBLISH.** Even though the scraping is generic, the PSA domain is too narrow. A competitor could combine this + a simple alert flow to undercut us. Keep private.
 
 #### Sportscardspro + PriceCharting actor — secret sauce?
 
@@ -200,38 +251,58 @@ This is the critical question. Let me audit each actor:
 **Secret sauce (DO NOT publish):**
 - (Per working notes: "sportscardspro + pricecharting = SAME backend" was a discovery. The price tiers `manual_only_price`, `graded_price` etc. are discovered knowledge — but anyone could reverse-engineer them.)
 
-**Verdict**: **Publish entirely.** Generic users get a price-charting scraper. Our bot gets the same data + we don't have to maintain it.
+**Verdict**: **DO NOT PUBLISH.** Sportscardspro + PriceCharting = our core data layer. The fact that they're the same backend (per working notes) is a competitive insight. Anyone with this actor + a webhook can replicate our entire data pipeline.
 
-### Recommended store strategy: 3-actor product suite
+### Recommended store strategy: Build NEW general-domain actors (NOT our Card Scout ones)
 
-**Product 1: "Trading Card Price Lookup" (sportscardspro + pricecharting actor)**
-- Pricing: $0.50 per 1000 results (or $5/mo for unlimited with cap)
-- Description: "Pull per-grade prices for any PSA/BGS/CGC-graded card. Returns raw + graded prices across all major card categories."
-- Use case: eBay sellers checking market prices, TCGPlayer competitors, grading services
+**Card Scout's competitive moat is the alert flow + statistical math, not the
+scraping. So publishing scrapers in OTHER domains is fine — they don't help
+anyone replicate Card Scout.**
 
-**Product 2: "PSA Population Report Lookup"**
-- Pricing: $0.30 per 1000 results
-- Description: "Authenticated PSA population data — get pop counts for any card set or individual card. Supports historical pop report snapshots."
-- Use case: Card graders, investors tracking scarcity, set registry users
+**Product ideas (none of these compete with Card Scout):**
 
-**Product 3: "eBay + Etsy Marketplace Scraper"** (stripped down)
+**Product 1: "Generic eBay + Etsy Search Tool"** (build NEW from scratch)
+- Take the eBay actor's generic parts (bdFetch, parseEbayListingsFromHtml)
+- Strip ALL preset taxonomy, smart expansion, card-specific logic
+- Make it a clean, well-documented general-purpose marketplace scraper
 - Pricing: $0.50 per 1000 results
-- Description: "General-purpose eBay + Etsy scraper. Supports active listings, sold listings, custom queries. Bright Data proxy support."
-- Use case: General e-commerce research, dropshippers, market analysts
-- **NOTE**: Strip the preset taxonomy. Make it a generic search tool.
+- Domain: GENERAL e-commerce (anyone selling anything on eBay)
+- Use case: eBay sellers, dropshippers, market researchers
 
-### Revenue model (APIs revenue share)
+**Product 2: "Generic Amazon Product Search"** (build NEW from scratch)
+- Different domain, no overlap with Card Scout
+- Pricing: $0.50 per 1000 results
+- Use case: e-commerce research, retail analytics
+
+**Product 3: "Real Estate Listing Aggregator"** (build NEW from scratch)
+- Zillow + Realtor + Redfin
+- Pricing: $1.00 per 1000 results (real estate data is higher-value)
+- Use case: Real estate investors, agents, market analysts
+
+**Or: "Generic Watch Marketplace Scraper"** (NOT for Vostok specifically)
+- Chrono24 + Watchfinder + Hodinkee (general watch market)
+- Pricing: $0.75 per 1000 results
+- Use case: Watch dealers, collectors, market analysts
+
+**Key principle**: Build NEW actors for OTHER domains. Don't repurpose our
+Card Scout actors — that path leads to competitors.
+
+
+### Revenue model (Apify revenue share)
 
 Apify's standard revenue share for paid actors:
 - **80% to actor owner**
 - 20% to Apify
 
-At our current scale, we'd earn roughly:
-- Sportscardspro actor: $0.50/1000 results × 100K results/mo = **$50/mo revenue**
-- PSA actor: $0.30/1000 × 50K = **$15/mo revenue**
-- eBay actor: $0.50/1000 × 200K = **$100/mo revenue** (high demand for general scrapers)
+**If we publish 2 NEW general-domain actors** (build from scratch, NOT our Card Scout ones):
+- Generic eBay scraper: $0.50/1000 × 200K results/mo = **$100/mo revenue** at scale
+- Generic watch marketplace: $0.75/1000 × 50K = **$37.50/mo revenue**
 
-**Conservative estimate: $50-100/mo passive revenue** once store actors have users.
+**Conservative estimate: $50-200/mo passive revenue** once the new actors have users.
+
+**Important**: We have to BUILD these new actors from scratch (1-2 weeks dev
+time). They don't reuse Card Scout code. The dev investment is real, but
+$50-200/mo passive for a couple weeks of work is a great ROI.
 
 ### Pricing experiments to run
 
@@ -264,17 +335,21 @@ has the ticker format + 90% CI + alert flow.** That's what we charge for.
 
 ### Risk: Leaking secret sauce
 
-The biggest risk is **recreating a competitor by giving away the scraper code**.
+**This section was REVERSED by user decision (2026-09-14 evening).**
 
-**Mitigation**:
-- **Strip the eBay actor** — keep preset expansion in the bot, not the actor
-- **Use code obfuscation** on published actor code (Apify Store hides source anyway)
-- **Don't include test data or sample queries** that hint at our card catalog
-- **Test the published version** yourself to verify nothing leaks
+The reality is now: **scraping IS proprietary when it serves your product.**
+Even though our scraper code isn't novel in itself, the cumulative effect of
+publishing any of our 3 actors would be to give a competitor a 6-month head
+start in replicating Card Scout.
 
-The reality: our scraper logic isn't proprietary. The value is in the **alert
-flow + statistical math + customer relationship**. Publishing scrapers helps
-us, doesn't hurt us.
+**New rule**: Our Card Scout actors are NEVER published. Even a "stripped"
+version leaks enough domain knowledge to let a determined competitor
+recreate Card Scout.
+
+**The path forward for revenue**: Build NEW general-domain actors for OTHER
+markets. Different domain = no overlap with Card Scout = safe to publish.
+Real estate, Amazon, non-Vostok watches, generic product search — anything
+outside the trading card collecting space.
 
 ---
 
