@@ -1,0 +1,13 @@
+{
+  "actorOutputSchemaVersion": 1,
+  "title": "eBay + Etsy Marketplace Listings",
+  "description": "Structured marketplace listing data from eBay and Etsy with title, price (USD), currency, marketplace, and URL.",
+  "properties": {
+    "results": {
+      "type": "string",
+      "title": "Listings",
+      "description": "Scraped product listings from eBay and/or Etsy with normalized pricing",
+      "template": "{{links.apiDefaultDatasetUrl}}/items"
+    }
+  }
+}

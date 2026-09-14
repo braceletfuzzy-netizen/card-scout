@@ -1,0 +1,17 @@
+{
+  "actorSpecification": 1,
+  "id": "AtQq66Qn8FB7aLq2l",
+  "name": "ebay-etsy-marketplace-scraper-pro",
+  "title": "eBay + Etsy Scraper Pro - Watches, Cards, Sneakers & More",
+  "version": "0.4",
+  "description": "Stop slaving over your computer clicking through hundreds of listings. Pay less than a coffee ($0.11 for 30 listings) to save 5+ hours of manual price research. Scrape eBay AND Etsy in one run \u2014 the world's two largest consumer marketplaces. Search for ANYTHING: watches, Pokemon cards, sports cards, sneakers, vintage items, antiques. Real prices in USD with median, min, max, and quartile stats. 14 pre-built categories across watches, sports cards, TCG/Pokemon, sneakers, and vintage collectibles. Anti-bot bypass via Bright Data. 98% cheaper than CardLadder ($20/mo). Perfect for collectors, resellers, and price monitoring.",
+  "defaultRunOptions": {
+    "build": "latest",
+    "memoryMbytes": 2048,
+    "timeoutSecs": 1800
+  },
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  },
+  "output": "./output_schema.json"
+}

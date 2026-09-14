@@ -1,0 +1,767 @@
+#!/usr/bin/env python3
+"""
+Fuzzy Bracelet Discord Alert Bot v3.0 - SQLAlchemy + Trend Detection
+
+Reads customer config from DB (not hardcoded).
+Saves snapshots on each run.
+Computes trend signals + Q bands.
+Sends alerts with rich market data.
+
+Usage:
+  python discord_alert_bot.py --test-customer EMAIL  # Test mode for specific customer
+  python discord_alert_bot.py --dry-run             # Check for deals but don't send
+  python discord_alert_bot.py                       # Full run (production mode)
+
+Database:
+  SQLite (default): card_scout.db
+  Postgres: set DATABASE_URL=postgresql://...
+"""
+import json
+import sys
+import argparse
+import requests
+from pathlib import Path
+from datetime import datetime
+import time
+
+# Add scripts dir to path for sibling imports
+sys.path.insert(0, str(Path(__file__).parent))
+
+from db_models import Customer, Card, Snapshot, RunHistory, init_db, get_session
+from snapshot_system import (
+    save_run_snapshot, get_card_snapshots, get_trend_emoji,
+    compute_snapshot_stats
+)
+from psa_pop_lookup import lookup_psa_population, extract_pop_summary
+from sportscardspro_lookup import lookup_sportscardspro, extract_sold_summary
+
+# ============ CONFIG ============
+APIFY_TOKEN = "apify_api_taheCsiucleGxYau39AepimOmTnH1h0nTUCZ"
+ACTOR_ID = "AtQq66Qn8FB7aLq2l"  # eBay+Etsy scraper
+BASE_URL = "https://api.apify.com/v2"
+
+# Load Bright Data token
+BD_TOKEN_PATH = Path(r"C:/Users/J/Documents/LLM/card-scout/config/bright-data-token.txt")
+BD_TOKEN = BD_TOKEN_PATH.read_text().strip() if BD_TOKEN_PATH.exists() else None
+
+# Bot appearance
+BOT_NAME = "Card Scout"
+BOT_AVATAR_PATH = "For You/Brand/card-scout-binoculars-logo.png"
+BOT_TAGLINE = "Scouting card deals 24/7"
+BOT_COLOR = 0x2C3E50  # Dark blue-gray
+
+# Tier limits (matches DB tier column)
+TIER_LIMITS = {
+    "trial": 3,
+    "lite": 3,
+    "standard": 10,
+    "pro": 30,
+    "beta": 6,
+    "beta_casual": 6,
+    "beta_power": 20,
+}
+
+# First expanded term from each preset (avoids full preset expansion hang).
+# Use ONE term from each preset in customSearchTerms instead of all 10.
+# NOTE: These mirror the FIRST ebayTerms entry in the actor's PRESET_TERMS dict.
+PRESET_FIRST_TERMS = {
+    "cards-sports": "baseball card",     # cards-sports preset's first term
+    "cards-graded": "PSA 10",            # cards-graded preset's first term
+    "cards-pokemon": "pokemon card",     # cards-pokemon preset's first term
+    "cards-tcg": "magic the gathering",  # cards-tcg preset's first term
+    # Watch presets (for completeness)
+    "watches-luxury": "rolex",
+    "watches-japanese": "seiko",
+    "watches-vintage": "vintage watch",
+    "watches-dive": "dive watch",
+    "watches-dress": "dress watch",
+    "watches-sports": "chronograph",
+    "watches-pilot": "pilot watch",
+    "watches-field": "field watch",
+}
+
+print(f"✓ Card Scout bot configured (v3.0 - SQLAlchemy)")
+print(f"  Logo: {BOT_AVATAR_PATH}")
+print(f"  Name: {BOT_NAME}")
+print(f"  DB: SQLite (default)")
+
+
+# ============ APIFY RUNNER ============
+def build_grade_search_suffix(card):
+    """Build eBay search suffix based on grade filter checkboxes.
+
+    Customer picks which grades matter. We narrow the eBay search to those.
+
+    Tiers (6-bucket system):
+        track_psa_10:         "PSA 10" / "BGS 9.5 Black Label"
+        track_psa_9:          "PSA 9" / "BGS 9-9.5"
+        track_psa_8:          "PSA 8" / "BGS 8.5-9"
+        track_psa_lower:      "PSA 7" or below / BGS 8 or below
+        track_raw:            "raw" / "ungraded" / "unslabbed"
+        track_other_graders:  "SGC" / "CGC" / other grading companies
+
+    Returns:
+        String to append to eBay search, like " (PSA 9 OR raw)"
+        Empty string if all False (or all True) - means no filter
+    """
+    # Build a list of grade keywords
+    grade_terms = []
+
+    if card.track_psa_10:
+        grade_terms.append('(PSA 10 OR "BGS 9.5" OR "Black Label")')
+
+    if card.track_psa_9:
+        grade_terms.append('(PSA 9 OR "BGS 9")')
+
+    if card.track_psa_8:
+        grade_terms.append('(PSA 8 OR "BGS 8.5")')
+
+    if card.track_psa_lower:
+        grade_terms.append('(PSA 7 OR PSA 6 OR PSA 5 OR PSA 4 OR PSA 3 OR PSA 2 OR PSA 1 OR "BGS 8" OR lower)')
+
+    if card.track_raw:
+        grade_terms.append('(raw OR ungraded OR unslabbed OR "no grade")')
+
+    if card.track_other_graders:
+        grade_terms.append('(SGC OR CGC OR "other grader")')
+
+    if not grade_terms:
+        return ""  # No filter - all grades
+
+    if len(grade_terms) == 6:
+        return ""  # All checked = no filter needed (default behavior)
+
+    # Combine with OR
+    return " " + " OR ".join(grade_terms)
+
+
+def build_search_query_for_card(card):
+    """Build full eBay search query for a card, including grade filter.
+
+    Args:
+        card: Card model with search_query + grade checkboxes
+
+    Returns:
+        Full search string for eBay
+    """
+    base = card.search_query or ""
+    grade_suffix = build_grade_search_suffix(card)
+    return f"{base}{grade_suffix}"
+
+
+def run_apify_search(search_query, preset="cards-sports", max_listings=15, include_sold=False):
+    """Run the eBay+Etsy scraper and return results.
+
+    NOTE: Preset expansion is broken (creates 8 BD queries that hang).
+    Use empty presets + custom_search_terms for reliable single-query runs.
+
+    Returns:
+        dict with 'run_id', 'items', 'duration'
+    """
+    print(f"  [APIFY] Searching: {search_query} (preset: {preset}, include_sold: {include_sold})")
+
+    # Use SMART approach: customSearchTerms for the exact query (1 query) PLUS
+    # the FIRST term from the preset's expanded list (1 more query). This gives
+    # us preset-matching coverage without triggering the full expansion hang.
+    preset_first_term = ""
+    if preset and preset in PRESET_FIRST_TERMS:
+        preset_first_term = PRESET_FIRST_TERMS[preset]
+
+    payload = {
+        "smartSearch": "",  # Skip smart expansion (interp is single-term for proper nouns)
+        "maxListingsPerQuery": max_listings,
+        "marketplaces": ["ebay"],
+        "brightDataToken": BD_TOKEN,
+        "brightDataZone": "web_unlocker1",
+        "presets": [],  # No preset expansion (hangs); rely on preset's top term below
+        "customSearchTerms": [search_query] + ([preset_first_term] if preset_first_term else []),
+        "includeSold": include_sold,
+    }
+
+    start_time = time.time()
+
+    # Start run
+    start_url = f"{BASE_URL}/acts/{ACTOR_ID}/runs?token={APIFY_TOKEN}"
+    resp = requests.post(start_url, json=payload, timeout=30)
+    run_data = resp.json().get("data", {})
+    run_id = run_data.get("id")
+    dataset_id = run_data.get("defaultDatasetId")
+
+    if not run_id:
+        print(f"  [ERROR] Failed to start Apify run: {resp.text[:200]}")
+        return None
+
+    print(f"  [APIFY] Run started: {run_id}")
+
+    # Poll for completion (max 5 min)
+    for i in range(30):
+        time.sleep(10)
+        status_resp = requests.get(
+            f"{BASE_URL}/actor-runs/{run_id}?token={APIFY_TOKEN}",
+            timeout=15
+        )
+        status = status_resp.json().get("data", {}).get("status")
+        if status in ["SUCCEEDED", "FAILED", "ABORTED", "TIMED-OUT"]:
+            break
+
+    duration = time.time() - start_time
+
+    if status != "SUCCEEDED":
+        print(f"  [APIFY] Run failed: {status}")
+        return None
+
+    # Get items
+    items_url = f"{BASE_URL}/datasets/{dataset_id}/items?token={APIFY_TOKEN}"
+    items = requests.get(items_url, timeout=30).json()
+    print(f"  [APIFY] Found {len(items)} items ({duration:.0f}s)")
+
+    return {
+        'run_id': run_id,
+        'items': items,
+        'duration': duration,
+    }
+
+
+# ============ DEAL FINDER ============
+def filter_matching_items(items, search_query):
+    """Filter items that match the search query keywords."""
+    keywords = [k.lower() for k in search_query.split() if len(k) > 2]
+    matching = []
+    for item in items:
+        title = (item.get('title') or '').lower()
+        if any(kw in title for kw in keywords):
+            matching.append(item)
+    return matching
+
+
+def compute_summary(matching_items):
+    """Compute market summary from matching items."""
+    prices = [i['price_usd'] for i in matching_items if i.get('price_usd') is not None and i['price_usd'] > 0]
+    if not prices:
+        return None
+
+    sorted_p = sorted(prices)
+    n = len(sorted_p)
+
+    def pct(p):
+        idx = min(int(n * p), n - 1)
+        return sorted_p[idx]
+
+    return {
+        'total_listings': len(matching_items),
+        'median_price_usd': sorted_p[n // 2],
+        'avg_price_usd': sum(prices) / len(prices),
+        'min_price_usd': min(prices),
+        'max_price_usd': max(prices),
+        'q1_price_usd': pct(0.25),
+        'q3_price_usd': pct(0.75),
+    }
+
+
+def find_deals(matching_items, summary, alert_type='below_median'):
+    """Find items that match the alert criteria."""
+    if not summary or not matching_items:
+        return []
+
+    threshold = {
+        'below_median': summary.get('median_price_usd'),
+        'below_q1': summary.get('q1_price_usd'),
+        'below_q3': summary.get('q3_price_usd'),
+        'below_avg': summary.get('avg_price_usd'),
+    }.get(alert_type)
+
+    if not threshold:
+        return []
+
+    deals = [i for i in matching_items if i.get('price_usd') and i['price_usd'] < threshold]
+    return deals
+
+
+# ============ DISCORD MESSAGES ============
+def format_deal_alert(search_query, summary, deals, snapshot, alert_type='below_median', pop_data=None, sold_items=None, sold_data=None):
+    """Format the Discord alert embed.
+
+    Per ticker spec (card-scout-ticker-system-spec-2026-09-14.md):
+    - SHOW per-grade market values, typical ranges
+    - DO NOT calculate profit or recommend whether to buy
+    - Customer decides based on per-grade ticker data
+
+    Args:
+        deals: list of below-median deal dicts (raw bot-style)
+        sold_items: list of recent sold listings (optional)
+        sold_data: sportscardspro extracted summary (legacy single-tier)
+        pop_data: PSA pop data
+    """
+    """Create a Discord embed with Q bands + per-grade ticker + trend signal."""
+    if not deals:
+        return None
+
+    deals = sorted(deals, key=lambda x: x.get('price_usd', 0))
+
+    threshold_label = {
+        "below_median": "median",
+        "below_q1": "Q1 (25th percentile)",
+        "below_q3": "Q3 (75th percentile)",
+        "below_avg": "average"
+    }.get(alert_type, "market")
+
+    threshold_value = {
+        "below_median": summary.get('median_price_usd'),
+        "below_q1": summary.get('q1_price_usd'),
+        "below_q3": summary.get('q3_price_usd'),
+        "below_avg": summary.get('avg_price_usd'),
+    }.get(alert_type)
+
+    # Trend signal emoji + label
+    trend_emoji = "⏳" if not snapshot else get_trend_emoji(snapshot.trend_signal or 'INSUFFICIENT_DATA')
+    trend_label = snapshot.trend_signal.replace('_', ' ') if snapshot and snapshot.trend_signal else "INSUFFICIENT DATA"
+
+    embed = {
+        "title": f"🎯 Deal Alert: {search_query[:80]}",
+        "description": (
+            f"Found **{len(deals)}** listings below {threshold_label} (${threshold_value}) "
+            f"\n{trend_emoji} **Trend: {trend_label}**"
+        ),
+        "color": BOT_COLOR,
+        "fields": [],
+        "footer": {"text": f"{BOT_NAME} - {BOT_TAGLINE}"},
+        "timestamp": datetime.utcnow().isoformat()
+    }
+
+    # Market Shape (Q bands)
+    if summary:
+        embed["fields"].append({
+            "name": "📊 Market Shape (Q Bands)",
+            "value": (
+                f"**Q1** ${summary.get('q1_price_usd', 0):.2f} → "
+                f"**Median** ${summary.get('median_price_usd', 0):.2f} → "
+                f"**Q3** ${summary.get('q3_price_usd', 0):.2f}\n"
+                f"Range: ${summary.get('min_price_usd', 0):.2f} - ${summary.get('max_price_usd', 0):.2f}"
+            ),
+            "inline": False
+        })
+
+    # PSA Population Data (if available)
+    if pop_data:
+        psa_10 = pop_data.get('psa_10_pop', 0)
+        psa_9 = pop_data.get('psa_9_pop', 0)
+        total = pop_data.get('total_pop', 0)
+        subject = pop_data.get('subject', 'Unknown card')
+
+        # Rarity scoring: how rare is PSA 10?
+        if psa_10 == 0:
+            rarity = "🔥 ULTRA RARE (0 PSA 10s)"
+        elif psa_10 <= 5:
+            rarity = f"💎 RARE ({psa_10} PSA 10s)"
+        elif psa_10 <= 25:
+            rarity = f"🪨 SCARCE ({psa_10} PSA 10s)"
+        elif psa_10 <= 100:
+            rarity = f"📊 COMMON ({psa_10} PSA 10s)"
+        else:
+            rarity = f"📦 ABUNDANT ({psa_10} PSA 10s)"
+
+        embed["fields"].append({
+            "name": "🎯 PSA Population (Scarcity)",
+            "value": (
+                f"**Card:** {subject}\n"
+                f"**PSA 10:** {psa_10}  |  **PSA 9:** {psa_9}  |  **Total:** {total}\n"
+                f"{rarity}"
+            ),
+            "inline": False
+        })
+
+    # Per-Grade Ticker (Bloomberg-style market value per grade)
+    # Per ticker spec: SHOW the typical range, don't calculate profit
+    if sold_data:
+        try:
+            from grade_range_calculator import build_per_grade_table
+            from ticker_formatter import format_per_grade_ticker
+
+            # Build per-grade table from sportscardspro raw data
+            # We need the raw sc_data, but sold_data is already extracted.
+            # If we have raw sc_data, prefer it (more fields like sales array).
+            sc_raw = sold_data.get('_raw_data') if isinstance(sold_data, dict) else None
+
+            if sc_raw:
+                grade_table = build_per_grade_table(sc_raw)
+            else:
+                # Fall back to legacy single-tier sold_data
+                grade_table = build_per_grade_table({'prices': [
+                    {'tier': 'manual_only_price', 'label': 'PSA 10', 'price': sold_data.get('psa_10_price', 0)},
+                    {'tier': 'graded_price', 'label': 'Grade 9', 'price': sold_data.get('psa_9_price', 0)},
+                    {'tier': 'used_price', 'label': 'Ungraded', 'price': sold_data.get('raw_price', 0)},
+                ], 'sold_counts': [], 'sales': []})
+
+            ticker_text = format_per_grade_ticker(grade_table)
+            embed["fields"].append({
+                "name": "📊 Per-Grade Market Values (ticker)",
+                "value": ticker_text,
+                "inline": False
+            })
+
+            # Per-grade below-market deals
+            try:
+                from ticker_formatter import format_below_market_deals
+                items_for_ticker = deals  # reuse what's already filtered+matching
+                bmd = format_below_market_deals(items_for_ticker, grade_table, max_items=3)
+                if bmd and bmd.get('deals'):
+                    deal_lines = []
+                    for d in bmd['deals']:
+                        deal_lines.append(
+                            f"**${d['price_usd']}** {d['grade_label']} "
+                            f"vs typical ${d['typical_low']:.0f}-${d['typical_high']:.0f} "
+                            f"({d['discount_pct']:.0f}% off) "
+                            f"[link]({d['url']})"
+                        )
+                    embed["fields"].append({
+                        "name": f"🎯 Below-Market Deals ({bmd['total_found']} found, top {len(deal_lines)})",
+                        "value": "\n".join(deal_lines),
+                        "inline": False
+                    })
+            except Exception as e:
+                pass  # Non-fatal: skip per-grade deal detection if it errors
+        except Exception as e:
+            pass  # Non-fatal: skip per-grade ticker if data unavailable
+
+    # Top 3 deals
+    for i, deal in enumerate(deals[:3], 1):
+        savings = threshold_value - deal.get('price_usd', 0)
+        savings_pct = (savings / threshold_value * 100) if threshold_value else 0
+
+        deal_name = f"💰 ${deal.get('price_usd')} ({savings_pct:.0f}% below {threshold_label})"
+        if deal.get('sold_count'):
+            demand_label = "🔥 HOT" if deal['sold_count'] > 50 else "📈 Active" if deal['sold_count'] > 20 else "Steady"
+            deal_name += f"  {demand_label} ({deal['sold_count']} sold)"
+
+        embed["fields"].append({
+            "name": deal_name,
+            "value": f"[{deal.get('title', 'N/A')[:80]}]({deal.get('url', '#')})",
+            "inline": False
+        })
+
+    # Recent Sold (if available) - shows the SELL side
+    if sold_items and len(sold_items) > 0:
+        # Sort by sold_date desc, take top 3
+        sold_sorted = sorted(
+            [s for s in sold_items if s.get('sold_date') or s.get('listing_type') == 'sold'],
+            key=lambda x: x.get('sold_date') or '0000',
+            reverse=True
+        )[:3]
+
+        if sold_sorted:
+            sold_lines = []
+            for s in sold_sorted:
+                date_str = s.get('sold_date', 'recent')[:10] if s.get('sold_date') else 'recent'
+                price = s.get('price_usd', 0)
+                sold_lines.append(f"**${price}** {date_str}  [{s.get('title', '')[:50]}]({s.get('url', '#')})")
+
+            embed["fields"].append({
+                "name": f"💵 Recent Sold ({len(sold_sorted)})",
+                "value": "\n".join(sold_lines),
+                "inline": False
+            })
+
+            # Calculate buy/sell spread
+            if deals and len(deals) > 0:
+                cheapest_buy = min(d.get('price_usd', 0) for d in deals)
+                highest_sold = max(s.get('price_usd', 0) for s in sold_sorted)
+                if cheapest_buy > 0 and highest_sold > 0:
+                    spread = highest_sold - cheapest_buy
+                    spread_pct = (spread / highest_sold) * 100
+                    embed["fields"].append({
+                        "name": "💹 Buy/Sell Spread",
+                        "value": f"Buy ${cheapest_buy} → Sold ${highest_sold} = **${spread} spread ({spread_pct:.0f}%)**",
+                        "inline": False
+                    })
+
+    # Trend history (if available)
+    if snapshot and snapshot.trend_signal and snapshot.trend_signal != 'INSUFFICIENT_DATA':
+        trend_history_text = "Trend detection builds over multiple runs. More history = more accurate signal."
+
+        # If we have 7d and 30d snapshots, show them
+        session = get_session()
+        card_snapshots = session.query(Snapshot).filter_by(card_id=snapshot.card_id).all()
+        session.close()
+
+        seven_d = next((s for s in card_snapshots if s.window == '7d'), None)
+        thirty_d = next((s for s in card_snapshots if s.window == '30d'), None)
+
+        if seven_d and thirty_d:
+            d7 = (snapshot.median_price - seven_d.median_price) / seven_d.median_price * 100
+            d30 = (snapshot.median_price - thirty_d.median_price) / thirty_d.median_price * 100
+            trend_history_text = (
+                f"**7d change:** {d7:+.1f}%  |  **30d change:** {d30:+.1f}%"
+            )
+
+        embed["fields"].append({
+            "name": f"{trend_emoji} Trend Signal",
+            "value": trend_history_text,
+            "inline": False
+        })
+
+    return {
+        "embeds": [embed],
+        "username": BOT_NAME,
+        # Note: Don't override avatar_url - we set the avatar on the webhook itself
+        # via PATCH /webhooks/{id}/{token} with base64 image data
+    }
+
+
+def send_discord_webhook(webhook_url, message_data):
+    """POST message to Discord webhook."""
+    if not webhook_url:
+        return False
+
+    try:
+        resp = requests.post(webhook_url, json=message_data, timeout=10)
+        if resp.status_code in [200, 204]:
+            print(f"  [DISCORD] ✅ Alert sent successfully")
+            return True
+        else:
+            print(f"  [DISCORD] ❌ Failed: {resp.status_code} - {resp.text[:200]}")
+            return False
+    except Exception as e:
+        print(f"  [DISCORD] ❌ Error: {e}")
+        return False
+
+
+# ============ MAIN LOGIC ============
+def process_customer_from_db(customer, dry_run=False):
+    """Process one customer from the DB."""
+    print(f"\n{'='*70}")
+    print(f"Processing: {customer.customer_id} ({customer.email or 'no email'})")
+    print(f"{'='*70}")
+
+    # Get customer's enabled cards
+    session = get_session()
+    cards = session.query(Card).filter_by(
+        customer_id=customer.id,
+        enabled=True
+    ).all()
+    session.close()
+
+    # Tier enforcement
+    max_cards = TIER_LIMITS.get(customer.tier, 6)
+    if len(cards) > max_cards:
+        print(f"  [LIMIT] {customer.tier} tier allows {max_cards} cards, has {len(cards)}")
+        print(f"  Truncating to first {max_cards}")
+        cards = cards[:max_cards]
+
+    if not customer.discord_webhook and not dry_run:
+        print(f"  [SKIP] No Discord webhook configured")
+        return
+
+    if customer.subscription_status not in ['active', 'trial']:
+        print(f"  [SKIP] Subscription: {customer.subscription_status}")
+        return
+
+    if not cards:
+        print(f"  [SKIP] No enabled cards")
+        return
+
+    alerts_sent = 0
+
+    for card in cards:
+        print(f"\n  Checking: {card.search_query}")
+
+        # Run Apify search (active listings)
+        # Use base search_query (not full_search_query with grade filter) —
+        # grade filtering is applied at the MATCHING stage, not the SEARCH stage.
+        # See run_apify_search() for why: eBay's parser doesn't handle long OR queries well.
+        result = run_apify_search(
+            card.search_query,
+            preset=card.preset,
+            max_listings=card.max_listings,
+            include_sold=card.include_sold,
+        )
+
+        if not result:
+            continue
+
+        items = result['items']
+
+        # NOTE: eBay sold scraping via includeSold=True is BROKEN — see actor log
+        # "0 bytes" returned, hangs 200s. Per Sept 14 handoff
+        # (For You/Plans/hugo-handoff-includesold-broken-2026-09-14.md), we use
+        # Sportscardspro instead (already wired below via `sold_data`).
+        # Sold section in alert renders from sportscardspro's per-grade prices.
+        sold_items = []
+
+        # Filter to matching items
+        matching = filter_matching_items(items, card.search_query)
+
+        if not matching:
+            print(f"  [NO MATCHES] No items match '{card.search_query}'")
+            continue
+
+        # Save snapshot (triggers trend detection)
+        print(f"  [SNAPSHOT] Saving {len(matching)} matching items")
+        trend = save_run_snapshot(card.id, matching)
+        print(f"  [TREND] {trend} {get_trend_emoji(trend)}")
+
+        # Compute summary + find deals
+        summary = compute_summary(matching)
+        deals = find_deals(matching, summary, card.alert_type)
+
+        if not deals:
+            print(f"  [NO DEALS] No qualifying deals")
+            continue
+
+        # Get current snapshot for trend display
+        session = get_session()
+        current_snapshot = session.query(Snapshot).filter_by(
+            card_id=card.id, window='current'
+        ).first()
+        session.close()
+
+        # Optional: PSA population lookup (if include_pop flag set)
+        pop_data = None
+        if card.include_pop:
+            psa_set_url = card.psa_set_url
+            if not psa_set_url:
+                print(f"  [POP] No psa_set_url set for card {card.id}, skipping pop lookup")
+            else:
+                print(f"  [POP] Looking up PSA population for {card.search_query[:30]}...")
+                try:
+                    items = lookup_psa_population(psa_set_url, max_results=500, max_wait_sec=300)
+                    if items:
+                        # Hugo's actor schema: each item has 'name', 'psa_10_pop', 'psa_9_pop' (in grade_breakdown), 'total_pop'
+                        keywords = [k for k in card.search_query.split() if len(k) > 2][:3]
+                        pop_data = None
+                        for item in items:
+                            name = (item.get('name') or '').lower()
+                            # Skip the set-total row (it has 'is_set_total': true)
+                            if item.get('is_set_total'):
+                                continue
+                            if all(kw.lower() in name for kw in keywords):
+                                pop_data = {
+                                    'subject': item.get('name'),
+                                    'card_no': item.get('card_no'),
+                                    'psa_10_pop': item.get('psa_10_pop', 0),
+                                    'psa_9_pop': item.get('grade_breakdown', {}).get('9', 0),
+                                    'total_pop': item.get('total_pop', 0),
+                                }
+                                break
+                        if not pop_data and items:
+                            # Fall back to first non-set-total row
+                            for first in items:
+                                if not first.get('is_set_total') and not first.get('_diagnostic') and not first.get('_error'):
+                                    pop_data = {
+                                        'subject': first.get('name'),
+                                        'card_no': first.get('card_no'),
+                                        'psa_10_pop': first.get('psa_10_pop', 0),
+                                        'psa_9_pop': first.get('grade_breakdown', {}).get('9', 0),
+                                        'total_pop': first.get('total_pop', 0),
+                                    }
+                                    break
+                        if pop_data:
+                            print(f"  [POP] ✓ Found: {pop_data.get('subject')} — PSA 10 = {pop_data['psa_10_pop']}, total = {pop_data['total_pop']}")
+                        else:
+                            print(f"  [POP] No matching card in set (got {len(items)} items)")
+                except Exception as e:
+                    print(f"  [POP] Lookup failed: {e}")
+
+        # Optional: Sportscardspro sold data lookup (replaces unreliable eBay sold)
+        sold_data = None
+        sportscardspro_url = getattr(card, 'sportscardspro_url', None)
+        if sportscardspro_url:
+            print(f"  [SCPRO] Looking up sold data for {card.search_query[:30]}...")
+            try:
+                sc_data = lookup_sportscardspro(sportscardspro_url, max_sales=10, max_wait_sec=60)
+                if sc_data:
+                    sold_data = extract_sold_summary(sc_data)
+                    # Stash raw data for ticker formatter (per-grade table needs prices[] + sales[])
+                    if sold_data:
+                        sold_data['_raw_data'] = sc_data
+                    if sold_data and sold_data.get('psa_10_price'):
+                        print(f"  [SCPRO] ✓ PSA 10 ref: ${sold_data['psa_10_price']:.2f} ({sold_data.get('psa_10_sold_30d', '?')} sold)")
+                    else:
+                        print(f"  [SCPRO] Got data but no PSA 10 price")
+                else:
+                    print(f"  [SCPRO] Lookup returned no data")
+            except Exception as e:
+                print(f"  [SCPRO] Lookup failed: {e}")
+
+        # Format alert
+        message = format_deal_alert(
+            card.search_query,
+            summary,
+            deals,
+            current_snapshot,
+            card.alert_type,
+            pop_data=pop_data,
+            sold_items=sold_items if sold_items else None,
+            sold_data=sold_data
+        )
+
+        if not message:
+            continue
+
+        if dry_run:
+            print(f"  [DRY RUN] Would send Discord alert with {len(deals)} deals")
+            print(f"    Sample: ${deals[0].get('price_usd')} - {deals[0].get('title', '')[:60]}")
+            continue
+
+        # Send to Discord
+        if send_discord_webhook(customer.discord_webhook, message):
+            alerts_sent += 1
+
+        # Log run
+        session = get_session()
+        run_record = RunHistory(
+            customer_id=customer.id,
+            card_id=card.id,
+            run_at=datetime.utcnow(),
+            apify_run_id=result.get('run_id'),
+            duration_seconds=result.get('duration'),
+            total_listings=len(items),
+            matching_items=len(matching),
+            deals_found=len(deals),
+            alert_sent=True,
+        )
+        session.add(run_record)
+        session.commit()
+        session.close()
+
+        # Rate limit protection
+        time.sleep(2)
+
+    print(f"\n  [DONE] {alerts_sent} alerts sent to {customer.customer_id}")
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--test-customer', help='Process specific customer_id only')
+    parser.add_argument('--dry-run', action='store_true', help='Check for deals but do not send')
+    args = parser.parse_args()
+
+    print(f"\n{'='*70}")
+    print(f"FUZZY BRACELET DISCORD ALERT BOT v3.0 (DB-backed) - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+    print(f"{'='*70}\n")
+
+    # Initialize DB
+    init_db()
+
+    # Get customers from DB
+    session = get_session()
+
+    if args.test_customer:
+        customers = session.query(Customer).filter_by(customer_id=args.test_customer).all()
+    else:
+        # Get all active customers
+        customers = session.query(Customer).filter(
+            Customer.subscription_status.in_(['active', 'trial'])
+        ).all()
+
+    session.close()
+
+    if not customers:
+        print(f"No customers found.")
+        return
+
+    for customer in customers:
+        process_customer_from_db(customer, dry_run=args.dry_run)
+
+
+if __name__ == '__main__':
+    main()

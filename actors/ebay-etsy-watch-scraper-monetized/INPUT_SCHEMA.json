@@ -1,0 +1,117 @@
+{
+  "title": "eBay + Etsy Marketplace Scraper Pro Input",
+  "description": "Find ANY product on eBay and Etsy. Use Smart Search (NL) OR pick category presets (watches, cards, sneakers, vintage).",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "smartSearch": {
+      "title": "Smart Search (recommended)",
+      "type": "string",
+      "description": "Type what you're looking for. The actor will detect brand, model, and price filters. Examples: 'Rolex Submariner', 'Wayne Gretzky autograph', 'Charizard PSA 10', 'Jordan 1 Chicago'. Works for ANY product category.",
+      "default": "",
+      "editor": "textfield"
+    },
+    "presets": {
+      "title": "Category Presets (multi-select)",
+      "type": "array",
+      "description": "Pick one or more from 14 pre-built categories. Each adds curated search terms. Leave empty to use only Smart Search.",
+      "editor": "select",
+      "items": {
+        "type": "string",
+        "enum": [
+          "watches-luxury",
+          "watches-japanese",
+          "watches-vintage",
+          "watches-dive",
+          "watches-dress",
+          "watches-sports",
+          "watches-pilot",
+          "watches-field",
+          "cards-sports",
+          "cards-graded",
+          "cards-pokemon",
+          "cards-tcg",
+          "sneakers-collectible",
+          "vintage-general"
+        ],
+        "enumTitles": [
+          "WATCHES: Luxury (Rolex, Omega, Tudor, Breitling, IWC, Patek)",
+          "WATCHES: Japanese (Seiko, Casio, Citizen, Grand Seiko)",
+          "WATCHES: Vintage (all eras, all brands)",
+          "WATCHES: Dive (Submariner, Seamaster, SKX, Turtle)",
+          "WATCHES: Dress (Tank, Calatrava, Datejust, Santos)",
+          "WATCHES: Sports (Chronograph, GMT, Daytona)",
+          "WATCHES: Pilot (IWC Pilot, Navitimer, Aviator)",
+          "WATCHES: Field (Khaki, Military, A-11, Marathon)",
+          "CARDS: Sports (MLB, NBA, NFL, NHL - all sports)",
+          "CARDS: Graded (PSA, BGS, CGC, SGC)",
+          "CARDS: Pokemon (Charizard, Pikachu, Base Set, 1st Edition)",
+          "CARDS: TCG (MTG, Yu-Gi-Oh, One Piece)",
+          "SNEAKERS: Collectible (Jordan, Yeezy, Nike, Travis Scott)",
+          "VINTAGE: General (antiques, vintage toys, collectibles)"
+        ]
+      },
+      "default": []
+    },
+    "customSearchTerms": {
+      "title": "Custom Search Terms (optional)",
+      "type": "array",
+      "description": "Add your own search terms. Use exact model numbers or specific items for best results.",
+      "editor": "stringList",
+      "default": []
+    },
+    "maxListingsPerQuery": {
+      "title": "Max listings per search query",
+      "type": "integer",
+      "default": 50,
+      "minimum": 5,
+      "maximum": 200,
+      "description": "Maximum number of listings to extract per search query (5-200).",
+      "editor": "number"
+    },
+    "marketplaces": {
+      "title": "Marketplaces to search",
+      "type": "array",
+      "description": "Which marketplaces to scrape (eBay, Etsy, or both).",
+      "editor": "select",
+      "items": {
+        "type": "string",
+        "enum": [
+          "ebay",
+          "etsy"
+        ],
+        "enumTitles": [
+          "eBay (active listings)",
+          "Etsy (active listings)"
+        ]
+      },
+      "default": [
+        "ebay",
+        "etsy"
+      ]
+    },
+    "brightDataToken": {
+      "title": "Bright Data API Token (REQUIRED)",
+      "type": "string",
+      "description": "Your Bright Data API token. Used to call web_unlocker1 zone which bypasses anti-bot. Get from https://brightdata.com/cp.",
+      "editor": "textfield"
+    },
+    "brightDataZone": {
+      "title": "Bright Data zone",
+      "type": "string",
+      "description": "Default: web_unlocker1 (anti-bot bypass).",
+      "default": "web_unlocker1",
+      "editor": "textfield"
+    },
+    "includeSold": {
+      "title": "Include sold listings (eBay only)",
+      "type": "boolean",
+      "description": "When true, scrapes sold listings instead of active. Returns 'last sold' prices and sale dates. Useful for deal detection (compare current vs sold). Only works for eBay marketplace. Phase 2 feature (Sept 2026).",
+      "default": false,
+      "editor": "checkbox"
+    }
+  },
+  "required": [
+    "brightDataToken"
+  ]
+}

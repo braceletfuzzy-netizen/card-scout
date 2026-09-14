@@ -1,0 +1,6 @@
+# Don't deploy secrets to Apify
+brightdata-config.json
+.env
+*.secret
+node_modules/
+package-lock.json

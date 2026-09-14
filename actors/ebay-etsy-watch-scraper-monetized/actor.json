@@ -1,0 +1,125 @@
+{
+  "actorSpecification": 1,
+  "id": "AtQq66Qn8FB7aLq2l",
+  "name": "ebay-etsy-marketplace-scraper-pro",
+  "title": "eBay + Etsy Scraper Pro - Vintage Watches",
+  "version": "0.5.0",
+  "description": "Scrape eBay AND Etsy in one run — the world's two largest consumer marketplaces. Search for vintage watches, Pokemon cards, sports cards, vintage items, or any other product. Real prices in USD. Anti-bot bypass via Bright Data. 8 categories (luxury, vintage, Pokemon, sports cards, etc.). **NEW Phase 2: includeSold toggle returns 'last sold' comps for graded card deal detection.** Cheaper than yesintelligent Etsy scrapers ($3.50/1k vs $4.00/1k). Perfect for collectors, resellers, and price monitoring.",
+  "categories": [
+    "ECOMMERCE",
+    "LEAD_GENERATION",
+    "MARKETING"
+  ],
+  "defaultRunOptions": {
+    "build": "latest",
+    "memoryMbytes": 2048,
+    "timeoutSecs": 1800
+  },
+  "input": {
+    "title": "eBay + Etsy Marketplace Scraper Pro Input",
+    "description": "Find ANY product on eBay and Etsy. Use Smart Search (NL) OR pick category presets.",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+      "smartSearch": {
+        "title": "Smart Search (recommended)",
+        "type": "string",
+        "description": "Type what you're looking for. The actor will detect brand, model, and price filters. Examples: 'Rolex Submariner', 'Seiko SKX007', 'Omega Speedmaster under $3000', 'vintage Omega Seamaster'.",
+        "default": "",
+        "editor": "textfield"
+      },
+      "presets": {
+        "title": "Category Presets",
+        "type": "array",
+        "description": "Pick from 8 pre-built watch categories. Adds curated search terms for both eBay and Etsy.",
+        "editor": "select",
+        "items": {
+          "type": "string",
+          "enum": [
+            "watches-luxury",
+            "watches-japanese",
+            "watches-vintage",
+            "watches-dive",
+            "watches-dress",
+            "watches-sports",
+            "watches-pilot",
+            "watches-field"
+          ],
+          "enumTitles": [
+            "Luxury Watches (Rolex, Omega, Tudor, Breitling, IWC, Patek)",
+            "Japanese Watches (Seiko, Casio, Citizen, Grand Seiko)",
+            "Vintage Watches (all eras, all brands)",
+            "Dive Watches (Submariner, Seamaster, SKX, Turtle)",
+            "Dress Watches (Tank, Calatrava, Datejust, Santos)",
+            "Sports Watches (Chronograph, GMT, Daytona)",
+            "Pilot Watches (IWC Pilot, Navitimer, Aviator)",
+            "Field Watches (Khaki, Military, A-11, Marathon)"
+          ]
+        },
+        "default": [
+          "watches-luxury"
+        ]
+      },
+      "customSearchTerms": {
+        "title": "Custom Search Terms (optional)",
+        "type": "array",
+        "description": "Add your own search terms. Use exact model numbers for best results (e.g. 'Rolex 116610', 'Omega 311.30.42.30.01.005').",
+        "editor": "stringList",
+        "default": []
+      },
+      "maxListingsPerQuery": {
+        "title": "Max listings per search query",
+        "type": "integer",
+        "default": 50,
+        "minimum": 5,
+        "maximum": 200,
+        "description": "Maximum number of listings to extract per search query (5-200).",
+        "editor": "number"
+      },
+      "marketplaces": {
+        "title": "Marketplaces to search",
+        "type": "array",
+        "description": "Which marketplaces to scrape (eBay, Etsy, or both).",
+        "editor": "select",
+        "items": {
+          "type": "string",
+          "enum": [
+            "ebay",
+            "etsy"
+          ],
+          "enumTitles": [
+            "eBay (active listings)",
+            "Etsy (active listings)"
+          ]
+        },
+        "default": [
+          "ebay",
+          "etsy"
+        ]
+      },
+      "brightDataToken": {
+        "title": "Bright Data API Token (REQUIRED)",
+        "type": "string",
+        "description": "Your Bright Data API token. Used to call web_unlocker1 zone which bypasses anti-bot. Get from https://brightdata.com/cp.",
+        "editor": "textfield"
+      },
+      "brightDataZone": {
+        "title": "Bright Data zone",
+        "type": "string",
+        "description": "Default: web_unlocker1 (anti-bot bypass).",
+        "default": "web_unlocker1",
+        "editor": "textfield"
+      },
+      "includeSold": {
+        "title": "Include sold listings (eBay only)",
+        "type": "boolean",
+        "description": "When true, scrapes sold listings instead of active. Returns 'last sold' prices and sale dates. Useful for deal detection (compare current vs sold). Only works for eBay marketplace. Phase 2 feature (Sept 2026).",
+        "default": false,
+        "editor": "checkbox"
+      }
+    },
+    "required": [
+      "brightDataToken"
+    ]
+  }
+}

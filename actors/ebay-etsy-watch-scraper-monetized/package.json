@@ -1,0 +1,11 @@
+{
+  "name": "ebay-etsy-marketplace-scraper-pro",
+  "version": "0.1.0",
+  "description": "Smart marketplace scraper for eBay and Etsy. Multi-marketplace, multi-category, with NL search.",
+  "dependencies": {
+    "apify": "^3.7.2"
+  },
+  "scripts": {
+    "start": "node main.js"
+  }
+}

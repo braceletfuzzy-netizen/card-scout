@@ -1,0 +1,175 @@
+{
+  "actorSpecification": 1,
+  "title": "eBay + Etsy Marketplace Listings",
+  "description": "Structured marketplace listing data extracted by the scraper",
+  "fields": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "title": "Listing title",
+        "description": "Title of the product listing"
+      },
+      "url": {
+        "type": "string",
+        "title": "Listing URL",
+        "description": "Direct URL to the eBay or Etsy listing"
+      },
+      "price_usd": {
+        "type": "integer",
+        "title": "Price in USD",
+        "description": "Local price converted to USD (rounded)"
+      },
+      "price_raw": {
+        "type": "string",
+        "title": "Raw price",
+        "description": "Formatted price string in original currency"
+      },
+      "currency": {
+        "type": "string",
+        "title": "Currency",
+        "description": "Original currency: USD, GBP, or EUR"
+      },
+      "listing_id": {
+        "type": "string",
+        "title": "Listing ID",
+        "description": "eBay or Etsy internal listing ID"
+      },
+      "marketplace": {
+        "type": "string",
+        "title": "Marketplace",
+        "description": "ebay or etsy"
+      },
+      "shop_id": {
+        "type": "string",
+        "title": "Shop ID (Etsy only)",
+        "description": "Etsy shop ID (only for Etsy listings)"
+      },
+      "search_term": {
+        "type": "string",
+        "title": "Search term used",
+        "description": "The search query that found this listing"
+      },
+      "search_source": {
+        "type": "string",
+        "title": "Search source",
+        "description": "smart / preset:X / custom"
+      },
+      "preset_label": {
+        "type": "string",
+        "title": "Preset label",
+        "description": "Human-readable label of the source preset"
+      },
+      "_summary": {
+        "type": "boolean",
+        "title": "Summary row flag",
+        "description": "True for the summary/aggregation row at end of dataset"
+      },
+      "total_listings": {
+        "type": "integer",
+        "title": "Total unique listings",
+        "description": "Count of unique listings found across all marketplaces"
+      },
+      "avg_price_usd": {
+        "type": "integer",
+        "title": "Average price (USD)",
+        "description": "Mean price across all listings"
+      },
+      "median_price_usd": {
+        "type": "integer",
+        "title": "Median price (USD)",
+        "description": "50th percentile price - less affected by outliers than average"
+      },
+      "min_price_usd": {
+        "type": "integer",
+        "title": "Minimum price (USD)",
+        "description": "Lowest price across all listings"
+      },
+      "max_price_usd": {
+        "type": "integer",
+        "title": "Maximum price (USD)",
+        "description": "Highest price across all listings"
+      },
+      "q1_price_usd": {
+        "type": "integer",
+        "title": "First quartile price (USD)",
+        "description": "25th percentile price"
+      },
+      "q3_price_usd": {
+        "type": "integer",
+        "title": "Third quartile price (USD)",
+        "description": "75th percentile price"
+      },
+      "ebay_count": {
+        "type": "integer",
+        "title": "eBay listing count",
+        "description": "Number of listings from eBay"
+      },
+      "etsy_count": {
+        "type": "integer",
+        "title": "Etsy listing count",
+        "description": "Number of listings from Etsy"
+      },
+      "bd_requests": {
+        "type": "integer",
+        "title": "Bright Data requests",
+        "description": "Number of BD proxy requests used in this run"
+      },
+      "estimated_cost_usd": {
+        "type": "number",
+        "title": "Estimated run cost (USD)",
+        "description": "Total estimated cost of this actor run"
+      },
+      "run_duration_sec": {
+        "type": "integer",
+        "title": "Run duration (seconds)",
+        "description": "How long the actor run took"
+      }
+    }
+  },
+  "views": {
+    "overview": {
+      "title": "Overview",
+      "transformation": {
+        "fields": [
+          "title",
+          "price_usd",
+          "currency",
+          "marketplace",
+          "url",
+          "search_term"
+        ]
+      },
+      "display": {
+        "component": "table",
+        "properties": {
+          "title": {
+            "label": "Title",
+            "format": "text"
+          },
+          "price_usd": {
+            "label": "Price (USD)",
+            "format": "number"
+          },
+          "currency": {
+            "label": "Currency",
+            "format": "text"
+          },
+          "marketplace": {
+            "label": "Marketplace",
+            "format": "text"
+          },
+          "url": {
+            "label": "Link",
+            "format": "link"
+          },
+          "search_term": {
+            "label": "Search Term",
+            "format": "text"
+          }
+        }
+      }
+    }
+  }
+}

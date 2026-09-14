@@ -1,0 +1,28 @@
+# Card Scout — gitignore
+
+# Secrets — NEVER commit
+.env
+*.env
+config/*-token.txt
+config/*.credentials.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# Node (actor builds)
+node_modules/
+package-lock.json
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local DB overrides
+*.db-journal
+*.db-wal
+*.db-shm
