@@ -4,6 +4,17 @@
 **Status**: ✅ Production-ready (12 cards alerting)
 **Last major update**: 2026-09-14 (migration from vostok-tools)
 
+> ## ⚠️ READ THIS FIRST: Master Strategy
+>
+> Card Scout is **vertical #1** of a multi-vertical collectibles asymmetry
+> framework. The business is not "card tool" — it's "narrowing bid-ask spreads
+> in markets with imperfect information." Cards is just the first market
+> we attached to.
+>
+> **Master strategy doc**: `For You/Plans/MASTER-STRATEGY-collectibles-asymmetry-framework-2026-09-14.md`
+>
+> Read it before designing any vertical, product, or customer flow.
+
 ## What This Project Does
 
 Card Scout is a Discord alert bot that watches eBay and Sportscardspro for
