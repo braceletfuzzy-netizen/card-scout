@@ -63,10 +63,20 @@ The earlier audit showed $94.48 of "orphan actor" charges. After re-checking:
 
 ---
 
-## Email Template (Copy + Send)
+## Where to File (Updated per Apify Support Response)
 
-**To**: support@apify.com (or via in-app chat on Starter plan)
-**Subject**: Compensation request — 2 zero-output runs from etsy-listings-scraper actor
+**Apify support responded**: For third-party (Store) actors, compensation requests must go through the **Actor's Issues tab**, not directly to Apify Support. The developer reviews first, then submits to Apify.
+
+**Correct URL**: https://apify.com/astravalabs/etsy-listings-scraper/issues
+
+> Note: Apify's auto-response linked a different actor (`akash9078/etsy-product-scraper`). 
+> The actor we actually paid is `astravalabs/etsy-listings-scraper`. Use the link above.
+
+## Issue Template (Post to Actor's Issues tab)
+
+**Title**: Compensation request: 2 runs returned 0 items ($59.71 total)
+
+**Body**:
 
 ---
 
