@@ -44,8 +44,20 @@ sys.path.insert(0, SCRIPT_DIR)
 from db_models import init_db, get_session, Customer, Card
 
 # ============ CONFIG ============
+# GCP service account key location.
+# Default: C:\\Users\\J\\.secrets\\card-scout\\gcp-service-account.json (outside repo)
+# Override with GCP_SA_KEY_PATH env var for production.
 CONFIG_DIR = os.path.join(SCRIPT_DIR, '..', 'config')
-GCP_KEY_PATH = os.path.join(CONFIG_DIR, 'gcp-service-account.json')
+LEGACY_GCP_PATH = os.path.join(CONFIG_DIR, 'gcp-service-account.json')
+SAFE_GCP_PATH = os.path.join(os.path.expanduser('~'), '.secrets', 'card-scout', 'gcp-service-account.json')
+GCP_KEY_PATH = os.environ.get('GCP_SA_KEY_PATH') or (
+    SAFE_GCP_PATH if os.path.exists(SAFE_GCP_PATH) else LEGACY_GCP_PATH
+)
+if not os.path.exists(GCP_KEY_PATH):
+    raise FileNotFoundError(
+        f"GCP service account key not found. Tried:\n  {SAFE_GCP_PATH}\n  {LEGACY_GCP_PATH}\n"
+        "Set GCP_SA_KEY_PATH env var or place key in one of these locations."
+    )
 BRAND_LOGO_PATH = os.path.join(SCRIPT_DIR, '..', 'For You', 'Brand', 'card-scout-discord-avatar.png')
 WELCOME_EMAIL_FROM = 'braceletfuzzy@gmail.com'
 SIGNATURE = 'Fuzzy'

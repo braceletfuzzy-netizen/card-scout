@@ -26,3 +26,7 @@ Thumbs.db
 *.db-journal
 *.db-wal
 *.db-shm
+
+# Secrets — never commit
+config/gcp-service-account.json
+config/*.credentials.json
