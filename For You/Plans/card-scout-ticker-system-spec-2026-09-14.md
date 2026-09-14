@@ -281,3 +281,60 @@ Q3 = 75th percentile
 - ✅ Statistical math for ranges (90% CI)
 - ✅ Customer-selectable authority deferred to V2
 - ✅ Hugo implemented V1 (Sept 14, 2026, commit 6b1d454) — see "V1 Implementation Status" section below
+
+
+---
+
+## Strategic Framework (Added 2026-09-14 Evening)
+
+**This is the multi-vertical vision**. Card Scout is **vertical #1** of a generalizable
+collectibles framework. Future verticals: Coin Scout (graded coins), Comic Scout,
+Toy Scout, etc.
+
+### What stays 100% the same across verticals
+
+- Bot orchestration (`discord_alert_bot_v3.py` core flow)
+- Statistical math (`grade_range_calculator.py` 90% CI)
+- Discord format (`ticker_formatter.py`)
+- DB schema (`db_models.py` + `snapshot_system.py`)
+- Customer onboarding + billing
+
+### What changes per vertical
+
+- `grade_detector.py` regex patterns (PSA/BGS for cards, PCGS/NGC for coins {})
+- Actor code (PSA pop scraper for cards, PCGS pop scraper for coins {})
+- Price tier scraper (PriceCharting for cards, NGC price guide for coins {})
+- Preset taxonomy (`cards-sports`, `coins-graded`, `coins-bullion`, etc.)
+- Per-grade math constants (PCGS uses 1-70 scale, PSA uses 1-10)
+
+### Reuse estimate per new vertical: ~80% framework + ~20% vertical-specific
+
+### Why this matters for the publishing decision
+
+**Vertical-specific actors (Card Scout's PSA, sportscardspro actors) stay PRIVATE**:
+- They ARE Card Scout's data layer
+- Publishing them lets competitors clone Card Scout in 30 days
+- "General-purpose" framing doesn't change the fact that they serve the card market
+
+**Framework's GENERIC parts CAN be published safely**:
+- HTTP fetcher patterns (Bright Data wrapper)
+- HTML parsing patterns
+- Statistical math (90% CI)
+- Grade detector REGEX FRAMEWORK (not the card-specific patterns)
+- Discord ticker formatter
+
+This gives us store revenue + LLM builder goodwill + doesn't leak Card Scout's
+competitive position.
+
+### When to consider publishing vertical-specific actors
+
+Not now. Wait until:
+- 10+ paying customers in the vertical (so we're established)
+- OR 3+ verticals live (so the framework itself is the moat, not any single vertical's actors)
+
+### Reference
+
+- Strategic plan: `For You/Plans/self-host-migration-and-store-revenue-plan-2026-09-14.md`
+- Working notes Session 13 (2026-09-14 evening)
+
+---
