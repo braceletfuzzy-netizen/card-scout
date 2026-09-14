@@ -83,6 +83,7 @@ class Card(Base):
     include_pop = Column(Boolean, default=False)  # PSA population lookup
     psa_set_url = Column(String(500), nullable=True)  # PSA set URL for pop lookup
     sportscardspro_url = Column(String(500), nullable=True)  # sportscardspro.com OR pricecharting.com URL for sold data
+    market_thin = Column(Integer, default=0, nullable=False)  # 1 = skip below-median deal detection; show market ticker + 90% CI only
 
     # Grade filter checkboxes (6-bucket system)
     # Customer picks which grades matter for THIS card

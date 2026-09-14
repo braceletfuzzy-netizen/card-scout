@@ -278,7 +278,7 @@ def find_deals(matching_items, summary, alert_type='below_median'):
 
 
 # ============ DISCORD MESSAGES ============
-def format_deal_alert(search_query, summary, deals, snapshot, alert_type='below_median', pop_data=None, sold_items=None, sold_data=None):
+def format_deal_alert(search_query, summary, deals, snapshot, alert_type='below_median', pop_data=None, sold_items=None, sold_data=None, market_thin=False):
     """Format the Discord alert embed.
 
     Per ticker spec (card-scout-ticker-system-spec-2026-09-14.md):
@@ -319,8 +319,13 @@ def format_deal_alert(search_query, summary, deals, snapshot, alert_type='below_
     embed = {
         "title": f"🎯 Deal Alert: {search_query[:80]}",
         "description": (
-            f"Found **{len(deals)}** listings below {threshold_label} (${threshold_value}) "
-            f"\n{trend_emoji} **Trend: {trend_label}**"
+            (f"📊 **{len(deals)} active listings** — thin market snapshot\n"
+             f"{trend_emoji} **Trend: {trend_label}**\n"
+             f"\n⚠️ This is a thin market. Listed prices reflect individual sellers, not market consensus. "
+             f"Use the per-grade ticker + 90% CI ranges as the market signal.")
+            if market_thin else
+            (f"Found **{len(deals)}** listings below {threshold_label} (${threshold_value}) "
+             f"\n{trend_emoji} **Trend: {trend_label}**")
         ),
         "color": BOT_COLOR,
         "fields": [],
@@ -423,21 +428,34 @@ def format_deal_alert(search_query, summary, deals, snapshot, alert_type='below_
         except Exception as e:
             pass  # Non-fatal: skip per-grade ticker if data unavailable
 
-    # Top 3 deals
-    for i, deal in enumerate(deals[:3], 1):
-        savings = threshold_value - deal.get('price_usd', 0)
-        savings_pct = (savings / threshold_value * 100) if threshold_value else 0
+    # Top listings — for thin markets, show raw listings (no "X% below" framing)
+    if not market_thin:
+        for i, deal in enumerate(deals[:3], 1):
+            savings = threshold_value - deal.get('price_usd', 0)
+            savings_pct = (savings / threshold_value * 100) if threshold_value else 0
 
-        deal_name = f"💰 ${deal.get('price_usd')} ({savings_pct:.0f}% below {threshold_label})"
-        if deal.get('sold_count'):
-            demand_label = "🔥 HOT" if deal['sold_count'] > 50 else "📈 Active" if deal['sold_count'] > 20 else "Steady"
-            deal_name += f"  {demand_label} ({deal['sold_count']} sold)"
+            deal_name = f"💰 ${deal.get('price_usd')} ({savings_pct:.0f}% below {threshold_label})"
+            if deal.get('sold_count'):
+                demand_label = "🔥 HOT" if deal['sold_count'] > 50 else "📈 Active" if deal['sold_count'] > 20 else "Steady"
+                deal_name += f"  {demand_label} ({deal['sold_count']} sold)"
 
-        embed["fields"].append({
-            "name": deal_name,
-            "value": f"[{deal.get('title', 'N/A')[:80]}]({deal.get('url', '#')})",
-            "inline": False
-        })
+            embed["fields"].append({
+                "name": deal_name,
+                "value": f"[{deal.get('title', 'N/A')[:80]}]({deal.get('url', '#')})",
+                "inline": False
+            })
+    else:
+        # Thin market: show top 3 raw listings (no % claim — we describe the market, trader decides)
+        for i, deal in enumerate(deals[:3], 1):
+            deal_name = f"📋 ${deal.get('price_usd')}"
+            if deal.get('sold_count'):
+                deal_name += f"  ({deal['sold_count']} sold)"
+
+            embed["fields"].append({
+                "name": deal_name,
+                "value": f"[{deal.get('title', 'N/A')[:80]}]({deal.get('url', '#')})",
+                "inline": False
+            })
 
     # Recent Sold (if available) - shows the SELL side
     if sold_items and len(sold_items) > 0:
@@ -691,7 +709,8 @@ def process_customer_from_db(customer, dry_run=False):
             card.alert_type,
             pop_data=pop_data,
             sold_items=sold_items if sold_items else None,
-            sold_data=sold_data
+            sold_data=sold_data,
+            market_thin=bool(getattr(card, 'market_thin', 0))
         )
 
         if not message:
