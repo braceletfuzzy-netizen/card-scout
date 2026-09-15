@@ -93,9 +93,16 @@ ZIP: any 5 digits
 - https://dashboard.stripe.com/test/customers
 - https://dashboard.stripe.com/test/subscriptions
 
-## Stage 2: Automation (WHEN ready, ~6 hours)
+## Stage 2: Automation (WHEN ready, ~8 hours)
 
 When we've observed enough flow from Stage 1 to know what we're automating.
+
+Jim's directive (Sept 15): "When we roll V2 out I will let the guys know,
+we will reset and keep stripe in sandbox to simulate a payment -> so the
+system assigns customer ID and lets us know when a trial has been created,
+so we can check the customer flow etc."
+
+This expands Stage 2 from ~6 hours to ~8 hours (added reset + monitoring).
 
 ### Schema changes
 

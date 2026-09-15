@@ -173,15 +173,43 @@ even without our webhook endpoint listening.
 
 **5 sessions, 10+ features shipped, 1 security incident closed, 1 deployed (Render cancelled)**
 
-## Next session priorities (when ready)
+## What's next
+
+### Tonight / Tomorrow (when Jim sends Beta #2 the form)
+
+1. Send Beta #2 the Google Form URL: `https://docs.google.com/forms/d/1e3qlXT1UGelIxwKgd22c-NIo77G-B5xljcCX_ZYvoqA/viewform`
+2. Have them sign up with their Discord webhook + cards
+3. Run `python scripts/sheets_importer.py --import` to import them
+4. Bot will start alerting them automatically (tier=trial, 3 cards)
+5. (Optional) Send them Stripe Payment Link if they want to test trial: `https://buy.stripe.com/test_aFabJ1cd30MlfSJa5s9Zm01`
+
+### When V2 (Stripe automation) ships
+
+Per Jim's directive: "When we roll V2 out I will let the guys know, we will
+reset and keep stripe in sandbox to simulate a payment -> so the system
+assigns customer ID and lets us know when a trial has been created, so we
+can check the customer flow etc."
+
+V2 plan (when ready, ~8 hours):
+- Webhook endpoint `/webhook/stripe` with signature verification
+- Customer matching by email (V4 needs email field on form)
+- DB columns: stripe_customer_id, stripe_subscription_id, trial_end_at, etc.
+- Auto tier upgrade: trial → paid on subscription.updated webhook
+- Reset script for beta state (DB wipe + Stripe sandbox cleanup)
+- Beta tester announcement template
+
+See: `For You/Plans/stripe-sandbox-simulation-2026-09-15.md` for full V2 plan.
+
+### Stage 2 priorities (when ready)
 
 | Priority | Item | Time | Trigger |
 |---|---|---|---|
 | 1 | Joe Bob trial converts in sandbox (observe) | 0 min | Just wait, Sept 29 |
-| 2 | Recurring subscription handling (Stage 2) | ~6 hours | When 1+ paying customer |
-| 3 | 3-tier pricing | ~3 hours | When customers ask for tiers |
-| 4 | Render deploy | ~30 min | End of month (cash flow) |
-| 5 | Rec 2 invite codes | ~1 hour | This week (spam defense) |
+| 2 | **V2 webhook handler + reset + monitoring** | **~8 hours** | **When ready to ship V2** |
+| 3 | Recurring subscription handling | included | V2 ships with this |
+| 4 | 3-tier pricing | ~3 hours | When customers ask for tiers |
+| 5 | Render deploy | ~30 min | End of month (cash flow) |
+| 6 | Rec 2 invite codes | ~1 hour | This week (spam defense) |
 
 ## Open questions for Jim
 
