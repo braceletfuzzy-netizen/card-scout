@@ -142,6 +142,15 @@ Test each to see what events fire and how to handle them.
 - Sandbox product: https://dashboard.stripe.com/test/products
 - API keys: https://dashboard.stripe.com/test/apikeys
 
+## Current Payment Links
+
+| Link | Purpose | Trial | URL |
+|---|---|---|---|
+| OLD (no trial) | Reference / first Jim test | ❌ None | `https://buy.stripe.com/test_8x25kD0ul7aJcGx91o9Zm00` |
+| **NEW (with trial)** | **Use this for beta testers** | ✅ **14 days** | **`https://buy.stripe.com/test_aFabJ1cd30MlfSJa5s9Zm01`** |
+
+Created Sept 15, 2026 via Stripe API with `subscription_data.trial_period_days=14`.
+
 ## Time estimate
 
 - Setup: 5 minutes (you have the link already)
