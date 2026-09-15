@@ -370,8 +370,17 @@ def capture_pricing_band_from_sc(session, card_id, sc_data, band_date=None):
     if band_date is None:
         band_date = date_type.today()
 
-    # Map sportscardspro tier IDs to our pricing_bands columns
+    # Map sportscardspro tier keys to our pricing_bands columns
+    # Actor returns prices_by_tier with these keys (verified Sept 15):
+    #   ungraded, psa_7, psa_8, psa_9, psa_9_5, psa_10
     tier_to_col = {
+        'ungraded': 'raw',
+        'psa_7': 'psa_7',
+        'psa_8': 'psa_8',
+        'psa_9': 'psa_9',
+        'psa_9_5': 'psa_9_5',
+        'psa_10': 'psa_10',
+        # Legacy keys (kept for backward compat)
         'used_price': 'raw',
         'complete_price': 'psa_7',
         'new_price': 'psa_8',

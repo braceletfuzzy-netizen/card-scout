@@ -4,10 +4,11 @@
 
 ## What it does
 
-Two formatters:
+Three formatters:
 
 1. `format_per_grade_ticker(grade_table)` — renders the **Per-Grade Market Values** block
 2. `format_below_market_deals(items, grade_table)` — finds listings priced **below typical range for their grade**
+3. **NEW (Sept 15, ADR-001):** `get_30day_average()` + `format_trend_indicator()` — adds "vs 30d avg" trend comparison per grade tier
 
 ## Output 1: Per-Grade Market Values
 

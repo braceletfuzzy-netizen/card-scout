@@ -16,7 +16,67 @@ Show, don't recommend. Customer decides if it's a deal.
 from typing import Dict, List, Optional
 
 
-def format_per_grade_ticker(grade_table: List[Dict], max_chars: int = 600) -> str:
+def get_30day_average(session, card_id: int, tier: str) -> Optional[float]:
+    """Get the 30-day average price for a card+tier from pricing_bands.
+
+    Args:
+        session: SQLAlchemy session
+        card_id: cards.id
+        tier: column prefix (raw, psa_7, psa_8, psa_9, psa_9_5, psa_10)
+
+    Returns:
+        Average price across all pricing_bands rows in last 30 days, or None if no history.
+    """
+    from datetime import date, timedelta
+    from db_models import PricingBand
+
+    col_name = f'{tier}_low'  # Use low as the canonical price per tier
+    cutoff = date.today() - timedelta(days=30)
+
+    rows = session.query(PricingBand).filter(
+        PricingBand.card_id == card_id,
+        PricingBand.band_date >= cutoff,
+    ).all()
+
+    if not rows:
+        return None
+
+    prices = []
+    for r in rows:
+        v = getattr(r, col_name, None)
+        if v is not None and v > 0:
+            prices.append(v)
+
+    return sum(prices) / len(prices) if prices else None
+
+
+def format_trend_indicator(current_price: Optional[float], avg_30d: Optional[float]) -> str:
+    """Format a trend indicator showing current vs 30-day average.
+
+    Returns:
+        - "" if either is None or no history
+        - " (vs 30d avg $X)" if no significant change
+        - " (↑N% vs 30d avg $X)" if up
+        - " (↓N% vs 30d avg $X)" if down
+    """
+    if current_price is None or current_price <= 0:
+        return ""
+    if avg_30d is None or avg_30d <= 0:
+        return ""  # No history yet
+
+    pct_change = ((current_price - avg_30d) / avg_30d) * 100
+
+    # Within 2% = "flat"
+    if abs(pct_change) < 2:
+        return f" (vs 30d avg ${avg_30d:.0f}, flat)"
+
+    if pct_change > 0:
+        return f" (↑{pct_change:.0f}% vs 30d avg ${avg_30d:.0f})"
+    else:
+        return f" (↓{abs(pct_change):.0f}% vs 30d avg ${avg_30d:.0f})"
+
+
+def format_per_grade_ticker(grade_table: List[Dict], max_chars: int = 600, session=None, card_id=None) -> str:
     """
     Render the per-grade market ticker table.
 
@@ -25,13 +85,15 @@ def format_per_grade_ticker(grade_table: List[Dict], max_chars: int = 600) -> st
 
     Output: Discord embed field string showing each grade tier with
     typical price + 90% range.
+
+    If session + card_id provided, also shows "vs 30d avg" trend for each tier.
     """
     if not grade_table:
         return "(no per-grade data)"
 
     lines = []
     for row in grade_table:
-        grade = row.get('grade')
+        tier = row.get('tier')
         label = row.get('label', 'Raw')
         price = row.get('price', 0)
         range_data = row.get('range', {})
@@ -51,7 +113,13 @@ def format_per_grade_ticker(grade_table: List[Dict], max_chars: int = 600) -> st
         else:
             val_str = "—"
 
-        lines.append(f"**{label}:** {val_str}{sold_str}")
+        # Add 30-day trend indicator (ADR-001 trend-aware alerts)
+        trend_str = ""
+        if session is not None and card_id is not None and tier:
+            avg = get_30day_average(session, card_id, tier)
+            trend_str = format_trend_indicator(price, avg)
+
+        lines.append(f"**{label}:** {val_str}{trend_str}{sold_str}")
 
     return "\n".join(lines)
 

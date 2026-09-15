@@ -398,6 +398,15 @@ def format_deal_alert(search_query, summary, deals, snapshot, alert_type='below_
                 ], 'sold_counts': [], 'sales': []})
 
             ticker_text = format_per_grade_ticker(grade_table)
+            # ADR-001 trend-aware: fetch 30-day averages from pricing_bands if available
+            try:
+                trend_session = get_session()
+                ticker_text = format_per_grade_ticker(
+                    grade_table, session=trend_session, card_id=card.id
+                )
+                trend_session.close()
+            except Exception:
+                pass  # Trend is optional — fall back to non-trend display
             embed["fields"].append({
                 "name": "📊 Per-Grade Market Values (ticker)",
                 "value": ticker_text,
