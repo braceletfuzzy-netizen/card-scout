@@ -27,7 +27,7 @@ import time
 # Add scripts dir to path for sibling imports
 sys.path.insert(0, str(Path(__file__).parent))
 
-from db_models import Customer, Card, Snapshot, RunHistory, init_db, get_session
+from db_models import Customer, Card, Snapshot, RunHistory, PricingBand, init_db, get_session, capture_pricing_band_from_sc, cleanup_old_pricing_bands, get_30day_trend
 from snapshot_system import (
     save_run_snapshot, get_card_snapshots, get_trend_emoji,
     compute_snapshot_stats
@@ -695,6 +695,16 @@ def process_customer_from_db(customer, dry_run=False):
                         print(f"  [SCPRO] ✓ PSA 10 ref: ${sold_data['psa_10_price']:.2f} ({sold_data.get('psa_10_sold_30d', '?')} sold)")
                     else:
                         print(f"  [SCPRO] Got data but no PSA 10 price")
+
+                    # Capture today's pricing band for 30-day history (ADR-001)
+                    try:
+                        pb_session = get_session()
+                        capture_pricing_band_from_sc(pb_session, card.id, sc_data)
+                        pb_session.close()
+                        print(f"  [PBAND] Captured pricing band for card {card.id}")
+                    except Exception as pb_err:
+                        print(f"  [PBAND] Capture skipped: {pb_err}")
+
                 else:
                     print(f"  [SCPRO] Lookup returned no data")
             except Exception as e:
@@ -760,6 +770,17 @@ def main():
 
     # Initialize DB
     init_db()
+
+    # Cleanup old pricing bands (ADR-001: TTL=30d)
+    # Idempotent — safe to run every bot startup
+    try:
+        cleanup_session = get_session()
+        deleted = cleanup_old_pricing_bands(cleanup_session, retention_days=30)
+        if deleted > 0:
+            print(f"[PBAND] Cleaned up {deleted} bands older than 30 days")
+        cleanup_session.close()
+    except Exception as e:
+        print(f"[PBAND] Cleanup skipped: {e}")
 
     # Get customers from DB
     session = get_session()
