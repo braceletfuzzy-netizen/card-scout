@@ -69,6 +69,15 @@ SCOPES = [
 
 FORM_RESPONSES_TAB = 'Form Responses 1'
 
+
+def _col_letter(n):
+    """1->A, 26->Z, 27->AA, ... (chr(64+n) only works up to n=26)."""
+    s = ''
+    while n > 0:
+        n, r = divmod(n - 1, 26)
+        s = chr(65 + r) + s
+    return s
+
 # Sheet column mapping (1-indexed)
 COL_TIMESTAMP = 1
 COL_FIRST_NAME = 2
@@ -311,15 +320,15 @@ def ensure_processed_column(sheets_service, sheet_id):
     headers = result.get('values', [[]])[0]
 
     if 'processed_at' not in headers:
-        # Add column
+        # Add column at the end (works for >26 cols too)
         new_col_idx = len(headers) + 1
         sheets_service.spreadsheets().values().update(
             spreadsheetId=sheet_id,
-            range=f"'{FORM_RESPONSES_TAB}'!{chr(64 + new_col_idx)}1",
+            range=f"'{FORM_RESPONSES_TAB}'!{_col_letter(new_col_idx)}1",
             valueInputOption='RAW',
             body={'values': [['processed_at']]}
         ).execute()
-        print(f"  ✓ Added 'processed_at' column at col {new_col_idx}")
+        print(f"  \u2713 Added 'processed_at' column at col {new_col_idx} ({_col_letter(new_col_idx)})")
         return new_col_idx
     return headers.index('processed_at') + 1
 
@@ -427,7 +436,7 @@ def process_form_responses(sheets_service, gmail_service, sheet_id, dry_run=Fals
         try:
             sheets_service.spreadsheets().values().update(
                 spreadsheetId=sheet_id,
-                range=f"'{FORM_RESPONSES_TAB}'!{chr(64 + processed_col)}{row_idx}",
+                range=f"'{FORM_RESPONSES_TAB}'!{_col_letter(processed_col)}{row_idx}",
                 valueInputOption='RAW',
                 body={'values': [[datetime.utcnow().isoformat()]]}
             ).execute()
