@@ -82,12 +82,41 @@ The script groups Card 1/2/3 by finding the "Sports or TCG?" headers and taking 
 - **Dry-run by default** — prints what would be imported, does nothing
 - **Idempotent** — skips rows where Discord webhook is already in DB
 - **Marks imported rows** — won't double-import
-- **Webhook validation** — skips rows with malformed URLs
+- **Webhook validation** — POSTs test message, only accepts 204 (skipped in dry-run)
+- **Rate limit** — 1 import per webhook per 24h (in-memory cache)
+
+## Access Control (Sept 15, 2-layer spam protection)
+
+The Google Form URL is public, so anyone can submit. We protect against spam/abuse via:
+
+1. **Webhook validation** (`validate_webhook()`)
+   - POSTs a test message `🧪 Card Scout onboarding — webhook validated. You can ignore this message.`
+   - Checks for HTTP 204 (Discord accepts) vs 401/404 (rejected)
+   - Skipped in dry-run mode (don't test-ping during testing)
+
+2. **Rate limiting** (`check_rate_limit()`)
+   - In-memory cache: `webhook_url -> last_import_timestamp`
+   - 24h window — same webhook can't be imported twice within 24h
+   - Cleared on script restart (acceptable for our single-process bot)
+
+3. **Duplicate detection**
+   - Pre-existing: skips if webhook already exists in `customers` table
+   - Combined: prevents spam from filling the DB
+
+**Customer experience**: when someone fills the form and you run `--import`, they'll see a "🧪 Card Scout onboarding" message in their Discord. This is the validation POST. They can ignore it — it's just confirmation that the webhook works.
+
+**Trade-offs**:
+- Rate limit cache is in-memory only. Restart resets it. For multi-process safety
+  (e.g., 2 bot instances), would move to Redis. Single-process = fine.
+- Validation pings the customer's Discord. Make sure your form description mentions this.
 
 ## What needs work for V2
-- Parse the "Sports or TCG?" field to choose correct preset (`cards-sports` vs `cards-tcg`)
-- Parse "What grade are we looking for?" to set initial `track_psa_10` flags
+- Persist rate-limit cache to disk (currently in-memory)
+- Add invite-code gate (Option B from access-control discussion) — keeps form
+  open to invites only
 - Email notification on import (so you know tester #2 is in)
+- Parse "Sports or TCG?" to choose correct preset
+- Parse "What grade are we looking for?" to set initial `track_psa_10` flags
 - Build a customer dashboard (Option A) to replace this whole flow
 
 ## When tester #2 submits the form

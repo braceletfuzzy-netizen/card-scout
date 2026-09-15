@@ -27,6 +27,12 @@ SAFETY:
     - Dry-run by default (prints what would be imported, does nothing)
     - Idempotent: skips rows where Email or Discord Webhook already in DB
     - Marks imported rows in column O ("Imported?") with timestamp
+
+V2 ACCESS-CONTROL (Sept 15):
+    - Validates webhook via Discord API (POST test message, check 204)
+    - Rate limit: 1 import per webhook per 24h (in-memory cache)
+    - Both checks SKIPPED in dry-run mode (don't test-ping live webhooks)
+    - Spam protection: form URL is public, but invalid webhooks get blocked
 """
 import sys
 import os
@@ -306,6 +312,81 @@ def fetch_unimported_rows(client, sheet_id):
     return unimported, sheet, column_map
 
 
+def validate_webhook(url):
+    """Send a test message to verify the webhook exists and accepts posts.
+
+    Returns (success: bool, reason: str). A valid Discord webhook returns 204
+    on POST. If invalid, returns False with a reason.
+
+    Per Sept 15 focus topic (FORM-ACCESS-CONTROL): prevents spam signups with
+    fake webhooks. Cheap (~0.2s per call), no auth needed.
+    """
+    if not url or 'discord.com/api/webhooks/' not in url:
+        return False, "URL doesn't look like a Discord webhook"
+
+    try:
+        import requests
+        test_payload = {
+            "content": "🧪 Card Scout onboarding — webhook validated. You can ignore this message.",
+            "flags": 0,  # Make visible (not silent)
+        }
+        r = requests.post(url, json=test_payload, timeout=5)
+        if r.status_code == 204:
+            return True, "Webhook accepted test message (204)"
+        elif r.status_code == 401:
+            return False, "Webhook rejected with 401 (deleted or invalid token)"
+        elif r.status_code == 404:
+            return False, "Webhook rejected with 404 (URL incorrect or webhook removed)"
+        elif r.status_code == 429:
+            return False, "Webhook rate-limited (429)"
+        else:
+            return False, f"Webhook returned unexpected {r.status_code}: {r.text[:80]}"
+    except requests.exceptions.Timeout:
+        return False, "Webhook POST timed out (5s)"
+    except requests.exceptions.ConnectionError:
+        return False, "Webhook POST connection error"
+    except Exception as e:
+        return False, f"Webhook POST failed: {type(e).__name__}: {e}"
+
+
+# Rate-limit cache (in-memory, cleared on restart)
+# Maps webhook_url -> last_import_timestamp
+_recent_imports = {}
+
+
+def check_rate_limit(webhook, hours=24):
+    """Skip if same webhook was imported within the last `hours`.
+
+    Prevents: (a) double-import if Jim submits twice, (b) spam by same person
+    using same valid webhook.
+
+    In-memory cache, so restarts reset the counter. For multi-process safety
+    we'd move to Redis, but a single bot process = single counter is enough
+    for our scale.
+
+    Returns (allowed: bool, reason: str).
+    """
+    from datetime import datetime, timedelta
+    now = datetime.utcnow()
+
+    if webhook not in _recent_imports:
+        return True, "First time importing this webhook"
+
+    last = _recent_imports[webhook]
+    age = now - last
+
+    if age < timedelta(hours=hours):
+        return False, f"Already imported this webhook {age.total_seconds()/3600:.1f}h ago (window={hours}h)"
+
+    return True, f"Last import was {age.total_seconds()/3600:.1f}h ago (window={hours}h)"
+
+
+def mark_imported(webhook):
+    """Record this webhook in the in-memory rate-limit cache."""
+    from datetime import datetime
+    _recent_imports[webhook] = datetime.utcnow()
+
+
 def import_row(row_info, dry_run=True):
     """Import one row into DB. Returns created customer_id or None."""
     row_num = row_info['row_num']
@@ -324,6 +405,29 @@ def import_row(row_info, dry_run=True):
     if 'discord.com/api/webhooks/' not in discord_webhook:
         print(f"  [WARN] Row {row_num}: webhook URL doesn't look right: {discord_webhook[:60]}...")
         return None
+
+    # V2 ACCESS-CONTROL (Sept 15): validate webhook actually works
+    # - Sends a test message, checks for 204
+    # - Skip if invalid (prevents spam signups with fake URLs)
+    # - In dry-run, only report what WOULD be validated (don't actually ping)
+    if dry_run:
+        # Show what would happen, but don't actually POST
+        print(f"  [DRY RUN] Would validate webhook: {discord_webhook[:60]}...")
+        print(f"  [DRY RUN] (skip actual POST to avoid test-pinging Jim's Discord)")
+    else:
+        print(f"  [VALIDATE] Testing webhook for row {row_num}...")
+        valid, reason = validate_webhook(discord_webhook)
+        if not valid:
+            print(f"  [SKIP] Row {row_num}: webhook validation FAILED: {reason}")
+            return None
+        print(f"  [VALIDATE] OK: {reason}")
+
+    # V2 RATE LIMIT (Sept 15): skip if same webhook imported in last 24h
+    if not dry_run:
+        allowed, reason = check_rate_limit(discord_webhook, hours=24)
+        if not allowed:
+            print(f"  [SKIP] Row {row_num}: rate-limited: {reason}")
+            return None
 
     session = get_session()
 
@@ -382,6 +486,9 @@ def import_row(row_info, dry_run=True):
         session.rollback()  # Don't actually save during dry-run
     else:
         session.commit()
+        # V2 RATE LIMIT (Sept 15): mark this webhook as imported so subsequent
+        # runs in the same session skip it
+        mark_imported(discord_webhook)
     session.close()
 
     return {
