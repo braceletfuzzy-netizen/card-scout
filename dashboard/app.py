@@ -171,8 +171,35 @@ def update_dashboard(customer_id):
                 flash('Card not found.', 'error')
         return redirect(url_for('dashboard', customer_id=customer_id))
 
+    elif action == 'edit':
+        card_id = request.form.get('card_id', type=int)
+        if not card_id:
+            flash('Card not found.', 'error')
+            return redirect(url_for('dashboard', customer_id=customer_id))
+
+        card = db_session.query(Card).filter_by(id=card_id, customer_id=customer.id).first()
+        if not card:
+            flash('Card not found.', 'error')
+            return redirect(url_for('dashboard', customer_id=customer_id))
+
+        # Update only fields provided (allow blank = clear)
+        new_query = request.form.get('new_card', '').strip()
+        if new_query:
+            card.search_query = new_query
+        psa_url = request.form.get('psa_url', '').strip()
+        card.psa_set_url = psa_url if psa_url else None
+        sc_url = request.form.get('sportscardspro_url', '').strip()
+        card.sportscardspro_url = sc_url if sc_url else None
+
+        db_session.commit()
+        flash(f'Updated card #{card.id}.', 'success')
+        return redirect(url_for('dashboard', customer_id=customer_id))
+
     elif action == 'add':
         new_card_text = request.form.get('new_card', '').strip()
+        psa_url = request.form.get('psa_url', '').strip() or None
+        sportscardspro_url = request.form.get('sportscardspro_url', '').strip() or None
+
         if new_card_text:
             # Check max cards
             max_cards = customer.max_cards or 3
@@ -184,8 +211,8 @@ def update_dashboard(customer_id):
             new_card = Card(
                 customer_id=customer.id,
                 search_query=new_card_text,
-                psa_set_url=None,
-                sportscardspro_url=None,
+                psa_set_url=psa_url,
+                sportscardspro_url=sportscardspro_url,
                 include_pop=1,
                 include_sold=1,
                 market_thin=0,
@@ -344,14 +371,29 @@ DASHBOARD_TEMPLATE = '''
           <div class="query">{{ c.search_query }}</div>
           <div class="meta-row">
             Card #{{ c.id }} ·
+            {% if c.psa_set_url %}<a href="{{ c.psa_set_url }}" target="_blank">PSA</a>{% else %}<span style="color:#c33;">no PSA URL</span>{% endif %} ·
+            {% if c.sportscardspro_url %}<a href="{{ c.sportscardspro_url }}" target="_blank">SC</a>{% else %}<span style="color:#c33;">no SC URL</span>{% endif %} ·
             {% if c.include_pop %}Pop ✓{% endif %} ·
             {% if c.market_thin %}Thin market{% endif %}
           </div>
         </div>
-        <form method="POST" action="{{ url_for('update_dashboard', customer_id=customer.customer_id) }}" style="margin:0;">
-          <input type="hidden" name="action" value="remove">
+        <div style="display: flex; gap: 6px;">
+          <button type="button" onclick="document.getElementById('edit-{{ c.id }}').style.display = document.getElementById('edit-{{ c.id }}').style.display === 'none' ? 'block' : 'none'; this.textContent = this.textContent === 'Edit' ? 'Cancel' : 'Edit';" style="background: #eef; color: #33c; border: 1px solid #ccf; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 13px;">Edit</button>
+          <form method="POST" action="{{ url_for('update_dashboard', customer_id=customer.customer_id) }}" style="margin:0;">
+            <input type="hidden" name="action" value="remove">
+            <input type="hidden" name="card_id" value="{{ c.id }}">
+            <button type="submit" onclick="return confirm('Remove {{ c.search_query }}?');">Remove</button>
+          </form>
+        </div>
+      </li>
+      <li id="edit-{{ c.id }}" style="display: none; background: #f9f9f9; padding: 12px; margin-bottom: 8px; border-radius: 4px;">
+        <form method="POST" action="{{ url_for('update_dashboard', customer_id=customer.customer_id) }}">
+          <input type="hidden" name="action" value="edit">
           <input type="hidden" name="card_id" value="{{ c.id }}">
-          <button type="submit" onclick="return confirm('Remove {{ c.search_query }}?');">Remove</button>
+          <input type="text" name="new_card" value="{{ c.search_query }}" placeholder="Card description" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 13px; margin-bottom: 6px;">
+          <input type="text" name="psa_url" value="{{ c.psa_set_url or '' }}" placeholder="PSA URL" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 12px; margin-bottom: 6px;">
+          <input type="text" name="sportscardspro_url" value="{{ c.sportscardspro_url or '' }}" placeholder="Sportscardspro URL" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 12px; margin-bottom: 6px;">
+          <button type="submit" style="background: #5865f2; color: white; border: none; padding: 6px 16px; border-radius: 4px; cursor: pointer; font-size: 13px;">Save Changes</button>
         </form>
       </li>
     {% endfor %}
@@ -369,14 +411,29 @@ DASHBOARD_TEMPLATE = '''
           <div class="query">{{ c.search_query }}</div>
           <div class="meta-row">
             Card #{{ c.id }} ·
+            {% if c.psa_set_url %}<a href="{{ c.psa_set_url }}" target="_blank">PSA</a>{% else %}<span style="color:#c33;">no PSA URL</span>{% endif %} ·
+            {% if c.sportscardspro_url %}<a href="{{ c.sportscardspro_url }}" target="_blank">SC</a>{% else %}<span style="color:#c33;">no SC URL</span>{% endif %} ·
             {% if c.include_pop %}Pop ✓{% endif %} ·
             {% if c.market_thin %}Thin market{% endif %}
           </div>
         </div>
-        <form method="POST" action="{{ url_for('update_dashboard', customer_id=customer.customer_id) }}" style="margin:0;">
-          <input type="hidden" name="action" value="remove">
+        <div style="display: flex; gap: 6px;">
+          <button type="button" onclick="document.getElementById('edit-{{ c.id }}').style.display = document.getElementById('edit-{{ c.id }}').style.display === 'none' ? 'block' : 'none'; this.textContent = this.textContent === 'Edit' ? 'Cancel' : 'Edit';" style="background: #eef; color: #33c; border: 1px solid #ccf; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 13px;">Edit</button>
+          <form method="POST" action="{{ url_for('update_dashboard', customer_id=customer.customer_id) }}" style="margin:0;">
+            <input type="hidden" name="action" value="remove">
+            <input type="hidden" name="card_id" value="{{ c.id }}">
+            <button type="submit" onclick="return confirm('Remove {{ c.search_query }}?');">Remove</button>
+          </form>
+        </div>
+      </li>
+      <li id="edit-{{ c.id }}" style="display: none; background: #f9f9f9; padding: 12px; margin-bottom: 8px; border-radius: 4px;">
+        <form method="POST" action="{{ url_for('update_dashboard', customer_id=customer.customer_id) }}">
+          <input type="hidden" name="action" value="edit">
           <input type="hidden" name="card_id" value="{{ c.id }}">
-          <button type="submit" onclick="return confirm('Remove {{ c.search_query }}?');">Remove</button>
+          <input type="text" name="new_card" value="{{ c.search_query }}" placeholder="Card description" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 13px; margin-bottom: 6px;">
+          <input type="text" name="psa_url" value="{{ c.psa_set_url or '' }}" placeholder="PSA URL" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 12px; margin-bottom: 6px;">
+          <input type="text" name="sportscardspro_url" value="{{ c.sportscardspro_url or '' }}" placeholder="Sportscardspro URL" style="width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 12px; margin-bottom: 6px;">
+          <button type="submit" style="background: #5865f2; color: white; border: none; padding: 6px 16px; border-radius: 4px; cursor: pointer; font-size: 13px;">Save Changes</button>
         </form>
       </li>
     {% endfor %}
@@ -388,9 +445,20 @@ DASHBOARD_TEMPLATE = '''
   <h2>Add a Card</h2>
   <form method="POST" action="{{ url_for('update_dashboard', customer_id=customer.customer_id) }}" class="add-card">
     <input type="hidden" name="action" value="add">
-    <input type="text" name="new_card" placeholder="e.g. Mike Trout 2011 Topps Update Rookie #US1" required>
+    <div style="flex: 1;">
+      <input type="text" name="new_card" placeholder="e.g. Mike Trout 2011 Topps Update Rookie #US1" required style="width: 100%;">
+      <div style="display: flex; gap: 8px; margin-top: 8px;">
+        <input type="text" name="psa_url" placeholder="PSA set URL (optional)" style="flex: 1; font-size: 12px;">
+        <input type="text" name="sportscardspro_url" placeholder="Sportscardspro URL (optional)" style="flex: 1; font-size: 12px;">
+      </div>
+    </div>
     <button type="submit">Add</button>
   </form>
+  <p style="font-size: 12px; color: #888; margin-top: 12px;">
+    <strong>PSA URL:</strong> e.g. <code>https://www.psacard.com/pop/baseball-cards/1995/topps/49750</code><br>
+    <strong>Sportscardspro URL:</strong> e.g. <code>https://www.sportscardspro.com/game/baseball-cards-1987-donruss-rookies/bo-jackson-14</code><br>
+    Leave blank to use search-only mode (slower but works without URLs).
+  </p>
 </div>
 
 {% if not sports_cards and not tcg_cards %}
