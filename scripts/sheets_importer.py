@@ -8,7 +8,7 @@ WORKFLOW:
     2. Share the form's response Sheet with:
        card-scout-bot@card-scout-automation.iam.gserviceaccount.com
        (Give it Editor access so we can mark rows as imported)
-    3. Set GOOGLE_SHEET_ID in .env to the Sheet ID from the URL
+    3. Set GOOGLE_SHEET_ID in card-scout/.env (already created)
     4. Run: python sheets_importer.py --dry-run
     5. Run: python sheets_importer.py --import
     6. Run again to mark imported rows (or auto-mark)
@@ -33,6 +33,17 @@ import os
 import json
 from pathlib import Path
 
+# Load .env from card-scout root (one level up from scripts/)
+try:
+    from dotenv import load_dotenv
+    env_path = Path(__file__).parent.parent / '.env'
+    load_dotenv(env_path)
+except ImportError:
+    print("[WARN] python-dotenv not installed. Run: uv pip install python-dotenv")
+    print("       Falling back to system env vars only.")
+except Exception as e:
+    print(f"[WARN] Could not load .env: {e}")
+
 sys.path.insert(0, str(Path(__file__).parent))
 
 # Add parent dir to path for db_models (since scripts/ is one level deep)
@@ -46,7 +57,11 @@ from datetime import datetime
 # CONFIG
 # ============================================================================
 
-SA_PATH = Path(r'C:\Users\J\.secrets\card-scout\gcp-service-account.json')
+# SA key path: from env var if set, else default location
+SA_PATH = Path(os.getenv(
+    'GOOGLE_APPLICATION_CREDENTIALS',
+    r'C:\Users\J\.secrets\card-scout\gcp-service-account.json'
+))
 
 # Sheet ID from the Google Sheets URL (the long alphanumeric between /d/ and /edit)
 # Get this from your form: Open Responses -> click Sheets icon -> copy URL
@@ -138,26 +153,92 @@ def generate_customer_id(first_name, last_name, existing_ids):
     return f"{candidate}_{len(existing_ids)}"
 
 
-def parse_card_from_section(section_text):
-    """Parse a card from a form section response.
+def parse_card_from_section(card_fields):
+    """Parse a card from a list of form fields for ONE scouting report card.
 
-    Form section text looks like:
-      "Player: Bo Jackson, Year: 1987, Brand: Donruss, Card #: 14, Grade: PSA 10"
-    Or just raw text — varies by section.
+    Each "Scouting Report Card" section has these fields (in order):
+      [0]: Sports or TCG?            (e.g., "Sports")
+      [1]: Brand                      (e.g., "Topps")
+      [2]: Player Name                (e.g., "Mike Trout")
+      [3]: Card #                     (e.g., "1")
+      [4]: Year(s)                    (e.g., "2011")
+      [5]: Special / Limited Edition? (e.g., "Rookie Card")
+      [6]: Grade (optional)           (e.g., "Graded" or "Rawdog")
 
-    Returns: dict with keys {search_query, sportscardspro_url} or None
+    Returns: dict with keys {search_query, sportscardspro_url, raw_fields}
+             or None if no useful data
     """
-    if not section_text or not section_text.strip():
+    if not card_fields or not any(f.strip() for f in card_fields if f):
         return None
 
-    text = section_text.strip()
+    cleaned = [f.strip() for f in card_fields]
 
-    # Simple heuristic: use the whole text as search_query for now
-    # Future: parse structured fields
+    sports_or_tcg = cleaned[0] if len(cleaned) > 0 else ''
+    brand = cleaned[1] if len(cleaned) > 1 else ''
+    player = cleaned[2] if len(cleaned) > 2 else ''
+    card_num = cleaned[3] if len(cleaned) > 3 else ''
+    year = cleaned[4] if len(cleaned) > 4 else ''
+    special = cleaned[5] if len(cleaned) > 5 else ''
+    grade = cleaned[6] if len(cleaned) > 6 else ''
+
+    # Build search query — combine available fields
+    parts = [p for p in [year, brand, player, card_num, special] if p and p.strip()]
+    search_query = ' '.join(parts) if parts else (sports_or_tcg or 'unknown card')
+
     return {
-        'search_query': text[:500],  # DB column max
-        'sportscardspro_url': None,
+        'search_query': search_query[:500],
+        'sportscardspro_url': None,  # Customer doesn't provide URL via form
+        'raw_fields': {
+            'sports_or_tcg': sports_or_tcg,
+            'brand': brand,
+            'player': player,
+            'card_num': card_num,
+            'year': year,
+            'special': special,
+            'grade': grade,
+        }
     }
+
+
+def get_card_field_groups(header_row):
+    """Detect which columns belong to each Scouting Report Card section.
+
+    The form has 3 Scouting Report Card sections. Each section has fields in this order:
+      Sports or TCG? -> Brand -> Player Name -> Card # -> Year(s) -> Special Edition? -> Graded or Rawdog? -> What grade?
+
+    The Sheet's header row doesn't include section titles (Google Forms drops them in Sheet export).
+    We detect section boundaries by finding repeated "Sports or TCG?" columns.
+    Each one starts a new section.
+
+    Returns list of column-index lists, e.g. [[4,5,6,7,8,9,10,11], [12,...], [20,...]]
+    """
+    # Find positions of "Sports or TCG?" headers — these mark the START of each card section
+    section_starts = []
+    for i, header in enumerate(header_row):
+        if header and 'sports or tcg' in str(header).lower():
+            section_starts.append(i)
+
+    if not section_starts:
+        # Fallback: assume all columns after the basic info belong to one card
+        print("[WARN] Could not find 'Sports or TCG?' headers, using fallback")
+        return [[i for i in range(4, len(header_row))]]  # Skip first 4 columns (name/webhook)
+
+    # For each section start, take the next 7-8 columns until the next section
+    groups = []
+    for j, start in enumerate(section_starts):
+        if j + 1 < len(section_starts):
+            end = section_starts[j + 1]
+        else:
+            # Last section: take until we hit "What grade are we looking for? [N]" (grade preferences)
+            end = len(header_row)
+            for k in range(start + 1, len(header_row)):
+                h = str(header_row[k]).lower()
+                if 'what grade are we looking for? [' in h:
+                    end = k
+                    break
+        groups.append(list(range(start, end)))
+
+    return groups
 
 
 def fetch_unimported_rows(client, sheet_id):
@@ -194,11 +275,18 @@ def fetch_unimported_rows(client, sheet_id):
 
     # Find or create the "Imported?" column
     imported_col = len(header)
-    if not header[imported_col:imported_col+1] or 'imported' not in (header[imported_col] or '').lower():
+    existing_imported_col = None
+    for i, h in enumerate(header):
+        if h and 'imported' in str(h).lower():
+            existing_imported_col = i
+            break
+
+    if existing_imported_col is not None:
+        column_map['imported_marker'] = existing_imported_col
+        print(f"[OK] Using existing 'Imported?' column at position {existing_imported_col + 1}")
+    else:
         print(f"[INFO] Adding 'Imported?' column at position {imported_col + 1}")
         sheet.update_cell(1, imported_col + 1, 'Imported?')
-        column_map['imported_marker'] = imported_col
-    else:
         column_map['imported_marker'] = imported_col
 
     # Find rows where imported column is empty
@@ -212,6 +300,7 @@ def fetch_unimported_rows(client, sheet_id):
             'row_num': row_num,
             'data': row,
             'column_map': column_map,
+            'all_headers': header,
         })
 
     return unimported, sheet, column_map
@@ -265,14 +354,14 @@ def import_row(row_info, dry_run=True):
     session.add(customer)
     session.flush()  # Get the customer.id
 
-    # Parse cards from sections (columns after the basic info)
+    # Parse cards from sections (using group detection)
+    card_groups = get_card_field_groups(row_info['all_headers'])
     card_count = 0
-    for col_idx in range(len(row)):
-        # Skip the basic info columns
-        if col_idx in [cm['timestamp'], cm['first_name'], cm['last_name'], cm['discord_webhook'], cm['imported_marker']]:
-            continue
 
-        card_data = parse_card_from_section(row[col_idx])
+    for group_cols in card_groups:
+        # Extract the values for this card section
+        card_fields = [row[c] if c < len(row) else '' for c in group_cols]
+        card_data = parse_card_from_section(card_fields)
         if not card_data:
             continue
 
@@ -289,7 +378,10 @@ def import_row(row_info, dry_run=True):
         session.add(card)
         card_count += 1
 
-    session.commit()
+    if dry_run:
+        session.rollback()  # Don't actually save during dry-run
+    else:
+        session.commit()
     session.close()
 
     return {
