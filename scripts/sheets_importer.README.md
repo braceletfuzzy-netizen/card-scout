@@ -58,15 +58,21 @@ python scripts/sheets_importer.py --import
 python scripts/sheets_importer.py --import --sheet-id 1AbC...XyZ
 ```
 
-## What it does to your form
+## Sheet structure (auto-detected)
 
-| Form field | DB field | Notes |
+The script auto-detects column positions from the header row. For your form:
+
+| Section | Columns | Field |
 |---|---|---|
-| Timestamp | (audit only) | Used to detect new rows |
-| First Name (You) | (notes field) | Not stored separately yet |
-| Last Name (You) | (notes field) | Same |
-| Discord Webhook | customers.discord_webhook | Required, validated |
-| Scouting Report Card 1, 2, 3 sections | cards.search_query | Raw text for now; structured parsing in V2 |
+| Section 1 | A-D | Timestamp, First Name, Last Name, Discord Webhook |
+| Card 1 | E-L | Sports/TCG, Brand, Player, Card#, Year, Special, Grade, Grade Type |
+| Card 2 | M-T | Same as Card 1 |
+| Card 3 | U-AB | Same as Card 1 |
+| Grade prefs | AC-AH | "What grade? [4-9]" checkboxes |
+| Audit | AI | processed_at (auto-set by Form Apps Script) |
+| Import | AJ | "Imported?" (set by this script) |
+
+The script groups Card 1/2/3 by finding the "Sports or TCG?" headers and taking columns between them.
 
 ## Customer tier default
 - New signups → `tier='trial'`, `subscription_status='trial'`, `max_cards=3`
@@ -79,10 +85,10 @@ python scripts/sheets_importer.py --import --sheet-id 1AbC...XyZ
 - **Webhook validation** — skips rows with malformed URLs
 
 ## What needs work for V2
-- Parse structured fields from "Scouting Report Card" sections (currently raw text)
-- Auto-detect tier from form response (multiple choice question)
-- Map sportscardspro URL if customer provides it
+- Parse the "Sports or TCG?" field to choose correct preset (`cards-sports` vs `cards-tcg`)
+- Parse "What grade are we looking for?" to set initial `track_psa_10` flags
 - Email notification on import (so you know tester #2 is in)
+- Build a customer dashboard (Option A) to replace this whole flow
 
 ## When tester #2 submits the form
 1. They fill the form, submit
