@@ -621,6 +621,25 @@ def process_customer_from_db(customer, dry_run=False):
             print(f"  [NO MATCHES] No items match '{card.search_query}'")
             continue
 
+        # V2 grade-tiered listing quality filter (Sept 15)
+        # Skip junk listings ($1 BIN, bulk lots, no watchers). Skip entirely
+        # if market_thin (every listing is signal).
+        try:
+            from listing_quality import filter_listings_by_quality
+            grade_tier = card.alert_type or 'raw'
+            quality_result = filter_listings_by_quality(
+                matching,
+                grade_tier=grade_tier,
+                thin_market=bool(getattr(card, 'market_thin', 0)),
+            )
+            dropped_count = len(quality_result['dropped'])
+            if dropped_count > 0:
+                print(f"  [V2 FILTER] Dropped {dropped_count}/{len(matching)} low-quality listings")
+            matching = quality_result['kept']
+        except Exception as e:
+            print(f"  [V2 FILTER] Skipped (error: {e})")
+            # Continue with all matching items if filter fails
+
         # Save snapshot (triggers trend detection)
         print(f"  [SNAPSHOT] Saving {len(matching)} matching items")
         trend = save_run_snapshot(card.id, matching)
