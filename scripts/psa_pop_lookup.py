@@ -16,7 +16,8 @@ import requests
 import time
 import os
 
-APIFY_TOKEN = os.getenv('APIFY_TOKEN', "apify_api_taheCsiucleGxYau39AepimOmTnH1h0nTUCZ")
+# Load Apify token from environment (NEVER commit tokens to code)
+APIFY_TOKEN = os.environ['APIFY_TOKEN']
 
 # Hugo's PSA Population Lookup actor (replaces lulzasaur).
 # v1.0 — verified working 2026-09-13. Cost ~$0.005-0.013/run.

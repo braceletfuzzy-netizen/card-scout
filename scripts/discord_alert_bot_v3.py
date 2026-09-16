@@ -19,6 +19,7 @@ Database:
 import json
 import sys
 import argparse
+import os
 import requests
 from pathlib import Path
 from datetime import datetime
@@ -36,7 +37,8 @@ from psa_pop_lookup import lookup_psa_population, extract_pop_summary
 from sportscardspro_lookup import lookup_sportscardspro, extract_sold_summary
 
 # ============ CONFIG ============
-APIFY_TOKEN = "apify_api_taheCsiucleGxYau39AepimOmTnH1h0nTUCZ"
+# Apify token: loaded from env var (NEVER commit tokens to code)
+APIFY_TOKEN = os.environ['APIFY_TOKEN']
 ACTOR_ID = "AtQq66Qn8FB7aLq2l"  # eBay+Etsy scraper
 BASE_URL = "https://api.apify.com/v2"
 
