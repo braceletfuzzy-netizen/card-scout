@@ -75,6 +75,18 @@ at customer base levels. User-count goals = triggers.
 - eBay: stays on free eBay Buy API
 - PSA: stays on Apify (still broken)
 
+### Value layers (founder insight Sept 16)
+- **eBay Browse API** = listing data (asking prices — spread comes from here)
+- **Pricecharting API** = baseline single-price per grade (fallback)
+- **Card Ladder** = sold data (what people actually paid)
+
+Combined: $6/mo PC + $20/mo Card Ladder = $26/mo for full data stack
+- eBay Browse gives spread (multiple active listings)
+- Pricecharting gives fallback single price
+- Card Ladder gives sold history
+
+**Note**: Sold data may require Card Ladder — eBay Browse only gives active listings, not sold prices.
+
 ### Triggers to move to Stage 3
 - 50+ paying customers
 - OR need PSA pop data reliably
@@ -87,18 +99,18 @@ at customer base levels. User-count goals = triggers.
 4. Replace eBay + SCPRO + PSA with Card Ladder single API
 5. **Savings**: $49.60/mo at 100 customers (71% reduction)
 
-## Stage 3: Card Ladder (50-500 customers)
+## Stage 3: Card Ladder + PC + eBay (50-500 customers)
 
 **When**: 50-100+ customers
-**Stack**: Card Ladder API ($20/mo unlimited) + eBay Buy API (free)
-**Monthly cost**: ~$20/mo flat
-**Savings vs Stage 2**: $16+/mo at 50 customers, $49.60/mo at 100 customers
+**Stack**: Card Ladder API ($20/mo) + Pricecharting API ($6/mo) + eBay Buy API (free)
+**Monthly cost**: ~$26/mo flat ($20 Card Ladder + $6 Pricecharting)
+**Savings vs Stage 2**: $10+/mo at 50 customers, $43.60/mo at 100 customers
 
-### What changes
-- Aggregator: Card Ladder ($20/mo, all-in-one)
-- eBay: stays on free API (for deal links)
-- PSA pop: included in Card Ladder
-- Sales history: included in Card Ladder
+### What changes (LAYERED APPROACH — founder insight Sept 16)
+- **eBay Buy API (free)**: listing data — spread comes from multiple active listings
+- **Pricecharting API ($6/mo)**: baseline single price per grade
+- **Card Ladder ($20/mo)**: sold data, pop data, sales history
+- **PSA actor**: drops out (Card Ladder has pop data)
 
 ### Triggers to move to Stage 4
 - 500+ paying customers
