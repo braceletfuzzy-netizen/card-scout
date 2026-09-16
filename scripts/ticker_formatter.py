@@ -87,6 +87,8 @@ def format_per_grade_ticker(grade_table: List[Dict], max_chars: int = 600, sessi
     typical price + 90% range.
 
     If session + card_id provided, also shows "vs 30d avg" trend for each tier.
+    If PSA pop data is available for the card, also shows the
+    "stock-class hierarchy" section (Sept 16 V3 feature).
     """
     if not grade_table:
         return "(no per-grade data)"
@@ -120,6 +122,64 @@ def format_per_grade_ticker(grade_table: List[Dict], max_chars: int = 600, sessi
             trend_str = format_trend_indicator(price, avg)
 
         lines.append(f"**{label}:** {val_str}{trend_str}{sold_str}")
+
+    return "\n".join(lines)
+
+
+def format_stock_class_section(card) -> Optional[str]:
+    """
+    Format the 'stock-class hierarchy' section for a card (Sept 16 V3 feature).
+
+    Founder's framing: PSA grades are like stock classes (10=A, 9=B, 8=C).
+    Graded cards are stock certificates. Pop data = outstanding shares.
+
+    Shows:
+    - Stock-class label (A/B/C/D) per grade
+    - Rarity % (PSA 10 as % of total pop)
+    - Total outstanding (total graded)
+    - Market depth (sales volume)
+    - Premium (PSA 10 / PSA 9 ratio)
+
+    Returns None if no pop data, or a formatted string.
+    """
+    # Lazy import to avoid circular
+    try:
+        from psa_pop_persister import compute_rarity, get_stock_class_label, compute_premium
+    except ImportError:
+        return None
+
+    # Need both prices AND pop data
+    if not card.psa_total_pop:
+        return None
+
+    # Build the section
+    lines = []
+    lines.append("**🎖️ Stock-Class Hierarchy:**")
+
+    # Rarity
+    rarity = compute_rarity(card.psa_10_pop, card.psa_total_pop)
+    rarity_emoji = {
+        'RARE': '⭐',
+        'SCARCE': '💎',
+        'COMMON': '📊',
+        'PLENTIFUL': '📈',
+        'UNKNOWN': '❓'
+    }.get(rarity['label'], '')
+
+    if rarity['pct'] is not None:
+        lines.append(
+            f"  {rarity_emoji} **PSA 10** = **{rarity['label']}** "
+            f"({rarity['pct']:.1f}% of pop, only **{card.psa_10_pop:,}** exist)"
+        )
+
+    # Stock classes (just show the structure, no per-grade pop data we have)
+    # We don't have per-grade pop for PSA 9, 8, 7 etc in DB. Show what we know.
+    if card.psa_9_pop:
+        lines.append(f"  • PSA 9 = B-class ({card.psa_9_pop:,} exist)")
+
+    # Total outstanding
+    lines.append(f"")
+    lines.append(f"**🏷️ Total outstanding:** {card.psa_total_pop:,} graded")
 
     return "\n".join(lines)
 

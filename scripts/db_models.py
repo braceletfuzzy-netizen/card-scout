@@ -85,6 +85,14 @@ class Card(Base):
     sportscardspro_url = Column(String(500), nullable=True)  # sportscardspro.com OR pricecharting.com URL for sold data
     market_thin = Column(Integer, default=0, nullable=False)  # 1 = skip below-median deal detection; show market ticker + 90% CI only
 
+    # V3 PSA Population Data (Sept 16 — stock-ticker insight)
+    # Founder's framing: PSA grades are like stock classes (10=A, 9=B, 8=C).
+    # Graded cards are stock certificates. Pop data = "outstanding shares."
+    psa_total_pop = Column(Integer, nullable=True)        # total PSA-graded count
+    psa_10_pop = Column(Integer, nullable=True)            # PSA 10 count (A-class)
+    psa_9_pop = Column(Integer, nullable=True)             # PSA 9 count (B-class)
+    psa_pop_fetched_at = Column(DateTime, nullable=True)   # when last fetched from PSA
+
     # Grade filter checkboxes (6-bucket system)
     # Customer picks which grades matter for THIS card
     track_psa_10 = Column(Boolean, default=True)       # Tier 1: Gem Mint

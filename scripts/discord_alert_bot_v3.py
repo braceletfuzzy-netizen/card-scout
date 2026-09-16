@@ -413,6 +413,21 @@ def format_deal_alert(search_query, summary, deals, snapshot, alert_type='below_
                 "inline": False
             })
 
+            # V3 STOCK-CLASS HIERARCHY (Sept 16): show PSA pop as stock-class data
+            # Founder's framing: PSA grades are like stock classes (10=A, 9=B, 8=C).
+            # Graded cards are stock certificates. Pop data = outstanding shares.
+            try:
+                from ticker_formatter import format_stock_class_section
+                stock_text = format_stock_class_section(card)
+                if stock_text:
+                    embed["fields"].append({
+                        "name": "🎖️ Stock-Class Hierarchy",
+                        "value": stock_text,
+                        "inline": False
+                    })
+            except Exception:
+                pass  # Non-fatal: skip if no pop data
+
             # Per-grade below-market deals
             try:
                 from ticker_formatter import format_below_market_deals
