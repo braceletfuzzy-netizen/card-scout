@@ -198,8 +198,12 @@ Above 500 customers, DIY wins.
 
 ## IMMEDIATE NEXT STEPS
 
-1. **Sign up for eBay Developer Account** (5 min, free)
-2. **Get eBay Buy API credentials** (10 min)
+1. ~~Sign up for eBay Developer Account~~ ✅ **DONE Sept 16, 2026 (awaiting ~1 day verification)**
+2. **Get eBay Buy API credentials** (10 min after verification)
+   - Sign in at https://developer.ebay.com
+   - Click "Application Keys" → "Create a keyset" under Production
+   - Name it "Card Scout"
+   - Copy App ID + Cert ID (Client Secret) — paste to Hugo
 3. **Build eBay Buy API integration** (~2-4 hours dev)
 4. **Test with current 12 Jim cards**
 5. **Save $43/mo at 100 customers** (scaling linearly)
