@@ -56,6 +56,7 @@ sys.path.insert(0, str(Path(__file__).parent))
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
 from db_models import init_db, get_session, Customer, Card
+from customer_onboarding_v2 import configure_webhook  # PATCH webhook with branding
 from datetime import datetime
 
 
@@ -428,6 +429,16 @@ def import_row(row_info, dry_run=True):
         if not allowed:
             print(f"  [SKIP] Row {row_num}: rate-limited: {reason}")
             return None
+
+    # BRANDING (Sept 15): PATCH webhook with Card Scout logo + name
+    # Done in dry-run too (read-only PATCH, no harm if webhook already branded)
+    if not dry_run:
+        print(f"  [BRAND] Patching webhook with Card Scout branding...")
+        if configure_webhook(discord_webhook):
+            print(f"  [BRAND] OK")
+        else:
+            # Don't fail the import — webhook works for alerts, just no branding yet
+            print(f"  [BRAND] WARN: Could not PATCH (alerts will use default avatar)")
 
     session = get_session()
 
