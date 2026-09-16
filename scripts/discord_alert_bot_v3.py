@@ -333,8 +333,23 @@ def format_deal_alert(search_query, summary, deals, snapshot, alert_type='below_
         "timestamp": datetime.utcnow().isoformat()
     }
 
-    # Market Shape (Q bands)
-    if summary:
+    # V3 ALERT LAYOUT (Sept 16 — Jim + founder beta feedback):
+    # Order: Trend → Per-grade → Stock-Class → Market Shape → Deals → Top listings
+    # Jim: more spacing + bigger formatting
+    # Founder: per-grade values at top (under trend), Market Shape under per-grade
+
+    # 1. TREND — first dedicated field (move from description to field for readability)
+    embed["fields"].append({
+        "name": f"{trend_emoji} Trend Signal",
+        "value": (
+            f"**Current:** {trend_label}\n\n"
+            "_Trend detection builds over multiple runs — more history = more accurate signal_"
+        ),
+        "inline": False
+    })
+
+    # Market Shape (Q bands) — MOVED to position 4 (after per-grade ticker)
+    if False and summary:  # disable for now — moved below
         embed["fields"].append({
             "name": "📊 Market Shape (Q Bands)",
             "value": (
@@ -428,27 +443,129 @@ def format_deal_alert(search_query, summary, deals, snapshot, alert_type='below_
             except Exception:
                 pass  # Non-fatal: skip if no pop data
 
-            # Per-grade below-market deals
+            # V3: NEW — Market Shape (moved here per founder's spec)
+            # Founder's layout: per-grade values → stock-class → Market Shape
+            if summary:
+                # Build CI-style display (Q1-Q3 with median split into thirds)
+                q1 = summary.get('q1_price_usd', 0)
+                median = summary.get('median_price_usd', 0)
+                q3 = summary.get('q3_price_usd', 0)
+                spread = q3 - q1
+                lower_third = q1 + spread / 3
+                upper_third = q1 + 2 * spread / 3
+                embed["fields"].append({
+                    "name": "📊 Market Shape (Q Bands + CI Thirds)",
+                    "value": (
+                        f"**Q1** ${q1:.2f} → "
+                        f"**Median** ${median:.2f} → "
+                        f"**Q3** ${q3:.2f}\n"
+                        f"**Range:** ${summary.get('min_price_usd', 0):.2f} - ${summary.get('max_price_usd', 0):.2f}\n\n"
+                        f"_Deal threshold (lower third):_ **${lower_third:.2f}**\n"
+                        f"_Top third line:_ **${upper_third:.2f}**"
+                    ),
+                    "inline": False
+                })
+
+            # V3: Per-grade deals using deal_detector.py (Sept 16 beta feedback)
+            # Founder's rule: deal = price < lower-third of CI band, where spread exists
             try:
-                from ticker_formatter import format_below_market_deals
-                items_for_ticker = deals  # reuse what's already filtered+matching
-                bmd = format_below_market_deals(items_for_ticker, grade_table, max_items=3)
-                if bmd and bmd.get('deals'):
-                    deal_lines = []
-                    for d in bmd['deals']:
-                        deal_lines.append(
-                            f"**${d['price_usd']}** {d['grade_label']} "
-                            f"vs typical ${d['typical_low']:.0f}-${d['typical_high']:.0f} "
-                            f"({d['discount_pct']:.0f}% off) "
-                            f"[link]({d['url']})"
-                        )
-                    embed["fields"].append({
-                        "name": f"🎯 Below-Market Deals ({bmd['total_found']} found, top {len(deal_lines)})",
-                        "value": "\n".join(deal_lines),
-                        "inline": False
-                    })
+                from deal_detector import detect_all_deals
+                import re as re_mod
+
+                # Build grade_breakdown from deals (group by grade parsed from title)
+                grade_breakdown = {}
+                for d in deals:
+                    title = (d.get('title') or '').lower()
+                    price = d.get('price_usd', 0)
+                    if price <= 0:
+                        continue
+
+                    # Detect grade from title
+                    if 'psa 10' in title or 'gem mint' in title:
+                        tier = 'psa_10'
+                        grade_label = 'PSA 10'
+                    elif 'psa 9.5' in title:
+                        tier = 'psa_9_5'
+                        grade_label = 'PSA 9.5'
+                    elif 'psa 9' in title:
+                        tier = 'psa_9'
+                        grade_label = 'PSA 9'
+                    elif 'psa 8' in title:
+                        tier = 'psa_8'
+                        grade_label = 'PSA 8'
+                    elif 'psa 7' in title:
+                        tier = 'psa_7'
+                        grade_label = 'PSA 7'
+                    else:
+                        tier = 'raw'
+                        grade_label = 'Ungraded'
+
+                    if tier not in grade_breakdown:
+                        grade_breakdown[tier] = {'low': price, 'high': price, 'volume': 0, 'listings': []}
+                    grade_breakdown[tier]['high'] = max(grade_breakdown[tier]['high'], price)
+                    grade_breakdown[tier]['low'] = min(grade_breakdown[tier]['low'], price)
+                    grade_breakdown[tier]['volume'] += 1
+                    grade_breakdown[tier]['listings'].append(d)
+
+                pricing_bands = {
+                    tier: {
+                        'low': data['low'],
+                        'high': data['high'],
+                        'volume': data['volume']
+                    }
+                    for tier, data in grade_breakdown.items()
+                }
+                listings_by_grade = {
+                    tier: data['listings']
+                    for tier, data in grade_breakdown.items()
+                }
+
+                if pricing_bands:
+                    deals_results = detect_all_deals(pricing_bands, listings_by_grade)
+
+                    # Show deals grouped by grade (only grades with spread)
+                    deals_with_data = [d for d in deals_results if d['deals']]
+                    if deals_with_data:
+                        deals_text_lines = []
+                        total_found = 0
+                        for dr in deals_with_data:
+                            total_found += dr.get('total_deals_found', len(dr['deals']))
+                            deals_text_lines.append(
+                                f"\n**{dr['grade']}** "
+                                f"(spread ${dr['spread']:.0f}, {dr['spread_pct']:.0f}%, "
+                                f"threshold ${dr['threshold']:.0f}):"
+                            )
+                            for d in dr['deals'][:3]:  # top 3 per grade
+                                deals_text_lines.append(
+                                    f"  • **${d['price']:.0f}** — "
+                                    f"{d['discount_pct']:.0f}% below threshold — "
+                                    f"[link]({d['url']})"
+                                )
+                        embed["fields"].append({
+                            "name": f"🎯 Per-Grade Deals ({total_found} found)",
+                            "value": "\n".join(deals_text_lines),
+                            "inline": False
+                        })
+                    else:
+                        # Show why no deals
+                        no_deal_grades = [d for d in deals_results if d.get('no_deals_reason')]
+                        if no_deal_grades:
+                            reasons = "\n".join([
+                                f"• **{d['grade']}:** {d['no_deals_reason']}"
+                                for d in no_deal_grades[:3]
+                            ])
+                            embed["fields"].append({
+                                "name": "🎯 Per-Grade Deals (none found)",
+                                "value": (
+                                    "_Per-grade deal detection (Sept 16 beta feedback)_\n\n"
+                                    f"{reasons}\n\n"
+                                    "_Where there's no spread, there's no deal._"
+                                ),
+                                "inline": False
+                            })
             except Exception as e:
-                pass  # Non-fatal: skip per-grade deal detection if it errors
+                print(f"  [DEAL] Error: {e}")
+                pass  # Non-fatal: skip deal detection if errors
         except Exception as e:
             pass  # Non-fatal: skip per-grade ticker if data unavailable
 
@@ -516,30 +633,8 @@ def format_deal_alert(search_query, summary, deals, snapshot, alert_type='below_
                         "inline": False
                     })
 
-    # Trend history (if available)
-    if snapshot and snapshot.trend_signal and snapshot.trend_signal != 'INSUFFICIENT_DATA':
-        trend_history_text = "Trend detection builds over multiple runs. More history = more accurate signal."
-
-        # If we have 7d and 30d snapshots, show them
-        session = get_session()
-        card_snapshots = session.query(Snapshot).filter_by(card_id=snapshot.card_id).all()
-        session.close()
-
-        seven_d = next((s for s in card_snapshots if s.window == '7d'), None)
-        thirty_d = next((s for s in card_snapshots if s.window == '30d'), None)
-
-        if seven_d and thirty_d:
-            d7 = (snapshot.median_price - seven_d.median_price) / seven_d.median_price * 100
-            d30 = (snapshot.median_price - thirty_d.median_price) / thirty_d.median_price * 100
-            trend_history_text = (
-                f"**7d change:** {d7:+.1f}%  |  **30d change:** {d30:+.1f}%"
-            )
-
-        embed["fields"].append({
-            "name": f"{trend_emoji} Trend Signal",
-            "value": trend_history_text,
-            "inline": False
-        })
+    # Trend history — REMOVED (now shown at top in #1 field)
+    # Old logic duplicated the trend field, removed in V3 alert layout (Sept 16)
 
     return {
         "embeds": [embed],
