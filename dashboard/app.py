@@ -16,6 +16,7 @@ Deploy: See DEPLOY.md
 """
 
 import hashlib
+import os
 import secrets
 from pathlib import Path
 from datetime import datetime
@@ -35,16 +36,26 @@ from db_models import Customer, Card, init_db  # noqa: E402
 # APP SETUP
 # ============================================================================
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static', static_url_path='/static')
 app.config['SECRET_KEY'] = secrets.token_hex(32)  # Random per-process, override in prod
 
 # Session config — cookie-based for simplicity
 app.config['SESSION_COOKIE_HTTPONLY'] = True
 app.config['SESSION_COOKIE_SAMESITE'] = 'Lax'
+app.config['SESSION_COOKIE_SECURE'] = os.environ.get('FLASK_COOKIE_SECURE', 'false').lower() == 'true'
 app.config['PERMANENT_SESSION_LIFETIME'] = 86400  # 1 day
 
+# Register public site blueprint (landing, deals, pricing, SEO)
+from public_site import site_bp
+app.register_blueprint(site_bp)
+
 # DB setup — share with bot
-DB_PATH = Path(__file__).parent.parent / 'card_scout.db'
+# In production (Render), use DATABASE_URL env var pointing to persistent disk
+DB_URL = os.environ.get('DATABASE_URL')
+if DB_URL and DB_URL.startswith('sqlite:///'):
+    DB_PATH = Path(DB_URL.replace('sqlite:////', '/').replace('sqlite:///', ''))
+else:
+    DB_PATH = Path(__file__).parent.parent / 'card_scout.db'
 engine = create_engine(f'sqlite:///{DB_PATH}')
 db_session = scoped_session(sessionmaker(bind=engine))
 
@@ -66,12 +77,12 @@ def get_current_customer():
 
 
 def login_required(f):
-    """Decorator: require login, redirect to / if not logged in."""
+    """Decorator: require login, redirect to dashboard login if not logged in."""
     from functools import wraps
     @wraps(f)
     def decorated(*args, **kwargs):
         if not get_current_customer():
-            return redirect(url_for('login'))
+            return redirect(url_for('dashboard_login'))
         return f(*args, **kwargs)
     return decorated
 
@@ -80,28 +91,22 @@ def login_required(f):
 # ROUTES
 # ============================================================================
 
-@app.route('/')
-def index():
-    """Landing page — login form or link to dashboard."""
-    customer = get_current_customer()
-    if customer:
-        return redirect(url_for('dashboard', customer_id=customer.customer_id))
-    return render_template_string(INDEX_TEMPLATE)
+@app.route('/dashboard/login', methods=['GET', 'POST'])
+def dashboard_login():
+    """Customer dashboard login — Discord webhook auth."""
+    if request.method == 'GET':
+        return render_template_string(INDEX_TEMPLATE)
 
-
-@app.route('/login', methods=['POST'])
-def login():
-    """Login: customer enters Discord webhook URL → we look up their customer_id."""
     webhook = request.form.get('webhook', '').strip()
 
     if not webhook:
         flash('Please enter your Discord webhook URL.', 'error')
-        return redirect(url_for('index'))
+        return redirect(url_for('dashboard_login'))
 
     # Basic validation: webhook URLs should start with https://discord.com/api/webhooks/
     if not webhook.startswith('https://discord.com/api/webhooks/'):
         flash('That doesn\'t look like a Discord webhook URL. Try again.', 'error')
-        return redirect(url_for('index'))
+        return redirect(url_for('dashboard_login'))
 
     # Look up customer by webhook
     customer = db_session.query(Customer).filter_by(discord_webhook=webhook).first()
@@ -122,7 +127,7 @@ def logout():
     """Clear session and return to login."""
     session.clear()
     flash('Logged out.', 'info')
-    return redirect(url_for('index'))
+    return redirect(url_for('site.landing'))
 
 
 @app.route('/dashboard/<customer_id>')
@@ -314,7 +319,7 @@ INDEX_TEMPLATE = '''
     {% endif %}
   {% endwith %}
 
-  <form method="POST" action="{{ url_for('login') }}">
+  <form method="POST" action="{{ url_for('dashboard_login') }}">
     <label for="webhook">Discord Webhook URL</label>
     <input type="text" id="webhook" name="webhook" placeholder="https://discord.com/api/webhooks/..." required>
     <div class="help">This is how we identify you. Each customer has a unique webhook.</div>

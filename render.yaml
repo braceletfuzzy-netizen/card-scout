@@ -1,0 +1,52 @@
+# Card Scout Render deployment config
+# See https://render.com/docs/blueprint-spec
+
+services:
+  - type: web
+    name: card-scout
+    runtime: python
+    plan: starter  # $5/mo, no sleep
+    region: oregon
+    rootDir: dashboard
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: gunicorn app:app -b 0.0.0.0:$PORT --workers 2 --timeout 120
+
+    # Persistent disk for SQLite database
+    # Render charges $1/mo for 1GB persistent disk
+    disk:
+      name: card-scout-data
+      mountPath: /data
+      sizeGB: 1
+
+    # Environment variables (set in Render dashboard, NOT committed here)
+    # Required:
+    # - SECRET_KEY (random 64-char hex)
+    # - DATABASE_URL=sqlite:////data/card_scout.db
+    # - GOOGLE_SHEET_ID
+    # - GOOGLE_APPLICATION_CREDENTIALS (JSON content)
+    # Optional:
+    # - STRIPE_SECRET_KEY
+    # - STRIPE_PAYMENT_LINK
+
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.16
+      - key: DATABASE_URL
+        value: sqlite:////data/card_scout.db
+
+    # Health check
+    healthCheckPath: /health
+
+    # Custom domain (after Porkbun purchase)
+    # customDomains:
+    #   - cardscout.app
+    #   - www.cardscout.app
+
+    # Auto-deploy on git push
+    autoDeploy: true
+
+# NOTES for founder:
+# 1. First deploy: copy local card_scout.db to /data via Render shell
+#    cp card_scout.db /data/
+# 2. After Porkbun purchase, add customDomains section above
+# 3. SSL is automatic via Render
