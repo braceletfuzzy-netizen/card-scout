@@ -87,7 +87,7 @@ LANDING_TEMPLATE = '''
       <div class="step">
         <div class="step-num">1</div>
         <h3>Add your cards</h3>
-        <p>Search our database or paste an eBay / Sportscardspro URL. Each card you track counts as 1 toward your tier limit.</p>
+        <p>Search our database or paste a card listing URL. Each card you track counts as 1 toward your tier limit.</p>
       </div>
       <div class="step">
         <div class="step-num">2</div>
@@ -110,8 +110,8 @@ LANDING_TEMPLATE = '''
         <p>Every alert is verified against the 1-month market median. No spam, no junk listings.</p>
       </div>
       <div class="feature">
-        <h3>Multi-source data</h3>
-        <p>eBay + Sportscardspro + PriceCharting + Card Ladder. We pull from every source so you don't miss anything.</p>
+        <h3>Wide market coverage</h3>
+        <p>We aggregate live listings and recent sold prices across the major card marketplaces, then deduplicate and outlier-trim automatically. You see the real market, not noise.</p>
       </div>
       <div class="feature">
         <h3>Self-serve</h3>
@@ -166,7 +166,7 @@ DEALS_TEMPLATE = '''
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Top Card Deals — Card Scout</title>
-<meta name="description" content="Live top deals on graded sports cards and TCG. AI-powered deal detection across eBay, Sportscardspro, and more.">
+<meta name="description" content="Live top deals on graded sports cards and TCG. AI-powered deal detection across the major card marketplaces.">
 <meta property="og:title" content="Top Card Deals — Card Scout">
 <meta property="og:description" content="Live top deals across all major card marketplaces.">
 <link rel="canonical" href="https://cardscout.pro/deals">
@@ -409,7 +409,7 @@ PRICING_TEMPLATE = '''
     </details>
     <details>
       <summary>What sources do you pull from?</summary>
-      <p>eBay (live listings + sold), Sportscardspro, PriceCharting, Card Ladder. We deduplicate and outlier-trim automatically.</p>
+      <p>Aggregated live listings and recent sold prices across the major card marketplaces. We deduplicate, outlier-trim, and verify each alert against a 30-day market median before sending it to your Discord.</p>
     </details>
     <details>
       <summary>Can I cancel anytime?</summary>
