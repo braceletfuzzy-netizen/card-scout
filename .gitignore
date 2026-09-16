@@ -26,6 +26,7 @@ Thumbs.db
 *.db-journal
 *.db-wal
 *.db-shm
+card_scout.db
 
 # Secrets — never commit
 config/gcp-service-account.json
