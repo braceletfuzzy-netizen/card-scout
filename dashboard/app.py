@@ -187,12 +187,39 @@ def update_dashboard(customer_id):
         if new_query:
             card.search_query = new_query
         psa_url = request.form.get('psa_url', '').strip()
+        old_psa_url = card.psa_set_url
         card.psa_set_url = psa_url if psa_url else None
         sc_url = request.form.get('sportscardspro_url', '').strip()
         card.sportscardspro_url = sc_url if sc_url else None
 
+        # V3 AUTO-FETCH POP (Sept 16): when PSA URL changes, fetch pop data
+        if psa_url and psa_url != old_psa_url:
+            try:
+                sys.path.insert(0, str(Path(__file__).parent.parent / 'scripts'))
+                from psa_pop_persister import fetch_and_persist_pop
+                pop_data = fetch_and_persist_pop(db_session, card)
+                if pop_data and pop_data.get('psa_total_pop'):
+                    flash(
+                        f"Updated card #{card.id}. Pop fetched: "
+                        f"{pop_data['psa_total_pop']} graded, "
+                        f"{pop_data['psa_10_pop']} PSA 10.",
+                        'success'
+                    )
+                else:
+                    flash(f'Updated card #{card.id} (pop data could not be fetched — try refresh).', 'warning')
+            except Exception as e:
+                flash(f'Updated card #{card.id} but pop fetch failed: {e}', 'warning')
+        elif not psa_url:
+            # Cleared URL → clear pop data
+            card.psa_total_pop = None
+            card.psa_10_pop = None
+            card.psa_9_pop = None
+            card.psa_pop_fetched_at = None
+            flash(f'Updated card #{card.id}.', 'success')
+        else:
+            flash(f'Updated card #{card.id}.', 'success')
+
         db_session.commit()
-        flash(f'Updated card #{card.id}.', 'success')
         return redirect(url_for('dashboard', customer_id=customer_id))
 
     elif action == 'add':
@@ -373,7 +400,7 @@ DASHBOARD_TEMPLATE = '''
             Card #{{ c.id }} ·
             {% if c.psa_set_url %}<a href="{{ c.psa_set_url }}" target="_blank">PSA</a>{% else %}<span style="color:#c33;">no PSA URL</span>{% endif %} ·
             {% if c.sportscardspro_url %}<a href="{{ c.sportscardspro_url }}" target="_blank">SC</a>{% else %}<span style="color:#c33;">no SC URL</span>{% endif %} ·
-            {% if c.include_pop %}Pop ✓{% endif %} ·
+            {% if c.psa_total_pop %}<span style="color:#3a3;">Pop: {{ c.psa_total_pop }} graded, {{ c.psa_10_pop }} PSA 10</span>{% elif c.include_pop %}<span style="color:#c93;">Pop: pending</span>{% endif %} ·
             {% if c.market_thin %}Thin market{% endif %}
           </div>
         </div>
@@ -413,7 +440,7 @@ DASHBOARD_TEMPLATE = '''
             Card #{{ c.id }} ·
             {% if c.psa_set_url %}<a href="{{ c.psa_set_url }}" target="_blank">PSA</a>{% else %}<span style="color:#c33;">no PSA URL</span>{% endif %} ·
             {% if c.sportscardspro_url %}<a href="{{ c.sportscardspro_url }}" target="_blank">SC</a>{% else %}<span style="color:#c33;">no SC URL</span>{% endif %} ·
-            {% if c.include_pop %}Pop ✓{% endif %} ·
+            {% if c.psa_total_pop %}<span style="color:#3a3;">Pop: {{ c.psa_total_pop }} graded, {{ c.psa_10_pop }} PSA 10</span>{% elif c.include_pop %}<span style="color:#c93;">Pop: pending</span>{% endif %} ·
             {% if c.market_thin %}Thin market{% endif %}
           </div>
         </div>
