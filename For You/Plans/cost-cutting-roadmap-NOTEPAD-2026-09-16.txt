@@ -1,0 +1,238 @@
+CARD SCOUT COST-CUTTING ROADMAP
+September 16, 2026
+
+USER COUNT GOALS (Triggers)
+
+================================================================
+STAGE 0: BASELINE (0-10 customers)
+================================================================
+WHEN: Now through 10 paying customers
+STACK: Apify actors (eBay $0.018, SCPRO $0.001, PSA $0.010)
+MONTHLY COST: $2-7/mo Apify usage at 10 customers
+
+TRIGGER TO MOVE TO STAGE 1:
+- 10+ paying customers
+- OR >600 runs/month
+- OR dev time available
+
+WHAT TO BUILD WHEN TRIGGERED:
+1. Sign up for eBay Developer Account (5 min, free)
+2. Get eBay Buy API credentials (app_id + cert_id)
+3. Build eBay Buy API integration (2-4 hours)
+4. Test with 12 Jim cards
+5. Replace Apify eBay actor call with direct API call
+
+SAVINGS: $4.32/mo at 10 customers, scales linearly
+
+================================================================
+STAGE 1: eBay Buy API (10-25 customers)
+================================================================
+WHEN: 10+ customers
+STACK: eBay Buy API (free) + Apify SCPRO/PSA actors
+MONTHLY COST: ~$30/mo at 25 customers
+
+WHAT CHANGES:
+- eBay data: Apify actor -> direct eBay Buy API call
+- SCPRO: stays on Apify (still cheap)
+- PSA: stays on Apify (still broken, paying for retries)
+
+TRIGGER TO MOVE TO STAGE 2:
+- 25+ paying customers
+- OR >600 SCPRO runs/month
+- OR $6/mo for PC API becomes cheaper than Apify SCPRO
+
+WHAT TO BUILD WHEN TRIGGERED:
+1. Subscribe to Pricecharting Collector tier ($6/mo)
+2. Get API token
+3. Build Pricecharting API integration (2-4 hours)
+4. Replace Apify SCPRO actor call with direct PC API
+
+SAVINGS: $0-5/mo depending on call volume
+
+================================================================
+STAGE 2: Pricecharting API (25-50 customers)
+================================================================
+WHEN: 25+ customers
+STACK: eBay Buy API + Pricecharting API + Apify PSA actor
+MONTHLY COST: ~$36/mo at 50 customers
+
+WHAT CHANGES:
+- SCPRO data: Apify actor -> direct Pricecharting API ($6/mo unlimited)
+- eBay: stays on free eBay Buy API
+- PSA: stays on Apify (still broken)
+
+TRIGGER TO MOVE TO STAGE 3:
+- 50+ paying customers
+- OR need PSA pop data reliably
+- OR Card Ladder's all-in-one makes sense
+
+WHAT TO BUILD WHEN TRIGGERED:
+1. Subscribe to Card Ladder Pro ($20/mo)
+2. Get API access
+3. Build Card Ladder integration (1-2 weeks)
+4. Replace eBay + SCPRO + PSA with Card Ladder single API
+
+SAVINGS: $49.60/mo at 100 customers (71% reduction)
+
+================================================================
+STAGE 3: Card Ladder (50-500 customers)
+================================================================
+WHEN: 50-100+ customers
+STACK: Card Ladder API ($20/mo unlimited) + eBay Buy API (free)
+MONTHLY COST: $20/mo flat
+SAVINGS vs STAGE 2: $16+/mo at 50 customers, $49.60/mo at 100 customers
+
+WHAT CHANGES:
+- Aggregator: Card Ladder ($20/mo, all-in-one)
+- eBay: stays on free API (for deal links)
+- PSA pop: included in Card Ladder
+- Sales history: included in Card Ladder
+
+TRIGGER TO MOVE TO STAGE 4:
+- 500+ paying customers
+- OR Card Ladder becomes too expensive at scale
+- OR we need auction house data (Heritage/Goldin)
+- OR dev time for Phase 1 PSA actor (2-3 weeks)
+
+WHAT TO BUILD WHEN TRIGGERED:
+1. Phase 1: Build own PSA search actor (3 weeks dev)
+2. Phase 2: Direct BD scraping for eBay/sportscardspro (2 weeks)
+3. Phase 3: Add 130point for auction house data (1 week)
+
+SAVINGS: $300+/mo at 500 customers
+
+================================================================
+STAGE 4: DIY Infrastructure (500+ customers)
+================================================================
+WHEN: 500+ customers
+STACK: DIY actors + BD scraping + 130point for auctions
+MONTHLY COST: ~$24/mo at 500 customers
+
+WHAT CHANGES:
+- All data: own infrastructure
+- BD proxy: $1.50/1K requests (replaces Apify fees)
+- 130point: subscription for auction house data
+
+================================================================
+STAGE 5: STRATEGIC PARTNERSHIPS (1000+ customers)
+================================================================
+WHEN: 1000+ customers
+STACK: Everything above + direct partnerships
+MONTHLY COST: ~$50-100/mo (with partnership deals)
+
+NEGOTIATE AT SCALE:
+- Pricecharting Legendary tier (CSV bulk dumps)
+- Heritage Auctions data feed
+- Goldin Auctions API
+- PWCC Marketplace data
+- PSA Enterprise tier (GemRate)
+
+
+COST PROJECTION TABLE BY STAGE
+================================================================
+
+Stage         | 10 cust | 50 cust | 100 cust | 500 cust | 1000 cust
+---------------|---------|---------|----------|----------|----------
+0. Baseline    |   $7    |   $35   |   $70    |   $348   |   $696
+1. eBay API    |   $3    |   $13   |   $26    |   $132   |   $264
+2. PC API      |   $9    |   $39   |   $73    |   $342   |   $660
+3. Card Ladder |  $20    |   $20   |   $20    |  $20-40  |  $40-80
+4. DIY         |   $1    |    $5   |    $5    |   $24    |    $48
+5. Partnerships|  TBD    |   TBD   |   TBD    |   $50    | $50-100
+
+
+KEY INSIGHT: Card Ladder's flat $20/mo is the sweet spot below 500 customers.
+
+
+USER COUNT GOALS SUMMARY
+================================================================
+
+Goal 1: Get to 10 customers (Stage 0 -> Stage 1)
+Action: Sign up for eBay Developer Account (FREE, 5 min)
+Benefit: Save $4.32/mo
+
+Goal 2: Get to 25 customers (Stage 1 -> Stage 2)
+Action: Subscribe to Pricecharting API ($6/mo)
+Benefit: Future-proof for unlimited SCPRO calls
+
+Goal 3: Get to 50 customers (Stage 2 -> Stage 3)
+Action: Subscribe to Card Ladder ($20/mo)
+Benefit: Save $49.60/mo at 100 customers (71% reduction)
+
+Goal 4: Get to 500 customers (Stage 3 -> Stage 4)
+Action: Build Phase 1 PSA actor (3 weeks dev)
+Benefit: Save $300+/mo
+
+Goal 5: Get to 1000 customers (Stage 4 -> Stage 5)
+Action: Negotiate strategic partnerships
+Benefit: Industry-recognition deals, $50-100/mo
+
+
+IMMEDIATE NEXT STEPS
+================================================================
+
+1. Sign up for eBay Developer Account (5 min, free)
+2. Get eBay Buy API credentials (10 min)
+3. Build eBay Buy API integration (2-4 hours dev)
+4. Test with current 12 Jim cards
+5. Save $43/mo at 100 customers (scaling linearly)
+
+When 25+ customers: subscribe to Pricecharting API ($6/mo)
+When 50+ customers: subscribe to Card Ladder ($20/mo)
+When 500+ customers: invest in DIY infrastructure
+When 1000+ customers: negotiate strategic partnerships
+
+
+WATCH FOR THESE SIGNALS
+================================================================
+
+STAGE 1 TRIGGER SIGNALS:
+- 10+ paying customers
+- eBay Apify bill > $10/mo
+- You have 2-4 hours for dev work
+
+STAGE 2 TRIGGER SIGNALS:
+- 25+ paying customers
+- SCPRO Apify bill > $2/mo
+- Customers asking about refresh frequency
+
+STAGE 3 TRIGGER SIGNALS:
+- 50+ paying customers
+- Need PSA pop data working (currently broken)
+- Customers asking for "premium" features
+- Card Ladder cost is cheaper than current stack
+
+STAGE 4 TRIGGER SIGNALS:
+- 500+ paying customers
+- Card Ladder bill becoming meaningful
+- Need auction house data (Heritage/Goldin)
+- Have dev resources (2-3 week sprint)
+
+STAGE 5 TRIGGER SIGNALS:
+- 1000+ paying customers
+- $10K+/mo revenue
+- Industry recognition
+- Series A or funded
+
+
+RISK MITIGATION
+================================================================
+
+eBay API changes ToS        -> Stay under 5,000/day limit
+Pricecharting raises prices -> Easy to switch back to Apify
+Card Ladder becomes expensive -> Cancel anytime (monthly subscription)
+DIY actor bugs              -> Fallback to vendor APIs
+Partnership negotiations fail -> Continue with vendor APIs
+
+
+DON'T PRE-OPTIMIZE
+================================================================
+
+- Stages 0-1 work fine for current scale
+- Card Ladder sweet spot: $20/mo flat is unbeatable below 500 customers
+- DIY at 500+: only if we have dev resources (2-3 week sprint)
+- Strategic partnerships at 1000+: only if we're a recognized player
+- eBay Buy API is FREE: sign up today, save $43/mo at 100 customers
+
+================================================================
+END OF ROADMAP
