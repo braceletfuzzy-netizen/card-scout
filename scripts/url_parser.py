@@ -57,18 +57,28 @@ EBAY_SEARCH_PATTERN = re.compile(
     re.IGNORECASE
 )
 
-# Sportscardspro URL: https://www.sportscardspro.com/product/{id}-{slug}
-# Product ID is the numeric portion before the slug
-SCPRO_PATTERN = re.compile(
+# Sportscardspro URL formats:
+# 1. Product URL: https://www.sportscardspro.com/product/{id}-{slug}
+# 2. Game/Set URL: https://www.sportscardspro.com/game/{slug}
+SCPRO_PRODUCT_PATTERN = re.compile(
     r'sportscardspro\.com/product/(\d+)',
     re.IGNORECASE
 )
+SCPRO_GAME_PATTERN = re.compile(
+    r'sportscardspro\.com/game/([\w%-]+)',
+    re.IGNORECASE
+)
 
-# Pricecharting URL: https://www.pricecharting.com/console/{slug}
-# The slug includes a number at the end which is the product ID
-# Example: https://www.pricecharting.com/console/game-name-12345
-PRICECHARTING_PATTERN = re.compile(
+# Pricecharting URL formats:
+# 1. Console URL: https://www.pricecharting.com/console/{slug}
+# 2. Game URL: https://www.pricecharting.com/game/{slug}
+# The console-name-{id} pattern at end gives us product ID
+PRICECHARTING_CONSOLE_PATTERN = re.compile(
     r'pricecharting\.com/console/([\w-]+?)(?:-(\d+))?/?$',
+    re.IGNORECASE
+)
+PRICECHARTING_GAME_PATTERN = re.compile(
+    r'pricecharting\.com/game/([\w%-]+)',
     re.IGNORECASE
 )
 
@@ -152,59 +162,83 @@ def parse_ebay_url(url: str) -> Optional[Dict]:
 
 def parse_scpro_url(url: str) -> Optional[Dict]:
     """
-    Extract Sportscardspro product ID from a URL.
+    Extract Sportscardspro product ID or game slug from a URL.
 
-    Example:
-        https://www.sportscardspro.com/product/72584-michael-jordan-1986-fleer
-        -> {
-            'type': 'scpro',
-            'id': '72584',
-            'raw_url': url,
-            'extras': {},
-            'valid': True
-        }
+    Two formats supported:
+    1. Product URL: https://www.sportscardspro.com/product/{id}-{slug}
+       -> {'type': 'scpro', 'id': '72584', 'kind': 'product', 'valid': True}
+
+    2. Game/Set URL: https://www.sportscardspro.com/game/{slug}
+       -> {'type': 'scpro', 'id': None, 'kind': 'game',
+           'extras': {'slug': 'baseball-cards-1986-fleer-mj'}, 'valid': False}
+       (Set-level URL — need to drill down to specific card)
     """
-    m = SCPRO_PATTERN.search(url)
-    if not m:
-        return None
+    # Try product URL first (gives us direct ID)
+    m = SCPRO_PRODUCT_PATTERN.search(url)
+    if m:
+        return {
+            'type': 'scpro',
+            'id': m.group(1),
+            'raw_url': url,
+            'extras': {'kind': 'product'},
+            'valid': True,
+        }
 
-    return {
-        'type': 'scpro',
-        'id': m.group(1),
-        'raw_url': url,
-        'extras': {},
-        'valid': True,
-    }
+    # Fall back to game/set URL (gives us slug for search)
+    m = SCPRO_GAME_PATTERN.search(url)
+    if m:
+        slug = m.group(1)
+        return {
+            'type': 'scpro',
+            'id': None,
+            'raw_url': url,
+            'extras': {'kind': 'game', 'slug': slug},
+            'valid': False,
+        }
+
+    return None
 
 
 def parse_pricecharting_url(url: str) -> Optional[Dict]:
     """
     Extract Pricecharting slug/ID from a URL.
 
-    Example:
-        https://www.pricecharting.com/console/basketball-cards-1986-fleer-michael-jordan-72584
-        -> {
-            'type': 'pricecharting',
-            'id': '72584',
-            'raw_url': url,
-            'extras': {'slug': 'basketball-cards-1986-fleer-michael-jordan-72584'},
-            'valid': True
-        }
+    Two formats supported:
+    1. Console URL with trailing ID: https://www.pricecharting.com/console/slug-12345
+       -> {'type': 'pricecharting', 'id': '12345', 'kind': 'console', 'valid': True}
+
+    2. Console URL without trailing ID: https://www.pricecharting.com/console/slug
+       -> {'type': 'pricecharting', 'id': None, 'kind': 'console', 'valid': False}
+
+    3. Game URL: https://www.pricecharting.com/game/{slug}
+       -> {'type': 'pricecharting', 'id': None, 'kind': 'game', 'valid': False}
     """
-    m = PRICECHARTING_PATTERN.search(url)
-    if not m:
-        return None
+    # Try console URL with ID first
+    m = PRICECHARTING_CONSOLE_PATTERN.search(url)
+    if m:
+        full_slug = m.group(1)
+        product_id = m.group(2)
+        return {
+            'type': 'pricecharting',
+            'id': product_id,
+            'raw_url': url,
+            'extras': {'kind': 'console', 'slug': full_slug},
+            'valid': product_id is not None,
+        }
 
-    full_slug = m.group(1)
-    product_id = m.group(2)  # May be None if no trailing ID
+    # Try game URL
+    m = PRICECHARTING_GAME_PATTERN.search(url)
+    if m:
+        slug = m.group(1)
+        return {
+            'type': 'pricecharting',
+            'id': None,
+            'raw_url': url,
+            'extras': {'kind': 'game', 'slug': slug},
+            'valid': False,
+        }
 
-    return {
-        'type': 'pricecharting',
-        'id': product_id,
-        'raw_url': url,
-        'extras': {'slug': full_slug},
-        'valid': product_id is not None,
-    }
+    return None
 
 
 def parse_url(url: str) -> Dict:
@@ -267,7 +301,9 @@ def _self_test():
         ("https://www.ebay.com/itm/Some-Card-Title/987654321", 'ebay', True, '987654321'),
         ("https://www.ebay.com/sch/i.html?_nkw=bo+jackson", 'ebay', False, None),
         ("https://www.sportscardspro.com/product/72584-michael-jordan", 'scpro', True, '72584'),
+        ("https://www.sportscardspro.com/game/baseball-cards-1986-fleer-rookies/michael-jordan-7", 'scpro', False, None),  # /game/ format
         ("https://www.pricecharting.com/console/basketball-cards-1986-fleer-72584", 'pricecharting', True, '72584'),
+        ("https://www.pricecharting.com/game/pokemon-sv-151/charizard-ex-199", 'pricecharting', False, None),  # /game/ format
         ("https://example.com/random", None, False, None),
         ("", None, False, None),
         (None, None, False, None),
