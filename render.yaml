@@ -37,10 +37,10 @@ services:
     # Health check
     healthCheckPath: /health
 
-    # Custom domain (after Porkbun purchase)
+    # Custom domain (after Porkbun purchase — using .pro for cost + brand fit)
     # customDomains:
-    #   - cardscout.app
-    #   - www.cardscout.app
+    #   - cardscout.pro
+    #   - www.cardscout.pro
 
     # Auto-deploy on git push
     autoDeploy: true

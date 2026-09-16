@@ -5,7 +5,7 @@
 | Item | Value |
 |---|---|
 | **Hosting** | Render.com (Starter $5/mo) |
-| **Domain** | cardscout.app (Porkbun, $8.75/yr) |
+| **Domain** | cardscout.pro (Porkbun, $8.75/yr) |
 | **Persistent disk** | $1/mo extra (for SQLite) |
 | **TOTAL** | **$6.25/mo** |
 | **Deploy time** | ~30 min |
@@ -13,7 +13,7 @@
 ## Architecture (one service, two apps)
 
 ```
-cardscout.app/
+cardscout.pro/
 ├── /                     ← Public landing page (marketing)
 ├── /deals                ← Top 10 deals across platform
 ├── /pricing              ← 4-tier pricing page
@@ -33,7 +33,7 @@ cardscout.app/
 
 1. Go to https://porkbun.com
 2. Sign up (free)
-3. Search "cardscout.app"
+3. Search "cardscout.pro"
 4. Purchase ($8.75 first year)
 5. Free WHOIS privacy + free SSL
 6. Save credentials
@@ -87,18 +87,18 @@ Or: start fresh, customer signs up via Google Form, dashboard fetches their data
 ### Step 6: Add custom domain (2 min)
 
 1. In Render, go to your service → Settings → Custom Domains
-2. Add `cardscout.app` and `www.cardscout.app`
+2. Add `cardscout.pro` and `www.cardscout.pro`
 3. Render gives you CNAME records
 4. Add these to Porkbun DNS settings
 5. SSL is automatic
 
 ### Step 7: Verify (5 min)
 
-1. Visit https://cardscout.app — should see landing page
-2. Visit https://cardscout.app/pricing — should see 4 tiers
-3. Visit https://cardscout.app/deals — should see "no deals" (we have no spread data yet)
-4. Visit https://cardscout.app/dashboard/login — should see login form
-5. Visit https://cardscout.app/health — should return JSON healthy
+1. Visit https://cardscout.pro — should see landing page
+2. Visit https://cardscout.pro/pricing — should see 4 tiers
+3. Visit https://cardscout.pro/deals — should see "no deals" (we have no spread data yet)
+4. Visit https://cardscout.pro/dashboard/login — should see login form
+5. Visit https://cardscout.pro/health — should return JSON healthy
 
 ## Environment variables to set
 

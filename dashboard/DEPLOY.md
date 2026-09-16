@@ -38,7 +38,7 @@ Three options, ranked by cost + simplicity for your scale (1-10 customers).
    - Run migration: copy card_scout.db to /data on first deploy
 
 6. **Custom domain** (optional, $0):
-   - Add `dashboard.cardscout.app` via CNAME
+   - Add `dashboard.cardscout.pro` via CNAME
 
 ### Pros
 - Zero config (auto-SSL, auto-deploy from git push)
@@ -99,7 +99,7 @@ Three options, ranked by cost + simplicity for your scale (1-10 customers).
    ```
    server {
      listen 80;
-     server_name dashboard.cardscout.app;
+     server_name dashboard.cardscout.pro;
      location / {
        proxy_pass http://127.0.0.1:5000;
        proxy_set_header Host $host;
@@ -110,7 +110,7 @@ Three options, ranked by cost + simplicity for your scale (1-10 customers).
 
 6. **SSL**:
    ```bash
-   sudo certbot --nginx -d dashboard.cardscout.app
+   sudo certbot --nginx -d dashboard.cardscout.pro
    ```
 
 ### Pros

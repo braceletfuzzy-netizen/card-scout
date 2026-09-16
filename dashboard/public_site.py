@@ -51,7 +51,7 @@ LANDING_TEMPLATE = '''
 <meta property="og:title" content="Card Scout — AI-Powered Card Deal Alerts">
 <meta property="og:description" content="Get Discord alerts when your favorite cards drop below market.">
 <meta property="og:type" content="website">
-<link rel="canonical" href="https://cardscout.app/">
+<link rel="canonical" href="https://cardscout.pro/">
 <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
@@ -169,7 +169,7 @@ DEALS_TEMPLATE = '''
 <meta name="description" content="Live top deals on graded sports cards and TCG. AI-powered deal detection across eBay, Sportscardspro, and more.">
 <meta property="og:title" content="Top Card Deals — Card Scout">
 <meta property="og:description" content="Live top deals across all major card marketplaces.">
-<link rel="canonical" href="https://cardscout.app/deals">
+<link rel="canonical" href="https://cardscout.pro/deals">
 <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
@@ -325,7 +325,7 @@ PRICING_TEMPLATE = '''
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pricing — Card Scout</title>
 <meta name="description" content="4 simple tiers. Casual, Standard, Dealer, Pro. Pick the tier that matches your collecting style.">
-<link rel="canonical" href="https://cardscout.app/pricing">
+<link rel="canonical" href="https://cardscout.pro/pricing">
 <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
@@ -461,17 +461,17 @@ def health():
 SITEMAP_TEMPLATE = '''<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://cardscout.app/</loc>
+    <loc>https://cardscout.pro/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://cardscout.app/deals</loc>
+    <loc>https://cardscout.pro/deals</loc>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://cardscout.app/pricing</loc>
+    <loc>https://cardscout.pro/pricing</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -484,7 +484,7 @@ Allow: /
 Disallow: /dashboard/
 Disallow: /login
 
-Sitemap: https://cardscout.app/sitemap.xml
+Sitemap: https://cardscout.pro/sitemap.xml
 '''
 
 
