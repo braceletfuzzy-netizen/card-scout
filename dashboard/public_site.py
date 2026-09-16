@@ -87,7 +87,7 @@ LANDING_TEMPLATE = '''
       <div class="step">
         <div class="step-num">1</div>
         <h3>Add your cards</h3>
-        <p>Search our database or paste a card listing URL. Each card you track counts as 1 toward your tier limit.</p>
+        <p>Search our database or paste an eBay or Sportscardspro URL. Each card you track counts as 1 toward your tier limit.</p>
       </div>
       <div class="step">
         <div class="step-num">2</div>
