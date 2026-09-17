@@ -88,3 +88,53 @@ This lets us hit $15-30 entry price while keeping margins sustainable.
 3. Update tiers in DB (tier=trial/hobby/standard/dealer/pro)
 4. Update customer onboarding form
 5. Document in customer-facing pricing page (future)
+
+
+---
+
+## Sept 17 evening — Pro tier "Coming Soon" decision
+
+**Founder guidance (verbatim)**: *"I don't feel comfortable offering a $150
+dealer tier without being able to point to Population data though, so we
+should change that to a coming soon option on the website. I want to have
+it available once we can sustain it."*
+
+**Context**: After verifying GemRate pricing ($200/mo developer tier), the
+Pro tier at $150/mo loses its main differentiator (population context).
+Without GemRate subscription, we can't deliver:
+- Population context (PSA/BGS/SGC/CGC)
+- Cert # lookup & vault tracking (Vault = PL-007)
+- Player-level trend aggregation (PL-006)
+- Bulk catalog CSV for inline search (PL-008)
+
+**Decision**: Mark Pro tier as **"Coming Soon"** on cardscout.pro/pricing.
+Keep the $150 price point. List features explicitly so customers see what's
+coming. Add FAQ entry explaining the honest reason (data subscription
+dependency, not "we ran out of time to build it").
+
+**Changes shipped** (commit a283825):
+- Pro tier card: dashed border, 65% opacity, "Coming Soon" badge
+- Three Pro-tier features annotated with ○ icon and italic styling
+- New FAQ: "Why is Pro tier marked Coming Soon?"
+- Pricing page meta + subtitle updated
+
+**Trigger to launch Pro**:
+- 7+ paying customers (math supports $200/mo GemRate subscription)
+- OR inline search UX becomes priority (needs gemrate_id canonical IDs)
+- Same as PL-009 (GemRate integration) decision criteria
+
+**What this means for the original Sept 16 pricing structure**:
+- Casual $15, Standard $30, Dealer $75 — unchanged, all live
+- Pro $150 — now visibly marked Coming Soon (was a "we built it but don't
+  advertise it yet" tier, now openly honest about scope)
+- Margin projections in this doc still valid for 3-tier case
+- Add 4th row when Pro launches: $150/30 refreshes with population data
+
+**Strategic intent**: This is **honesty > marketing**. Founder's words:
+*"I have enough money to subsidize the operational bloat until we have
+enough paying subscribers if we are smart and keep our overhead recurring
+costs low until we have the need to inflate it."*
+
+Per `Sessions/2026-09-17-cost-breakdown-vs-card-hedger.md`, Tier 2 (GemRate)
+triggers at 7+ customers. Until then, Pro tier stays Coming Soon.
+
