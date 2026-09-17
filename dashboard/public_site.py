@@ -324,7 +324,7 @@ PRICING_TEMPLATE = '''
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pricing — Card Scout</title>
-<meta name="description" content="4 simple tiers. Casual, Standard, Dealer, Pro. Pick the tier that matches your collecting style.">
+<meta name="description" content="3 live tiers + 1 coming soon. Casual, Standard, Dealer available now. Pro (population data + advanced features) launches as we scale.">
 <link rel="canonical" href="https://cardscout.pro/pricing">
 <link rel="stylesheet" href="/static/style.css">
 </head>
@@ -343,7 +343,7 @@ PRICING_TEMPLATE = '''
 <main>
   <section class="page-header">
     <h1>Simple, transparent pricing</h1>
-    <p class="page-sub">4 tiers. Cancel anytime. 14-day free trial.</p>
+    <p class="page-sub">3 live tiers + Pro coming soon. Cancel anytime. 14-day free trial.</p>
   </section>
 
   <section class="tiers">
@@ -384,7 +384,8 @@ PRICING_TEMPLATE = '''
       <p class="tier-best">Best for power users and dealers</p>
     </div>
 
-    <div class="tier">
+    <div class="tier tier-coming-soon">
+      <span class="coming-soon-badge">Coming Soon</span>
       <h3>Pro</h3>
       <p class="price">$150<span>/month</span></p>
       <ul>
@@ -392,8 +393,11 @@ PRICING_TEMPLATE = '''
         <li>30 refreshes / month (daily)</li>
         <li>Discord alerts</li>
         <li>Custom thresholds</li>
+        <li class="coming-soon-feature">Population context (PSA/BGS/SGC/CGC)</li>
+        <li class="coming-soon-feature">Player-level trend aggregation</li>
+        <li class="coming-soon-feature">Cert # lookup &amp; vault tracking</li>
       </ul>
-      <p class="tier-best">Best for dealers with daily volume</p>
+      <p class="tier-best">Best for dealers with daily volume — population data launches as we hit subscriber scale</p>
     </div>
   </section>
 
@@ -414,6 +418,15 @@ PRICING_TEMPLATE = '''
     <details>
       <summary>Can I cancel anytime?</summary>
       <p>Yes. Cancel from your dashboard. No contracts, no questions.</p>
+    </details>
+    <details>
+      <summary>Why is Pro tier marked &ldquo;Coming Soon&rdquo;?</summary>
+      <p>Pro includes population data (PSA, BGS, SGC, CGC) and player-level
+      trend aggregation. These features depend on a third-party data
+      subscription we&apos;re activating once we have the subscriber base to
+      support the cost sustainably. We&apos;d rather be honest about timing
+      than over-promise and under-deliver. Casual, Standard, and Dealer
+      tiers are live today.</p>
     </details>
   </section>
 
