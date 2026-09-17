@@ -850,3 +850,82 @@ if __name__ == '__main__':
     print(f"  DB path: {DB_PATH}")
     print(f"  Press Ctrl+C to stop\n")
     app.run(host='127.0.0.1', port=5000, debug=False)
+
+
+# ============================================================================
+# ADMIN: One-time DB sync endpoint (Sept 17)
+# ============================================================================
+# Used to upload local card_scout.db to Render's persistent disk.
+# Auth: requires SYNC_DB_SECRET env var matching the request header.
+# Remove or keep disabled after sync is done.
+
+@app.route('/admin/sync_db', methods=['POST'])
+def admin_sync_db():
+    """One-time DB sync endpoint.
+
+    POST body: raw SQLite DB file bytes (Content-Type: application/octet-stream)
+    Required header: X-Sync-Secret: <SYNC_DB_SECRET env var value>
+
+    Backs up existing /data/card_scout.db to /data/card_scout.db.backup-<ts>
+    before writing the new content.
+
+    Returns: { ok: bool, message: str, backup_path?: str, customers_in_db: int }
+    """
+    expected = os.environ.get('SYNC_DB_SECRET')
+    if not expected:
+        return jsonify({'ok': False, 'message': 'SYNC_DB_SECRET not configured on server'}), 503
+
+    provided = request.headers.get('X-Sync-Secret', '')
+    if not provided or provided != expected:
+        return jsonify({'ok': False, 'message': 'Invalid or missing X-Sync-Secret header'}), 403
+
+    body = request.get_data()
+    if not body or len(body) < 100:
+        return jsonify({'ok': False, 'message': f'Body too small ({len(body)} bytes) — expected SQLite DB'}), 400
+
+    # Sanity check: SQLite files start with 'SQLite format 3\x00'
+    if not body.startswith(b'SQLite format 3\x00'):
+        return jsonify({'ok': False, 'message': 'Body is not a SQLite DB file (missing magic bytes)'}), 400
+
+    # Determine target path (Render uses /data, local uses project root)
+    target_dir = os.environ.get('RENDER_DATA_PATH', '/data') if os.environ.get('RENDER') else '.'
+    target_path = os.path.join(target_dir, 'card_scout.db')
+
+    # Backup existing if present
+    backup_path = None
+    if os.path.exists(target_path):
+        from datetime import datetime
+        ts = datetime.utcnow().strftime('%Y%m%d-%H%M%S')
+        backup_path = f'{target_path}.backup-{ts}'
+        try:
+            import shutil
+            shutil.copy2(target_path, backup_path)
+        except Exception as e:
+            return jsonify({'ok': False, 'message': f'Failed to backup existing DB: {e}'}), 500
+
+    # Write new DB
+    try:
+        os.makedirs(target_dir, exist_ok=True)
+        with open(target_path, 'wb') as f:
+            f.write(body)
+    except Exception as e:
+        return jsonify({'ok': False, 'message': f'Failed to write DB: {e}'}), 500
+
+    # Verify by counting customers
+    customers_in_db = 0
+    try:
+        import sqlite3 as _sqlite
+        conn = _sqlite.connect(target_path)
+        cur = conn.cursor()
+        cur.execute('SELECT COUNT(*) FROM customers')
+        customers_in_db = cur.fetchone()[0]
+        conn.close()
+    except Exception:
+        pass
+
+    return jsonify({
+        'ok': True,
+        'message': f'Wrote {len(body)} bytes to {target_path}',
+        'backup_path': backup_path,
+        'customers_in_db': customers_in_db,
+    })
