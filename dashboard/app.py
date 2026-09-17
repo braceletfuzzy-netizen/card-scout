@@ -25,6 +25,7 @@ from flask import Flask, render_template_string, request, redirect, url_for, ses
 from flask.sessions import SecureCookieSessionInterface
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, scoped_session
+from sqlalchemy.exc import IntegrityError
 
 # Add scripts/ to path so we can import db_models
 import sys
@@ -373,8 +374,27 @@ def update_dashboard(customer_id):
                 added_date=datetime.utcnow(),
             )
             db_session.add(new_card)
-            db_session.commit()
-            flash(f'Added: {new_card_text}', 'success')
+            try:
+                db_session.commit()
+                flash(f'Added: {new_card_text}', 'success')
+            except IntegrityError:
+                db_session.rollback()
+                # Card with this search_query already exists. If we got a
+                # card_id from the matcher, update the existing card with
+                # the matched card_id and confidence (so old "raw text"
+                # cards get upgraded to canonical IDs).
+                existing = db_session.query(Card).filter_by(
+                    customer_id=customer.id,
+                    search_query=new_card_text,
+                ).first()
+                if existing and card_id:
+                    existing.card_id = card_id
+                    if card_match_confidence is not None:
+                        existing.card_match_confidence = card_match_confidence
+                    db_session.commit()
+                    flash(f'Updated existing card with matched ID: {new_card_text}', 'success')
+                else:
+                    flash(f'You already have a card called "{new_card_text}". Try a different name.', 'error')
         else:
             flash('Please enter a card description.', 'error')
         return redirect(url_for('dashboard', customer_id=customer_id))
