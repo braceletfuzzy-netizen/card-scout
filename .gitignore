@@ -35,3 +35,8 @@ config/*.credentials.json
 # Session working memory — never commit (Sessions/ is shared, .hermes/sessions/ is per-agent)
 Sessions/
 .hermes/sessions/
+
+# Local log files (Render has its own /data/...log files; these are dev-only)
+*.log
+card_hedger_vs_scpro.log
+card_scout_errors.log
