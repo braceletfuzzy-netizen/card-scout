@@ -19,7 +19,7 @@ Thin Python client for the [Card Hedge REST API](https://api.cardhedger.com), wh
 
 ### 1. Sign up
 
-Go to https://ai.cardhedger.com and create an account. Subscription is **$14.99/mo** (Casual tier, 0-25 customers).
+Go to https://ai.cardhedger.com and create an account. Subscription is **$49/mo Starter tier** (10 req/min, 5,000/day). Pro $99/mo and Plus $199/mo available for higher volume.
 
 ### 2. Get an API key
 
