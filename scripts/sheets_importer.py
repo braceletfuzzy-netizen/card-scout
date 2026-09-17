@@ -322,7 +322,7 @@ def validate_webhook(url):
     Per Sept 15 focus topic (FORM-ACCESS-CONTROL): prevents spam signups with
     fake webhooks. Cheap (~0.2s per call), no auth needed.
     """
-    if not url or 'discord.com/api/webhooks/' not in url:
+    if not url or ('discord.com/api/webhooks/' not in url and 'discordapp.com/api/webhooks/' not in url):
         return False, "URL doesn't look like a Discord webhook"
 
     try:
@@ -402,8 +402,8 @@ def import_row(row_info, dry_run=True):
     if not discord_webhook:
         return None  # Skip rows without webhook
 
-    # Validate webhook format
-    if 'discord.com/api/webhooks/' not in discord_webhook:
+    # Validate webhook format (accept discord.com OR discordapp.com — both work, Discord redirects the old domain)
+    if 'discord.com/api/webhooks/' not in discord_webhook and 'discordapp.com/api/webhooks/' not in discord_webhook:
         print(f"  [WARN] Row {row_num}: webhook URL doesn't look right: {discord_webhook[:60]}...")
         return None
 
