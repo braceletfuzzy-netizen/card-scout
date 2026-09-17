@@ -143,6 +143,21 @@ When founder returns from 15-min break:
 | **Total monthly (today)** | **$37** | |
 | **Total if GemRate +$50/mo** | **$87** | Pending GemRate response |
 
+## Cross-agent coordination
+
+**For any agent (Hermes, Claude Code, Codex, OpenCode) starting work on Card Scout:**
+
+1. Read `Sessions/README.md` (5 min) — agent-agnostic contract
+2. Read `Sessions/handoff.md` (2 min) — current state
+3. Read `For You/Plans/2026-09-17-agent-coordination.md` — full coordination note
+4. Skim `.hermes/memory/working-notes.md` — context
+
+When you finish work: update `Sessions/handoff.md` with what you did.
+When you defer work: add a PL-NNN entry to `Sessions/parking_lot.md`.
+
+This is the durable agreement. New sessions inherit it via the
+coordination note in git history.
+
 ## Today's session deliverables (Sept 17)
 
 | Deliverable | Location | Status |
