@@ -103,8 +103,13 @@ def dashboard_login():
         flash('Please enter your Discord webhook URL.', 'error')
         return redirect(url_for('dashboard_login'))
 
-    # Basic validation: webhook URLs should start with https://discord.com/api/webhooks/
-    if not webhook.startswith('https://discord.com/api/webhooks/'):
+    # Basic validation: webhook URLs should start with discord.com OR discordapp.com
+    # (both are valid Discord domains — the old domain just redirects to the new one)
+    valid_prefixes = (
+        'https://discord.com/api/webhooks/',
+        'https://discordapp.com/api/webhooks/',
+    )
+    if not webhook.startswith(valid_prefixes):
         flash('That doesn\'t look like a Discord webhook URL. Try again.', 'error')
         return redirect(url_for('dashboard_login'))
 
@@ -112,7 +117,7 @@ def dashboard_login():
     customer = db_session.query(Customer).filter_by(discord_webhook=webhook).first()
     if not customer:
         flash('Webhook not found. Contact support if you think this is wrong.', 'error')
-        return redirect(url_for('index'))
+        return redirect(url_for('dashboard_login'))
 
     # Set session
     session.clear()
