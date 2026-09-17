@@ -752,6 +752,25 @@ def process_customer_from_db(customer, dry_run=False):
             print(f"  [V2 FILTER] Skipped (error: {e})")
             # Continue with all matching items if filter fails
 
+        # Card Hedger dual-source fetch (Sept 17 evening)
+        # Run Card Hedger in parallel with SCPro for data comparison.
+        # Logs discrepancies to /data/card_hedger_vs_scpro.log.
+        # Decision to retire SCPro happens after 1 week of comparison.
+        try:
+            from cardhedger_alert_integration import fetch_card_hedger_data, log_comparison
+            ch_data = fetch_card_hedger_data(card)
+            if ch_data and ch_data.get('median_price'):
+                ch_price = ch_data['median_price']
+                # Build SCPro stats for comparison
+                from snapshot_system import compute_snapshot_stats
+                scpro_stats = compute_snapshot_stats(matching)
+                log_comparison(card, ch_data, scpro_stats)
+                print(f"  [CARD HEDGER] ${ch_price:,.2f} (grade {ch_data.get('card_hedger_grade', '?')})")
+            else:
+                print(f"  [CARD HEDGER] No data (rate limit or no match)")
+        except Exception as e:
+            print(f"  [CARD HEDGER] Skipped (error: {type(e).__name__}: {e})")
+
         # Save snapshot (triggers trend detection)
         print(f"  [SNAPSHOT] Saving {len(matching)} matching items")
         trend = save_run_snapshot(card.id, matching)
