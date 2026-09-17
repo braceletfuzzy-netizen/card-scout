@@ -93,6 +93,13 @@ class Card(Base):
     psa_9_pop = Column(Integer, nullable=True)             # PSA 9 count (B-class)
     psa_pop_fetched_at = Column(DateTime, nullable=True)   # when last fetched from PSA
 
+    # Card Hedge integration (Sept 17 — inline card matcher)
+    # card_id is Card Hedge's canonical ID for the matched card (string).
+    # card_match_confidence is 0-1 score from AI matcher (or 1.0 if user-selected).
+    # Both are nullable: cards added before Card Hedge integration have NULL.
+    card_id = Column(String(100), nullable=True)
+    card_match_confidence = Column(Float, nullable=True)
+
     # Grade filter checkboxes (6-bucket system)
     # Customer picks which grades matter for THIS card
     track_psa_10 = Column(Boolean, default=True)       # Tier 1: Gem Mint
