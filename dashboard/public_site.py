@@ -64,7 +64,7 @@ LANDING_TEMPLATE = '''
       {% if logged_in %}
         <a href="/dashboard/{{ customer_id }}" class="cta">Dashboard</a>
       {% else %}
-        <a href="/login" class="cta">Sign In</a>
+        <a href="/dashboard/login" class="cta">Sign In</a>
       {% endif %}
     </div>
   </nav>
@@ -433,7 +433,7 @@ PRICING_TEMPLATE = '''
   <section class="cta-section">
     <h2>Try Card Scout free for 14 days</h2>
     <p>No credit card required. Cancel anytime.</p>
-    <a href="/login" class="btn btn-primary btn-large">Get Started</a>
+    <a href="/dashboard/login" class="btn btn-primary btn-large">Get Started</a>
   </section>
 </main>
 
@@ -495,7 +495,7 @@ SITEMAP_TEMPLATE = '''<?xml version="1.0" encoding="UTF-8"?>
 ROBOTS_TEMPLATE = '''User-agent: *
 Allow: /
 Disallow: /dashboard/
-Disallow: /login
+Disallow: /dashboard/login
 
 Sitemap: https://cardscout.pro/sitemap.xml
 '''
