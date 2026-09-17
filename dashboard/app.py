@@ -859,6 +859,38 @@ if __name__ == '__main__':
 # Auth: requires SYNC_DB_SECRET env var matching the request header.
 # Remove or keep disabled after sync is done.
 
+@app.route('/admin/debug_add_card', methods=['POST'])
+@login_required
+def debug_add_card():
+    """Debug version of update_dashboard 'add' action that returns the actual
+    exception if anything fails. Sept 17 debugging aid for live 500 errors."""
+    import traceback
+    customer = get_current_customer()
+    if not customer:
+        return jsonify({'error': 'no customer in session'}), 403
+
+    data = {
+        'action': 'add',
+        'new_card': request.form.get('new_card', 'DEBUG_TEST'),
+        'card_id': request.form.get('card_id'),
+        'card_match_confidence': request.form.get('card_match_confidence'),
+        'psa_url': request.form.get('psa_url'),
+        'sportscardspro_url': request.form.get('sportscardspro_url'),
+    }
+    try:
+        with dashboard_app.app.test_request_context('/dashboard/{}/update'.format(customer.customer_id), method='POST', data=data):
+            from flask import session
+            session['customer_id'] = customer.customer_id
+            response = dashboard_app.update_dashboard(customer.customer_id)
+            return jsonify({'ok': True, 'status': response.status_code, 'location': response.headers.get('Location', None)})
+    except Exception as e:
+        return jsonify({
+            'error': type(e).__name__,
+            'message': str(e),
+            'traceback': traceback.format_exc().splitlines()[-15:],
+        }), 500
+
+
 @app.route('/admin/sync_db', methods=['POST'])
 def admin_sync_db():
     """One-time DB sync endpoint.
