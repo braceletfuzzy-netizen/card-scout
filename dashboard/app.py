@@ -869,20 +869,25 @@ def debug_add_card():
     if not customer:
         return jsonify({'error': 'no customer in session'}), 403
 
-    data = {
-        'action': 'add',
-        'new_card': request.form.get('new_card', 'DEBUG_TEST'),
-        'card_id': request.form.get('card_id'),
-        'card_match_confidence': request.form.get('card_match_confidence'),
-        'psa_url': request.form.get('psa_url'),
-        'sportscardspro_url': request.form.get('sportscardspro_url'),
-    }
+    # Use Flask's test_client (not nested test_request_context which is buggy
+    # with SQLAlchemy sessions)
     try:
-        with dashboard_app.app.test_request_context('/dashboard/{}/update'.format(customer.customer_id), method='POST', data=data):
-            from flask import session
-            session['customer_id'] = customer.customer_id
-            response = dashboard_app.update_dashboard(customer.customer_id)
-            return jsonify({'ok': True, 'status': response.status_code, 'location': response.headers.get('Location', None)})
+        with app.test_client() as c:
+            c.post('/dashboard/login', data={'webhook': customer.discord_webhook})
+            response = c.post(f'/dashboard/{customer.customer_id}/update', data={
+                'action': 'add',
+                'new_card': request.form.get('new_card', 'DEBUG_TEST'),
+                'card_id': request.form.get('card_id'),
+                'card_match_confidence': request.form.get('card_match_confidence'),
+                'psa_url': request.form.get('psa_url'),
+                'sportscardspro_url': request.form.get('sportscardspro_url'),
+            })
+            return jsonify({
+                'ok': response.status_code < 400,
+                'status': response.status_code,
+                'location': response.headers.get('Location', None),
+                'body_excerpt': response.data.decode('utf-8', errors='replace')[:500],
+            })
     except Exception as e:
         return jsonify({
             'error': type(e).__name__,
