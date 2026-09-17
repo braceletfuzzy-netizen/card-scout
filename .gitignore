@@ -31,3 +31,7 @@ card_scout.db
 # Secrets — never commit
 config/gcp-service-account.json
 config/*.credentials.json
+
+# Session working memory — never commit (Sessions/ is shared, .hermes/sessions/ is per-agent)
+Sessions/
+.hermes/sessions/

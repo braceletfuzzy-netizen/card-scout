@@ -4,11 +4,112 @@
 Sept 16, 2026 (evening)
 
 ## Status
-**DRAFTED.** Founder asked: "Look over alternatives to Card Ladder".
+**CORRECTED Sept 17, 2026.** Major docs discovery: Card Ladder has NO public API; Pricecharting API is on Legendary tier (not Collector). Plan adjusted.
 
-## Decision
-**Layered stack: Card Ladder ($20) + SportsCardsPro API ($6) + eBay Browse (free)
-= $26/mo full data stack for 50-500 customers**
+**MAJOR UPDATE Sept 17 evening:** GemRate discovered. Card Ladder's Population Reports are powered by GemRate. GemRate is a real partner API with public docs, x-api-key auth, and structured endpoints. This likely obsoletes Phase 1 PSA actor build (PL-004). Contact form sent via `/partner`. Pricing unknown until response.
+
+## ⚠️ Critical corrections from Sept 17 doc review
+
+### Card Ladder — NO PUBLIC API (confirmed via 3 sources)
+- Their own `/api` and `/developers` URLs return 404
+- parse.bot (third-party API aggregator) confirms: *"Card Ladder does not publish a public developer API"*
+- YouTube ("The Memorabilia Zone"): *"Card Ladder does not publicly offer an application programming interface for direct data access"*
+- Pro subscription gives: web dashboard, Sales History, CL Value, Population Reports, Watchlist emails — NOT API access
+- **Implication**: original "Card Ladder integration ~1-2 weeks" line in cost-cutting-roadmap is WRONG. There is nothing to integrate. Pro = market research + personal use only.
+- **Trial started Sept 17, 2026**: 7-day free trial running, Day-6 cancel reminder set (job `509a458e7bfd`, fires Sept 23 9:00 AM CDT)
+
+### Pricecharting — API is LEGENDARY tier (not Collector $6/mo)
+- Their pricing matrix shows: **Free = No API, Collector ($6/mo) = No API, Legendary = Full API**
+- Support thread (1 year old): *"The full API and CSV data is only available on the Legendary tier. The Collector tier includes loose prices only."*
+- API gives **current prices only**, no historic data (per JJ's 2021 comment)
+- Single price per item per condition (no spread) — same data shape as existing SCPRO actor
+- **Implication**: $6/mo Collector = waste (web dashboard only). Legendary = same data shape as SCPRO, marginal improvement. Need Legendary pricing before any decision.
+- **Action deferred**: look up Legendary tier price before subscribing
+
+### Revised Stage 3 unlocker
+- **eBay Browse API (FREE, verification pending)** is the real Stage 3 unlocker — gives listing SPREAD (multiple active listings per card), which is what `deal_detector.py` actually needs
+- Card Ladder Pro = research + personal use (decision Day 7, Sept 23)
+- Pricecharting Legendary = optional backfill if CSV bulk downloads prove useful (pricing pending lookup)
+
+### GemRate discovery (Sept 17 evening) — the data layer just commodified
+- **Card Ladder's Population Reports are powered by GemRate** (per Card Ladder's own Zendesk article)
+- GemRate is a real, public partner API with documented endpoints and `x-api-key` auth
+- **What it gives us**: PSA + Beckett + SGC + CGC pop data (all 4 major graders), cert # lookup, universal cross-grader card IDs, population history, structured search, bulk CSV catalog
+- **Why this matters**: Strictly more than what Phase 1 PSA actor (PL-004) would have given us. If pricing ≤ $50/mo, we should *never* build our own actor.
+- **Strategic implication**: Card Ladder has no data moat. Our moat is in our deal-detection algorithm (z-score lower-third) + Discord delivery UX + tiered pricing.
+- **Status**: Contact form sent via `/partner`. Pricing unknown until response.
+- Full research in `Sessions/2026-09-17-gemrate-discovery.md`. Draft message in `Sessions/2026-09-17-gemrate-inquiry-draft.md`.
+
+### Combined data stack (revised Sept 17)
+| Source | Cost | What it gives |
+|---|---|---|
+| **eBay Browse API** | FREE (pending) | Listing data — spread from multiple active listings |
+| **GemRate** | TBD (~$?/mo) | Pop data PSA+BGS+SGC+CGC, cert lookup, universal card IDs, history |
+| **SCPro (existing Apify actor)** | $0.001/run | Asking-price baseline across marketplaces |
+| **TOTAL** | **TBD + Apify STARTER $29/mo** | Full data stack |
+
+### Card Ladder as competitor (revised)
+Card Ladder *uses* GemRate. We will use GemRate. Same data layer.
+What Card Ladder doesn't do that we do:
+- Lower-third z-score deal detection (Card Ladder shows % deltas, not deal alerts)
+- Discord delivery (Card Ladder has email; collectors live in Discord)
+- Tiered pricing by refresh frequency (Card Ladder is flat $20/mo)
+- Self-serve card management with inline search (Card Ladder has watchlist only)
+
+## Card Ladder trial — market observations (Sept 17, 2026)
+
+### Sales History data shape (confirmed from live UI)
+Each sale row contains:
+| Field | Example | Value to Card Scout |
+|---|---|---|
+| `card_title` | "Bo Jackson 1987 Leaf Donruss Rated Rookie Auto #35" | Card matching |
+| `marketplace` | "eBay" | Source attribution (hidden from customers per Sept 16 strip) |
+| `seller_name` + `feedback` | "steelcitycollectibles1" 165,131 | Deal-validity filter (low-feedback = noise) |
+| `sold_price` | $299.95 | Sold data — what `deal_detector.py` actually wants |
+| `sold_date` | Sep 16, 2026 | Time-series for trend/σ calc |
+| `listing_type` | Fixed Price / Best Offer / Auction | Auction-vs-asking distinction |
+| `verified` | ✅ green check | Quality flag |
+
+### Multi-source confirmed
+Sales History filters include: eBay, PWCC, plus others (Goldin, Heritage per pricing page).
+- **5,105 results** for "bo jackson donruss rookie card" — confirms search quality
+- URL pattern with `saleId=` parameter (e.g. `saleId=ebay-237067678912`) means each sale has a stable internal ID — important for any future B2B partnership negotiation
+
+### Player index data shape (`/players/<name>` page)
+27 graded cards per player, each with 6 fields:
+
+| Field | Example | Value to Card Scout |
+|---|---|---|
+| `card_name` | "1988 Topps Bo Jackson #327 Super Rookie" | Card identity |
+| `grade` | "PSA 10" | Grading company + numeric grade |
+| `pop` | "598" | Population count for that grade |
+| `1M % Change` | "+43.25%" | Rolling 1-month % delta — **THIS is the "ladder score"** |
+| `Last Sold` | "$4,124.00" | Most recent sale |
+| Index contribution | (aggregates into 25,275 player score) | Player-level trend indicator |
+
+**Side window on individual card click** shows time series chart + eBay BIN listings. URL pattern: `?cardId=DjzqjOlFlay5Ez4642rD` (stable identifier).
+
+### Filters available
+Min/Max price, Min/Max date, Platform(s), Listing Type, Seller ID, Verified Status.
+Search supports: synonyms, typos (toggleable), "!" prefix for exact match, cert # deep-link.
+
+### Open questions (look at during trial)
+1. **CL Value vs Sales History median** — does Card Ladder's pricing algorithm match the median sold price, or does it apply player-index weighting + outlier trim? Look at a Bo Jackson Donruss rookie detail page and compare. (5 min)
+2. **Population Report quality** — how does CL's pop data compare to what our broken PSA actor returns? (5 min)
+3. **Watchlist alert email** — what does a price-drop alert look like? Useful as manual backup deal-feed if our bot misses something. (5 min)
+
+### Critical constraints (do NOT violate)
+- **No documented public API** — confirmed across 3 independent sources
+- **No scraping the internal API** even though `saleId=` URLs suggest one exists:
+  1. Internal APIs log query patterns; bot detection is trivial
+  2. Scraping kills the future B2B partnership path when we need it at 50+ customers
+  3. CFAA gray area; we don't need legal exposure for a $20/mo service
+- **Use the trial as research + personal-use evaluation, not as a data source**
+
+### Decision criteria for Day 7 (Sept 23)
+- **Keep $20/mo if**: you personally use the dashboard weekly for your own cards, and the Sales History/Pop data is materially better than what we have access to today
+- **Cancel if**: you only logged in once, the CL Value doesn't match what you'd call fair market, or you'd rather wait for a B2B conversation at scale
+- **Either way**: this doc gets updated with the decision and reasoning, so future-you has the full trail
 
 ## Founder insight captured
 > "I still like card Ladder but we could add SCPRO api at $6/month, eBay will give
@@ -69,51 +170,57 @@ Sept 16, 2026 (evening)
 | Ximilar | Image-first = doesn't fit URL workflow |
 | SCN | Dealer tool = wrong category for data API |
 
-## Layered stack (founder insight Sept 16)
+## Layered stack (founder insight Sept 16, REVISED Sept 17)
 
 | Source | Cost | What it gives |
 |---|---|---|
 | **eBay Browse API** | FREE | Listing data — spread from multiple active listings |
-| **Pricecharting API** | $6/mo | Baseline single price per grade |
-| **Card Ladder** | $20/mo | Sold data + pop data + sales history |
-| **TOTAL** | **$26/mo** | Full data stack |
+| **GemRate** (NEW) | TBD | Pop data PSA+BGS+SGC+CGC, cert lookup, universal card IDs, history |
+| **SCPro (Apify)** | $0.001/run | Asking-price baseline (existing actor, no change) |
+| **Card Ladder** | $20/mo | **RESEARCH ONLY** — no API access (deferred decision Day 7) |
+| **TOTAL** | **$29 Apify + TBD GemRate + maybe $20 CL** | Full data stack |
 
-## Why this works
-
+## Why this works (revised)
 1. **eBay Browse** = spread source (multiple active listings = lower-third detection works)
-2. **Pricecharting** = cheap fallback when eBay doesn't have the card
-3. **Card Ladder** = sold prices (what people actually paid) for trend signals
-4. **Card Ladder has pop data** → PSA actor drops out entirely
+2. **GemRate** = canonical card identity + population data + cert lookup (all 4 graders)
+3. **SCPro** = cheap asking-price fallback when eBay doesn't have the card
+4. **Card Ladder** = research/personal use only; not in the data pipeline
 
-## Implementation sequence
+## Implementation sequence (revised)
 
-### October (now)
-- Wait for eBay Developer verification
-- Build eBay Browse API integration
-- Replace Apify eBay actor
+### Now (Sept 17)
+- Wait for eBay Developer verification (in progress)
+- Send GemRate contact form (DONE)
+- Continue Card Ladder trial research (in progress, free)
+
+### October
+- Build eBay Browse API integration (2-4 hrs dev)
+- Get GemRate pricing + subscribe if ≤ $50/mo
+- Build GemRate integration (~1 day dev)
+- Replace PSA actor with GemRate adapter
 
 ### November
-- Subscribe to Pricecharting Collector ($6/mo)
-- Build PC API integration
-- Replace Apify SCPRO actor
+- Inline search UX (PL-008) — GemRate primary, SCPro price fallback
+- Build cert # lookup entry point (vault preparation)
 
 ### December (or when 50+ customers)
-- Subscribe to Card Ladder ($20/mo)
-- Build Card Ladder integration
-- Drop PSA actor entirely
-- Stage 3 fully activated
+- Decision: keep, upgrade, or replace GemRate based on usage patterns
+- Player Index feature (PL-006) — uses GemRate history endpoint
 
 ## Decisions captured
 
 ### CONFIRMED
-- **Card Ladder**: $20/mo subscription (next month or when 50+ customers)
-- **SportsCardsPro API**: $6/mo added as fallback/baseline (when 25+ customers)
-- **eBay Browse API**: free, biggest immediate win
+- **eBay Browse API**: free, biggest immediate win (listing spread for deal detection)
+- **GemRate**: pending pricing response, likely subscribe if ≤ $50/mo
+- **SCPro (Apify)**: keep as-is until eBay Browse verified
 
 ### DEFERRED
-- **Card Hedge**: still ON HOLD (x402 + sales call friction)
+- **Card Ladder Pro**: trial ACTIVE, decision Day 7 (likely cancel — no API)
+- **Pricecharting Legendary**: pricing unknown; deprioritized after GemRate discovery
+- **Card Hedge**: still ON HOLD (x402 + sales call friction) — now lower priority
 - **Ximilar**: wrong stage (V2.5+ feature)
 - **SCN**: wrong category (dealer tool, not data API)
+- **Phase 1 PSA actor build**: LIKELY OBSOLETE if GemRate pricing works
 
 ## Files
 
@@ -123,8 +230,11 @@ Sept 16, 2026 (evening)
 | `For You/Plans/data-provider-comparison-2026-09-16.md` | NEW (this doc) |
 
 ## Open fires
-
-1. Wait for eBay Developer verification (~1 day)
-2. Build eBay Browse API integration (~2-4 hours)
-3. Subscribe to PC API (when 25+ customers)
-4. Subscribe to Card Ladder (next month or when 50+ customers)
+1. Wait for eBay Developer verification (~1 day, started Sept 16) — listing spread for deal detection
+2. Build eBay Browse API integration (~2-4 hours) — Stage 3 unlocker
+3. Wait for GemRate partner response (contact form sent Sept 17) — pricing + API key
+4. If GemRate pricing ≤ $50/mo: subscribe + build integration (~1 day dev)
+5. Card Ladder trial research (in progress, free) — Day 6 reminder Sept 23
+6. ~~Subscribe to Pricecharting Collector ($6/mo)~~ — DEFERRED, Collector has no API
+7. ~~Subscribe to Card Ladder Pro ($20/mo)~~ — TRIAL ACTIVE, decision Day 7
+8. ~~Look up Pricecharting Legendary tier price~~ — DEFERRED until GemRate decision made
