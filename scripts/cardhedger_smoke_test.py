@@ -45,15 +45,15 @@ def run_smoke_test():
         print(f'[FAIL] Ping error: {e}')
         return 1
 
-    # 2. Search for Bo Jackson 1987 Donruss
-    print('[2/5] Searching for "Bo Jackson Donruss"...')
+    # 2. Search for Michael Jordan 1986 Fleer (high-volume card, reliable for testing)
+    print('[2/5] Searching for "Michael Jordan Fleer 1986"...')
     try:
-        results = client.search_cards(search='Bo Jackson Donruss')
+        results = client.search_cards(search='Michael Jordan Fleer 1986')
         cards = results.get('cards', results.get('results', results.get('data', [])))
         if not cards:
             print(f'[WARN] No cards returned. Full response: {results}')
             return 1
-        print(f'[OK] Found {len(cards)} cards (total={results.get("total", "?")})')
+        print(f'[OK] Found {len(cards)} cards (total={results.get("count", results.get("total", "?"))})')
         # Find one with a card_id
         first_with_id = next((c for c in cards if c.get('card_id') or c.get('id')), None)
         if not first_with_id:
@@ -70,12 +70,18 @@ def run_smoke_test():
     print(f'[3/5] Getting FMV for {card_id} PSA 10...')
     try:
         fmv = client.get_fmv(card_id=card_id, grade='PSA 10')
-        fmv_value = fmv.get('fmv') or fmv.get('fair_market_value') or fmv.get('value')
+        fmv_value = fmv.get('price') or fmv.get('fmv') or fmv.get('fair_market_value')
         if fmv_value is None:
             print(f'[WARN] No FMV value in response. Full: {fmv}')
         else:
-            confidence = fmv.get('confidence', 'unknown')
-            print(f'[OK] FMV = ${fmv_value} (confidence: {confidence})')
+            # Card Hedge returns both numeric (0-1) and letter grade (A/B/C)
+            confidence_letter = fmv.get('confidence_grade', 'unknown')
+            confidence_num = fmv.get('confidence', 0)
+            price_low = fmv.get('price_low', '?')
+            price_high = fmv.get('price_high', '?')
+            print(f'[OK] FMV = ${fmv_value:,.2f} (range ${price_low}-${price_high}, grade {confidence_letter}, {confidence_num:.0%} confidence)')
+            if fmv.get('price_explanation'):
+                print(f'   Explanation: {fmv["price_explanation"]}')
     except CardHedgerError as e:
         print(f'[WARN] FMV error (non-fatal): {e}')
         # Don't fail the whole test on FMV error — different tiers may have access
@@ -98,13 +104,22 @@ def run_smoke_test():
     print('[5/5] Getting comparable sales (comps)...')
     try:
         comps = client.get_comps(card_id=card_id, grade='PSA 10', count=10)
-        comp_list = comps.get('comps') or comps.get('data') or comps.get('sales') or []
-        if isinstance(comp_list, list):
-            print(f'[OK] Got {len(comp_list)} comparable sales')
-            if comp_list:
-                print(f'   Sample: {comp_list[0]}')
+        # Card Hedge returns aggregated comp_price (single value), not a list
+        comp_price = comps.get('comp_price')
+        low = comps.get('low')
+        high = comps.get('high')
+        count_used = comps.get('count_used')
+        if comp_price is not None:
+            print(f'[OK] Comp price = ${comp_price:,.2f} (range ${low}-${high}, used {count_used} sales)')
         else:
-            print(f'[OK] Got comps response (shape: {type(comp_list).__name__})')
+            # Fall back to checking for a list (older API shape or different endpoint)
+            comp_list = comps.get('comps') or comps.get('data') or comps.get('sales') or []
+            if isinstance(comp_list, list):
+                print(f'[OK] Got {len(comp_list)} comparable sales (legacy list shape)')
+                if comp_list:
+                    print(f'   Sample: {comp_list[0]}')
+            else:
+                print(f'[WARN] No comp_price in response. Keys: {list(comps.keys())[:10]}')
     except CardHedgerError as e:
         print(f'[WARN] Comps error (non-fatal): {e}')
 
