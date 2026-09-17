@@ -31,22 +31,48 @@ Sept 16, 2026 (evening)
 - Card Ladder Pro = research + personal use (decision Day 7, Sept 23)
 - Pricecharting Legendary = optional backfill if CSV bulk downloads prove useful (pricing pending lookup)
 
-### GemRate discovery (Sept 17 evening) — the data layer just commodified
-- **Card Ladder's Population Reports are powered by GemRate** (per Card Ladder's own Zendesk article)
-- GemRate is a real, public partner API with documented endpoints and `x-api-key` auth
-- **What it gives us**: PSA + Beckett + SGC + CGC pop data (all 4 major graders), cert # lookup, universal cross-grader card IDs, population history, structured search, bulk CSV catalog
-- **Why this matters**: Strictly more than what Phase 1 PSA actor (PL-004) would have given us. If pricing ≤ $50/mo, we should *never* build our own actor.
-- **Strategic implication**: Card Ladder has no data moat. Our moat is in our deal-detection algorithm (z-score lower-third) + Discord delivery UX + tiered pricing.
-- **Status**: Contact form sent via `/partner`. Pricing unknown until response.
-- Full research in `Sessions/2026-09-17-gemrate-discovery.md`. Draft message in `Sessions/2026-09-17-gemrate-inquiry-draft.md`.
+### GemRate discovery (Sept 17) — pricing received
+
+**Card Ladder's Population Reports are powered by GemRate** (per Card Ladder's own Zendesk article).
+
+**Pricing response received Sept 17 evening** (from Ryan Stuczynski, GemRate founder):
+
+| Item | Cost | Notes |
+|---|---|---|
+| **Developer tier** | **$200/mo** | Prototyping, testing, smaller-scale integrations |
+| **Daily request quota** | **5,000 req/day** | Across all endpoints |
+| **Endpoints included** | All except: historical data, cert images, change feed | Add-ons available |
+| **Commercial use** | ✅ Permitted at this tier | Caching + storage allowed while subscription active |
+| **Attribution** | ✅ Required when displaying data or derived metrics | |
+| **Catalogs (separate)** | $1,000/mo for Pokemon | "Thousands per month" for sports catalog |
+| **Free trial** | 7 days, credit card required | Sign up at dashboard.gemrate.com/sign-up |
+
+**Without the historical data add-on**, we get current pop snapshots but NOT
+30-day pop history. Need to ask Ryan about add-on pricing.
+
+**Subscription math**:
+- Today: 16 cards × ~1 pop lookup/day = ~16 req/day (312x under cap)
+- 200 customers × 12 cards × 1 daily pull = 2,400 req/day (still OK)
+- 500 customers × 12 cards × 1 daily pull = 6,000 req/day (OVER cap)
+
+**Strategic implication**: Card Ladder has no data moat. Our moat is in our
+deal-detection algorithm (z-score lower-third) + Discord delivery UX + tiered
+pricing. GemRate is the right vendor at the right price for our pop data needs.
+
+**Status (Sept 17 evening)**: Pricing received. **7-day free trial available.**
+Recommendation: subscribe during trial, validate data quality, build integration
+in October if quality is good.
+
+Full research in `Sessions/2026-09-17-gemrate-discovery.md`. Draft message in
+`Sessions/2026-09-17-gemrate-inquiry-draft.md`.
 
 ### Combined data stack (revised Sept 17)
 | Source | Cost | What it gives |
 |---|---|---|
 | **eBay Browse API** | FREE (pending) | Listing data — spread from multiple active listings |
-| **GemRate** | TBD (~$?/mo) | Pop data PSA+BGS+SGC+CGC, cert lookup, universal card IDs, history |
-| **SCPro (existing Apify actor)** | $0.001/run | Asking-price baseline across marketplaces |
-| **TOTAL** | **TBD + Apify STARTER $29/mo** | Full data stack |
+| **GemRate** | **$200/mo** (developer tier) | Pop data PSA+BGS+SGC+CGC, cert lookup, universal card IDs (no history without add-on) |
+| **SCPro (existing Apify actor)** | $0.001/run | Asking-price baseline — CANDIDATE for retirement (Card Hedger covers better) |
+| **TOTAL** | **$29 Apify + $200 GemRate** | Full data stack |
 
 ### Card Hedger re-evaluation (Sept 17 evening — Cosmo + Hugo verification)
 
@@ -275,8 +301,8 @@ Search supports: synonyms, typos (toggleable), "!" prefix for exact match, cert 
 
 ### CONFIRMED
 - **eBay Browse API**: free, biggest immediate win (listing spread for deal detection)
-- **Card Hedger** (NEW): subscribe ($14.99/mo) — verified self-serve + MCP + better than SCPro for pricing data
-- **GemRate**: pending pricing response, likely subscribe if ≤ $50/mo
+- **Card Hedger**: subscribe ($14.99/mo) — verified self-serve + MCP + better than SCPro for pricing data
+- **GemRate**: $200/mo developer tier confirmed; **7-day free trial recommended**, decision after validating data quality
 - **SCPro (Apify)**: candidate for retirement once Card Hedger integration lands
 
 ### DEFERRED
@@ -294,14 +320,15 @@ Search supports: synonyms, typos (toggleable), "!" prefix for exact match, cert 
 | `For You/Plans/cost-cutting-roadmap-2026-09-16.md` | UPDATED — Stage 2/3 now reflect layered approach |
 | `For You/Plans/data-provider-comparison-2026-09-16.md` | NEW (this doc) |
 
-## Open fires (Sept 17 evening — post-Cosmo)
-1. **Subscribe to Card Hedger** ($14.99/mo) — verified self-serve, MCP available, replaces SCPro
-2. Wait for eBay Developer verification (~1 day, started Sept 16) — listing spread for deal detection
-3. Build eBay Browse API integration (~2-4 hours) once verified
-4. Wait for GemRate partner response (contact form sent Sept 17) — pricing + API key
-5. If GemRate pricing ≤ $50/mo: subscribe + build integration (~1 day dev)
-6. ~~Subscribe to Pricecharting Collector ($6/mo)~~ — DEFERRED, Collector has no API
-7. ~~Subscribe to Card Ladder Pro ($20/mo)~~ — CANCELLED Sept 17
-8. ~~Look up Pricecharting Legendary tier price~~ — DEFERRED until GemRate decision made
-9. **NEW: Build Card Hedger integration** (~2-4 hrs dev, MCP-native) once subscribed
-10. **NEW: Retire SCPro Apify actor** once Card Hedger integration lands (saves Apify usage cost)
+## Open fires (Sept 17 evening — GemRate pricing received)
+1. **Subscribe to GemRate 7-day free trial** — $200/mo developer tier, no risk, validates data quality
+2. **Subscribe to Card Hedger** ($14.99/mo) — verified self-serve, MCP available, replaces SCPro
+3. Wait for eBay Developer verification (~1 day, started Sept 16) — listing spread for deal detection
+4. Build eBay Browse API integration (~2-4 hours) once verified
+5. **Build Card Hedger integration** (~2-4 hrs dev, MCP-native) after subscription
+6. **Build GemRate integration** (~1 day dev) after trial validates data quality
+7. **Retire SCPro Apify actor** once Card Hedger integration lands
+8. **Ask Ryan at GemRate**: historical data add-on pricing, attribution format, rate limits per minute, ToS on deal-alerts
+9. ~~Subscribe to Pricecharting Collector ($6/mo)~~ — DEFERRED, Collector has no API
+10. ~~Subscribe to Card Ladder Pro ($20/mo)~~ — CANCELLED Sept 17
+11. ~~Look up Pricecharting Legendary tier price~~ — DEFERRED indefinitely (Card Hedger covers price needs)
