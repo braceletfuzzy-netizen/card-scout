@@ -21,7 +21,7 @@ import secrets
 from pathlib import Path
 from datetime import datetime
 
-from flask import Flask, render_template_string, request, redirect, url_for, session, flash, abort
+from flask import Flask, render_template_string, request, redirect, url_for, session, flash, abort, jsonify
 from flask.sessions import SecureCookieSessionInterface
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, scoped_session
@@ -153,6 +153,117 @@ def dashboard(customer_id):
     )
 
 
+@app.route('/dashboard/<customer_id>/match_card', methods=['POST'])
+@login_required
+def match_card(customer_id):
+    """Proxy Card Hedge /v1/cards/card-match for inline autocomplete on add-card form.
+
+    POST body: { query: str, category?: str }
+    Returns: { matched: bool, card: {card_id, description, player, set, number, image, category, prices}, confidence: float }
+            or { matched: false, alternatives: [...], error?: str }
+
+    Auth: requires valid Card Hedge API key in CARD_HEDGER_API_KEY env var.
+    Rate limit: subject to Starter tier (10/min, 5000/day).
+    """
+    customer = get_current_customer()
+    if customer.customer_id != customer_id:
+        abort(403)
+
+    data = request.get_json(silent=True) or {}
+    query = (data.get('query') or '').strip()
+    category = (data.get('category') or '').strip() or None
+
+    if len(query) < 3:
+        return jsonify({'matched': False, 'error': 'Query too short (min 3 chars)', 'alternatives': []}), 400
+
+    api_key = os.getenv('CARD_HEDGER_API_KEY')
+    if not api_key:
+        return jsonify({'matched': False, 'error': 'Card Hedger not configured', 'alternatives': []}), 503
+
+    try:
+        # Lazy import to avoid loading at module import time
+        import sys
+        sys.path.insert(0, str(Path(__file__).parent.parent / 'scripts'))
+        from cardhedger_client import CardHedgerClient
+
+        client = CardHedgerClient()
+        # Try AI match first (high confidence)
+        match_payload = {'query': query}
+        if category:
+            match_payload['category'] = category
+        match_result = client._post('/v1/cards/card-match', match_payload)
+
+        # card-match response shape (verified Sept 17):
+        #   {"match": {...card dict with card_id, confidence, description...}, "candidates_evaluated": N, "search_query_used": "..."}
+        # The match can be null if no good match.
+        match = match_result.get('match')
+        if not match:
+            # No match — return alternatives via search
+            alternatives = []
+            try:
+                search_payload = {'search': query, 'page_size': 5}
+                if category:
+                    search_payload['category'] = category
+                search_result = client._post('/v1/cards/card-search', search_payload)
+                alternatives = search_result.get('cards', [])[:5]
+            except Exception:
+                pass
+            return jsonify({
+                'matched': False,
+                'confidence': 0.0,
+                'alternatives': alternatives[:5],
+                'candidates_evaluated': match_result.get('candidates_evaluated'),
+            })
+
+        card = match
+        confidence = card.get('confidence') or match_result.get('confidence') or 0.0
+
+        # If confidence is too low, also fetch alternatives via search
+        alternatives = []
+        if confidence < 0.7:
+            try:
+                search_payload = {'search': query, 'page_size': 5}
+                if category:
+                    search_payload['category'] = category
+                search_result = client._post('/v1/cards/card-search', search_payload)
+                alternatives = search_result.get('cards', [])[:5]
+            except Exception:
+                pass  # Search fallback is best-effort
+
+        # Extract clean card preview for the UI
+        preview = {
+            'card_id': card.get('card_id'),
+            'description': card.get('description') or f"{card.get('player', '')} {card.get('set', '')}",
+            'player': card.get('player'),
+            'set': card.get('set'),
+            'number': card.get('number'),
+            'variant': card.get('variant'),
+            'image': card.get('image'),
+            'category': card.get('category'),
+            'rookie': card.get('rookie', False),
+            'seven_day_sales': card.get('7 Day Sales'),
+            'thirty_day_sales': card.get('30 Day Sales'),
+        }
+        # Pull the first PSA 10 price for quick preview
+        prices = card.get('prices', [])
+        if isinstance(prices, list):
+            for p in prices:
+                if isinstance(p, dict) and p.get('grade') == 'PSA 10':
+                    preview['psa_10_price'] = p.get('price')
+                    break
+
+        return jsonify({
+            'matched': True,
+            'card': preview,
+            'confidence': confidence,
+            'alternatives': alternatives[:5] if alternatives else [],
+        })
+    except Exception as e:
+        # Log full error server-side, return minimal info to client
+        app.logger.exception('Card Hedge match failed')
+        return jsonify({'matched': False, 'error': str(e)[:200], 'alternatives': []}), 502
+
+
 @app.route('/dashboard/<customer_id>/update', methods=['POST'])
 @login_required
 def update_dashboard(customer_id):
@@ -231,6 +342,10 @@ def update_dashboard(customer_id):
         new_card_text = request.form.get('new_card', '').strip()
         psa_url = request.form.get('psa_url', '').strip() or None
         sportscardspro_url = request.form.get('sportscardspro_url', '').strip() or None
+        # Optional: Card Hedge match fields (sent by inline autocomplete JS)
+        card_id = request.form.get('card_id', '').strip() or None
+        card_match_confidence = request.form.get('card_match_confidence', '').strip()
+        card_match_confidence = float(card_match_confidence) if card_match_confidence else None
 
         if new_card_text:
             # Check max cards
@@ -245,6 +360,8 @@ def update_dashboard(customer_id):
                 search_query=new_card_text,
                 psa_set_url=psa_url,
                 sportscardspro_url=sportscardspro_url,
+                card_id=card_id,
+                card_match_confidence=card_match_confidence,
                 include_pop=1,
                 include_sold=1,
                 market_thin=0,
@@ -475,23 +592,224 @@ DASHBOARD_TEMPLATE = '''
 
 <div class="card">
   <h2>Add a Card</h2>
-  <form method="POST" action="{{ url_for('update_dashboard', customer_id=customer.customer_id) }}" class="add-card">
+  <form method="POST" action="{{ url_for('update_dashboard', customer_id=customer.customer_id) }}" class="add-card" id="add-card-form">
     <input type="hidden" name="action" value="add">
-    <div style="flex: 1;">
-      <input type="text" name="new_card" placeholder="e.g. Mike Trout 2011 Topps Update Rookie #US1" required style="width: 100%;">
+    <div style="flex: 1; position: relative;">
+      <input type="text" name="new_card" id="new-card-input" placeholder="e.g. Mike Trout 2011 Topps Update Rookie #US1" required style="width: 100%;" autocomplete="off">
+      <!-- Hidden fields populated by inline matcher -->
+      <input type="hidden" name="card_id" id="matched-card-id">
+      <input type="hidden" name="card_match_confidence" id="matched-confidence">
+      <!-- Inline preview shown when user types something Card Hedge recognizes -->
+      <div id="card-match-preview" style="display: none; margin-top: 10px; padding: 12px; border: 1px solid #ddd; border-radius: 6px; background: #fafafa;">
+        <div style="display: flex; gap: 12px; align-items: center;">
+          <img id="preview-image" src="" alt="" style="width: 60px; height: 84px; object-fit: cover; border-radius: 4px; background: #eee;">
+          <div style="flex: 1; font-size: 13px;">
+            <div id="preview-description" style="font-weight: 600; color: #333;"></div>
+            <div id="preview-meta" style="color: #666; margin-top: 2px;"></div>
+            <div id="preview-price" style="color: #2e7d32; margin-top: 4px;"></div>
+          </div>
+          <div id="preview-confidence" style="font-size: 11px; padding: 3px 8px; border-radius: 10px; background: #e8f5e9; color: #2e7d32;"></div>
+        </div>
+        <div id="preview-alternatives" style="display: none; margin-top: 10px; font-size: 12px; color: #888;">
+          <div>Other options:</div>
+          <ul id="alternatives-list" style="margin: 4px 0 0 0; padding-left: 16px;"></ul>
+        </div>
+      </div>
+      <!-- Status indicator while matching -->
+      <div id="match-status" style="display: none; margin-top: 6px; font-size: 12px; color: #888;"></div>
       <div style="display: flex; gap: 8px; margin-top: 8px;">
         <input type="text" name="psa_url" placeholder="PSA set URL (optional)" style="flex: 1; font-size: 12px;">
         <input type="text" name="sportscardspro_url" placeholder="Sportscardspro URL (optional)" style="flex: 1; font-size: 12px;">
       </div>
     </div>
-    <button type="submit">Add</button>
+    <button type="submit" id="add-card-btn">Add</button>
   </form>
   <p style="font-size: 12px; color: #888; margin-top: 12px;">
-    <strong>PSA URL:</strong> e.g. <code>https://www.psacard.com/pop/baseball-cards/1995/topps/49750</code><br>
+    <strong>Tip:</strong> Start typing a card name and we'll look it up live. You'll see a preview with image and recent price before adding.
+    <br><strong>PSA URL:</strong> e.g. <code>https://www.psacard.com/pop/baseball-cards/1995/topps/49750</code><br>
     <strong>Sportscardspro URL:</strong> e.g. <code>https://www.sportscardspro.com/game/baseball-cards-1987-donruss-rookies/bo-jackson-14</code><br>
     Leave blank to use search-only mode (slower but works without URLs).
   </p>
 </div>
+
+<script>
+(function() {
+  // Inline card matcher — debounced autocomplete via Card Hedge /card-match
+  const input = document.getElementById('new-card-input');
+  const preview = document.getElementById('card-match-preview');
+  const previewImage = document.getElementById('preview-image');
+  const previewDescription = document.getElementById('preview-description');
+  const previewMeta = document.getElementById('preview-meta');
+  const previewPrice = document.getElementById('preview-price');
+  const previewConfidence = document.getElementById('preview-confidence');
+  const previewAlternatives = document.getElementById('preview-alternatives');
+  const alternativesList = document.getElementById('alternatives-list');
+  const matchStatus = document.getElementById('match-status');
+  const matchedCardId = document.getElementById('matched-card-id');
+  const matchedConfidence = document.getElementById('matched-confidence');
+  const addBtn = document.getElementById('add-card-btn');
+
+  let debounceTimer = null;
+  let lastQuery = '';
+  let inflight = null;
+
+  function hidePreview() {
+    preview.style.display = 'none';
+    previewAlternatives.style.display = 'none';
+    matchedCardId.value = '';
+    matchedConfidence.value = '';
+  }
+
+  function showStatus(msg) {
+    matchStatus.textContent = msg;
+    matchStatus.style.display = msg ? 'block' : 'none';
+  }
+
+  function showPreview(data) {
+    if (!data.matched) {
+      hidePreview();
+      showStatus(data.error || 'No match found. Try a different name or paste a PSA/SCPro URL.');
+      return;
+    }
+    const c = data.card || {};
+    previewImage.src = c.image || '';
+    previewImage.alt = c.description || '';
+    previewDescription.textContent = c.description || '(unknown card)';
+    const parts = [];
+    if (c.player) parts.push(c.player);
+    if (c.set) parts.push(c.set);
+    if (c.number) parts.push('#' + c.number);
+    if (c.variant) parts.push(c.variant);
+    previewMeta.textContent = parts.join(' · ');
+    if (c.psa_10_price) {
+      previewPrice.textContent = 'PSA 10 last sale: $' + c.psa_10_price;
+    } else {
+      previewPrice.textContent = '';
+    }
+    const conf = data.confidence || 0;
+    const pct = (conf * 100).toFixed(0) + '%';
+    previewConfidence.textContent = pct + ' match';
+    previewConfidence.style.background = conf >= 0.7 ? '#e8f5e9' : conf >= 0.5 ? '#fff8e1' : '#ffebee';
+    previewConfidence.style.color = conf >= 0.7 ? '#2e7d32' : conf >= 0.5 ? '#f57f17' : '#c62828';
+
+    matchedCardId.value = c.card_id || '';
+    matchedConfidence.value = conf;
+
+    // Show alternatives if confidence is low OR if there are popular alternates
+    if (data.alternatives && data.alternatives.length > 0) {
+      alternativesList.innerHTML = '';
+      data.alternatives.forEach(function(alt) {
+        const li = document.createElement('li');
+        li.style.cursor = 'pointer';
+        li.style.padding = '4px 8px';
+        li.style.borderRadius = '4px';
+        li.style.marginBottom = '2px';
+        li.style.transition = 'background 0.15s';
+        li.textContent = (alt.description || alt.player || '?') + ' — click to use';
+        li.onmouseenter = function() { li.style.background = '#eee'; };
+        li.onmouseleave = function() { li.style.background = ''; };
+        li.onclick = function(e) {
+          e.preventDefault();
+          // Select this alternative directly — populate hidden fields + update preview
+          const preview2 = {
+            card_id: alt.card_id,
+            description: alt.description,
+            player: alt.player,
+            set: alt.set,
+            number: alt.number,
+            variant: alt.variant,
+            image: alt.image,
+            category: alt.category,
+            rookie: alt.rookie,
+            seven_day_sales: alt['7 Day Sales'],
+            thirty_day_sales: alt['30 Day Sales'],
+            psa_10_price: null,
+          };
+          // Look for PSA 10 price in the alt's prices list
+          if (Array.isArray(alt.prices)) {
+            for (let p of alt.prices) {
+              if (p && p.grade === 'PSA 10') {
+                preview2.psa_10_price = p.price;
+                break;
+              }
+            }
+          }
+          // Update the preview UI in place with this alternative
+          previewImage.src = preview2.image || '';
+          previewImage.alt = preview2.description || '';
+          previewDescription.textContent = preview2.description || '(unknown card)';
+          const parts = [];
+          if (preview2.player) parts.push(preview2.player);
+          if (preview2.set) parts.push(preview2.set);
+          if (preview2.number) parts.push('#' + preview2.number);
+          if (preview2.variant) parts.push(preview2.variant);
+          previewMeta.textContent = parts.join(' · ');
+          previewPrice.textContent = preview2.psa_10_price ? 'PSA 10 last sale: $' + preview2.psa_10_price : '';
+          previewConfidence.textContent = 'Selected';
+          previewConfidence.style.background = '#e3f2fd';
+          previewConfidence.style.color = '#1565c0';
+          // Update text input to show the chosen card name (so customer sees what they'll save)
+          input.value = preview2.description || preview2.player || '';
+          // Set the hidden fields
+          matchedCardId.value = preview2.card_id || '';
+          matchedConfidence.value = '1.0';  // user-selected = full confidence
+          // Hide alternatives (already chosen)
+          previewAlternatives.style.display = 'none';
+          // Update lastQuery to prevent re-matching
+          lastQuery = preview2.description || preview2.player || '';
+        };
+        alternativesList.appendChild(li);
+      });
+      // Always show alternatives section so customers can see other options
+      previewAlternatives.style.display = 'block';
+    } else {
+      previewAlternatives.style.display = 'none';
+    }
+
+    preview.style.display = 'block';
+    showStatus('');
+  }
+
+  function debouncedMatch() {
+    clearTimeout(debounceTimer);
+    const query = input.value.trim();
+    if (query.length < 3) {
+      hidePreview();
+      showStatus('');
+      return;
+    }
+    if (query === lastQuery) return;  // already matched this
+    lastQuery = query;
+    showStatus('Looking up...');
+    debounceTimer = setTimeout(function() {
+      // Cancel any in-flight request
+      if (inflight) inflight.abort();
+      inflight = new AbortController();
+      fetch('{{ url_for("match_card", customer_id=customer.customer_id) }}', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({query: query}),
+        signal: inflight.signal,
+      })
+      .then(function(r) { return r.json().then(function(j) { return {ok: r.ok, json: j}; }); })
+      .then(function(res) {
+        showPreview(res.json);
+      })
+      .catch(function(err) {
+        if (err.name === 'AbortError') return;
+        showStatus('Lookup failed: ' + err.message);
+      });
+    }, 400);  // 400ms debounce
+  }
+
+  input.addEventListener('input', debouncedMatch);
+  input.addEventListener('focus', function() {
+    if (input.value.trim().length >= 3 && !preview.style.display !== 'none') {
+      debouncedMatch();
+    }
+  });
+})();
+</script>
 
 {% if not sports_cards and not tcg_cards %}
 <div class="card">
