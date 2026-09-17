@@ -853,6 +853,42 @@ if __name__ == '__main__':
 
 
 # ============================================================================
+# Error logging for production debugging (Sept 17)
+# ============================================================================
+# Production errors don't show tracebacks. Log them to /tmp/card_scout_errors.log
+# so we can read them after a 500 happens.
+
+import logging as _logging
+_error_log = _logging.getLogger('card_scout_errors')
+_error_log.setLevel(_logging.ERROR)
+# Try Render's persistent disk first, fall back to /tmp
+_log_dir = '/data' if os.path.isdir('/data') else '/tmp'
+_log_path = os.path.join(_log_dir, 'card_scout_errors.log')
+try:
+    _fh = _logging.FileHandler(_log_path)
+    _fh.setFormatter(_logging.Formatter(
+        '%(asctime)s [%(levelname)s] %(message)s\n%(exc_info)s\n---'
+    ))
+    _error_log.addHandler(_fh)
+except Exception as _e:
+    print(f'[WARN] Could not set up error log at {_log_path}: {_e}')
+
+
+@app.errorhandler(Exception)
+def _log_exception(e):
+    """Log every unhandled exception with full traceback."""
+    import traceback
+    _error_log.error(
+        f"Unhandled exception on {request.method} {request.path}\n"
+        f"Headers: {dict(request.headers)}\n"
+        f"Form: {dict(request.form)}",
+        exc_info=e
+    )
+    # Return generic 500 — Flask handles the actual response
+    return ('Internal Server Error', 500)
+
+
+# ============================================================================
 # ADMIN: One-time DB sync endpoint (Sept 17)
 # ============================================================================
 # Used to upload local card_scout.db to Render's persistent disk.
@@ -894,6 +930,38 @@ def debug_add_card():
             'message': str(e),
             'traceback': traceback.format_exc().splitlines()[-15:],
         }), 500
+
+
+@app.route('/admin/error_log', methods=['GET'])
+def admin_error_log():
+    """Read the last N lines from the error log. Sept 17 debugging aid."""
+    expected = os.environ.get('SYNC_DB_SECRET')
+    if not expected:
+        return jsonify({'ok': False, 'message': 'SYNC_DB_SECRET not configured'}), 503
+    provided = request.headers.get('X-Sync-Secret', '')
+    if not provided or provided != expected:
+        return jsonify({'ok': False, 'message': 'Invalid or missing X-Sync-Secret header'}), 403
+
+    lines = request.args.get('lines', 100, type=int)
+    lines = max(1, min(lines, 1000))
+
+    log_path = '/data/card_scout_errors.log' if os.path.isdir('/data') else '/tmp/card_scout_errors.log'
+    if not os.path.exists(log_path):
+        return jsonify({'ok': True, 'log': [], 'message': 'No log file yet'})
+
+    try:
+        with open(log_path, 'r', encoding='utf-8', errors='replace') as f:
+            all_lines = f.readlines()
+            recent = all_lines[-lines:]
+        return jsonify({
+            'ok': True,
+            'log_path': log_path,
+            'total_lines': len(all_lines),
+            'showing': len(recent),
+            'log': ''.join(recent),
+        })
+    except Exception as e:
+        return jsonify({'ok': False, 'message': str(e)}), 500
 
 
 @app.route('/admin/sync_db', methods=['POST'])
