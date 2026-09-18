@@ -39,77 +39,103 @@ if not _comparison_logger.handlers:
         print(f'[WARN] Could not set up comparison log: {e}')
 
 
+GRADES_TO_FETCH = ['PSA 10', 'PSA 9', 'BGS 9.5', 'CGC 10']
+
+
 def fetch_card_hedger_data(card):
-    """Fetch price/sales data for a card from Card Hedger.
+    """Fetch FMV at MULTIPLE grade tiers from Card Hedger.
 
-    Uses card.card_id if set (from the inline matcher), otherwise falls back
-    to a search via card.search_query.
+    Per Sept 18 insight: each grade tier is its own market. PSA 10 FMV
+    is meaningless when comparing to a PSA 9 listing. So we fetch all
+    major grade tiers for each card.
 
-    Returns dict with keys matching SCPro snapshot stats shape:
-      median_price, avg_price, min_price, max_price, total_listings,
-      items_with_sold_count, total_sold_reported, hot_items_count, avg_sold_count
+    Grades fetched: PSA 10, PSA 9, BGS 9.5, CGC 10 (4 grades)
+    Cost: 4 Card Hedger calls per card per run (within Starter 10/min limit
+    if we have <= 2 cards/min)
 
-    Returns None if Card Hedger call fails (rate limit, no match, etc.).
+    Returns dict with keys:
+      source, method, fmvs (dict of grade -> FMV data), confidence grades
+      For backward compat: median_price = PSA 10 FMV if available, else BGS 9.5
     """
     client = CardHedgerClient()
 
+    fmvs = {}  # grade -> fmv_data
+    card_id_used = None
+
     try:
-        # Strategy 1: Use the matched card_id (preferred) — get FMV at PSA 10
-        if card.card_id:
-            fmv_data = client.get_fmv(card.card_id, grade='PSA 10')
-            if fmv_data and (fmv_data.get('fmv') or fmv_data.get('price')):
-                price = fmv_data.get('fmv') or fmv_data.get('price')
-                return {
-                    'source': 'cardhedger',
-                    'method': 'card_id_fmv_psa10',
-                    'median_price': price,
-                    'avg_price': price,
-                    'min_price': fmv_data.get('price_low'),
-                    'max_price': fmv_data.get('price_high'),
-                    'total_listings': 1,
-                    'items_with_sold_count': 1,
-                    'total_sold_reported': 1,
-                    'hot_items_count': 0,
-                    'avg_sold_count': 1.0,
-                    'card_hedger_confidence': fmv_data.get('confidence'),
-                    'card_hedger_grade': fmv_data.get('confidence_grade'),
-                    'card_hedger_explanation': fmv_data.get('price_explanation') or fmv_data.get('explanation'),
-                    'raw_response': fmv_data,
-                }
+        # Use card_id if matched (preferred), else search
+        target_id = card.card_id
+        source_method = None
 
-        # Strategy 2: Fallback to search and use first card's FMV
-        search_result = client.search_cards(search=card.search_query, page=1)
-        cards_list = search_result.get('cards', []) if isinstance(search_result, dict) else []
-        if not cards_list:
+        if not target_id:
+            # Fallback: search and use first result
+            search_result = client.search_cards(search=card.search_query, page=1)
+            cards_list = search_result.get('cards', []) if isinstance(search_result, dict) else []
+            if not cards_list:
+                return None
+            target_id = cards_list[0].get('card_id') or cards_list[0].get('id')
+            source_method = 'search_fallback'
+        else:
+            source_method = 'card_id'
+
+        if not target_id:
             return None
 
-        # Take the first card (best match)
-        first = cards_list[0]
-        first_id = first.get('card_id') or first.get('id')
-        if not first_id:
+        # Fetch FMV at all major grade tiers
+        for grade in GRADES_TO_FETCH:
+            try:
+                fmv_data = client.get_fmv(target_id, grade=grade)
+                if fmv_data and (fmv_data.get('fmv') or fmv_data.get('price')):
+                    fmvs[grade] = {
+                        'price': fmv_data.get('fmv') or fmv_data.get('price'),
+                        'price_low': fmv_data.get('price_low'),
+                        'price_high': fmv_data.get('price_high'),
+                        'confidence': fmv_data.get('confidence'),
+                        'confidence_grade': fmv_data.get('confidence_grade'),
+                        'explanation': fmv_data.get('price_explanation') or fmv_data.get('explanation'),
+                    }
+            except Exception as grade_err:
+                # Skip this grade but continue with others
+                _comparison_logger.warning(
+                    f'CARD_HEDGER_GRADE_FETCH_FAILED card_id={card.id} grade={grade} '
+                    f'error={type(grade_err).__name__}: {grade_err}'
+                )
+
+        if not fmvs:
             return None
 
-        fmv_data = client.get_fmv(first_id, grade='PSA 10')
-        if fmv_data and (fmv_data.get('fmv') or fmv_data.get('price')):
-            price = fmv_data.get('fmv') or fmv_data.get('price')
-            return {
-                'source': 'cardhedger',
-                'method': 'search_fallback',
-                'median_price': price,
-                'avg_price': price,
-                'min_price': fmv_data.get('price_low'),
-                'max_price': fmv_data.get('price_high'),
-                'total_listings': 1,
-                'items_with_sold_count': 1,
-                'total_sold_reported': 1,
-                'hot_items_count': 0,
-                'avg_sold_count': 1.0,
-                'card_hedger_confidence': fmv_data.get('confidence'),
-                'card_hedger_grade': fmv_data.get('confidence_grade'),
-                'raw_response': fmv_data,
-            }
+        # Backward compat: median_price = PSA 10 (or fallback to BGS 9.5)
+        psa10 = fmvs.get('PSA 10', {})
+        bgs95 = fmvs.get('BGS 9.5', {})
 
-        return None
+        median_price = psa10.get('price') or bgs95.get('price')
+        avg_price = median_price
+        min_price = min((f.get('price_low') for f in fmvs.values() if f.get('price_low')), default=None)
+        max_price = max((f.get('price_high') for f in fmvs.values() if f.get('price_high')), default=None)
+
+        # Overall confidence = best (highest) of the grades fetched
+        best_grade = max(fmvs.items(), key=lambda kv: kv[1].get('confidence') or 0)
+        overall_confidence = best_grade[1].get('confidence')
+        overall_confidence_grade = best_grade[1].get('confidence_grade')
+
+        return {
+            'source': 'cardhedger',
+            'method': source_method,
+            'fmvs': fmvs,  # NEW: per-grade FMVs (Sept 18 insight)
+            'median_price': median_price,  # PSA 10 for backward compat
+            'avg_price': avg_price,
+            'min_price': min_price,
+            'max_price': max_price,
+            'total_listings': 1,
+            'items_with_sold_count': 1,
+            'total_sold_reported': 1,
+            'hot_items_count': 0,
+            'avg_sold_count': 1.0,
+            'card_hedger_confidence': overall_confidence,
+            'card_hedger_grade': overall_confidence_grade,
+            'card_hedger_explanation': best_grade[1].get('explanation'),
+        }
+
     except Exception as e:
         _comparison_logger.warning(f'CARD_HEDGER_FETCH_FAILED card_id={card.id} query={card.search_query!r} error={type(e).__name__}: {e}')
         return None
@@ -120,14 +146,28 @@ def log_comparison(card, ch_data, scpro_stats):
 
     Both inputs should have the standard snapshot stats shape.
     Logs to /data/card_hedger_vs_scpro.log for week-long comparison.
+
+    Per Sept 18: now logs per-grade FMV (PSA 10, PSA 9, BGS 9.5, CGC 10)
+    since each grade tier is its own market.
     """
     ch_price = (ch_data or {}).get('median_price')
     sc_price = (scpro_stats or {}).get('median_price')
 
-    # Compute % difference
+    # Compute % difference (overall, uses median_price = PSA 10 for back compat)
     pct_diff = None
     if ch_price and sc_price and sc_price > 0:
         pct_diff = (ch_price - sc_price) / sc_price * 100
+
+    # Per-grade breakdown
+    per_grade_fmvs = (ch_data or {}).get('fmvs', {})
+    per_grade_summary = {
+        grade: {
+            'ch_price': fmv.get('price'),
+            'ch_confidence': fmv.get('confidence'),
+            'ch_grade': fmv.get('confidence_grade'),
+        }
+        for grade, fmv in per_grade_fmvs.items()
+    }
 
     log_entry = {
         'card_id': card.id,
@@ -139,6 +179,9 @@ def log_comparison(card, ch_data, scpro_stats):
         'card_hedger_confidence': (ch_data or {}).get('card_hedger_confidence'),
         'card_hedger_grade': (ch_data or {}).get('card_hedger_grade'),
         'scpro_total_listings': (scpro_stats or {}).get('total_listings'),
+        # NEW per-grade (Sept 18)
+        'card_hedger_fmvs': per_grade_summary,
+        'grades_fetched': list(per_grade_fmvs.keys()),
     }
     _comparison_logger.info(json.dumps(log_entry))
 
