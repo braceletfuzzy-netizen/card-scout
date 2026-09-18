@@ -295,7 +295,7 @@ def classify_grade(item):
     return 'unknown'
 
 
-def find_deals(matching_items, summary, alert_type='below_median', ch_data=None):
+def find_deals(matching_items, summary, alert_type='below_median', ch_data=None, sold_data=None):
     """Find items that match the alert criteria.
 
     Sept 18: extended to support 'below_fmv' alert_type which uses
@@ -377,6 +377,13 @@ def find_deals(matching_items, summary, alert_type='below_median', ch_data=None)
                 deals.append(item_with_meta)
         return deals
 
+    # SELL-SIDE alert (Sept 18): compare current listings to 30d realized median
+    # from sold_data (SCPro recent_sales[]). Customer sees the arbitrage
+    # opportunity without z-score / std dev math exposed.
+    if alert_type == 'sell_window' and sold_data:
+        from sell_side_alerts import find_sell_window
+        return find_sell_window(matching_items, sold_data)
+
     # Legacy blended-median alerts (unchanged)
     threshold = {
         'below_median': summary.get('median_price_usd'),
@@ -438,7 +445,9 @@ def format_deal_alert(search_query, summary, deals, snapshot, alert_type='below_
     trend_label = snapshot.trend_signal.replace('_', ' ') if snapshot and snapshot.trend_signal else "INSUFFICIENT DATA"
 
     embed = {
-        "title": f"🎯 Deal Alert: {search_query[:80]}",
+        "title": (f"🔥 Sell Window: {search_query[:80]}"
+                 if alert_type == 'sell_window' else
+                 f"🎯 Deal Alert: {search_query[:80]}"),
         "description": (
             (f"📊 **{len(deals)} active listings** — thin market snapshot\n"
              f"{trend_emoji} **Trend: {trend_label}**\n"
@@ -747,6 +756,15 @@ def format_deal_alert(search_query, summary, deals, snapshot, alert_type='below_
                     deal_name = f"💰 ${deal.get('price_usd')} (FMV ${deal_fmv:,.0f}) [{classified}]"
                 else:
                     deal_name = f"💰 ${deal.get('price_usd')} [{classified}]"
+            elif alert_type == 'sell_window':
+                deal_tier = deal.get('_tier', '?')
+                deal_ratio = deal.get('_ratio', 0)
+                deal_typical = deal.get('_typical_30d', 0)
+                deal_window = deal.get('_window') or 'soon'
+                pct_above = (deal_ratio - 1) * 100 if deal_ratio > 0 else 0
+                deal_name = (f"📈 ${deal.get('price_usd'):.0f} "
+                             f"({pct_above:.0f}% above typical ${deal_typical:.0f}) "
+                             f"[{deal_tier}]")
             elif threshold_value:
                 savings = threshold_value - deal.get('price_usd', 0)
                 savings_pct = (savings / threshold_value * 100)
@@ -890,6 +908,10 @@ def process_customer_from_db(customer, dry_run=False):
             include_sold=card.include_sold,
         )
 
+        # Initialize sold_data early so it's in scope for find_deals() (Sept 18 sell-side)
+        # SCPro sold data is needed for both sell_window alert and the embed display
+        sold_data = None
+
         if not result:
             continue
 
@@ -979,7 +1001,7 @@ def process_customer_from_db(customer, dry_run=False):
         # Compute summary + find deals
         summary = compute_summary(matching)
         # Sept 18: pass ch_data to enable per-grade FMV-based deal detection
-        deals = find_deals(matching, summary, card.alert_type, ch_data=ch_data)
+        deals = find_deals(matching, summary, card.alert_type, ch_data=ch_data, sold_data=sold_data)
 
         if not deals:
             print(f"  [NO DEALS] No qualifying deals")
@@ -1040,7 +1062,7 @@ def process_customer_from_db(customer, dry_run=False):
                     print(f"  [POP] Lookup failed: {e}")
 
         # Optional: Sportscardspro sold data lookup (replaces unreliable eBay sold)
-        sold_data = None
+        # NOTE: sold_data initialized earlier in the loop
         sportscardspro_url = getattr(card, 'sportscardspro_url', None)
         if sportscardspro_url:
             print(f"  [SCPRO] Looking up sold data for {card.search_query[:30]}...")
