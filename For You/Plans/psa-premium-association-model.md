@@ -1,11 +1,12 @@
 # Sept 18 Math Model — PSA-Premium Association Logic
 
-## Jonathan's insight (Sept 18, mid-conversation)
+## Jonathan's full insight (Sept 18, mid-conversation)
 
 > "Down the road we will figure out the math model: (psa10-premium) = psa 9.
 > There will be an association logic as a discount to premium function that
 > will tell us a really good idea of what that price 'should' be around.
-> We just aren't there yet."
+> We just aren't there yet — but we will get there by making sure our source
+> signals are clean and give us usable data."
 
 ## What this means
 
@@ -31,6 +32,35 @@ Where `f` is a learned association function — could be:
 - A simple lookup table by era + card category
 - A regression model trained on comp data
 - A Bayesian prior updated by individual card sales
+
+## Sequencing principle: clean data first, math second
+
+**The math model is DEFERRED until our source signals are clean.**
+
+Jonathan's order of operations (Sept 18):
+1. **First**: Make sure Card Hedger + SCPro data is clean and usable
+   - Per-grade FMV confidence filtering (drop D-grade anomalies)
+   - Card Hedger search-result disambiguation (right card, not "similar card")
+   - Grade classifier accuracy (PSA 8 vs PSA 9, etc.)
+   - SCPro listing grade tagging (raw vs PSA 9 vs PSA 10)
+2. **Then**: Once source signals are clean, build the association model
+   - Ratios only matter if the underlying prices are accurate
+   - "Garbage in, garbage out" — bad FMVs give bad ratios
+
+This is why the current per-grade alert logic (below_fmv) is shipped with
+caveats — the FMVs are sometimes wrong (e.g., Derek Jeter PSA 9 = $775 while
+PSA 10 = $25 looks like a CH mapping bug, not a real price relationship).
+The model would be MORE wrong than the raw FMVs in those cases.
+
+## Clean data checklist (before model)
+
+- [ ] Drop Card Hedger D-grade FMVs from math model input (anomalies)
+- [ ] Filter CH search fallback to require confidence ≥ 0.7
+- [ ] Verify GRADE classifier accuracy on real listings (sample audit)
+- [ ] Validate SCPro grade tags against eBay sold data (sold = ground truth)
+- [ ] Tag each card with era + category for cross-card ratio analysis
+
+When all of these are ✅, the model can be built with confidence.
 
 ## Why this matters
 
