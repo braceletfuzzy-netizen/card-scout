@@ -207,6 +207,66 @@ class CardHedgerClient:
         }.items() if v is not None}
         return self._post('/v1/cards/card-search', payload)
 
+
+
+    def search_cards_wsort(
+        self,
+        search: Optional[str] = None,
+        set_name: Optional[str] = None,
+        category: Optional[str] = None,
+        player: Optional[str] = None,
+        number: Optional[str] = None,
+        subset: Optional[str] = None,
+        rookie: Optional[str] = None,
+        sort_by: str = 'relevance',  # relevance | price | sales | recent
+        sort_order: str = 'desc',
+        page: int = 1,
+        page_size: int = 20,
+    ) -> Dict[str, Any]:
+        """Search cards with structured params + sorting.
+
+        Used by inline search UX (PL-008): customer picks player/year/set
+        instead of typing free-form queries.
+
+        Args:
+            search: free-text query (combined with structured filters)
+            set_name: e.g., "Topps", "Bowman Chrome"
+            category: e.g., "Baseball", "Basketball", "Pokemon"
+            player: e.g., "Mike Trout", "Michael Jordan"
+            number: card number (e.g., "1", "US26")
+            subset: subset/parallels (e.g., "Chrome", "Refractor")
+            rookie: "true" to filter rookies only
+            sort_by: relevance (default), price, sales, recent
+            sort_order: desc (default) | asc
+            page: 1-indexed page number
+            page_size: results per page (default 20, max 100)
+
+        Returns:
+            dict with cards[], pages, count
+        """
+        params = {
+            'page': page,
+            'pageSize': page_size,
+            'sortBy': sort_by,
+            'sortOrder': sort_order,
+        }
+        if search:
+            params['search'] = search
+        if set_name:
+            params['set'] = set_name
+        if category:
+            params['category'] = category
+        if player:
+            params['player'] = player
+        if number:
+            params['number'] = number
+        if subset:
+            params['subset'] = subset
+        if rookie:
+            params['rookie'] = rookie
+
+        return self._post('/v1/cards/search-cards-wsort', payload=params)
+
     def card_details(self, card_id: str) -> Dict[str, Any]:
         """Get full details for a single card by Card Hedge card_id."""
         return self._post('/v1/cards/card-details', {'card_id': card_id})

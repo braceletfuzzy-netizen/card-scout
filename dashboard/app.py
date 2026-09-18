@@ -159,6 +159,49 @@ def dashboard(customer_id):
     )
 
 
+@app.route('/dashboard/<customer_id>/browse_cards', methods=['GET', 'POST'])
+@login_required
+def browse_cards(customer_id):
+    """PL-008 inline search UX: browse by player/year/set.
+
+    GET: render browse form
+    POST: search Card Hedger with structured params, return results
+    """
+    from cardhedger_client import CardHedgerClient
+    import os
+
+    if request.method == 'POST':
+        # Structured search
+        params = {}
+        for field in ['search', 'set', 'category', 'player', 'number', 'subset', 'rookie']:
+            val = request.form.get(field, '').strip()
+            if val:
+                params[field] = val
+        sort_by = request.form.get('sort_by', 'relevance')
+        sort_order = request.form.get('sort_order', 'desc')
+        page = int(request.form.get('page', 1))
+        params['sortBy'] = sort_by
+        params['sortOrder'] = sort_order
+        params['page'] = page
+        params['pageSize'] = 20
+
+        try:
+            client = CardHedgerClient(api_key=os.environ.get('CARD_HEDGER_API_KEY'))
+            result = client._post('/v1/cards/search-cards-wsort', payload=params)
+            cards = result.get('cards', [])
+            return jsonify({
+                'ok': True,
+                'cards': cards[:20],
+                'pages': result.get('pages', 1),
+                'count': result.get('count', 0),
+                'page': page,
+            })
+        except Exception as e:
+            return jsonify({'ok': False, 'error': str(e)}), 500
+
+    # GET - just return empty form, frontend handles UI
+    return jsonify({'ok': True, 'message': 'POST structured search params to this endpoint'})
+
 @app.route('/dashboard/<customer_id>/match_card', methods=['POST'])
 @login_required
 def match_card(customer_id):
@@ -655,7 +698,132 @@ DASHBOARD_TEMPLATE = '''
     <strong>Sportscardspro URL:</strong> e.g. <code>https://www.sportscardspro.com/game/baseball-cards-1987-donruss-rookies/bo-jackson-14</code><br>
     Leave blank to use search-only mode (slower but works without URLs).
   </p>
+
+  <!-- PL-008: Browse by player/year/set (alternative to free-form input) -->
+  <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid #eee;">
+    <h3 style="margin: 0 0 10px 0; font-size: 14px;">📚 Browse cards (PL-008)</h3>
+    <p style="font-size: 12px; color: #888; margin: 0 0 10px 0;">
+      Pick a player, year, and set. Search Card Hedger's full catalog.
+    </p>
+    <form id="browse-form" style="display: flex; gap: 8px; flex-wrap: wrap; align-items: end;">
+      <div>
+        <label style="display: block; font-size: 11px; color: #666; margin-bottom: 2px;">Category</label>
+        <select name="category" id="browse-category" style="padding: 6px; font-size: 13px;">
+          <option value="">Any</option>
+          <option value="Baseball">Baseball</option>
+          <option value="Basketball">Basketball</option>
+          <option value="Football">Football</option>
+          <option value="Hockey">Hockey</option>
+          <option value="Pokemon">Pokemon</option>
+          <option value="MTG">MTG</option>
+          <option value="One Piece">One Piece</option>
+        </select>
+      </div>
+      <div>
+        <label style="display: block; font-size: 11px; color: #666; margin-bottom: 2px;">Player</label>
+        <input type="text" name="player" id="browse-player" placeholder="e.g. Mike Trout" style="padding: 6px; font-size: 13px;">
+      </div>
+      <div>
+        <label style="display: block; font-size: 11px; color: #666; margin-bottom: 2px;">Set</label>
+        <input type="text" name="set" id="browse-set" placeholder="e.g. Topps Update" style="padding: 6px; font-size: 13px;">
+      </div>
+      <div>
+        <label style="display: block; font-size: 11px; color: #666; margin-bottom: 2px;">Year</label>
+        <input type="text" name="year" id="browse-year" placeholder="e.g. 2011" style="padding: 6px; font-size: 13px; width: 80px;">
+      </div>
+      <div>
+        <label style="display: block; font-size: 11px; color: #666; margin-bottom: 2px;">Sort by</label>
+        <select name="sort_by" id="browse-sort" style="padding: 6px; font-size: 13px;">
+          <option value="relevance">Relevance</option>
+          <option value="sales">Most sales</option>
+          <option value="price">Price (high to low)</option>
+          <option value="recent">Most recent</option>
+        </select>
+      </div>
+      <button type="button" id="browse-search-btn" style="background: #5865f2; color: white; border: none; padding: 7px 16px; border-radius: 4px; cursor: pointer; font-size: 13px;">🔍 Search</button>
+    </form>
+    <div id="browse-results" style="margin-top: 14px;"></div>
+    <div id="browse-status" style="margin-top: 6px; font-size: 12px; color: #888;"></div>
+  </div>
 </div>
+
+<script>
+// PL-008 Browse tab logic
+document.getElementById('browse-search-btn').addEventListener('click', async () => {
+  const statusEl = document.getElementById('browse-status');
+  const resultsEl = document.getElementById('browse-results');
+  statusEl.textContent = 'Searching Card Hedger...';
+  resultsEl.innerHTML = '';
+
+  // Build params - convert year field to a search substring
+  const year = document.getElementById('browse-year').value.trim();
+  const params = new FormData();
+  const category = document.getElementById('browse-category').value;
+  const player = document.getElementById('browse-player').value.trim();
+  const setName = document.getElementById('browse-set').value.trim();
+  const sortBy = document.getElementById('browse-sort').value;
+  if (category) params.append('category', category);
+  if (player) params.append('player', player);
+  if (setName) params.append('set', setName);
+  if (year) params.append('search', year);  // year added to free-text query
+  params.append('sort_by', sortBy);
+  params.append('sort_order', sortBy === 'price' ? 'desc' : 'desc');
+
+  try {
+    const resp = await fetch('{{ url_for("browse_cards", customer_id=customer.customer_id) }}', {
+      method: 'POST',
+      body: params,
+    });
+    const data = await resp.json();
+    if (!data.ok) {
+      statusEl.textContent = 'Error: ' + (data.error || 'unknown');
+      return;
+    }
+    statusEl.textContent = `Found ${data.count} cards (page ${data.page} of ${data.pages})`;
+    if (!data.cards || data.cards.length === 0) {
+      resultsEl.innerHTML = '<p style="color:#888; font-size:13px;">No matches. Try different filters.</p>';
+      return;
+    }
+    // Render results as clickable list - clicking auto-fills the quick-add form
+    const list = data.cards.map(c => {
+      const desc = c.description || '?';
+      const cid = c.card_id || '';
+      const img = c.image || '';
+      const player = c.player || '';
+      const setN = c.set || '';
+      const num = c.number || '';
+      return `
+        <div class="browse-result" data-desc="${desc.replace(/"/g, '&quot;')}" data-cid="${cid}" style="display: flex; gap: 10px; padding: 8px; border: 1px solid #eee; border-radius: 4px; margin-bottom: 6px; cursor: pointer; background: #fafafa;">
+          <img src="${img}" alt="" style="width: 40px; height: 56px; object-fit: cover; border-radius: 3px; background: #ddd;" onerror="this.style.display='none'">
+          <div style="flex: 1; font-size: 13px;">
+            <div style="font-weight: 600;">${desc}</div>
+            <div style="color: #888; font-size: 11px;">${player} · ${setN} · #${num}</div>
+          </div>
+          <div style="font-size: 11px; color: #888; align-self: center;">Click to add</div>
+        </div>
+      `;
+    }).join('');
+    resultsEl.innerHTML = list;
+    // Click handler: fill quick-add form with this card
+    resultsEl.querySelectorAll('.browse-result').forEach(el => {
+      el.addEventListener('click', () => {
+        const desc = el.dataset.desc;
+        const cid = el.dataset.cid;
+        const input = document.getElementById('new-card-input');
+        const hiddenId = document.getElementById('matched-card-id');
+        const hiddenConf = document.getElementById('matched-confidence');
+        input.value = desc;
+        hiddenId.value = cid;
+        hiddenConf.value = '1.0';
+        input.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        input.focus();
+      });
+    });
+  } catch (e) {
+    statusEl.textContent = 'Network error: ' + e.message;
+  }
+});
+</script>
 
 <script>
 (function() {
