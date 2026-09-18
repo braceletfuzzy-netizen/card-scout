@@ -693,10 +693,24 @@ def format_deal_alert(search_query, summary, deals, snapshot, alert_type='below_
     # Top listings — for thin markets, show raw listings (no "X% below" framing)
     if not market_thin:
         for i, deal in enumerate(deals[:3], 1):
-            savings = threshold_value - deal.get('price_usd', 0)
-            savings_pct = (savings / threshold_value * 100) if threshold_value else 0
+            # Sept 18: handle below_fmv where each deal has its own _ch_fmv anchor
+            if alert_type == 'below_fmv':
+                deal_fmv = deal.get('_ch_fmv')
+                deal_discount = deal.get('_discount_pct')
+                classified = deal.get('_classified_grade', '?')
+                if deal_discount is not None and deal_fmv:
+                    deal_name = f"💰 ${deal.get('price_usd')} ({deal_discount:.0f}% below FMV ${deal_fmv:,.0f}) [{classified}]"
+                elif deal_fmv:
+                    deal_name = f"💰 ${deal.get('price_usd')} (FMV ${deal_fmv:,.0f}) [{classified}]"
+                else:
+                    deal_name = f"💰 ${deal.get('price_usd')} [{classified}]"
+            elif threshold_value:
+                savings = threshold_value - deal.get('price_usd', 0)
+                savings_pct = (savings / threshold_value * 100)
+                deal_name = f"💰 ${deal.get('price_usd')} ({savings_pct:.0f}% below {threshold_label})"
+            else:
+                deal_name = f"💰 ${deal.get('price_usd')}"
 
-            deal_name = f"💰 ${deal.get('price_usd')} ({savings_pct:.0f}% below {threshold_label})"
             if deal.get('sold_count'):
                 demand_label = "🔥 HOT" if deal['sold_count'] > 50 else "📈 Active" if deal['sold_count'] > 20 else "Steady"
                 deal_name += f"  {demand_label} ({deal['sold_count']} sold)"
