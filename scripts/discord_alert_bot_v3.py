@@ -416,7 +416,7 @@ def format_deal_alert(search_query, summary, deals, snapshot, alert_type='below_
 
     # Sept 18: alert_type='below_fmv' shows FMV context
     if alert_type == 'below_fmv':
-        threshold_label = "Card Hedger FMV (per-grade)"
+        threshold_label = "Market FMV (per-grade)"
         threshold_value = None  # Variable per grade
     else:
         threshold_label = {
@@ -448,7 +448,7 @@ def format_deal_alert(search_query, summary, deals, snapshot, alert_type='below_
             ((f"Found **{len(deals)}** listings below {threshold_label} (${threshold_value}) "
               f"\n{trend_emoji} **Trend: {trend_label}**")
              if alert_type != 'below_fmv' else
-             (f"Found **{len(deals)}** listings below Card Hedger per-grade FMV (×0.85 threshold)\n"
+             (f"Found **{len(deals)}** listings below Market per-grade FMV (×0.85 threshold)\n"
               f"{trend_emoji} **Trend: {trend_label}**\n"
               f"_Sept 18: each grade tier is its own market — comparing to per-grade FMV not blended median._"))
         ),
@@ -470,7 +470,7 @@ def format_deal_alert(search_query, summary, deals, snapshot, alert_type='below_
             "value": (
                 f"**Range:** ${low:,.0f} - ${high:,.0f}\n"
                 f"**Median sale:** ${median:,.0f}\n"
-                f"_Sample size: {count} sales from Card Hedger_"
+                f"_Sample size: {count} recent comparable sales_"
             ),
             "inline": False
         })
@@ -487,12 +487,12 @@ def format_deal_alert(search_query, summary, deals, snapshot, alert_type='below_
             if price:
                 # Sept 18: show range when available (Jonathan: FMV is opinion, show range not point)
                 if price_low and price_high and (price_high - price_low) / price > 0.1:
-                    grade_lines.append(f"**{grade}:** ${price_low:,.0f}-${price_high:,.0f} (CH opinion: ${price:,.0f}, {conf_grade})")
+                    grade_lines.append(f"**{grade}:** ${price_low:,.0f}-${price_high:,.0f} (Market opinion: ${price:,.0f}, {conf_grade})")
                 else:
-                    grade_lines.append(f"**{grade}:** ${price:,.0f} (CH opinion, {conf_grade})")
+                    grade_lines.append(f"**{grade}:** ${price:,.0f} (Market opinion, {conf_grade})")
         if grade_lines:
             embed["fields"].append({
-                "name": "💎 Per-grade price range (CH opinion, derive our own later)",
+                "name": "💎 Per-grade price range",
                 "value": '\n'.join(grade_lines),
                 "inline": False
             })

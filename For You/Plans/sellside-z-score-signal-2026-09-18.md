@@ -358,3 +358,77 @@ This makes the system tunable without code changes.
 
 These are the secret-sauce tier names. Internal code uses z, customer sees
 tier label.
+
+---
+
+## CARD HEDGER ATTRIBUTION (Sept 18 question)
+
+> "Do we have to list CH there as a source per their API documentation?"
+
+### Findings (Sept 18)
+
+**GemRate** (different vendor, sent to us via Sept 16 partner form):
+- "Commercial use: Permitted"
+- "Attribution: Required when displaying data or derived metrics"
+
+**Card Hedger** (current subscription, $49/mo Starter):
+- **No explicit attribution requirement in their OpenAPI spec**
+- Sign-up tier ($14.99/mo) and Developer tier ($200/mo) docs don't mention attribution
+- We never directly pulled their terms-of-service
+
+### Where we surface attribution today (Sept 18)
+
+**Discord alerts**: "CH opinion $1,515 (A grade)" — embeds CH brand
+**Public pages**: "Data from Card Hedger" footer (trending, tracked)
+**Internal docs**: clear "powered by" attribution in plan docs
+
+### Three paths forward
+
+**Path A: Visible attribution** (current state)
+- Alerts show "CH opinion $X"
+- Public pages have "Data from CH" footer
+- **Why**: honest, defensible, low legal risk
+
+**Path B: Strip attribution** (extends "secret sauce" framing)
+- Alerts show "Market range $X (high confidence)"
+- No CH brand anywhere customer-visible
+- **Why**: looks like OUR analysis, brand ownership
+- **Risk**: if Card Hedger's TOS has hidden attribution req, this violates it
+
+**Path C: Hybrid** (compromise)
+- Discord alerts: drop CH brand (matches secret-sauce framing)
+- Public pages / about: keep attribution (legal hygiene)
+- **Why**: balanced — customer UX feels native, public-facing surfaces are transparent
+
+### Recommendation
+
+Path C — drop CH brand from alerts (since alerts feel personal / native),
+keep credit on public surfaces (where the data is publicly exposed).
+
+### Implementation if Path C
+
+```python
+# In discord_alert_bot_v3.py format_deal_alert():
+# OLD:  f"CH opinion: ${fmv} ({grade})"
+# NEW:  f"Market opinion: ${fmv} ({grade})"
+
+# In trending.html and tracked.html footer:
+# OLD:  Data from Card Hedger
+# NEW:  (no change - keep attribution on public pages)
+```
+
+### What we DON'T know
+
+- Card Hedger's full Terms of Service (we never pulled them)
+- Whether they require attribution in production apps
+- Whether the Developer tier ($200/mo) has different attribution requirements than Starter
+
+If we want certainty:
+- Email Card Hedger support: "for our $49/mo Starter subscription, do you
+  require customer-visible attribution when displaying FMV data?"
+- Wait for explicit answer before deciding
+- Path C is the safe default either way
+
+---
+
+## ADDITIONAL DECISIONS (Sept 18 out-of-band)
