@@ -321,6 +321,17 @@ def log_comparison(card, ch_data, scpro_stats):
         # NEW per-grade (Sept 18)
         'card_hedger_fmvs': per_grade_summary,
         'grades_fetched': list(per_grade_fmvs.keys()),
+        # NEW Sept 18: per-grade sold data (raw sc_data when present)
+        # Type at call site: sold_data is the extract_sold_summary() result,
+        # which has psa_10_price, psa_9_price, etc.
+        'scpro_per_grade': {
+            'psa_10_price': (scpro_stats or {}).get('psa_10_price') if isinstance(scpro_stats, dict) else None,
+            'psa_10_sold_30d': (scpro_stats or {}).get('psa_10_sold_30d') if isinstance(scpro_stats, dict) else None,
+            'psa_9_price': (scpro_stats or {}).get('psa_9_price') if isinstance(scpro_stats, dict) else None,
+            'psa_9_sold_30d': (scpro_stats or {}).get('psa_9_sold_30d') if isinstance(scpro_stats, dict) else None,
+            'ungraded_price': (scpro_stats or {}).get('ungraded_price') if isinstance(scpro_stats, dict) else None,
+            'ungraded_sold_30d': (scpro_stats or {}).get('ungraded_sold_30d') if isinstance(scpro_stats, dict) else None,
+        },
     }
     _comparison_logger.info(json.dumps(log_entry))
 
