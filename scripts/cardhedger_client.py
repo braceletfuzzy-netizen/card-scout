@@ -348,10 +348,21 @@ class CardHedgerClient:
     # ANALYTICS
     # ========================================================================
 
-    def total_sales_by_player(self, player: str, days: int = 30) -> Dict[str, Any]:
-        """Total sales count for a player over a time window."""
+    def total_sales_by_player(self, players, days: int = 30) -> Dict[str, Any]:
+        """Total sales count for one or more players over a time window.
+
+        Args:
+            players: a single player name string OR a list of names
+            days: lookback window (default 30)
+
+        Returns:
+            dict with 'results' array, each entry has player, total_sales,
+            search_time_ms
+        """
+        if isinstance(players, str):
+            players = [players]
         return self._post('/v1/cards/total-sales-by-player', {
-            'player': player,
+            'players': players,
             'days': days,
         })
 
