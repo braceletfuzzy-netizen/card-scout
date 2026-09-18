@@ -112,6 +112,17 @@ class Card(Base):
     is_rookie = Column(Boolean, nullable=True)
     is_key_card = Column(Boolean, nullable=True)
 
+    # Vault / portfolio tracking (Sept 18 — PL-007 build)
+    # cost_basis_usd: what the customer paid for this card. NULL = unknown.
+    # cost_basis_set_date: when they acquired it. NULL = use added_date for ROI.
+    # vault_notes: customer's free-text notes about this card.
+    # Tier policy (Sept 18): Vault is FREE for all tiers. Differentiation is
+    # in max_cards per tier (Casual=25, Standard=75, Dealer=250, Pro=unlimited)
+    # and active alert treatment (Pro gets sell-window alerts on Vault items).
+    cost_basis_usd = Column(Float, nullable=True)
+    cost_basis_set_date = Column(Date, nullable=True)
+    vault_notes = Column(Text, nullable=True)
+
     # Grade filter checkboxes (6-bucket system)
     # Customer picks which grades matter for THIS card
     track_psa_10 = Column(Boolean, default=True)       # Tier 1: Gem Mint

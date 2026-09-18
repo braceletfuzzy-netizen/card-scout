@@ -560,7 +560,10 @@ DASHBOARD_TEMPLATE = '''
 <div class="card">
   <div class="header">
     <h1>Your Card Scout</h1>
-    <a class="logout" href="{{ url_for('logout') }}">Logout</a>
+    <div>
+      <a class="vault-link" href="{{ url_for('vault_route', customer_id=customer.customer_id) }}" style="margin-right: 16px;">📊 Vault</a>
+      <a class="logout" href="{{ url_for('logout') }}">Logout</a>
+    </div>
   </div>
 
   {% with messages = get_flashed_messages(with_categories=true) %}
@@ -1028,6 +1031,23 @@ def shutdown_session(exception=None):
 # ============================================================================
 # MAIN
 # ============================================================================
+
+# =============================================================================
+# VAULT ROUTES (Sept 18, PL-007 build)
+# =============================================================================
+from vault import vault_view as _vault_view, vault_update as _vault_update
+
+@app.route('/dashboard/<customer_id>/vault', methods=['GET'])
+@login_required
+def vault_route(customer_id):
+    """Portfolio tracker — list owned cards with cost basis + ROI."""
+    return _vault_view(customer_id)
+
+@app.route('/dashboard/<customer_id>/vault/update', methods=['POST'])
+@login_required
+def vault_update_route(customer_id):
+    """Save cost_basis + notes for Vault cards."""
+    return _vault_update(customer_id)
 
 if __name__ == '__main__':
     init_db()  # Make sure tables exist

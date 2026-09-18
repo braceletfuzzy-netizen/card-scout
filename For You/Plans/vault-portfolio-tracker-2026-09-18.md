@@ -126,20 +126,28 @@ ALTER TABLE cards ADD COLUMN notes TEXT;  -- User notes about the card
 
 **Total: ~6 hours**
 
-## Open questions for Jonathan
+## Locked decisions (Sept 18)
 
-1. **Default grade for "current value"** — PSA 10 (highest), or user-selected?
-   - Recommended: PSA 10 by default, dropdown to change (PSA 9 / BGS 9.5 / raw)
+1. **Default grade for "current value"** = PSA 10 (highest), dropdown to switch
+2. **Cards with no CH FMV** = show "—" with hover "No market data yet"
+3. **Portfolio total** = simple sum (Pro tier gets liquidity weighting later)
+4. **Negative ROI** = red, positive green, neutral when cost_basis unknown
+5. **Tier policy** = Vault is FREE for everyone. Differentiation is in
+   alert treatment + max_cards per tier:
+   - Casual ($15): max 25 vault cards, no active alerts on Vault items
+   - Standard ($30): max 75 vault cards, no active alerts on Vault items
+   - Dealer ($75): max 250 vault cards, NO active alerts on Vault items
+   - Pro ($150): UNLIMITED vault cards + active sell-window alerts +
+     per-grade FMV deal alerts on Vault items
 
-2. **For cards with no CH FMV** (like Bo Jackson — search fallback rejects)?
-   - Recommended: show "—" with hover "No market data yet"
+   **Founder's exact words (Sept 18):**
+   > "We can do A [free for everyone], we can augment how many cards
+   > we are holding (portfolio wise) per tier. The big thing will be
+   > they are just there, they don't get the update treatment - alerts."
 
-3. **Portfolio total formula** — sum of individual card values, or weighted by liquidity?
-   - Recommended: simple sum; liquidity weighting is Pro tier
+   This is brilliant because:
+   - Vault = passive tracking = no operational cost (it's a database read)
+   - Customers see what they own → invested in product → upgrade for alerts
+   - "Update treatment" framing: alerts are the alerts, not the visualization
+   - Vault becomes a customer-retention tool, not a paywall
 
-4. **Negative ROI** — red text or just sign?
-   - Recommended: green +, red -, neutral when cost_basis unknown
-
-5. **Should Vault be Pro-tier only?**
-   - Recommended: free for beta, Pro feature when we launch paid tier
-   - Sells the Pro tier while not blocking beta users
