@@ -41,6 +41,27 @@ if not _comparison_logger.handlers:
 
 GRADES_TO_FETCH = ['PSA 10', 'PSA 9', 'BGS 9.5', 'CGC 10']
 
+# Sept 18 Clean Data #1: drop low-confidence grades from alerts.
+# Card Hedger's confidence_grade is A/B/C/D. D = 'very low confidence, sparse market'.
+# Confidence is 0-1 numeric. We drop:
+#   - D letter grade (always)
+#   - C letter grade with confidence < 0.1 (essentially untrusted)
+# Other grades (A/B/C with decent confidence) are kept.
+DROP_CONFIDENCE_GRADES = {'D'}
+DROP_CONFIDENCE_BELOW = 0.10  # numeric confidence threshold (also catches ungraded C)
+
+
+def _should_drop_fmv(confidence_grade, confidence):
+    """Decide whether to drop a per-grade FMV from alerts.
+
+    Returns True if the FMV is too unreliable to surface.
+    """
+    if confidence_grade in DROP_CONFIDENCE_GRADES:
+        return True
+    if confidence is not None and confidence < DROP_CONFIDENCE_BELOW:
+        return True
+    return False
+
 # Map our card.track_* flags to Card Hedger grade requests
 TRACK_FLAG_TO_GRADES = {
     'track_psa_10': 'PSA 10',
@@ -106,13 +127,63 @@ def fetch_card_hedger_data(card):
         source_method = None
 
         if not target_id:
-            # Fallback: search and use first result
+            # Fallback: search and STRICTLY validate first result matches query
+            # CLEAN DATA FIX #2 (Sept 18): require player-name match.
+            # Without this, 'Donruss 87 Bo Jackson' returns Azzi Fudd 2025
+            # Donruss #87 as first result because 'donruss' matches every result.
+            # We were alerting on FMVs for the WRONG CARD.
             search_result = client.search_cards(search=card.search_query, page=1)
             cards_list = search_result.get('cards', []) if isinstance(search_result, dict) else []
             if not cards_list:
                 return None
-            target_id = cards_list[0].get('card_id') or cards_list[0].get('id')
-            source_method = 'search_fallback'
+
+            # Strategy: Find a query token that looks like a player name (capitalized,
+            # not a number/year) and require it to appear in the result's player or
+            # description. Skip generic tokens like 'donruss', 'topps' that match many.
+            GENERIC_TOKENS = {
+                'donruss', 'topps', 'fleer', 'upper', 'deck', 'panini', 'baseball',
+                'football', 'basketball', 'hockey', 'pokemon', 'card', 'rookie',
+                'the', 'and', 'with', 'auto', 'autograph', 'graded', 'raw', 'mint',
+                'gem', 'set', 'series', 'insert', 'parallel', 'refractor', 'prizm',
+                'select', 'optic', 'clearly', 'recollection', 'classics',
+            }
+            query_lower = card.search_query.lower()
+            query_tokens = [
+                t for t in query_lower.split()
+                if len(t) > 2 and not t.isdigit()
+            ]
+            specific_tokens = [t for t in query_tokens if t not in GENERIC_TOKENS]
+
+            # If no specific tokens (e.g., query is just 'topps 1989'), fall back
+            # to requiring at least the year match.
+            best_match = None
+            for candidate in cards_list[:10]:
+                desc = (candidate.get('description') or '').lower()
+                player = (candidate.get('player') or '').lower()
+
+                if specific_tokens:
+                    # Require at least one specific (non-generic) token to match
+                    matched_specific = [t for t in specific_tokens if t in desc or t in player]
+                    if matched_specific:
+                        best_match = candidate
+                        break
+                else:
+                    # No specific tokens - require year match as fallback
+                    year_tokens = [t for t in query_lower.split() if t.isdigit() and len(t) == 4]
+                    if year_tokens and any(y in desc for y in year_tokens):
+                        best_match = candidate
+                        break
+
+            if not best_match:
+                _comparison_logger.warning(
+                    f'CARD_HEDGER_SEARCH_NO_MATCH card_id={card.id} query={card.search_query!r} '
+                    f'top_result={cards_list[0].get("description", "?")!r} '
+                    f'specific_tokens={specific_tokens}'
+                )
+                return None
+
+            target_id = best_match.get('card_id') or best_match.get('id')
+            source_method = 'search_fallback_validated'
         else:
             source_method = 'card_id'
 
@@ -126,12 +197,26 @@ def fetch_card_hedger_data(card):
             try:
                 fmv_data = client.get_fmv(target_id, grade=grade)
                 if fmv_data and (fmv_data.get('fmv') or fmv_data.get('price')):
+                    confidence_grade = fmv_data.get('confidence_grade')
+                    confidence = fmv_data.get('confidence')
+
+                    # Sept 18 Clean Data #1: drop D-grade / very-low-confidence FMVs
+                    # from alerts (still logged for analysis, but not surfaced to customer)
+                    if _should_drop_fmv(confidence_grade, confidence):
+                        _comparison_logger.info(
+                            f'CARD_HEDGER_FMV_DROPPED card_id={card.id} grade={grade} '
+                            f'confidence_grade={confidence_grade} confidence={confidence:.4f} '
+                            f'price={fmv_data.get("fmv") or fmv_data.get("price")} '
+                            f'reason=low_confidence'
+                        )
+                        continue  # don't add to fmvs dict
+
                     fmvs[grade] = {
                         'price': fmv_data.get('fmv') or fmv_data.get('price'),
                         'price_low': fmv_data.get('price_low'),
                         'price_high': fmv_data.get('price_high'),
-                        'confidence': fmv_data.get('confidence'),
-                        'confidence_grade': fmv_data.get('confidence_grade'),
+                        'confidence': confidence,
+                        'confidence_grade': confidence_grade,
                         'explanation': fmv_data.get('price_explanation') or fmv_data.get('explanation'),
                     }
             except Exception as grade_err:
@@ -140,6 +225,14 @@ def fetch_card_hedger_data(card):
                     f'CARD_HEDGER_GRADE_FETCH_FAILED card_id={card.id} grade={grade} '
                     f'error={type(grade_err).__name__}: {grade_err}'
                 )
+
+        # Sept 18: if ALL grades were dropped, log + return None (whole card unreliable)
+        if not fmvs and grades_for_this_card:
+            _comparison_logger.info(
+                f'CARD_HEDGER_NO_RELIABLE_FMV card_id={card.id} '
+                f'grades_attempted={grades_for_this_card} '
+                f'all_below_confidence_threshold'
+            )
 
         if not fmvs:
             return None

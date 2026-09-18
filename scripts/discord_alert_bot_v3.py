@@ -319,6 +319,26 @@ def find_deals(matching_items, summary, alert_type='below_median', ch_data=None)
         if not fmvs:
             return []  # No FMV data, fall back gracefully
 
+        # CLEAN DATA FIX #1 (Sept 18): Drop D-grade FMVs before alert logic.
+        # D-grade = CH confidence <0.10 (essentially guessing).
+        # Per Jonathan: 'CH FMV should be treated like an opinion rather than
+        # a stated fact.' D-grade opinions are too unreliable to alert on.
+        # Example: Derek Jeter PSA 9 = $775 while PSA 10 = $25 looks like a
+        # CH mapping bug, not a real price relationship.
+        clean_fmvs = {}
+        dropped_grades = []
+        for grade, fmv in fmvs.items():
+            conf = fmv.get('confidence') or 0
+            conf_grade = fmv.get('confidence_grade', '?')
+            if conf_grade == 'D' or conf < 0.10:
+                dropped_grades.append(f"{grade}(CH {conf_grade} {conf:.2f})")
+                continue
+            clean_fmvs[grade] = fmv
+        if dropped_grades:
+            print(f"  [CLEAN DATA] Dropped D-grade FMVs: {', '.join(dropped_grades)}")
+        if not clean_fmvs:
+            return []  # All FMVs were D-grade, no reliable data
+
         threshold_pct = 0.85  # Alert when listing is 15%+ below FMV
 
         deals = []
@@ -328,17 +348,17 @@ def find_deals(matching_items, summary, alert_type='below_median', ch_data=None)
                 continue
 
             grade = classify_grade(item)
-            # Map grade tier to CH FMV
+            # Map grade tier to CH FMV (use clean_fmvs only - D-grade dropped)
             # PSA 8 falls back to PSA 9 FMV (closest tier)
             # SGC and BGS-other tiers skip FMV alert (no FMV for them)
             grade_to_fmv = {
-                'PSA 10': fmvs.get('PSA 10', {}).get('price'),
-                'PSA 9': fmvs.get('PSA 9', {}).get('price'),
-                'BGS 9.5': fmvs.get('BGS 9.5', {}).get('price'),
-                'CGC 10': fmvs.get('CGC 10', {}).get('price'),
-                'PSA 8': fmvs.get('PSA 9', {}).get('price'),  # Fallback
-                'unknown_graded': fmvs.get('PSA 10', {}).get('price'),  # Default to PSA 10
-                'unknown': fmvs.get('PSA 10', {}).get('price'),  # Default to PSA 10
+                'PSA 10': clean_fmvs.get('PSA 10', {}).get('price'),
+                'PSA 9': clean_fmvs.get('PSA 9', {}).get('price'),
+                'BGS 9.5': clean_fmvs.get('BGS 9.5', {}).get('price'),
+                'CGC 10': clean_fmvs.get('CGC 10', {}).get('price'),
+                'PSA 8': clean_fmvs.get('PSA 9', {}).get('price'),  # Fallback
+                'unknown_graded': clean_fmvs.get('PSA 10', {}).get('price'),  # Default
+                'unknown': clean_fmvs.get('PSA 10', {}).get('price'),  # Default
                 'raw': None,  # No FMV for raw
                 'sgc': None,  # No CH FMV for SGC
                 'bgs_other': None,  # No CH FMV for BGS <9.5
