@@ -17,6 +17,7 @@ Database:
   Postgres: set DATABASE_URL=postgresql://...
 """
 import json
+import sqlite3
 import sys
 import argparse
 import os
@@ -1118,6 +1119,39 @@ def process_customer_from_db(customer, dry_run=False):
         # Send to Discord
         if send_discord_webhook(customer.discord_webhook, message):
             alerts_sent += 1
+
+        # ============================================================================
+        # SELL-SIDE SECOND PASS (Sept 18 evening — toggleable per customer)
+        # If customer has allow_sell_window=1, run sell-side check regardless of
+        # primary alert_type. Sends a SEPARATE message so buy-side signal isn't lost.
+        # ============================================================================
+        try:
+            # Read customer_settings.allow_sell_window (lazy import)
+            from sell_side_alerts import find_sell_window, format_sell_alert
+            conn_settings = sqlite3.connect('card_scout.db')
+            conn_settings.row_factory = sqlite3.Row
+            cs_row = conn_settings.execute(
+                'SELECT allow_sell_window FROM customer_settings WHERE customer_id = ?',
+                (customer.id,)
+            ).fetchone()
+            conn_settings.close()
+            allow_sell = bool(cs_row and cs_row['allow_sell_window'])
+
+            if allow_sell and sold_data:
+                sell_items = find_sell_window(matching, sold_data)
+                if sell_items:
+                    sell_msgs = format_sell_alert(card.search_query, sell_items, sold_data)
+                    for sm in sell_msgs:
+                        sell_message = {
+                            'title': sm['title'],
+                            'description': sm['description'],
+                            'color': 0x10b981,  # emerald
+                        }
+                        if send_discord_webhook(customer.discord_webhook, sell_message):
+                            alerts_sent += 1
+                            print(f"  [SELL-WINDOW] ✓ Sent: {sm['title'][:60]}")
+        except Exception as e:
+            print(f"  [SELL-WINDOW] Pass skipped: {e}")
 
         # Log run
         session = get_session()
