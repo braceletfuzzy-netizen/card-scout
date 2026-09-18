@@ -17,7 +17,7 @@ import os
 import sys
 import json
 import logging
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 # Add parent for imports
@@ -33,7 +33,10 @@ _comparison_logger.setLevel(logging.INFO)
 if not _comparison_logger.handlers:
     try:
         _fh = logging.FileHandler(_log_path)
-        _fh.setFormatter(logging.Formatter('%(asctime)s %(message)s'))
+        # Pure JSONL: timestamp is a field inside each entry so log analysis
+        # tools can parse each line as JSON. The Python logger formatter
+        # only emits the message body.
+        _fh.setFormatter(logging.Formatter('%(message)s'))
         _comparison_logger.addHandler(_fh)
     except Exception as e:
         print(f'[WARN] Could not set up comparison log: {e}')
@@ -303,6 +306,9 @@ def log_comparison(card, ch_data, scpro_stats):
     }
 
     log_entry = {
+        # NEW Sept 18: timestamp is now a JSON field, not a prefix.
+        # Each JSONL line is fully self-describing for log analysis.
+        'timestamp': datetime.now(timezone.utc).isoformat(),
         'card_id': card.id,
         'search_query': card.search_query,
         'card_hedger_price': ch_price,
