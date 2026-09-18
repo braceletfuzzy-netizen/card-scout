@@ -260,11 +260,104 @@ def compute_summary(matching_items):
     }
 
 
-def find_deals(matching_items, summary, alert_type='below_median'):
-    """Find items that match the alert criteria."""
+def classify_grade(item):
+    """Classify a SCPro listing into a grade tier based on title text.
+
+    Returns one of: 'PSA 10', 'PSA 9', 'BGS 9.5', 'CGC 10', 'raw', 'unknown'
+    Falls back to 'unknown' if no clear signal.
+
+    Sept 18: each grade tier is its own market, so we need to know
+    which tier a listing is in to compare against the right CH FMV.
+    """
+    title = (item.get('title') or item.get('description') or '').lower()
+    if not title:
+        return 'unknown'
+
+    # Order matters - check SGC/CGC/BGS BEFORE PSA (they have unique prefixes)
+    if 'cgc 10' in title or 'cgc10' in title:
+        return 'CGC 10'
+    if 'sgc' in title:
+        return 'sgc'  # Not in our 4 main grades - skip FMV alert
+    if 'bgs 9.5' in title or 'bgs 9.5' in title or 'black label' in title:
+        return 'BGS 9.5'
+    if 'bgs' in title:
+        return 'bgs_other'  # BGS but not 9.5
+    if 'psa 10' in title or 'psa10' in title or 'gem mint' in title:
+        return 'PSA 10'
+    if 'psa 9' in title or 'psa9' in title:
+        return 'PSA 9'
+    if 'psa 8' in title or 'psa8' in title:
+        return 'PSA 8'  # Mapped but no CH FMV - falls back to PSA 9
+    if 'psa' in title:
+        return 'unknown_graded'  # PSA but couldn't parse grade number
+    if 'raw' in title or 'ungraded' in title or 'unslabbed' in title or 'no grade' in title:
+        return 'raw'
+    return 'unknown'
+
+
+def find_deals(matching_items, summary, alert_type='below_median', ch_data=None):
+    """Find items that match the alert criteria.
+
+    Sept 18: extended to support 'below_fmv' alert_type which uses
+    per-grade Card Hedger FMV as the threshold (not blended median).
+
+    Args:
+        matching_items: list of listing dicts from SCPro
+        summary: SCPro summary stats (median, avg, q1, q3)
+        alert_type: 'below_median' | 'below_q1' | 'below_q3' | 'below_avg' | 'below_fmv'
+        ch_data: dict from fetch_card_hedger_data() with per-grade FMVs
+
+    Returns:
+        list of items that match the threshold
+    """
     if not summary or not matching_items:
         return []
 
+    # Per-grade FMV alert (Sept 18): alert when listing < CH FMV × 0.85 for that grade
+    if alert_type == 'below_fmv' and ch_data:
+        fmvs = ch_data.get('fmvs', {})
+        if not fmvs:
+            return []  # No FMV data, fall back gracefully
+
+        threshold_pct = 0.85  # Alert when listing is 15%+ below FMV
+
+        deals = []
+        for item in matching_items:
+            price = item.get('price_usd')
+            if not price:
+                continue
+
+            grade = classify_grade(item)
+            # Map grade tier to CH FMV
+            # PSA 8 falls back to PSA 9 FMV (closest tier)
+            # SGC and BGS-other tiers skip FMV alert (no FMV for them)
+            grade_to_fmv = {
+                'PSA 10': fmvs.get('PSA 10', {}).get('price'),
+                'PSA 9': fmvs.get('PSA 9', {}).get('price'),
+                'BGS 9.5': fmvs.get('BGS 9.5', {}).get('price'),
+                'CGC 10': fmvs.get('CGC 10', {}).get('price'),
+                'PSA 8': fmvs.get('PSA 9', {}).get('price'),  # Fallback
+                'unknown_graded': fmvs.get('PSA 10', {}).get('price'),  # Default to PSA 10
+                'unknown': fmvs.get('PSA 10', {}).get('price'),  # Default to PSA 10
+                'raw': None,  # No FMV for raw
+                'sgc': None,  # No CH FMV for SGC
+                'bgs_other': None,  # No CH FMV for BGS <9.5
+            }
+            fmv = grade_to_fmv.get(grade)
+            if not fmv:
+                continue  # Skip raw cards for FMV-based alerts
+
+            threshold = fmv * threshold_pct
+            if price < threshold:
+                # Annotate item with grade + discount vs FMV
+                item_with_meta = dict(item)
+                item_with_meta['_classified_grade'] = grade
+                item_with_meta['_ch_fmv'] = fmv
+                item_with_meta['_discount_pct'] = (fmv - price) / fmv * 100
+                deals.append(item_with_meta)
+        return deals
+
+    # Legacy blended-median alerts (unchanged)
     threshold = {
         'below_median': summary.get('median_price_usd'),
         'below_q1': summary.get('q1_price_usd'),
@@ -280,7 +373,7 @@ def find_deals(matching_items, summary, alert_type='below_median'):
 
 
 # ============ DISCORD MESSAGES ============
-def format_deal_alert(search_query, summary, deals, snapshot, alert_type='below_median', pop_data=None, sold_items=None, sold_data=None, market_thin=False):
+def format_deal_alert(search_query, summary, deals, snapshot, alert_type='below_median', pop_data=None, sold_items=None, sold_data=None, market_thin=False, ch_data=None):
     """Format the Discord alert embed.
 
     Per ticker spec (card-scout-ticker-system-spec-2026-09-14.md):
@@ -293,6 +386,7 @@ def format_deal_alert(search_query, summary, deals, snapshot, alert_type='below_
         sold_items: list of recent sold listings (optional)
         sold_data: sportscardspro extracted summary (legacy single-tier)
         pop_data: PSA pop data
+        ch_data: Card Hedger FMV data (Sept 18: per-grade FMVs)
     """
     """Create a Discord embed with Q bands + per-grade ticker + trend signal."""
     if not deals:
@@ -300,19 +394,24 @@ def format_deal_alert(search_query, summary, deals, snapshot, alert_type='below_
 
     deals = sorted(deals, key=lambda x: x.get('price_usd', 0))
 
-    threshold_label = {
-        "below_median": "median",
-        "below_q1": "Q1 (25th percentile)",
-        "below_q3": "Q3 (75th percentile)",
-        "below_avg": "average"
-    }.get(alert_type, "market")
+    # Sept 18: alert_type='below_fmv' shows FMV context
+    if alert_type == 'below_fmv':
+        threshold_label = "Card Hedger FMV (per-grade)"
+        threshold_value = None  # Variable per grade
+    else:
+        threshold_label = {
+            "below_median": "median",
+            "below_q1": "Q1 (25th percentile)",
+            "below_q3": "Q3 (75th percentile)",
+            "below_avg": "average"
+        }.get(alert_type, "market")
 
-    threshold_value = {
-        "below_median": summary.get('median_price_usd'),
-        "below_q1": summary.get('q1_price_usd'),
-        "below_q3": summary.get('q3_price_usd'),
-        "below_avg": summary.get('avg_price_usd'),
-    }.get(alert_type)
+        threshold_value = {
+            "below_median": summary.get('median_price_usd'),
+            "below_q1": summary.get('q1_price_usd'),
+            "below_q3": summary.get('q3_price_usd'),
+            "below_avg": summary.get('avg_price_usd'),
+        }.get(alert_type)
 
     # Trend signal emoji + label
     trend_emoji = "⏳" if not snapshot else get_trend_emoji(snapshot.trend_signal or 'INSUFFICIENT_DATA')
@@ -326,14 +425,34 @@ def format_deal_alert(search_query, summary, deals, snapshot, alert_type='below_
              f"\n⚠️ This is a thin market. Listed prices reflect individual sellers, not market consensus. "
              f"Use the per-grade ticker + 90% CI ranges as the market signal.")
             if market_thin else
-            (f"Found **{len(deals)}** listings below {threshold_label} (${threshold_value}) "
-             f"\n{trend_emoji} **Trend: {trend_label}**")
+            ((f"Found **{len(deals)}** listings below {threshold_label} (${threshold_value}) "
+              f"\n{trend_emoji} **Trend: {trend_label}**")
+             if alert_type != 'below_fmv' else
+             (f"Found **{len(deals)}** listings below Card Hedger per-grade FMV (×0.85 threshold)\n"
+              f"{trend_emoji} **Trend: {trend_label}**\n"
+              f"_Sept 18: each grade tier is its own market — comparing to per-grade FMV not blended median._"))
         ),
         "color": BOT_COLOR,
         "fields": [],
         "footer": {"text": f"{BOT_NAME} - {BOT_TAGLINE}"},
         "timestamp": datetime.utcnow().isoformat()
     }
+
+    # Sept 18: Add per-grade FMV display if we have ch_data
+    if ch_data and ch_data.get('fmvs'):
+        fmvs = ch_data['fmvs']
+        grade_lines = []
+        for grade, fmv in fmvs.items():
+            price = fmv.get('price')
+            conf_grade = fmv.get('confidence_grade', '?')
+            if price:
+                grade_lines.append(f"**{grade}:** ${price:,.2f} (CH {conf_grade})")
+        if grade_lines:
+            embed["fields"].append({
+                "name": "💎 Card Hedger per-grade FMV",
+                "value": '\n'.join(grade_lines),
+                "inline": False
+            })
 
     # V3 ALERT LAYOUT (Sept 16 — Jim + founder beta feedback):
     # Order: Trend → Per-grade → Stock-Class → Market Shape → Deals → Top listings
@@ -755,7 +874,9 @@ def process_customer_from_db(customer, dry_run=False):
         # Card Hedger dual-source fetch (Sept 17 evening)
         # Run Card Hedger in parallel with SCPro for data comparison.
         # Logs discrepancies to /data/card_hedger_vs_scpro.log.
-        # Decision to retire SCPro happens after 1 week of comparison.
+        # Sept 18: extended to fetch per-grade FMVs (PSA 10, PSA 9, BGS 9.5, CGC 10)
+        # ch_data is used downstream for per-grade alert logic.
+        ch_data = None  # Initialize so it's accessible after try block
         try:
             from cardhedger_alert_integration import fetch_card_hedger_data, log_comparison
             ch_data = fetch_card_hedger_data(card)
@@ -765,7 +886,16 @@ def process_customer_from_db(customer, dry_run=False):
                 from snapshot_system import compute_snapshot_stats
                 scpro_stats = compute_snapshot_stats(matching)
                 log_comparison(card, ch_data, scpro_stats)
-                print(f"  [CARD HEDGER] ${ch_price:,.2f} (grade {ch_data.get('card_hedger_grade', '?')})")
+                # Show per-grade FMV summary
+                fmvs = ch_data.get('fmvs', {})
+                grade_summary = ', '.join(
+                    f'{g} ${f["price"]:,.0f}'
+                    for g, f in fmvs.items()
+                    if f.get('price')
+                )
+                print(f"  [CARD HEDGER] ${ch_price:,.2f} (overall grade {ch_data.get('card_hedger_grade', '?')})")
+                if grade_summary:
+                    print(f"  [CARD HEDGER FMVs] {grade_summary}")
             else:
                 print(f"  [CARD HEDGER] No data (rate limit or no match)")
         except Exception as e:
@@ -778,7 +908,8 @@ def process_customer_from_db(customer, dry_run=False):
 
         # Compute summary + find deals
         summary = compute_summary(matching)
-        deals = find_deals(matching, summary, card.alert_type)
+        # Sept 18: pass ch_data to enable per-grade FMV-based deal detection
+        deals = find_deals(matching, summary, card.alert_type, ch_data=ch_data)
 
         if not deals:
             print(f"  [NO DEALS] No qualifying deals")
@@ -879,7 +1010,8 @@ def process_customer_from_db(customer, dry_run=False):
             pop_data=pop_data,
             sold_items=sold_items if sold_items else None,
             sold_data=sold_data,
-            market_thin=bool(getattr(card, 'market_thin', 0))
+            market_thin=bool(getattr(card, 'market_thin', 0)),
+            ch_data=ch_data,  # Sept 18: pass for per-grade FMV display
         )
 
         if not message:
