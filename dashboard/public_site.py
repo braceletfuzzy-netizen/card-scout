@@ -60,6 +60,7 @@ LANDING_TEMPLATE = '''
     <a href="/" class="logo">Card Scout</a>
     <div class="nav-links">
       <a href="/deals">Top Deals</a>
+      <a href="/trending">📈 Trending</a>
       <a href="/pricing">Pricing</a>
       {% if logged_in %}
         <a href="/dashboard/{{ customer_id }}" class="cta">Dashboard</a>
@@ -178,6 +179,7 @@ DEALS_TEMPLATE = '''
     <a href="/" class="logo">Card Scout</a>
     <div class="nav-links">
       <a href="/deals">Top Deals</a>
+      <a href="/trending">📈 Trending</a>
       <a href="/pricing">Pricing</a>
       <a href="/" class="cta">Home</a>
     </div>
@@ -334,6 +336,7 @@ PRICING_TEMPLATE = '''
     <a href="/" class="logo">Card Scout</a>
     <div class="nav-links">
       <a href="/deals">Top Deals</a>
+      <a href="/trending">📈 Trending</a>
       <a href="/pricing">Pricing</a>
       <a href="/" class="cta">Home</a>
     </div>
