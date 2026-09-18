@@ -1,5 +1,52 @@
 # Per-Tier Schedule Config (Sept 18)
 
+## Founder's tier-value framing (Sept 18 evening)
+
+> "At the lower tier the value proposition becomes time saved, having a helper.
+> At the dealer level, it's finding the deals to make you more profitable.
+> As long as we can satisfy both I am ok with the costs because we are a data
+> aggregation service at one level and a data interpretation service at another
+> level up. Unless we can get free access the costs are the costs and we need
+> to make a profit."
+
+**This is the entire pricing strategy in one paragraph:**
+
+### Two products in one
+
+| Tier | What we sell | What customer gets |
+|---|---|---|
+| Casual / Standard | **Data aggregation service** | "I don't have to watch eBay every day. Someone watches for me." |
+| Dealer / Pro | **Data interpretation service** | "I make more money because someone finds me profitable deals I would've missed." |
+
+### Why this justifies the cost difference
+
+- Casual: 1×/wk scan = $3.53/mo cost = essentially free for us
+- Pro: 3×/day scan = $52.95/mo cost at max = 65% margin still
+
+The **value** to the customer scales faster than the cost:
+- A casual collector saves 30 min/wk of manual eBay search = $X of time
+- A dealer makes $Y from one good deal = many multiples of their subscription
+
+**Both tiers are profitable if priced correctly.** No tier needs to "subsidize"
+the other. Path A (throttling) maintains margin across the spectrum.
+
+### Cost reality (Sept 18 founder directive)
+
+> "Unless we can get free access the costs are the costs and we need to
+> make a profit."
+
+Card Hedger $49/mo is essentially "free" (we use it for all tiers).
+Apify eBay $0.0353/run is the only meaningful variable cost.
+GEMRATE $200/mo only kicks in when we have 7+ paying Pro customers.
+
+### Architecturally
+
+- Lower tiers = automated aggregation pipeline, raw signals out
+- Higher tiers = interpretation layer (per-grade FMV math, sell-window
+  detection, trend signals)
+- The aggregation pipeline pays for itself; the interpretation is the
+  premium product
+
 ## Founder's intent (18 Sep 2026 desktop notes)
 
 Verbatim from `18 Sep 2026 Notes.txt`:
