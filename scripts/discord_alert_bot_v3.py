@@ -1145,6 +1145,8 @@ def process_customer_from_db(customer, dry_run=False):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--test-customer', help='Process specific customer_id only')
+    parser.add_argument('--customer-ids', help='Process comma-separated customer IDs (tier scheduler)')
+    parser.add_argument('--tiers', help='Process customers in comma-separated tiers (tier scheduler)')
     parser.add_argument('--dry-run', action='store_true', help='Check for deals but do not send')
     args = parser.parse_args()
 
@@ -1171,6 +1173,12 @@ def main():
 
     if args.test_customer:
         customers = session.query(Customer).filter_by(customer_id=args.test_customer).all()
+    elif args.customer_ids:
+        ids = [int(x.strip()) for x in args.customer_ids.split(',') if x.strip().isdigit()]
+        customers = session.query(Customer).filter(Customer.id.in_(ids)).all()
+    elif args.tiers:
+        tiers = [t.strip() for t in args.tiers.split(',')]
+        customers = session.query(Customer).filter(Customer.tier.in_(tiers)).all()
     else:
         # Get all active customers
         customers = session.query(Customer).filter(
