@@ -145,6 +145,74 @@ math model would make the alerts smarter, but it's not required.
 A robust model needs Card Hedger's per-card `category` and `era` fields, plus
 GemRate's population data for the population-aware component.
 
+## Jonathan's deeper insight (Sept 18, end of conversation)
+
+> "The one thing to note that CH FMV is an average or smoothing of data points.
+> It is a cheat sheet as in they do the math for us. I would like to eventually
+> derive our own FMV and for now we are going with ranges if that makes sense.
+> Their FMV should be treated like an opinion rather than a stated fact."
+
+### What this means for the product
+
+**CH FMV is a smoothed/single-point opinion, not ground truth.** Card Hedger
+takes a set of recent sales and returns a number. We should treat that number
+as ONE opinion, not THE price.
+
+Practical implications:
+1. **Show FMV as a range, not a single number**: low / FMV / high
+   - Already have `price_low` and `price_high` from CH API, just need to surface them
+   - "PSA 10 FMV: $1,500 (range $1,200-$2,100)" — gives customer context
+2. **Treat CH FMV like one analyst's opinion**, alongside SCPro median
+   - In the future, our own derived FMV is the second opinion
+   - Customer weighs them
+3. **Eventually derive our own FMV** from:
+   - eBay Browse API sold data (ground truth, when not blocked)
+   - SCPro sold listings
+   - Card Hedger price history (raw sales, not smoothed)
+   - Both opinions shown, customer judges
+
+### UI implications (when ready)
+
+**Current alert format**:
+```
+💎 Card Hedger per-grade FMV
+  PSA 10: $1,515.00 (CH A)
+  PSA 9: $177.33 (CH A)
+  BGS 9.5: $425.00 (CH A)
+  CGC 10: $537.79 (CH A)
+```
+
+**Future alert format (after "show as range" + "our own FMV")**:
+```
+💎 Per-grade FMV (range)
+  PSA 10: $1,200-$2,100 (CH: $1,515, ours: $1,650)  [opinion A vs B]
+  PSA 9: $130-$230 (CH: $177, ours: $185)
+  BGS 9.5: $350-$520 (CH: $425, ours: $440)
+  CGC 10: $450-$640 (CH: $538, ours: $560)
+
+🧮 Our derived FMV: based on N recent sales (median $X, range $Y-$Z)
+📚 Card Hedger FMV: $1,515 (range $1,200-$2,100) — opinion, not fact
+```
+
+This is the **"two opinions" framing** — customer decides which to weight more.
+When our own FMV is added, customers have a real comparison.
+
+### Trigger to build "our own FMV"
+
+- [ ] eBay Browse API integration (currently blocked at PSA account level, but other paths exist)
+- [ ] 30+ days of dual-source data (have ~1 day, need 1 month for stability)
+- [ ] Math model complete (math ratios are part of "our own FMV")
+- [ ] OR: when a customer explicitly asks "what does Card Scout think it's worth?"
+
+### Soft launch strategy
+
+We can soft-launch our own FMV by:
+1. Showing it as a SECOND opinion alongside CH
+2. Calling it "Card Scout estimate" or "community consensus"
+3. Letting customers see both for 30 days
+4. Comparing accuracy (our FMV vs CH vs actual sale prices)
+5. Then deciding which to promote to primary
+
 ## Trigger conditions
 
 Build the math model when:
