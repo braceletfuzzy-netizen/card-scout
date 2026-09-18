@@ -235,3 +235,126 @@ recommendations justify the price tag.
    Risk of alert noise. Recommendation: keep separate.
 5. **Mention CH confidence?**: Low-confidence C/D grades can give spurious signals.
    Recommendation: drop D-grade (already done in clean data #1) + warn on C grade.
+
+---
+
+## PRODUCT FRAMING (Jonathan, Sept 18 out-of-band)
+
+> "We can call them thresholds, because we are telling you the arbitrage
+> that is available and spelling it out without telling you how we came
+> up with our calculations."
+>
+> "I do want to strip out that we are using std dev, z scores, etc. to
+> come to our conclusion. We don't need to leave bread crumbs out there
+> to our secret sauce recipe."
+
+### What this means
+
+**Customer-facing copy should NOT include**:
+- "Z-score"
+- "σ / standard deviation"
+- "outlier"
+- Any statistical jargon
+
+**Customer-facing copy should include**:
+- The threshold bands (e.g., "above market", "far above market", "extreme premium")
+- The opportunity (what's the arbitrage available)
+- The action (should I list, when should I list)
+
+This protects our "secret sauce" (the math model) while still being useful.
+Same insight as Sep 18's "CH FMV is opinion, not fact" but applied to OUR
+internal methods.
+
+### Updated mock copy (strip the math)
+
+**Mock A revised:**
+```
+💎 Hot market: Frank Thomas 1990 Topps #1 Draft Pick (PSA 10)
+$53 listing - well above typical market price. Buyers competing.
+Recent sold: $48, $52, $45. Liquidity: thin.
+👉 Premium pricing window: list yours now.
+```
+
+**Mock B revised (Pro):**
+```
+📈 PREMIUM WINDOW — Frank Thomas 1990 Topps #1 Draft Pick (PSA 10)
+
+PRICING ANOMALY
+  Listed price:    $52.99
+  Typical range:   $15-25
+  Pricing tier:    EXTREME PREMIUM
+  CH opinion:      $52.99 (B confidence)
+
+MARKET CONTEXT
+  Active listings:    2 (low supply)
+  Recent comp sales:  $48, $52, $45, $51, $50
+  Trend:              ACCELERATING_UP
+  Demand:             High (multiple bids likely)
+
+SELL-SIDE RECOMMENDATION
+  ⏰ Time window:    48-72 hours
+  💰 List price:     $52-55 (matches current demand)
+  📉 Outlook:        Premium pricing likely cools in 1 week
+
+[Powered by Card Scout]
+```
+
+**Mock C revised:**
+```
+🚨 **Frank Thomas 1990 Topps #1 Draft Pick (PSA 10)** is HOT right now
+
+Someone listed at $52.99 — well above the typical $15-25 range.
+Buyers seem to be competing. If you have one, this is a great time
+to list it.
+
+📊 Anomaly:
+• Listed: $52.99
+• Typical: $15-25
+• Pricing tier: EXTREME PREMIUM
+• Trend: ACCELERATING_UP
+
+💡 Suggested listing price: $52-55
+⏰ Window: 48-72 hours before it cools
+```
+
+### Internal vs external
+
+We keep z-scores in INTERNAL logs and dashboards for tuning:
+- `cardhedger_vs_scpro.log` (raw JSON)
+- Internal admin pages
+- Our own monitoring
+
+But DISCORD alerts use plain-English thresholds. This is the same pattern as
+how we show ranges but compute medians — show the human-readable answer,
+keep the math out of sight.
+
+---
+
+## ADDITIONAL DECISIONS (Sept 18 out-of-band)
+
+### Threshold starts at "above market" tier, evolves dynamically
+
+> "We can start with [Mock] A, and dial it in. It will end up being
+> dynamic, the issue will be volume etc. That's the other side of the
+> equation."
+
+**Decision**:
+- Phase 2 ships at z > 1.0 threshold (more frequent, 1-2 per week per card)
+- Volume metrics tracked per card per week
+- If alert volume too high OR false positive rate > 30%: dial up to z > 1.5
+- If too few alerts: dial down to z > 0.5
+- Threshold lives in a config (not hardcoded)
+
+This makes the system tunable without code changes.
+
+### Tier naming convention (for "above market" bands)
+
+| Z-range | Tier name | Customer copy |
+|---|---|---|
+| 0.5 to 1.0 | Above typical | "above typical price" |
+| 1.0 to 1.5 | Hot market | "hot market, well above typical" |
+| 1.5 to 2.0 | Premium | "premium pricing window" |
+| 2.0+ | Extreme premium | "EXTREME PREMIUM" (rare) |
+
+These are the secret-sauce tier names. Internal code uses z, customer sees
+tier label.
