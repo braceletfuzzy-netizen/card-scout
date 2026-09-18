@@ -1,0 +1,306 @@
+{
+  "category": "Football",
+  "fetched_at": "2026-09-18T16:03:37.173914",
+  "cards": [
+    {
+      "description": "Drake Maye 2026 Topps Flagship Football",
+      "player": "Drake Maye",
+      "set": "2026 Topps Flagship Football",
+      "number": "136",
+      "variant": "Base",
+      "card_id": "1787231053565x303834608711508200",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1787321723847x542343835872718140/resize",
+      "category": "Football",
+      "category_group": "Sports Cards",
+      "set_type": "Topps Flagship Football",
+      "7 Day Sales": 12,
+      "30 Day Sales": 59,
+      "rookie": false,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "1.65"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "1.65"
+        }
+      ]
+    },
+    {
+      "description": "CeeDee Lamb 2020 Panini Mosaic NFL Debut Football",
+      "player": "CeeDee Lamb",
+      "set": "2020 Panini Mosaic Football",
+      "number": "268",
+      "variant": "Base",
+      "card_id": "1652462192859x499619031487146700",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1722086937013x716146090099927300/resized_20240727_132856.jpeg",
+      "category": "Football",
+      "category_group": "Sports Cards",
+      "set_type": "Panini Mosaic Football",
+      "7 Day Sales": 7,
+      "30 Day Sales": 15,
+      "rookie": true,
+      "gain": 1.9574358974359,
+      "prices": [
+        {
+          "grade": "PSA 10",
+          "price": "115.34"
+        },
+        {
+          "grade": "PSA 9",
+          "price": "33.25"
+        },
+        {
+          "grade": "Raw",
+          "price": "1.25"
+        }
+      ]
+    },
+    {
+      "description": "Julian Sayin 2025 Panini Prizm Draft Picks Fearless Football Red Ice",
+      "player": "Julian Sayin",
+      "set": "2025 Panini Prizm Draft Picks Football",
+      "number": "F-JSN",
+      "variant": "Red Ice",
+      "card_id": "1779852688852x118380674020068580",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1779853797065x785539704314121700/resize",
+      "category": "Football",
+      "category_group": "Sports Cards",
+      "set_type": "Panini Prizm Draft Picks Football",
+      "7 Day Sales": 5,
+      "30 Day Sales": 13,
+      "rookie": false,
+      "gain": 1.94117647058824,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "5"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "5"
+        }
+      ]
+    },
+    {
+      "description": "Tyler Shough 2025 Panini Revolution Football",
+      "player": "Tyler Shough",
+      "set": "2025 Panini Revolution Football",
+      "number": "246",
+      "variant": "Base",
+      "card_id": "1766062500906x953457853923089800",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1766063475336x500131241520911600/crop_image",
+      "category": "Football",
+      "category_group": "Sports Cards",
+      "set_type": "Panini Revolution Football",
+      "7 Day Sales": 17,
+      "30 Day Sales": 37,
+      "rookie": true,
+      "gain": 1.94019607843137,
+      "prices": [
+        {
+          "grade": "PSA 10",
+          "price": "149.95"
+        },
+        {
+          "grade": "PSA 9",
+          "price": "26"
+        },
+        {
+          "grade": "Raw",
+          "price": "1.528"
+        }
+      ]
+    },
+    {
+      "description": "Josh Allen 2024 Panini Mosaic Football Green",
+      "player": "Josh Allen",
+      "set": "2024 Panini Mosaic Football",
+      "number": "22",
+      "variant": "Green",
+      "card_id": "1737224007082x356557881259064640",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1748284062837x450009070062189500/crop_image",
+      "category": "Football",
+      "category_group": "Sports Cards",
+      "set_type": "Panini Mosaic Football",
+      "7 Day Sales": 8,
+      "30 Day Sales": 16,
+      "rookie": false,
+      "gain": 1.85714285714286,
+      "prices": [
+        {
+          "grade": "PSA 10",
+          "price": "100"
+        },
+        {
+          "grade": "PSA 9",
+          "price": "31"
+        },
+        {
+          "grade": "Raw",
+          "price": "1.99666666666667"
+        }
+      ]
+    },
+    {
+      "description": "Olaivavega Ioane 2026 Topps Flagship Football",
+      "player": "Olaivavega Ioane",
+      "set": "2026 Topps Flagship Football",
+      "number": "362",
+      "variant": "Base",
+      "card_id": "1787241487159x606733293813732000",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1787322330497x402827545829877760/resize",
+      "category": "Football",
+      "category_group": "Sports Cards",
+      "set_type": "Topps Flagship Football",
+      "7 Day Sales": 5,
+      "30 Day Sales": 34,
+      "rookie": true,
+      "gain": 1.8139097744361,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "4.99"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "4.99"
+        }
+      ]
+    },
+    {
+      "description": "Cam Skattebo 2025 Topps Cosmic Chrome Extraterrestrial Talent Football",
+      "player": "Cam Skattebo",
+      "set": "2025 Topps Cosmic Chrome Football",
+      "number": "ET-4",
+      "variant": "Base",
+      "card_id": "1782197171805x625310375359679900",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1782705966301x149286455060250620/resize",
+      "category": "Football",
+      "category_group": "Sports Cards",
+      "set_type": "Topps Cosmic Chrome Football",
+      "7 Day Sales": 14,
+      "30 Day Sales": 68,
+      "rookie": true,
+      "gain": 1.74285714285714,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "12"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "12"
+        }
+      ]
+    },
+    {
+      "description": "Odell Beckham Jr. 2014 Topps Chrome Football",
+      "player": "Odell Beckham Jr.",
+      "set": "2014 Topps Chrome Football",
+      "number": "117",
+      "variant": "Base",
+      "card_id": "1595784172281x577879273851322400",
+      "image": "//s3.amazonaws.com/appforest_uf/f1595784161382x289622640026726800/2014-Topps-Chrome-117-Odell-Beckham.jpg",
+      "category": "Football",
+      "category_group": "Sports Cards",
+      "set_type": "Topps Chrome Football",
+      "7 Day Sales": 7,
+      "30 Day Sales": 26,
+      "rookie": true,
+      "gain": 1.74193548387097,
+      "prices": [
+        {
+          "grade": "PSA 10",
+          "price": "85"
+        },
+        {
+          "grade": "PSA 9",
+          "price": "5.5"
+        },
+        {
+          "grade": "Raw",
+          "price": "2"
+        }
+      ]
+    },
+    {
+      "description": "Brock Purdy 2026 Topps Flagship Wild Card Moments Football",
+      "player": "Brock Purdy",
+      "set": "2026 Topps Flagship Football",
+      "number": "WC-34",
+      "variant": "Base",
+      "card_id": "1788185213603x598447735974527500",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1788213815301x476198612471925760/resize",
+      "category": "Football",
+      "category_group": "Sports Cards",
+      "set_type": "Topps Flagship Football",
+      "7 Day Sales": 6,
+      "30 Day Sales": 31,
+      "rookie": false,
+      "gain": 1.73333333333333,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "3.41666666666667"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "3.41666666666667"
+        }
+      ]
+    },
+    {
+      "description": "Terry McLaurin 2025 Topps Chrome Football",
+      "player": "Terry McLaurin",
+      "set": "2025 Topps Chrome Football",
+      "number": "208",
+      "variant": "Base",
+      "card_id": "1776073739392x359991589272024900",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1777340364239x469408844239595400/resize",
+      "category": "Football",
+      "category_group": "Sports Cards",
+      "set_type": "Topps Chrome Football",
+      "7 Day Sales": 5,
+      "30 Day Sales": 13,
+      "rookie": false,
+      "gain": 1.7115,
+      "prices": [
+        {
+          "grade": "CGC AUTH",
+          "price": "27.115"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "1.69"
+        }
+      ]
+    }
+  ]
+}

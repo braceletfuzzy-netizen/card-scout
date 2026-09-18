@@ -1,0 +1,306 @@
+{
+  "category": "Pokemon",
+  "fetched_at": "2026-09-18T16:03:39.671891",
+  "cards": [
+    {
+      "description": "Purrloin 2014 Pokemon XY Phantom Forces",
+      "player": "Purrloin",
+      "set": "2014 Pokemon XY Phantom Forces",
+      "number": "56",
+      "variant": "Base",
+      "card_id": "1734139562146x249863703274756600",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1762749470314x260131761801550400/crop_image",
+      "category": "Pokemon",
+      "category_group": "Trading Cards",
+      "set_type": "Pokemon XY Phantom Forces",
+      "7 Day Sales": 6,
+      "30 Day Sales": 13,
+      "rookie": false,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "0.15"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "0.15"
+        }
+      ]
+    },
+    {
+      "description": "Dialga 2009 Pokemon Platinum Reverse Holo",
+      "player": "Dialga",
+      "set": "2009 Pokemon Platinum",
+      "number": "6",
+      "variant": "Reverse Holo",
+      "card_id": "1741477926070x487765689948692860",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1747911302756x927208431960132900/crop_image",
+      "category": "Pokemon",
+      "category_group": "Trading Cards",
+      "set_type": "Pokemon Platinum",
+      "7 Day Sales": 5,
+      "30 Day Sales": 11,
+      "rookie": false,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "PSA 6",
+          "price": "75"
+        },
+        {
+          "grade": "PSA 5.5",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "4.75"
+        }
+      ]
+    },
+    {
+      "description": "Manaphy 2016 Pokemon XY Black Star Promo Mythical Pokemon Collection",
+      "player": "Manaphy",
+      "set": "2016 Pokemon XY Black Star Promo",
+      "number": "XY113",
+      "variant": "Base",
+      "card_id": "1782151713292x625913197074841600",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1782151860380x656930927132993900/resize",
+      "category": "Pokemon",
+      "category_group": "Trading Cards",
+      "set_type": "Pokemon XY Black Star Promo",
+      "7 Day Sales": 10,
+      "30 Day Sales": 47,
+      "rookie": false,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "PSA 10",
+          "price": "8700"
+        },
+        {
+          "grade": "PSA 9",
+          "price": "220"
+        },
+        {
+          "grade": "Raw",
+          "price": "64.08"
+        }
+      ]
+    },
+    {
+      "description": "Diglett 2016 Pokemon XY Fates Collide",
+      "player": "Diglett",
+      "set": "2016 Pokemon XY Fates Collide",
+      "number": "36",
+      "variant": "Base",
+      "card_id": "1677027934962x258142272134467700",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1760874833242x730615012156001500/crop_image",
+      "category": "Pokemon",
+      "category_group": "Trading Cards",
+      "set_type": "Pokemon XY Fates Collide",
+      "7 Day Sales": 9,
+      "30 Day Sales": 28,
+      "rookie": false,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "0.15"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "0.15"
+        }
+      ]
+    },
+    {
+      "description": "Fletchinder 2023 Pokemon Scarlet & Violet Paldea Evolved",
+      "player": "Fletchinder",
+      "set": "2023 Pokemon Scarlet & Violet Paldea Evolved",
+      "number": "29",
+      "variant": "Base",
+      "card_id": "1691965329317x739295166085185700",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1741727470732x666308384033728800/crop_image",
+      "category": "Pokemon",
+      "category_group": "Trading Cards",
+      "set_type": "Pokemon Scarlet & Violet Paldea Evolved",
+      "7 Day Sales": 8,
+      "30 Day Sales": 22,
+      "rookie": false,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "0.15"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "0.15"
+        }
+      ]
+    },
+    {
+      "description": "Pangoro 2026 Pokemon Mega Evolution Ascended Heroes",
+      "player": "Pangoro",
+      "set": "2026 Pokemon Mega Evolution Ascended Heroes",
+      "number": "140",
+      "variant": "Base",
+      "card_id": "1771043894813x247900420966774560",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1772726906763x459722422676867460/crop_image",
+      "category": "Pokemon",
+      "category_group": "Trading Cards",
+      "set_type": "Pokemon Mega Evolution Ascended Heroes",
+      "7 Day Sales": 12,
+      "30 Day Sales": 66,
+      "rookie": false,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "0.15"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "0.15"
+        }
+      ]
+    },
+    {
+      "description": "Deerling 2024 Pokemon Scarlet & Violet Temporal Forces",
+      "player": "Deerling",
+      "set": "2024 Pokemon Scarlet & Violet Temporal Forces",
+      "number": "16",
+      "variant": "Base",
+      "card_id": "1732674751825x587720768901983900",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1776684855247x615628123484300800/resize",
+      "category": "Pokemon",
+      "category_group": "Trading Cards",
+      "set_type": "Pokemon Scarlet & Violet Temporal Forces",
+      "7 Day Sales": 15,
+      "30 Day Sales": 46,
+      "rookie": false,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "0.12"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "0.12"
+        }
+      ]
+    },
+    {
+      "description": "Golduck 2002 Pokemon Legendary Collection Reverse Foil",
+      "player": "Golduck",
+      "set": "2002 Pokemon Legendary Collection",
+      "number": "43",
+      "variant": "Reverse Foil",
+      "card_id": "1656211601470x527858406523722430",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1722771049817x855893005604297500/resized_20240804_113048.jpeg",
+      "category": "Pokemon",
+      "category_group": "Trading Cards",
+      "set_type": "Pokemon Legendary Collection",
+      "7 Day Sales": 11,
+      "30 Day Sales": 34,
+      "rookie": false,
+      "gain": 1.99318367346939,
+      "prices": [
+        {
+          "grade": "PSA 9",
+          "price": "2199.99"
+        },
+        {
+          "grade": "PSA 8.5",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "170"
+        }
+      ]
+    },
+    {
+      "description": "Smoochum 2024 Pokemon Scarlet & Violet Surging Sparks",
+      "player": "Smoochum",
+      "set": "2024 Pokemon Scarlet & Violet Surging Sparks",
+      "number": "75",
+      "variant": "Base",
+      "card_id": "1732594334342x484732458387735040",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1752238513490x348372416196739000/crop_image",
+      "category": "Pokemon",
+      "category_group": "Trading Cards",
+      "set_type": "Pokemon Scarlet & Violet Surging Sparks",
+      "7 Day Sales": 36,
+      "30 Day Sales": 219,
+      "rookie": false,
+      "gain": 1.98245614035088,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "0.68"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "0.68"
+        }
+      ]
+    },
+    {
+      "description": "Herdier 2025 Pokemon Scarlet & Violet White Flare Poke Ball",
+      "player": "Herdier",
+      "set": "2025 Pokemon Scarlet & Violet White Flare",
+      "number": "75",
+      "variant": "Poke Ball",
+      "card_id": "1756834737176x736357736992924200",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1758908709429x465345917094439000/crop_image",
+      "category": "Pokemon",
+      "category_group": "Trading Cards",
+      "set_type": "Pokemon Scarlet & Violet White Flare",
+      "7 Day Sales": 7,
+      "30 Day Sales": 18,
+      "rookie": false,
+      "gain": 1.98,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "1.49"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "1.49"
+        }
+      ]
+    }
+  ]
+}

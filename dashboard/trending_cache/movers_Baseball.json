@@ -1,0 +1,306 @@
+{
+  "category": "Baseball",
+  "fetched_at": "2026-09-18T16:03:34.630868",
+  "cards": [
+    {
+      "description": "Pete Crow-Armstrong 2026 Bowman Mega Box Electric Sluggers Chrome Baseball",
+      "player": "Pete Crow-Armstrong",
+      "set": "2026 Bowman Mega Box Baseball",
+      "number": "ES-24",
+      "variant": "Base",
+      "card_id": "1780199086730x626076495948553200",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1780199903938x763190872239933800/resize",
+      "category": "Baseball",
+      "category_group": "Sports Cards",
+      "set_type": "Bowman Mega Box Baseball",
+      "7 Day Sales": 7,
+      "30 Day Sales": 69,
+      "rookie": false,
+      "gain": 1.98994974874372,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "5.95"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "5.95"
+        }
+      ]
+    },
+    {
+      "description": "Edgardo Henriquez 2025 Topps Chrome Rookie Autographs Baseball",
+      "player": "Edgardo Henriquez",
+      "set": "2025 Topps Chrome Baseball",
+      "number": "RA-EH",
+      "variant": "Base",
+      "card_id": "1754538291667x621727077949725300",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1767580652140x666262860616581000/crop_image",
+      "category": "Baseball",
+      "category_group": "Sports Cards",
+      "set_type": "Topps Chrome Baseball",
+      "7 Day Sales": 13,
+      "30 Day Sales": 44,
+      "rookie": true,
+      "gain": 1.96296296296296,
+      "prices": [
+        {
+          "grade": "PSA 9",
+          "price": "40"
+        },
+        {
+          "grade": "PSA 8.5",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "22.5"
+        }
+      ]
+    },
+    {
+      "description": "James Wood 2022 Bowman Chrome Prospects Baseball",
+      "player": "James Wood",
+      "set": "2022 Bowman Chrome Baseball",
+      "number": "BCP-108",
+      "variant": "Base",
+      "card_id": "1651978133593x695952592710743700",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1716956010639x801264076336954000/resized_20240529_041330.jpeg",
+      "category": "Baseball",
+      "category_group": "Sports Cards",
+      "set_type": "Bowman Chrome Baseball",
+      "7 Day Sales": 13,
+      "30 Day Sales": 66,
+      "rookie": false,
+      "gain": 1.91666666666667,
+      "prices": [
+        {
+          "grade": "PSA 10",
+          "price": "105"
+        },
+        {
+          "grade": "PSA 9",
+          "price": "14.5"
+        },
+        {
+          "grade": "Raw",
+          "price": "2.99"
+        }
+      ]
+    },
+    {
+      "description": "Yoshinobu Yamamoto 2026 Topps Baseball",
+      "player": "Yoshinobu Yamamoto",
+      "set": "2026 Topps Baseball",
+      "number": "642",
+      "variant": "Base",
+      "card_id": "1781110317825x951060637959712600",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1781144095269x620978510099575900/resize",
+      "category": "Baseball",
+      "category_group": "Sports Cards",
+      "set_type": "Topps Baseball",
+      "7 Day Sales": 9,
+      "30 Day Sales": 45,
+      "rookie": false,
+      "gain": 1.9143897996357,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "4"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "4"
+        }
+      ]
+    },
+    {
+      "description": "Frank Thomas 1999 Skybox Premium Soul of the Game Baseball",
+      "player": "Frank Thomas",
+      "set": "1999 Skybox Premium Baseball",
+      "number": "12SG",
+      "variant": "Base",
+      "card_id": "1704247990774x191226060829570160",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1722460885689x261622616326912420/resized_20240731_212125.jpeg",
+      "category": "Baseball",
+      "category_group": "Sports Cards",
+      "set_type": "Skybox Premium Baseball",
+      "7 Day Sales": 8,
+      "30 Day Sales": 19,
+      "rookie": false,
+      "gain": 1.9,
+      "prices": [
+        {
+          "grade": "PSA 9",
+          "price": "580"
+        },
+        {
+          "grade": "PSA 8.5",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "166.25"
+        }
+      ]
+    },
+    {
+      "description": "Ken Griffey Jr. 1997 Fleer Ultra Power Plus Baseball",
+      "player": "Ken Griffey Jr.",
+      "set": "1997 Fleer Ultra Baseball",
+      "number": "1",
+      "variant": "Base",
+      "card_id": "1699221507138x664627264585184300",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1723563189668x427578366848753200/crop_image",
+      "category": "Baseball",
+      "category_group": "Sports Cards",
+      "set_type": "Fleer Ultra Baseball",
+      "7 Day Sales": 6,
+      "30 Day Sales": 30,
+      "rookie": false,
+      "gain": 1.89855072463768,
+      "prices": [
+        {
+          "grade": "PSA 7",
+          "price": "100"
+        },
+        {
+          "grade": "PSA 6.5",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "27"
+        }
+      ]
+    },
+    {
+      "description": "Jim Bolger 1958 Topps Baseball",
+      "player": "Jim Bolger",
+      "set": "1958 Topps Baseball",
+      "number": "201",
+      "variant": "Base",
+      "card_id": "1642456893482x697777144946499000",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1723880111419x596092289973974400/Screenshot%202024-08-17%20at%203.34.57%E2%80%AFPM.png",
+      "category": "Baseball",
+      "category_group": "Sports Cards",
+      "set_type": "Topps Baseball",
+      "7 Day Sales": 5,
+      "30 Day Sales": 7,
+      "rookie": false,
+      "gain": 1.88315629742033,
+      "prices": [
+        {
+          "grade": "PSA 7",
+          "price": "19"
+        },
+        {
+          "grade": "PSA 6.5",
+          "price": "14.23"
+        },
+        {
+          "grade": "Raw",
+          "price": "1.94"
+        }
+      ]
+    },
+    {
+      "description": "Jacob Wilson 2025 Topps Chrome Platinum Baseball",
+      "player": "Jacob Wilson",
+      "set": "2025 Topps Chrome Platinum Baseball",
+      "number": "283",
+      "variant": "Base",
+      "card_id": "1780640932354x958366203294261200",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1780703353969x184119496634089760/resize",
+      "category": "Baseball",
+      "category_group": "Sports Cards",
+      "set_type": "Topps Chrome Platinum Baseball",
+      "7 Day Sales": 5,
+      "30 Day Sales": 7,
+      "rookie": true,
+      "gain": 1.85714285714286,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "5"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "5"
+        }
+      ]
+    },
+    {
+      "description": "A.L. Playoffs 1974 Topps Baseball",
+      "player": "A.L. Playoffs",
+      "set": "1974 Topps Baseball",
+      "number": "470",
+      "variant": "Base",
+      "card_id": "1665444663039x940239908272397800",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1721952819100x368776600379248060/crop_image",
+      "category": "Baseball",
+      "category_group": "Sports Cards",
+      "set_type": "Topps Baseball",
+      "7 Day Sales": 5,
+      "30 Day Sales": 19,
+      "rookie": false,
+      "gain": 1.85714285714286,
+      "prices": [
+        {
+          "grade": "PSA 8",
+          "price": "50"
+        },
+        {
+          "grade": "PSA 7.5",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "4.87"
+        }
+      ]
+    },
+    {
+      "description": "Johnny Kucks 1957 Topps Baseball",
+      "player": "Johnny Kucks",
+      "set": "1957 Topps Baseball",
+      "number": "185",
+      "variant": "Base",
+      "card_id": "1642299634849x767073976023947100",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1721251974019x839008495796514000/crop_image",
+      "category": "Baseball",
+      "category_group": "Sports Cards",
+      "set_type": "Topps Baseball",
+      "7 Day Sales": 5,
+      "30 Day Sales": 15,
+      "rookie": false,
+      "gain": 1.83067421513124,
+      "prices": [
+        {
+          "grade": "PSA 7",
+          "price": "55"
+        },
+        {
+          "grade": "PSA 6.5",
+          "price": "26.99"
+        },
+        {
+          "grade": "Raw",
+          "price": "1.8"
+        }
+      ]
+    }
+  ]
+}

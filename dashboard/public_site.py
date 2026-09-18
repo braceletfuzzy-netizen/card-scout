@@ -452,6 +452,23 @@ def pricing():
 
 
 # ============================================================================
+# TRENDING - largest movers per category (Sept 18, PL-largest-mover)
+# ============================================================================
+
+@site_bp.route('/trending')
+def trending():
+    """Public trending page - top weekly gainers by category.
+
+    Card Hedger top-movers endpoint, cached every 6 hours.
+    Categories: All, Baseball, Basketball, Football, Hockey, Pokemon, MTG, One Piece
+    """
+    from build_trending import fetch_top_movers, render_trending_html
+    category = request.args.get('category', 'All')
+    movers_data = fetch_top_movers(category, count=10)
+    return render_trending_html(category, movers_data)
+
+
+# ============================================================================
 # HEALTH CHECK
 # ============================================================================
 

@@ -1,0 +1,306 @@
+{
+  "category": "MTG",
+  "fetched_at": "2026-09-18T16:03:40.849696",
+  "cards": [
+    {
+      "description": "Zion Williamson 2019 Panini Hoops Basketball",
+      "player": "Zion Williamson",
+      "set": "2019 Panini Hoops Basketball",
+      "number": "258",
+      "variant": "Base",
+      "card_id": "1594912932081x453440041273786400",
+      "image": "//s3.amazonaws.com/appforest_uf/f1594912916985x981130826950472600/2019-Hoops-Zion-Williamson-258-graded.jpg",
+      "category": "Basketball",
+      "category_group": "Sports Cards",
+      "set_type": "Panini Hoops Basketball",
+      "7 Day Sales": 10,
+      "30 Day Sales": 31,
+      "rookie": true,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "PSA 10",
+          "price": "15"
+        },
+        {
+          "grade": "PSA 9",
+          "price": "5.99"
+        },
+        {
+          "grade": "Raw",
+          "price": "1.8"
+        }
+      ]
+    },
+    {
+      "description": "Ed Macauley 1957 Topps Basketball",
+      "player": "Ed Macauley",
+      "set": "1957 Topps Basketball",
+      "number": "27",
+      "variant": "Base",
+      "card_id": "1636330186220x638814159669316000",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1736820097883x991623403035742700/resized_20250114_020137.jpeg",
+      "category": "Basketball",
+      "category_group": "Sports Cards",
+      "set_type": "Topps Basketball",
+      "7 Day Sales": 5,
+      "30 Day Sales": 6,
+      "rookie": false,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "PSA 6",
+          "price": "450"
+        },
+        {
+          "grade": "PSA 5.5",
+          "price": "199.99"
+        },
+        {
+          "grade": "Raw",
+          "price": "16.5"
+        }
+      ]
+    },
+    {
+      "description": "Purrloin 2014 Pokemon XY Phantom Forces",
+      "player": "Purrloin",
+      "set": "2014 Pokemon XY Phantom Forces",
+      "number": "56",
+      "variant": "Base",
+      "card_id": "1734139562146x249863703274756600",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1762749470314x260131761801550400/crop_image",
+      "category": "Pokemon",
+      "category_group": "Trading Cards",
+      "set_type": "Pokemon XY Phantom Forces",
+      "7 Day Sales": 6,
+      "30 Day Sales": 13,
+      "rookie": false,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "0.15"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "0.15"
+        }
+      ]
+    },
+    {
+      "description": "Chimera Fusion 2023 Yu-Gi-Oh! Duelist Nexus",
+      "player": "Chimera Fusion",
+      "set": "2023 Yu-Gi-Oh! Duelist Nexus",
+      "number": "DUNE-EN052",
+      "variant": "Base",
+      "card_id": "1735856645114x175595880054223230",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1780873062217x966232092253731700/resize",
+      "category": "Yu-Gi-Oh",
+      "category_group": "Trading Cards",
+      "set_type": "Yu-Gi-Oh! Duelist Nexus",
+      "7 Day Sales": 16,
+      "30 Day Sales": 51,
+      "rookie": false,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "0.75"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "0.75"
+        }
+      ]
+    },
+    {
+      "description": "Dialga 2009 Pokemon Platinum Reverse Holo",
+      "player": "Dialga",
+      "set": "2009 Pokemon Platinum",
+      "number": "6",
+      "variant": "Reverse Holo",
+      "card_id": "1741477926070x487765689948692860",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1747911302756x927208431960132900/crop_image",
+      "category": "Pokemon",
+      "category_group": "Trading Cards",
+      "set_type": "Pokemon Platinum",
+      "7 Day Sales": 5,
+      "30 Day Sales": 11,
+      "rookie": false,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "PSA 6",
+          "price": "75"
+        },
+        {
+          "grade": "PSA 5.5",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "4.75"
+        }
+      ]
+    },
+    {
+      "description": "Improvised Club 2023 Magic The Gathering Lord of Rings: Tales of Middle-earth",
+      "player": "Improvised Club",
+      "set": "2023 Magic The Gathering Lord of Rings: Tales of Middle-earth",
+      "number": "137",
+      "variant": "Base",
+      "card_id": "1754077532569x540290901718063500",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1783828275126x627977664137635600/resize",
+      "category": "Magic",
+      "category_group": "Trading Cards",
+      "set_type": "Magic The Gathering Lord of Rings: Tales of Middle-earth ",
+      "7 Day Sales": 8,
+      "30 Day Sales": 56,
+      "rookie": false,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "0.18"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "0.18"
+        }
+      ]
+    },
+    {
+      "description": "Dog 2025 Magic The Gathering Tarkir: Dragonstorm Commander Token",
+      "player": "Dog",
+      "set": "2025 Magic The Gathering Tarkir: Dragonstorm Commander",
+      "number": "3",
+      "variant": "Token",
+      "card_id": "1760829229513x551223064798076700",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1786468710027x276396059548296400/resize",
+      "category": "Magic",
+      "category_group": "Trading Cards",
+      "set_type": "Magic The Gathering Tarkir: Dragonstorm Commander",
+      "7 Day Sales": 9,
+      "30 Day Sales": 31,
+      "rookie": false,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "0.3"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "0.3"
+        }
+      ]
+    },
+    {
+      "description": "Merry 2023 One Piece Pillars of Strength",
+      "player": "Merry",
+      "set": "2023 One Piece Pillars of Strength",
+      "number": "OP03-052",
+      "variant": "Base",
+      "card_id": "1771477509793x170755999679326200",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1771479429422x103479346181238450/crop_image",
+      "category": "One Piece",
+      "category_group": "Trading Cards",
+      "set_type": "One Piece Pillars of Strength",
+      "7 Day Sales": 6,
+      "30 Day Sales": 11,
+      "rookie": false,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "0.15"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "0.15"
+        }
+      ]
+    },
+    {
+      "description": "Bellamy 2025 One Piece Royal Blood",
+      "player": "Bellamy",
+      "set": "2025 One Piece Royal Blood",
+      "number": "OP10-077",
+      "variant": "Base",
+      "card_id": "1771614334897x314905878347864000",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1788011148259x398211225998469570/resize",
+      "category": "One Piece",
+      "category_group": "Trading Cards",
+      "set_type": "One Piece Royal Blood",
+      "7 Day Sales": 7,
+      "30 Day Sales": 13,
+      "rookie": false,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "0.15"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "0.15"
+        }
+      ]
+    },
+    {
+      "description": "Makino 2025 One Piece Carrying On His Will",
+      "player": "Makino",
+      "set": "2025 One Piece Carrying On His Will",
+      "number": "OP13-015",
+      "variant": "Base",
+      "card_id": "1771650154914x413735064599975360",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1771650838961x146536045814296580/crop_image",
+      "category": "One Piece",
+      "category_group": "Trading Cards",
+      "set_type": "One Piece Carrying On His Will",
+      "7 Day Sales": 17,
+      "30 Day Sales": 45,
+      "rookie": false,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "0.09"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "0.09"
+        }
+      ]
+    }
+  ]
+}
