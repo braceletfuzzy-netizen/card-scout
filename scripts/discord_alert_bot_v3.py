@@ -373,7 +373,7 @@ def find_deals(matching_items, summary, alert_type='below_median', ch_data=None)
 
 
 # ============ DISCORD MESSAGES ============
-def format_deal_alert(search_query, summary, deals, snapshot, alert_type='below_median', pop_data=None, sold_items=None, sold_data=None, market_thin=False, ch_data=None):
+def format_deal_alert(search_query, summary, deals, snapshot, alert_type='below_median', pop_data=None, sold_items=None, sold_data=None, market_thin=False, ch_data=None, comps_data=None):
     """Format the Discord alert embed.
 
     Per ticker spec (card-scout-ticker-system-spec-2026-09-14.md):
@@ -437,6 +437,23 @@ def format_deal_alert(search_query, summary, deals, snapshot, alert_type='below_
         "footer": {"text": f"{BOT_NAME} - {BOT_TAGLINE}"},
         "timestamp": datetime.utcnow().isoformat()
     }
+
+    # Sept 18: Add Card Hedger comps display (recent actual sales)
+    if comps_data and comps_data.get('count_used'):
+        low = comps_data['low']
+        high = comps_data['high']
+        median = comps_data['comp_price']
+        count = comps_data['count_used']
+        grade = comps_data.get('grade', 'PSA 10')
+        embed["fields"].append({
+            "name": f"📊 Recent actual sales ({grade}, last 10)",
+            "value": (
+                f"**Range:** ${low:,.0f} - ${high:,.0f}\n"
+                f"**Median sale:** ${median:,.0f}\n"
+                f"_Sample size: {count} sales from Card Hedger_"
+            ),
+            "inline": False
+        })
 
     # Sept 18: Add per-grade FMV display if we have ch_data
     if ch_data and ch_data.get('fmvs'):
@@ -921,6 +938,19 @@ def process_customer_from_db(customer, dry_run=False):
         except Exception as e:
             print(f"  [CARD HEDGER] Skipped (error: {type(e).__name__}: {e})")
 
+        # Card Hedger comps (recent sold sales) - Sept 18
+        # Until eBay Browse API is approved, this is our sold-data source.
+        comps_data = None
+        try:
+            from cardhedger_comps import fetch_card_hedger_comps
+            comps_data = fetch_card_hedger_comps(card, grade='PSA 10', count=10)
+            if comps_data and comps_data.get('count_used'):
+                print(f"  [CARD HEDGER COMPS] PSA 10 sales: ${comps_data['low']:,.0f}-${comps_data['high']:,.0f} (n={comps_data['count_used']}, median ${comps_data['comp_price']:,.0f})")
+            else:
+                print(f"  [CARD HEDGER COMPS] No sold data for PSA 10")
+        except Exception as e:
+            print(f"  [CARD HEDGER COMPS] Skipped (error: {type(e).__name__}: {e})")
+
         # Save snapshot (triggers trend detection)
         print(f"  [SNAPSHOT] Saving {len(matching)} matching items")
         trend = save_run_snapshot(card.id, matching)
@@ -1032,6 +1062,7 @@ def process_customer_from_db(customer, dry_run=False):
             sold_data=sold_data,
             market_thin=bool(getattr(card, 'market_thin', 0)),
             ch_data=ch_data,  # Sept 18: pass for per-grade FMV display
+            comps_data=comps_data,  # Sept 18: pass for sold-data display
         )
 
         if not message:
