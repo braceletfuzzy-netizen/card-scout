@@ -444,12 +444,18 @@ def format_deal_alert(search_query, summary, deals, snapshot, alert_type='below_
         grade_lines = []
         for grade, fmv in fmvs.items():
             price = fmv.get('price')
+            price_low = fmv.get('price_low')
+            price_high = fmv.get('price_high')
             conf_grade = fmv.get('confidence_grade', '?')
             if price:
-                grade_lines.append(f"**{grade}:** ${price:,.2f} (CH {conf_grade})")
+                # Sept 18: show range when available (Jonathan: FMV is opinion, show range not point)
+                if price_low and price_high and (price_high - price_low) / price > 0.1:
+                    grade_lines.append(f"**{grade}:** ${price_low:,.0f}-${price_high:,.0f} (CH opinion: ${price:,.0f}, {conf_grade})")
+                else:
+                    grade_lines.append(f"**{grade}:** ${price:,.0f} (CH opinion, {conf_grade})")
         if grade_lines:
             embed["fields"].append({
-                "name": "💎 Card Hedger per-grade FMV",
+                "name": "💎 Per-grade price range (CH opinion, derive our own later)",
                 "value": '\n'.join(grade_lines),
                 "inline": False
             })
