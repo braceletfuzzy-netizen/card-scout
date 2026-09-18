@@ -100,6 +100,18 @@ class Card(Base):
     card_id = Column(String(100), nullable=True)
     card_match_confidence = Column(Float, nullable=True)
 
+    # Card metadata for clean-data + math model (Sept 18)
+    # era: decade (1980s, 1990s, 2000s, 2010s, 2020s)
+    # category: top-level (Sports Cards, Pokemon, MTG, etc.)
+    # subcategory: sport (Baseball, Football, Basketball, Hockey) or TCG sub
+    # is_rookie: True if rookie card
+    # is_key_card: True if particularly notable (Hank Aaron 1969 Topps, etc.)
+    era = Column(String(20), nullable=True)
+    category = Column(String(50), nullable=True)
+    subcategory = Column(String(50), nullable=True)
+    is_rookie = Column(Boolean, nullable=True)
+    is_key_card = Column(Boolean, nullable=True)
+
     # Grade filter checkboxes (6-bucket system)
     # Customer picks which grades matter for THIS card
     track_psa_10 = Column(Boolean, default=True)       # Tier 1: Gem Mint
