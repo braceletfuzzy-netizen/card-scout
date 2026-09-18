@@ -61,6 +61,7 @@ LANDING_TEMPLATE = '''
     <div class="nav-links">
       <a href="/deals">Top Deals</a>
       <a href="/trending">📈 Trending</a>
+      <a href="/tracked">📊 Tracked</a>
       <a href="/pricing">Pricing</a>
       {% if logged_in %}
         <a href="/dashboard/{{ customer_id }}" class="cta">Dashboard</a>
@@ -180,6 +181,7 @@ DEALS_TEMPLATE = '''
     <div class="nav-links">
       <a href="/deals">Top Deals</a>
       <a href="/trending">📈 Trending</a>
+      <a href="/tracked">📊 Tracked</a>
       <a href="/pricing">Pricing</a>
       <a href="/" class="cta">Home</a>
     </div>
@@ -337,6 +339,7 @@ PRICING_TEMPLATE = '''
     <div class="nav-links">
       <a href="/deals">Top Deals</a>
       <a href="/trending">📈 Trending</a>
+      <a href="/tracked">📊 Tracked</a>
       <a href="/pricing">Pricing</a>
       <a href="/" class="cta">Home</a>
     </div>
@@ -469,6 +472,30 @@ def trending():
     category = request.args.get('category', 'All')
     movers_data = fetch_top_movers(category, count=10)
     return render_trending_html(category, movers_data)
+
+
+@site_bp.route('/tracked')
+def tracked():
+    """Tracked cards with 90-day sparklines (Sept 18, simple pivot table).
+
+    For ALL customers' tracked cards, show a category dropdown and inline
+    90d sparkline per card. Public-facing but only shows cards; doesn't
+    surface personal data.
+    """
+    from build_tracked import (
+        get_tracked_cards_for_customer,
+        render_tracked_page,
+        get_categories_present,
+    )
+    category = request.args.get('category', 'All')
+
+    # If customer logged in, show only their cards.
+    # If not, show all tracked cards (public surface).
+    customer = _get_logged_in_customer()
+    customer_slug = customer.get('customer_id') if customer else None
+
+    cards = get_tracked_cards_for_customer(customer_slug=customer_slug, category=category)
+    return render_tracked_page(customer_slug, category, cards)
 
 
 # ============================================================================
