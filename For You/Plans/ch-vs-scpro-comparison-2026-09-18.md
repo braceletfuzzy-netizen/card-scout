@@ -12,6 +12,21 @@ a richer pricing story than either alone.
 The "huge differences" we saw (+5000% etc.) are NOT data quality issues — they're
 **measurement artifacts** from comparing two different pricing concepts.
 
+### Founder's insight (Jonathan, Sept 18)
+
+"Since each grading value is practically its own market (Series A vs Series B etc.),
+I see us keeping both long term."
+
+**Each grade tier IS its own market.** PSA 10 buyers don't compare to PSA 9 prices.
+So the dual-source setup actually mirrors how the card market itself works:
+- PSA 10 buyers want the PSA 10 FMV (Card Hedger)
+- Mixed-grade buyers want the active listings view (SCPro)
+- Both segments need different data
+
+This validates keeping both vendors **permanently**, not just for the dual-source
+experiment period. The comparison isn't "which one is better" — it's "both are
+correct for their respective market segments."
+
 ## Methodology
 
 **Setup (Sept 17 evening)**: Added `scripts/cardhedger_alert_integration.py`
