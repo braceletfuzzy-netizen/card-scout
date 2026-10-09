@@ -151,7 +151,7 @@ def main():
     # Inherit env so dotenv + .env loading works in subprocess
     env = os.environ.copy()
     r = subprocess.run(
-        ['python', 'run_bot.py', '--tiers', ','.join(tiers)],
+        [sys.executable, 'run_bot.py', '--tiers', ','.join(tiers)],
         capture_output=True, text=True, timeout=1800, env=env,
     )
     print(r.stdout[-3000:] if len(r.stdout) > 3000 else r.stdout)
