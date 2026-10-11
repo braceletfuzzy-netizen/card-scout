@@ -1,19 +1,79 @@
 {
   "category": "One Piece",
-  "fetched_at": "2026-09-18T16:03:42.224121",
+  "fetched_at": "2026-10-11T11:00:23.354379",
   "cards": [
     {
-      "description": "Merry 2023 One Piece Pillars of Strength",
-      "player": "Merry",
-      "set": "2023 One Piece Pillars of Strength",
-      "number": "OP03-052",
+      "description": "Laboon 2024 One Piece Memorial Collection",
+      "player": "Laboon",
+      "set": "2024 One Piece Memorial Collection",
+      "number": "EB01-048",
       "variant": "Base",
-      "card_id": "1771477509793x170755999679326200",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1771479429422x103479346181238450/crop_image",
+      "card_id": "1771543888886x756753270854961500",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1771557742894x582689978395311600/crop_image",
       "category": "One Piece",
       "category_group": "Trading Cards",
-      "set_type": "One Piece Pillars of Strength",
-      "7 Day Sales": 6,
+      "set_type": "One Piece Memorial Collection",
+      "7 Day Sales": 36,
+      "30 Day Sales": 137,
+      "rookie": false,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "PSA 10",
+          "price": "174"
+        },
+        {
+          "grade": "PSA 9",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "2"
+        }
+      ]
+    },
+    {
+      "description": "Soul Franky Swing Arm Boxing Solid 2024 One Piece Emperors In The New World",
+      "player": "Soul Franky Swing Arm Boxing Solid",
+      "set": "2024 One Piece Emperors In The New World",
+      "number": "OP09-041",
+      "variant": "Base",
+      "card_id": "1736706212896x699828687431399400",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1776835141028x979883391039861400/resize",
+      "category": "One Piece",
+      "category_group": "Trading Cards",
+      "set_type": "One Piece Emperors In The New World",
+      "7 Day Sales": 8,
+      "30 Day Sales": 19,
+      "rookie": false,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "0.15"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "0.15"
+        }
+      ]
+    },
+    {
+      "description": "Otsuru 2022 One Piece Romance Dawn",
+      "player": "Otsuru",
+      "set": "2022 One Piece Romance Dawn",
+      "number": "OP01-036",
+      "variant": "Base",
+      "card_id": "1770357233700x124744225156989680",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1788279081953x597020548765034200/resize",
+      "category": "One Piece",
+      "category_group": "Trading Cards",
+      "set_type": "One Piece Romance Dawn",
+      "7 Day Sales": 8,
       "30 Day Sales": 11,
       "rookie": false,
       "gain": 2.0,
@@ -33,200 +93,20 @@
       ]
     },
     {
-      "description": "Bellamy 2025 One Piece Royal Blood",
-      "player": "Bellamy",
-      "set": "2025 One Piece Royal Blood",
-      "number": "OP10-077",
-      "variant": "Base",
-      "card_id": "1771614334897x314905878347864000",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1788011148259x398211225998469570/resize",
-      "category": "One Piece",
-      "category_group": "Trading Cards",
-      "set_type": "One Piece Royal Blood",
-      "7 Day Sales": 7,
-      "30 Day Sales": 13,
-      "rookie": false,
-      "gain": 2.0,
-      "prices": [
-        {
-          "grade": "Raw",
-          "price": "0.15"
-        },
-        {
-          "grade": "",
-          "price": ""
-        },
-        {
-          "grade": "Raw",
-          "price": "0.15"
-        }
-      ]
-    },
-    {
-      "description": "Makino 2025 One Piece Carrying On His Will",
-      "player": "Makino",
+      "description": "Brook 2025 One Piece Carrying On His Will",
+      "player": "Brook",
       "set": "2025 One Piece Carrying On His Will",
-      "number": "OP13-015",
+      "number": "OP13-034",
       "variant": "Base",
-      "card_id": "1771650154914x413735064599975360",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1771650838961x146536045814296580/crop_image",
+      "card_id": "1771650210070x344531486592077630",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1777966055241x224764273583885950/resize",
       "category": "One Piece",
       "category_group": "Trading Cards",
       "set_type": "One Piece Carrying On His Will",
-      "7 Day Sales": 17,
-      "30 Day Sales": 45,
-      "rookie": false,
-      "gain": 2.0,
-      "prices": [
-        {
-          "grade": "Raw",
-          "price": "0.09"
-        },
-        {
-          "grade": "",
-          "price": ""
-        },
-        {
-          "grade": "Raw",
-          "price": "0.09"
-        }
-      ]
-    },
-    {
-      "description": "Jewelry Bonney 2025 One Piece Legacy of the Master",
-      "player": "Jewelry Bonney",
-      "set": "2025 One Piece Legacy of the Master",
-      "number": "OP12-101",
-      "variant": "Base",
-      "card_id": "1771645559220x345607995329295900",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1771647097233x373964526417190460/crop_image",
-      "category": "One Piece",
-      "category_group": "Trading Cards",
-      "set_type": "One Piece Legacy of the Master",
-      "7 Day Sales": 6,
-      "30 Day Sales": 36,
-      "rookie": false,
-      "gain": 2.0,
-      "prices": [
-        {
-          "grade": "Raw",
-          "price": "0.06"
-        },
-        {
-          "grade": "",
-          "price": ""
-        },
-        {
-          "grade": "Raw",
-          "price": "0.06"
-        }
-      ]
-    },
-    {
-      "description": "Tony Tony.Chopper 2022 One Piece Romance Dawn",
-      "player": "Tony Tony.Chopper",
-      "set": "2022 One Piece Romance Dawn",
-      "number": "OP01-015",
-      "variant": "Base",
-      "card_id": "1770357188470x193164500278975040",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1770742481207x969920436595405400/crop_image",
-      "category": "One Piece",
-      "category_group": "Trading Cards",
-      "set_type": "One Piece Romance Dawn",
-      "7 Day Sales": 5,
-      "30 Day Sales": 84,
-      "rookie": false,
-      "gain": 1.98927038626609,
-      "prices": [
-        {
-          "grade": "Raw",
-          "price": "1.99"
-        },
-        {
-          "grade": "",
-          "price": ""
-        },
-        {
-          "grade": "Raw",
-          "price": "1.99"
-        }
-      ]
-    },
-    {
-      "description": "Brook 2024 One Piece Memorial Collection",
-      "player": "Brook",
-      "set": "2024 One Piece Memorial Collection",
-      "number": "EB01-045",
-      "variant": "Base",
-      "card_id": "1771543902151x725828210674028800",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1771557504178x367741767525540540/crop_image",
-      "category": "One Piece",
-      "category_group": "Trading Cards",
-      "set_type": "One Piece Memorial Collection",
       "7 Day Sales": 9,
-      "30 Day Sales": 26,
+      "30 Day Sales": 27,
       "rookie": false,
-      "gain": 1.9,
-      "prices": [
-        {
-          "grade": "Raw",
-          "price": "0.29"
-        },
-        {
-          "grade": "",
-          "price": ""
-        },
-        {
-          "grade": "Raw",
-          "price": "0.29"
-        }
-      ]
-    },
-    {
-      "description": "Kouzuki Hiyori 2026 One Piece Heroines Edition",
-      "player": "Kouzuki Hiyori",
-      "set": "2026 One Piece Heroines Edition",
-      "number": "EB03-016",
-      "variant": "Base",
-      "card_id": "1773377951593x238577195206551200",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1773378328406x829988973422881800/crop_image",
-      "category": "One Piece",
-      "category_group": "Trading Cards",
-      "set_type": "One Piece Heroines Edition",
-      "7 Day Sales": 6,
-      "30 Day Sales": 25,
-      "rookie": false,
-      "gain": 1.88888888888889,
-      "prices": [
-        {
-          "grade": "Raw",
-          "price": "0.0866666666666667"
-        },
-        {
-          "grade": "",
-          "price": ""
-        },
-        {
-          "grade": "Raw",
-          "price": "0.0866666666666667"
-        }
-      ]
-    },
-    {
-      "description": "Nami 2025 One Piece Royal Blood",
-      "player": "Nami",
-      "set": "2025 One Piece Royal Blood",
-      "number": "OP10-013",
-      "variant": "Base",
-      "card_id": "1771614330484x251325735738584060",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1771614731179x644912411306790300/crop_image",
-      "category": "One Piece",
-      "category_group": "Trading Cards",
-      "set_type": "One Piece Royal Blood",
-      "7 Day Sales": 5,
-      "30 Day Sales": 23,
-      "rookie": false,
-      "gain": 1.85714285714286,
+      "gain": 2.0,
       "prices": [
         {
           "grade": "Raw",
@@ -243,24 +123,24 @@
       ]
     },
     {
-      "description": "Charlotte Smoothie 2026 One Piece Heroines Edition",
-      "player": "Charlotte Smoothie",
-      "set": "2026 One Piece Heroines Edition",
-      "number": "EB03-051",
+      "description": "Thousand Sunny 2024 One Piece Emperors In The New World",
+      "player": "Thousand Sunny",
+      "set": "2024 One Piece Emperors In The New World",
+      "number": "OP09-080",
       "variant": "Base",
-      "card_id": "1773377944902x938630681205698800",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1773378299099x196694882517135070/crop_image",
+      "card_id": "1736706194034x500904405263493000",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1781116586643x190416687448726300/resize",
       "category": "One Piece",
       "category_group": "Trading Cards",
-      "set_type": "One Piece Heroines Edition",
-      "7 Day Sales": 17,
-      "30 Day Sales": 69,
+      "set_type": "One Piece Emperors In The New World",
+      "7 Day Sales": 60,
+      "30 Day Sales": 174,
       "rookie": false,
-      "gain": 1.75,
+      "gain": 1.98387096774194,
       "prices": [
         {
           "grade": "Raw",
-          "price": "0.1375"
+          "price": "0.185"
         },
         {
           "grade": "",
@@ -268,29 +148,59 @@
         },
         {
           "grade": "Raw",
-          "price": "0.1375"
+          "price": "0.185"
         }
       ]
     },
     {
-      "description": "Caribou 2025 One Piece A Fist Of Divine Speed",
-      "player": "Caribou",
-      "set": "2025 One Piece A Fist Of Divine Speed",
-      "number": "OP11-083",
+      "description": "Prisoner of Impel Down 2026 One Piece The Time of Battle",
+      "player": "Prisoner of Impel Down",
+      "set": "2026 One Piece The Time of Battle",
+      "number": "OP16-042",
       "variant": "Base",
-      "card_id": "1771632005421x161584070758570500",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1771633394752x288174126349539420/crop_image",
+      "card_id": "1781490128956x369497275354068600",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1781490602139x667749039670661600/resize",
       "category": "One Piece",
       "category_group": "Trading Cards",
-      "set_type": "One Piece A Fist Of Divine Speed",
-      "7 Day Sales": 37,
-      "30 Day Sales": 133,
+      "set_type": "One Piece The Time of Battle",
+      "7 Day Sales": 150,
+      "30 Day Sales": 510,
       "rookie": false,
-      "gain": 1.7037037037037,
+      "gain": 1.95384615384615,
+      "prices": [
+        {
+          "grade": "CGC 10",
+          "price": "9.6"
+        },
+        {
+          "grade": "CGC 9.5",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "3.41"
+        }
+      ]
+    },
+    {
+      "description": "Guess We'll Have Another Scrap. You Can Only Risk Death While You're Still Alive!! 2025 One Piece Carrying On His Will",
+      "player": "Guess We'll Have Another Scrap. You Can Only Risk Death While You're Still Alive!!",
+      "set": "2025 One Piece Carrying On His Will",
+      "number": "OP13-075",
+      "variant": "Base",
+      "card_id": "1771650169268x607211145159741300",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1786549637643x958123723244145500/resize",
+      "category": "One Piece",
+      "category_group": "Trading Cards",
+      "set_type": "One Piece Carrying On His Will",
+      "7 Day Sales": 21,
+      "30 Day Sales": 79,
+      "rookie": false,
+      "gain": 1.9375,
       "prices": [
         {
           "grade": "Raw",
-          "price": "0.486666666666667"
+          "price": "0.235"
         },
         {
           "grade": "",
@@ -298,7 +208,97 @@
         },
         {
           "grade": "Raw",
-          "price": "0.486666666666667"
+          "price": "0.235"
+        }
+      ]
+    },
+    {
+      "description": "Miss.Goldenweek Marianne 2026 One Piece The Azure Sea's Seven",
+      "player": "Miss.Goldenweek Marianne",
+      "set": "2026 One Piece The Azure Sea's Seven",
+      "number": "OP14-085",
+      "variant": "Base",
+      "card_id": "1771651713516x962852082623795000",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1771652681009x396433455574978900/crop_image",
+      "category": "One Piece",
+      "category_group": "Trading Cards",
+      "set_type": "One Piece The Azure Sea's Seven",
+      "7 Day Sales": 19,
+      "30 Day Sales": 88,
+      "rookie": false,
+      "gain": 1.90909090909091,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "0.174545454545455"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "0.174545454545455"
+        }
+      ]
+    },
+    {
+      "description": "Sweet 3 Generals 2026 One Piece The World's Strongest Warriors",
+      "player": "Sweet 3 Generals",
+      "set": "2026 One Piece The World's Strongest Warriors",
+      "number": "OP17-114",
+      "variant": "Base",
+      "card_id": "1790144521141x997130859432765000",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1790171683755x356013627344284400/resize",
+      "category": "One Piece",
+      "category_group": "Trading Cards",
+      "set_type": "One Piece The World's Strongest Warriors",
+      "7 Day Sales": 220,
+      "30 Day Sales": 858,
+      "rookie": false,
+      "gain": 1.8477144324602,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "0.947777777777778"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "0.947777777777778"
+        }
+      ]
+    },
+    {
+      "description": "Charlotte Brulee 2026 One Piece The World's Strongest Warriors",
+      "player": "Charlotte Brulee",
+      "set": "2026 One Piece The World's Strongest Warriors",
+      "number": "OP17-108",
+      "variant": "Base",
+      "card_id": "1790144013926x552950303378211700",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1790171951567x954363980351799600/resize",
+      "category": "One Piece",
+      "category_group": "Trading Cards",
+      "set_type": "One Piece The World's Strongest Warriors",
+      "7 Day Sales": 29,
+      "30 Day Sales": 104,
+      "rookie": false,
+      "gain": 1.7,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "0.27"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "0.27"
         }
       ]
     }

@@ -22,6 +22,14 @@ import sys
 import argparse
 import os
 import requests
+import pandas as pd
+import glob
+from pathlib import Path
+
+def get_newest_parquet(directory, pattern):
+    files = glob.glob(os.path.join(directory, pattern))
+    if not files: return None
+    return max(files, key=os.path.getmtime)
 from pathlib import Path
 from datetime import datetime
 import time
@@ -34,8 +42,6 @@ from snapshot_system import (
     save_run_snapshot, get_card_snapshots, get_trend_emoji,
     compute_snapshot_stats
 )
-from psa_pop_lookup import lookup_psa_population, extract_pop_summary
-from sportscardspro_lookup import lookup_sportscardspro, extract_sold_summary
 
 # ============ CONFIG ============
 # Apify token: loaded from env var (NEVER commit tokens to code)
@@ -833,6 +839,16 @@ def format_deal_alert(search_query, summary, deals, snapshot, alert_type='below_
     # Trend history — REMOVED (now shown at top in #1 field)
     # Old logic duplicated the trend field, removed in V3 alert layout (Sept 16)
 
+
+    # F5: Timeline / Derivative Labeling
+    embed["fields"].append({
+        "name": "⏳ Settlement & Timeline Context",
+        "value": (
+            "_Raw = today-unsettled | PSA 9 = bond settled | PSA 10 = equity settled_\n"
+            "_Gap between raw and graded reflects 150d queue + carry cost._"
+        ),
+        "inline": False
+    })
     return {
         "embeds": [embed],
         "username": BOT_NAME,
@@ -1015,83 +1031,26 @@ def process_customer_from_db(customer, dry_run=False):
         ).first()
         session.close()
 
-        # Optional: PSA population lookup (if include_pop flag set)
-        pop_data = None
-        if card.include_pop:
-            psa_set_url = card.psa_set_url
-            if not psa_set_url:
-                print(f"  [POP] No psa_set_url set for card {card.id}, skipping pop lookup")
-            else:
-                print(f"  [POP] Looking up PSA population for {card.search_query[:30]}...")
-                try:
-                    items = lookup_psa_population(psa_set_url, max_results=500, max_wait_sec=300)
-                    if items:
-                        # Hugo's actor schema: each item has 'name', 'psa_10_pop', 'psa_9_pop' (in grade_breakdown), 'total_pop'
-                        keywords = [k for k in card.search_query.split() if len(k) > 2][:3]
-                        pop_data = None
-                        for item in items:
-                            name = (item.get('name') or '').lower()
-                            # Skip the set-total row (it has 'is_set_total': true)
-                            if item.get('is_set_total'):
-                                continue
-                            if all(kw.lower() in name for kw in keywords):
-                                pop_data = {
-                                    'subject': item.get('name'),
-                                    'card_no': item.get('card_no'),
-                                    'psa_10_pop': item.get('psa_10_pop', 0),
-                                    'psa_9_pop': item.get('grade_breakdown', {}).get('9', 0),
-                                    'total_pop': item.get('total_pop', 0),
-                                }
-                                break
-                        if not pop_data and items:
-                            # Fall back to first non-set-total row
-                            for first in items:
-                                if not first.get('is_set_total') and not first.get('_diagnostic') and not first.get('_error'):
-                                    pop_data = {
-                                        'subject': first.get('name'),
-                                        'card_no': first.get('card_no'),
-                                        'psa_10_pop': first.get('psa_10_pop', 0),
-                                        'psa_9_pop': first.get('grade_breakdown', {}).get('9', 0),
-                                        'total_pop': first.get('total_pop', 0),
-                                    }
-                                    break
-                        if pop_data:
-                            print(f"  [POP] ✓ Found: {pop_data.get('subject')} — PSA 10 = {pop_data['psa_10_pop']}, total = {pop_data['total_pop']}")
-                        else:
-                            print(f"  [POP] No matching card in set (got {len(items)} items)")
-                except Exception as e:
-                    print(f"  [POP] Lookup failed: {e}")
+        # PSA Pop Lookup retired (F6)
 
-        # Optional: Sportscardspro sold data lookup (replaces unreliable eBay sold)
-        # NOTE: sold_data initialized earlier in the loop
-        sportscardspro_url = getattr(card, 'sportscardspro_url', None)
-        if sportscardspro_url:
-            print(f"  [SCPRO] Looking up sold data for {card.search_query[:30]}...")
-            try:
-                sc_data = lookup_sportscardspro(sportscardspro_url, max_sales=10, max_wait_sec=60)
-                if sc_data:
-                    sold_data = extract_sold_summary(sc_data)
-                    # Stash raw data for ticker formatter (per-grade table needs prices[] + sales[])
-                    if sold_data:
-                        sold_data['_raw_data'] = sc_data
-                    if sold_data and sold_data.get('psa_10_price'):
-                        print(f"  [SCPRO] ✓ PSA 10 ref: ${sold_data['psa_10_price']:.2f} ({sold_data.get('psa_10_sold_30d', '?')} sold)")
-                    else:
-                        print(f"  [SCPRO] Got data but no PSA 10 price")
-
-                    # Capture today's pricing band for 30-day history (ADR-001)
-                    try:
-                        pb_session = get_session()
-                        capture_pricing_band_from_sc(pb_session, card.id, sc_data)
-                        pb_session.close()
-                        print(f"  [PBAND] Captured pricing band for card {card.id}")
-                    except Exception as pb_err:
-                        print(f"  [PBAND] Capture skipped: {pb_err}")
-
-                else:
-                    print(f"  [SCPRO] Lookup returned no data")
-            except Exception as e:
-                print(f"  [SCPRO] Lookup failed: {e}")
+        # Read pricing spine from newest fmv_cache parquet (F6)
+        sold_data = None
+        try:
+            cache_dir = r"C:\Users\J\Documents\LLM\cardscout-2.0\data_lake\gold\card_hedge_cache"
+            newest_fmv = get_newest_parquet(cache_dir, "fmv_cache_*.parquet")
+            if newest_fmv:
+                df = pd.read_parquet(newest_fmv)
+                # For simplicity, filter by name based on search query
+                card_df = df[df['name'].apply(lambda n: str(n).lower() in card.search_query.lower())]
+                if not card_df.empty:
+                    sold_data = {
+                        'psa_10_price': card_df[card_df['grade'] == 'PSA 10']['ch_fmv'].astype(float).mean() if 'PSA 10' in card_df['grade'].values else 0,
+                        'psa_9_price': card_df[card_df['grade'] == 'PSA 9']['ch_fmv'].astype(float).mean() if 'PSA 9' in card_df['grade'].values else 0,
+                        'raw_price': card_df[card_df['grade'] == 'raw']['ch_fmv'].astype(float).mean() if 'raw' in card_df['grade'].values else 0
+                    }
+                    print(f"  [FMV CACHE] ✓ Loaded pricing for {card.id}")
+        except Exception as e:
+            print(f"  [FMV CACHE] Lookup failed: {e}")
 
         # Format alert
         message = format_deal_alert(
@@ -1119,6 +1078,12 @@ def process_customer_from_db(customer, dry_run=False):
         # Send to Discord
         if send_discord_webhook(customer.discord_webhook, message):
             alerts_sent += 1
+
+        # F6: Today's Board digest per customer
+        try:
+            process_trade_signals(customer, customer.discord_webhook)
+        except Exception as _tse:
+            print(f'  [TRADE SIGNALS] dispatch error: {_tse}')
 
         # ============================================================================
         # SELL-SIDE SECOND PASS (Sept 18 evening — toggleable per customer)
@@ -1231,3 +1196,64 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+# ============ F6: TRADESIGNAL ALERTS ============
+def process_trade_signals(customer, webhook_url):
+    '''
+    Reads trade_signals.parquet and emits TradeSignal deliveries.
+    Digest shape = Today's Board rows (action/player/instrument/why).
+    '''
+    try:
+        import pandas as pd
+        import os
+        from datetime import datetime
+        ts_dir = r"C:\Users\J\Documents\LLM\cardscout-2.0\data_lake\gold"
+        ts_file = os.path.join(ts_dir, "trade_signals.parquet")
+        if not os.path.exists(ts_file): return
+        
+        df = pd.read_parquet(ts_file)
+        if df.empty: return
+        
+        # Build "Today's Board" digest (Top 5 signals)
+        embed = {
+            "title": "📋 Today's Board (Trade Signals)",
+            "description": "Top signals ranked by EV% x confidence x catalyst-proximity.",
+            "color": 0x9B59B6,
+            "fields": [],
+            "footer": {"text": f"{BOT_NAME} - {BOT_TAGLINE}"},
+            "timestamp": datetime.utcnow().isoformat()
+        }
+        
+        # Classes: ASK-FEVER (source=ASK_FEVER), VALVE-WINDOW (source=VALVE), CHECKPOINTS (source=PORTFOLIO)
+        # = annotate class in the field_name prefix; all lanes read from the same store
+        # Enforcing the <= 5 visible cards rule
+        board_df = df.sort_values('rank_ts', ascending=False).head(5)  # append-only store: newest = highest rank_ts
+        
+        action_emojis = {
+            "BUY": "🟢", "STRONG_BUY": "🟩", "WATCH": "👀", 
+            "HOLD": "🟡", "PASS": "⚪", "PREPARE": "⏳"
+        }
+        
+        for _, row in board_df.iterrows():
+            action = str(row.get('action', 'WATCH')).upper()
+            emoji = action_emojis.get(action, "🔹")
+            player = row.get('player', 'Unknown')
+            instrument = row.get('instrument', 'Unknown Card')
+            why = row.get('why', 'No thesis provided.')
+            lane = row.get('lanes', 'UNKNOWN')
+            
+            field_name = f"{emoji} {action} | {player} | {instrument}"
+            field_value = f"{why}\n_Lane: {lane}_"
+            
+            embed["fields"].append({
+                "name": field_name,
+                "value": field_value,
+                "inline": False
+            })
+            
+        # Send the digest
+        send_discord_webhook(webhook_url, {"embeds": [embed], "username": BOT_NAME})
+        
+    except Exception as e:
+        print(f"  [TRADE SIGNALS] Error: {e}")

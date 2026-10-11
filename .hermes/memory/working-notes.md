@@ -1,7 +1,7 @@
-# Card Scout Working Notes (Updated Sept 17, 2026 evening)
+# Card Scout Working Notes (Updated Sept 24, 2026 evening)
 
 ## Time
-Sept 17, 2026 (evening — founder taking 15-min break)
+Sept 24, 2026 (evening)
 
 ## Session cadence
 **Daily sessions** (confirmed Sept 16, founder preference)
@@ -11,12 +11,122 @@ CDT (UTC-05:00)
 
 ## Privacy rules
 - NEVER share customer webhooks in plain text outside this repo
-- NEVER share GCP SA key (use C:\Users\J\.secrets\<project>\)
+- NEVER share GCP SA key (use `C:\Users\J\.secrets\<project>\`)
 - NEVER publish Card Scout's 3 actors to Apify Store
-- **NEVER volunteer competitor intel to vendors** (per Sept 17 GemRate inquiry
-  guidance — generic technical questions only, no "Card Ladder uses you" framing)
+- **NEVER volunteer competitor intel to vendors** (per Sept 17 GemRate inquiry guidance)
 
-## Current state (Sept 17, 2026 evening)
+## Current state (Sept 24, 2026 evening)
+
+### CardScout 2.0 — MLB Analytics Platform
+Built comprehensive analytics system at `C:\Users\J\Documents\LLM\cardscout-2.0\`
+
+### Daily Automation
+| Time | Task | Method |
+|---|---|---|
+| 8:00 AM | News feed scan (10 RSS feeds) | Windows Task Scheduler (`CardScout_News_Scan`) |
+| 9:00 AM | Playoff tracker + hero moment detection | Windows Task Scheduler (`CardScout_Playoff_Tracker`) |
+
+Both configured with `WakeToRun=true` and `StartWhenAvailable=true`.
+
+### Pricing Model (New)
+| Product | Price | Description |
+|---|---|---|
+| Single Sport | $30/mo | Weekly scouting report |
+| All Sports Bundle | $75/mo | 25% discount |
+| Alpha Signals (max 50) | $199/mo | Real-time Discord alerts |
+
+### Business Strategy
+- **Layer 1 (Free):** Track 5 players, basic FMV
+- **Layer 2 ($30/mo):** Weekly scouting report with top 10 buys, 5 sells, HOF projections
+- **Layer 3 ($199/mo):** Real-time buy/sell alerts with exact entry/exit prices
+
+**Key insight:** Give away the framework (divergence thresholds, HOF appreciation theory), keep the execution (exact prices, real-time timing).
+
+### Model v2.1 — Key Changes from v1.0
+- Vintage HOF (25+ years since induction) = 8x floor multiplier
+- Iconic players (top-50 all-time) = 2.5x premium
+- Floor appreciation rates: Vintage 20%, Retired 15%, Active HOF 10%, Young 8%
+- Ken Griffey Jr. floor: $3,185 (was $956) — BUY signal
+- Randy Johnson floor: $4,346 — STRONG_BUY at $250 CH
+- Methodology stripped from public reports ("black box" approach)
+
+### Key Files
+| File | Purpose |
+|---|---|
+| `src/fmv_proprietary_v2.py` | FMV model (run on-demand) |
+| `src/price_cache.py` | On-demand HLOC/Sharpe/volatility |
+| `src/news_feed_aggregator.py` | Daily RSS news scan |
+| `src/playoff_tracker.py` | Daily playoff hero detection |
+| `src/scouting_report.py` | Weekly PDF report |
+| `CHANGELOG.md` | Model version history |
+| `README.md` | Full project documentation |
+
+### Data Sources
+- Card Hedge API: `C:\Users\J\.secrets\card-scout\card-hedger-api-key.txt`
+- eBay API: `.env` (APP_ID, DEV_ID, CERT_ID)
+- FanGraphs: pybaseball
+- News Feeds: 10 RSS sources
+- Playoff rosters: 12 teams, ~60 tracked players
+
+### Business Model Expansion
+| Sport | Timeline |
+|---|---|
+| MLB (playoffs → spring training) | Now - March 2027 |
+| NBA (playoffs + MLB overlap) | March - July 2027 |
+| NFL (longest season, biggest TAM) | July 2027 - Feb 2028 |
+| NHL + soccer | Sept 2027+ |
+
+### Beta Testers
+- Jim (12 cards, beta #1)
+- Alan (large volume, potential $200/mo alpha subscriber)
+- Hingle (3 cards, beta #2)
+
+### Lessons Learned
+- Vintage HOF cards appreciate 10-25%/year — floors are NOT static
+- "Sell the news" — World Series champions peak immediately, then drop 15-30%
+- Liquidity discounts create deep value (Arozarena at $7.75 with 5.3 WAR season)
+- Methodology must stay private — "black box" approach
+- Card Hedge already surfaces eBay data — direct API integration may be unnecessary
+
+### Cost Ledger (Sept 24)
+| Item | Cost | Status |
+|---|---|---|
+| Card Hedge | $49/mo | Active |
+| eBay API | $0 | Keys secured |
+| Render | $8/mo | Active |
+| Porkbun domain | $3.09/yr | Active |
+| Apify STARTER | $29/mo | Active |
+| **Total monthly** | **~$86** | |
+
+---
+
+## Founder preferences (CRITICAL — load first)
+
+- **Distrusts flattery** → provide PROOF
+- **NON-DEVELOPER PRODUCT FOUNDER** → plain English + decision tables
+- **"STOP AND READ" PROTOCOL** → read full doc, then ONE clean solution
+- **"ONE FIRE AT A TIME"** → serial, not parallel
+- **"FULL PICTURE BEFORE COMMIT"** → proactively flag costs, risks
+- **Channel for pricing**: pull frequency (not card count)
+- **Security**: founder never types passwords; agent stays in control
+
+## Resume pattern
+
+1. `session_search` for most recent save (or read `Sessions/handoff.md` directly)
+2. Read open fires section in handoff.md
+3. Pick ONE fire
+4. Execute, save, move forward
+
+## Cross-agent coordination
+
+**For any agent starting work on Card Scout:**
+
+1. Read `Sessions/README.md` (agent-agnostic contract)
+2. Read `Sessions/handoff.md` (current state)
+3. Read `For You/Plans/2026-09-17-agent-coordination.md` (full coordination note)
+4. Skim `.hermes/memory/working-notes.md` (context)
+
+When you finish: update `Sessions/handoff.md` with what you did.
 
 ### Founder name
 - **Jonathan** (first name) — use for founder-to-founder outreach

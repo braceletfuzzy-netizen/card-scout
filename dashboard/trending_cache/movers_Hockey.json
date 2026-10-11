@@ -1,176 +1,26 @@
 {
   "category": "Hockey",
-  "fetched_at": "2026-09-18T16:03:38.481602",
+  "fetched_at": "2026-10-11T11:00:18.609989",
   "cards": [
     {
-      "description": "Owen Power 2022 Upper Deck Young Guns Hockey",
-      "player": "Owen Power",
-      "set": "2022 Upper Deck Hockey",
-      "number": "228",
-      "variant": "Base",
-      "card_id": "1667869455871x813914662922368200",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1688919428733x774198217033290600/2022-Own-Power-UD-228.jpg",
-      "category": "Hockey",
-      "category_group": "Sports Cards",
-      "set_type": "Upper Deck Hockey",
-      "7 Day Sales": 5,
-      "30 Day Sales": 23,
-      "rookie": true,
-      "gain": 1.25,
-      "prices": [
-        {
-          "grade": "PSA 10",
-          "price": "45"
-        },
-        {
-          "grade": "PSA 9",
-          "price": "17.95"
-        },
-        {
-          "grade": "Raw",
-          "price": "8.23"
-        }
-      ]
-    },
-    {
-      "description": "Bobby Hull 1970 O-Pee-Chee Hockey",
-      "player": "Bobby Hull",
-      "set": "1970 O-Pee-Chee Hockey",
-      "number": "235",
-      "variant": "Base",
-      "card_id": "1726792913219x501430498930107500",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1726793454509x433541605315718400/resized_20240920_005052.jpeg",
-      "category": "Hockey",
-      "category_group": "Sports Cards",
-      "set_type": "O-Pee-Chee Hockey",
-      "7 Day Sales": 6,
-      "30 Day Sales": 8,
-      "rookie": false,
-      "gain": 0.90700412007063,
-      "prices": [
-        {
-          "grade": "PSA 6",
-          "price": "32.4"
-        },
-        {
-          "grade": "PSA 5.5",
-          "price": ""
-        },
-        {
-          "grade": "Raw",
-          "price": "5.78"
-        }
-      ]
-    },
-    {
-      "description": "Victor Olofsson 2019 Upper Deck Hockey",
-      "player": "Victor Olofsson",
-      "set": "2019 Upper Deck Hockey",
-      "number": "207",
-      "variant": "Base",
-      "card_id": "1633054071239x655113547504681000",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1724722052464x930744707674321200/resized_20240827_012732.jpeg",
-      "category": "Hockey",
-      "category_group": "Sports Cards",
-      "set_type": "Upper Deck Hockey",
-      "7 Day Sales": 5,
-      "30 Day Sales": 7,
-      "rookie": true,
-      "gain": 0.9,
-      "prices": [
-        {
-          "grade": "PSA 10",
-          "price": "19"
-        },
-        {
-          "grade": "PSA 9",
-          "price": "26.29"
-        },
-        {
-          "grade": "Raw",
-          "price": "0.72"
-        }
-      ]
-    },
-    {
-      "description": "Wayne Gretzky 1981 O-Pee-Chee Hockey",
-      "player": "Wayne Gretzky",
-      "set": "1981 O-Pee-Chee Hockey",
-      "number": "106",
-      "variant": "Base",
-      "card_id": "1658324712714x212756375005802140",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1693229540842x120630683348895260/resized_20230828_133220.jpeg",
-      "category": "Hockey",
-      "category_group": "Sports Cards",
-      "set_type": "O-Pee-Chee Hockey",
-      "7 Day Sales": 9,
-      "30 Day Sales": 29,
-      "rookie": false,
-      "gain": 0.766695270304376,
-      "prices": [
-        {
-          "grade": "PSA 8",
-          "price": "350"
-        },
-        {
-          "grade": "PSA 7.5",
-          "price": ""
-        },
-        {
-          "grade": "Raw",
-          "price": "31.45"
-        }
-      ]
-    },
-    {
-      "description": "Matthew Robertson 2025 Upper Deck Hockey",
-      "player": "Matthew Robertson",
+      "description": "Elias Pettersson 2025 Upper Deck Hockey",
+      "player": "Elias Pettersson",
       "set": "2025 Upper Deck Hockey",
-      "number": "239",
+      "number": "223",
       "variant": "Base",
-      "card_id": "1766613388201x512416796451611970",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1766613579784x504977990034861900/crop_image",
+      "card_id": "1766613407227x475683610675488700",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1766613637121x629313134404419600/crop_image",
       "category": "Hockey",
       "category_group": "Sports Cards",
       "set_type": "Upper Deck Hockey",
       "7 Day Sales": 5,
-      "30 Day Sales": 7,
+      "30 Day Sales": 15,
       "rookie": false,
-      "gain": 0.761061946902655,
-      "prices": [
-        {
-          "grade": "Raw",
-          "price": "1.99"
-        },
-        {
-          "grade": "",
-          "price": ""
-        },
-        {
-          "grade": "Raw",
-          "price": "1.99"
-        }
-      ]
-    },
-    {
-      "description": "Oliver Moore 2025 Upper Deck Hockey",
-      "player": "Oliver Moore",
-      "set": "2025 Upper Deck Hockey",
-      "number": "216",
-      "variant": "Base",
-      "card_id": "1766613404617x299427039379897500",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1768779286411x122759699429918930/resize",
-      "category": "Hockey",
-      "category_group": "Sports Cards",
-      "set_type": "Upper Deck Hockey",
-      "7 Day Sales": 10,
-      "30 Day Sales": 31,
-      "rookie": false,
-      "gain": 0.739130434782609,
+      "gain": 1.88060644346178,
       "prices": [
         {
           "grade": "PSA 9",
-          "price": "20"
+          "price": "45.6"
         },
         {
           "grade": "PSA 8.5",
@@ -178,127 +28,277 @@
         },
         {
           "grade": "Raw",
-          "price": "2"
+          "price": "0.87"
         }
       ]
     },
     {
-      "description": "Cole Perfetti 2021 Upper Deck Hockey",
-      "player": "Cole Perfetti",
-      "set": "2021 Upper Deck Hockey",
-      "number": "466",
+      "description": "Kirby Dach 2019 Upper Deck Young Guns Hockey",
+      "player": "Kirby Dach",
+      "set": "2019 Upper Deck Hockey",
+      "number": "451",
       "variant": "Base",
-      "card_id": "1661957408515x653529309716656200",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1698507425230x225641573740617660/resized_20231028_153705.jpeg",
+      "card_id": "1612478207079x787571922549310500",
+      "image": "//s3.amazonaws.com/appforest_uf/f1612633750308x559060029842162160/2019-Kirby-Dach-Upper-Deck-451.jpg",
+      "category": "Hockey",
+      "category_group": "Sports Cards",
+      "set_type": "Upper Deck Hockey",
+      "7 Day Sales": 6,
+      "30 Day Sales": 13,
+      "rookie": true,
+      "gain": 1.6039970392302,
+      "prices": [
+        {
+          "grade": "PSA 10",
+          "price": "35.18"
+        },
+        {
+          "grade": "PSA 9",
+          "price": "10.91"
+        },
+        {
+          "grade": "Raw",
+          "price": "7.01"
+        }
+      ]
+    },
+    {
+      "description": "John-Jason Peterka 2021 Upper Deck Young Guns Hockey",
+      "player": "John-Jason Peterka",
+      "set": "2021 Upper Deck Hockey",
+      "number": "711",
+      "variant": "Base",
+      "card_id": "1661963226670x192020827434531650",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1774809647624x488494542693361540/resize",
+      "category": "Hockey",
+      "category_group": "Sports Cards",
+      "set_type": "Upper Deck Hockey",
+      "7 Day Sales": 7,
+      "30 Day Sales": 10,
+      "rookie": false,
+      "gain": 1.51256855575868,
+      "prices": [
+        {
+          "grade": "PSA 10",
+          "price": "109.95"
+        },
+        {
+          "grade": "PSA 9",
+          "price": "11"
+        },
+        {
+          "grade": "Raw",
+          "price": "12.5"
+        }
+      ]
+    },
+    {
+      "description": "Nick Robertson 2020 Upper Deck Young Guns Hockey",
+      "player": "Nick Robertson",
+      "set": "2020 Upper Deck Hockey",
+      "number": "237",
+      "variant": "Base",
+      "card_id": "1612478181401x648894430429762200",
+      "image": "//s3.amazonaws.com/appforest_uf/f1612498767737x362592766936364400/2020-Nick-Robertson-Upper-Deck-Base-237.jpg",
+      "category": "Hockey",
+      "category_group": "Sports Cards",
+      "set_type": "Upper Deck Hockey",
+      "7 Day Sales": 17,
+      "30 Day Sales": 32,
+      "rookie": true,
+      "gain": 1.38035714285714,
+      "prices": [
+        {
+          "grade": "PSA 10",
+          "price": "39.99"
+        },
+        {
+          "grade": "PSA 9",
+          "price": "14.98"
+        },
+        {
+          "grade": "Raw",
+          "price": "5"
+        }
+      ]
+    },
+    {
+      "description": "Kailer Yamamoto 2017 Upper Deck Young Guns Hockey",
+      "player": "Kailer Yamamoto",
+      "set": "2017 Upper Deck Hockey",
+      "number": "202",
+      "variant": "Base",
+      "card_id": "1612478208940x580012294865148900",
+      "image": "//s3.amazonaws.com/appforest_uf/f1612931449199x249745873694569470/2017-Kailer-Yamamoto-Upper-Deck-202.jpg",
+      "category": "Hockey",
+      "category_group": "Sports Cards",
+      "set_type": "Upper Deck Hockey",
+      "7 Day Sales": 6,
+      "30 Day Sales": 10,
+      "rookie": true,
+      "gain": 1.25806451612903,
+      "prices": [
+        {
+          "grade": "PSA 10",
+          "price": "35"
+        },
+        {
+          "grade": "PSA 9",
+          "price": "6.5"
+        },
+        {
+          "grade": "Raw",
+          "price": "2.97"
+        }
+      ]
+    },
+    {
+      "description": "Easton Cowan 2025 Upper Deck Hockey",
+      "player": "Easton Cowan",
+      "set": "2025 Upper Deck Hockey",
+      "number": "748",
+      "variant": "Base",
+      "card_id": "1790822999808x338442856778161400",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1790832824215x886136815310598700/resize",
       "category": "Hockey",
       "category_group": "Sports Cards",
       "set_type": "Upper Deck Hockey",
       "7 Day Sales": 5,
+      "30 Day Sales": 20,
+      "rookie": true,
+      "gain": 1.03260869565217,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "5.61"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "5.61"
+        }
+      ]
+    },
+    {
+      "description": "Guy Lafleur 1971 O-Pee-Chee Hockey",
+      "player": "Guy Lafleur",
+      "set": "1971 O-Pee-Chee Hockey",
+      "number": "148",
+      "variant": "Base",
+      "card_id": "1631371501266x682186810406731800",
+      "image": "//s3.amazonaws.com/appforest_uf/f1631371491415x982776862422813900/1971-Guy-LaFleur-OPC-148.jpg",
+      "category": "Hockey",
+      "category_group": "Sports Cards",
+      "set_type": "O-Pee-Chee Hockey",
+      "7 Day Sales": 6,
       "30 Day Sales": 13,
       "rookie": true,
-      "gain": 0.69811320754717,
+      "gain": 1.02407905982906,
       "prices": [
         {
-          "grade": "PSA 10",
-          "price": "45"
+          "grade": "PSA 9",
+          "price": "9472.69"
         },
         {
-          "grade": "PSA 9",
-          "price": "27.16"
+          "grade": "PSA 8.5",
+          "price": ""
         },
         {
           "grade": "Raw",
-          "price": "3.165"
+          "price": "109"
         }
       ]
     },
     {
-      "description": "Artemi Panarin 2015 Upper Deck Young Guns Hockey",
-      "player": "Artemi Panarin",
-      "set": "2015 Upper Deck Hockey",
-      "number": "221",
+      "description": "Ivan Demidov 2025 SPx Finite Hockey",
+      "player": "Ivan Demidov",
+      "set": "2025 SPx Hockey",
+      "number": "36",
       "variant": "Base",
-      "card_id": "1620566460422x488763319405500800",
-      "image": "//s3.amazonaws.com/appforest_uf/d112/f1666222034995x483512963652603200/s-l500%20-%202022-10-19T192705.703.jpg?q=75",
+      "card_id": "1780530981650x932248402620657700",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1780531390308x511079231266288200/resize",
+      "category": "Hockey",
+      "category_group": "Sports Cards",
+      "set_type": " SPx Hockey",
+      "7 Day Sales": 5,
+      "30 Day Sales": 14,
+      "rookie": true,
+      "gain": 0.994851994851995,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "2.58333333333333"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "2.58333333333333"
+        }
+      ]
+    },
+    {
+      "description": "Victor Ostman 2025 Upper Deck Hockey",
+      "player": "Victor Ostman",
+      "set": "2025 Upper Deck Hockey",
+      "number": "245",
+      "variant": "Base",
+      "card_id": "1766613411457x739443621641050500",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1789701676958x300418386738959360/resize",
       "category": "Hockey",
       "category_group": "Sports Cards",
       "set_type": "Upper Deck Hockey",
-      "7 Day Sales": 9,
-      "30 Day Sales": 34,
-      "rookie": true,
-      "gain": 0.68425068119891,
+      "7 Day Sales": 5,
+      "30 Day Sales": 6,
+      "rookie": false,
+      "gain": 0.95774647887324,
       "prices": [
         {
-          "grade": "PSA 10",
-          "price": "154.53"
+          "grade": "Raw",
+          "price": "1.39"
         },
         {
-          "grade": "PSA 9",
-          "price": "35"
+          "grade": "",
+          "price": ""
         },
         {
           "grade": "Raw",
-          "price": "10.76"
+          "price": "1.39"
         }
       ]
     },
     {
-      "description": "Chris Kreider 2012 Upper Deck Young Guns Hockey",
-      "player": "Chris Kreider",
-      "set": "2012 Upper Deck Hockey",
-      "number": "237",
+      "description": "Easton Cowan 2025 Upper Deck UD Canvas Hockey",
+      "player": "Easton Cowan",
+      "set": "2025 Upper Deck Hockey",
+      "number": "C-382",
       "variant": "Base",
-      "card_id": "1620530664460x217019941350576000",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1749184350049x426153177646378300/resize",
+      "card_id": "1790946610068x597307571947679500",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1790975222682x269130801631263900/resize",
       "category": "Hockey",
       "category_group": "Sports Cards",
       "set_type": "Upper Deck Hockey",
-      "7 Day Sales": 16,
-      "30 Day Sales": 18,
+      "7 Day Sales": 10,
+      "30 Day Sales": 21,
       "rookie": true,
-      "gain": 0.601262458471761,
+      "gain": 0.945294117647059,
       "prices": [
         {
-          "grade": "PSA 10",
-          "price": "240.99"
+          "grade": "Raw",
+          "price": "33.07"
         },
         {
-          "grade": "PSA 9",
-          "price": "79.99"
+          "grade": "",
+          "price": ""
         },
         {
           "grade": "Raw",
-          "price": "53.78"
-        }
-      ]
-    },
-    {
-      "description": "Eric Lindros 1990 Score Future Superstars Hockey",
-      "player": "Eric Lindros",
-      "set": "1990 Score Hockey",
-      "number": "440",
-      "variant": "Base",
-      "card_id": "1621806976966x514228448260522000",
-      "image": "//s3.amazonaws.com/appforest_uf/f1621806960873x953474381176076400/1990-Eric-Lidros-Score-440.jpg",
-      "category": "Hockey",
-      "category_group": "Sports Cards",
-      "set_type": "Score Hockey",
-      "7 Day Sales": 9,
-      "30 Day Sales": 39,
-      "rookie": true,
-      "gain": 0.6,
-      "prices": [
-        {
-          "grade": "PSA 10",
-          "price": "48"
-        },
-        {
-          "grade": "PSA 9",
-          "price": "16.99"
-        },
-        {
-          "grade": "Raw",
-          "price": "2.14"
+          "price": "33.07"
         }
       ]
     }

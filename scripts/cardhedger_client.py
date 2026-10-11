@@ -82,10 +82,27 @@ class CardHedgerClient:
 
     Read auth key from CARD_HEDGER_API_KEY env var by default. Pass explicitly
     via api_key= for testing.
+
+    Supports file: prefix in env var to read key from disk (e.g. file:/path/to/key.txt).
+    Useful for keeping keys out of .env files.
     """
 
     def __init__(self, api_key: Optional[str] = None, timeout: int = 30):
-        self.api_key = api_key or os.getenv('CARD_HEDGER_API_KEY')
+        raw_key = api_key or os.getenv('CARD_HEDGER_API_KEY')
+
+        # Support file: prefix to read key from disk
+        if raw_key and raw_key.startswith('file:'):
+            key_path = raw_key[5:].strip()
+            try:
+                with open(key_path, 'r') as f:
+                    self.api_key = f.read().strip()
+            except Exception as e:
+                raise CardHedgerError(
+                    f'Failed to read Card Hedge key from {key_path}: {e}'
+                )
+        else:
+            self.api_key = raw_key
+
         if not self.api_key:
             raise CardHedgerError(
                 'CARD_HEDGER_API_KEY not set. Sign up at https://ai.cardhedger.com '

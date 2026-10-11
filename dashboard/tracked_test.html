@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Card Scout - Tracked Cards</title>
+  <meta name="description" content="90-day price history for cards you track on Card Scout.">
+  <style>
+    body { font-family: -apple-system, system-ui, sans-serif; max-width: 1100px; margin: 0 auto; padding: 20px; background: #f7f7f9; }
+    h1 { color: #333; }
+    .subtitle { color: #888; margin-bottom: 20px; }
+    .controls { background: #fff; padding: 14px 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); display: flex; gap: 16px; align-items: center; }
+    .controls label { font-size: 13px; color: #666; }
+    .controls select { padding: 6px; font-size: 13px; border-radius: 4px; border: 1px solid #ccc; }
+    table { width: 100%; border-collapse: collapse; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden; }
+    th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; vertical-align: middle; }
+    th { background: #fafafa; font-size: 12px; color: #888; text-transform: uppercase; }
+    .desc { font-weight: 600; color: #333; font-size: 14px; }
+    .meta { font-size: 11px; color: #888; margin-top: 2px; }
+    .meta-small { font-size: 11px; color: #999; }
+    .latest { font-weight: 600; color: #333; }
+    .sparkline { padding: 4px 8px; }
+    .footer { color: #999; font-size: 12px; margin-top: 30px; text-align: center; }
+    .stats { color: #666; font-size: 12px; }
+  </style>
+</head>
+<body>
+  <h1>📊 Tracked Cards</h1>
+  <p class="subtitle">90-day price history from Card Hedger for cards you track.</p>
+
+  <div class="controls">
+    <label>Category:</label>
+    <select onchange="window.location='/tracked' + (this.value !== 'All' ? '?category=' + encodeURIComponent(this.value) : '')">
+      <option value="All" selected>All</option><option value="Sports Cards">Sports Cards</option><option value="TCG">TCG</option>
+    </select>
+    <span class="stats">8 cards tracked · 2 matched in Card Hedger · last updated just now</span>
+  </div>
+
+  <table>
+    <thead><tr><th>Card</th><th>90d trend</th><th>Latest PSA 10</th><th>Δ vs 90d ago</th><th>Data points</th></tr></thead>
+    <tbody>
+            <tr>
+              <td class="info">
+                <div class="desc">Michael Jordan 1991 Upper Deck Baseball</div>
+                <div class="meta">buddy_test_001 · Sports Cards · 1990s</div>
+              </td>
+              <td class="sparkline"><svg width="200" height="40" style="background:#fff;border:1px solid #eee;border-radius:3px;"><polyline points="0.0,23.1 4.0,14.8 8.0,8.0 12.0,14.0 16.0,8.4 20.0,8.0 24.0,16.0 28.0,12.0 32.0,5.2 36.0,10.0 40.0,5.8 44.0,10.0 48.0,13.9 52.0,13.5 56.0,16.0 60.0,23.6 64.0,24.8 68.0,13.4 72.0,26.2 76.0,26.0 80.0,19.5 84.0,12.0 88.0,17.0 92.0,28.2 96.0,20.0 100.0,17.0 104.0,21.5 108.0,19.0 112.0,15.9 116.0,8.0 120.0,12.0 124.0,11.9 128.0,29.4 132.0,16.0 136.0,16.4 140.0,16.0 144.0,5.0 148.0,9.2 152.0,18.0 156.0,15.9 160.0,20.0 164.0,21.9 168.0,30.0 172.0,28.2 176.0,35.0 180.0,28.6 184.0,31.4 188.0,18.0 192.0,8.0 196.0,22.0 200.0,24.0" fill="none" stroke="#c33" stroke-width="1.5" /><circle cx="196" cy="24.0" r="2.5" fill="#c33" /></svg></td>
+              <td class="latest">$1400.00</td>
+              <td class="delta" style="color: #c33; font-weight: 600;">-0.8%</td>
+              <td class="meta-small">51 pts</td>
+            </tr>
+            <tr>
+              <td class="info">
+                <div class="desc">Derek Jeter Topps Future Star</div>
+                <div class="meta">buddy_test_001 · Sports Cards · 1990s</div>
+              </td>
+              <td class="sparkline"><svg width="200" height="40" style="background:#fafafa;border:1px solid #eee;border-radius:3px;"><text x="100" y="20" text-anchor="middle" font-size="10" fill="#888">No data</text></svg></td>
+              <td class="latest">$n/a</td>
+              <td class="delta" style="color: #888; font-weight: 600;">n/a</td>
+              <td class="meta-small">0 pts</td>
+            </tr></tbody>
+  </table>
+
+  <p class="footer">
+    Powered by <a href="/">Card Scout</a> · Data from <a href="https://cardhedger.com">Card Hedger</a><br>
+    <a href="/pricing">Pricing</a> · <a href="/login">Login</a>
+  </p>
+</body>
+</html>

@@ -1,236 +1,86 @@
 {
   "category": "Pokemon",
-  "fetched_at": "2026-09-18T16:03:39.671891",
+  "fetched_at": "2026-10-11T11:00:20.013916",
   "cards": [
     {
-      "description": "Purrloin 2014 Pokemon XY Phantom Forces",
-      "player": "Purrloin",
-      "set": "2014 Pokemon XY Phantom Forces",
-      "number": "56",
-      "variant": "Base",
-      "card_id": "1734139562146x249863703274756600",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1762749470314x260131761801550400/crop_image",
+      "description": "Ursaring 2001 Pokemon Neo Discovery 1st Edition",
+      "player": "Ursaring",
+      "set": "2001 Pokemon Neo Discovery",
+      "number": "34",
+      "variant": "1st Edition",
+      "card_id": "1655085578353x322216171756599400",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1722398891778x239676463903371940/resized_20240731_040811.jpeg",
       "category": "Pokemon",
       "category_group": "Trading Cards",
-      "set_type": "Pokemon XY Phantom Forces",
-      "7 Day Sales": 6,
-      "30 Day Sales": 13,
-      "rookie": false,
-      "gain": 2.0,
-      "prices": [
-        {
-          "grade": "Raw",
-          "price": "0.15"
-        },
-        {
-          "grade": "",
-          "price": ""
-        },
-        {
-          "grade": "Raw",
-          "price": "0.15"
-        }
-      ]
-    },
-    {
-      "description": "Dialga 2009 Pokemon Platinum Reverse Holo",
-      "player": "Dialga",
-      "set": "2009 Pokemon Platinum",
-      "number": "6",
-      "variant": "Reverse Holo",
-      "card_id": "1741477926070x487765689948692860",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1747911302756x927208431960132900/crop_image",
-      "category": "Pokemon",
-      "category_group": "Trading Cards",
-      "set_type": "Pokemon Platinum",
+      "set_type": "Pokemon Neo Discovery",
       "7 Day Sales": 5,
-      "30 Day Sales": 11,
-      "rookie": false,
-      "gain": 2.0,
-      "prices": [
-        {
-          "grade": "PSA 6",
-          "price": "75"
-        },
-        {
-          "grade": "PSA 5.5",
-          "price": ""
-        },
-        {
-          "grade": "Raw",
-          "price": "4.75"
-        }
-      ]
-    },
-    {
-      "description": "Manaphy 2016 Pokemon XY Black Star Promo Mythical Pokemon Collection",
-      "player": "Manaphy",
-      "set": "2016 Pokemon XY Black Star Promo",
-      "number": "XY113",
-      "variant": "Base",
-      "card_id": "1782151713292x625913197074841600",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1782151860380x656930927132993900/resize",
-      "category": "Pokemon",
-      "category_group": "Trading Cards",
-      "set_type": "Pokemon XY Black Star Promo",
-      "7 Day Sales": 10,
-      "30 Day Sales": 47,
+      "30 Day Sales": 12,
       "rookie": false,
       "gain": 2.0,
       "prices": [
         {
           "grade": "PSA 10",
-          "price": "8700"
+          "price": "300"
         },
         {
           "grade": "PSA 9",
-          "price": "220"
+          "price": "63"
         },
         {
           "grade": "Raw",
-          "price": "64.08"
+          "price": "14.7"
         }
       ]
     },
     {
-      "description": "Diglett 2016 Pokemon XY Fates Collide",
-      "player": "Diglett",
-      "set": "2016 Pokemon XY Fates Collide",
-      "number": "36",
-      "variant": "Base",
-      "card_id": "1677027934962x258142272134467700",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1760874833242x730615012156001500/crop_image",
-      "category": "Pokemon",
-      "category_group": "Trading Cards",
-      "set_type": "Pokemon XY Fates Collide",
-      "7 Day Sales": 9,
-      "30 Day Sales": 28,
-      "rookie": false,
-      "gain": 2.0,
-      "prices": [
-        {
-          "grade": "Raw",
-          "price": "0.15"
-        },
-        {
-          "grade": "",
-          "price": ""
-        },
-        {
-          "grade": "Raw",
-          "price": "0.15"
-        }
-      ]
-    },
-    {
-      "description": "Fletchinder 2023 Pokemon Scarlet & Violet Paldea Evolved",
-      "player": "Fletchinder",
-      "set": "2023 Pokemon Scarlet & Violet Paldea Evolved",
-      "number": "29",
-      "variant": "Base",
-      "card_id": "1691965329317x739295166085185700",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1741727470732x666308384033728800/crop_image",
-      "category": "Pokemon",
-      "category_group": "Trading Cards",
-      "set_type": "Pokemon Scarlet & Violet Paldea Evolved",
-      "7 Day Sales": 8,
-      "30 Day Sales": 22,
-      "rookie": false,
-      "gain": 2.0,
-      "prices": [
-        {
-          "grade": "Raw",
-          "price": "0.15"
-        },
-        {
-          "grade": "",
-          "price": ""
-        },
-        {
-          "grade": "Raw",
-          "price": "0.15"
-        }
-      ]
-    },
-    {
-      "description": "Pangoro 2026 Pokemon Mega Evolution Ascended Heroes",
-      "player": "Pangoro",
-      "set": "2026 Pokemon Mega Evolution Ascended Heroes",
-      "number": "140",
-      "variant": "Base",
-      "card_id": "1771043894813x247900420966774560",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1772726906763x459722422676867460/crop_image",
-      "category": "Pokemon",
-      "category_group": "Trading Cards",
-      "set_type": "Pokemon Mega Evolution Ascended Heroes",
-      "7 Day Sales": 12,
-      "30 Day Sales": 66,
-      "rookie": false,
-      "gain": 2.0,
-      "prices": [
-        {
-          "grade": "Raw",
-          "price": "0.15"
-        },
-        {
-          "grade": "",
-          "price": ""
-        },
-        {
-          "grade": "Raw",
-          "price": "0.15"
-        }
-      ]
-    },
-    {
-      "description": "Deerling 2024 Pokemon Scarlet & Violet Temporal Forces",
-      "player": "Deerling",
-      "set": "2024 Pokemon Scarlet & Violet Temporal Forces",
-      "number": "16",
-      "variant": "Base",
-      "card_id": "1732674751825x587720768901983900",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1776684855247x615628123484300800/resize",
-      "category": "Pokemon",
-      "category_group": "Trading Cards",
-      "set_type": "Pokemon Scarlet & Violet Temporal Forces",
-      "7 Day Sales": 15,
-      "30 Day Sales": 46,
-      "rookie": false,
-      "gain": 2.0,
-      "prices": [
-        {
-          "grade": "Raw",
-          "price": "0.12"
-        },
-        {
-          "grade": "",
-          "price": ""
-        },
-        {
-          "grade": "Raw",
-          "price": "0.12"
-        }
-      ]
-    },
-    {
-      "description": "Golduck 2002 Pokemon Legendary Collection Reverse Foil",
-      "player": "Golduck",
-      "set": "2002 Pokemon Legendary Collection",
-      "number": "43",
+      "description": "Wingull 2003 Pokemon EX Ruby & Sapphire Reverse Foil",
+      "player": "Wingull",
+      "set": "2003 Pokemon EX Ruby & Sapphire",
+      "number": "77",
       "variant": "Reverse Foil",
-      "card_id": "1656211601470x527858406523722430",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1722771049817x855893005604297500/resized_20240804_113048.jpeg",
+      "card_id": "1658976610992x809414679559525900",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1693772067122x959566546090364600/resized_20230903_201426.jpeg",
       "category": "Pokemon",
       "category_group": "Trading Cards",
-      "set_type": "Pokemon Legendary Collection",
-      "7 Day Sales": 11,
-      "30 Day Sales": 34,
+      "set_type": "Pokemon EX Ruby & Sapphire",
+      "7 Day Sales": 13,
+      "30 Day Sales": 18,
       "rookie": false,
-      "gain": 1.99318367346939,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "CGC 9",
+          "price": "36"
+        },
+        {
+          "grade": "CGC 8.5",
+          "price": "26.4"
+        },
+        {
+          "grade": "Raw",
+          "price": "5"
+        }
+      ]
+    },
+    {
+      "description": "Cleffa Holo 2021 Pokemon Celebrations Classic Collection",
+      "player": "Cleffa",
+      "set": "2021 Pokemon Celebrations Classic Collection",
+      "number": "20",
+      "variant": "Base",
+      "card_id": "1678209101064x762823891815285600",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1692817298226x638947545728045300/resized_20230823_190137.jpeg",
+      "category": "Pokemon",
+      "category_group": "Trading Cards",
+      "set_type": "Pokemon Celebrations Classic Collection",
+      "7 Day Sales": 14,
+      "30 Day Sales": 38,
+      "rookie": false,
+      "gain": 2.0,
       "prices": [
         {
           "grade": "PSA 9",
-          "price": "2199.99"
+          "price": "30"
         },
         {
           "grade": "PSA 8.5",
@@ -238,29 +88,29 @@
         },
         {
           "grade": "Raw",
-          "price": "170"
+          "price": "2"
         }
       ]
     },
     {
-      "description": "Smoochum 2024 Pokemon Scarlet & Violet Surging Sparks",
-      "player": "Smoochum",
-      "set": "2024 Pokemon Scarlet & Violet Surging Sparks",
-      "number": "75",
+      "description": "Paldean Wooper 2023 Pokemon Scarlet & Violet Paldea Evolved",
+      "player": "Paldean Wooper",
+      "set": "2023 Pokemon Scarlet & Violet Paldea Evolved",
+      "number": "129",
       "variant": "Base",
-      "card_id": "1732594334342x484732458387735040",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1752238513490x348372416196739000/crop_image",
+      "card_id": "1691965526356x651784586702188500",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1726569074904x959653298941352000/crop_image",
       "category": "Pokemon",
       "category_group": "Trading Cards",
-      "set_type": "Pokemon Scarlet & Violet Surging Sparks",
-      "7 Day Sales": 36,
-      "30 Day Sales": 219,
+      "set_type": "Pokemon Scarlet & Violet Paldea Evolved",
+      "7 Day Sales": 15,
+      "30 Day Sales": 85,
       "rookie": false,
-      "gain": 1.98245614035088,
+      "gain": 2.0,
       "prices": [
         {
           "grade": "Raw",
-          "price": "0.68"
+          "price": "0.52"
         },
         {
           "grade": "",
@@ -268,29 +118,119 @@
         },
         {
           "grade": "Raw",
-          "price": "0.68"
+          "price": "0.52"
         }
       ]
     },
     {
-      "description": "Herdier 2025 Pokemon Scarlet & Violet White Flare Poke Ball",
-      "player": "Herdier",
-      "set": "2025 Pokemon Scarlet & Violet White Flare",
-      "number": "75",
-      "variant": "Poke Ball",
-      "card_id": "1756834737176x736357736992924200",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1758908709429x465345917094439000/crop_image",
+      "description": "Totodile 2006 Pokemon EX Dragon Frontiers Reverse Holo",
+      "player": "Totodile",
+      "set": "2006 Pokemon EX Dragon Frontiers",
+      "number": "67",
+      "variant": "Reverse Holo",
+      "card_id": "1743221760239x833050131825271900",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1751939369790x994384205889617800/resize",
       "category": "Pokemon",
       "category_group": "Trading Cards",
-      "set_type": "Pokemon Scarlet & Violet White Flare",
+      "set_type": "Pokemon EX Dragon Frontiers",
       "7 Day Sales": 7,
       "30 Day Sales": 18,
       "rookie": false,
-      "gain": 1.98,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "PSA 9",
+          "price": "1500"
+        },
+        {
+          "grade": "PSA 8.5",
+          "price": "750"
+        },
+        {
+          "grade": "Raw",
+          "price": "35"
+        }
+      ]
+    },
+    {
+      "description": "Deoxys EX 2005 Pokemon EX Deoxys",
+      "player": "Deoxys EX",
+      "set": "2005 Pokemon EX Deoxys",
+      "number": "99",
+      "variant": "Base",
+      "card_id": "1743868433228x292097012658004900",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1743911943607x419761022476473400/resize",
+      "category": "Pokemon",
+      "category_group": "Trading Cards",
+      "set_type": "Pokemon EX Deoxys",
+      "7 Day Sales": 6,
+      "30 Day Sales": 23,
+      "rookie": false,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "PSA 9",
+          "price": "4800"
+        },
+        {
+          "grade": "PSA 8.5",
+          "price": "137.21"
+        },
+        {
+          "grade": "Raw",
+          "price": "79.41"
+        }
+      ]
+    },
+    {
+      "description": "Rocket's Scizor EX 2004 Pokemon EX Team Rocket Returns",
+      "player": "Rocket's Scizor EX",
+      "set": "2004 Pokemon EX Team Rocket Returns",
+      "number": "101",
+      "variant": "Base",
+      "card_id": "1744084389763x492984571544394800",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1752629176682x132855870069264580/resize",
+      "category": "Pokemon",
+      "category_group": "Trading Cards",
+      "set_type": "Pokemon EX Team Rocket Returns",
+      "7 Day Sales": 13,
+      "30 Day Sales": 39,
+      "rookie": false,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "PSA 9",
+          "price": "5400"
+        },
+        {
+          "grade": "PSA 8.5",
+          "price": "448.68"
+        },
+        {
+          "grade": "Raw",
+          "price": "750"
+        }
+      ]
+    },
+    {
+      "description": "Litwick 2025 Pokemon Scarlet & Violet White Flare Poke Ball",
+      "player": "Litwick",
+      "set": "2025 Pokemon Scarlet & Violet White Flare",
+      "number": "16",
+      "variant": "Poke Ball",
+      "card_id": "1756834579417x231612286561611260",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1756835321553x384559537256505150/crop_image",
+      "category": "Pokemon",
+      "category_group": "Trading Cards",
+      "set_type": "Pokemon Scarlet & Violet White Flare",
+      "7 Day Sales": 12,
+      "30 Day Sales": 35,
+      "rookie": false,
+      "gain": 2.0,
       "prices": [
         {
           "grade": "Raw",
-          "price": "1.49"
+          "price": "1.62"
         },
         {
           "grade": "",
@@ -298,7 +238,67 @@
         },
         {
           "grade": "Raw",
-          "price": "1.49"
+          "price": "1.62"
+        }
+      ]
+    },
+    {
+      "description": "Cottonee 2025 Pokemon Scarlet & Violet White Flare",
+      "player": "Cottonee",
+      "set": "2025 Pokemon Scarlet & Violet White Flare",
+      "number": "4",
+      "variant": "Base",
+      "card_id": "1756834631105x408476574741719800",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1783446650286x227532244539107900/resize",
+      "category": "Pokemon",
+      "category_group": "Trading Cards",
+      "set_type": "Pokemon Scarlet & Violet White Flare",
+      "7 Day Sales": 10,
+      "30 Day Sales": 32,
+      "rookie": false,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "0.09"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "0.09"
+        }
+      ]
+    },
+    {
+      "description": "Caterpie 2023 Pokemon Scarlet & Violet 151 Reverse Holo",
+      "player": "Caterpie",
+      "set": "2023 Pokemon Scarlet & Violet 151",
+      "number": "10",
+      "variant": "Reverse Holo",
+      "card_id": "1759900074500x447098516592058240",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1781939064098x379412775443148860/resize",
+      "category": "Pokemon",
+      "category_group": "Trading Cards",
+      "set_type": "Pokemon Scarlet & Violet 151",
+      "7 Day Sales": 34,
+      "30 Day Sales": 141,
+      "rookie": false,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "PSA 10",
+          "price": "172.5"
+        },
+        {
+          "grade": "PSA 9",
+          "price": "4.99"
+        },
+        {
+          "grade": "Raw",
+          "price": "0.606"
         }
       ]
     }
