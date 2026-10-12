@@ -1031,7 +1031,17 @@ def process_customer_from_db(customer, dry_run=False):
         ).first()
         session.close()
 
-        # PSA Pop Lookup retired (F6)
+        # PSA Pop Lookup retired (F6) — serve stored pop data from DB instead.
+        # Bugfix Oct 12: `pop_data` was referenced below but never defined since the
+        # F6 cleanup deleted the lookup; NameError killed every run that found a deal.
+        pop_data = None
+        if card.psa_total_pop is not None:
+            pop_data = {
+                'subject': card.search_query,
+                'psa_10_pop': card.psa_10_pop or 0,
+                'psa_9_pop': card.psa_9_pop or 0,
+                'total_pop': card.psa_total_pop,
+            }
 
         # Read pricing spine from newest fmv_cache parquet (F6)
         sold_data = None
@@ -1107,10 +1117,14 @@ def process_customer_from_db(customer, dry_run=False):
                 if sell_items:
                     sell_msgs = format_sell_alert(card.search_query, sell_items, sold_data)
                     for sm in sell_msgs:
+                        # Discord webhooks require title/description inside an embed;
+                        # top-level keys are ignored -> 50006 "Cannot send an empty message".
                         sell_message = {
-                            'title': sm['title'],
-                            'description': sm['description'],
-                            'color': 0x10b981,  # emerald
+                            'embeds': [{
+                                'title': sm['title'],
+                                'description': sm['description'],
+                                'color': 0x10b981,  # emerald
+                            }]
                         }
                         if send_discord_webhook(customer.discord_webhook, sell_message):
                             alerts_sent += 1
@@ -1194,66 +1208,223 @@ def main():
         process_customer_from_db(customer, dry_run=args.dry_run)
 
 
-if __name__ == '__main__':
-    main()
-
-
-# ============ F6: TRADESIGNAL ALERTS ============
+# ============ F6.1: TRADESIGNAL ALERTS (PER-CLASS DISPATCH) ============
 def process_trade_signals(customer, webhook_url):
     '''
-    Reads trade_signals.parquet and emits TradeSignal deliveries.
-    Digest shape = Today's Board rows (action/player/instrument/why).
+    Reads trade_signals.parquet and user_positions.parquet.
+    Emits per-class TradeSignal deliveries.
+    - Board Digest: Top 5 signals (action in BUY/STRONG_BUY/WATCH/PREPARE).
+    - ASK-FEVER: Source=ASK_FEVER (deduped by rank_ts).
+    - VALVE-WINDOW: Source=VALVE (deduped by state TIGHT/CRACKING/OPEN).
+    - CHECKPOINT: user_positions checkpoints due within 7d.
     '''
     try:
         import pandas as pd
         import os
-        from datetime import datetime
+        from datetime import datetime, timedelta
+        import json
+        from db_models import get_session, Customer
+        
+        # Load db session and settings
+        session = get_session()
+        db_cust = session.query(Customer).filter_by(id=customer.id).first()
+        settings = db_cust.settings or {}
+        
         ts_dir = r"C:\Users\J\Documents\LLM\cardscout-2.0\data_lake\gold"
         ts_file = os.path.join(ts_dir, "trade_signals.parquet")
-        if not os.path.exists(ts_file): return
         
-        df = pd.read_parquet(ts_file)
-        if df.empty: return
-        
-        # Build "Today's Board" digest (Top 5 signals)
-        embed = {
-            "title": "📋 Today's Board (Trade Signals)",
-            "description": "Top signals ranked by EV% x confidence x catalyst-proximity.",
-            "color": 0x9B59B6,
-            "fields": [],
-            "footer": {"text": f"{BOT_NAME} - {BOT_TAGLINE}"},
-            "timestamp": datetime.utcnow().isoformat()
-        }
-        
-        # Classes: ASK-FEVER (source=ASK_FEVER), VALVE-WINDOW (source=VALVE), CHECKPOINTS (source=PORTFOLIO)
-        # = annotate class in the field_name prefix; all lanes read from the same store
-        # Enforcing the <= 5 visible cards rule
-        board_df = df.sort_values('rank_ts', ascending=False).head(5)  # append-only store: newest = highest rank_ts
+        has_ts = os.path.exists(ts_file)
+        df = pd.read_parquet(ts_file) if has_ts else pd.DataFrame()
         
         action_emojis = {
             "BUY": "🟢", "STRONG_BUY": "🟩", "WATCH": "👀", 
             "HOLD": "🟡", "PASS": "⚪", "PREPARE": "⏳"
         }
         
-        for _, row in board_df.iterrows():
-            action = str(row.get('action', 'WATCH')).upper()
-            emoji = action_emojis.get(action, "🔹")
-            player = row.get('player', 'Unknown')
-            instrument = row.get('instrument', 'Unknown Card')
-            why = row.get('why', 'No thesis provided.')
-            lane = row.get('lanes', 'UNKNOWN')
+        # 1. BOARD DIGEST
+        if not df.empty:
+            board_df = df[df['action'].isin(['BUY', 'STRONG_BUY', 'WATCH', 'PREPARE'])]
+            if not board_df.empty:
+                board_df = board_df.sort_values('rank_ts', ascending=False).head(5)
+                
+                embed_board = {
+                    "title": "📋 Today's Board (Trade Signals)",
+                    "description": "Top signals ranked by EV% x confidence x catalyst-proximity.",
+                    "color": 0x9B59B6,
+                    "fields": [],
+                    "footer": {"text": f"{BOT_NAME} - {BOT_TAGLINE}"},
+                    "timestamp": datetime.utcnow().isoformat()
+                }
+                
+                for _, row in board_df.iterrows():
+                    action = str(row.get('action', 'WATCH')).upper()
+                    emoji = action_emojis.get(action, "🔹")
+                    player = row.get('player', 'Unknown')
+                    instrument = row.get('instrument', 'Unknown Card')
+                    why = row.get('why', 'No thesis provided.')
+                    lane = row.get('lanes', 'UNKNOWN')
+                    
+                    field_name = f"{emoji} {action} | {player} | {instrument}"
+                    field_value = f"{why}\n_Lane: {lane}_"
+                    
+                    embed_board["fields"].append({
+                        "name": field_name,
+                        "value": field_value,
+                        "inline": False
+                    })
+                
+                send_discord_webhook(webhook_url, {"embeds": [embed_board], "username": BOT_NAME})
+        
+        # 2. ASK-FEVER
+        if not df.empty:
+            fever_df = df[df['source'] == 'ASK_FEVER']
+            last_fever_ts = settings.get("last_fever_ts", "")
+            new_fevers = fever_df[fever_df['rank_ts'] > last_fever_ts].sort_values('rank_ts', ascending=False)
             
-            field_name = f"{emoji} {action} | {player} | {instrument}"
-            field_value = f"{why}\n_Lane: {lane}_"
+            if not new_fevers.empty:
+                # Top 5 max per embed
+                new_fevers_top = new_fevers.head(5)
+                
+                embed_fever = {
+                    "title": "🔥 Dealer Fever — Asks Repricing Ahead of Sales",
+                    "description": "Dealers are marking up asks significantly over recent sales baselines.",
+                    "color": 0xE74C3C, # Red
+                    "fields": [],
+                    "footer": {"text": f"{BOT_NAME} - {BOT_TAGLINE}"},
+                    "timestamp": datetime.utcnow().isoformat()
+                }
+                
+                for _, row in new_fevers_top.iterrows():
+                    action = str(row.get('action', 'WATCH')).upper()
+                    emoji = action_emojis.get(action, "🔹")
+                    player = row.get('player', 'Unknown')
+                    instrument = row.get('instrument', 'Unknown Card')
+                    why = row.get('why', '')
+                    
+                    embed_fever["fields"].append({
+                        "name": f"{emoji} {action} | {player} | {instrument}",
+                        "value": f"{why}",
+                        "inline": False
+                    })
+                
+                send_discord_webhook(webhook_url, {"embeds": [embed_fever], "username": BOT_NAME})
+                settings["last_fever_ts"] = str(new_fevers['rank_ts'].max())
+        
+        # 3. VALVE-WINDOW
+        if not df.empty:
+            valve_df = df[df['source'] == 'VALVE']
+            if not valve_df.empty:
+                # Check global valve state from newest row
+                newest_valve = valve_df.sort_values('rank_ts', ascending=False).iloc[0]
+                text_to_scan = (str(newest_valve.get('why', '')) + " " + str(newest_valve.get('lanes', '')) + " " + str(newest_valve.get('action', ''))).upper()
+                
+                state = 'TIGHT'
+                for s in ['TIGHT', 'CRACKING', 'OPEN']:
+                    if s in text_to_scan:
+                        state = s
+                        break
+                
+                last_valve_state = settings.get("last_valve_state", "")
+                if state != last_valve_state:
+                    embed_valve = {
+                        "title": "🚪 Grading Valve State Change",
+                        "description": f"The grading return valve state has shifted to: **{state}**",
+                        "color": 0xF1C40F, # Yellow
+                        "fields": [{
+                            "name": f"State: {state}",
+                            "value": str(newest_valve.get('why', 'State changed.')),
+                            "inline": False
+                        }],
+                        "footer": {"text": f"{BOT_NAME} - {BOT_TAGLINE}"},
+                        "timestamp": datetime.utcnow().isoformat()
+                    }
+                    send_discord_webhook(webhook_url, {"embeds": [embed_valve], "username": BOT_NAME})
+                    settings["last_valve_state"] = state
+                    
+        # 4. CHECKPOINT
+        up_file = os.path.join(ts_dir, "user_positions.parquet")
+        u0_file = os.path.join(ts_dir, "user_0_positions.parquet")
+        
+        if os.path.exists(up_file):
+            up_df = pd.read_parquet(up_file)
             
-            embed["fields"].append({
-                "name": field_name,
-                "value": field_value,
-                "inline": False
-            })
+            # If checkpoints not in user_positions, join from user_0_positions
+            if 'checkpoints' not in up_df.columns and os.path.exists(u0_file):
+                u0_df = pd.read_parquet(u0_file)
+                u0_df = u0_df.drop_duplicates(['player', 'title'])
+                up_df = pd.merge(up_df, u0_df[['player', 'title', 'checkpoints']], on=['player', 'title'], how='left')
             
-        # Send the digest
-        send_discord_webhook(webhook_url, {"embeds": [embed], "username": BOT_NAME})
+            # Filter to customer user ID
+            target_user_ids = [str(customer.id), customer.customer_id, f"founder_{customer.id}"]
+            cust_up_df = up_df[up_df['user'].isin(target_user_ids)]
+            
+            if not cust_up_df.empty and 'checkpoints' in cust_up_df.columns:
+                sent_checkpoints = settings.get("sent_checkpoints", {})
+                new_sent_checkpoints = dict(sent_checkpoints)
+                alerts_to_send = []
+                
+                today_dt = datetime.now()
+                seven_days = today_dt + timedelta(days=7)
+                
+                for _, row in cust_up_df.iterrows():
+                    pos_id = str(row['position_id'])
+                    cp_json = row['checkpoints']
+                    if pd.isna(cp_json): continue
+                    try:
+                        cps = json.loads(cp_json)
+                    except: continue
+                    
+                    for cp_key, cp_date_str in cps.items():
+                        try:
+                            # Usually YYYY-MM-DD
+                            cp_date = datetime.strptime(cp_date_str[:10], "%Y-%m-%d")
+                        except: continue
+                        
+                        if today_dt.date() <= cp_date.date() <= seven_days.date():
+                            if cp_key not in sent_checkpoints.get(pos_id, []):
+                                alerts_to_send.append({
+                                    "player": row['player'],
+                                    "instrument": row.get('title', 'Unknown Card')[:80],
+                                    "key": cp_key,
+                                    "date": cp_date_str
+                                })
+                                new_sent_checkpoints.setdefault(pos_id, []).append(cp_key)
+                
+                if alerts_to_send:
+                    # Enforce <= 5
+                    alerts_to_send = alerts_to_send[:5]
+                    
+                    embed_cp = {
+                        "title": "⏱️ Portfolio Checkpoints (Next 7 Days)",
+                        "description": "Upcoming catalysts or timeline events for your active positions.",
+                        "color": 0x3498DB, # Blue
+                        "fields": [],
+                        "footer": {"text": f"{BOT_NAME} - {BOT_TAGLINE}"},
+                        "timestamp": datetime.utcnow().isoformat()
+                    }
+                    
+                    for a in alerts_to_send:
+                        embed_cp["fields"].append({
+                            "name": f"⏳ {a['player']} | {a['key'].replace('_', ' ').title()}",
+                            "value": f"**Date:** {a['date']}\n{a['instrument']}",
+                            "inline": False
+                        })
+                        
+                    send_discord_webhook(webhook_url, {"embeds": [embed_cp], "username": BOT_NAME})
+                    settings["sent_checkpoints"] = new_sent_checkpoints
+
+        # Save settings if changed
+        if settings != (db_cust.settings or {}):
+            from sqlalchemy.orm.attributes import flag_modified
+            db_cust.settings = settings
+            flag_modified(db_cust, "settings")
+            session.commit()
+            
+        session.close()
         
     except Exception as e:
         print(f"  [TRADE SIGNALS] Error: {e}")
+
+
+if __name__ == '__main__':
+    main()
