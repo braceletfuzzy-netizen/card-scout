@@ -150,10 +150,21 @@ def main():
     import os
     # Inherit env so dotenv + .env loading works in subprocess
     env = os.environ.copy()
-    r = subprocess.run(
-        [sys.executable, 'run_bot.py', '--tiers', ','.join(tiers)],
-        capture_output=True, text=True, timeout=1800, env=env,
-    )
+    # Oct 14: raised 1800 -> 5400. Full cycle = N enabled cards x ~2-4 min Apify
+    # runtime; 11 cards ≈ 35-40 min wall time, so the old 30-min timeout killed
+    # the bot mid-cycle (6/11 done, 1 subprocess.TimeoutExpired traceback).
+    try:
+        r = subprocess.run(
+            [sys.executable, 'run_bot.py', '--tiers', ','.join(tiers)],
+            capture_output=True, text=True, timeout=5400, env=env,
+        )
+    except subprocess.TimeoutExpired as e:
+        # Partial run_history entries survive the kill (bot commits per card),
+        # so re-running recovers; avoid a stray traceback for the cron log.
+        print(f'\nERROR: run_bot.py timed out after 5400s — partial cycle, '
+              f're-run to recover remaining cards. (stderr tail: '
+              f'{(e.stderr or "")[-500:] if isinstance(e.stderr, str) else ""})')
+        sys.exit(1)
     print(r.stdout[-3000:] if len(r.stdout) > 3000 else r.stdout)
     if r.returncode != 0:
         print(f'\nERROR: {r.stderr[-1000:]}')
