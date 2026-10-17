@@ -43,7 +43,7 @@ def main():
     
     customers = conn.execute("SELECT * FROM customers WHERE subscription_status != 'placeholder'").fetchall()
     
-is_live = '--live' in sys.argv
+    is_live = '--live' in sys.argv
     
     if is_live:
         try:
