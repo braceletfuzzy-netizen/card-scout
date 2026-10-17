@@ -14,7 +14,7 @@ DB_PATH = Path(__file__).parent.parent / 'card_scout.db'
 REPORTS_DIR = Path(r"C:/Users/J/Documents/LLM/cardscout-2.0/data_lake/gold/reports")
 
 # Disclaimer (B4)
-DISCLAIMER = "Disclaimer: Card Scout provides market data and personal tracking tools for informational purposes only. Nothing here is financial advice. Trading card values can be volatile and past performance never guarantees future results. Collectibles involve risk of loss. Always do your own research and make your own decisions. Not affiliated with eBay, PSA, TAG, or any marketplace or grading company."
+DISCLAIMER = "Educational only — not financial advice — full text at cardscout.pro/disclaimer"
 
 def generate_ebay_url(query):
     # Base URL

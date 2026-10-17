@@ -152,10 +152,15 @@ def dashboard_login():
     if request.method == 'GET':
         return render_template_string(INDEX_TEMPLATE)
 
-    webhook = request.form.get('webhook', '').strip()
+webhook = request.form.get('webhook', '').strip()
+    accept_disclaimer = request.form.get('accept_disclaimer')
 
     if not webhook:
         flash('Please enter your Discord webhook URL.', 'error')
+        return redirect(url_for('dashboard_login'))
+
+    if not accept_disclaimer:
+        flash('You must accept the disclaimer to continue.', 'error')
         return redirect(url_for('dashboard_login'))
 
     # Basic validation: webhook URLs should start with discord.com OR discordapp.com
@@ -174,10 +179,16 @@ def dashboard_login():
         flash('Webhook not found. Contact support if you think this is wrong.', 'error')
         return redirect(url_for('dashboard_login'))
 
-    # Set session
+# Set session
     session.clear()
     session['customer_id'] = customer.customer_id
     session.permanent = True
+
+    # Record disclaimer ack
+    if not customer.disclaimer_ack_at:
+        customer.disclaimer_ack_at = datetime.utcnow()
+        customer.disclaimer_version = '1.0'
+        db_session.commit()
 
     return redirect(url_for('monitor'))
 
@@ -398,9 +409,16 @@ def update_dashboard():
     action = request.form.get('action', '')
 
 
-    if action == 'update_webhook':
+if action == 'update_webhook':
         new_webhook = request.form.get('webhook', '').strip()
+        accept_disclaimer = request.form.get('accept_disclaimer')
+        if not accept_disclaimer:
+            flash('You must accept the disclaimer to update your webhook.', 'error')
+            return redirect(url_for('monitor'))
+            
         customer.discord_webhook = new_webhook
+        customer.disclaimer_ack_at = datetime.utcnow()
+        customer.disclaimer_version = '1.0'
         db_session.commit()
         flash('Webhook updated.', 'success')
         return redirect(url_for('monitor'))
@@ -586,9 +604,15 @@ INDEX_TEMPLATE = '''
   {% endwith %}
 
   <form method="POST" action="{{ url_for('dashboard_login') }}">
-    <label for="webhook">Discord Webhook URL</label>
+<label for="webhook">Discord Webhook URL</label>
     <input type="text" id="webhook" name="webhook" placeholder="https://discord.com/api/webhooks/..." required>
     <div class="help">This is how we identify you. Each customer has a unique webhook.</div>
+    <div style="margin: 16px 0; font-size: 13px;">
+      <label style="display: flex; align-items: flex-start; gap: 8px; font-weight: normal;">
+        <input type="checkbox" name="accept_disclaimer" required style="margin-top: 2px;">
+        <span>I agree to the <a href="https://cardscout.pro/disclaimer" target="_blank">Disclaimer</a> (educational only, not financial advice, collectibles involve risk).</span>
+      </label>
+    </div>
     <button type="submit">Sign In with Webhook</button>
   </form>
   <hr style="margin: 20px 0;">
@@ -659,11 +683,19 @@ DASHBOARD_TEMPLATE = '''
     <div>
         <strong>Tier:</strong> {{ tier_text }}<br>
         <div style="margin-top: 10px;">
-            <form action="{{ url_for('update_dashboard') }}" method="POST" style="display:inline-flex; align-items:center; gap: 8px;">
+<form action="{{ url_for('update_dashboard') }}" method="POST" style="display:flex; flex-direction:column; gap: 8px;">
                 <input type="hidden" name="action" value="update_webhook">
-                <label><strong>Webhook:</strong></label>
-                <input type="text" name="webhook" value="{{ customer.discord_webhook or '' }}" style="width: 250px; padding: 4px; border: 1px solid #ccc; border-radius: 4px; font-size: 13px;">
-                <button type="submit" style="padding: 4px 8px; font-size: 12px; background: #e0e0e0; border: none; border-radius: 4px; cursor: pointer; color: #333;">Update</button>
+                <div style="display:flex; align-items:center; gap: 8px;">
+                    <label><strong>Webhook:</strong></label>
+                    <input type="text" name="webhook" value="{{ customer.discord_webhook or '' }}" required style="width: 250px; padding: 4px; border: 1px solid #ccc; border-radius: 4px; font-size: 13px;">
+                    <button type="submit" style="padding: 4px 8px; font-size: 12px; background: #e0e0e0; border: none; border-radius: 4px; cursor: pointer; color: #333;">Update</button>
+                </div>
+                <div style="font-size: 11px;">
+                  <label style="display: flex; align-items: center; gap: 4px; font-weight: normal; color:#555;">
+                    <input type="checkbox" name="accept_disclaimer" required>
+                    <span>I agree to the <a href="https://cardscout.pro/disclaimer" target="_blank" style="color:#5865f2;">Disclaimer</a></span>
+                  </label>
+                </div>
             </form>
         </div>
     </div>

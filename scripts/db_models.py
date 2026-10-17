@@ -49,8 +49,10 @@ class Customer(Base):
     # Limits (derived from tier)
     max_cards = Column(Integer, default=3)
     
-    # Metadata
+# Metadata
     joined_date = Column(DateTime, default=datetime.utcnow)
+    disclaimer_ack_at = Column(DateTime, nullable=True)
+    disclaimer_version = Column(String(50), nullable=True)
     notes = Column(Text, nullable=True)
     settings = Column(JSON, default=dict)  # tier-specific settings
     
