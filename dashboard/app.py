@@ -594,8 +594,13 @@ INDEX_TEMPLATE = '''
   <hr style="margin: 20px 0;">
   <a href="/admin/login/google"><button style="background: #db4437; color: white; border: none; padding: 10px 20px; border-radius: 4px; font-size: 14px; font-weight: 600; cursor: pointer;">Sign In with Google</button></a>
   </form>
+
+<div style="margin-top: 40px; padding: 16px; border-top: 1px solid #eee; font-size: 11px; color: #888; text-align: center; line-height: 1.4;">
+  <strong>Disclaimer:</strong> Card Scout provides market data and personal tracking tools for informational purposes only. Nothing here is financial advice. Trading card values can be volatile and past performance never guarantees future results. Collectibles involve risk of loss. Always do your own research and make your own decisions. Not affiliated with eBay, PSA, TAG, or any marketplace or grading company.
+</div>
 </div>
 </body>
+
 </html>
 '''
 
@@ -1126,6 +1131,10 @@ document.getElementById('browse-search-btn').addEventListener('click', async () 
   <p class="empty">No cards yet. Add one above to get started.</p>
 </div>
 {% endif %}
+
+<div style="margin-top: 40px; padding: 16px; border-top: 1px solid #eee; font-size: 11px; color: #888; text-align: center; line-height: 1.4;">
+  <strong>Disclaimer:</strong> Card Scout provides market data and personal tracking tools for informational purposes only. Nothing here is financial advice. Trading card values can be volatile and past performance never guarantees future results. Collectibles involve risk of loss. Always do your own research and make your own decisions. Not affiliated with eBay, PSA, TAG, or any marketplace or grading company.
+</div>
 
 </body>
 </html>
