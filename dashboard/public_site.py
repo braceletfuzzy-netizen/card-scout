@@ -1,3 +1,326 @@
+"""
+Card Scout Public Website (Sept 16, 2026).
+
+Founder: 'tell me about the web-hosting page'
+
+Public-facing routes:
+- /                    -> Landing page (marketing)
+- /deals               -> Top 10 deals across platform (ad revenue)
+- /pricing             -> 4-tier pricing page
+- /health              -> Health check endpoint
+- /sitemap.xml         -> SEO sitemap
+- /robots.txt          -> SEO robots
+
+Authentication-aware: if logged in, / shows "Go to dashboard" CTA.
+"""
+
+from flask import Blueprint, render_template_string, redirect, url_for, request, Response
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker, scoped_session
+from datetime import datetime
+from pathlib import Path
+import os
+
+# Use the same DB as dashboard
+DB_PATH = Path(__file__).parent.parent / 'card_scout.db'
+if os.environ.get('DATABASE_URL', '').startswith('sqlite:///'):
+    DB_PATH = Path(os.environ['DATABASE_URL'].replace('sqlite:////', '/').replace('sqlite:///', ''))
+
+engine = create_engine(f'sqlite:///{DB_PATH}')
+db_session = scoped_session(sessionmaker(bind=engine))
+
+import sys
+sys.path.insert(0, str(Path(__file__).parent.parent / 'scripts'))
+from db_models import Customer, Card, PricingBand  # noqa: E402
+
+site_bp = Blueprint('site', __name__)
+
+
+# ============================================================================
+# PUBLIC LANDING PAGE
+# ============================================================================
+
+LANDING_TEMPLATE = '''
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Card Scout — AI-Powered Card Deal Alerts</title>
+<meta name="description" content="Get Discord alerts when your favorite cards drop below market. Sports cards, TCG, and more. AI finds the deals, you make the trade.">
+<meta property="og:title" content="Card Scout — AI-Powered Card Deal Alerts">
+<meta property="og:description" content="Get Discord alerts when your favorite cards drop below market.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://cardscout.pro/">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <nav>
+    <a href="/" class="logo">Card Scout</a>
+    <div class="nav-links">
+      <a href="/deals">Top Deals</a>
+      <a href="/trending">📈 Trending</a>
+      <a href="/tracked">📊 Tracked</a>
+      <a href="/pricing">Pricing</a>
+      {% if logged_in %}
+        <a href="/dashboard/{{ customer_id }}" class="cta">Dashboard</a>
+      {% else %}
+        <a href="/dashboard/login" class="cta">Sign In</a>
+      {% endif %}
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Find the deals.<br><span class="highlight">Skip the noise.</span></h1>
+    <p class="hero-sub">Card Scout watches the market 24/7 and alerts you on Discord when your cards drop below typical asking prices.</p>
+    <div class="hero-cta">
+      <a href="/pricing" class="btn btn-primary">View Pricing</a>
+      <a href="/deals" class="btn btn-secondary">See Top Deals</a>
+    </div>
+    <p class="hero-trust">Built for collectors, investors, and dealers. 4 simple tiers. No spam.</p>
+  </section>
+
+  <section class="how-it-works">
+    <h2>How it works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Add your cards</h3>
+        <p>Search our database or paste an eBay or Sportscardspro URL. Each card you track counts as 1 toward your tier limit.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Set your tier</h3>
+        <p>Casual, Standard, Dealer, or Pro. Higher tiers get more frequent updates and stronger filters.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Get Discord alerts</h3>
+        <p>When a card drops below its 1-month median, you get a Discord alert with the deal link. No noise, no false positives.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="why-us">
+    <h2>Why Card Scout</h2>
+    <div class="features">
+      <div class="feature">
+        <h3>Real deals, not noise</h3>
+        <p>Every alert is verified against the 1-month market median. No spam, no junk listings.</p>
+      </div>
+      <div class="feature">
+        <h3>Wide market coverage</h3>
+        <p>We aggregate live listings and recent sold prices across the major card marketplaces, then deduplicate and outlier-trim automatically. You see the real market, not noise.</p>
+      </div>
+      <div class="feature">
+        <h3>Self-serve</h3>
+        <p>Add or remove cards anytime from your dashboard. No waiting on us to make changes.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Ready to find deals?</h2>
+    <p>Start with our free trial. 14 days, no credit card required.</p>
+    <a href="/pricing" class="btn btn-primary btn-large">View Pricing</a>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 Card Scout. Built by collectors, for collectors.</p>
+</footer>
+</body>
+</html>
+'''
+
+
+@site_bp.route('/')
+def landing():
+    """Public landing page."""
+    # Check if logged in
+    customer_id = request.cookies.get('customer_id') or _get_logged_in_customer()
+    logged_in = bool(customer_id)
+
+    return render_template_string(
+        LANDING_TEMPLATE,
+        logged_in=logged_in,
+        customer_id=customer_id if logged_in else None,
+    )
+
+
+def _get_logged_in_customer():
+    """Check session for logged-in customer."""
+    from flask import session
+    return session.get('customer_id')
+
+
+# ============================================================================
+# TOP DEALS PAGE
+# ============================================================================
+
+DEALS_TEMPLATE = '''
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Top Card Deals — Card Scout</title>
+<meta name="description" content="Live top deals on graded sports cards and TCG. AI-powered deal detection across the major card marketplaces.">
+<meta property="og:title" content="Top Card Deals — Card Scout">
+<meta property="og:description" content="Live top deals across all major card marketplaces.">
+<link rel="canonical" href="https://cardscout.pro/deals">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header>
+  <nav>
+    <a href="/" class="logo">Card Scout</a>
+    <div class="nav-links">
+      <a href="/deals">Top Deals</a>
+      <a href="/trending">📈 Trending</a>
+      <a href="/tracked">📊 Tracked</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/" class="cta">Home</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+  <section class="page-header">
+    <h1>Top 10 Deals</h1>
+    <p class="page-sub">Live deals across all customers. Updated whenever the bot runs.</p>
+  </section>
+
+  <!-- Ad slot placeholder -->
+  <div class="ad-slot ad-top">
+    <small>Advertisement</small>
+  </div>
+
+  {% if deals %}
+  <section class="deals-grid">
+    {% for deal in deals %}
+    <article class="deal-card">
+      <div class="deal-header">
+        <h3>{{ deal.card_name }}</h3>
+        <span class="grade-badge">{{ deal.grade }}</span>
+      </div>
+      <div class="deal-price">
+        <span class="price-now">${{ "%.2f"|format(deal.price) }}</span>
+        {% if deal.market_price %}
+        <span class="price-market">market: ${{ "%.2f"|format(deal.market_price) }}</span>
+        <span class="discount">-{{ "%.0f"|format(deal.discount_pct) }}%</span>
+        {% endif %}
+      </div>
+      {% if deal.url %}
+      <a href="{{ deal.url }}" class="deal-link" target="_blank" rel="nofollow noopener">View Listing →</a>
+      {% endif %}
+    </article>
+    {% endfor %}
+  </section>
+  {% else %}
+  <section class="empty">
+    <p>No deals found yet. Check back after the next bot run!</p>
+    <p class="empty-detail">The bot typically runs daily. Once deals are detected, they'll appear here.</p>
+  </section>
+  {% endif %}
+
+  <!-- Ad slot placeholder -->
+  <div class="ad-slot ad-bottom">
+    <small>Advertisement</small>
+  </div>
+
+  <section class="cta-section">
+    <h2>Want alerts like these in your Discord?</h2>
+    <a href="/pricing" class="btn btn-primary">View Pricing</a>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 Card Scout. <a href="/">Home</a> · <a href="/pricing">Pricing</a></p>
+</footer>
+</body>
+</html>
+'''
+
+
+@site_bp.route('/deals')
+def deals():
+    """Top 10 deals page — pulls from latest snapshot."""
+    deals_data = _get_top_deals(limit=10)
+    return render_template_string(DEALS_TEMPLATE, deals=deals_data)
+
+
+def _get_top_deals(limit=10):
+    """
+    Get top deals across all customers.
+
+    Schema note: PricingBand has per-grade columns (psa_7_low, psa_7_high, etc.)
+    For V1: pull each grade's price + volume and compute lower-third threshold.
+    Real z-score deal detection comes when Card Ladder ships (gets σ from sold).
+
+    Future: z-score-based selection. For now: top 10 grades by lowest
+    price (volume >= 1, sorted by median price ascending for "cheapest first").
+    """
+    try:
+        # Get all bands (latest only — but V1 doesn't track multiple snapshots per day)
+        bands = db_session.query(PricingBand).all()
+
+        # Grade columns to check
+        grade_cols = ['raw', 'psa_7', 'psa_8', 'psa_9', 'psa_9_5', 'psa_10']
+
+        deals = []
+        for band in bands:
+            card = db_session.query(Card).filter_by(id=band.card_id).first()
+            if not card:
+                continue
+
+            for grade in grade_cols:
+                low = getattr(band, f'{grade}_low', None)
+                high = getattr(band, f'{grade}_high', None)
+                median = getattr(band, f'{grade}_median', None)
+                volume = getattr(band, f'{grade}_volume', None)
+
+                # Skip if no data
+                if low is None or high is None or volume is None or volume < 1:
+                    continue
+
+                # Skip if no spread
+                if low >= high:
+                    continue
+
+                # Lower-third threshold (founder's z-score framework v1)
+                threshold = low + (high - low) / 3
+
+                # For V1: list grades with real spread
+                deals.append({
+                    'card_name': card.search_query,
+                    'card_id': card.id,
+                    'grade': grade.upper().replace('_', ' '),
+                    'price': low,
+                    'market_price': median if median else (low + high) / 2,
+                    'discount_pct': ((median - low) / median * 100) if median and median > 0 else 0,
+                    'volume': volume,
+                    'url': card.sportscardspro_url or card.psa_set_url or '#',
+                    'threshold': threshold,
+                })
+
+        # Sort by biggest discount (best deals first)
+        deals.sort(key=lambda d: d['discount_pct'], reverse=True)
+        return deals[:limit]
+
+    except Exception as e:
+        # Log and return empty list (don't crash public site)
+        print(f"Error loading top deals: {e}")
+        return []
+
+
+# ============================================================================
+# PRICING PAGE
+# ============================================================================
+
 PRICING_TEMPLATE = '''
 <!DOCTYPE html>
 <html lang="en">
@@ -5,6 +328,8 @@ PRICING_TEMPLATE = '''
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pricing — Card Scout</title>
+<meta name="description" content="3 live tiers + 1 coming soon. Casual, Deal-Pro available now. Pro launches as we scale.">
+<link rel="canonical" href="https://cardscout.pro/pricing">
 <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
@@ -78,10 +403,184 @@ PRICING_TEMPLATE = '''
       <a href="mailto:support@cardscout.pro" class="btn btn-secondary" style="display:block; text-align:center; margin-top:16px;">Contact us</a>
     </div>
   </section>
+
+  <section class="faq">
+    <h2>Common questions</h2>
+    <details>
+      <summary>What counts as a "card"?</summary>
+      <p>Each card-grader combo counts as 1. So "Bo Jackson 1987 Topps PSA 10" and "Bo Jackson 1987 Topps PSA 9" are 2 cards.</p>
+    </details>
+    <details>
+      <summary>What sources do you pull from?</summary>
+      <p>Aggregated live listings and recent sold prices across the major card marketplaces. We deduplicate, outlier-trim, and verify each alert against a 30-day market median before sending it to your Discord.</p>
+    </details>
+    <details>
+      <summary>Can I cancel anytime?</summary>
+      <p>Yes. Cancel from your dashboard. No contracts, no questions.</p>
+    </details>
+    <details>
+      <summary>Why is Pro tier marked &ldquo;Coming Soon&rdquo;?</summary>
+      <p>Pro includes population data (PSA, BGS, SGC, CGC) and player-level
+      trend aggregation. These features depend on a third-party data
+      subscription we&apos;re activating once we have the subscriber base to
+      support the cost sustainably. We&apos;d rather be honest about timing
+      than over-promise and under-deliver. Casual and Deal-Pro
+      tiers are live today.</p>
+    </details>
+  </section>
+
+  <section class="cta-section">
+    <h2>Try Card Scout free for 14 days</h2>
+    <p>No credit card required. Cancel anytime.</p>
+    <a href="/dashboard/login" class="btn btn-primary btn-large">Get Started</a>
+  </section>
 </main>
+
 <footer>
   <p>&copy; 2026 Card Scout. <a href="/">Home</a> · <a href="/deals">Top Deals</a></p>
 </footer>
 </body>
 </html>
 '''
+
+
+@site_bp.route('/pricing')
+def pricing():
+    """Pricing page."""
+    import json
+    from pathlib import Path
+    tier_caps_path = Path(r"C:/Users/J/Documents/LLM/cardscout-2.0/config/tier_caps.json")
+    casual_cards = 3
+    dealpro_cards = 50
+    
+    if tier_caps_path.exists():
+        with open(tier_caps_path, 'r') as f:
+            caps = json.load(f)
+            casual_cards = caps.get('Casual', {}).get('max_cards', 3)
+            dealpro_cards = caps.get('Deal-Pro', {}).get('max_cards', 50)
+            
+    casual_price = 15
+    dealpro_price = 50
+    pro_price = 150
+    
+    pricing_config = Path(r"C:/Users/J/Documents/LLM/cardscout-2.0/config/pricing.json")
+    if pricing_config.exists():
+        with open(pricing_config, 'r') as f:
+            pc = json.load(f)
+            casual_price = pc.get('Casual', 15)
+            dealpro_price = pc.get('Deal-Pro', 50)
+            pro_price = pc.get('Pro', 150)
+
+    return render_template_string(PRICING_TEMPLATE, 
+        casual_price=casual_price, dealpro_price=dealpro_price, pro_price=pro_price,
+        casual_cards=casual_cards, dealpro_cards=dealpro_cards)
+
+
+# ============================================================================
+# TRENDING - largest movers per category (Sept 18, PL-largest-mover)
+# ============================================================================
+
+@site_bp.route('/trending')
+def trending():
+    """Public trending page - top weekly gainers by category.
+
+    Card Hedger top-movers endpoint, cached every 6 hours.
+    Categories: All, Baseball, Basketball, Football, Hockey, Pokemon, MTG, One Piece
+    """
+    from build_trending import fetch_top_movers, render_trending_html
+    category = request.args.get('category', 'All')
+    movers_data = fetch_top_movers(category, count=10)
+    return render_trending_html(category, movers_data)
+
+
+@site_bp.route('/tracked')
+def tracked():
+    """Tracked cards with 90-day sparklines (Sept 18, simple pivot table).
+
+    For ALL customers' tracked cards, show a category dropdown and inline
+    90d sparkline per card. Public-facing but only shows cards; doesn't
+    surface personal data.
+    """
+    from build_tracked import (
+        get_tracked_cards_for_customer,
+        render_tracked_page,
+        get_categories_present,
+    )
+    category = request.args.get('category', 'All')
+
+    # If customer logged in, show only their cards.
+    # If not, show all tracked cards (public surface).
+    customer = _get_logged_in_customer()
+    customer_slug = customer.get('customer_id') if customer else None
+
+    cards = get_tracked_cards_for_customer(customer_slug=customer_slug, category=category)
+    return render_tracked_page(customer_slug, category, cards)
+
+
+# ============================================================================
+# HEALTH CHECK
+# ============================================================================
+
+
+@site_bp.route('/disclaimer')
+def disclaimer():
+    disclaimer_text = "Card Scout provides market data and personal tracking tools for informational purposes only. Nothing here is financial advice. Trading card values can be volatile and past performance never guarantees future results. Collectibles involve risk of loss. Always do your own research and make your own decisions. Not affiliated with eBay, PSA, TAG, or any marketplace or grading company."
+    html = f"<html><head><title>Disclaimer - Card Scout</title><style>body {{ font-family: sans-serif; max-width: 600px; margin: 40px auto; line-height: 1.6; padding: 20px; }}</style></head><body><h1>Disclaimer</h1><p>{disclaimer_text}</p></body></html>"
+    return html
+
+@site_bp.route('/health')
+def health():
+    """Health check endpoint for Render."""
+    from sqlalchemy import text
+    try:
+        # Test DB connection
+        db_session.execute(text('SELECT 1'))
+        return Response('{"status": "healthy", "db": "ok"}', mimetype='application/json')
+    except Exception as e:
+        return Response(f'{{"status": "unhealthy", "error": "{str(e)}"}}', mimetype='application/json', status=500)
+
+
+# ============================================================================
+# SEO: SITEMAP + ROBOTS
+# ============================================================================
+
+SITEMAP_TEMPLATE = '''<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://cardscout.pro/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://cardscout.pro/deals</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://cardscout.pro/pricing</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
+'''
+
+
+ROBOTS_TEMPLATE = '''User-agent: *
+Allow: /
+Disallow: /dashboard/
+Disallow: /dashboard/login
+
+Sitemap: https://cardscout.pro/sitemap.xml
+'''
+
+
+@site_bp.route('/sitemap.xml')
+def sitemap():
+    """SEO sitemap."""
+    return Response(SITEMAP_TEMPLATE, mimetype='application/xml')
+
+
+@site_bp.route('/robots.txt')
+def robots():
+    """SEO robots.txt."""
+    return Response(ROBOTS_TEMPLATE, mimetype='text/plain')
