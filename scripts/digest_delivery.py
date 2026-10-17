@@ -43,7 +43,17 @@ def main():
     
     customers = conn.execute("SELECT * FROM customers WHERE subscription_status != 'placeholder'").fetchall()
     
-    is_live = '--live' in sys.argv
+is_live = '--live' in sys.argv
+    
+    if is_live:
+        try:
+            r = requests.get('https://cardscout.pro/disclaimer', timeout=10)
+            if r.status_code != 200:
+                print(f"[FATAL] Live send blocked. /disclaimer returned {r.status_code}. Must be 200 to deploy live.")
+                sys.exit(1)
+        except Exception as e:
+            print(f"[FATAL] Live send blocked. /disclaimer reachability error: {e}")
+            sys.exit(1)
     test_webhook = os.environ.get('DISCORD_WEBHOOK_TEST')
     if not test_webhook:
         hook_path = Path(r"C:/Users/J/Documents/LLM/card-scout/config/discord-webhook.txt")
