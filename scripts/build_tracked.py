@@ -150,7 +150,10 @@ def render_tracked_page(customer_slug, category, cards_data):
     # Group by category
     by_category = {}
     for card in cards_data:
-        by_category.setdefault(card.get('category', 'Other'), []).append(card)
+        cat = card.get('category')
+        if not cat:
+            cat = 'Other'
+        by_category.setdefault(cat, []).append(card)
 
     # Build cards HTML
     if not cards_data:
