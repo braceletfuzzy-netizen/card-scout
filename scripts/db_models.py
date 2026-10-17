@@ -39,6 +39,7 @@ class Customer(Base):
     customer_id = Column(String(50), unique=True, nullable=False, index=True)
     email = Column(String(255), nullable=True)
     discord_webhook = Column(Text, nullable=True)
+    linked_stripe_customer_id = Column(String(255), nullable=True)
     
     # Tier & status
     tier = Column(String(20), nullable=False, default='trial')  # trial, lite, standard, pro, beta, beta_power, beta_casual
@@ -69,7 +70,7 @@ class Card(Base):
     __tablename__ = 'cards'
     
     id = Column(Integer, primary_key=True)
-    customer_id = Column(Integer, ForeignKey('customers.id'), nullable=False, index=True)
+    customer_id = Column(Integer, ForeignKey('customers.id'), nullable=True, index=True)
     
     # Card identification
     search_query = Column(String(500), nullable=False)
@@ -169,7 +170,7 @@ class Snapshot(Base):
     __tablename__ = 'snapshots'
     
     id = Column(Integer, primary_key=True)
-    card_id = Column(Integer, ForeignKey('cards.id'), nullable=False, index=True)
+    card_id = Column(Integer, ForeignKey('cards.id'), nullable=True, index=True)
     
     # Window: which snapshot is this?
     window = Column(String(10), nullable=False)  # 'current', '7d', '30d'
@@ -215,8 +216,8 @@ class RunHistory(Base):
     __tablename__ = 'run_history'
 
     id = Column(Integer, primary_key=True)
-    customer_id = Column(Integer, ForeignKey('customers.id'), nullable=False, index=True)
-    card_id = Column(Integer, ForeignKey('cards.id'), nullable=False, index=True)
+    customer_id = Column(Integer, ForeignKey('customers.id'), nullable=True, index=True)
+    card_id = Column(Integer, ForeignKey('cards.id'), nullable=True, index=True)
 
     # Run metadata
     run_at = Column(DateTime, default=datetime.utcnow, index=True)
@@ -262,7 +263,7 @@ class PricingBand(Base):
     __tablename__ = 'pricing_bands'
 
     id = Column(Integer, primary_key=True)
-    card_id = Column(Integer, ForeignKey('cards.id'), nullable=False, index=True)
+    card_id = Column(Integer, ForeignKey('cards.id'), nullable=True, index=True)
     band_date = Column(Date, nullable=False, index=True)
 
     # Per-grade tiered pricing (one row covers all grades)
@@ -336,6 +337,24 @@ class PricingBand(Base):
 # ============================================================================
 # DATABASE CONNECTION (Environment-based)
 # ============================================================================
+
+
+class WebhookEvent(Base):
+    __tablename__ = 'webhook_events'
+
+    id = Column(Integer, primary_key=True)
+    event_id = Column(String(255), nullable=True)
+    event_type = Column(String(100), nullable=True)
+    customer_email = Column(String(255), nullable=True)
+    stripe_customer_id = Column(String(255), nullable=True)
+    tier = Column(String(50), nullable=True)
+    max_cards = Column(Integer, nullable=True)
+    timestamp = Column(DateTime, default=datetime.utcnow)
+    status = Column(String(50), nullable=True)
+    notes = Column(Text, nullable=True)
+
+    def __repr__(self):
+        return f"<WebhookEvent {self.event_type} {self.status}>"
 
 def get_database_url():
     """Get DB URL from env var. Defaults to SQLite for dev.

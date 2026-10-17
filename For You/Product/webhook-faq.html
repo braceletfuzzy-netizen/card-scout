@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Get Your Discord Webhook URL</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f9f9f9; color: #333; max-width: 600px; margin: 40px auto; line-height: 1.6; padding: 20px; }
+        .card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        h1 { margin-top: 0; color: #111; font-size: 24px; }
+        h2 { color: #5865f2; font-size: 18px; margin-top: 24px; border-bottom: 2px solid #eee; padding-bottom: 6px; }
+        ol { padding-left: 20px; }
+        li { margin-bottom: 12px; }
+        .highlight { font-weight: bold; color: #222; }
+        .note { background: #eef; border-left: 4px solid #5865f2; padding: 12px 16px; margin: 20px 0; font-size: 14px; border-radius: 0 4px 4px 0; }
+        code { background: #eee; padding: 2px 6px; border-radius: 4px; font-size: 13px; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>How to Set Up Your Discord Alerts</h1>
+        <p>Card Scout delivers real-time market alerts directly to your personal Discord server using a secure "Webhook." It only takes a minute to set up.</p>
+        
+        <h2>Step-by-Step Guide</h2>
+        <ol>
+            <li>Open Discord and go to your personal <span class="highlight">Server</span>.</li>
+            <li>Click the server name at the top left to open the dropdown menu.</li>
+            <li>Click <span class="highlight">Server Settings</span>.</li>
+            <li>In the left sidebar, click <span class="highlight">Integrations</span>.</li>
+            <li>Click <span class="highlight">Webhooks</span>.</li>
+            <li>Click the <span class="highlight">New Webhook</span> button.</li>
+            <li>Give your bot a name (like "Card Scout") and choose which channel you want the alerts to drop into.</li>
+            <li>Click the <span class="highlight">Copy Webhook URL</span> button.</li>
+            <li>Click <span class="highlight">Save Changes</span>.</li>
+        </ol>
+
+        <h2>Where to Paste It</h2>
+        <p>Go back to the Card Scout <strong>My Monitor</strong> page. Find the <strong>Webhook</strong> field at the top, paste the URL you just copied, and click <strong>Update</strong>.</p>
+
+        <div class="note">
+            <strong>Privacy & Permissions (The "One-Way" Rule):</strong><br>
+            A webhook is strictly a one-way street. It only gives Card Scout permission to <em>send</em> messages into that specific channel. We cannot read your messages, see who is in your server, or access your Discord account. 
+            <br><br>
+            <em>Pro Tip:</em> You can easily mute the channel in Discord if you want the alerts to pile up silently for you to review later without your phone buzzing.
+        </div>
+    </div>
+</body>
+</html>

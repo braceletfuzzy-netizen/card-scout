@@ -38,7 +38,7 @@ from db_models import Customer, Card, init_db  # noqa: E402
 # ============================================================================
 
 app = Flask(__name__, static_folder='static', static_url_path='/static')
-app.config['SECRET_KEY'] = secrets.token_hex(32)  # Random per-process, override in prod
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', secrets.token_hex(32))
 
 # Session config — cookie-based for simplicity
 app.config['SESSION_COOKIE_HTTPONLY'] = True
@@ -48,6 +48,13 @@ app.config['PERMANENT_SESSION_LIFETIME'] = 86400  # 1 day
 
 # Register public site blueprint (landing, deals, pricing, SEO)
 from public_site import site_bp
+import stripe
+import requests
+from db_models import WebhookEvent, RunHistory
+import json
+
+stripe.api_key = os.environ.get('STRIPE_SECRET_KEY')
+
 app.register_blueprint(site_bp)
 
 # DB setup — share with bot
@@ -92,6 +99,53 @@ def login_required(f):
 # ROUTES
 # ============================================================================
 
+
+import requests
+from requests_oauthlib import OAuth2Session
+
+GOOGLE_CLIENT_ID = os.environ.get("GOOGLE_CLIENT_ID")
+GOOGLE_CLIENT_SECRET = os.environ.get("GOOGLE_CLIENT_SECRET")
+GOOGLE_DISCOVERY_URL = "https://accounts.google.com/.well-known/openid-configuration"
+
+@app.route('/admin/login/google')
+def login_google():
+    if not GOOGLE_CLIENT_ID:
+        flash("Google Login is not configured.", "error")
+        return redirect(url_for('dashboard_login'))
+    provider_cfg = requests.get(GOOGLE_DISCOVERY_URL).json()
+    oauth = OAuth2Session(GOOGLE_CLIENT_ID, redirect_uri=request.url_root + "admin/login/google/callback", scope=["openid", "email", "profile"])
+    authorization_url, state = oauth.authorization_url(provider_cfg["authorization_endpoint"])
+    session["oauth_state"] = state
+    return redirect(authorization_url)
+
+@app.route('/admin/login/google/callback')
+def callback_google():
+    if "oauth_state" not in session:
+        return redirect(url_for('dashboard_login'))
+    provider_cfg = requests.get(GOOGLE_DISCOVERY_URL).json()
+    oauth = OAuth2Session(GOOGLE_CLIENT_ID, state=session["oauth_state"], redirect_uri=request.url_root + "admin/login/google/callback")
+    try:
+        oauth.fetch_token(provider_cfg["token_endpoint"], authorization_response=request.url, client_secret=GOOGLE_CLIENT_SECRET)
+        user_info = oauth.get(provider_cfg["userinfo_endpoint"]).json()
+        email = user_info.get("email")
+        customer = db_session.query(Customer).filter_by(email=email).first()
+        if customer:
+            session.clear()
+            session['customer_id'] = customer.customer_id
+            session.permanent = True
+            db_session.add(RunHistory(customer_id=customer.id, card_id=None, alert_error="login_success", apify_run_id="google_auth"))
+            db_session.commit()
+            return redirect(url_for('monitor'))
+        else:
+            db_session.add(RunHistory(customer_id=None, card_id=None, alert_error=f"login_unknown_email: {email}", apify_run_id="google_auth"))
+            db_session.commit()
+            return "<html><body><h2>Access Denied</h2><p>Your email is not recognized. Please contact support.</p></body></html>", 403
+    except Exception as e:
+        flash(f"Google login failed: {e}", "error")
+        db_session.add(RunHistory(customer_id=None, card_id=None, alert_error=f"login_error: {e}", apify_run_id="google_auth"))
+        db_session.commit()
+        return redirect(url_for('dashboard_login'))
+
 @app.route('/dashboard/login', methods=['GET', 'POST'])
 def dashboard_login():
     """Customer dashboard login — Discord webhook auth."""
@@ -125,7 +179,7 @@ def dashboard_login():
     session['customer_id'] = customer.customer_id
     session.permanent = True
 
-    return redirect(url_for('dashboard', customer_id=customer.customer_id))
+    return redirect(url_for('monitor'))
 
 
 @app.route('/logout')
@@ -136,27 +190,45 @@ def logout():
     return redirect(url_for('site.landing'))
 
 
-@app.route('/dashboard/<customer_id>')
+@app.route('/monitor')
 @login_required
-def dashboard(customer_id):
-    """Main dashboard — show customer's cards, allow edits."""
+def monitor():
     customer = get_current_customer()
-    if customer.customer_id != customer_id:
-        # Try to prevent URL-tampering
-        abort(403)
-
+    customer_id = customer.customer_id
+    
     cards = db_session.query(Card).filter_by(customer_id=customer.id).all()
-
-    # Group cards by category for the UI
     sports_cards = [c for c in cards if c.search_query and not is_tcg_card(c.search_query)]
     tcg_cards = [c for c in cards if c.search_query and is_tcg_card(c.search_query)]
+    
+    # Load tier caps
+    tier_caps_path = Path(r"C:/Users/J/Documents/LLM/cardscout-2.0/config/tier_caps.json")
+    tier_text = "Unknown Tier"
+    if tier_caps_path.exists():
+        with open(tier_caps_path, 'r') as f:
+            tier_caps = json.load(f)
+            tier_text = tier_caps.get(customer.tier, {}).get('description') or tier_caps.get(customer.tier, f"{customer.tier} Tier")
+            if isinstance(tier_text, dict):
+                tier_text = tier_text.get('description', f"{customer.tier} Tier")
+                
+    # Load recent alerts
+    alerts_path = Path(rf"C:/Users/J/Documents/LLM/cardscout-2.0/data_lake/gold/reports/customer_alerts_{customer_id}.json")
+    recent_alerts = []
+    if alerts_path.exists():
+        try:
+            with open(alerts_path, 'r') as f:
+                recent_alerts = json.load(f)
+        except:
+            pass
 
     return render_template_string(
         DASHBOARD_TEMPLATE,
         customer=customer,
         sports_cards=sports_cards,
         tcg_cards=tcg_cards,
+        tier_text=tier_text,
+        recent_alerts=recent_alerts
     )
+
 
 
 @app.route('/dashboard/<customer_id>/browse_cards', methods=['GET', 'POST'])
@@ -313,9 +385,10 @@ def match_card(customer_id):
         return jsonify({'matched': False, 'error': str(e)[:200], 'alternatives': []}), 502
 
 
-@app.route('/dashboard/<customer_id>/update', methods=['POST'])
+@app.route('/monitor/update', methods=['POST'])
 @login_required
-def update_dashboard(customer_id):
+def update_dashboard():
+    customer_id = get_current_customer().customer_id
     """Save changes to the customer's card roster."""
     customer = get_current_customer()
     if customer.customer_id != customer_id:
@@ -323,6 +396,14 @@ def update_dashboard(customer_id):
 
     # Get form data
     action = request.form.get('action', '')
+
+
+    if action == 'update_webhook':
+        new_webhook = request.form.get('webhook', '').strip()
+        customer.discord_webhook = new_webhook
+        db_session.commit()
+        flash('Webhook updated.', 'success')
+        return redirect(url_for('monitor'))
 
     if action == 'remove':
         card_id = request.form.get('card_id', type=int)
@@ -334,18 +415,18 @@ def update_dashboard(customer_id):
                 flash(f'Removed card #{card_id}.', 'success')
             else:
                 flash('Card not found.', 'error')
-        return redirect(url_for('dashboard', customer_id=customer_id))
+        return redirect(url_for('monitor'))
 
     elif action == 'edit':
         card_id = request.form.get('card_id', type=int)
         if not card_id:
             flash('Card not found.', 'error')
-            return redirect(url_for('dashboard', customer_id=customer_id))
+            return redirect(url_for('monitor'))
 
         card = db_session.query(Card).filter_by(id=card_id, customer_id=customer.id).first()
         if not card:
             flash('Card not found.', 'error')
-            return redirect(url_for('dashboard', customer_id=customer_id))
+            return redirect(url_for('monitor'))
 
         # Update only fields provided (allow blank = clear)
         new_query = request.form.get('new_card', '').strip()
@@ -385,7 +466,7 @@ def update_dashboard(customer_id):
             flash(f'Updated card #{card.id}.', 'success')
 
         db_session.commit()
-        return redirect(url_for('dashboard', customer_id=customer_id))
+        return redirect(url_for('monitor'))
 
     elif action == 'add':
         new_card_text = request.form.get('new_card', '').strip()
@@ -402,7 +483,7 @@ def update_dashboard(customer_id):
             current_count = db_session.query(Card).filter_by(customer_id=customer.id).count()
             if current_count >= max_cards:
                 flash(f'You\'re at your limit ({max_cards} cards). Upgrade tier to add more.', 'error')
-                return redirect(url_for('dashboard', customer_id=customer_id))
+                return redirect(url_for('monitor'))
 
             new_card = Card(
                 customer_id=customer.id,
@@ -440,10 +521,10 @@ def update_dashboard(customer_id):
                     flash(f'You already have a card called "{new_card_text}". Try a different name.', 'error')
         else:
             flash('Please enter a card description.', 'error')
-        return redirect(url_for('dashboard', customer_id=customer_id))
+        return redirect(url_for('monitor'))
 
     flash('Unknown action.', 'error')
-    return redirect(url_for('dashboard', customer_id=customer_id))
+    return redirect(url_for('monitor'))
 # ============================================================================
 # HELPERS
 # ============================================================================
@@ -508,7 +589,10 @@ INDEX_TEMPLATE = '''
     <label for="webhook">Discord Webhook URL</label>
     <input type="text" id="webhook" name="webhook" placeholder="https://discord.com/api/webhooks/..." required>
     <div class="help">This is how we identify you. Each customer has a unique webhook.</div>
-    <button type="submit">Sign In</button>
+    <button type="submit">Sign In with Webhook</button>
+  </form>
+  <hr style="margin: 20px 0;">
+  <a href="/admin/login/google"><button style="background: #db4437; color: white; border: none; padding: 10px 20px; border-radius: 4px; font-size: 14px; font-weight: 600; cursor: pointer;">Sign In with Google</button></a>
   </form>
 </div>
 </body>
@@ -559,12 +643,42 @@ DASHBOARD_TEMPLATE = '''
 <body>
 <div class="card">
   <div class="header">
-    <h1>Your Card Scout</h1>
+    <h1>My Monitor</h1>
     <div>
       <a class="vault-link" href="{{ url_for('vault_route', customer_id=customer.customer_id) }}" style="margin-right: 16px;">📊 Vault</a>
       <a class="logout" href="{{ url_for('logout') }}">Logout</a>
     </div>
   </div>
+
+  <div class="meta" style="display: flex; justify-content: space-between; align-items: flex-start;">
+    <div>
+        <strong>Tier:</strong> {{ tier_text }}<br>
+        <div style="margin-top: 10px;">
+            <form action="{{ url_for('update_dashboard') }}" method="POST" style="display:inline-flex; align-items:center; gap: 8px;">
+                <input type="hidden" name="action" value="update_webhook">
+                <label><strong>Webhook:</strong></label>
+                <input type="text" name="webhook" value="{{ customer.discord_webhook or '' }}" style="width: 250px; padding: 4px; border: 1px solid #ccc; border-radius: 4px; font-size: 13px;">
+                <button type="submit" style="padding: 4px 8px; font-size: 12px; background: #e0e0e0; border: none; border-radius: 4px; cursor: pointer; color: #333;">Update</button>
+            </form>
+        </div>
+    </div>
+    <div style="text-align: right;">
+        <form action="{{ url_for('stripe_checkout') }}" method="POST">
+            <button type="submit" style="background: #28a745; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-weight: bold;">Upgrade</button>
+        </form>
+    </div>
+  </div>
+  
+  {% if recent_alerts %}
+  <h2>Recent Signals</h2>
+  <div style="background: #fdfdfd; border: 1px solid #eee; padding: 12px; border-radius: 6px; margin-bottom: 24px; font-family: monospace; font-size: 12px; overflow-x: auto;">
+      {% for alert in recent_alerts %}
+      <div style="margin-bottom: 4px;">
+          <strong>{{ alert.timestamp[:10] }}</strong> - {{ alert.player }} ({{ alert.lane }}): <span style="color: {% if alert.call == 'FLOOR-BREAK' %}#c33{% elif alert.call == 'HEAT-JOIN' or alert.call == 'HEAT-TAP' %}#e67e22{% else %}#555{% endif %}; font-weight: bold;">{{ alert.call }}</span> at ${{ alert.price }}
+      </div>
+      {% endfor %}
+  </div>
+  {% endif %}
 
   {% with messages = get_flashed_messages(with_categories=true) %}
     {% if messages %}
@@ -1048,6 +1162,141 @@ def vault_route(customer_id):
 def vault_update_route(customer_id):
     """Save cost_basis + notes for Vault cards."""
     return _vault_update(customer_id)
+
+
+@app.route('/stripe/webhook', methods=['POST'])
+def stripe_webhook():
+    payload = request.data
+    sig_header = request.headers.get('Stripe-Signature', '')
+    endpoint_secret = os.environ.get('STRIPE_WEBHOOK_SECRET', '')
+    try:
+        event = stripe.Webhook.construct_event(payload, sig_header, endpoint_secret)
+    except ValueError as e:
+        db_session.add(WebhookEvent(event_type="invalid_payload", status="rejected_400", notes=str(e)))
+        db_session.add(RunHistory(customer_id=None, card_id=None, alert_error="invalid_payload", apify_run_id="stripe_webhook"))
+        db_session.commit()
+        return "Invalid payload", 400
+    except stripe.error.SignatureVerificationError as e:
+        db_session.add(WebhookEvent(event_type="invalid_signature", status="rejected_400", notes=str(e)))
+        db_session.add(RunHistory(customer_id=None, card_id=None, alert_error="invalid_signature", apify_run_id="stripe_webhook"))
+        db_session.commit()
+        return "Invalid signature", 400
+        
+    we = WebhookEvent(event_id=event['id'], event_type=event['type'], status="processed")
+    db_session.add(we)
+    data_obj = event['data']['object']
+    
+    try:
+        if event['type'] == 'checkout.session.completed':
+            email = data_obj.get('customer_details', {}).get('email')
+            stripe_cust_id = data_obj.get('customer')
+            we.customer_email = email
+            we.stripe_customer_id = stripe_cust_id
+            we.tier = "trial"
+            
+            customer = db_session.query(Customer).filter_by(email=email).first()
+if customer:
+                customer.subscription_status = 'trial'
+                customer.tier = 'trial'
+                customer.linked_stripe_customer_id = stripe_cust_id
+                db_session.add(RunHistory(customer_id=customer.id, card_id=None, alert_error="webhook_checkout_completed_matched", apify_run_id=event['id']))
+            else:
+                new_c = Customer(customer_id=f"cs_{secrets.token_hex(6)}", email=email, linked_stripe_customer_id=stripe_cust_id, tier='trial', subscription_status='pending_signup', max_cards=50)
+                db_session.add(new_c)
+                db_session.flush()
+                db_session.add(RunHistory(customer_id=new_c.id, card_id=None, alert_error="webhook_checkout_completed_new", apify_run_id=event['id']))
+                
+        elif event['type'] == 'customer.subscription.updated':
+            stripe_cust_id = data_obj.get('customer')
+            we.stripe_customer_id = stripe_cust_id
+            items = data_obj.get('items', {}).get('data', [])
+            if items:
+                price = items[0].get('price', {}).get('unit_amount', 0)
+                tier, max_cards = ("Casual", 3) if price == 1500 else ("Deal-Pro", 50) if price == 4500 else ("Pro", -1)
+                we.tier = tier
+                we.max_cards = max_cards
+                customer = db_session.query(Customer).filter_by(linked_stripe_customer_id=stripe_cust_id).first()
+if customer:
+                    customer.tier = tier
+                    customer.max_cards = max_cards
+                    customer.subscription_status = 'active'
+                    db_session.add(RunHistory(customer_id=customer.id, card_id=None, alert_error=f"webhook_subscription_updated_{tier}", apify_run_id=event['id']))
+                    
+        elif event['type'] == 'customer.subscription.deleted':
+            stripe_cust_id = data_obj.get('customer')
+            we.stripe_customer_id = stripe_cust_id
+            we.tier = "trial"
+            customer = db_session.query(Customer).filter_by(linked_stripe_customer_id=stripe_cust_id).first()
+if customer:
+                customer.tier = 'trial'
+                customer.subscription_status = 'trial'
+                db_session.add(RunHistory(customer_id=customer.id, card_id=None, alert_error="webhook_subscription_deleted", apify_run_id=event['id']))
+    except Exception as e:
+        we.status = "error"
+        we.notes = str(e)
+    db_session.commit()
+    return jsonify({"success": True}), 200
+
+@app.route('/billing/checkout', methods=['POST'])
+@login_required
+def stripe_checkout():
+    customer = get_current_customer()
+    success_url = request.url_root + "billing/success?session_id={CHECKOUT_SESSION_ID}"
+    cancel_url = request.url_root + "monitor?cancel=true"
+    try:
+        session_obj = stripe.checkout.Session.create(
+            payment_method_types=['card'],
+            customer_email=customer.email,
+            line_items=[{'price_data': {'currency': 'usd', 'product_data': {'name': 'Card Scout Deal-Pro (14-day Free Trial)'}, 'unit_amount': 4500, 'recurring': {'interval': 'month'}}, 'quantity': 1}],
+            mode='subscription',
+            subscription_data={'trial_period_days': 14},
+            success_url=success_url,
+            cancel_url=cancel_url,
+        )
+we = WebhookEvent(event_type="checkout_session_initiated", customer_email=customer.email, status="initiated", notes=session_obj.id)
+        rh = RunHistory(customer_id=customer.id, card_id=None, alert_error="checkout_session_initiated", apify_run_id=session_obj.id)
+        db_session.add(we)
+        db_session.add(rh)
+        db_session.commit()
+        return redirect(session_obj.url, code=303)
+    except Exception as e:
+        flash(f"Stripe Checkout error: {e}", "error")
+        return redirect(url_for('monitor'))
+
+@app.route('/billing/success')
+def billing_success():
+    session_id = request.args.get('session_id')
+    if not session_id: return redirect(url_for('monitor'))
+    try:
+        session_obj = stripe.checkout.Session.retrieve(session_id)
+        email = session_obj.customer_details.email
+        stripe_cust_id = session_obj.customer
+we = WebhookEvent(event_type="checkout_success_land", event_id=session_id, customer_email=email, stripe_customer_id=stripe_cust_id, status="success")
+        db_session.add(we)
+        customer = db_session.query(Customer).filter_by(email=email).first()
+        if customer:
+            customer.subscription_status = 'trial' if session_obj.payment_status == 'no_payment_required' else 'active'
+            customer.linked_stripe_customer_id = stripe_cust_id
+            customer.tier = 'Deal-Pro'
+            customer.max_cards = 50
+            we.notes = "matched existing row, updated tier"
+            rh = RunHistory(customer_id=customer.id, card_id=None, alert_error="checkout_success_matched_row", apify_run_id=session_id)
+            db_session.add(rh)
+            flash("Account linked and upgraded successfully!", "success")
+        else:
+            new_c = Customer(customer_id=f"cs_{secrets.token_hex(6)}", email=email, linked_stripe_customer_id=stripe_cust_id, tier='trial', subscription_status='pending_signup', max_cards=50)
+            db_session.add(new_c)
+            db_session.flush() # get new_c.id
+            we.notes = "created pending_signup row"
+            rh = RunHistory(customer_id=new_c.id, card_id=None, alert_error="checkout_success_new_row", apify_run_id=session_id)
+            db_session.add(rh)
+            flash("Account created! Please complete registration.", "success")
+        db_session.commit()
+    except Exception as e:
+        flash(f"Error retrieving session: {e}", "error")
+        db_session.add(WebhookEvent(event_type="checkout_success_error", event_id=session_id, status="error", notes=str(e)))
+        db_session.commit()
+    return redirect(url_for('monitor'))
 
 if __name__ == '__main__':
     init_db()  # Make sure tables exist
