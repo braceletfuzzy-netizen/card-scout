@@ -1,0 +1,24 @@
+IMPACT/EPN DOMAIN VERIFICATION — EVIDENCE BUNDLE (Oct 22, 2026)
+Domain: cardscout.pro | Token: 0d54fa41-a1e1-48e7-854c-160e826f9210
+
+1. TAG DEPLOYED IN PRODUCTION <head> (live curl, 2026-10-22 ~16:45 CDT):
+<meta name="impact-site-verification" content="0d54fa41-a1e1-48e7-854c-160e826f9210" value="0d54fa41-a1e1-48e7-854c-160e826f9210">
+<meta name='impact-site-verification' value='0d54fa41-a1e1-48e7-854c-160e826f9210'>
+(both the standard content= convention AND the exact instruction form)
+
+2. CRAWLER-ACCESS PROOFS (all user-agents receive the tag):
+- Mozilla/5.0 (compatible; ImpactSiteVerificationBot/1.0): HTTP 200, tag present
+- GoogleBot UA: HTTP 200, tag present
+- Empty UA: HTTP 200, tag present
+- gzip-encoded fetch: tag present
+- http://cardscout.pro -> 301 -> https://cardscout.pro
+- https://www.cardscout.pro -> 301 -> https://cardscout.pro (redirect target carries tag)
+
+3. RETRY LOG: "Add Website" attempted 4x (16:20, 16:25, 16:35, 16:45 CDT) — every
+attempt returns "Failed to add website" client-side, despite the live tag being
+fetchable from multiple networks and user-agents.
+
+4. REQUEST: manual verification of cardscout.pro, OR the required fetch parameters
+(user-agent / protocol / exact URL path) so our edge can accommodate the crawler.
+
+5. Campaign: default (5339224963), Active. Account email: jonathangeorge13@gmail.com.
