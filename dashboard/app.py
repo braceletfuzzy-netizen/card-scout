@@ -152,7 +152,7 @@ def dashboard_login():
     if request.method == 'GET':
         return render_template_string(INDEX_TEMPLATE)
 
-webhook = request.form.get('webhook', '').strip()
+    webhook = request.form.get('webhook', '').strip()
     accept_disclaimer = request.form.get('accept_disclaimer')
 
     if not webhook:
@@ -409,7 +409,7 @@ def update_dashboard():
     action = request.form.get('action', '')
 
 
-if action == 'update_webhook':
+    if action == 'update_webhook':
         new_webhook = request.form.get('webhook', '').strip()
         accept_disclaimer = request.form.get('accept_disclaimer')
         if not accept_disclaimer:
@@ -1236,7 +1236,7 @@ def stripe_webhook():
             we.tier = "trial"
             
             customer = db_session.query(Customer).filter_by(email=email).first()
-if customer:
+            if customer:
                 customer.subscription_status = 'trial'
                 customer.tier = 'trial'
                 customer.linked_stripe_customer_id = stripe_cust_id
@@ -1257,7 +1257,7 @@ if customer:
                 we.tier = tier
                 we.max_cards = max_cards
                 customer = db_session.query(Customer).filter_by(linked_stripe_customer_id=stripe_cust_id).first()
-if customer:
+            if customer:
                     customer.tier = tier
                     customer.max_cards = max_cards
                     customer.subscription_status = 'active'
@@ -1268,7 +1268,7 @@ if customer:
             we.stripe_customer_id = stripe_cust_id
             we.tier = "trial"
             customer = db_session.query(Customer).filter_by(linked_stripe_customer_id=stripe_cust_id).first()
-if customer:
+            if customer:
                 customer.tier = 'trial'
                 customer.subscription_status = 'trial'
                 db_session.add(RunHistory(customer_id=customer.id, card_id=None, alert_error="webhook_subscription_deleted", apify_run_id=event['id']))
@@ -1294,7 +1294,7 @@ def stripe_checkout():
             success_url=success_url,
             cancel_url=cancel_url,
         )
-we = WebhookEvent(event_type="checkout_session_initiated", customer_email=customer.email, status="initiated", notes=session_obj.id)
+        we = WebhookEvent(event_type="checkout_session_initiated", customer_email=customer.email, status="initiated", notes=session_obj.id)
         rh = RunHistory(customer_id=customer.id, card_id=None, alert_error="checkout_session_initiated", apify_run_id=session_obj.id)
         db_session.add(we)
         db_session.add(rh)
@@ -1312,7 +1312,7 @@ def billing_success():
         session_obj = stripe.checkout.Session.retrieve(session_id)
         email = session_obj.customer_details.email
         stripe_cust_id = session_obj.customer
-we = WebhookEvent(event_type="checkout_success_land", event_id=session_id, customer_email=email, stripe_customer_id=stripe_cust_id, status="success")
+        we = WebhookEvent(event_type="checkout_success_land", event_id=session_id, customer_email=email, stripe_customer_id=stripe_cust_id, status="success")
         db_session.add(we)
         customer = db_session.query(Customer).filter_by(email=email).first()
         if customer:
