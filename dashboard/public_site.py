@@ -489,10 +489,25 @@ def trending():
     Card Hedger top-movers endpoint, cached every 6 hours.
     Categories: All, Baseball, Basketball, Football, Hockey, Pokemon, MTG, One Piece
     """
-    from build_trending import fetch_top_movers, render_trending_html
-    category = request.args.get('category', 'All')
-    movers_data = fetch_top_movers(category, count=10)
-    return render_trending_html(category, movers_data)
+    import sys
+    from pathlib import Path
+    scripts_dir = Path(__file__).resolve().parent.parent / 'scripts'
+    sys.path.insert(0, str(scripts_dir))
+    try:
+        from build_trending import fetch_top_movers, render_trending_html
+        category = request.args.get('category', 'All')
+        movers_data = fetch_top_movers(category, count=10)
+        return render_trending_html(category, movers_data)
+    except Exception as e:  # graceful degrade: trending is optional surface, never 500
+        from flask import current_app
+        current_app.logger.warning(f"/trending degraded: {e}")
+        return Response(
+            "<!DOCTYPE html><html><head><title>Trending — Card Scout</title>"
+            "<link rel=\"stylesheet\" href=\"/static/style.css\"></head><body>"
+            "<header><h1>Trending — Card Scout</h1></header>"
+            "<main><p>Trending data is refreshing right now. Please check back soon.</p>"
+            f"<p><a href=\"/\">Back to home</a></p></main></body></html>",
+            status=200, mimetype='text/html')
 
 
 @site_bp.route('/tracked')
