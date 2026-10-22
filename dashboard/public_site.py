@@ -518,20 +518,46 @@ def tracked():
     90d sparkline per card. Public-facing but only shows cards; doesn't
     surface personal data.
     """
-    from build_tracked import (
-        get_tracked_cards_for_customer,
-        render_tracked_page,
-        get_categories_present,
-    )
-    category = request.args.get('category', 'All')
+    import sys
+    from pathlib import Path
+    scripts_dir = Path(__file__).resolve().parent.parent / 'scripts'
+    sys.path.insert(0, str(scripts_dir))
+    try:
+        from build_tracked import (
+            get_tracked_cards_for_customer,
+            render_tracked_page,
+            get_categories_present,
+        )
+    except Exception as e:
+        from flask import current_app
+        current_app.logger.warning(f"/tracked degraded: {e}")
+        return Response(
+            "<!DOCTYPE html><html><head><title>Tracked — Card Scout</title>"
+            "<link rel=\"stylesheet\" href=\"/static/style.css\"></head><body>"
+            "<header><h1>Tracked Cards</h1></header>"
+            "<main><p>Tracked-cards data is refreshing right now. Please check back soon.</p>"
+            f"<p><a href=\"/\">Back to home</a></p></main></body></html>",
+            status=200, mimetype='text/html')
+    try:
+        category = request.args.get('category', 'All')
 
-    # If customer logged in, show only their cards.
-    # If not, show all tracked cards (public surface).
-    customer = _get_logged_in_customer()
-    customer_slug = customer.get('customer_id') if customer else None
+        # If customer logged in, show only their cards.
+        # If not, show all tracked cards (public surface).
+        customer = _get_logged_in_customer()
+        customer_slug = customer.get('customer_id') if customer else None
 
-    cards = get_tracked_cards_for_customer(customer_slug=customer_slug, category=category)
-    return render_tracked_page(customer_slug, category, cards)
+        cards = get_tracked_cards_for_customer(customer_slug=customer_slug, category=category)
+        return render_tracked_page(customer_slug, category, cards)
+    except Exception as e:
+        from flask import current_app
+        current_app.logger.warning(f"/tracked degraded (runtime): {e}")
+        return Response(
+            "<!DOCTYPE html><html><head><title>Tracked — Card Scout</title>"
+            "<link rel=\"stylesheet\" href=\"/static/style.css\"></head><body>"
+            "<header><h1>Tracked Cards</h1></header>"
+            "<main><p>Tracked-cards data is refreshing right now. Please check back soon.</p>"
+            f"<p><a href=\"/\">Back to home</a></p></main></body></html>",
+            status=200, mimetype='text/html')
 
 
 # ============================================================================
