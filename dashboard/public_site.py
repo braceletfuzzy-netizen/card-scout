@@ -53,7 +53,7 @@ LANDING_TEMPLATE = '''
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://cardscout.pro/">
 <!-- Impact.com site-ownership verification (EPN/affiliate path, Oct 22) -->
-<meta name="impact-site-verification" value="0d54fa41-a1e1-48e7-854c-160e826f9210">
+<meta name="impact-site-verification" content="0d54fa41-a1e1-48e7-854c-160e826f9210" value="0d54fa41-a1e1-48e7-854c-160e826f9210">
 <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
