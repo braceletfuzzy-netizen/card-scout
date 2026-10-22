@@ -3,3 +3,6 @@ gunicorn==23.0.0
 sqlalchemy==2.0.36
 gspread==6.2.1
 python-dotenv==1.0.1
+stripe
+requests
+requests_oauthlib
