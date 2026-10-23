@@ -116,3 +116,14 @@ P12 EXTENDED: the no-advice/user-agency clauses render alongside the privacy blo
 (P12 tests both: disclosure + agency clauses present, consistent, never contradicted
 by other copy).
 ## STATUS: BRIEF REVISED IN PLACE (founder correction AM): auth = GOOGLE LOGIN (person-attribution; roster-gated). WALL-E GO stands. Verify = Hermes P9-P12 (P9 = roster-gate tests, P12 = disclosure-element + never-sell clauses) + inherited sweeps. No stamps until then.
+
+---
+## BUILD VERIFIED 2026-10-23 (Hermes battery, fresh-run, commit 37cc095)
+P9 roster-gate PASS (non-roster/logged-out => 404/redirect, interior never renders · roster emails pass)
+P10 e2e PASS (synthetic Turang paste -> analyze 200 -> reward render: distribution + lane + credit + grade-state + listings; ledger ticked — jim: 1 paste/4 prints/lanes recorded; deposit written anonymized-id dir)
+P11 privacy PASS (own-rows only; email-keyed ledger; anonymized deposit dirs)
+P12 disclosure PASS (four-clause block live on login view: WHAT WE TAKE / NEVER / AWAY / DISCONNECTION)
+P4-inherited clean. band_pages machinery reused (no duplicate listings impl).
+LIVE-STATE: /contributor/login renders 200 w/ disclosure; real OAuth needs GOOGLE_CLIENT_ID in env
+(Env note: ledger+deposits write to cardscout-2.0 data_lake via CARDSCOUT2_HOME — same-machine Phase 1; Render move documented.)
+VERIFIED-2026-10-23. WALL-E = 2/2 builds verified on first-battery pass this cycle.
