@@ -275,17 +275,24 @@ def parse_pull_dump(text: str, player_hint: str | None = None) -> dict:
                      "format": fmt, "grade_bucket": grade_bucket, "lane": lane,
                      "date": date_m.group(1) if date_m else ""})
 
-    # player guess: the corpus registry's player names, longest-first match
+    # player guess -- ROW-DOMINANCE law (Oct 23 mis-attribution catch: the
+    # longest-first match hit eBay page CHROME, crediting Chourio for a Turang
+    # paste). Rule: count registry-player mentions in the LISTING ROWS (not the
+    # page blob: chrome and related-searches sit in the blob but not the rows);
+    # the player named in the most rows wins; zero row-hits falls back to
+    # player_hint; longest-name tiebreak only when row-counts tie.
     players = sorted({l["player"] for l in BP.load_registry()["raw"].get("lanes", [])},
                      key=len, reverse=True)
     player = player_hint or None
-    hay = blob.lower()
     if not player:
+        row_text = "\n".join((r.get("title", "") + " " + r.get("line", "")) for r in rows)
+        counts = {}
         for p in players:
-            if p.lower() in hay:
-                player = p
-                break
-    # lanes grouped for refinement (per product token if the titles carry one)
+            c = row_text.lower().count(p.lower())
+            if c:
+                counts[p] = c
+        if counts:
+            player = max(counts.items(), key=lambda kv: (kv[1], len(kv[0])))[0]
     lanes: dict[str, list[float]] = {}
     for r in rows:
         lanes.setdefault(r["lane"], []).append(r["price"])
