@@ -52,6 +52,11 @@ from public_site import site_bp
 # Register band pages blueprint (card pages: band + live listings; spec 2026-10-22)
 from band_pages import bp as bands_bp
 app.register_blueprint(bands_bp)
+
+# Register contributor workspace blueprint (paste -> parse -> reward; brief 2026-10-23;
+# private surface: robots-disallowed, roster-gated — never published)
+from contributor_bp import bp as contrib_bp
+app.register_blueprint(contrib_bp)
 import stripe
 import requests
 from db_models import WebhookEvent, RunHistory
@@ -1379,6 +1384,12 @@ except Exception as _e:
 @app.errorhandler(Exception)
 def _log_exception(e):
     """Log every unhandled exception with full traceback."""
+    # HTTPExceptions (404/405/400/...) are Flask's normal control flow — log at
+    # debug, never convert them to 500 (a GET on a POST-only route must return
+    # its true status; the contributor-gate tests rely on exact statuses).
+    from werkzeug.exceptions import HTTPException
+    if isinstance(e, HTTPException):
+        return e
     import traceback
     _error_log.error(
         f"Unhandled exception on {request.method} {request.path}\n"

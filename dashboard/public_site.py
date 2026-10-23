@@ -614,6 +614,7 @@ ROBOTS_TEMPLATE = '''User-agent: *
 Allow: /
 Disallow: /dashboard/
 Disallow: /dashboard/login
+Disallow: /contributor/
 
 Sitemap: https://cardscout.pro/sitemap.xml
 '''

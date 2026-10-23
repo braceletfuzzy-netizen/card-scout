@@ -1,0 +1,58 @@
+/* CardScout contributor workspace — palette = static/style.css tokens. */
+.contrib-main { max-width: 980px; margin: 0 auto; padding: 24px; }
+.contrib-lede { color: var(--color-muted); max-width: 720px; }
+.contrib-notice { color: #92400e; background: #fffbeb; border: 1px solid var(--color-highlight); padding: 8px 12px; border-radius: var(--radius); }
+.contrib-page textarea {
+  width: 100%;
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 13px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 12px;
+}
+.paste-actions { display: flex; align-items: center; gap: 12px; margin: 10px 0 24px; }
+.paste-actions button { background: var(--color-accent); color: #fff; border: none; border-radius: var(--radius); padding: 10px 18px; font-size: 15px; cursor: pointer; }
+.paste-actions button:hover { background: var(--color-accent-hover); }
+.paste-cap { color: var(--color-muted); font-size: 13px; }
+.google-btn-row { margin: 18px 0; }
+.g-login {
+  display: inline-block; background: #db4437; color: #fff; padding: 10px 20px;
+  border-radius: 4px; font-weight: 600; text-decoration: none; font-size: 14px;
+}
+
+/* the founder-directed disclosure (P12) */
+.contrib-disclosure {
+  border: 1px solid var(--color-border); border-radius: var(--radius);
+  background: var(--color-card); padding: 14px 16px; margin: 18px 0; font-size: 14px;
+}
+.disc-lead { margin-bottom: 6px; }
+.disc-lead::before { content: "▸ "; color: var(--color-accent); }
+.contrib-disclosure p { margin: 6px 0; color: var(--color-text); }
+.disc-agency { border-top: 1px dashed var(--color-border); margin-top: 10px; padding-top: 8px; }
+.reward-block { border: 1px solid var(--color-border); border-radius: var(--radius); background: var(--color-card); padding: 16px; margin: 14px 0; }
+.reward-block h2 { font-size: 17px; margin-bottom: 8px; }
+.reward-note { color: var(--color-muted); font-size: 14px; }
+.reward-thanks { border-color: var(--color-success); }
+
+/* histogram */
+.hist { margin: 10px 0; }
+.hist-title { font-size: 13px; font-weight: 600; color: var(--color-muted); margin-bottom: 4px; }
+.hist-bars { display: flex; flex-direction: column; gap: 3px; }
+.hist-bin { display: flex; align-items: center; gap: 8px; }
+.hist-bar { background: var(--color-accent); opacity: 0.55; height: 14px; border-radius: 3px; min-width: 2px; }
+.hist-count { font-size: 12px; color: var(--color-muted); min-width: 24px; text-align: right; }
+
+/* refinement rows */
+.refine-row { padding: 8px 0; border-bottom: 1px dashed var(--color-border); }
+.refine-row:last-child { border-bottom: none; }
+.refine-tip { color: var(--color-muted); font-size: 13px; font-style: italic; margin-top: 4px; }
+.cause-list { margin: 12px 0 12px 20px; color: var(--color-text); }
+
+/* ledger */
+.ledger-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.ledger-table th, .ledger-table td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--color-border); }
+.ledger-table th { color: var(--color-muted); font-weight: 600; font-size: 13px; }
+.ledger-summary { color: var(--color-muted); }
+
+/* reuse listing-row grid from bands.css; reward page includes bands.js */
+.contrib-footer { border-top: 1px solid var(--color-border); margin-top: 24px; padding: 14px 24px; font-size: 13px; color: var(--color-muted); }

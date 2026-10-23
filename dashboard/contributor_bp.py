@@ -1,0 +1,887 @@
+"""
+CardScout CONTRIBUTOR WORKSPACE (paste → parse → reward) — Oct 23, 2026.
+
+Brief: cardscout-2.0/For You/Plans/2026-10-23-walle-brief-contributor-workspace.md
+Parent spec: 2026-10-22-CARD-PAGE-BUILD-SPEC-v1.md. Builder: WALL-E. Verifier: Hermes.
+
+BANKED SHAPE (brief §AUTH revised Oct 23 AM — founder correction):
+- Auth = Google OAuth2 (the /admin/login/google pattern in app.py), attribution to
+  the PERSON (email), not a token. No account/passwords created.
+- Roster gate: email must be in .env CONTRIBUTOR_EMAILS (founder-curated list,
+  config-not-hardcode). Any other Google email -> clean redirect to /bands,
+  zero interior render (P9).
+- LOCAL-ONLY PHASE 1 (founder call at brief review): this surface is private;
+  NEVER published, robots-disallowed, no public links.
+
+THE LOOP (§ paste → reward):
+  1 PASTE (textarea, ~200KB cap) -> 2 PARSE (standard funnel, lane-split,
+  print/ask gate per Two-Class law — asks excluded with counted causes, never
+  silent) -> 3 REWARD RENDER (their paste's distribution; the lane-refined
+  before/after as a WIDTH-DELTA PERCENTAGE + credit line — band $ values never
+  render per public law; BIN-sorted listings via the band_pages cache-law path;
+  grade-state after contribution; ledger tick) -> 4 THANKS + ONE refinement tip.
+
+BOUNDS honored here:
+- NEVER publish anything from this workspace (one-way private; no index).
+- NEVER leak positions/engine output/z-scores/band $ numbers in the reward render.
+- NEVER send Discord/email push from this surface.
+- NEVER break on parse failure: honest-200 error page with the counted cause (P10e).
+- PII: ledger keys on GOOGLE EMAIL (person-attribution, founder-directed); name
+  + email + counts + lanes only; deposit FILES keyed on anonymized contributor id.
+- Google-info disclosure + the three no-advice/user-agency clauses render on the
+  login view (expandable) and as the standing footer line (P12).
+"""
+from __future__ import annotations
+
+import hashlib
+import json
+import os
+import re
+import threading
+import time
+import unicodedata
+from datetime import datetime, timezone
+from pathlib import Path
+
+from flask import Blueprint, redirect, render_template_string, request, session, url_for
+
+# Band-pages machinery = the ONLY listings path (cache law + EPN gate inherited
+# from the already-verified module — no duplicate implementation).
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import band_pages as BP  # noqa: E402
+
+bp = Blueprint("contrib", __name__, url_prefix="/contributor")
+
+DASH_DIR = Path(__file__).resolve().parent
+REPO_DIR = DASH_DIR.parent
+SITE_ENV = REPO_DIR / ".env"
+
+# Contributor corpus lives in the 2.0 data lake (this is a same-machine Phase 1
+# surface; on a future Render deploy this must move to the service's own disk —
+# documented in the brief's STATUS note).
+TWO_REPO = Path(os.environ.get(
+    "CARDSCOUT2_HOME", r"C:/Users/J/Documents/LLM/cardscout-2.0"))
+DEPOSITS_DIR = Path(os.environ.get(
+    "CONTRIBUTOR_DEPOSITS_DIR", TWO_REPO / "data_lake" / "raw" / "contributor"))
+LEDGER_PATH = Path(os.environ.get(
+    "CONTRIBUTOR_LEDGER_PATH", TWO_REPO / "data_lake" / "contributor_ledger.json"))
+
+PASTE_MAX_CHARS = 200_000  # brief: ~200KB cap
+
+# ---------------------------------------------------------------------------
+# ENV (.env read-in-place; values never rendered or logged)
+# ---------------------------------------------------------------------------
+_env_lock = threading.Lock()
+_env_cache: dict[str, str] = {}
+_env_read_at = 0.0
+
+
+def env_file_val(key: str, ttl: float = 600.0) -> str | None:
+    """Read a key from the site .env (same pattern as band_pages.py)."""
+    global _env_cache, _env_read_at
+    now = time.time()
+    with _env_lock:
+        if now - _env_read_at > ttl:
+            try:
+                txt = SITE_ENV.read_text(encoding="utf-8", errors="ignore")
+            except OSError:
+                txt = ""
+            _env_cache = dict(re.findall(
+                r"^\s*([A-Z_][A-Z0-9_]*)\s*=\s*['\"]?([^'\r\n]*)", txt, re.M))
+            _env_read_at = now
+        v = os.environ.get(key)
+        if v not in (None, ""):
+            return v.strip()
+        v = (_env_cache.get(key) or "").strip()
+        return v or None
+
+
+def contributor_roster() -> list[str]:
+    raw = env_file_val("CONTRIBUTOR_EMAILS") or ""
+    return [e.strip().lower() for e in re.split(r"[,;\s]+", raw) if e.strip()]
+
+
+def is_on_roster(email: str | None) -> bool:
+    return bool(email) and email.strip().lower() in set(contributor_roster())
+
+
+def google_client_id() -> str | None:
+    return env_file_val("GOOGLE_CLIENT_ID")
+
+
+# ---------------------------------------------------------------------------
+# GOOGLE OAUTH2 (same flow as app.py's admin login, own namespace/keys)
+# ---------------------------------------------------------------------------
+GOOGLE_DISCOVERY_URL = "https://accounts.google.com/.well-known/openid-configuration"
+
+
+def _finish_login(user_info: dict) -> str:
+    """Shared roster gate: on-roster -> interior; else redirect /bands (P9)."""
+    email = (user_info.get("email") or "").strip().lower()
+    if not email:
+        return redirect(url_for("contrib.login"))
+    if is_on_roster(email):
+        session.clear()
+        session["contributor_email"] = email
+        session["contributor_name"] = (user_info.get("name") or email.split("@")[0])
+        session.permanent = True
+        _log_event("login-ok")
+        return redirect(url_for("contrib.workspace"))
+    # zero interior render: straight back to the public bands surface
+    _log_event("login-denied")  # no email logged (PII rule)
+    return redirect("/bands")
+
+
+# ===========================================================================
+# THE PARSE FUNNEL (local; standard lane-split + Two-Class print/ask law)
+# ===========================================================================
+try:  # lane vocabulary comes from the 2.0 parser (source of truth)
+    sys.path.insert(0, str(TWO_REPO / "src" / "mass_pipeline"))
+    from stage_b_parse import LANE_TAXONOMY  # type: ignore  # noqa: E402
+    LANE_TAXONOMY_FALLBACK = None
+except Exception:
+    from src.mass_pipeline.stage_b_parse import LANE_TAXONOMY  # type: ignore  # noqa: E402
+    LANE_TAXONOMY_FALLBACK = None
+
+try:
+    sys.path.insert(0, str(TWO_REPO / "scripts"))
+    from build_card_page_registry import band_class_for  # type: ignore  # noqa: E402
+except Exception:  # local fallback mirrors the builder's thresholds
+    def band_class_for(n: int, player: str, lane: str) -> str:  # type: ignore
+        if n < 3:
+            return "forming"
+        return "provisional"  # engine flag only via the builder's bands.json check
+
+PRICE_RE = re.compile(r"\$\s?([1-9][\d,]*(?:\.\d{2})|[0-9](?:[\d,]*\.\d{2}))")
+BIDS_RE = re.compile(r"(\d+)\s+bids?\b", re.IGNORECASE)
+GRADE_RE = re.compile(r"\b(PSA|BGS|SGC|CGC)\s*(9\.5|10|9|8(\.5)?|7(\.5)?)\b", re.IGNORECASE)
+
+
+def _norm_lane(title: str, has_grade: bool) -> str:
+    is_auto = bool(re.search(r"auto|ink|signature", title, re.IGNORECASE))
+    base = "mass"
+    for lane_name, pattern in LANE_TAXONOMY.items():
+        try:
+            if re.search(pattern, title, re.IGNORECASE):
+                base = lane_name
+                break
+        except re.error:
+            continue
+    parts = (["graded"] if has_grade else []) + (["auto"] if is_auto else [])
+    if base != "mass":
+        parts.append(base)
+    return "-".join(parts) or "mass"
+
+
+def parse_pull_dump(text: str, player_hint: str | None = None) -> dict:
+    """The standard funnel on arbitrary pull-dump text. Honest accounting:
+    every excluded line lands in `excluded` with its cause. Never raises."""
+    excluded: dict[str, int] = {}
+    rows: list[dict] = []
+    seen: set[tuple] = set()
+    text_l = text or ""
+    is_html = bool(re.search(r"<\s*(!doctype|html|\bdiv\b)|s-item|s-card", text_l, re.IGNORECASE))
+    blob = re.sub(r"\r", "\n", text_l[:PASTE_MAX_CHARS])
+
+    records: list[dict] = []
+    if is_html:
+        try:
+            from bs4 import BeautifulSoup
+            soup = BeautifulSoup(blob, "html.parser")
+            blocks = soup.find_all(lambda t: t.name in ["li", "div"] and t.get("class")
+                                   and any(c in ["s-item", "s-card"] for c in t.get("class")))
+            for el in blocks:
+                title_el = el.find(class_=lambda c: c and "title" in c)
+                title = (title_el.get_text(strip=True) if title_el else
+                         el.get_text(separator=" ", strip=True)[:120])
+                if title.lower().startswith("shop on ebay"):
+                    excluded["nav-chrome"] = excluded.get("nav-chrome", 0) + 1
+                    continue
+                sp = el.find(string=lambda s: (s or "").strip().lower() == "sponsored")
+                if sp is not None:
+                    excluded["sponsored"] = excluded.get("sponsored", 0) + 1
+                    continue
+                records.append({"title": title, "line": el.get_text(separator=" ", strip=True)})
+        except Exception:
+            excluded["html-parse-error"] = excluded.get("html-parse-error", 0) + 1
+        # fall through to line mode with the page TEXT for anything blocks missed
+        text_for_lines = soup.get_text("\n")
+    else:
+        text_for_lines = blob
+
+    for line in (text_for_lines or "").splitlines():
+        line = line.strip()
+        if not line or len(line) < 4:
+            continue
+        records.append({"title": line[:160], "line": line})
+
+    for rec in records:
+        line = rec["line"]
+        low = line.lower()
+        title = rec["title"]
+        m = PRICE_RE.search(line)
+        if not m:
+            excluded["no-price"] = excluded.get("no-price", 0) + 1
+            continue
+        try:
+            price = float(m.group(1).replace(",", ""))
+        except ValueError:
+            excluded["bad-price"] = excluded.get("bad-price", 0) + 1
+            continue
+        if price <= 0:
+            excluded["bad-price"] = excluded.get("bad-price", 0) + 1
+            continue
+        if "(ask)" in low or low.endswith("ask"):
+            excluded["asks"] = excluded.get("asks", 0) + 1  # counted, never silent
+            continue
+        bid_m = BIDS_RE.search(line)
+        bids = int(bid_m.group(1)) if bid_m else 0
+        fmt = "OBO" if ("best offer" in low or "obo" in low) else (
+            "AUCTION" if (bids > 0 or "auction" in low or " bid" in low) else "BIN")
+        g = GRADE_RE.search(title)
+        grade_bucket = f"{g.group(1).upper()}{g.group(2)}" if g else "raw"
+        lane = _norm_lane(title, g is not None)
+        date_m = re.search(r"\b(20\d{2}-\d{2}-\d{2})\b", line)
+        key = (title.lower()[:100], price)
+        if key in seen:
+            excluded["duplicates"] = excluded.get("duplicates", 0) + 1
+            continue
+        seen.add(key)
+        rows.append({"title": title[:160], "price": price, "bids": bids,
+                     "format": fmt, "grade_bucket": grade_bucket, "lane": lane,
+                     "date": date_m.group(1) if date_m else ""})
+
+    # player guess: the corpus registry's player names, longest-first match
+    players = sorted({l["player"] for l in BP.load_registry()["raw"].get("lanes", [])},
+                     key=len, reverse=True)
+    player = player_hint or None
+    hay = blob.lower()
+    if not player:
+        for p in players:
+            if p.lower() in hay:
+                player = p
+                break
+    # lanes grouped for refinement (per product token if the titles carry one)
+    lanes: dict[str, list[float]] = {}
+    for r in rows:
+        lanes.setdefault(r["lane"], []).append(r["price"])
+    return {"rows": rows, "excluded": excluded, "player": player,
+            "print_count": len(rows), "lanes": lanes}
+
+
+# ===========================================================================
+# REFINEMENT MATH (before/after width delta; percents only — never band $)
+# ===========================================================================
+def _q(sorted_vals: list[float], q: float) -> float:
+    if not sorted_vals:
+        return float("nan")
+    idx = q * (len(sorted_vals) - 1)
+    lo = int(idx)
+    hi = min(lo + 1, len(sorted_vals) - 1)
+    frac = idx - lo
+    return sorted_vals[lo] * (1 - frac) + sorted_vals[hi] * frac
+
+
+def _width(vals: list[float]) -> float | None:
+    if len(vals) < 3:
+        return None
+    s = sorted(vals)
+    return max(0.0, _q(s, .75) - _q(s, .25))
+
+
+def refine_lanes(parse: dict) -> list[dict]:
+    """Match paste lane-groups to registry lanes; compute the refine story."""
+    out: list[dict] = []
+    player = parse.get("player")
+    if not player:
+        return out
+    reg = BP.load_registry()["raw"].get("lanes", [])
+    registry_by_key: dict[tuple, dict] = {}
+    for l in reg:
+        if l["player"].lower() == player.lower():
+            registry_by_key.setdefault((l["product"] or "", l["lane"], l["grade_bucket"]), l)
+            # also allow product-less paste grouping against ANY product with same lane
+            registry_by_key.setdefault(("*", l["lane"], l["grade_bucket"]), l)
+    for lane_name, prices in sorted(parse.get("lanes", {}).items()):
+        if len(prices) < 2:
+            continue
+        # grade bucket of the group: majority of the group's rows
+        gbs: dict[str, int] = {}
+        for r in parse["rows"]:
+            if r["lane"] == lane_name:
+                gbs[r["grade_bucket"]] = gbs.get(r["grade_bucket"], 0) + 1
+        gb = max(gbs, key=lambda k: gbs[k]) if gbs else "raw"
+        match = registry_by_key.get(("*", lane_name, gb)) or registry_by_key.get(("*", lane_name, "raw"))
+        entry = {"lane": lane_name, "grade_bucket": gb, "n_paste": len(prices)}
+        if match:
+            old_prints = list(match.get("prints") or [])
+            n_before = match["n"]
+            merged = sorted(old_prints + [p for p in prices])
+            w_old, w_new = _width(old_prints), _width(merged)
+            entry.update({
+                "slug": match["slug"], "lane_display": match["lane_display"],
+                "n_before": n_before, "n_after": n_before + len(prices),
+                "old_class": match["band_class"],
+                "pct": (round((1 - w_new / w_old) * 100) if (w_old and w_new and w_new < w_old and n_before >= 3) else None),
+                "widened": bool(w_old and w_new and w_new > w_old and n_before >= 3),
+            })
+            # the would-be class after the contribution (honest honest state)
+            new_class = ("forming" if (n_before + len(prices)) < 3 else
+                         "engine_grade" if match["band_class"] == "engine_grade" else
+                         "provisional")
+            if (n_before + len(prices)) >= 3 and match["band_class"] == "forming" and \
+                    band_class_for(n_before + len(prices), match["player"], match["lane"]) == "engine_grade":
+                new_class = "engine_grade"
+            entry["new_class"] = new_class
+            entry["upgrade"] = (entry["old_class"] != new_class)
+        else:
+            entry.update({"slug": None, "lane_display": lane_name.replace("-", " ").title(),
+                          "starts_lane": True, "new_class": ("forming" if len(prices) < 3 else "provisional"),
+                          "upgrade": False})
+        out.append(entry)
+    return out
+
+
+# ===========================================================================
+# LEDGER (append-only rows keyed by GOOGLE EMAIL; private file, never rendered
+# beyond the session contributor's own rows — P11)
+# ===========================================================================
+_ledger_lock = threading.Lock()
+
+
+def contributor_id(email: str) -> str:
+    return "c" + hashlib.sha1(email.strip().lower().encode()).hexdigest()[:10]
+
+
+def ledger_tick(email: str, display_name: str, parse: dict, refined: list[dict],
+                paste_id: str) -> None:
+    row = {
+        "ts": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "paste_id": paste_id,
+        "prints": parse["print_count"],
+        "asks_excluded": (parse.get("excluded") or {}).get("asks", 0),
+        "lanes": [r.get("slug") or r.get("lane") for r in refined],
+        "refined": [{"slug": r.get("slug"), "pct": r.get("pct")} for r in refined if r.get("slug")],
+    }
+    with _ledger_lock:
+        try:
+            data = json.loads(LEDGER_PATH.read_text(encoding="utf-8")) if LEDGER_PATH.exists() else {}
+        except (OSError, ValueError):
+            data = {}
+        contrib = data.setdefault("contributors", {}).setdefault(email, {
+            "contributor_id": contributor_id(email),
+            "display_name": display_name,
+            "first_ts": row["ts"],
+            "pastes": 0, "prints_total": 0, "rows": [],
+        })
+        contrib["display_name"] = display_name  # refreshed on login/analyze
+        contrib["pastes"] = int(contrib.get("pastes", 0)) + 1
+        contrib["prints_total"] = int(contrib.get("prints_total", 0)) + parse["print_count"]
+        contrib.setdefault("rows", []).append(row)  # append-only
+        tmp = LEDGER_PATH.with_suffix(".tmp")
+        try:
+            LEDGER_PATH.parent.mkdir(parents=True, exist_ok=True)
+            tmp.write_text(json.dumps(data, indent=1), encoding="utf-8")
+            os.replace(tmp, LEDGER_PATH)
+        except OSError:
+            pass
+
+
+def own_ledger_rows(email: str) -> dict | None:
+    try:
+        data = json.loads(LEDGER_PATH.read_text(encoding="utf-8"))
+        return (data.get("contributors") or {}).get(email)
+    except (OSError, ValueError):
+        return None
+
+
+def _log_event(event: str) -> None:
+    try:
+        DEPOSITS_DIR.mkdir(parents=True, exist_ok=True)
+        with open(DEPOSITS_DIR / "events.log", "a", encoding="utf-8") as fh:
+            fh.write(f"{datetime.now(timezone.utc).isoformat(timespec='seconds')} {event}\n")
+    except OSError:
+        pass
+
+
+def _write_deposit(email: str, text: str, paste_id: str) -> None:
+    dir_ = DEPOSITS_DIR / contributor_id(email)
+    try:
+        dir_.mkdir(parents=True, exist_ok=True)
+        (dir_ / f"{paste_id}_paste.txt").write_text(text[:PASTE_MAX_CHARS], encoding="utf-8")
+    except OSError:
+        pass
+
+
+# ===========================================================================
+# HISTOGRAM (their paste's own distribution — their data, honest bins)
+# ===========================================================================
+def histogram(prices: list[float], bins: int = 8) -> list[dict]:
+    if not prices:
+        return []
+    lo, hi = min(prices), max(prices)
+    if hi <= lo:
+        return [{"x0": lo, "x1": hi, "n": len(prices), "w": 100.0}]
+    step = (hi - lo) / bins
+    counts = [0] * bins
+    for p in prices:
+        counts[min(int((p - lo) / step), bins - 1)] += 1
+    return [{"x0": lo + b * step, "x1": lo + (b + 1) * step, "n": counts[b],
+             "w": (counts[b] / len(prices) * 100.0)} for b in range(bins)]
+
+
+# ===========================================================================
+# TEMPLATES
+# ===========================================================================
+CSS = '<link rel="stylesheet" href="/static/style.css">\n<link rel="stylesheet" href="/static/contrib.css">'
+
+# The founder-directed standing privacy + no-advice disclosure (P12: the login
+# view carries the expandable full text; the workspace footer carries the
+# one-liner; both contain the same clauses — never contradictory).
+DISCLOSURE_FULL = """
+<div class="contrib-disclosure">
+  <p class="disc-lead"><strong>What we do with your Google information</strong></p>
+  <p class="disc-take">WHAT WE TAKE: your Google email + display name — used SOLELY to
+  attribute your contributions (ledger credit, your personal reward views).</p>
+  <p class="disc-never">WHAT WE NEVER DO: sell, share, rent, advertise against, or export
+  your information. Not in the business. Full stop.</p>
+  <p class="disc-leaves">WHAT LEAVES: nothing. Data flows one-way INTO the machine; the
+  ledger is private to you and the founder.</p>
+  <p class="disc-disconnect">THE DISCONNECTION GUARANTEE: you can ask to be removed at any
+  time (founder@cardscout.pro) — your ledger rows anonymize (email becomes a random
+  contributor-id), the lanes stay (they're market data), and your attribution credit
+  transfers into the anonymized form.</p>
+  <div class="disc-agency">
+    <p class="disc-agency-as-is">Listings are eBay content, shown as-is — we don't sell,
+    hold, grade, or warrant any card, and we're not affiliated with eBay or any grader.</p>
+    <p class="disc-agency-click">Clicking through to eBay or any seller is your decision
+    and your transaction — we earn a small commission (disclosed) and take no part after
+    the click.</p>
+    <p class="disc-agency-bands">Bands are built from the community's own pulls — they
+    show what has sold, not what to buy. Your judgment is the final layer.</p>
+  </div>
+</div>
+"""
+
+FOOTER_LINE = '''
+<footer class="contrib-footer">
+  <p>We show you the market with the data you provide — what you click and buy is your
+  call. Your Google info is used only to credit your contributions; we never sell, share,
+  or export it.</p>
+</footer>
+'''
+
+LOGIN_TEMPLATE = '''<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Contributor workspace — Card Scout</title>
+''' + CSS + '''
+</head>
+<body class="contrib-page">
+<header>
+  <nav>
+    <div class="nav-brand"><a href="/">Card Scout</a></div>
+    <div class="nav-links"><a href="/bands">Card Pages</a> <a href="/">Home</a></div>
+  </nav>
+</header>
+<main class="contrib-main">
+  <h1>Contributor workspace</h1>
+  <p class="contrib-lede">Paste an eBay pull — the machine parses it and the page returns
+  your reward: the paste's own distribution, the lane it refines, and your ledger credit.</p>
+  {% if notice %}<p class="contrib-notice">{{ notice }}</p>{% endif %}
+  <p class="google-btn-row">
+    <a class="g-login" href="{{ auth_url or '/contributor/login/google' }}">Sign in with Google</a>
+  </p>
+  ''' + DISCLOSURE_FULL.replace('class="contrib-disclosure"', 'class="contrib-disclosure"') + '''
+</main>
+''' + FOOTER_LINE + '''
+</body>
+</html>'''
+
+WORKSPACE_TEMPLATE = '''<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Contributor workspace — Card Scout</title>
+''' + CSS + '''
+</head>
+<body class="contrib-page">
+<header>
+  <nav>
+    <div class="nav-brand"><a href="/">Card Scout</a></div>
+    <div class="nav-links"><a href="/contributor/ledger">My ledger</a>
+      <a href="/contributor/logout">Sign out</a></div>
+  </nav>
+</header>
+<main class="contrib-main">
+  <h1>Paste an eBay pull</h1>
+  <p class="contrib-lede">Multi-page pastes are fine. The parser counts everything it
+  sets aside — nothing is dropped silently. You get the distribution, the refined lane,
+  and the ledger credit.</p>
+  <form method="post" action="/contributor/analyze">
+    <textarea name="paste" rows="14" placeholder="Paste the pull dump here (text or page source)…"  maxlength="{{ paste_max }}"></textarea>
+    <div class="paste-actions">
+      <button type="submit">Analyze paste</button>
+      <span class="paste-cap">up to ~{{ (paste_max // 1000) }}KB</span>
+    </div>
+  </form>
+  %LEADER%
+</main>
+''' + FOOTER_LINE + '''
+</body>
+</html>'''
+
+REWARD_TEMPLATE = '''<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Your paste's reward — Card Scout</title>
+''' + CSS + '''
+</head>
+<body class="contrib-page">
+<header>
+  <nav>
+    <div class="nav-brand"><a href="/">Card Scout</a></div>
+    <div class="nav-links"><a href="/contributor">New paste</a>
+      <a href="/contributor/ledger">My ledger</a> <a href="/contributor/logout">Sign out</a></div>
+  </nav>
+</header>
+<main class="contrib-main reward">
+  <h1>Analyzed — here's your reward</h1>
+
+  <!-- 1: YOUR PASTE'S DISTRIBUTION (honest counts; junk counted by cause) -->
+  <section class="reward-block">
+    <h2>Your paste's distribution</h2>
+    <p class="reward-note">{{ parse.print_count }} clean print{{ '' if parse.print_count == 1 else 's' }}
+    {% if parse.player %} — {{ parse.player }}{% endif %}.
+    {% set ex = parse.excluded %}
+    {% if ex %}Set aside (counted, never silent):
+      {% for cause, n in ex.items() %}{{ n }} {{ cause.replace('-', ' ') }}{{ '' if loop.last else ', ' }}{% endfor %}.
+    {% else %}Nothing set aside.{% endif %}</p>
+    {% for h in hists %}
+      <div class="hist">
+        <div class="hist-title">{{ h.label }}</div>
+        <div class="hist-bars">
+          {% for b in h.bins %}
+          <div class="hist-bin"><div class="hist-bar" style="width:{{ b.w | round(1) }}%"></div>
+            <span class="hist-count">{{ b.n }}</span></div>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </section>
+
+  <!-- 2: THE LANE REFINED (width-delta PERCENTAGE + credit; never band $) -->
+  {% if refined %}
+  <section class="reward-block">
+    <h2>The lane refined</h2>
+    {% for r in refined %}
+      <div class="refine-row">
+      {% if r.slug %}
+        <p>{{ r.lane_display }} — {{ r.n_before }} prints → {{ r.n_after }} prints.
+        {% if r.pct %}YOUR paste narrowed this lane's spread by {{ r.pct }}%. Credit: the freshest pull.{% endif %}
+        {% if r.widened %}The lane's spread widened with this paste (real market movement, recorded honestly).{% endif %}
+        {% if r.upgrade %}Lane state: {{ r.old_class | upper }} → <strong>{{ r.new_class | upper }}</strong>{% if r.new_class == 'provisional' and r.old_class == 'forming' %} — a band now forms on this page{% endif %}{% if r.new_class == 'engine_grade' and r.old_class != 'engine_grade' %} — engine-grade on the next registry rebuild{% endif %}.{% endif %}
+        </p>
+        <p class="refine-tip">Refinement tip: one refined query (name + set + the exact parallel) on your next pull tightens this lane further.</p>
+      {% else %}
+        <p>{{ r.lane_display }} — your paste starts data for a lane we don't have yet
+        ({{ r.n_paste }} prints; the band appears at 3). Keep pulling.</p>
+      {% endif %}
+      </div>
+    {% endfor %}
+  </section>
+  {% else %}
+  <section class="reward-block">
+    <h2>The lane refined</h2>
+    <p>No known lane matched yet — your paste is deposited and the corpus grows.
+    {% if not parse.player %}No player matched from the corpus yet; include the player name in your next search header for lane credit.{% endif %}</p>
+  </section>
+  {% endif %}
+
+  <!-- 3: LISTINGS for the refined lane (standard lower-half, cache-law served) -->
+  {% if lane_slug %}
+  <section class="reward-block">
+    <h2>Live listings — the refined lane</h2>
+    {% if items %}
+    <div class="sort-bar" role="toolbar" aria-label="Sort listings">
+      <span class="sort-label">Sort:</span>
+      <button class="sort-btn active" data-sort="default">Lowest BIN</button>
+      <button class="sort-btn" data-sort="price">Price</button>
+      <button class="sort-btn" data-sort="score">Score</button>
+      <button class="sort-btn" data-sort="fb">Feedback</button>
+      <button class="sort-btn" data-sort="ship">Free ship</button>
+      <button class="sort-btn" data-sort="type">BIN/Auction</button>
+      <button class="sort-btn" data-sort="date">Date</button>
+    </div>
+    <div class="listing-rows" id="listing-rows">
+      {% for it in items %}
+      <div class="listing-row"
+           data-price="{{ it.price }}" data-class="{{ it.cls }}"
+           data-score="{{ it.score if it.score is not none else -1 }}"
+           data-fb="{{ it.fb if it.fb is not none else -1 }}"
+           data-ship="{{ it.ship if it.ship != '' else 1e12 }}"
+           data-date="{{ it.end or '' }}">
+        <span class="row-rank">#{{ loop.index }}</span>
+        <span class="row-price">{% if it.price != '' %}${{ '%.2f' % it.price }}{% else %}—{% endif %}</span>
+        <span class="row-type">{% if it.cls == 'bin' %}BIN{% elif it.cls == 'obo' %}OBO{% else %}Auction{% endif %}</span>
+        <span class="row-title"><a href="{{ it.href }}" {% if it.tagged %}rel="sponsored nofollow"{% endif %} target="_blank">{{ it.title[:96] }}</a></span>
+        <span class="row-score">score {{ '—' if it.score is none else it.score | int }}%</span>
+        <span class="row-fb">fb {{ '—' if it.fb is none else '{:,}'.format(it.fb | int) }}</span>
+        <span class="row-ship">ship {{ '—' if it.ship == '' else ('Free' if it.ship == 0 else '$' ~ '%.2f' % it.ship) }}</span>
+        <a class="row-buy" href="{{ it.href }}" {% if it.tagged %}rel="sponsored nofollow"{% endif %} target="_blank">View on eBay</a>
+      </div>
+      {% endfor %}
+    </div>
+    <p class="count-note">{{ items | length }} listings — every seller shown, lowest BIN first.</p>
+    {% else %}
+    <p class="no-listings">No live listings right now — the refined band is the market record for this lane.</p>
+    {% endif %}
+  </section>
+  {% endif %}
+
+  <!-- 4: THANKS + ledger tick -->
+  <section class="reward-block reward-thanks">
+    <h2>Thank you</h2>
+    <p>Your contribution is credited: this paste added {{ parse.print_count }} print{{ '' if parse.print_count == 1 else 's' }}
+    to the corpus and +1 to your ledger.{% if ledger_total %} Ledger total: {{ ledger_total }} paste{{ '' if ledger_total == 1 else 's' }}.{% endif %}</p>
+  </section>
+</main>
+''' + FOOTER_LINE + '''
+<script src="/static/bands.js"></script>
+</body>
+</html>'''
+
+ERROR_TEMPLATE = '''<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Paste not parseable — Card Scout</title>
+''' + CSS + '''
+</head>
+<body class="contrib-page">
+<header>
+  <nav>
+    <div class="nav-brand"><a href="/">Card Scout</a></div>
+    <div class="nav-links"><a href="/contributor">Try again</a></div>
+  </nav>
+</header>
+<main class="contrib-main">
+  <h1>Analysis failed — paste was not parseable</h1>
+  <p class="contrib-lede">Nothing was lost and nothing broke: here is exactly what the
+  parser saw.</p>
+  <ul class="cause-list">
+    {% for k, v in causes.items() %}
+      <li>{{ v }} {{ k.replace('_', ' ') }}</li>
+    {% endfor %}
+  </ul>
+  <p class="refine-tip">Refinement tip: paste the listing text that includes prices
+  ($ amounts per line), or the full results-page source — one refined query per pull
+  gives a tighter lane next time.</p>
+</main>
+''' + FOOTER_LINE + '''
+<script src="/static/bands.js"></script>
+</body>
+</html>'''
+
+LEDGER_TEMPLATE = '''<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>My ledger — Card Scout</title>
+''' + CSS + '''
+</head>
+<body class="contrib-page">
+<header>
+  <nav>
+    <div class="nav-brand"><a href="/">Card Scout</a></div>
+    <div class="nav-links"><a href="/contributor">New paste</a> <a href="/contributor/logout">Sign out</a></div>
+  </nav>
+</header>
+<main class="contrib-main">
+  <h1>My ledger</h1>
+  {% if me %}
+  <p class="ledger-summary">{{ me.pastes }} paste{{ '' if me.pastes == 1 else 's' }},
+  {{ me.prints_total }} prints contributed.</p>
+  <table class="ledger-table">
+    <thead><tr><th>When</th><th>Prints</th><th>Set aside (asks)</th><th>Lanes credited</th><th>Refinement</th></tr></thead>
+    <tbody>
+    {% for row in me.rows %}
+      <tr>
+        <td>{{ row.ts }}</td>
+        <td>{{ row.prints }}</td>
+        <td>{{ row.asks_excluded }}</td>
+        <td>{{ row.lanes | length }}</td>
+        <td>{% for r in row.refined %}{{ r.slug[:28] }}{% if r.pct %} −{{ r.pct }}%{% endif %}{{ '' if loop.last else '; ' }}{% else %}—{% endfor %}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  {% else %}
+  <p class="contrib-lede">No contributions yet — paste your first pull.</p>
+  {% endif %}
+</main>
+''' + FOOTER_LINE + '''
+</body>
+</html>'''
+
+
+# ===========================================================================
+# ROUTES
+# ===========================================================================
+def _require_contributor() -> str | None:
+    if not is_on_roster(session.get("contributor_email")):
+        # clean single redirect to the public surface, zero interior (P9)
+        return redirect("/bands")
+    return None
+
+
+@bp.route("/")
+def workspace():
+    email = session.get("contributor_email")
+    if is_on_roster(email):
+        tpl = WORKSPACE_TEMPLATE.replace("%LEADER%", "")
+        return render_template_string(tpl, paste_max=PASTE_MAX_CHARS,
+                                      display_name=session.get("contributor_name"))
+    # logged-out or non-roster direct access -> interior never renders (P9's letter):
+    # clean redirect to the public bands surface. The login view lives at
+    # /contributor/login for the explicit "log in to contribute" entry point.
+    return redirect("/bands")
+
+
+@bp.route("/login")
+def login():
+    notice = None
+    if not google_client_id():
+        notice = "Google login is not configured on this host — set GOOGLE_CLIENT_ID."
+    auth_url = url_for("contrib.login_google")  # the route performs the redirect dance
+    email = session.get("contributor_email")
+    if is_on_roster(email):
+        return redirect(url_for("contrib.workspace"))
+    body = LOGIN_TEMPLATE
+    return render_template_string(body, notice=notice, auth_url=auth_url)
+
+
+@bp.route("/login/google")
+def login_google():
+    if not google_client_id():
+        return redirect(url_for("contrib.login"))
+    from requests_oauthlib import OAuth2Session
+    import requests as _rq
+    try:
+        cfg = _rq.get(GOOGLE_DISCOVERY_URL, timeout=15).json()
+        oa = OAuth2Session(google_client_id(), scope=["openid", "email", "profile"],
+                           redirect_uri=request.url_root.rstrip("/") + "/contributor/login/google/callback")
+        auth_url, state = oa.authorization_url(cfg["authorization_endpoint"])
+        session["contrib_oauth_state"] = state
+        return redirect(auth_url)
+    except Exception:
+        return redirect(url_for("contrib.login"))
+
+
+@bp.route("/login/google/callback")
+def login_google_callback():
+    from requests_oauthlib import OAuth2Session
+    import requests as _rq
+    if "contrib_oauth_state" not in session:
+        return redirect(url_for("contrib.login"))
+    try:
+        cfg = _rq.get(GOOGLE_DISCOVERY_URL, timeout=15).json()
+        oa = OAuth2Session(google_client_id(), state=session["contrib_oauth_state"],
+                           redirect_uri=request.url_root.rstrip("/") + "/contributor/login/google/callback")
+        oa.fetch_token(cfg["token_endpoint"], authorization_response=request.url,
+                       client_secret=env_file_val("GOOGLE_CLIENT_SECRET"))
+        user_info = oa.get(cfg["userinfo_endpoint"]).json()
+        session.pop("contrib_oauth_state", None)
+        return _finish_login(user_info)
+    except Exception:
+        return redirect(url_for("contrib.login"))
+
+
+@bp.route("/logout")
+def logout():
+    session.pop("contributor_email", None)
+    session.pop("contributor_name", None)
+    return redirect(url_for("contrib.workspace"))
+
+
+@bp.route("/analyze", methods=["POST"])
+def analyze():
+    gate = _require_contributor()
+    if gate is not None:
+        return gate
+    email = session["contributor_email"]
+    name = session.get("contributor_name") or email.split("@")[0]
+    text = (request.form.get("paste") or "")
+    if len(text) > PASTE_MAX_CHARS:
+        return render_template_string(
+            ERROR_TEMPLATE,
+            causes={"paste-too-large": f"paste exceeded the {PASTE_MAX_CHARS // 1000}KB cap —"
+                    " split it into two pastes"},
+        )
+    if not text.strip():
+        return render_template_string(ERROR_TEMPLATE, causes={"empty-paste": "1"})
+    parse = parse_pull_dump(text)
+    refined = refine_lanes(parse)
+    if parse["print_count"] == 0:
+        # honest 200 with the counted causes (P10e: never a 500)
+        causes = parse.get("excluded") or {"no-price": 1}
+        _log_event(f"parse-failed prints=0 causes={json.dumps(causes)}"
+                   .replace(email or "NOEMAIL", "[contributor]"))  # no PII in logs
+        return render_template_string(ERROR_TEMPLATE, causes=causes)
+    paste_id = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+    _write_deposit(email, text, paste_id)
+    ledger_tick(email, name, parse, refined, paste_id)
+    # the refined lane's listings: the FIRST matched known lane with a slug
+    lane_slug = next((r["slug"] for r in refined if r.get("slug")), None)
+    items, meta = [], {"source": "none", "age": None, "error": None}
+    if lane_slug:
+        items, meta = BP.get_listings(lane_slug)
+        items = BP.order_default(items)
+        for it in items:
+            tag = BP.epn_tag(it["url"], lane_slug)
+            it["href"] = tag["href"]
+            it["tagged"] = tag["tagged"]
+    # histograms: per refined lane with a slug; else one overall distribution
+    hists = []
+    if refined:
+        for r in refined:
+            prices = parse["lanes"].get(r["lane"], [])
+            if prices and r.get("slug"):
+                hists.append({"label": r["lane_display"] + f" (n={len(prices)})",
+                              "bins": histogram(prices)})
+    if not hists:
+        hists.append({"label": f"All prints (n={parse['print_count']})",
+                      "bins": histogram([r["price"] for r in parse["rows"]])})
+    me = own_ledger_rows(email)
+    return render_template_string(
+        REWARD_TEMPLATE, parse={**parse}, hists=hists, refined=refined,
+        lane_slug=lane_slug, items=items, listings_meta=meta,
+        ledger_total=(me or {}).get("pastes"))
+
+
+@bp.route("/ledger")
+def ledger_view():
+    gate = _require_contributor()
+    if gate is not None:
+        return gate
+    me = own_ledger_rows(session["contributor_email"])
+    return render_template_string(LEDGER_TEMPLATE, me=me)
+
+
+@bp.route("/health")
+def health():
+    return {"ok": True, "roster_size": len(contributor_roster()),
+            "auth_configured": bool(google_client_id())}
