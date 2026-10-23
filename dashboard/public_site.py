@@ -126,6 +126,13 @@ LANDING_TEMPLATE = '''
     </div>
   </section>
 
+  <section class="live-stat" style="text-align:left;background:#f8fafc;border-left:3px solid #3b82f6;padding:10px 14px;margin:18px 0;border-radius:0 6px 6px 0">
+    <p style="margin:0;font-size:14px">
+      <strong>{{ daily.today_uniques }}</strong> people searched the hobby here today
+      · {{ daily.week_uniques }} this week.
+      <span style="color:#6b7280;font-size:12px">Counted anonymously — we count, we never track.</span>
+    </p>
+  </section>
   <section class="cta-section">
     <h2>Ready to find deals?</h2>
     <p>Start with our free trial. 14 days, no credit card required.</p>
@@ -144,6 +151,14 @@ LANDING_TEMPLATE = '''
 @site_bp.route('/')
 def landing():
     """Public landing page."""
+    # unique daily counter (privacy-clean: day-salted hash, no cookies, no identity)
+    try:
+        from daily_counter import register_landing_visit, read_daily_uniques
+        _ = register_landing_visit()
+        _daily = read_daily_uniques()
+    except Exception:
+        _daily = {"today_uniques": 0, "yesterday_uniques": 0, "week_uniques": 0,
+                  "today_hits": 0}
     # Check if logged in
     customer_id = request.cookies.get('customer_id') or _get_logged_in_customer()
     logged_in = bool(customer_id)
@@ -152,6 +167,7 @@ def landing():
         LANDING_TEMPLATE,
         logged_in=logged_in,
         customer_id=customer_id if logged_in else None,
+        daily=_daily,
     )
 
 
