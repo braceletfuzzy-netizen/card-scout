@@ -873,6 +873,14 @@ WORKSPACE_TEMPLATE = '''<!DOCTYPE html>
   <p class="contrib-lede">Multi-page pastes are fine. The parser counts everything it
   sets aside — nothing is dropped silently. You get the distribution, the refined lane,
   and the ledger credit.</p>
+  <div class="depth-hint">
+    <strong>Deeper pulls help everyone:</strong> eBay's default search shows only
+    <strong>60 items per page</strong>. On the search results page, scroll to the very
+    bottom and set the results-per-page to <strong>240</strong> before you copy —
+    the deeper the pull, the sharper the band, and everyone searching this card after
+    you inherits your depth. Multi-page pulls (page 1, 2, 3… — copy them all) are the
+    gold standard.
+  </div>
   <form method="post" action="/contributor/analyze">
     <fieldset class="intake-fieldset">
       <legend class="intake-legend">Direction <span class="intake-optional">(optional — the analysis runs either way)</span></legend>
