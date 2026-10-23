@@ -191,7 +191,7 @@ def send_email_brevo(to_email: str, subject: str, html: str) -> tuple[bool, str]
         **({"replyTo": {"email": rt}} if (rt := env_val("REPLY_TO_EMAIL")) else {}),
     }).encode("utf-8")
     req = urllib.request.Request(
-        "https://api.brevo.com/v3/smtp/email", data=payload.encode("utf-8"),
+        "https://api.brevo.com/v3/smtp/email", data=payload,
         headers={"api-key": api_key, "Content-Type": "application/json"},
         method="POST",
     )
