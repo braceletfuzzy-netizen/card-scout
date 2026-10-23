@@ -94,4 +94,25 @@ P12 (new test): the disclosure element renders on the login view; the expanded
 text contains the sole-use + never-sell + disconnection clauses; zero
 contradictory copy anywhere on the surface.
 
+## NO-ADVICE / USER-AGENCY LAW (founder-directed Oct 23 AM — the disclosure completes the data contract)
+Founder: "any advert they click or eBay link is on them. We just show them the market for the item using the data that they provide."
+THE LAW: CardScout displays MARKET STATE only. Every purchase decision, every click,
+every eBay transaction = the USER'S OWN action, their own judgment, their own risk.
+THE MACHINE: parses, sorts, displays distributions, highlights the deal-window —
+NEVER advises. (The no-recommendations doctrine from §218 extended and made
+user-facing: the surface shows what the market is; the person decides what it means.)
+THREE CLAUSES JOIN THE DISCLOSURE (append to the Google-info note, one compact block):
+- 'Listings are eBay content, shown as-is — we don't sell, hold, grade, or warrant
+  any card, and we're not affiliated with eBay or any grader.'
+- 'Clicking through to eBay or any seller is your decision and your transaction —
+  we earn a small commission (disclosed) and take no part after the click.'
+- 'Bands are built from the community's own pulls — they show what has sold, not
+  what to buy. Your judgment is the final layer.'
+THIS IS ALSO THE LIABILITY BOUNDARY (the MPA/affiliate + disclaimer alignment):
+the surface = a market-information display; the user = the purchasing agent.
+The §218 engine-seal + this user-agency law = the same boundary from both sides
+(we never advise; they alone act).
+P12 EXTENDED: the no-advice/user-agency clauses render alongside the privacy block
+(P12 tests both: disclosure + agency clauses present, consistent, never contradicted
+by other copy).
 ## STATUS: BRIEF REVISED IN PLACE (founder correction AM): auth = GOOGLE LOGIN (person-attribution; roster-gated). WALL-E GO stands. Verify = Hermes P9-P12 (P9 = roster-gate tests, P12 = disclosure-element + never-sell clauses) + inherited sweeps. No stamps until then.
