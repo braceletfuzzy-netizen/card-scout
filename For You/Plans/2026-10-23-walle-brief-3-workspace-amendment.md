@@ -64,3 +64,15 @@ P15 unsub loop: HMAC token gen/verify, opt_out+ts flag flips, email_alerts filte
 P16 regression: full P9-P12 re-pass; non-roster 302-clean, interior never renders
 Seller-watch registry: 2 rows written (ts, hashed-email, seller_id) — append-only, negotiation ledger live
 WALL-E = 3/3 verified briefs (card pages, workspace, amendment). Stamped VERIFIED-2026-10-23.
+
+---
+## PROD-PARITY CATCH + FIX (b1177a2): the founder asked "did you check the ACTUAL website?" — the honest answer was NO.
+PROBE: /contributor/* + /unsubscribe = 500 on prod (200 locally) — root cause: brief-3's
+LANE_TAXONOMY import ladder had no terminal fallback → on Render (no 2.0 repo) the import
+died, killing the whole contributor blueprint. Reproduced EXACTLY via `uv run --python 3.14`
+(Render's python) + degraded env = NEW VERIFY CLASS: DEPLOY-ENV-REPRO. Fix = graceful
+degradation (2.0 repo → deployed-registry taxonomy → empty + honest causes).
+POST-FIX PRODUCTION: /contributor/health 200, /contributor/login 200 (disclosure terms live),
+/unsubscribe 200, /resubscribe 200. LESSON BANKED: brief-3's battery ran LOCAL-only —
+the same PROD-PARITY miss as the Oct-22 freeze; rule extended: verify-battery includes
+uv-3.14 --with-requirements repro BEFORE stamps when a brief touches imports.
