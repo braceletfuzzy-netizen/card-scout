@@ -56,3 +56,11 @@ This is a LEDGER, not a feature yet — the alert-side reversal ships in a later
 - Any change to band_pages.py or public_site.py
 
 ## STATUS: BRIEF ISSUED, WALL-E GO. Build → self-test P13–P16 + P9–P12 re-run → report. Hermes verifies and stamps. No stamps until then.
+---
+## BUILD VERIFIED 2026-10-23 (Hermes fresh-run, c63da3d)
+P13 direction+target persist: BUY/SELL normalized, target float-nullsafe, ledger rows carry direction/target_price/seller_id; entry/repricing watch-lines render from USER input only
+P14 un-anchored proven: watch-line contains exactly the user's number ($25.00 = theirs), zero site numbers
+P15 unsub loop: HMAC token gen/verify, opt_out+ts flag flips, email_alerts filter holds, resub reverses, invalid token = honest-200 branded page
+P16 regression: full P9-P12 re-pass; non-roster 302-clean, interior never renders
+Seller-watch registry: 2 rows written (ts, hashed-email, seller_id) — append-only, negotiation ledger live
+WALL-E = 3/3 verified briefs (card pages, workspace, amendment). Stamped VERIFIED-2026-10-23.
