@@ -227,8 +227,9 @@ def parse_pull_dump(text: str, player_hint: str | None = None) -> dict:
                 records.append({"title": title, "line": el.get_text(separator=" ", strip=True)})
         except Exception:
             excluded["html-parse-error"] = excluded.get("html-parse-error", 0) + 1
+            soup = None  # bs4 unavailable on this host — degrade to raw blob
         # fall through to line mode with the page TEXT for anything blocks missed
-        text_for_lines = soup.get_text("\n")
+        text_for_lines = soup.get_text("\n") if soup is not None else blob
     else:
         text_for_lines = blob
 
