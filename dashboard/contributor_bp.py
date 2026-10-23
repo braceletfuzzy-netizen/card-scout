@@ -896,12 +896,17 @@ WORKSPACE_TEMPLATE = '''<!DOCTYPE html>
   sets aside — nothing is dropped silently. You get the distribution, the refined lane,
   and the ledger credit.</p>
   <div class="depth-hint">
-    <strong>Deeper pulls help everyone:</strong> eBay's default search shows only
-    <strong>60 items per page</strong>. On the search results page, scroll to the very
-    bottom and set the results-per-page to <strong>240</strong> before you copy —
-    the deeper the pull, the sharper the band, and everyone searching this card after
-    you inherits your depth. Multi-page pulls (page 1, 2, 3… — copy them all) are the
-    gold standard.
+    <strong>How to make the perfect deposit (30 seconds):</strong>
+    <ol style="margin:6px 0 0 18px; padding:0">
+      <li>On your eBay results page, scroll to the bottom and set
+          <strong>results-per-page to 240</strong> (the default is only 60 — a shallow pull).</li>
+      <li><strong>Select everything on the page (Ctrl+A) and copy (Ctrl+C)</strong> —
+          the whole page, chrome and all. It's our job to sort it, not yours.</li>
+      <li>Multiple pages? Copy each in order and paste them stacked — every extra
+          page makes the band sharper for everyone who searches this card after you.</li>
+    </ol>
+    Paste below — the page carries its own declaration ("N results for what you
+    searched"), so we know exactly which instrument you brought us.
   </div>
   <form method="post" action="/contributor/analyze">
     <fieldset class="intake-fieldset">
