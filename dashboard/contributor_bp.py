@@ -285,6 +285,21 @@ def parse_pull_dump(text: str, player_hint: str | None = None) -> dict:
                      key=len, reverse=True)
     player = player_hint or None
     if not player:
+        # SEARCH-TERM RESOLUTION (Oct 23, founder-directed): a page paste carries
+        # its own declared query: "N results for <search typed in>" — eBay's SRP
+        # heading, proven in our own deposits. The declared query beats inference:
+        # if any registry player appears INSIDE the declared search text, that
+        # player is the page's author-stated subject and outranks row-dominance.
+        hdr = re.search(
+            r"([\d,.]+)\s*\+?\s*results\s*for\s*(?:<[^>]+>\s*)*([^\"<\n]{1,90})",
+            blob, re.IGNORECASE)
+        if hdr:
+            declared = hdr.group(2).strip().lower()
+            for pl in players:
+                if pl.lower() in declared:
+                    player = pl
+                    break
+    if not player:
         row_text = "\n".join((r.get("title", "") + " " + r.get("line", "")) for r in rows)
         counts = {}
         for p in players:
