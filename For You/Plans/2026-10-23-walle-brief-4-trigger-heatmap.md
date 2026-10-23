@@ -74,3 +74,17 @@ At the SAME polling tick that refreshes lane caches (the band_pages 1h cache cyc
   new pages beyond heatmap-lite rendering
 
 ## STATUS: BRIEF ISSUED, WALL-E GO. Build → self-test → report. Hermes battery + prod-parity → stamp.
+---
+## HERMES VERIFY COMPLETE (d87c6fe) — 4/4 + PROD PARITY
+P17: threaded-import bug caught (app.py watch-tick launched w/o threading import —
+every test-client boot crashed; builder's env masked it). Fixed. Trigger loop PROVEN:
+seeded SELL@25 on 36-print gold lane -> 1 draft, crossed-your-line + footer + no-advice;
+no-dup; opt-out holds; corrupt-ledger probe = honest summary.
+P18: 78 heat rows, shapes ok, identity-never, strip "Searched 7 times" local; prod strip
+absent = CORRECT (window gate: <5 in trailing 7d) — the gate working is the test.
+P19: 7-route 200 + band pages + P9-P16 re-pass (builder's numbers confirmed).
+DEPLOY-ENV-REPRO: uv 3.14.7 --with-requirements — all 200s pre-push.
+PROD after push: /bands 200, /contributor/login 200, /unsubscribe 200, /health 200.
+NOTE for follow-up brief: parser's lane-resolver picked a 2023 lane (tax key match) for a
+2025 paste — the resolver should prefer year-matched lanes (WALL-E follow-up item).
+STAMPED VERIFIED-2026-10-23. Wall-E = 4/4.
