@@ -215,6 +215,49 @@ def subj_fix(subject: str) -> str:
     return subject
 
 
+def send_unsubscribe_confirmation(to_email: str, resub_token: str | None = None) -> bool:
+    """Brief 5 Job C — ONE short transactional confirmation email when the
+    opt-out FLIPS (the /unsubscribe route calls this only on a fresh flip).
+    Body: 3 lines (alerts stopped · bands stay public · one-click resubscribe
+    with their token) + the one-liner; NO full footer on a transactional note.
+    Discipline: never raises; BREVO_API_KEY missing = skip silently (log-only),
+    like the send path; send errors logged, never raised."""
+    try:
+        if not to_email or "@placeholder.local" in to_email:
+            return False
+        if not env_val("BREVO_API_KEY"):
+            print("[unsub-confirm] skip (log-only): BREVO_API_KEY not configured")
+            return False
+        # fresh capability token preferred (helper read from contributor_bp);
+        # the URL's token is a valid fallback; no token at all = drop the link
+        tok = resub_token
+        try:
+            sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "dashboard"))
+            from contributor_bp import make_unsub_token  # noqa: E402
+            tok = make_unsub_token(to_email)
+        except Exception:
+            pass
+        base = env_val("UNSUB_URL") or "https://cardscout.pro/unsubscribe"
+        resub = base.replace("/unsubscribe", "/resubscribe")
+        link = (f'{resub}?t={urllib.parse.quote(tok)}') if tok else None
+        lines = [
+            "<p>Your alerts have stopped immediately.</p>",
+            "<p>The bands stay public at cardscout.pro — free, no account needed.</p>",
+        ]
+        if link:
+            lines.append(f'<p>Changed your mind? <a href="{link}">Re-subscribe</a>'
+                         " — one click, immediate.</p>")
+        oneliner = ('<p style="font-size:12px;color:#6b7280">A market-information '
+                    "service: what has sold, never advice on what to buy.</p>")
+        html = "<html><body>" + "".join(lines) + oneliner + "</body></html>"
+        ok, msg = send_email_brevo(to_email, "Card Scout — you're unsubscribed", html)
+        print(f"[unsub-confirm] {to_email}: {'sent' if ok else f'not sent ({msg})'}")
+        return ok
+    except Exception as e:  # transactional nicety: logged, never raised
+        print(f"[unsub-confirm] error (never raised): {type(e).__name__}: {e}")
+        return False
+
+
 # ---------------------------------------------------------------------------
 # MAIN
 # ---------------------------------------------------------------------------

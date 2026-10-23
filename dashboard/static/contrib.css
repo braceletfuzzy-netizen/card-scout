@@ -14,6 +14,16 @@
 .paste-actions button { background: var(--color-accent); color: #fff; border: none; border-radius: var(--radius); padding: 10px 18px; font-size: 15px; cursor: pointer; }
 .paste-actions button:hover { background: var(--color-accent-hover); }
 .paste-cap { color: var(--color-muted); font-size: 13px; }
+
+/* Brief 5 Job D: the contributor's own credit strip (own-numbers only) */
+.contrib-statstrip {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px;
+  background: var(--color-card); border: 1px solid var(--color-border);
+  border-radius: var(--radius); padding: 10px 16px; margin: 14px 0 6px; font-size: 14px;
+}
+.contrib-statstrip .stat-num { font-weight: 700; font-size: 16px; }
+.contrib-statstrip .stat-sep { color: var(--color-muted); margin: 0 4px; }
+.contrib-credit-line { color: var(--color-muted); font-size: 13px; margin: 4px 0 14px; }
 .google-btn-row { margin: 18px 0; }
 .g-login {
   display: inline-block; background: #db4437; color: #fff; padding: 10px 20px;

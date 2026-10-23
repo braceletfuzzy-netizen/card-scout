@@ -462,6 +462,16 @@ def deal_count(items: list[dict], lane: dict) -> int | None:
 # ---------------------------------------------------------------------------
 BASE_CSS = '<link rel="stylesheet" href="/static/style.css">\n<link rel="stylesheet" href="/static/bands.css">'
 
+# Impact.com site-ownership verification — EXACT same tags as the homepage
+# (public_site.py, EPN/affiliate path). Template-consistency (Brief 5 Job B):
+# every public page carries the proof; values are public web metadata by design.
+IMPACT_VERIFICATION_META = (
+    '<!-- Impact.com site-ownership verification (same block as home, Oct 22) -->\n'
+    '<meta name="impact-site-verification" content="0d54fa41-a1e1-48e7-854c-160e826f9210" value="0d54fa41-a1e1-48e7-854c-160e826f9210">\n'
+    "<meta name='impact-site-verification' value='0d54fa41-a1e1-48e7-854c-160e826f9210'>\n"
+    '<!-- end Impact verification block -->\n'
+)
+
 FOOTER_STATEMENT = '''
 <footer class="bands-footer">
   <p>Bands on this site are built from our own record of completed sales — the
@@ -494,9 +504,14 @@ CARD_PAGE_TEMPLATE = '''<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ lane.player }} {{ lane.lane_display }} — Card Scout</title>
-<meta name="description" content="Live {{ lane.player }} {{ lane.lane_display }} listings and the market band built from real completed sales — free to use.">
+''' + IMPACT_VERIFICATION_META + '''<title>{{ lane.player }} {{ lane.lane_display }} price band &amp; live listings — Card Scout</title>
+{% set _bw = 'engine-grade' if lane.band_class == 'engine_grade' else ('provisional' if lane.band_class == 'provisional' else 'forming') %}
+<meta name="description" content="Live {{ lane.player }} {{ lane.lane_display }} listings with the {{ _bw }} market band built from real completed sales — free on Card Scout.">
 <link rel="canonical" href="https://cardscout.pro/bands/{{ lane.slug }}">
+<meta property="og:title" content="{{ lane.player }} {{ lane.lane_display }} price band &amp; live listings — Card Scout">
+<meta property="og:description" content="Live {{ lane.player }} {{ lane.lane_display }} listings with the {{ _bw }} market band built from real completed sales — free on Card Scout.">
+<meta property="og:url" content="https://cardscout.pro/bands/{{ lane.slug }}">
+<meta property="og:type" content="website">
 ''' + BASE_CSS + '''
 </head>
 <body class="band-page">
@@ -617,7 +632,7 @@ INDEX_TEMPLATE = '''<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Card Pages — Card Scout</title>
+''' + IMPACT_VERIFICATION_META + '''<title>Card Pages — Card Scout</title>
 <meta name="description" content="Market bands and live listings, one free page per card lane. Search a card — every search grows the bands.">
 <link rel="canonical" href="https://cardscout.pro/bands">
 ''' + BASE_CSS + '''
@@ -668,7 +683,7 @@ GRATITUDE_TEMPLATE = '''<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Thanks — your search taught the machine · Card Scout</title>
+''' + IMPACT_VERIFICATION_META + '''<title>Thanks — your search taught the machine · Card Scout</title>
 ''' + BASE_CSS + '''
 </head>
 <body class="band-page">

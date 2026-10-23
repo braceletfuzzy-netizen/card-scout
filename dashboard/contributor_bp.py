@@ -233,16 +233,29 @@ def parse_pull_dump(text: str, player_hint: str | None = None) -> dict:
     else:
         text_for_lines = blob
 
+    last_context_title = ""  # typed pastes: title line, then Sold/price lines
     for line in (text_for_lines or "").splitlines():
         line = line.strip()
         if not line or len(line) < 4:
             continue
         records.append({"title": line[:160], "line": line})
+        # carry title context for the price lines that follow (Oct 23 fix: the
+        # founder's typed paste had titles and Sold-lines on separate lines;
+        # without context-carry the Sold-rows had no player-name to resolve)
+        if not PRICE_RE.search(line) and not line.lower().startswith("sold"):
+            last_context_title = line[:160]
 
+    carried_title = ""  # refreshed per row: context title for Sold-only lines
     for rec in records:
         line = rec["line"]
         low = line.lower()
         title = rec["title"]
+        if not PRICE_RE.search(line) and not line.lower().startswith("sold"):
+            carried_title = title  # a bare title line: becomes context for following rows
+            excluded["title-line"] = excluded.get("title-line", 0) + 1
+            continue
+        if not title or title == line:
+            title = carried_title or title  # Sold-only row inherits its context title
         m = PRICE_RE.search(line)
         if not m:
             excluded["no-price"] = excluded.get("no-price", 0) + 1
@@ -283,6 +296,9 @@ def parse_pull_dump(text: str, player_hint: str | None = None) -> dict:
     # player_hint; longest-name tiebreak only when row-counts tie.
     players = sorted({l["player"] for l in BP.load_registry()["raw"].get("lanes", [])},
                      key=len, reverse=True)
+    hdr = re.search(
+        r"([\d,.]+)\s*\+?\s*results\s*for\s*(?:<[^>]+>\s*)*([^\"<\n]{1,90})",
+        blob, re.IGNORECASE)
     player = player_hint or None
     if not player:
         # SEARCH-TERM RESOLUTION (Oct 23, founder-directed): a page paste carries
@@ -290,9 +306,6 @@ def parse_pull_dump(text: str, player_hint: str | None = None) -> dict:
         # heading, proven in our own deposits. The declared query beats inference:
         # if any registry player appears INSIDE the declared search text, that
         # player is the page's author-stated subject and outranks row-dominance.
-        hdr = re.search(
-            r"([\d,.]+)\s*\+?\s*results\s*for\s*(?:<[^>]+>\s*)*([^\"<\n]{1,90})",
-            blob, re.IGNORECASE)
         if hdr:
             declared = hdr.group(2).strip().lower()
             for pl in players:
@@ -308,11 +321,23 @@ def parse_pull_dump(text: str, player_hint: str | None = None) -> dict:
                 counts[p] = c
         if counts:
             player = max(counts.items(), key=lambda kv: (kv[1], len(kv[0])))[0]
+    # CARD-YEAR POOL (Brief 5 Job A): card years named in the LISTING TITLES
+    # and the declared search header — what the paste itself declares about the
+    # product. Sale dates are noise (2026-10-16 / "Sold Oct 15, 2026") and are
+    # stripped first so they can never pretend to be card years.
+    _title_text = " ".join(r.get("title", "") for r in rows)
+    _title_text = re.sub(r"\b20\d{2}[-/]\d{1,2}[-/]\d{1,2}\b", " ", _title_text)
+    _title_text = re.sub(
+        r"\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+\d{1,2},?\s*(20\d{2})\b",
+        " ", _title_text, flags=re.IGNORECASE)
+    paste_years: list[str] = sorted(set(re.findall(r"\b20\d{2}\b", _title_text))
+                                    | (set(re.findall(r"\b20\d{2}\b", hdr.group(2)))
+                                       if hdr else set()))
     lanes: dict[str, list[float]] = {}
     for r in rows:
         lanes.setdefault(r["lane"], []).append(r["price"])
     return {"rows": rows, "excluded": excluded, "player": player,
-            "print_count": len(rows), "lanes": lanes}
+            "print_count": len(rows), "lanes": lanes, "paste_years": paste_years}
 
 
 # ===========================================================================
@@ -358,6 +383,38 @@ def refine_lanes(parse: dict) -> list[dict]:
                 gbs[r["grade_bucket"]] = gbs.get(r["grade_bucket"], 0) + 1
         gb = max(gbs, key=lambda k: gbs[k]) if gbs else "raw"
         match = registry_by_key.get(("*", lane_name, gb)) or registry_by_key.get(("*", lane_name, "raw"))
+        # Brief 5 JOB A — YEAR-MATCHED LANE RESOLVER (the queued founder fix):
+        # a 2025 paste once resolved to a 2023 lane because the resolver matched
+        # product/parallel tokens but ignored YEAR. Candidates for a paste
+        # lane-group = every registry lane sharing (lane, grade_bucket) — the
+        # exact set the wildcard lookup collapsed (last-insert-wins, which is
+        # where the wrong year crept in). When the paste text names card years
+        # (titles / declared search header; sale dates stripped as noise),
+        # prefer the same-candidates whose slug year matches; pick ONLY when
+        # that leaves exactly one distinct candidate year. No year, mixed
+        # years, or no year-carrying lane -> current behavior (honest miss or
+        # insertion-order match, never a guess).
+        paste_years = set(parse.get("paste_years") or [])
+        if match and paste_years:
+            cands = [l for l in reg
+                     if l["player"].lower() == player.lower()
+                     and l["lane"] == lane_name and l["grade_bucket"] == gb]
+            if not cands and gb != "raw":
+                cands = [l for l in reg
+                         if l["player"].lower() == player.lower()
+                         and l["lane"] == lane_name and l["grade_bucket"] == "raw"]
+            year_carrying = [l for l in cands
+                             if re.search(r"-(20\d{2})-", f"-{l['slug']}-")]
+            if not year_carrying:
+                pass  # no candidate carries a year: nothing to verify against, keep legacy
+            else:
+                year_cands = [l for l in year_carrying
+                              if (ym := re.search(r"-(20\d{2})-", f"-{l['slug']}-"))
+                              and ym.group(1) in paste_years]
+                if len(year_cands) == 1:
+                    match = year_cands[0]  # unambiguous: the one year-matched lane
+                else:
+                    match = None  # declared year mismatches / ambiguous -> honest miss
         entry = {"lane": lane_name, "grade_bucket": gb, "n_paste": len(prices)}
         if match:
             old_prints = list(match.get("prints") or [])
@@ -892,6 +949,18 @@ WORKSPACE_TEMPLATE = '''<!DOCTYPE html>
 </header>
 <main class="contrib-main">
   <h1>Paste an eBay pull</h1>
+  {% if stats %}
+  <div class="contrib-statstrip" id="stat-strip" aria-label="Your contribution totals">
+    <span class="stat-num">{{ stats.pastes }}</span> paste{{ '' if stats.pastes == 1 else 's' }}
+    <span class="stat-sep">·</span>
+    <span class="stat-num">{{ stats.prints_total }}</span> print{{ '' if stats.prints_total == 1 else 's' }} contributed
+    <span class="stat-sep">·</span>
+    <span class="stat-num">{{ stats.lanes_touched }}</span> lane{{ '' if stats.lanes_touched == 1 else 's' }} touched
+    <span class="stat-sep">·</span>
+    credit since {{ stats.first_ts }}
+  </div>
+  <p class="contrib-credit-line">Every deposit sharpens the bands for the whole community — your searches built these.</p>
+  {% endif %}
   <p class="contrib-lede">Multi-page pastes are fine. The parser counts everything it
   sets aside — nothing is dropped silently. You get the distribution, the refined lane,
   and the ledger credit.</p>
@@ -1188,9 +1257,24 @@ def _require_contributor() -> str | None:
 def workspace():
     email = session.get("contributor_email")
     if is_on_roster(email):
+        # Brief 5 Job D: the credit made visible — a compact strip from THIS
+        # contributor's own ledger rows (pastes / prints / lanes / first_ts).
+        # Own-data only (P11); no band numbers (P4); no new computation.
+        me = own_ledger_rows(email) or {}
+        lanes_touched = len({slug for row in me.get("rows", [])
+                             for slug in (row.get("lanes") or []) if slug})
+        stats = None
+        if me.get("pastes"):
+            stats = {
+                "pastes": me.get("pastes", 0),
+                "prints_total": me.get("prints_total", 0),
+                "lanes_touched": lanes_touched,
+                "first_ts": str(me.get("first_ts") or "")[:10] or "your first paste",
+            }
         tpl = WORKSPACE_TEMPLATE.replace("%LEADER%", "")
         return render_template_string(tpl, paste_max=PASTE_MAX_CHARS,
-                                      display_name=session.get("contributor_name"))
+                                      display_name=session.get("contributor_name"),
+                                      stats=stats)
     # logged-out or non-roster direct access -> interior never renders (P9's letter):
     # clean redirect to the public bands surface. The login view lives at
     # /contributor/login for the explicit "log in to contribute" entry point.
@@ -1403,8 +1487,20 @@ def unsubscribe():
     email = verify_unsub_token(token) if token else None
     ok = False
     if email:
+        was_out = is_opted_out(email)
         ok = _opt_out_flag(email, True)
         _log_event("unsubscribe-ok" if ok else "unsubscribe-unknown")
+        if ok and not was_out:
+            # Brief 5 Job C: ONE transactional confirmation on the FLIP only —
+            # already-out users get nothing; send errors never touch this page.
+            try:
+                sys.path.insert(0, str(REPO_DIR / "scripts"))
+                from email_alerts import send_unsubscribe_confirmation  # noqa: E402
+                sent = send_unsubscribe_confirmation(email, token)
+                _log_event("unsub-confirmation sent" if sent
+                           else "unsub-confirmation skipped-or-failed")
+            except Exception:
+                _log_event("unsub-confirmation error-suppressed")
     else:
         _log_event("unsubscribe-bad-token")
     return render_template_string(
