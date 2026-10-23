@@ -1,0 +1,35 @@
+SUBJECT: Re: [same ticket] — Escalation request: EPN "Add Website" flow failure (not an Impact API question)
+
+Hello Ionela,
+
+Thank you for the reply. To clarify where the fault sits: this is not an Impact API
+question — it is the EPN "Add Website" property flow inside my own EPN dashboard
+failing on submission. That flow is part of the eBay Partner Network product, so I'm
+returning to EPN support and asking for escalation.
+
+EVIDENCE (verified 2026-10-22 via external fetches):
+1. cardscout.pro serves HTTP 200 in <0.4s; homepage <head> contains BOTH required
+   meta forms:
+   - <meta name="impact-site-verification" content="0d54fa41-a1e1-48e7-854c-160e826f9210" value="0d54fa41-a1e1-48e7-854c-160e826f9210">
+   - <meta name='impact-site-verification' value='0d54fa41-a1e1-48e7-854c-160e826f9210'> (your exact instruction form, byte-for-byte)
+2. All fetch modes verified: plain + gzip; 3 user-agents (default browser UA,
+   GoogleBot, ImpactSiteVerificationBot); http->https and www->apex redirects
+   deliver the same tagged HTML.
+3. "Add Website" attempted 4x on Oct 22 (16:20-16:45 CDT) — every attempt failed
+   client-side with "Failed to add website."
+
+REQUEST (any one resolves this):
+(a) ESCALATE to the EPN affiliate-integrations/property team that owns the Add-
+    Website flow, with this evidence attached; or
+(b) EPN-side MANUAL verification of cardscout.pro (the tag is live in production
+    and provably fetchable from any network); or
+(c) The exact fetch parameters your verifier uses (user-agent, protocol, URL form)
+    so I can confirm end-to-end delivery to your exact requirements.
+
+Campaign: default (ID 5339224963, Active). Account: jonathangeorge13@gmail.com.
+I'm an approved EPN partner building the traffic infrastructure this verification
+gates — this is the last open step. Happy to provide anything further.
+
+Thank you,
+Jonathan
+Card Scout Pro — cardscout.pro
