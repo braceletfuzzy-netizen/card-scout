@@ -75,4 +75,23 @@ lane, the gratitude state) + the contributor-ledger tick.
   later if Jim is remote; localhost now is legal: Jim sends pastes by Discord to the
   founder who pastes into the workspace = fully manual, no infra).
 
-## STATUS: BRIEF REVISED IN PLACE (founder correction AM): auth = GOOGLE LOGIN (person-attribution; roster-gated). WALL-E GO stands. Verify = Hermes P9-P11 (P9 = roster-gate tests) + inherited sweeps. No stamps until then.
+## GOOGLE-INFO USE DISCLOSURE (founder-directed Oct 23 AM — REQUIRED PAGE ELEMENT)
+The workspace renders a standing privacy note (the Google-login consent moment):
+- WHAT WE TAKE: your Google email + display name — used SOLELY to attribute your
+  contributions (ledger credit, personal reward views).
+- WHAT WE NEVER DO: sell, share, rent, advertise against, or export your
+  information. Not in the business. Full stop.
+- WHAT LEAVES: nothing. Data one-way INTO the machine; the ledger is private to
+  you + the founder.
+- THE DISCONNECTION GUARANTEE: you can ask to be removed at any time
+  (founder@cardscout.pro) — your ledger rows anonymize (email → contributor-id),
+  the lanes stay (they're market data), the attribution credit transfers to
+  anonymized form.
+PLACEMENT: rendered once prominently below the Google-login button ("What we do
+with your Google information" — expandable line, the full text above on click) +
+the standing one-liner in the workspace footer.
+P12 (new test): the disclosure element renders on the login view; the expanded
+text contains the sole-use + never-sell + disconnection clauses; zero
+contradictory copy anywhere on the surface.
+
+## STATUS: BRIEF REVISED IN PLACE (founder correction AM): auth = GOOGLE LOGIN (person-attribution; roster-gated). WALL-E GO stands. Verify = Hermes P9-P12 (P9 = roster-gate tests, P12 = disclosure-element + never-sell clauses) + inherited sweeps. No stamps until then.
