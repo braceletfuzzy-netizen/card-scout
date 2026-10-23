@@ -146,13 +146,25 @@ def _finish_login(user_info: dict) -> str:
 # ===========================================================================
 # THE PARSE FUNNEL (local; standard lane-split + Two-Class print/ask law)
 # ===========================================================================
-try:  # lane vocabulary comes from the 2.0 parser (source of truth)
+# Lane vocabulary: 2.0 parser = source of truth; on hosts without the 2.0 repo
+# (Render), degrade to the inline minimal taxonomy (honest-causes mode) instead
+# of crashing the whole blueprint (the deploy-failure class caught Oct 23 PM).
+LANE_TAXONOMY_FALLBACK = "inline-minimal"
+try:  # primary: 2.0 repo (same machine)
     sys.path.insert(0, str(TWO_REPO / "src" / "mass_pipeline"))
     from stage_b_parse import LANE_TAXONOMY  # type: ignore  # noqa: E402
-    LANE_TAXONOMY_FALLBACK = None
+    LANE_TAXONOMY_FALLBACK = None  # full taxonomy live
 except Exception:
-    from src.mass_pipeline.stage_b_parse import LANE_TAXONOMY  # type: ignore  # noqa: E402
-    LANE_TAXONOMY_FALLBACK = None
+    # degraded: build the taxonomy from the DEPLOYED registry (always present at
+    # request time; offline-install = empty dict + honest "unclassified" causes)
+    try:
+        reg = json.loads((DASH_DIR / "registry" / "card_page_registry.json").read_text(encoding="utf-8"))
+        _lanes = {}
+        for l in reg.get("lanes", []):
+            _lanes.setdefault(str(l.get("lane", "")).strip().lower(), str(l.get("lane", "")))
+        LANE_TAXONOMY = _lanes  # name -> display (minimal vocabulary)
+    except Exception:
+        LANE_TAXONOMY = {}  # fully degraded: parser reports unclassified w/ cause
 
 try:
     sys.path.insert(0, str(TWO_REPO / "scripts"))
