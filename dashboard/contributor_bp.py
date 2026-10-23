@@ -902,8 +902,9 @@ WORKSPACE_TEMPLATE = '''<!DOCTYPE html>
           <strong>results-per-page to 240</strong> (the default is only 60 — a shallow pull).</li>
       <li><strong>Select everything on the page (Ctrl+A) and copy (Ctrl+C)</strong> —
           the whole page, chrome and all. It's our job to sort it, not yours.</li>
-      <li>Multiple pages? Copy each in order and paste them stacked — every extra
-          page makes the band sharper for everyone who searches this card after you.</li>
+      <li>One page is the standard deposit — roughly 240 cards, a complete picture
+          for most lanes. Feeling generous? Copy extra pages and stack them — every
+          bonus page sharpens the band for everyone who searches this card after you.</li>
     </ol>
     Paste below — the page carries its own declaration ("N results for what you
     searched"), so we know exactly which instrument you brought us.
