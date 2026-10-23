@@ -986,11 +986,13 @@ REWARD_TEMPLATE = '''<!DOCTYPE html>
     {% else %}Nothing set aside.{% endif %}</p>
     {% for h in hists %}
       <div class="hist">
-        <div class="hist-title">{{ h.label }}</div>
+        <div class="hist-title">{{ h.label }}
+          <span class="hist-summary">low ${{ '%.2f' % h.lo }} · median ${{ '%.2f' % h.med }} · high ${{ '%.2f' % h.hi }}</span>
+        </div>
         <div class="hist-bars">
           {% for b in h.bins %}
           <div class="hist-bin"><div class="hist-bar" style="width:{{ b.w | round(1) }}%"></div>
-            <span class="hist-count">{{ b.n }}</span></div>
+            <span class="hist-count">{{ b.n }} <span class="hist-range">${{ '%.2f' % b.x0 }}–${{ '%.2f' % b.x1 }}</span></span></div>
           {% endfor %}
         </div>
       </div>
@@ -1331,11 +1333,15 @@ def analyze():
         for r in refined:
             prices = parse["lanes"].get(r["lane"], [])
             if prices and r.get("slug"):
+                hs = sorted(prices)
                 hists.append({"label": r["lane_display"] + f" (n={len(prices)})",
-                              "bins": histogram(prices)})
+                              "bins": histogram(prices),
+                              "lo": min(hs), "med": _q(hs, .5), "hi": max(hs)})
     if not hists:
+        hs = sorted(r["price"] for r in parse["rows"])
         hists.append({"label": f"All prints (n={parse['print_count']})",
-                      "bins": histogram([r["price"] for r in parse["rows"]])})
+                      "bins": histogram(hs),
+                      "lo": min(hs), "med": _q(hs, .5), "hi": max(hs)})
     me = own_ledger_rows(email)
     return render_template_string(
         REWARD_TEMPLATE, parse={**parse}, hists=hists, refined=refined,
