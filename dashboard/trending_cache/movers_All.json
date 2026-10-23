@@ -1,274 +1,124 @@
 {
   "category": "All",
-  "fetched_at": "2026-10-11T11:00:12.250387",
+  "fetched_at": "2026-10-23T12:59:07.854140",
   "cards": [
     {
-      "description": "Ursaring 2001 Pokemon Neo Discovery 1st Edition",
-      "player": "Ursaring",
-      "set": "2001 Pokemon Neo Discovery",
-      "number": "34",
-      "variant": "1st Edition",
-      "card_id": "1655085578353x322216171756599400",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1722398891778x239676463903371940/resized_20240731_040811.jpeg",
+      "description": "Kenneth Walker III 2022 Panini Donruss Football Press Proof Premium",
+      "player": "Kenneth Walker III",
+      "set": "2022 Panini Donruss Football",
+      "number": "318",
+      "variant": "Press Proof Premium",
+      "card_id": "1685292755445x339089963421335100",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1770427666420x858310895780154900/resize",
+      "category": "Football",
+      "category_group": "Sports Cards",
+      "set_type": "Panini Donruss Football",
+      "7 Day Sales": 5,
+      "30 Day Sales": 18,
+      "rookie": true,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "PSA 10",
+          "price": "120"
+        },
+        {
+          "grade": "PSA 9",
+          "price": "54.995"
+        },
+        {
+          "grade": "Raw",
+          "price": "6.495"
+        }
+      ]
+    },
+    {
+      "description": "Olympia 2016 Pokemon XY Generations Reverse Holo",
+      "player": "Olympia",
+      "set": "2016 Pokemon XY Generations",
+      "number": "66",
+      "variant": "Reverse Holo",
+      "card_id": "1733675476254x762411451516386200",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1733675962744x805129830583437800/crop_image",
       "category": "Pokemon",
       "category_group": "Trading Cards",
-      "set_type": "Pokemon Neo Discovery",
-      "7 Day Sales": 5,
-      "30 Day Sales": 12,
+      "set_type": "Pokemon XY Generations",
+      "7 Day Sales": 11,
+      "30 Day Sales": 20,
+      "rookie": false,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "PSA 9",
+          "price": "105"
+        },
+        {
+          "grade": "PSA 8.5",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "0.86"
+        }
+      ]
+    },
+    {
+      "description": "Gengar 2006 Pokemon EX Legend Maker",
+      "player": "Gengar",
+      "set": "2006 Pokemon EX Legend Maker",
+      "number": "5",
+      "variant": "Base",
+      "card_id": "1743464745695x756358045716159600",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1747657949796x815913824149334300/resize",
+      "category": "Pokemon",
+      "category_group": "Trading Cards",
+      "set_type": "Pokemon EX Legend Maker",
+      "7 Day Sales": 50,
+      "30 Day Sales": 187,
+      "rookie": false,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "PSA 9",
+          "price": "7800"
+        },
+        {
+          "grade": "PSA 8.5",
+          "price": "165.25"
+        },
+        {
+          "grade": "Raw",
+          "price": "149.99"
+        }
+      ]
+    },
+    {
+      "description": "Swellow 2005 Pokemon EX Delta Species Reverse Holo",
+      "player": "Swellow",
+      "set": "2005 Pokemon EX Delta Species",
+      "number": "32",
+      "variant": "Reverse Holo",
+      "card_id": "1743549945857x684813857081385500",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1774571775016x738225609567666500/resize",
+      "category": "Pokemon",
+      "category_group": "Trading Cards",
+      "set_type": "Pokemon EX Delta Species",
+      "7 Day Sales": 9,
+      "30 Day Sales": 16,
       "rookie": false,
       "gain": 2.0,
       "prices": [
         {
           "grade": "PSA 10",
-          "price": "300"
+          "price": "3600"
         },
         {
           "grade": "PSA 9",
-          "price": "63"
+          "price": "216"
         },
         {
           "grade": "Raw",
-          "price": "14.7"
-        }
-      ]
-    },
-    {
-      "description": "Wingull 2003 Pokemon EX Ruby & Sapphire Reverse Foil",
-      "player": "Wingull",
-      "set": "2003 Pokemon EX Ruby & Sapphire",
-      "number": "77",
-      "variant": "Reverse Foil",
-      "card_id": "1658976610992x809414679559525900",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1693772067122x959566546090364600/resized_20230903_201426.jpeg",
-      "category": "Pokemon",
-      "category_group": "Trading Cards",
-      "set_type": "Pokemon EX Ruby & Sapphire",
-      "7 Day Sales": 13,
-      "30 Day Sales": 18,
-      "rookie": false,
-      "gain": 2.0,
-      "prices": [
-        {
-          "grade": "CGC 9",
-          "price": "36"
-        },
-        {
-          "grade": "CGC 8.5",
-          "price": "26.4"
-        },
-        {
-          "grade": "Raw",
-          "price": "5"
-        }
-      ]
-    },
-    {
-      "description": "Cleffa Holo 2021 Pokemon Celebrations Classic Collection",
-      "player": "Cleffa",
-      "set": "2021 Pokemon Celebrations Classic Collection",
-      "number": "20",
-      "variant": "Base",
-      "card_id": "1678209101064x762823891815285600",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1692817298226x638947545728045300/resized_20230823_190137.jpeg",
-      "category": "Pokemon",
-      "category_group": "Trading Cards",
-      "set_type": "Pokemon Celebrations Classic Collection",
-      "7 Day Sales": 14,
-      "30 Day Sales": 38,
-      "rookie": false,
-      "gain": 2.0,
-      "prices": [
-        {
-          "grade": "PSA 9",
-          "price": "30"
-        },
-        {
-          "grade": "PSA 8.5",
-          "price": ""
-        },
-        {
-          "grade": "Raw",
-          "price": "2"
-        }
-      ]
-    },
-    {
-      "description": "Paldean Wooper 2023 Pokemon Scarlet & Violet Paldea Evolved",
-      "player": "Paldean Wooper",
-      "set": "2023 Pokemon Scarlet & Violet Paldea Evolved",
-      "number": "129",
-      "variant": "Base",
-      "card_id": "1691965526356x651784586702188500",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1726569074904x959653298941352000/crop_image",
-      "category": "Pokemon",
-      "category_group": "Trading Cards",
-      "set_type": "Pokemon Scarlet & Violet Paldea Evolved",
-      "7 Day Sales": 15,
-      "30 Day Sales": 85,
-      "rookie": false,
-      "gain": 2.0,
-      "prices": [
-        {
-          "grade": "Raw",
-          "price": "0.52"
-        },
-        {
-          "grade": "",
-          "price": ""
-        },
-        {
-          "grade": "Raw",
-          "price": "0.52"
-        }
-      ]
-    },
-    {
-      "description": "Chimera Fusion 2023 Yu-Gi-Oh! Duelist Nexus",
-      "player": "Chimera Fusion",
-      "set": "2023 Yu-Gi-Oh! Duelist Nexus",
-      "number": "DUNE-EN052",
-      "variant": "Base",
-      "card_id": "1735856645114x175595880054223230",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1780873062217x966232092253731700/resize",
-      "category": "Yu-Gi-Oh",
-      "category_group": "Trading Cards",
-      "set_type": "Yu-Gi-Oh! Duelist Nexus",
-      "7 Day Sales": 16,
-      "30 Day Sales": 56,
-      "rookie": false,
-      "gain": 2.0,
-      "prices": [
-        {
-          "grade": "Raw",
-          "price": "1.5"
-        },
-        {
-          "grade": "",
-          "price": ""
-        },
-        {
-          "grade": "Raw",
-          "price": "1.5"
-        }
-      ]
-    },
-    {
-      "description": "Reptilianne Ramifications 2021 Yu-Gi-Oh! Burst of Destiny 1st Edition",
-      "player": "Reptilianne Ramifications",
-      "set": "2021 Yu-Gi-Oh! Burst of Destiny",
-      "number": "BODE-EN060",
-      "variant": "1st Edition",
-      "card_id": "1736124925608x442847276057970500",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1736125159659x892274528448051000/crop_image",
-      "category": "Yu-Gi-Oh",
-      "category_group": "Trading Cards",
-      "set_type": "Yu-Gi-Oh! Burst of Destiny",
-      "7 Day Sales": 5,
-      "30 Day Sales": 13,
-      "rookie": false,
-      "gain": 2.0,
-      "prices": [
-        {
-          "grade": "Raw",
-          "price": "0.09"
-        },
-        {
-          "grade": "",
-          "price": ""
-        },
-        {
-          "grade": "Raw",
-          "price": "0.09"
-        }
-      ]
-    },
-    {
-      "description": "Enchanted Javelin 2002 Yu-Gi-Oh! Pharaoh\u2019s Servant",
-      "player": "Enchanted Javelin",
-      "set": "2002 Yu-Gi-Oh! Pharaoh\u2019s Servant",
-      "number": "PSV-015",
-      "variant": "Base",
-      "card_id": "1736303433208x993178389692694000",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1752937296707x876663576382548700/crop_image",
-      "category": "Yu-Gi-Oh",
-      "category_group": "Trading Cards",
-      "set_type": "Yu-Gi-Oh! Pharaoh\u2019s Servant",
-      "7 Day Sales": 10,
-      "30 Day Sales": 17,
-      "rookie": false,
-      "gain": 2.0,
-      "prices": [
-        {
-          "grade": "Raw",
-          "price": "0.09"
-        },
-        {
-          "grade": "",
-          "price": ""
-        },
-        {
-          "grade": "Raw",
-          "price": "0.09"
-        }
-      ]
-    },
-    {
-      "description": "Performage Water Dancer 2025 Yu-Gi-Oh! Maze Of The Master",
-      "player": "Performage Water Dancer",
-      "set": "2025 Yu-Gi-Oh! Maze Of The Master",
-      "number": "MZTM-EN050",
-      "variant": "Base",
-      "card_id": "1742619943762x725207114286856800",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1776982458792x863895752445273500/resize",
-      "category": "Yu-Gi-Oh",
-      "category_group": "Trading Cards",
-      "set_type": "Yu-Gi-Oh! Maze Of The Master",
-      "7 Day Sales": 5,
-      "30 Day Sales": 15,
-      "rookie": false,
-      "gain": 2.0,
-      "prices": [
-        {
-          "grade": "Raw",
-          "price": "0.09"
-        },
-        {
-          "grade": "",
-          "price": ""
-        },
-        {
-          "grade": "Raw",
-          "price": "0.09"
-        }
-      ]
-    },
-    {
-      "description": "Totodile 2006 Pokemon EX Dragon Frontiers Reverse Holo",
-      "player": "Totodile",
-      "set": "2006 Pokemon EX Dragon Frontiers",
-      "number": "67",
-      "variant": "Reverse Holo",
-      "card_id": "1743221760239x833050131825271900",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1751939369790x994384205889617800/resize",
-      "category": "Pokemon",
-      "category_group": "Trading Cards",
-      "set_type": "Pokemon EX Dragon Frontiers",
-      "7 Day Sales": 7,
-      "30 Day Sales": 18,
-      "rookie": false,
-      "gain": 2.0,
-      "prices": [
-        {
-          "grade": "PSA 9",
-          "price": "1500"
-        },
-        {
-          "grade": "PSA 8.5",
-          "price": "750"
-        },
-        {
-          "grade": "Raw",
-          "price": "35"
+          "price": "14.49"
         }
       ]
     },
@@ -283,8 +133,8 @@
       "category": "Pokemon",
       "category_group": "Trading Cards",
       "set_type": "Pokemon EX Deoxys",
-      "7 Day Sales": 6,
-      "30 Day Sales": 23,
+      "7 Day Sales": 5,
+      "30 Day Sales": 22,
       "rookie": false,
       "gain": 2.0,
       "prices": [
@@ -298,7 +148,157 @@
         },
         {
           "grade": "Raw",
-          "price": "79.41"
+          "price": "499.99"
+        }
+      ]
+    },
+    {
+      "description": "Steven's Baltoy 2025 Pokemon Scarlet & Violet Destined Rivals",
+      "player": "Steven's Baltoy",
+      "set": "2025 Pokemon Scarlet & Violet Destined Rivals",
+      "number": "83",
+      "variant": "Base",
+      "card_id": "1752335073136x943331242569803300",
+      "image": "//s3.amazonaws.com/appforest_uf/f1646616667617x757010808190190600/Pokemon.jpg",
+      "category": "Pokemon",
+      "category_group": "Trading Cards",
+      "set_type": "Pokemon Scarlet & Violet Destined Rivals",
+      "7 Day Sales": 17,
+      "30 Day Sales": 52,
+      "rookie": false,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "0.105"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "0.105"
+        }
+      ]
+    },
+    {
+      "description": "Cobalion 2025 Pokemon Scarlet & Violet Black Bolt Poke Ball",
+      "player": "Cobalion",
+      "set": "2025 Pokemon Scarlet & Violet Black Bolt",
+      "number": "66",
+      "variant": "Poke Ball",
+      "card_id": "1756820080692x717762053971768400",
+      "image": "//s3.amazonaws.com/appforest_uf/f1646616667617x757010808190190600/Pokemon.jpg",
+      "category": "Pokemon",
+      "category_group": "Trading Cards",
+      "set_type": "Pokemon Scarlet & Violet Black Bolt",
+      "7 Day Sales": 10,
+      "30 Day Sales": 33,
+      "rookie": false,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "1.5"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "1.5"
+        }
+      ]
+    },
+    {
+      "description": "Gurdurr 2025 Pokemon Scarlet & Violet Black Bolt",
+      "player": "Gurdurr",
+      "set": "2025 Pokemon Scarlet & Violet Black Bolt",
+      "number": "48",
+      "variant": "Base",
+      "card_id": "1756820269722x993006230444429200",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1785136193168x338694296931840700/resize",
+      "category": "Pokemon",
+      "category_group": "Trading Cards",
+      "set_type": "Pokemon Scarlet & Violet Black Bolt",
+      "7 Day Sales": 11,
+      "30 Day Sales": 36,
+      "rookie": false,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "0.09"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "0.09"
+        }
+      ]
+    },
+    {
+      "description": "Summon: Brynhildr 2025 Magic The Gathering Final Fantasy Foil",
+      "player": "Summon: Brynhildr",
+      "set": "2025 Magic The Gathering Final Fantasy",
+      "number": "160",
+      "variant": "Foil",
+      "card_id": "1760392902627x143487687358601060",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1783698668823x514222583412133250/resize",
+      "category": "Magic",
+      "category_group": "Trading Cards",
+      "set_type": "Magic The Gathering Final Fantasy",
+      "7 Day Sales": 5,
+      "30 Day Sales": 12,
+      "rookie": false,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "0.75"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "0.75"
+        }
+      ]
+    },
+    {
+      "description": "Nick Kurtz 2025 Topps Cosmic Chrome Extraterrestrial Talent Baseball",
+      "player": "Nick Kurtz",
+      "set": "2025 Topps Cosmic Chrome Baseball",
+      "number": "ET-26",
+      "variant": "Base",
+      "card_id": "1766118204230x778922323021579600",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1766153486276x933229160904143200/resize",
+      "category": "Baseball",
+      "category_group": "Sports Cards",
+      "set_type": "Topps Cosmic Chrome Baseball",
+      "7 Day Sales": 5,
+      "30 Day Sales": 15,
+      "rookie": true,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "PSA 9",
+          "price": "30"
+        },
+        {
+          "grade": "PSA 8.5",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "3.41"
         }
       ]
     }

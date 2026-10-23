@@ -1,56 +1,56 @@
 {
   "category": "Football",
-  "fetched_at": "2026-10-11T11:00:17.517408",
+  "fetched_at": "2026-10-23T12:59:13.280905",
   "cards": [
     {
-      "description": "Dylan Sampson 2025 Topps Chrome Black Rookies Autographs Football",
-      "player": "Dylan Sampson",
-      "set": "2025 Topps Chrome Black Football",
-      "number": "RAU-DS",
-      "variant": "Base",
-      "card_id": "1782267144197x473239621640781250",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1783887630385x666813949334147600/resize",
+      "description": "Kenneth Walker III 2022 Panini Donruss Football Press Proof Premium",
+      "player": "Kenneth Walker III",
+      "set": "2022 Panini Donruss Football",
+      "number": "318",
+      "variant": "Press Proof Premium",
+      "card_id": "1685292755445x339089963421335100",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1770427666420x858310895780154900/resize",
       "category": "Football",
       "category_group": "Sports Cards",
-      "set_type": "Topps Chrome Black Football",
+      "set_type": "Panini Donruss Football",
       "7 Day Sales": 5,
-      "30 Day Sales": 12,
+      "30 Day Sales": 18,
       "rookie": true,
       "gain": 2.0,
       "prices": [
         {
-          "grade": "Raw",
-          "price": "15"
+          "grade": "PSA 10",
+          "price": "120"
         },
         {
-          "grade": "",
-          "price": ""
+          "grade": "PSA 9",
+          "price": "54.995"
         },
         {
           "grade": "Raw",
-          "price": "15"
+          "price": "6.495"
         }
       ]
     },
     {
-      "description": "Patrick Mahomes II 2025 Topps Finest Team Finest Football",
+      "description": "Patrick Mahomes II 2025 Panini Mahomes Icon Collection Game Gear Football",
       "player": "Patrick Mahomes II",
-      "set": "2025 Topps Finest Football",
-      "number": "TF-3",
+      "set": "2025 Panini Mahomes Icon Collection Football",
+      "number": "GG-1",
       "variant": "Base",
-      "card_id": "1779158327456x908687910099706100",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1779584473014x692827726101125800/resize",
+      "card_id": "1778843189873x480920082724823230",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1778843610213x221364664088312220/resize",
       "category": "Football",
       "category_group": "Sports Cards",
-      "set_type": "Topps Finest Football",
-      "7 Day Sales": 5,
-      "30 Day Sales": 11,
+      "set_type": "Panini Mahomes Icon Collection Football",
+      "7 Day Sales": 6,
+      "30 Day Sales": 25,
       "rookie": false,
-      "gain": 1.99833333333333,
+      "gain": 1.92307692307692,
       "prices": [
         {
           "grade": "Raw",
-          "price": "5.99666666666667"
+          "price": "9.5"
         },
         {
           "grade": "",
@@ -58,209 +58,179 @@
         },
         {
           "grade": "Raw",
-          "price": "5.99666666666667"
+          "price": "9.5"
         }
       ]
     },
     {
-      "description": "De'Zhaun Stribling 2026 Topps Flagship 1991 Topps Rookies Football",
-      "player": "De'Zhaun Stribling",
-      "set": "2026 Topps Flagship Football",
-      "number": "91TR-36",
+      "description": "Drake Maye 2026 Bowman Chrome Football",
+      "player": "Drake Maye",
+      "set": "2026 Bowman Football",
+      "number": "BCV-72",
       "variant": "Base",
-      "card_id": "1787752979488x458312311566492200",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1787763182788x456190446670186240/resize",
+      "card_id": "1790746594977x254310947611429800",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1790940247991x819364998450736100/resize",
+      "category": "Football",
+      "category_group": "Sports Cards",
+      "set_type": "Bowman Football",
+      "7 Day Sales": 5,
+      "30 Day Sales": 16,
+      "rookie": false,
+      "gain": 1.9,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "2.61"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "2.61"
+        }
+      ]
+    },
+    {
+      "description": "Jaxon Smith-Njigba 2025 Topps Cosmic Chrome Light Speed Football",
+      "player": "Jaxon Smith-Njigba",
+      "set": "2025 Topps Cosmic Chrome Football",
+      "number": "LS-34",
+      "variant": "Base",
+      "card_id": "1782197810304x136570357930763100",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1790484173749x401943323724510700/resize",
+      "category": "Football",
+      "category_group": "Sports Cards",
+      "set_type": "Topps Cosmic Chrome Football",
+      "7 Day Sales": 6,
+      "30 Day Sales": 16,
+      "rookie": false,
+      "gain": 1.88888888888889,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "6.5"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "6.5"
+        }
+      ]
+    },
+    {
+      "description": "Jameis Winston 2026 Topps Flagship 2025 Greatest Hits Football",
+      "player": "Jameis Winston",
+      "set": "2026 Topps Flagship Football",
+      "number": "25GH-JW",
+      "variant": "Base",
+      "card_id": "1788142407914x471986427244504700",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1788142930160x779502174914206300/resize",
+      "category": "Football",
+      "category_group": "Sports Cards",
+      "set_type": "Topps Flagship Football",
+      "7 Day Sales": 9,
+      "30 Day Sales": 30,
+      "rookie": false,
+      "gain": 1.87654320987654,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "2.33"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "2.33"
+        }
+      ]
+    },
+    {
+      "description": "Bijan Robinson 2026 Topps Flagship Touchdown Machines Football",
+      "player": "Bijan Robinson",
+      "set": "2026 Topps Flagship Football",
+      "number": "TM-12",
+      "variant": "Base",
+      "card_id": "1788183279391x217177163223882800",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1788213690322x325682159369635500/resize",
       "category": "Football",
       "category_group": "Sports Cards",
       "set_type": "Topps Flagship Football",
       "7 Day Sales": 6,
-      "30 Day Sales": 6,
-      "rookie": true,
-      "gain": 1.9810298102981,
-      "prices": [
-        {
-          "grade": "Raw",
-          "price": "5.5"
-        },
-        {
-          "grade": "",
-          "price": ""
-        },
-        {
-          "grade": "Raw",
-          "price": "5.5"
-        }
-      ]
-    },
-    {
-      "description": "Kirk Cousins 2012 Topps Chrome Football Refractor",
-      "player": "Kirk Cousins",
-      "set": "2012 Topps Chrome Football",
-      "number": "146",
-      "variant": "Refractor",
-      "card_id": "1695088697402x542474348933939200",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1695089063540x263460417111754940/resized_20230919_020423.jpeg",
-      "category": "Football",
-      "category_group": "Sports Cards",
-      "set_type": "Topps Chrome Football",
-      "7 Day Sales": 5,
-      "30 Day Sales": 12,
-      "rookie": true,
-      "gain": 1.96296296296296,
-      "prices": [
-        {
-          "grade": "PSA 9",
-          "price": "40"
-        },
-        {
-          "grade": "PSA 8.5",
-          "price": ""
-        },
-        {
-          "grade": "Raw",
-          "price": "15"
-        }
-      ]
-    },
-    {
-      "description": "John Elway 2025 Panini Rookies & Stars Royalty Football",
-      "player": "John Elway",
-      "set": "2025 Panini Rookies & Stars Football",
-      "number": "R-JEY",
-      "variant": "Base",
-      "card_id": "1784650395414x672378733880467700",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1788204799011x554033934246710460/resize",
-      "category": "Football",
-      "category_group": "Sports Cards",
-      "set_type": "Panini Rookies & Stars Football",
-      "7 Day Sales": 5,
-      "30 Day Sales": 10,
-      "rookie": false,
-      "gain": 1.94267515923567,
-      "prices": [
-        {
-          "grade": "Raw",
-          "price": "4.62"
-        },
-        {
-          "grade": "",
-          "price": ""
-        },
-        {
-          "grade": "Raw",
-          "price": "4.62"
-        }
-      ]
-    },
-    {
-      "description": "CeeDee Lamb 2020 Panini Select Premier Level Football Silver",
-      "player": "CeeDee Lamb",
-      "set": "2020 Panini Select Football",
-      "number": "157",
-      "variant": "Silver Prizm",
-      "card_id": "1705114694155x189254111831523330",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1723903277737x655041351463556700/crop_image",
-      "category": "Football",
-      "category_group": "Sports Cards",
-      "set_type": "Panini Select Football",
-      "7 Day Sales": 7,
       "30 Day Sales": 17,
-      "rookie": true,
-      "gain": 1.88,
+      "rookie": false,
+      "gain": 1.87179487179487,
       "prices": [
         {
-          "grade": "PSA 9",
-          "price": "36"
+          "grade": "Raw",
+          "price": "9.33333333333333"
         },
         {
-          "grade": "PSA 8.5",
+          "grade": "",
           "price": ""
         },
         {
           "grade": "Raw",
-          "price": "2.3"
+          "price": "9.33333333333333"
         }
       ]
     },
     {
-      "description": "Joe Burrow 2020 Panini Chronicles Luminance Update Rookies Football Pink",
-      "player": "Joe Burrow",
-      "set": "2020 Panini Chronicles Football",
-      "number": "201",
-      "variant": "Pink",
-      "card_id": "1690329349177x862327937524826100",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1705635457930x718202871736093800/resized_20240119_033737.jpeg",
+      "description": "Caleb Williams 2025 Topps Resurgence Football Refractor",
+      "player": "Caleb Williams",
+      "set": "2025 Topps Resurgence Football",
+      "number": "16",
+      "variant": "Refractor",
+      "card_id": "1783779755436x575084291821215100",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1785513766375x498573321790796600/resize",
       "category": "Football",
       "category_group": "Sports Cards",
-      "set_type": "Panini Chronicles Football",
-      "7 Day Sales": 5,
-      "30 Day Sales": 10,
+      "set_type": "Topps Resurgence Football",
+      "7 Day Sales": 13,
+      "30 Day Sales": 36,
       "rookie": false,
-      "gain": 1.83870967741935,
+      "gain": 1.82352941176471,
       "prices": [
         {
-          "grade": "PSA 10",
-          "price": "88"
+          "grade": "Raw",
+          "price": "6"
         },
         {
-          "grade": "PSA 9",
-          "price": "30"
+          "grade": "",
+          "price": ""
         },
         {
           "grade": "Raw",
-          "price": "3"
+          "price": "6"
         }
       ]
     },
     {
-      "description": "J.J. McCarthy 2024 Donruss Optic Football Blue Hyper",
-      "player": "J.J. McCarthy",
-      "set": "2024 Donruss Optic Football",
-      "number": "235",
-      "variant": "Blue Hyper",
-      "card_id": "1746516385901x646683479248186600",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1757459115827x421785640894779800/resize",
+      "description": "Jahmyr Gibbs 2025 Donruss Optic Football Holo",
+      "player": "Jahmyr Gibbs",
+      "set": "2025 Donruss Optic Football",
+      "number": "79",
+      "variant": "Holo",
+      "card_id": "1775835431389x521316461145487500",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1775922770372x599825008341399200/resize",
       "category": "Football",
       "category_group": "Sports Cards",
       "set_type": "Donruss Optic Football",
-      "7 Day Sales": 6,
-      "30 Day Sales": 27,
-      "rookie": true,
-      "gain": 1.76315789473684,
-      "prices": [
-        {
-          "grade": "PSA 10",
-          "price": "52.5"
-        },
-        {
-          "grade": "PSA 9",
-          "price": "10"
-        },
-        {
-          "grade": "Raw",
-          "price": "2.75"
-        }
-      ]
-    },
-    {
-      "description": "Dallas Turner 2026 Topps Flagship NFL Material Relics Football",
-      "player": "Dallas Turner",
-      "set": "2026 Topps Flagship Football",
-      "number": "NFLM-DT",
-      "variant": "Base",
-      "card_id": "1788156788471x527563862767416640",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1788183658751x920703402876684500/resize",
-      "category": "Football",
-      "category_group": "Sports Cards",
-      "set_type": "Topps Flagship Football",
       "7 Day Sales": 5,
-      "30 Day Sales": 25,
+      "30 Day Sales": 8,
       "rookie": false,
-      "gain": 1.75,
+      "gain": 1.81428571428571,
       "prices": [
         {
           "grade": "Raw",
-          "price": "5.5"
+          "price": "1.97"
         },
         {
           "grade": "",
@@ -268,7 +238,37 @@
         },
         {
           "grade": "Raw",
-          "price": "5.5"
+          "price": "1.97"
+        }
+      ]
+    },
+    {
+      "description": "Trevor Lawrence 2021 Panini Mosaic Football",
+      "player": "Trevor Lawrence",
+      "set": "2021 Panini Mosaic Football",
+      "number": "301",
+      "variant": "Base",
+      "card_id": "1642959305300x533969625360064500",
+      "image": "//s3.amazonaws.com/appforest_uf/d112/f1652403937099x466797123893600640/2021-Trevor-Lawrence-Mosaic.jpg",
+      "category": "Football",
+      "category_group": "Sports Cards",
+      "set_type": "Panini Mosaic Football",
+      "7 Day Sales": 5,
+      "30 Day Sales": 19,
+      "rookie": true,
+      "gain": 1.78723404255319,
+      "prices": [
+        {
+          "grade": "PSA 10",
+          "price": "65.5"
+        },
+        {
+          "grade": "PSA 9",
+          "price": "10.05"
+        },
+        {
+          "grade": "Raw",
+          "price": "1.13"
         }
       ]
     },
@@ -283,8 +283,8 @@
       "category": "Football",
       "category_group": "Sports Cards",
       "set_type": "Fleer Ultra Football",
-      "7 Day Sales": 5,
-      "30 Day Sales": 21,
+      "7 Day Sales": 7,
+      "30 Day Sales": 23,
       "rookie": false,
       "gain": 1.7499,
       "prices": [
@@ -298,7 +298,7 @@
         },
         {
           "grade": "Raw",
-          "price": "51"
+          "price": "40"
         }
       ]
     }

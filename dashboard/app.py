@@ -48,6 +48,10 @@ app.config['PERMANENT_SESSION_LIFETIME'] = 86400  # 1 day
 
 # Register public site blueprint (landing, deals, pricing, SEO)
 from public_site import site_bp
+
+# Register band pages blueprint (card pages: band + live listings; spec 2026-10-22)
+from band_pages import bp as bands_bp
+app.register_blueprint(bands_bp)
 import stripe
 import requests
 from db_models import WebhookEvent, RunHistory

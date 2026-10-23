@@ -1,56 +1,26 @@
 {
   "category": "Basketball",
-  "fetched_at": "2026-10-11T11:00:15.720347",
+  "fetched_at": "2026-10-23T12:59:10.907863",
   "cards": [
     {
-      "description": "Stephen Curry 2025 Topps Holiday Hidden Elf Basketball",
-      "player": "Stephen Curry",
-      "set": "2025 Topps Holiday Basketball",
-      "number": "HE-SC",
-      "variant": "Base",
-      "card_id": "1763553475841x893600241035184300",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1777697974205x958033582271047400/resize",
-      "category": "Basketball",
-      "category_group": "Sports Cards",
-      "set_type": "Topps Holiday Basketball",
-      "7 Day Sales": 5,
-      "30 Day Sales": 5,
-      "rookie": false,
-      "gain": 2.0,
-      "prices": [
-        {
-          "grade": "Raw",
-          "price": "27"
-        },
-        {
-          "grade": "",
-          "price": ""
-        },
-        {
-          "grade": "Raw",
-          "price": "27"
-        }
-      ]
-    },
-    {
-      "description": "Kel'el Ware 2025 Topps Pristine Autographs Basketball",
-      "player": "Kel'el Ware",
+      "description": "Anthony Black 2025 Topps Pristine Autographs Basketball Black",
+      "player": "Anthony Black",
       "set": "2025 Topps Pristine Basketball",
-      "number": "PA-KW",
-      "variant": "Base",
-      "card_id": "1788191974775x174409491573981120",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1790372193186x407698710701211300/resize",
+      "number": "PA-AB",
+      "variant": "Black",
+      "card_id": "1788192889507x748204265110449900",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1790423811080x796606405899310300/resize",
       "category": "Basketball",
       "category_group": "Sports Cards",
       "set_type": "Topps Pristine Basketball",
-      "7 Day Sales": 11,
-      "30 Day Sales": 22,
+      "7 Day Sales": 5,
+      "30 Day Sales": 11,
       "rookie": false,
       "gain": 2.0,
       "prices": [
         {
           "grade": "Raw",
-          "price": "15"
+          "price": "18"
         },
         {
           "grade": "",
@@ -58,119 +28,119 @@
         },
         {
           "grade": "Raw",
-          "price": "15"
+          "price": "18"
         }
       ]
     },
     {
-      "description": "Magic Johnson 1992 Topps Basketball",
-      "player": "Magic Johnson",
-      "set": "1992 Topps Basketball",
-      "number": "54",
+      "description": "Paul George 2010 Panini Prestige Basketball Variation",
+      "player": "Paul George",
+      "set": "2010 Panini Prestige Basketball",
+      "number": "160",
       "variant": "Base",
-      "card_id": "1622162277826x407239482979385340",
-      "image": "//s3.amazonaws.com/appforest_uf/f1622162259111x146371775186958430/1992-Magic-Johnson-Topps-54.jpg",
+      "card_id": "1606147234118x776630807331230500",
+      "image": "//s3.amazonaws.com/appforest_uf/f1606152408426x564073248179218750/2010-Paul-George-Panini-Prestige-Base-160.jpg",
       "category": "Basketball",
       "category_group": "Sports Cards",
-      "set_type": "Topps Basketball",
-      "7 Day Sales": 8,
-      "30 Day Sales": 19,
-      "rookie": false,
-      "gain": 1.87203389830508,
+      "set_type": "Panini Prestige Basketball",
+      "7 Day Sales": 5,
+      "30 Day Sales": 9,
+      "rookie": true,
+      "gain": 1.92269230769231,
       "prices": [
         {
           "grade": "PSA 10",
-          "price": "169.45"
+          "price": "75.99"
         },
         {
           "grade": "PSA 9",
-          "price": "23.495"
+          "price": "10"
         },
         {
           "grade": "Raw",
-          "price": "0.66"
+          "price": "4.5"
         }
       ]
     },
     {
-      "description": "Allen Iverson 1998 Topps Chrome Coast to Coast Basketball",
-      "player": "Allen Iverson",
-      "set": "1998 Topps Chrome Basketball",
-      "number": "CC9",
-      "variant": "Base",
-      "card_id": "1665704901159x419972863844128450",
-      "image": "//s3.amazonaws.com/appforest_uf/d112/f1665705451543x205520465958838100/s-l500%20%2890%29.jpg?q=75",
+      "description": "Shai Gilgeous-Alexander 2025 Topps Chrome Update Basketball X-Fractor",
+      "player": "Shai Gilgeous-Alexander",
+      "set": "2025 Topps Chrome Update Basketball",
+      "number": "10",
+      "variant": "X-Fractor",
+      "card_id": "1783775597230x872231233135871700",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1786051813803x691427730443803600/resize",
       "category": "Basketball",
       "category_group": "Sports Cards",
-      "set_type": "Topps Chrome Basketball",
-      "7 Day Sales": 5,
-      "30 Day Sales": 13,
+      "set_type": "Topps Chrome Update Basketball",
+      "7 Day Sales": 11,
+      "30 Day Sales": 35,
       "rookie": false,
-      "gain": 1.85795941697628,
+      "gain": 1.8735632183908,
       "prices": [
         {
-          "grade": "PSA 9",
-          "price": "100"
+          "grade": "Raw",
+          "price": "5"
         },
         {
-          "grade": "PSA 8.5",
+          "grade": "",
           "price": ""
         },
         {
           "grade": "Raw",
-          "price": "35"
+          "price": "5"
         }
       ]
     },
     {
-      "description": "David Robinson 1996 Topps Basketball",
-      "player": "David Robinson",
-      "set": "1996 Topps Basketball",
-      "number": "80",
+      "description": "Ty Jerome 2023 Panini Mosaic Scripts Basketball",
+      "player": "Ty Jerome",
+      "set": "2023 Panini Mosaic Basketball",
+      "number": "MS-TYJ",
       "variant": "Base",
-      "card_id": "1695866974543x781408002079457300",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1720399055033x617188453366068700/crop_image",
+      "card_id": "1775350620942x662879578991362160",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1787236649641x647088626084756400/resize",
       "category": "Basketball",
       "category_group": "Sports Cards",
-      "set_type": "Topps Basketball",
-      "7 Day Sales": 9,
-      "30 Day Sales": 27,
+      "set_type": "Panini Mosaic Basketball",
+      "7 Day Sales": 8,
+      "30 Day Sales": 10,
       "rookie": false,
-      "gain": 1.85767362103458,
+      "gain": 1.8375,
       "prices": [
         {
-          "grade": "PSA 10",
-          "price": "99.99"
+          "grade": "Raw",
+          "price": "5.675"
         },
         {
-          "grade": "PSA 9",
-          "price": "39.99"
+          "grade": "",
+          "price": ""
         },
         {
           "grade": "Raw",
-          "price": "3.65666666666667"
+          "price": "5.675"
         }
       ]
     },
     {
-      "description": "Kon Knueppel 2025 Topps Chrome Update Basketball Prism Refractor",
-      "player": "Kon Knueppel",
-      "set": "2025 Topps Chrome Update Basketball",
-      "number": "154",
-      "variant": "Prism Refractor",
-      "card_id": "1783770333961x504479599902703000",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1786265697172x165301355837516700/resize",
+      "description": "Lebron James 2025 Bowman Hobby Stars Basketball Refractor",
+      "player": "Lebron James",
+      "set": "2025 Bowman Basketball",
+      "number": "HS-13",
+      "variant": "Refractor",
+      "card_id": "1778073596963x161539443030802370",
+      "image": "//s3.amazonaws.com/appforest_uf/f1598843985116x489100344198574160/05-Basketball.jpg",
       "category": "Basketball",
       "category_group": "Sports Cards",
-      "set_type": "Topps Chrome Update Basketball",
-      "7 Day Sales": 7,
-      "30 Day Sales": 41,
-      "rookie": true,
+      "set_type": "Bowman Basketball",
+      "7 Day Sales": 10,
+      "30 Day Sales": 17,
+      "rookie": false,
       "gain": 1.83333333333333,
       "prices": [
         {
-          "grade": "CGC AUTH",
-          "price": "17"
+          "grade": "Raw",
+          "price": "4.25"
         },
         {
           "grade": "",
@@ -183,54 +153,54 @@
       ]
     },
     {
-      "description": "Victor Wembanyama 2023 Panini Mosaic NBA Debut Basketball",
-      "player": "Victor Wembanyama",
-      "set": "2023 Panini Mosaic Basketball",
-      "number": "257",
-      "variant": "Base",
-      "card_id": "1761765283520x731076755173933000",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1763562384575x389931405557382600/resize",
+      "description": "Ty Jerome 2019 Panini Prizm Basketball Silver",
+      "player": "Ty Jerome",
+      "set": "2019 Panini Prizm Basketball",
+      "number": "268",
+      "variant": "Prizm Silver",
+      "card_id": "1611422965716x118108570862285320",
+      "image": "//s3.amazonaws.com/appforest_uf/f1611672623826x567149964224035200/2019-Ty-Jerome-Panini-Prizm-Silver-268.jpg",
       "category": "Basketball",
       "category_group": "Sports Cards",
-      "set_type": "Panini Mosaic Basketball",
-      "7 Day Sales": 33,
-      "30 Day Sales": 100,
+      "set_type": "Panini Prizm Basketball",
+      "7 Day Sales": 27,
+      "30 Day Sales": 31,
       "rookie": true,
-      "gain": 1.79452054794521,
+      "gain": 1.833,
       "prices": [
         {
           "grade": "PSA 10",
-          "price": "510"
+          "price": "84.99"
         },
         {
           "grade": "PSA 9",
-          "price": "51"
+          "price": "19.99"
         },
         {
           "grade": "Raw",
-          "price": "5.35"
+          "price": "7.81333333333333"
         }
       ]
     },
     {
-      "description": "Allen Iverson 2025 Topps Pristine Basketball Refractor",
-      "player": "Allen Iverson",
+      "description": "Anthony Edwards 2025 Topps Pristine Basketball Refractor",
+      "player": "Anthony Edwards",
       "set": "2025 Topps Pristine Basketball",
-      "number": "99",
+      "number": "52",
       "variant": "Refractor",
-      "card_id": "1788188670694x242270813870728580",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1790370842845x815696013971519900/resize",
+      "card_id": "1788189968350x996234726365514500",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1790371034457x780505275759627400/resize",
       "category": "Basketball",
       "category_group": "Sports Cards",
       "set_type": "Topps Pristine Basketball",
-      "7 Day Sales": 6,
-      "30 Day Sales": 24,
+      "7 Day Sales": 5,
+      "30 Day Sales": 53,
       "rookie": false,
-      "gain": 1.76923076923077,
+      "gain": 1.82608695652174,
       "prices": [
         {
           "grade": "Raw",
-          "price": "6"
+          "price": "14.625"
         },
         {
           "grade": "",
@@ -238,59 +208,59 @@
         },
         {
           "grade": "Raw",
-          "price": "6"
+          "price": "14.625"
         }
       ]
     },
     {
-      "description": "Shaquille O'Neal 1993 Skybox Premium Shaq Talk Basketball",
-      "player": "Shaquille O'Neal",
-      "set": "1993 Skybox Premium Basketball",
-      "number": "4",
+      "description": "Michael Jordan 1999 Upper Deck Michael Jordan Athlete Of The Century Basketball",
+      "player": "Michael Jordan",
+      "set": "1999 Upper Deck Michael Jordan Athlete of the Century Basketball",
+      "number": "80",
       "variant": "Base",
-      "card_id": "1781445551844x121959021868756510",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1781745302905x151745951831576480/resize",
+      "card_id": "1699778541115x470511354869973000",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1722516973441x299665553122234760/resized_20240801_125613.jpeg",
       "category": "Basketball",
       "category_group": "Sports Cards",
-      "set_type": "Skybox Basketball",
-      "7 Day Sales": 6,
-      "30 Day Sales": 18,
+      "set_type": "Upper Deck Michael Jordan Athlete of the Century Basketball",
+      "7 Day Sales": 7,
+      "30 Day Sales": 13,
       "rookie": false,
-      "gain": 1.76811594202899,
+      "gain": 1.8125,
       "prices": [
         {
           "grade": "PSA 10",
-          "price": "382"
+          "price": "450"
         },
         {
           "grade": "PSA 9",
-          "price": "17.5"
+          "price": "69.5"
         },
         {
           "grade": "Raw",
-          "price": "4.02"
+          "price": "20"
         }
       ]
     },
     {
-      "description": "Jalen Brunson 2025 Topps Chrome Update No Limit Basketball",
-      "player": "Jalen Brunson",
-      "set": "2025 Topps Chrome Update Basketball",
-      "number": "IP-9",
-      "variant": "Base",
-      "card_id": "1784285771863x203752909821710560",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1785976714781x818401129806449500/resize",
+      "description": "VJ Edgecombe 2025 Panini Prizm Basketball Silver",
+      "player": "VJ Edgecombe",
+      "set": "2025 Panini Prizm Basketball",
+      "number": "5",
+      "variant": "Silver",
+      "card_id": "1786945577667x545069811126854140",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1786977594980x205535536920130370/resize",
       "category": "Basketball",
       "category_group": "Sports Cards",
-      "set_type": "Topps Chrome Update Basketball",
-      "7 Day Sales": 5,
+      "set_type": "Panini Prizm Basketball",
+      "7 Day Sales": 8,
       "30 Day Sales": 26,
-      "rookie": false,
-      "gain": 1.76709796672828,
+      "rookie": true,
+      "gain": 1.796,
       "prices": [
         {
           "grade": "Raw",
-          "price": "4.99"
+          "price": "6.99"
         },
         {
           "grade": "",
@@ -298,7 +268,37 @@
         },
         {
           "grade": "Raw",
-          "price": "4.99"
+          "price": "6.99"
+        }
+      ]
+    },
+    {
+      "description": "Shaquille O'Neal 2025 Topps Chrome Update Sapphire Basketball",
+      "player": "Shaquille O'Neal",
+      "set": "2025 Topps Chrome Update Sapphire Basketball",
+      "number": "142",
+      "variant": "Base",
+      "card_id": "1788183219284x855003145656654500",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1789317355281x370271500200802100/resize",
+      "category": "Basketball",
+      "category_group": "Sports Cards",
+      "set_type": "Topps Chrome Update Sapphire Basketball",
+      "7 Day Sales": 15,
+      "30 Day Sales": 63,
+      "rookie": false,
+      "gain": 1.77992277992278,
+      "prices": [
+        {
+          "grade": "Raw",
+          "price": "22.5"
+        },
+        {
+          "grade": "",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "22.5"
         }
       ]
     }

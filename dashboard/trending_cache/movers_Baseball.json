@@ -1,7 +1,37 @@
 {
   "category": "Baseball",
-  "fetched_at": "2026-10-11T11:00:14.018839",
+  "fetched_at": "2026-10-23T12:59:09.380588",
   "cards": [
+    {
+      "description": "Nick Kurtz 2025 Topps Cosmic Chrome Extraterrestrial Talent Baseball",
+      "player": "Nick Kurtz",
+      "set": "2025 Topps Cosmic Chrome Baseball",
+      "number": "ET-26",
+      "variant": "Base",
+      "card_id": "1766118204230x778922323021579600",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1766153486276x933229160904143200/resize",
+      "category": "Baseball",
+      "category_group": "Sports Cards",
+      "set_type": "Topps Cosmic Chrome Baseball",
+      "7 Day Sales": 5,
+      "30 Day Sales": 15,
+      "rookie": true,
+      "gain": 2.0,
+      "prices": [
+        {
+          "grade": "PSA 9",
+          "price": "30"
+        },
+        {
+          "grade": "PSA 8.5",
+          "price": ""
+        },
+        {
+          "grade": "Raw",
+          "price": "3.41"
+        }
+      ]
+    },
     {
       "description": "Cam Schlittler 2026 Bowman Under The Radar Baseball",
       "player": "Cam Schlittler",
@@ -13,8 +43,8 @@
       "category": "Baseball",
       "category_group": "Sports Cards",
       "set_type": "Bowman Baseball",
-      "7 Day Sales": 22,
-      "30 Day Sales": 83,
+      "7 Day Sales": 6,
+      "30 Day Sales": 77,
       "rookie": true,
       "gain": 2.0,
       "prices": [
@@ -28,37 +58,7 @@
         },
         {
           "grade": "Raw",
-          "price": "1.79"
-        }
-      ]
-    },
-    {
-      "description": "Aaron Judge 2026 Panini Donruss Bomb Squad Baseball",
-      "player": "Aaron Judge",
-      "set": "2026 Panini Donruss Baseball",
-      "number": "18",
-      "variant": "Base",
-      "card_id": "1783718443271x531580388700521700",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1783718867783x255882809884371300/resize",
-      "category": "Baseball",
-      "category_group": "Sports Cards",
-      "set_type": "Panini Donruss Baseball",
-      "7 Day Sales": 12,
-      "30 Day Sales": 27,
-      "rookie": false,
-      "gain": 2.0,
-      "prices": [
-        {
-          "grade": "Raw",
-          "price": "2.25"
-        },
-        {
-          "grade": "",
-          "price": ""
-        },
-        {
-          "grade": "Raw",
-          "price": "2.25"
+          "price": "1.27"
         }
       ]
     },
@@ -74,7 +74,7 @@
       "category_group": "Sports Cards",
       "set_type": "Topps Baseball",
       "7 Day Sales": 6,
-      "30 Day Sales": 14,
+      "30 Day Sales": 19,
       "rookie": false,
       "gain": 1.96709677419355,
       "prices": [
@@ -88,89 +88,59 @@
         },
         {
           "grade": "Raw",
-          "price": "8.5"
+          "price": "1.8"
         }
       ]
     },
     {
-      "description": "Jackson Chourio 2024 Topps Chrome Update Baseball",
-      "player": "Jackson Chourio",
-      "set": "2024 Topps Chrome Update Baseball",
-      "number": "USC30",
+      "description": "Andre Dawson 1978 O-Pee-Chee Baseball",
+      "player": "Andre Dawson",
+      "set": "1978 O-Pee-Chee Baseball",
+      "number": "180",
       "variant": "Base",
-      "card_id": "1733687819972x689477383091391900",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1744402259457x147249304234583700/front%20%2829%29.jpg",
+      "card_id": "1725404447612x718411142123107600",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1725404672315x567636319696925800/resized_20240903_230432.jpeg",
       "category": "Baseball",
       "category_group": "Sports Cards",
-      "set_type": "Topps Chrome Update Baseball",
-      "7 Day Sales": 18,
-      "30 Day Sales": 25,
-      "rookie": false,
-      "gain": 1.96296296296296,
-      "prices": [
-        {
-          "grade": "SGC 10",
-          "price": "40"
-        },
-        {
-          "grade": "SGC 9.5",
-          "price": "20.01"
-        },
-        {
-          "grade": "Raw",
-          "price": "1.39"
-        }
-      ]
-    },
-    {
-      "description": "Pete Crow-Armstrong 2024 Bowman Chrome Mega Box Rookie Of The Year Favorites Baseball",
-      "player": "Pete Crow-Armstrong",
-      "set": "2024 Bowman Chrome Mega Box Baseball",
-      "number": "ROY-13",
-      "variant": "Base",
-      "card_id": "1721929766942x649428236867993600",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1751571917163x921019005504230000/crop_image",
-      "category": "Baseball",
-      "category_group": "Sports Cards",
-      "set_type": "Bowman Chrome Mega Box Baseball",
+      "set_type": "O-Pee-Chee Baseball",
       "7 Day Sales": 5,
-      "30 Day Sales": 14,
-      "rookie": true,
+      "30 Day Sales": 11,
+      "rookie": false,
       "gain": 1.94117647058824,
       "prices": [
         {
-          "grade": "PSA 10",
-          "price": "250"
+          "grade": "SGC 7",
+          "price": "60"
         },
         {
-          "grade": "PSA 9",
-          "price": "17.5"
+          "grade": "SGC 6.5",
+          "price": ""
         },
         {
           "grade": "Raw",
-          "price": "10.25"
+          "price": "42.5"
         }
       ]
     },
     {
-      "description": "John Herrnstein 1966 Topps Baseball",
-      "player": "John Herrnstein",
-      "set": "1966 Topps Baseball",
-      "number": "304",
+      "description": "Tony Gwynn 1993 Topps Finest Baseball",
+      "player": "Tony Gwynn",
+      "set": "1993 Topps Finest Baseball",
+      "number": "77",
       "variant": "Base",
-      "card_id": "1660936826210x716621119054069900",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1724131505457x641563176513936600/crop_image",
+      "card_id": "1667953609342x736508793920880300",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1706407312002x167636829731436780/resized_20240128_020151.jpeg",
       "category": "Baseball",
       "category_group": "Sports Cards",
-      "set_type": "Topps Baseball",
-      "7 Day Sales": 6,
-      "30 Day Sales": 9,
+      "set_type": "Topps Finest Baseball",
+      "7 Day Sales": 8,
+      "30 Day Sales": 13,
       "rookie": false,
-      "gain": 1.94,
+      "gain": 1.92857142857143,
       "prices": [
         {
           "grade": "PSA 8",
-          "price": "73.5"
+          "price": "41"
         },
         {
           "grade": "PSA 7.5",
@@ -178,59 +148,59 @@
         },
         {
           "grade": "Raw",
-          "price": "0.91"
+          "price": "3.35"
         }
       ]
     },
     {
-      "description": "Checklist 265-396 1977 Topps Baseball",
-      "player": "Checklist 265-396",
-      "set": "1977 Topps Baseball",
-      "number": "356",
+      "description": "Don Newcombe 1959 Topps Baseball",
+      "player": "Don Newcombe",
+      "set": "1959 Topps Baseball",
+      "number": "312",
       "variant": "Base",
-      "card_id": "1665507354225x113755561314831780",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1721017282032x976382529851743600/crop_image",
+      "card_id": "1652074613441x410332482592962370",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1728954213447x913650902784240400/resized_20241015_010327.jpeg",
       "category": "Baseball",
       "category_group": "Sports Cards",
       "set_type": "Topps Baseball",
-      "7 Day Sales": 6,
-      "30 Day Sales": 8,
+      "7 Day Sales": 7,
+      "30 Day Sales": 28,
       "rookie": false,
-      "gain": 1.91176470588235,
+      "gain": 1.91073738680466,
       "prices": [
         {
-          "grade": "PSA 9",
-          "price": "99"
+          "grade": "PSA 7",
+          "price": "45"
         },
         {
-          "grade": "PSA 8.5",
-          "price": ""
+          "grade": "PSA 6.5",
+          "price": "17.5"
         },
         {
           "grade": "Raw",
-          "price": "4.95"
+          "price": "5"
         }
       ]
     },
     {
-      "description": "Austin Overn 2026 Bowman Chrome Prospects Baseball Refractor",
-      "player": "Austin Overn",
-      "set": "2026 Bowman Chrome Baseball",
-      "number": "BCP-237",
+      "description": "Josiah Hartshorn 2025 Bowman Draft Chrome Baseball Refractor",
+      "player": "Josiah Hartshorn",
+      "set": "2025 Bowman Draft Chrome Baseball",
+      "number": "BDC-21",
       "variant": "Refractor",
-      "card_id": "1789090812245x575413110449707970",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1789670559826x365666922926628500/resize",
+      "card_id": "1768683509819x619239848166181000",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1770857388152x566230987560043970/crop_image",
       "category": "Baseball",
       "category_group": "Sports Cards",
-      "set_type": "Bowman Chrome Baseball",
-      "7 Day Sales": 6,
-      "30 Day Sales": 13,
+      "set_type": "Bowman Draft Chrome Baseball",
+      "7 Day Sales": 5,
+      "30 Day Sales": 49,
       "rookie": false,
-      "gain": 1.90714285714286,
+      "gain": 1.898,
       "prices": [
         {
           "grade": "Raw",
-          "price": "4.07"
+          "price": "7.245"
         },
         {
           "grade": "",
@@ -238,67 +208,97 @@
         },
         {
           "grade": "Raw",
-          "price": "4.07"
+          "price": "7.245"
         }
       ]
     },
     {
-      "description": "Dave Concepcion 1977 Topps Baseball",
-      "player": "Dave Concepcion",
-      "set": "1977 Topps Baseball",
-      "number": "560",
+      "description": "Chick King 1959 Topps Baseball",
+      "player": "Chick King",
+      "set": "1959 Topps Baseball",
+      "number": "538",
       "variant": "Base",
-      "card_id": "1665518575610x267875298360765280",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1760402326355x378389534885161600/resize",
+      "card_id": "1652074194867x113740495452067100",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1720314098701x197974376803997660/crop_image",
       "category": "Baseball",
       "category_group": "Sports Cards",
       "set_type": "Topps Baseball",
       "7 Day Sales": 6,
       "30 Day Sales": 17,
       "rookie": false,
-      "gain": 1.90156182834217,
+      "gain": 1.87878787878788,
       "prices": [
         {
-          "grade": "PSA 9",
-          "price": "202.5"
+          "grade": "PSA 7",
+          "price": "47.5"
         },
         {
-          "grade": "PSA 8.5",
+          "grade": "PSA 6.5",
           "price": ""
         },
         {
           "grade": "Raw",
-          "price": "2"
+          "price": "6.5"
         }
       ]
     },
     {
-      "description": "Ian Seymour 2026 Topps Chrome Retail Rookie Autographs Baseball",
-      "player": "Ian Seymour",
-      "set": "2026 Topps Chrome Baseball",
-      "number": "RA-IS",
+      "description": "Chris Chambliss 1972 Topps Baseball",
+      "player": "Chris Chambliss",
+      "set": "1972 Topps Baseball",
+      "number": "142",
       "variant": "Base",
-      "card_id": "1785364684999x573738790845579500",
-      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1785369901851x570595057017578400/resize",
+      "card_id": "1659101396009x265856658101927700",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1755566234267x722214860818856300/resize",
       "category": "Baseball",
       "category_group": "Sports Cards",
-      "set_type": "Topps Chrome Baseball",
-      "7 Day Sales": 5,
-      "30 Day Sales": 12,
-      "rookie": true,
-      "gain": 1.9,
+      "set_type": "Topps Baseball",
+      "7 Day Sales": 6,
+      "30 Day Sales": 19,
+      "rookie": false,
+      "gain": 1.8569387755102,
       "prices": [
         {
-          "grade": "Raw",
-          "price": "8.99"
+          "grade": "PSA 9",
+          "price": "139.99"
         },
         {
-          "grade": "",
-          "price": ""
+          "grade": "PSA 8.5",
+          "price": "39.99"
         },
         {
           "grade": "Raw",
-          "price": "8.99"
+          "price": "4.2"
+        }
+      ]
+    },
+    {
+      "description": "Dick Hall 1967 Topps Baseball",
+      "player": "Dick Hall",
+      "set": "1967 Topps Baseball",
+      "number": "508",
+      "variant": "Base",
+      "card_id": "1661037868815x688137669589684100",
+      "image": "//942284f33c575895b4be9de571ca6e40.cdn.bubble.io/d112/f1723466488067x145412772531039500/crop_image",
+      "category": "Baseball",
+      "category_group": "Sports Cards",
+      "set_type": "Topps Baseball",
+      "7 Day Sales": 5,
+      "30 Day Sales": 12,
+      "rookie": false,
+      "gain": 1.8056206088993,
+      "prices": [
+        {
+          "grade": "PSA 9",
+          "price": "599"
+        },
+        {
+          "grade": "PSA 8.5",
+          "price": "50.19"
+        },
+        {
+          "grade": "Raw",
+          "price": "6.5"
         }
       ]
     }
