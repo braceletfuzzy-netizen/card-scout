@@ -46,6 +46,19 @@
   font-weight: 600;
   margin: 12px 0;
 }
+
+/* heatmap-lite (T5: community search vocabulary — aggregate, never identity) */
+.heat-strip {
+  background: #fffbeb;
+  border: 1px solid #fde68a;
+  border-radius: var(--radius);
+  padding: 10px 16px;
+  margin: 12px 0;
+  font-size: 14px;
+}
+.heat-line { font-weight: 600; color: #92400e; }
+.heat-phrases { color: #78350f; margin-top: 4px; }
+.heat-phrase { white-space: nowrap; }
 .listings-note { color: var(--color-muted); font-size: 14px; margin: 8px 0; }
 
 /* listings (the main event) */

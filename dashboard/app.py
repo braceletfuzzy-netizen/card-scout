@@ -18,6 +18,7 @@ Deploy: See DEPLOY.md
 import hashlib
 import os
 import secrets
+import threading
 from pathlib import Path
 from datetime import datetime
 
@@ -1363,6 +1364,30 @@ if __name__ == '__main__':
     print(f"  Press Ctrl+C to stop\n")
     app.run(host='127.0.0.1', port=5000, debug=False)
 
+
+# ============================================================================
+# WATCH-TRIGGER POLLING TICK (brief 4 Job 1): the §227.2 firing half rides the
+# SAME polling cycle that refreshes the lane listing caches (the bands 1h cache
+# law). Daemonic background thread; NEVER crashes the app — any tick error is
+# caught inside the module (bands still serve). Opt-out + honesty + anti-spam
+# live in contributor_bp.watch_trigger_tick. Disable with WATCH_TICK_DISABLED=1.
+# ============================================================================
+def _watch_tick_loop() -> None:
+    import time as _time
+    while True:
+        _time.sleep(1800)
+        try:
+            from contributor_bp import watch_trigger_tick
+            watch_trigger_tick()
+        except Exception as _e:  # never: the tick must not take the app down
+            try:
+                app.logger.warning("watch-tick skipped: %s", type(_e).__name__)
+            except Exception:
+                pass
+
+
+if os.environ.get("WATCH_TICK_DISABLED", "") != "1":
+    threading.Thread(target=_watch_tick_loop, daemon=True, name="cardscout-watch-tick").start()
 
 # ============================================================================
 # Error logging for production debugging (Sept 17)

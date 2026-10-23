@@ -252,10 +252,14 @@ def main() -> int:
         # iterate the enabled customers (the 1.0 DB pattern; placeholders excluded
         # by the same rule digest_delivery uses)
         import sqlite3
-        # opt-out filter (CAN-SPAM closure): contributor ledger flags, if present
+        # opt-out filter (CAN-SPAM closure): contributor ledger flags, if present.
+        # Brief 4 J3: path env-redirectable so the battery can prove the skip
+        # end-to-end without touching the live ledger.
         optouts: set[str] = set()
         try:
-            _ledger = Path("C:/Users/J/Documents/LLM/cardscout-2.0/data_lake/contributor_ledger.json")
+            _ledger = Path(os.environ.get(
+                "CONTRIBUTOR_LEDGER_PATH",
+                r"C:/Users/J/Documents/LLM/cardscout-2.0/data_lake/contributor_ledger.json"))
             _led = json.loads(_ledger.read_text(encoding="utf-8"))
             optouts = {e for e, c in (_led.get("contributors") or {}).items() if c.get("opt_out")}
         except (OSError, ValueError):
@@ -278,31 +282,11 @@ def main() -> int:
             subj, html, n, tagged_n = build_email(email, alerts)
             print(f"[DRY] {cid} ({email}): {n} rows, {tagged_n} tagged; subject: {subj}")
             if args.send:
-                # send via Brevo; per-email error logged, loop continues
-                from email.utils import parseaddr as _p
-                full_html = html
-                # reuse send path
-                api_key = env_val("BREVO_API_KEY")
-                if not api_key:
-                    print("  send error: BREVO_API_KEY missing — aborting send loop", file=sys.stderr)
-                    return 1
-                sender = env_val("ALERT_EMAIL_FROM") or "alerts@cardscout.pro"
-                payload = json.dumps({
-                    "sender": {"name": env_val("ALERT_EMAIL_FROM_NAME") or "Card Scout",
-                               "email": sender},
-                    "to": [{"email": email}],
-                    "subject": subj,
-                    "htmlContent": full_html,
-                }).encode("utf-8")
-                req = urllib.request.Request(
-                    "https://api.brevo.com/v3/smtp/email", data=payload,
-                    headers={"api-key": api_key, "Content-Type": "application/json"},
-                    method="POST")
-                try:
-                    with urllib.request.urlopen(req, timeout=20) as resp:
-                        print(f"  sent -> HTTP {resp.status}")
-                except Exception as e:
-                    print(f"  send FAILED for {email}: {e}", file=sys.stderr)
+                # Brief 4 J3 hardening: ONE send path (send_email_brevo handles
+                # config errors per-address; the loop never aborts wholesale).
+                ok, msg = send_email_brevo(email, subj, html)
+                print(f"  send: {'OK' if ok else f'FAIL ({msg})'}")
+                if not ok:
                     rc = 2
         return rc
 

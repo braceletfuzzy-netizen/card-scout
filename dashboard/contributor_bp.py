@@ -529,6 +529,230 @@ def _log_event(event: str) -> None:
         pass
 
 
+# ===========================================================================
+# WATCH-TRIGGER LOOP (Brief 4 Job 1 — the §227.2 firing half). Runs on the SAME
+# polling tick that refreshes lane caches (app.py's bands warm-up thread).
+# LAW: user-owned triggers only — the machine computed NOTHING; it only reports
+# that the market crossed the user's own number. Never advice, never band
+# numbers (band thresholds render NOWHERE in mail), never unverified prints
+# (registry prints = completed corpus prints; asks were excluded at parse),
+# NEVER crashes the tick (every error = logged + skipped; bands still serve).
+# One email per lane per cycle; a changed target = a new sent-marker key = re-arm.
+# ===========================================================================
+TRIGGER_SENT_PATH = Path(os.environ.get(
+    "TRIGGER_SENT_PATH", TWO_REPO / "data_lake" / "gold" / "trigger_sent.json"))
+
+
+def _load_trigger_markers() -> dict:
+    try:
+        return json.loads(TRIGGER_SENT_PATH.read_text(encoding="utf-8"))
+    except (OSError, ValueError):
+        return {}
+
+
+def _save_trigger_markers(markers: dict) -> None:
+    try:
+        tmp = TRIGGER_SENT_PATH.with_suffix(".tmp")
+        TRIGGER_SENT_PATH.parent.mkdir(parents=True, exist_ok=True)
+        tmp.write_text(json.dumps(markers), encoding="utf-8")
+        os.replace(tmp, TRIGGER_SENT_PATH)
+    except OSError:
+        pass
+
+
+def lane_display_for(slug: str) -> str:
+    """Honest display name from the registry lane (player + lane title)."""
+    lane = BP.lane_by_slug(slug) or {}
+    player = str(lane.get("player") or "").strip()
+    disp = str(lane.get("lane_display") or "").strip()
+    text = " — ".join(x for x in (player, disp) if x)
+    return text[:90] or slug[:90]
+
+
+def crossing_print(prints: list, direction: str | None, target_price: float) -> float | None:
+    """The verified-prints crossing test: BUY + print <= target -> below-hit;
+    SELL + print >= target -> above-hit. Returns the winning print or None.
+    These are COMPLETED prints from the corpus registry (asks never entered it)."""
+    if direction not in ("BUY", "SELL") or not isinstance(target_price, (int, float)):
+        return None
+    hit = None
+    for p in prints:
+        try:
+            v = float(p)
+        except (TypeError, ValueError):
+            continue
+        if direction == "BUY" and v <= target_price:
+            hit = v if hit is None else max(hit, v)
+        elif direction == "SELL" and v >= target_price:
+            hit = v if hit is None else min(hit, v)
+    return hit
+
+
+def build_crossing_email(email: str, slug: str, direction: str | None,
+                         target_price: float, hit: float) -> tuple[str, str] | None:
+    """The four-part cross email: subject per brief + their trigger line + the
+    hitting print's market state (counted from the corpus, no band numbers) +
+    tagged lane link + the CAN-SPAM footer w/ their real token. None = skipped
+    (any failure is a no-send, never a crash)."""
+    try:
+        sys.path.insert(0, str(REPO_DIR / "scripts"))
+        from email_alerts import render_footer  # noqa: E402  (J3 token hardening)
+        try:
+            footer = render_footer(make_unsub_token(email))  # their real CAN-SPAM token
+        except Exception:
+            footer = render_footer(None)  # placeholder footer, never a crash
+    except Exception:
+        return None
+    display = lane_display_for(slug)
+    subject = f"Card Scout — your price crossed on {display}"
+    # market state: counted from the corpus registry only — PUBLIC facts (how
+    # many completed prints exist; where the hitting print landed in them).
+    # Band thresholds/z-scores/engine output NEVER enter this string.
+    lane = BP.lane_by_slug(slug) or {}
+    prints = [p for p in (lane.get("prints") or []) if isinstance(p, (int, float))]
+    n_prints = len(prints)
+    rank_note = ""
+    if prints:
+        below = sum(1 for p in prints if p <= hit)
+        rank_note = ("<p style='font-size:13px;color:#6b7280'>The market print of "
+                     f"${hit:,.2f} sits at position {below} of {n_prints} completed "
+                     "prints in this lane's record "
+                     f"(corpus: {lane.get('first_date', '—')} → {lane.get('last_date', '—')}).</p>")
+    import urllib.parse as _up
+    sys.path.insert(0, str(DASH_DIR))
+    import band_pages as _bp  # the verified tagging path (campid gate inherited)
+    view_url = ("https://www.ebay.com/sch/i.html?_nkw=" + _up.quote_plus(lane.get("search_q") or display)
+                + "&_sop=16")
+    link_obj = _bp.epn_tag(view_url, slug)
+    link_html = (f'<a href="{link_obj["href"]}">View live eBay listings</a>'
+                 + (' <span style="font-size:12px;color:#6b7280">(affiliate link)</span>'
+                    if link_obj["tagged"] else ""))
+    dir_word = {"BUY": "ceiling", "SELL": "floor"}.get(direction or "", "line")
+    body = (
+        f'<p>The market crossed YOUR line on <strong>{display}</strong>.</p>'
+        f'<div style="border:1px solid #e5e7eb;border-radius:8px;padding:12px;margin:10px 0">'
+        f'<div style="font-weight:600">Your {dir_word}: <strong>${target_price:,.2f}</strong></div>'
+        f'<div>Completed sale print: <strong>${hit:,.2f}</strong></div>'
+        f'{rank_note}'
+        f'<div style="margin-top:8px">{link_html}</div>'
+        f'</div>'
+        f'<p style="font-size:13px;color:#374151">This is the market report you asked the '
+        f'machine to watch — the market crossed your line, that is the whole story. '
+        f'What to do about it is entirely your call.</p>'
+        f'{footer}'
+    )
+    return subject, body
+
+
+def queue_crossing_email(to_email: str, subject: str, body_html: str) -> bool:
+    """Queue into draft_outbox/ (the email_alerts dry-run stream). NOTHING is
+    sent from the polling tick itself — a human (or the --send loop) sends.
+    Returns queued True/False; never raises."""
+    try:
+        out_dir = Path(os.environ.get(
+            "DRAFT_OUTBOX_DIR",
+            Path(os.environ.get("CARDSCOUT2_HOME", TWO_REPO)) / "data_lake" / "gold" / "draft_outbox"))
+        out_dir.mkdir(parents=True, exist_ok=True)
+        safe = re.sub(r"[^a-z0-9_-]+", "_", (to_email or "anon").strip().lower())[:80]
+        stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
+        # uuid suffix: seconds-resolution stamps collide when two triggers queue
+        # in the same second (two lanes crossing in one tick) — never overwrite
+        import uuid
+        fname = f"trigger_{safe}_{stamp}_{uuid.uuid4().hex[:8]}.html"
+        (out_dir / fname).write_text(
+            json.dumps({"to": to_email, "subject": subject, "html": body_html,
+                        "ts": stamp, "sent": False}, indent=0), encoding="utf-8")
+        return True
+    except OSError:
+        return False
+
+
+def mark_sent(markers: dict, key: str) -> None:
+    markers[key] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    _save_trigger_markers(markers)
+
+
+def watch_trigger_tick() -> dict:
+    """The §227.2 firing half, run on the bands cache polling half-cycle.
+    NEVER raises — any failure is logged and skipped (bands still serve)."""
+    summary = {"scanned": 0, "queued": 0, "skipped": 0, "errors": 0}
+    try:
+        data = json.loads(LEDGER_PATH.read_text(encoding="utf-8"))
+        markers = _load_trigger_markers()
+        reg = BP.load_registry()
+        all_lanes = reg.get("raw", {}).get("lanes", [])
+        for email, contrib in ((data.get("contributors") or {}).items()):
+            try:
+                if contrib.get("opt_out"):
+                    summary["skipped"] += 1
+                    continue
+                fired_this_lane: set[str] = set()  # one email per lane per cycle
+                for row in contrib.get("rows", []):
+                    try:
+                        target = row.get("target_price")
+                        direction = row.get("direction")
+                        if target is None or direction not in ("BUY", "SELL"):
+                            continue
+                        for slug in dedupe_lanes(row.get("lanes") or []):
+                            try:
+                                lane = next((l for l in all_lanes if l.get("slug") == slug), None)
+                                prints = (lane or {}).get("prints") or []
+                                if not prints:
+                                    summary["skipped"] += 1
+                                    continue
+                                hit = crossing_print(prints, direction, float(target))
+                                if hit is None:
+                                    summary["scanned"] += 1
+                                    continue
+                                key = f"{email}|{slug}|{direction}|{target}"
+                                if key in markers:
+                                    summary["scanned"] += 1
+                                    continue
+                                if str(slug) in fired_this_lane:
+                                    summary["skipped"] += 1
+                                    continue
+                                built = build_crossing_email(email, slug, direction, float(target), hit)
+                                if built is None:
+                                    summary["errors"] += 1
+                                    continue
+                                subj, body = built
+                                if queue_crossing_email(email, subj, body):
+                                    mark_sent(markers, key)
+                                    fired_this_lane.add(str(slug))
+                                    summary["queued"] += 1
+                                    summary["scanned"] += 1
+                                else:
+                                    summary["errors"] += 1
+                            except Exception:
+                                summary["errors"] += 1
+                                continue
+                    except Exception:
+                        summary["errors"] += 1
+                        continue
+            except Exception:
+                summary["errors"] += 1
+                continue
+        _log_event("watch-tick " + json.dumps(summary))
+        return summary
+    except Exception as e:
+        try:
+            _log_event(f"watch-tick error {type(e).__name__}")
+        except Exception:
+            pass
+        summary["errors"] += 1
+        return summary
+
+
+def dedupe_lanes(lanes: list) -> list[str]:
+    out, seen = [], set()
+    for x in lanes or []:
+        s = str(x or "").strip()
+        if s and s not in seen:
+            seen.add(s)
+            out.append(s)
+    return out
+
+
 def _write_deposit(email: str, text: str, paste_id: str) -> None:
     dir_ = DEPOSITS_DIR / contributor_id(email)
     try:
@@ -1046,6 +1270,16 @@ def analyze():
                 direction=direction, target_price=target_price, seller_id=seller_id)
     # the refined lane's listings: the FIRST matched known lane with a slug
     lane_slug = next((r["slug"] for r in refined if r.get("slug")), None)
+    # Brief 4 T5: the analyze path logs its search heat too — the refined lane's
+    # community query, the user's direction, and the prints this paste added.
+    # NO identity in the heat row (heat != identity).
+    if lane_slug:
+        try:
+            _heat_lane = BP.lane_by_slug(lane_slug) or {}
+            BP.heatmap_log(_heat_lane.get("search_q") or lane_slug, lane_slug,
+                           direction, parse["print_count"])
+        except Exception:
+            pass  # telemetry never breaks the reward render
     items, meta = [], {"source": "none", "age": None, "error": None}
     if lane_slug:
         items, meta = BP.get_listings(lane_slug)

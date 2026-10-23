@@ -22,6 +22,13 @@ BANKED DECISIONS honored here (see spec §2; no re-decisions):
 - Search = the seed: /bands?q=<query> logs exactly one deposit row; empty
   results render the gratitude page.
 - No auth (Phase 1). Favorites = localStorage. No Discord push anywhere.
+
+BRIEF 4 AMENDMENT (Oct 23 PM; extend, never rewrite): search-heatmap telemetry
+(T5 instrument) — same search events also log to the 2.0 data lake
+(search_heatmap.jsonl, raw query = the seed deposit; NO identity) and banded
+lanes render a heatmap-lite strip (n>=5 per week + top 3 community phrases).
+The watch-trigger LOOP (crossing detection -> queue -> email_alerts) lives in
+contributor_bp.watch_trigger_tick (the same polling half-cycle via app.py).
 """
 from __future__ import annotations
 
@@ -55,6 +62,12 @@ except OSError:
     DATA_DIR = REPO_DIR / "data"
 LISTING_CACHE_DIR = Path(os.environ.get("LISTING_CACHE_DIR", DATA_DIR / "listing_cache"))
 DEPOSITS_PATH = Path(os.environ.get("SEARCH_DEPOSITS_PATH", DATA_DIR / "search_deposits.jsonl"))
+# Brief 4 T5: heatmap telemetry lives in the 2.0 data lake (append-only jsonl).
+# Env override FIRST so the battery can redirect it; None (unset) = disabled —
+# hosts without the 2.0 repo simply skip the telemetry write (degrade, not crash).
+TWO_REPO_DATA = os.environ.get("CARDSCOUT2_HOME", r"C:/Users/J/Documents/LLM/cardscout-2.0")
+HEATMAP_PATH = Path(os.environ["HEATMAP_PATH"]) if os.environ.get("HEATMAP_PATH") \
+    else Path(TWO_REPO_DATA) / "data_lake" / "gold" / "search_heatmap.jsonl"
 
 CACHE_TTL_SEC = 3600          # cache law: 1h per lane
 EARN_TTL_SEC = 600            # .env re-read interval (arming switch)
@@ -378,6 +391,40 @@ def record_deposit(q: str, lane_slug: str | None, kind: str) -> None:
 
 
 # ---------------------------------------------------------------------------
+# SEARCH-HEATMAP TELEMETRY (Brief 4 Job 2 — the T5 instrument). Same search
+# events, second append-only ledger in the 2.0 data lake. heat != identity:
+# the raw query IS stored (it's the corpus per search-is-the-seed), the sender
+# is NOT. results_n rides along for observatory-depth stats.
+# ---------------------------------------------------------------------------
+_hm_lock = threading.Lock()
+
+
+def heatmap_log(q: str, lane_slug: str | None, direction: str | None, results_n: int) -> None:
+    """One append per logged search; NEVER raises (telemetry must not break
+    the page; file absent/unwritable = skipped silently)."""
+    if not q:
+        return
+    row = {
+        "ts": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "lane_slug": lane_slug,
+        "search_q": (q or "")[:200],   # the raw query is the seed deposit itself
+        "direction": direction,
+        "results_n": int(results_n or 0),
+    }
+    try:
+        line = json.dumps(row) + "\n"
+    except (TypeError, ValueError):
+        return
+    with _hm_lock:
+        try:
+            HEATMAP_PATH.parent.mkdir(parents=True, exist_ok=True)
+            with open(HEATMAP_PATH, "a", encoding="utf-8") as fh:
+                fh.write(line)
+        except OSError:
+            pass  # telemetry loss is acceptable; the deposit itself is not lost
+
+
+# ---------------------------------------------------------------------------
 # LISTING PRESENTATION (lowest-BIN-first default, all sellers, no filtering)
 # ---------------------------------------------------------------------------
 def order_default(items: list[dict]) -> list[dict]:
@@ -498,6 +545,17 @@ CARD_PAGE_TEMPLATE = '''<!DOCTYPE html>
 {% if deal_count is not none and deal_count > 0 %}
   <div class="deal-ribbon">◆ {{ deal_count }} live listing{{ '' if deal_count == 1 else 's' }} priced inside this lane's deal window</div>
 {% endif %}
+
+{% if heat_n is not none and heat_n >= 5 %}
+  <div class="heat-strip" id="heat-strip">
+    <div class="heat-line">🔥 Searched {{ heat_n }} times this week</div>
+    {% if heat_phrases %}
+    <div class="heat-phrases">Top community searches:
+      {%- for ph in heat_phrases %} <span class="heat-phrase">“{{ ph }}”</span>{% if not loop.last %},{% endif %}{% endfor %}</div>
+    {% endif %}
+  </div>
+{% endif %}
+
 {% if listings_meta.source in ('stale', 'none', 'error') and items %}
   <div class="listings-note">Showing saved listings from the last hour — live refresh is running in the background.</div>
 {% endif %}
@@ -662,8 +720,10 @@ def bands_index() -> str:
         match = find_lane_for_query(q)
         if match:
             record_deposit(q, match["slug"], "search-hit")
+            heatmap_log(q, match["slug"], None, 1)
             return redirect(url_for("bands.band_page", slug=match["slug"]))
         record_deposit(q, None, "search-expansion")
+        heatmap_log(q, None, None, 0)
         example_lanes = sorted(
             [l for l in reg["raw"].get("lanes", []) if l["band_class"] != "forming"],
             key=lambda e: -e["n"])[:8]
@@ -709,6 +769,51 @@ def find_lane_for_query(q: str) -> dict | None:
     return best
 
 
+def collect_search_heat(
+    lane_slug: str,
+    window_days: int = 7,
+    min_n: int = 5,
+    top_phrases: int = 3,
+) -> tuple[int, list[str]]:
+    """Aggregates feed NOTHING else yet (T5 lite): read this lane's raw search
+    queries from the heatmap ledger within the window; return (n, top phrases).
+    n>=min_n is the render gate; caller renders 'nothing' below it. NEVER
+    raises; any read failure = (0, []) = honest quiet."""
+    try:
+        if not HEATMAP_PATH.exists():
+            return 0, []
+        cutoff = time.time() - window_days * 86400
+        counts: dict[str, int] = {}
+        n = 0
+        with HEATMAP_PATH.open(encoding="utf-8") as fh:
+            for line in fh:
+                line = line.strip()
+                if not line:
+                    continue
+                try:
+                    row = json.loads(line)
+                except ValueError:
+                    continue
+                if row.get("lane_slug") != lane_slug:
+                    continue
+                try:
+                    ts = datetime.fromisoformat(str(row.get("ts", ""))).timestamp()
+                except (ValueError, OSError):
+                    ts = 0.0
+                if ts and ts < cutoff:
+                    continue
+                q = str(row.get("search_q") or "").strip().lower()
+                if not q:
+                    continue
+                n += 1
+                counts[q] = counts.get(q, 0) + 1
+        top = [p for p, _ in sorted(counts.items(), key=lambda kv: (-kv[1], kv[0]))[:top_phrases]]
+        top = [p[:64] for p in top]
+        return n, (top if n >= min_n else [])
+    except OSError:
+        return 0, []
+
+
 def compose_lane(lane: dict) -> dict:
     """Whitelisted fields for templates (no env values, no engine internals)."""
     grade_disp = "raw card" if lane["grade_bucket"] == "raw" else lane["grade_bucket"]
@@ -743,9 +848,11 @@ def band_page(slug: str):
         it["href"] = tag["href"]
         it["tagged"] = tag["tagged"]
     dc = deal_count(items, raw)
+    heat_n, heat_phrases = collect_search_heat(slug)
     return render_template_string(
         CARD_PAGE_TEMPLATE, lane=lane, items=items,
         listings_meta=meta, deal_count=dc,
+        heat_n=heat_n, heat_phrases=heat_phrases,
         band_only_ok=(lane["band_class"] != "forming"),
     )
 
@@ -758,4 +865,6 @@ def bands_health():
         "lanes": reg.get("raw", {}).get("lane_count", 0),
         "epn_armed": epn_campaign_id() is not None,
         "cache_dir": str(LISTING_CACHE_DIR),
+        "heatmap_path": str(HEATMAP_PATH),
+        "heatmap_enabled": HEATMAP_PATH is not None,
     }
