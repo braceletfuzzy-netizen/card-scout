@@ -8,10 +8,18 @@ REWARD: the custom graph (their paste's distribution curve, the lane's refined b
 the before/after width delta with their credit line, BIN-sorted listings for the refined
 lane, the gratitude state) + the contributor-ledger tick.
 
-## AUTH (banked shape: shared-secret URLs)
-- Routes: /dashboard/jim-<token>, /dashboard/allen-<token> (founder + any future contributor = same pattern, tokens in .env as CONTRIB_JIM_TOKEN etc)
-- No accounts, no OAuth in phase 1. Wrong/missing token → clean redirect to /bands (no interior render at all) — P9.
-- The workspace LOOKS like a private page (no nav to public, no public links TO it).
+## AUTH (FOUNDERS REVISED AM Oct 23: GOOGLE LOGIN — attribution to PERSON, not token)
+- Auth = Google OAuth2 (the EXISTING /admin/login/google pattern in app.py —
+  GOOGLE_CLIENT_ID/SECRET env flow, requests_oauthlib already in requirements).
+- Attribution: OAuth email → contributor identity → ledger rows keyed BY PERSON.
+  (Founder-corrected rationale: track attribution to the PERSON across devices,
+  tokens-by-URL lose attribution the moment a URL is shared.)
+- Workspace gating: contributor must exist in the contributor roster (email-match
+  in .env CONTRIBUTOR_EMAILS list — founder-curated roster, config-not-hardcode);
+  any OTHER Google-email = clean redirect to /bands, zero interior render (P9).
+- No password created (founder hates new passwords; Google = the banked
+  login preference). The old secret-URL pattern = FALLBACK ONLY (documented,
+  not primary) for offline/local sessions if needed.
 
 ## THE PASTE → REWARD LOOP (the page's flow)
 1. PASTE: one large textarea, accepts any pull-dump text (multi-page pastes fine,
@@ -43,11 +51,13 @@ lane, the gratitude state) + the contributor-ledger tick.
 - NEVER send Discord/email push from this surface (beta push = separate lane, untouched)
 - NEVER break if the parse fails: 'analysis failed — paste was not parseable' +
   the NO-IN-SPEC cause = an honest 200, never a 500 (P10e)
-- NEVER store PII beyond token-name (the ledger = name+counts+lanes only)
+- PII ledger rule (revised): the ledger keys on GOOGLE EMAIL (person-attribution,
+  founder-directed) — name+email+counts+lanes only; no other PII ever
 
 ## ACCEPTANCE (P9–P11; Hermes runs after build)
-- P9 AUTH: wrong-token, no-token, root-path access → all redirect to /bands; zero
-  interior render; robots.txt gains the workspace disallow
+- P9 AUTH: non-roster Google email, logged-out direct-access → all redirect to
+  /bands; zero interior render; robots.txt gains the workspace disallow;
+  roster-emails → interior renders; attribution = email-keyed ledger rows
 - P10 END-TO-END: real paste (use a sample from data_lake raw pastes) → parses →
   lane refines → before/after renders → ledger ticks +1 → listings render. PLUS
   paste-fail → honest-200 error page w/ cause (never 500)
@@ -65,4 +75,4 @@ lane, the gratitude state) + the contributor-ledger tick.
   later if Jim is remote; localhost now is legal: Jim sends pastes by Discord to the
   founder who pastes into the workspace = fully manual, no infra).
 
-## STATUS: BRIEF ISSUED, WALL-E GO. Auth = secret-URLs (default accepted). Verify = Hermes P9-P11 + inherited sweeps. No stamps until then.
+## STATUS: BRIEF REVISED IN PLACE (founder correction AM): auth = GOOGLE LOGIN (person-attribution; roster-gated). WALL-E GO stands. Verify = Hermes P9-P11 (P9 = roster-gate tests) + inherited sweeps. No stamps until then.
