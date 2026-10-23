@@ -57,6 +57,11 @@ app.register_blueprint(bands_bp)
 # private surface: robots-disallowed, roster-gated — never published)
 from contributor_bp import bp as contrib_bp
 app.register_blueprint(contrib_bp)
+
+# CAN-SPAM endpoints at the ROOT (/unsubscribe, /resubscribe) — briefed this way
+# because the email footer links there; token-gated, flag-flips only, zero sends
+from contributor_bp import unsub_bp as contrib_unsub_bp
+app.register_blueprint(contrib_unsub_bp)
 import stripe
 import requests
 from db_models import WebhookEvent, RunHistory

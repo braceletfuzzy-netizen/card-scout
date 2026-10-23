@@ -56,3 +56,17 @@
 
 /* reuse listing-row grid from bands.css; reward page includes bands.js */
 .contrib-footer { border-top: 1px solid var(--color-border); margin-top: 24px; padding: 14px 24px; font-size: 13px; color: var(--color-muted); }
+
+/* Brief 3: intake amendment (direction/target/seller) + reward watch-line */
+.intake-fieldset { border: 1px solid var(--color-border); border-radius: var(--radius); padding: 10px 14px; margin: 0 0 12px; }
+.intake-legend { font-size: 13px; font-weight: 600; color: var(--color-muted); padding: 0 6px; }
+.intake-optional { font-weight: 400; color: var(--color-muted); }
+.intake-radio { margin-right: 16px; font-size: 14px; }
+.intake-radio input { margin-right: 5px; }
+.intake-target, .intake-seller { border: 1px solid var(--color-border); border-radius: var(--radius); padding: 8px 10px; font-size: 14px; width: 220px; }
+.intake-hint { display: block; color: var(--color-muted); font-size: 12px; margin-top: 4px; }
+.watch-line { background: #eff6ff; border: 1px solid #bfdbfe; color: #1e40af; border-radius: var(--radius); padding: 8px 12px; font-size: 14px; font-weight: 600; }
+.watch-line-quiet { background: var(--color-bg); border: 1px solid var(--color-border); color: var(--color-muted); font-weight: 400; }
+.resub-btn { text-decoration: none; }
+/* direction-aware target label swap (no default selection; nothing pre-filled) */
+form .intake-fieldset input[type="radio"] { cursor: pointer; }

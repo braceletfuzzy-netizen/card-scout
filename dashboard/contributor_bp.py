@@ -33,7 +33,9 @@ BOUNDS honored here:
 """
 from __future__ import annotations
 
+import base64
 import hashlib
+import hmac
 import json
 import os
 import re
@@ -52,6 +54,9 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import band_pages as BP  # noqa: E402
 
 bp = Blueprint("contrib", __name__, url_prefix="/contributor")
+# Prefix-less sibling for the PUBLIC CAN-SPAM endpoints (brief 3 Job 4: the
+# email footer links to /unsubscribe — root, no auth, robots-disallowed)
+unsub_bp = Blueprint("contrib_unsub", __name__)
 
 DASH_DIR = Path(__file__).resolve().parent
 REPO_DIR = DASH_DIR.parent
@@ -66,6 +71,11 @@ DEPOSITS_DIR = Path(os.environ.get(
     "CONTRIBUTOR_DEPOSITS_DIR", TWO_REPO / "data_lake" / "raw" / "contributor"))
 LEDGER_PATH = Path(os.environ.get(
     "CONTRIBUTOR_LEDGER_PATH", TWO_REPO / "data_lake" / "contributor_ledger.json"))
+
+# Brief 3 (§227): seller-watch LEDGER (append-only; the alert-side reversal is a
+# LATER cycle — nothing reads this file yet besides its own append discipline)
+SELLER_WATCH_PATH = Path(os.environ.get(
+    "SELLER_WATCH_PATH", TWO_REPO / "data_lake" / "gold" / "seller_watch_registry.json"))
 
 PASTE_MAX_CHARS = 200_000  # brief: ~200KB cap
 
@@ -355,7 +365,8 @@ def contributor_id(email: str) -> str:
 
 
 def ledger_tick(email: str, display_name: str, parse: dict, refined: list[dict],
-                paste_id: str) -> None:
+                paste_id: str, direction: str | None = None,
+                target_price: float | None = None, seller_id: str | None = None) -> None:
     row = {
         "ts": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "paste_id": paste_id,
@@ -363,6 +374,9 @@ def ledger_tick(email: str, display_name: str, parse: dict, refined: list[dict],
         "asks_excluded": (parse.get("excluded") or {}).get("asks", 0),
         "lanes": [r.get("slug") or r.get("lane") for r in refined],
         "refined": [{"slug": r.get("slug"), "pct": r.get("pct")} for r in refined if r.get("slug")],
+        "direction": direction,          # BUY | SELL | None (brief 3 §227.1)
+        "target_price": target_price,    # user's own ceiling/floor; never site-suggested
+        "seller_id": (seller_id or None),  # optional; seller-watch ledger only
     }
     with _ledger_lock:
         try:
@@ -394,6 +408,104 @@ def own_ledger_rows(email: str) -> dict | None:
         return (data.get("contributors") or {}).get(email)
     except (OSError, ValueError):
         return None
+
+
+# ---------------------------------------------------------------------------
+# CAN-SPAM CLOSURE (Brief 3 Job 4): stateless HMAC unsubscribe tokens.
+# Token = base64url(email|ts|"v1"|hmac). The email is INSIDE the token (it is
+# a capability to opt that ONE address out; never rendered beyond the flow).
+# ---------------------------------------------------------------------------
+def _unsub_secret() -> bytes:
+    """SECRET_KEY from env/.env; dev fallback derives from the ledger path so a
+    missing env never silently produces cross-install-valid tokens."""
+    s = os.environ.get("SECRET_KEY") or env_file_val("SECRET_KEY")
+    if s:
+        return s.encode()
+    return ("cardscout-contrib-unsub|" + str(LEDGER_PATH)).encode()
+
+
+def make_unsub_token(email: str) -> str:
+    msg = f"{email.strip().lower()}|{int(time.time())}|v1".encode()
+    sig = hmac.new(_unsub_secret(), msg, hashlib.sha256).digest()
+    return base64.urlsafe_b64encode(msg + b"|" + sig).decode().rstrip("=")
+
+
+def verify_unsub_token(token: str) -> str | None:
+    """Returns the email for a valid, well-formed, non-expired token; else None.
+    (No expiry is enforced by default — the capability is an opt-out, not a
+    session; a bogus HMAC is rejected, which is the honest security boundary.)"""
+    try:
+        pad = "=" * (-len(token) % 4)
+        raw = base64.urlsafe_b64decode(token + pad)
+        email_b, ts_b, ver_b, sig = raw.split(b"|", 3)
+        msg = email_b + b"|" + ts_b + b"|" + ver_b
+        good = hmac.new(_unsub_secret(), msg, hashlib.sha256).digest()
+        if not hmac.compare_digest(good, sig):
+            return None
+        if ver_b != b"v1":
+            return None
+        email = email_b.decode("utf-8")
+        return email or None
+    except Exception:
+        return None
+
+
+def _opt_out_flag(email: str, value: bool) -> bool:
+    """Flip opt_out on the contributor's ledger entry (append-only style: the
+    entry's row history stays; the flag + a timestamped marker are set)."""
+    with _ledger_lock:
+        try:
+            data = json.loads(LEDGER_PATH.read_text(encoding="utf-8")) if LEDGER_PATH.exists() else {}
+        except (OSError, ValueError):
+            data = {}
+        contrib = (data.get("contributors") or {}).get(email)
+        if contrib is None:
+            return False  # unknown contributor: no data to flip (callers decide)
+        contrib["opt_out"] = bool(value)
+        contrib["opt_out_ts"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+        tmp = LEDGER_PATH.with_suffix(".tmp")
+        try:
+            LEDGER_PATH.parent.mkdir(parents=True, exist_ok=True)
+            tmp.write_text(json.dumps(data, indent=1), encoding="utf-8")
+            os.replace(tmp, LEDGER_PATH)
+            return True
+        except OSError:
+            return False
+
+
+def is_opted_out(email: str) -> bool:
+    try:
+        data = json.loads(LEDGER_PATH.read_text(encoding="utf-8"))
+        c = (data.get("contributors") or {}).get(email)
+        return bool(c and c.get("opt_out"))
+    except (OSError, ValueError):
+        return False
+
+
+def seller_watch_tick(seller_id: str, email: str, lane_ids: list[str]) -> bool:
+    """Append-only §227 ledger write: {ts, contributor_email_hash, seller_id,
+    lanes}. NOTHING is sent (the alert-side reversal ships in a later cycle)."""
+    row = {
+        "ts": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "contributor_email_hash": contributor_id(email),  # hash, not the email
+        "seller_id": seller_id.strip()[:80],
+        "lanes": lane_ids[:20],
+    }
+    with _ledger_lock:
+        try:
+            data = json.loads(SELLER_WATCH_PATH.read_text(encoding="utf-8")) \
+                if SELLER_WATCH_PATH.exists() else {"rows": []}
+        except (OSError, ValueError):
+            data = {"rows": []}
+        data.setdefault("rows", []).append(row)  # append-only
+        tmp = SELLER_WATCH_PATH.with_suffix(".tmp")
+        try:
+            SELLER_WATCH_PATH.parent.mkdir(parents=True, exist_ok=True)
+            tmp.write_text(json.dumps(data, indent=1), encoding="utf-8")
+            os.replace(tmp, SELLER_WATCH_PATH)
+            return True
+        except OSError:
+            return False
 
 
 def _log_event(event: str) -> None:
@@ -525,6 +637,23 @@ WORKSPACE_TEMPLATE = '''<!DOCTYPE html>
   sets aside — nothing is dropped silently. You get the distribution, the refined lane,
   and the ledger credit.</p>
   <form method="post" action="/contributor/analyze">
+    <fieldset class="intake-fieldset">
+      <legend class="intake-legend">Direction <span class="intake-optional">(optional — the analysis runs either way)</span></legend>
+      <label class="intake-radio"><input type="radio" name="direction" value="BUY"> Buying</label>
+      <label class="intake-radio"><input type="radio" name="direction" value="SELL"> Selling</label>
+      <span class="intake-hint">Your watch alert branches on this: a ceiling when buying, a floor when selling.</span>
+    </fieldset>
+    <fieldset class="intake-fieldset">
+      <legend class="intake-legend"><span data-dir-label data-buy="Your ceiling — alert me below this" data-sell="Your floor — alert me above this">Target price (optional)</span></legend>
+      <input class="intake-target" type="number" step="0.01" min="0" name="target_price"
+             placeholder="" aria-label="Target price (your own value; never suggested by the site)">
+      <span class="intake-hint">Your own number — the site never suggests or pre-fills a price here.</span>
+    </fieldset>
+    <fieldset class="intake-fieldset">
+      <legend class="intake-legend">Your eBay seller ID <span class="intake-optional">(optional — for the seller-watch ledger)</span></legend>
+      <input class="intake-seller" type="text" name="seller_id" maxlength="80" autocomplete="off" placeholder="">
+      <span class="intake-hint">Stored in the seller-watch ledger only; no seller features yet.</span>
+    </fieldset>
     <textarea name="paste" rows="14" placeholder="Paste the pull dump here (text or page source)…"  maxlength="{{ paste_max }}"></textarea>
     <div class="paste-actions">
       <button type="submit">Analyze paste</button>
@@ -533,6 +662,22 @@ WORKSPACE_TEMPLATE = '''<!DOCTYPE html>
   </form>
   %LEADER%
 </main>
+<script>
+(function () {
+  'use strict';
+  // §227.1: direction-aware target label; NO default selection, NOTHING pre-filled.
+  var radios = document.querySelectorAll('input[name="direction"]');
+  var label = document.querySelector('[data-dir-label]');
+  if (!radios.length || !label) return;
+  radios.forEach(function (r) {
+    r.addEventListener('change', function () {
+      if (r.checked) label.textContent = r.value === 'SELL'
+        ? label.getAttribute('data-sell')
+        : label.getAttribute('data-buy');
+    });
+  });
+})();
+</script>
 ''' + FOOTER_LINE + '''
 </body>
 </html>'''
@@ -598,12 +743,28 @@ REWARD_TEMPLATE = '''<!DOCTYPE html>
       {% endif %}
       </div>
     {% endfor %}
+    {% if direction and target_price is not none %}
+      {% if direction == 'BUY' %}
+      <p class="watch-line">Entry watch: if this lane prints below YOUR ceiling (${{ '%.2f' % target_price }}), your next alert says so.</p>
+      {% elif direction == 'SELL' %}
+      <p class="watch-line">Repricing watch: if this lane prints above YOUR floor (${{ '%.2f' % target_price }}), your next alert says so.</p>
+      {% endif %}
+    {% elif seller_id %}
+      <p class="watch-line watch-line-quiet">Seller watch: {{ seller_id }} is on the seller-watch ledger (no seller features yet).</p>
+    {% endif %}
   </section>
   {% else %}
   <section class="reward-block">
     <h2>The lane refined</h2>
     <p>No known lane matched yet — your paste is deposited and the corpus grows.
     {% if not parse.player %}No player matched from the corpus yet; include the player name in your next search header for lane credit.{% endif %}</p>
+    {% if direction and target_price is not none %}
+      {% if direction == 'BUY' %}
+      <p class="watch-line">Entry watch: if this lane prints below YOUR ceiling (${{ '%.2f' % target_price }}), your next alert says so.</p>
+      {% elif direction == 'SELL' %}
+      <p class="watch-line">Repricing watch: if this lane prints above YOUR floor (${{ '%.2f' % target_price }}), your next alert says so.</p>
+      {% endif %}
+    {% endif %}
   </section>
   {% endif %}
 
@@ -825,6 +986,20 @@ def analyze():
     email = session["contributor_email"]
     name = session.get("contributor_name") or email.split("@")[0]
     text = (request.form.get("paste") or "")
+    # --- Brief 3 intake (all three null-safe; §227.1/§227.2) ---
+    direction = (request.form.get("direction") or "").strip().upper() or None
+    if direction not in ("BUY", "SELL"):
+        direction = None
+    target_raw = (request.form.get("target_price") or "").strip()
+    target_price: float | None = None
+    if target_raw:
+        try:
+            v = float(target_raw)
+            if v > 0:
+                target_price = round(v, 2)  # the USER'S own number; never site-suggested
+        except ValueError:
+            target_price = None
+    seller_id = (request.form.get("seller_id") or "").strip()[:80] or None
     if len(text) > PASTE_MAX_CHARS:
         return render_template_string(
             ERROR_TEMPLATE,
@@ -843,7 +1018,20 @@ def analyze():
         return render_template_string(ERROR_TEMPLATE, causes=causes)
     paste_id = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     _write_deposit(email, text, paste_id)
-    ledger_tick(email, name, parse, refined, paste_id)
+    # Brief 3: the deposit's sidecar carries the intake trio (null-safe)
+    try:
+        sidecar = {
+            "paste_id": paste_id, "direction": direction,
+            "target_price": target_price, "seller_id": seller_id,
+        }
+        (DEPOSITS_DIR / contributor_id(email) / f"{paste_id}_intake.json").write_text(
+            json.dumps(sidecar), encoding="utf-8")
+    except OSError:
+        pass
+    if seller_id:  # §227 ledger-only write; nothing is ever sent
+        seller_watch_tick(seller_id, email, [r.get("slug") or r.get("lane") for r in refined])
+    ledger_tick(email, name, parse, refined, paste_id,
+                direction=direction, target_price=target_price, seller_id=seller_id)
     # the refined lane's listings: the FIRST matched known lane with a slug
     lane_slug = next((r["slug"] for r in refined if r.get("slug")), None)
     items, meta = [], {"source": "none", "age": None, "error": None}
@@ -869,6 +1057,7 @@ def analyze():
     return render_template_string(
         REWARD_TEMPLATE, parse={**parse}, hists=hists, refined=refined,
         lane_slug=lane_slug, items=items, listings_meta=meta,
+        direction=direction, target_price=target_price, seller_id=seller_id,
         ledger_total=(me or {}).get("pastes"))
 
 
@@ -885,3 +1074,79 @@ def ledger_view():
 def health():
     return {"ok": True, "roster_size": len(contributor_roster()),
             "auth_configured": bool(google_client_id())}
+
+
+# ---------------------------------------------------------------------------
+# CAN-SPAM endpoints (Brief 3 Job 4): public, token-gated, robots-disallowed.
+# They ONLY flip ledger flags — ZERO email is ever sent from this module.
+# ---------------------------------------------------------------------------
+UNSUB_TEMPLATE = '''<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>{{ headline }} — Card Scout</title>
+''' + CSS + '''
+</head>
+<body class="contrib-page">
+<header>
+  <nav>
+    <div class="nav-brand"><a href="/">Card Scout</a></div>
+    <div class="nav-links"><a href="/bands">Card Pages</a></div>
+  </nav>
+</header>
+<main class="contrib-main">
+  <h1>{{ headline }}</h1>
+  <p class="contrib-lede">{{ lede }}</p>
+  {% if show_resub %}
+  <p><a class="g-login resub-btn" href="/resubscribe?t={{ token }}">Re-subscribe</a></p>
+  {% endif %}
+</main>
+''' + FOOTER_LINE + '''
+</body>
+</html>'''
+
+
+@unsub_bp.route("/unsubscribe", methods=["GET"])
+def unsubscribe():
+    token = (request.args.get("t") or "").strip()
+    email = verify_unsub_token(token) if token else None
+    ok = False
+    if email:
+        ok = _opt_out_flag(email, True)
+        _log_event("unsubscribe-ok" if ok else "unsubscribe-unknown")
+    else:
+        _log_event("unsubscribe-bad-token")
+    return render_template_string(
+        UNSUB_TEMPLATE,
+        ok=ok,
+        headline=("You're unsubscribed." if ok else "Link expired."),
+        lede=("The bands stay public at cardscout.pro — your alerts stop immediately. "
+              "Changed your mind? One click, right here."
+              if ok else
+              "This unsubscribe link isn't valid anymore — contact "
+              "jonathan@cardscout.pro and we'll sort it out immediately. "
+              "The bands stay public at cardscout.pro."),
+        token=token if ok else "",
+        show_resub=ok)
+
+
+@unsub_bp.route("/resubscribe", methods=["GET"])
+def resubscribe():
+    token = (request.args.get("t") or "").strip()
+    email = verify_unsub_token(token) if token else None
+    ok = False
+    if email:
+        ok = _opt_out_flag(email, False)
+        _log_event("resubscribe-ok" if ok else "resubscribe-unknown")
+    return render_template_string(
+        UNSUB_TEMPLATE,
+        ok=ok,
+        headline=("You're re-subscribed." if ok else "Link expired."),
+        lede=("Your alerts resume immediately. The bands stay public at cardscout.pro."
+              if ok else
+              "This re-subscribe link isn't valid anymore — contact "
+              "jonathan@cardscout.pro and we'll fix it immediately."),
+        token="",
+        show_resub=False)

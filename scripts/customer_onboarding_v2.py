@@ -315,7 +315,7 @@ def ensure_processed_column(sheets_service, sheet_id):
     """Add a 'processed_at' column to Form Responses 1 if not present."""
     result = sheets_service.spreadsheets().values().get(
         spreadsheetId=sheet_id,
-        range=f"'{FORM_RESPONSES_TAB}'!A1:Z1"
+        range=f"'{FORM_RESPONSES_TAB}'!A1:AZ1"
     ).execute()
     headers = result.get('values', [[]])[0]
 
@@ -333,25 +333,59 @@ def ensure_processed_column(sheets_service, sheet_id):
     return headers.index('processed_at') + 1
 
 
+def _same_instrument(session, customer_pk, search_query):
+    """True if an existing card for this customer describes the same instrument.
+
+    Token-overlap check on alphanumeric tokens (len>=3), case/space tolerant.
+    Handles re-imported rows whose query string differs but describe the same
+    card, e.g. 'Imported 2026-09-17 Upton, Ohtani & Trout 2018 US158 Parallel'
+    vs '2018 Topps Upton, Ohtani & Trout US158 Parallel'.
+    """
+    import re
+
+    def toks(q):
+        return {t.lower() for t in re.findall(r'[A-Za-z0-9]+', q) if len(t) >= 3 and not t.lower().startswith('20')}
+
+    want = toks(search_query)
+    if not want:
+        return False
+    existing_cards = session.query(Card).filter(Card.customer_id == customer_pk).all()
+    for card in existing_cards:
+        have = toks(card.search_query or '')
+        if not have:
+            continue
+        inter = want & have
+        # Primary: strong token overlap (>=70% of the row's tokens).
+        if len(inter) / max(len(want), 1) >= 0.7:
+            return True
+        # Secondary: a mixed letter+digit token matched exactly (e.g. 'op13',
+        # 'us158') — set/serial identifiers are effectively unique keys.
+        if any(re.search(r'\d', t) and re.search(r'[A-Za-z]', t) for t in inter):
+            return True
+    return False
+
+
 def process_form_responses(sheets_service, gmail_service, sheet_id, dry_run=False):
     """Read Form Responses, create customers, send emails."""
     print("\n" + "="*70)
     print("PROCESSING FORM RESPONSES")
     print("="*70)
 
-    # Get all data
+    # Ensure processed_at column exists FIRST (may create col AA+), then read
+    # data through that column. Reading A1:Z first was the bug: a 26-col read
+    # never sees processed_at in col 27, so rows were reprocessed every run.
+    processed_col = ensure_processed_column(sheets_service, sheet_id)
+    last_col = max(processed_col, 26)
+
     result = sheets_service.spreadsheets().values().get(
         spreadsheetId=sheet_id,
-        range=f"'{FORM_RESPONSES_TAB}'!A1:Z1000"
+        range=f"'{FORM_RESPONSES_TAB}'!A1:{_col_letter(last_col)}1000"
     ).execute()
     rows = result.get('values', [])
 
     if len(rows) < 2:
         print("  No form responses yet")
         return 0
-
-    # Ensure processed_at column exists
-    processed_col = ensure_processed_column(sheets_service, sheet_id)
 
     new_customers = 0
     for row_idx, row in enumerate(rows[1:], start=2):
@@ -386,37 +420,61 @@ def process_form_responses(sheets_service, gmail_service, sheet_id, dry_run=Fals
 
         # Create customer in DB
         session = get_session()
+        existing_customer = True  # fall through to mark-processed even on dup webhook
         try:
-            # Check if already exists
+            # Check if customer already exists for this webhook
             existing = session.query(Customer).filter_by(discord_webhook=webhook).first()
             if existing:
                 print(f"    ⚠️  Customer with this webhook exists: {existing.customer_id}")
-                continue
+                # Card-level dedup: exact query, or strong token overlap with an
+                # existing card for this customer (handles re-imported rows whose
+                # query string differs but describe the same instrument).
+                dup_card = session.query(Card).filter_by(
+                    customer_id=existing.id, search_query=search_query).first()
+                if dup_card:
+                    print(f"    ⏭️  Card already tracked (id {dup_card.id})")
+                else:
+                    if _same_instrument(session, existing.id, search_query):
+                        print(f"    ⏭️  Same instrument already tracked, skipping card add")
+                    else:
+                        new_card = Card(
+                            customer_id=existing.id,
+                            search_query=search_query,
+                            alert_type='below_median',
+                            max_listings=15,
+                            enabled=True,
+                        )
+                        session.add(new_card)
+                        session.commit()
+                        print(f"    ✓ Card added to {existing.customer_id}: {search_query}")
+            else:
+                existing_customer = False
 
-            customer_id = generate_customer_id_v2(session)
-            new_customer = Customer(
-                customer_id=customer_id,
-                email=f"{first_name.lower()}.{last_name.lower()}@placeholder.local",  # No email from form
-                discord_webhook=webhook,
-                tier='beta_power',  # Default to power for now
-                subscription_status='active',  # Mark as active customer
-            )
-            session.add(new_customer)
-            session.commit()
-            session.refresh(new_customer)
-            print(f"    ✓ Customer {customer_id} created")
+            if not existing:
+                customer_id = generate_customer_id_v2(session)
+                new_customer = Customer(
+                    customer_id=customer_id,
+                    email=f"{first_name.lower()}.{last_name.lower()}@placeholder.local",  # No email from form
+                    discord_webhook=webhook,
+                    tier='beta_power',  # Default to power for now
+                    subscription_status='active',  # Mark as active customer
+                )
+                session.add(new_customer)
+                session.commit()
+                session.refresh(new_customer)
+                print(f"    ✓ Customer {customer_id} created")
 
-            # Add the card
-            new_card = Card(
-                customer_id=new_customer.id,
-                search_query=search_query,
-                alert_type='below_median',
-                max_listings=15,
-                enabled=True,
-            )
-            session.add(new_card)
-            session.commit()
-            print(f"    ✓ Card added: {search_query}")
+                # Add the card
+                new_card = Card(
+                    customer_id=new_customer.id,
+                    search_query=search_query,
+                    alert_type='below_median',
+                    max_listings=15,
+                    enabled=True,
+                )
+                session.add(new_card)
+                session.commit()
+                print(f"    ✓ Card added: {search_query}")
 
         except Exception as e:
             print(f"    ✗ DB error: {e}")

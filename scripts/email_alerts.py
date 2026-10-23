@@ -167,6 +167,15 @@ def build_email(email: str, alerts: list[dict]) -> tuple[str, str, int, int]:  #
             f'never advice on what to buy):</p>' + "".join(lines)
         )
     token = None  # Phase-2: per-user unsub token from ledger; dry runs use placeholder
+    # Brief 3 Job 4: generate the REAL CAN-SPAM token when the caller is a real
+    # address (dry runs with placeholder addresses keep the placeholder footer).
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "dashboard"))
+        from contributor_bp import make_unsub_token  # noqa: E402
+        if email and "@placeholder.local" not in email:
+            token = make_unsub_token(email)
+    except Exception:
+        token = None  # honest fallback: placeholder footer, never a crash
     return subj, f"<html><body>{body}{render_footer(token)}</body></html>", n, tagged_n
 
 
@@ -243,6 +252,14 @@ def main() -> int:
         # iterate the enabled customers (the 1.0 DB pattern; placeholders excluded
         # by the same rule digest_delivery uses)
         import sqlite3
+        # opt-out filter (CAN-SPAM closure): contributor ledger flags, if present
+        optouts: set[str] = set()
+        try:
+            _ledger = Path("C:/Users/J/Documents/LLM/cardscout-2.0/data_lake/contributor_ledger.json")
+            _led = json.loads(_ledger.read_text(encoding="utf-8"))
+            optouts = {e for e, c in (_led.get("contributors") or {}).items() if c.get("opt_out")}
+        except (OSError, ValueError):
+            pass
         db = REPO_DIR / "card_scout.db"
         if not db.exists():
             print("card_scout.db not found; nothing to do", file=sys.stderr)
@@ -254,6 +271,9 @@ def main() -> int:
         ).fetchall()
         rc = 0
         for cid, email, tier in rows:
+            if email in optouts:
+                print(f"  skip (opted-out): {cid} ({email})")
+                continue
             alerts = load_alerts_for(cid, Path(args.reports_dir))
             subj, html, n, tagged_n = build_email(email, alerts)
             print(f"[DRY] {cid} ({email}): {n} rows, {tagged_n} tagged; subject: {subj}")
