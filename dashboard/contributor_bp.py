@@ -1427,3 +1427,15 @@ def resubscribe():
               "jonathan@cardscout.pro and we'll fix it immediately."),
         token="",
         show_resub=False)
+
+# ===========================================================================
+# THE CAR-DEALER ANALOGY (Oct 23 night, founder crystallization — capture verbatim-
+# intent): "We should TELL them how to do it. 1) It's the easiest way and makes
+# THEM more efficient. 2) It gives us THE VEHICLE THEY ARE SEARCHING UNDER —
+# make and model." = the teaching layer and the telemetry layer are THE SAME
+# ACT. Instructing the exact search (year + set + parallel + /nn) does double
+# duty: contributors get sharper bands faster, and the machine receives each
+# paste pre-declared (the URL/state carries the instrument's make/model).
+# The depth hint + refined-query tips + SRP-declaration resolution = one unified
+# TEACH-AND-TRACK system: every lesson we teach is also a sensor we install.
+# ===========================================================================
