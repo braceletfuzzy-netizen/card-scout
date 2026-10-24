@@ -106,3 +106,32 @@ Builder reports SHAs only. Hermes: diff audit (no deletions, no locked-file
 touches), independent B1-B6 re-run, verifier kill-shots (fake-player no-fab,
 append-only, constants-unmutated, plus a new one: velocity-from-provisional
 must fail to compute), push, stamp. Verifier alone writes stamps.
+---
+
+## VERIFIER STAMP — VERIFIED-2026-10-24 (Hermes, independent re-run)
+
+- DIFF AUDIT: 677e744 = 932 insertions / **0 deletions**; 6 files (BUILD ONLY);
+  no Brief 6/7/8 files, no routes, no signatures touched; registry yaml quoted
+  (Brief 8 lesson applied).
+- BATTERY RE-RUN (verifier session): **7/7 PASS**, run 3 = run 4 byte-identical
+  (ts-normalized) confirmed by builder, determinism confirmed in re-run.
+- VERIFIER KILL-SHOTS: KS1 velocity-from-PROVISIONAL = covered by battery B3
+  (PASS in re-run, all null variants asserted) · KS2 append-only bar store =
+  PASS (pre-existing rows byte-preserved through rebuild) · KS3 sold-side law
+  = operationally verified (gold-class Oct prints n=8 bid-backed subset from
+  ~200-row archive; asks provably excluded — a leak would inflate n to ~200) ·
+  KS4 frozen rules unmutated (25% integrity / confidence labels) PASS.
+- THE ANSWER-KEY MOMENT AUDITED (builder's -53% "reproduced §229.4" claim):
+  VERIFIED LEGITIMATE, with the mechanism confirmed — plain rows in the mass
+  basket are the banked sleeping lane itself; gold-class serials carry the
+  §179 lift. The index separated instrument classes WITHIN the archive and
+  reproduced both effects independently. This was my pre-verification guard
+  ("costume risk") — resolved: it's the real thing, and it strengthens B1.
+- FIRST CROSS-READING (spread = -24.9%: CH graded-side 53.25 vs our raw auto
+  side) = the vendor-validity gauge is LIVE — one data point, forward capture
+  only (CH clamps 365d, the §233 pivot). Trend, not verdict.
+- STAMP: Brief 9 VERIFIED. Walle verified-brief streak: **8/8**. The
+  §207 OBV scanner's bar-maker is now built and validated against banked
+  history.
+- QUEUE: Brief 7 (year-attribution) = the remaining upstream dependency; two-
+  book + implied-future + OBV scanner consume Briefs 7+9 outputs.
