@@ -4170,7 +4170,7 @@
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2026 Topps",
    "lane": "1/1",
    "lane_display": "1/1",
    "grade_bucket": "raw",
@@ -4178,14 +4178,14 @@
    "first_date": "2026-10-13",
    "last_date": "2026-10-13",
    "band_class": "forming",
-   "search_q": "Brice Turang 2025 Topps 1/1",
+   "search_q": "Brice Turang 2026 Topps 1/1",
    "id": "brice-turang.1-1.raw",
-   "slug": "brice-turang-2025-topps-1-1-raw"
+   "slug": "brice-turang-2026-topps-1-1-raw"
   },
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2023 Topps",
    "lane": "auto",
    "lane_display": "Auto",
    "grade_bucket": "raw",
@@ -4209,14 +4209,14 @@
     34.0,
     39.99
    ],
-   "search_q": "Brice Turang 2025 Topps Auto",
+   "search_q": "Brice Turang 2023 Topps Auto",
    "id": "brice-turang.auto.raw",
-   "slug": "brice-turang-2025-topps-auto-raw"
+   "slug": "brice-turang-2023-topps-auto-raw"
   },
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2026 Topps",
    "lane": "auto-black",
    "lane_display": "Auto Black",
    "grade_bucket": "raw",
@@ -4238,14 +4238,14 @@
     31.0,
     99.99
    ],
-   "search_q": "Brice Turang 2025 Topps Black",
+   "search_q": "Brice Turang 2026 Topps Black",
    "id": "brice-turang.auto-black.raw",
-   "slug": "brice-turang-2025-topps-auto-black-raw"
+   "slug": "brice-turang-2026-topps-auto-black-raw"
   },
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2026 Topps",
    "lane": "auto-case-hit",
    "lane_display": "Auto Case Hit",
    "grade_bucket": "raw",
@@ -4272,14 +4272,14 @@
     119.99,
     129.99
    ],
-   "search_q": "Brice Turang 2025 Topps Case Hit",
+   "search_q": "Brice Turang 2026 Topps Case Hit",
    "id": "brice-turang.auto-case-hit.raw",
-   "slug": "brice-turang-2025-topps-auto-case-hit-raw"
+   "slug": "brice-turang-2026-topps-auto-case-hit-raw"
   },
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2026 Topps",
    "lane": "auto-gold",
    "lane_display": "Auto Gold",
    "grade_bucket": "raw",
@@ -4305,14 +4305,14 @@
     254.99,
     480.0
    ],
-   "search_q": "Brice Turang 2025 Topps Gold",
+   "search_q": "Brice Turang 2026 Topps Gold",
    "id": "brice-turang.auto-gold.raw",
-   "slug": "brice-turang-2025-topps-auto-gold-raw"
+   "slug": "brice-turang-2026-topps-auto-gold-raw"
   },
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2023 Topps",
    "lane": "auto-gold-refractor",
    "lane_display": "Auto Gold Refractor",
    "grade_bucket": "raw",
@@ -4335,14 +4335,14 @@
     375.0,
     375.0
    ],
-   "search_q": "Brice Turang 2025 Topps Gold Refractor",
+   "search_q": "Brice Turang 2023 Topps Gold Refractor",
    "id": "brice-turang.auto-gold-refractor.raw",
-   "slug": "brice-turang-2025-topps-auto-gold-refractor-raw"
+   "slug": "brice-turang-2023-topps-auto-gold-refractor-raw"
   },
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2023 Topps",
    "lane": "auto-iv",
    "lane_display": "Auto Iv",
    "grade_bucket": "raw",
@@ -4364,9 +4364,9 @@
     62.0,
     134.99
    ],
-   "search_q": "Brice Turang 2025 Topps Image Variation",
+   "search_q": "Brice Turang 2023 Topps Image Variation",
    "id": "brice-turang.auto-iv.raw",
-   "slug": "brice-turang-2025-topps-auto-iv-raw"
+   "slug": "brice-turang-2023-topps-auto-iv-raw"
   },
   {
    "player": "Brice Turang",
@@ -4401,7 +4401,7 @@
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2023 Topps",
    "lane": "auto-true-gold",
    "lane_display": "Auto True Gold",
    "grade_bucket": "raw",
@@ -4409,14 +4409,14 @@
    "first_date": "2026-09-25",
    "last_date": "2026-09-25",
    "band_class": "forming",
-   "search_q": "Brice Turang 2025 Topps True Gold",
+   "search_q": "Brice Turang 2023 Topps True Gold",
    "id": "brice-turang.auto-true-gold.raw",
-   "slug": "brice-turang-2025-topps-auto-true-gold-raw"
+   "slug": "brice-turang-2023-topps-auto-true-gold-raw"
   },
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2026 Topps",
    "lane": "black",
    "lane_display": "Black",
    "grade_bucket": "raw",
@@ -4439,14 +4439,14 @@
     4.25,
     103.5
    ],
-   "search_q": "Brice Turang 2025 Topps Black",
+   "search_q": "Brice Turang 2026 Topps Black",
    "id": "brice-turang.black.raw",
-   "slug": "brice-turang-2025-topps-black-raw"
+   "slug": "brice-turang-2026-topps-black-raw"
   },
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2023 Topps",
    "lane": "blue",
    "lane_display": "Blue",
    "grade_bucket": "raw",
@@ -4454,14 +4454,14 @@
    "first_date": "2026-10-15",
    "last_date": "2026-10-15",
    "band_class": "forming",
-   "search_q": "Brice Turang 2025 Topps Blue",
+   "search_q": "Brice Turang 2023 Topps Blue",
    "id": "brice-turang.blue.raw",
-   "slug": "brice-turang-2025-topps-blue-raw"
+   "slug": "brice-turang-2023-topps-blue-raw"
   },
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2026 Topps",
    "lane": "case-hit",
    "lane_display": "Case Hit",
    "grade_bucket": "raw",
@@ -4469,14 +4469,14 @@
    "first_date": "2026-10-18",
    "last_date": "2026-10-18",
    "band_class": "forming",
-   "search_q": "Brice Turang 2025 Topps Case Hit",
+   "search_q": "Brice Turang 2026 Topps Case Hit",
    "id": "brice-turang.case-hit.raw",
-   "slug": "brice-turang-2025-topps-case-hit-raw"
+   "slug": "brice-turang-2026-topps-case-hit-raw"
   },
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2026 Topps",
    "lane": "gold",
    "lane_display": "Gold",
    "grade_bucket": "raw",
@@ -4531,9 +4531,9 @@
     29.99,
     29.99
    ],
-   "search_q": "Brice Turang 2025 Topps Gold",
+   "search_q": "Brice Turang 2026 Topps Gold",
    "id": "brice-turang.gold.raw",
-   "slug": "brice-turang-2025-topps-gold-raw"
+   "slug": "brice-turang-2026-topps-gold-raw"
   },
   {
    "player": "Brice Turang",
@@ -4583,7 +4583,7 @@
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2023 Topps",
    "lane": "graded",
    "lane_display": "Graded",
    "grade_bucket": "PSA10",
@@ -4591,14 +4591,14 @@
    "first_date": "2026-10-14",
    "last_date": "2026-10-17",
    "band_class": "forming",
-   "search_q": "Brice Turang 2025 Topps PSA 10",
+   "search_q": "Brice Turang 2023 Topps PSA 10",
    "id": "brice-turang.graded.psa10",
-   "slug": "brice-turang-2025-topps-graded-psa10"
+   "slug": "brice-turang-2023-topps-graded-psa10"
   },
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2023 Topps",
    "lane": "graded-auto-gold",
    "lane_display": "Graded Auto Gold",
    "grade_bucket": "PSA10",
@@ -4606,14 +4606,14 @@
    "first_date": "2026-10-06",
    "last_date": "2026-10-06",
    "band_class": "forming",
-   "search_q": "Brice Turang 2025 Topps Gold PSA 10",
+   "search_q": "Brice Turang 2023 Topps Gold PSA 10",
    "id": "brice-turang.graded-auto-gold.psa10",
-   "slug": "brice-turang-2025-topps-graded-auto-gold-psa10"
+   "slug": "brice-turang-2023-topps-graded-auto-gold-psa10"
   },
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2024 Topps",
    "lane": "graded-auto-gold",
    "lane_display": "Graded Auto Gold",
    "grade_bucket": "PSA9",
@@ -4621,14 +4621,14 @@
    "first_date": "2026-08-02",
    "last_date": "2026-08-02",
    "band_class": "forming",
-   "search_q": "Brice Turang 2025 Topps Gold PSA 9",
+   "search_q": "Brice Turang 2024 Topps Gold PSA 9",
    "id": "brice-turang.graded-auto-gold.psa9",
-   "slug": "brice-turang-2025-topps-graded-auto-gold-psa9"
+   "slug": "brice-turang-2024-topps-graded-auto-gold-psa9"
   },
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2023 Topps",
    "lane": "graded-auto-true-gold",
    "lane_display": "Graded Auto True Gold",
    "grade_bucket": "PSA10",
@@ -4636,14 +4636,14 @@
    "first_date": "2026-09-26",
    "last_date": "2026-09-26",
    "band_class": "forming",
-   "search_q": "Brice Turang 2025 Topps True Gold PSA 10",
+   "search_q": "Brice Turang 2023 Topps True Gold PSA 10",
    "id": "brice-turang.graded-auto-true-gold.psa10",
-   "slug": "brice-turang-2025-topps-graded-auto-true-gold-psa10"
+   "slug": "brice-turang-2023-topps-graded-auto-true-gold-psa10"
   },
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2023 Topps",
    "lane": "graded-gold",
    "lane_display": "Graded Gold",
    "grade_bucket": "PSA8",
@@ -4651,14 +4651,14 @@
    "first_date": "2026-10-02",
    "last_date": "2026-10-02",
    "band_class": "forming",
-   "search_q": "Brice Turang 2025 Topps Gold PSA 8",
+   "search_q": "Brice Turang 2023 Topps Gold PSA 8",
    "id": "brice-turang.graded-gold.psa8",
-   "slug": "brice-turang-2025-topps-graded-gold-psa8"
+   "slug": "brice-turang-2023-topps-graded-gold-psa8"
   },
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2023 Topps",
    "lane": "graded-gold",
    "lane_display": "Graded Gold",
    "grade_bucket": "PSA9",
@@ -4680,14 +4680,14 @@
     500.0,
     500.0
    ],
-   "search_q": "Brice Turang 2025 Topps Gold PSA 9",
+   "search_q": "Brice Turang 2023 Topps Gold PSA 9",
    "id": "brice-turang.graded-gold.psa9",
-   "slug": "brice-turang-2025-topps-graded-gold-psa9"
+   "slug": "brice-turang-2023-topps-graded-gold-psa9"
   },
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2023 Topps",
    "lane": "graded-green",
    "lane_display": "Graded Green",
    "grade_bucket": "PSA9",
@@ -4695,14 +4695,14 @@
    "first_date": "2026-10-12",
    "last_date": "2026-10-14",
    "band_class": "forming",
-   "search_q": "Brice Turang 2025 Topps Green PSA 9",
+   "search_q": "Brice Turang 2023 Topps Green PSA 9",
    "id": "brice-turang.graded-green.psa9",
-   "slug": "brice-turang-2025-topps-graded-green-psa9"
+   "slug": "brice-turang-2023-topps-graded-green-psa9"
   },
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2023 Topps",
    "lane": "graded-iv",
    "lane_display": "Graded Iv",
    "grade_bucket": "PSA9",
@@ -4710,14 +4710,14 @@
    "first_date": "2026-10-13",
    "last_date": "2026-10-13",
    "band_class": "forming",
-   "search_q": "Brice Turang 2025 Topps Image Variation PSA 9",
+   "search_q": "Brice Turang 2023 Topps Image Variation PSA 9",
    "id": "brice-turang.graded-iv.psa9",
-   "slug": "brice-turang-2025-topps-graded-iv-psa9"
+   "slug": "brice-turang-2023-topps-graded-iv-psa9"
   },
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2023 Topps",
    "lane": "graded-numbered",
    "lane_display": "Graded Numbered",
    "grade_bucket": "PSA8",
@@ -4725,14 +4725,14 @@
    "first_date": "2026-10-07",
    "last_date": "2026-10-07",
    "band_class": "forming",
-   "search_q": "Brice Turang 2025 Topps Numbered PSA 8",
+   "search_q": "Brice Turang 2023 Topps Numbered PSA 8",
    "id": "brice-turang.graded-numbered.psa8",
-   "slug": "brice-turang-2025-topps-graded-numbered-psa8"
+   "slug": "brice-turang-2023-topps-graded-numbered-psa8"
   },
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2026 Topps",
    "lane": "graded-orange",
    "lane_display": "Graded Orange",
    "grade_bucket": "PSA10",
@@ -4740,14 +4740,14 @@
    "first_date": "2026-10-13",
    "last_date": "2026-10-13",
    "band_class": "forming",
-   "search_q": "Brice Turang 2025 Topps Orange PSA 10",
+   "search_q": "Brice Turang 2026 Topps Orange PSA 10",
    "id": "brice-turang.graded-orange.psa10",
-   "slug": "brice-turang-2025-topps-graded-orange-psa10"
+   "slug": "brice-turang-2026-topps-graded-orange-psa10"
   },
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2023 Topps",
    "lane": "graded-purple",
    "lane_display": "Graded Purple",
    "grade_bucket": "SGC10",
@@ -4755,14 +4755,14 @@
    "first_date": "2026-10-12",
    "last_date": "2026-10-12",
    "band_class": "forming",
-   "search_q": "Brice Turang 2025 Topps Purple PSA 10",
+   "search_q": "Brice Turang 2023 Topps Purple PSA 10",
    "id": "brice-turang.graded-purple.sgc10",
-   "slug": "brice-turang-2025-topps-graded-purple-sgc10"
+   "slug": "brice-turang-2023-topps-graded-purple-sgc10"
   },
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2023 Topps",
    "lane": "graded-true-gold",
    "lane_display": "Graded True Gold",
    "grade_bucket": "PSA9",
@@ -4770,9 +4770,9 @@
    "first_date": "2026-10-07",
    "last_date": "2026-10-07",
    "band_class": "forming",
-   "search_q": "Brice Turang 2025 Topps True Gold PSA 9",
+   "search_q": "Brice Turang 2023 Topps True Gold PSA 9",
    "id": "brice-turang.graded-true-gold.psa9",
-   "slug": "brice-turang-2025-topps-graded-true-gold-psa9"
+   "slug": "brice-turang-2023-topps-graded-true-gold-psa9"
   },
   {
    "player": "Brice Turang",
@@ -4792,7 +4792,7 @@
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2023 Topps",
    "lane": "iv",
    "lane_display": "Iv",
    "grade_bucket": "raw",
@@ -4816,14 +4816,14 @@
     4.99,
     5.0
    ],
-   "search_q": "Brice Turang 2025 Topps Image Variation",
+   "search_q": "Brice Turang 2023 Topps Image Variation",
    "id": "brice-turang.iv.raw",
-   "slug": "brice-turang-2025-topps-iv-raw"
+   "slug": "brice-turang-2023-topps-iv-raw"
   },
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2023 Topps",
    "lane": "mass",
    "lane_display": "Mass",
    "grade_bucket": "raw",
@@ -4881,14 +4881,14 @@
     7.07,
     31.49
    ],
-   "search_q": "Brice Turang 2025 Topps",
+   "search_q": "Brice Turang 2023 Topps",
    "id": "brice-turang.mass.raw",
-   "slug": "brice-turang-2025-topps-mass-raw"
+   "slug": "brice-turang-2023-topps-mass-raw"
   },
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2023 Topps",
    "lane": "numbered",
    "lane_display": "Numbered",
    "grade_bucket": "raw",
@@ -4916,14 +4916,14 @@
     100.0,
     865.0
    ],
-   "search_q": "Brice Turang 2025 Topps Numbered",
+   "search_q": "Brice Turang 2023 Topps Numbered",
    "id": "brice-turang.numbered.raw",
-   "slug": "brice-turang-2025-topps-numbered-raw"
+   "slug": "brice-turang-2023-topps-numbered-raw"
   },
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2026 Topps",
    "lane": "orange",
    "lane_display": "Orange",
    "grade_bucket": "raw",
@@ -4931,14 +4931,14 @@
    "first_date": "2026-10-15",
    "last_date": "2026-10-15",
    "band_class": "forming",
-   "search_q": "Brice Turang 2025 Topps Orange",
+   "search_q": "Brice Turang 2026 Topps Orange",
    "id": "brice-turang.orange.raw",
-   "slug": "brice-turang-2025-topps-orange-raw"
+   "slug": "brice-turang-2026-topps-orange-raw"
   },
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2023 Topps",
    "lane": "purple",
    "lane_display": "Purple",
    "grade_bucket": "raw",
@@ -4961,9 +4961,9 @@
     7.5,
     90.0
    ],
-   "search_q": "Brice Turang 2025 Topps Purple",
+   "search_q": "Brice Turang 2023 Topps Purple",
    "id": "brice-turang.purple.raw",
-   "slug": "brice-turang-2025-topps-purple-raw"
+   "slug": "brice-turang-2023-topps-purple-raw"
   },
   {
    "player": "Brice Turang",
@@ -4983,7 +4983,7 @@
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2026 Topps",
    "lane": "sapphire",
    "lane_display": "Sapphire",
    "grade_bucket": "raw",
@@ -5020,14 +5020,14 @@
     50.0,
     149.99
    ],
-   "search_q": "Brice Turang 2025 Topps Sapphire",
+   "search_q": "Brice Turang 2026 Topps Sapphire",
    "id": "brice-turang.sapphire.raw",
-   "slug": "brice-turang-2025-topps-sapphire-raw"
+   "slug": "brice-turang-2026-topps-sapphire-raw"
   },
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2023 Topps",
    "lane": "true-gold",
    "lane_display": "True Gold",
    "grade_bucket": "raw",
@@ -5054,14 +5054,14 @@
     74.99,
     79.99
    ],
-   "search_q": "Brice Turang 2025 Topps True Gold",
+   "search_q": "Brice Turang 2023 Topps True Gold",
    "id": "brice-turang.true-gold.raw",
-   "slug": "brice-turang-2025-topps-true-gold-raw"
+   "slug": "brice-turang-2023-topps-true-gold-raw"
   },
   {
    "player": "Brice Turang",
    "player_slug": "brice-turang",
-   "product": "2025 Topps",
+   "product": "2026 Topps",
    "lane": "wave",
    "lane_display": "Wave",
    "grade_bucket": "raw",
@@ -5091,9 +5091,9 @@
     22.5,
     300.0
    ],
-   "search_q": "Brice Turang 2025 Topps Wave",
+   "search_q": "Brice Turang 2026 Topps Wave",
    "id": "brice-turang.wave.raw",
-   "slug": "brice-turang-2025-topps-wave-raw"
+   "slug": "brice-turang-2026-topps-wave-raw"
   },
   {
    "player": "Brice Turang",
@@ -8646,7 +8646,7 @@
   {
    "player": "Jackson Chourio",
    "player_slug": "jackson-chourio",
-   "product": "2025 Topps Chrome",
+   "product": "2026 Topps Chrome",
    "lane": "1/1",
    "lane_display": "1/1",
    "grade_bucket": "raw",
@@ -8668,9 +8668,9 @@
     350.0,
     5999.0
    ],
-   "search_q": "Jackson Chourio 2025 Topps Chrome 1/1",
+   "search_q": "Jackson Chourio 2026 Topps Chrome 1/1",
    "id": "jackson-chourio.1-1.raw",
-   "slug": "jackson-chourio-2025-topps-chrome-1-1-raw"
+   "slug": "jackson-chourio-2026-topps-chrome-1-1-raw"
   },
   {
    "player": "Jackson Chourio",
@@ -8705,7 +8705,7 @@
   {
    "player": "Jackson Chourio",
    "player_slug": "jackson-chourio",
-   "product": "2025 Topps Chrome",
+   "product": "2026 Topps Chrome",
    "lane": "auto-case-hit",
    "lane_display": "Auto Case Hit",
    "grade_bucket": "raw",
@@ -8713,9 +8713,9 @@
    "first_date": "2026-10-16",
    "last_date": "2026-10-17",
    "band_class": "forming",
-   "search_q": "Jackson Chourio 2025 Topps Chrome Case Hit",
+   "search_q": "Jackson Chourio 2026 Topps Chrome Case Hit",
    "id": "jackson-chourio.auto-case-hit.raw",
-   "slug": "jackson-chourio-2025-topps-chrome-auto-case-hit-raw"
+   "slug": "jackson-chourio-2026-topps-chrome-auto-case-hit-raw"
   },
   {
    "player": "Jackson Chourio",
@@ -8764,7 +8764,7 @@
   {
    "player": "Jackson Chourio",
    "player_slug": "jackson-chourio",
-   "product": "2025 Topps Chrome",
+   "product": "2026 Topps Chrome",
    "lane": "black",
    "lane_display": "Black",
    "grade_bucket": "raw",
@@ -8786,9 +8786,9 @@
     1.99,
     449.0
    ],
-   "search_q": "Jackson Chourio 2025 Topps Chrome Black",
+   "search_q": "Jackson Chourio 2026 Topps Chrome Black",
    "id": "jackson-chourio.black.raw",
-   "slug": "jackson-chourio-2025-topps-chrome-black-raw"
+   "slug": "jackson-chourio-2026-topps-chrome-black-raw"
   },
   {
    "player": "Jackson Chourio",
@@ -8867,7 +8867,7 @@
   {
    "player": "Jackson Chourio",
    "player_slug": "jackson-chourio",
-   "product": "2025 Topps Chrome",
+   "product": "2024 Topps Chrome",
    "lane": "graded",
    "lane_display": "Graded",
    "grade_bucket": "BGS9",
@@ -8875,14 +8875,14 @@
    "first_date": "2026-10-17",
    "last_date": "2026-10-17",
    "band_class": "forming",
-   "search_q": "Jackson Chourio 2025 Topps Chrome PSA 9",
+   "search_q": "Jackson Chourio 2024 Topps Chrome PSA 9",
    "id": "jackson-chourio.graded.bgs9",
-   "slug": "jackson-chourio-2025-topps-chrome-graded-bgs9"
+   "slug": "jackson-chourio-2024-topps-chrome-graded-bgs9"
   },
   {
    "player": "Jackson Chourio",
    "player_slug": "jackson-chourio",
-   "product": "2025 Topps Chrome",
+   "product": "2024 Topps Chrome",
    "lane": "graded",
    "lane_display": "Graded",
    "grade_bucket": "PSA10",
@@ -8905,14 +8905,14 @@
     115.5,
     168.5
    ],
-   "search_q": "Jackson Chourio 2025 Topps Chrome PSA 10",
+   "search_q": "Jackson Chourio 2024 Topps Chrome PSA 10",
    "id": "jackson-chourio.graded.psa10",
-   "slug": "jackson-chourio-2025-topps-chrome-graded-psa10"
+   "slug": "jackson-chourio-2024-topps-chrome-graded-psa10"
   },
   {
    "player": "Jackson Chourio",
    "player_slug": "jackson-chourio",
-   "product": "2025 Topps Chrome",
+   "product": "2024 Topps Chrome",
    "lane": "graded",
    "lane_display": "Graded",
    "grade_bucket": "PSA9",
@@ -8920,14 +8920,14 @@
    "first_date": "2026-10-17",
    "last_date": "2026-10-17",
    "band_class": "forming",
-   "search_q": "Jackson Chourio 2025 Topps Chrome PSA 9",
+   "search_q": "Jackson Chourio 2024 Topps Chrome PSA 9",
    "id": "jackson-chourio.graded.psa9",
-   "slug": "jackson-chourio-2025-topps-chrome-graded-psa9"
+   "slug": "jackson-chourio-2024-topps-chrome-graded-psa9"
   },
   {
    "player": "Jackson Chourio",
    "player_slug": "jackson-chourio",
-   "product": "2025 Topps Chrome",
+   "product": "2024 Topps Chrome",
    "lane": "graded",
    "lane_display": "Graded",
    "grade_bucket": "SGC10",
@@ -8935,9 +8935,9 @@
    "first_date": "2026-10-17",
    "last_date": "2026-10-17",
    "band_class": "forming",
-   "search_q": "Jackson Chourio 2025 Topps Chrome PSA 10",
+   "search_q": "Jackson Chourio 2024 Topps Chrome PSA 10",
    "id": "jackson-chourio.graded.sgc10",
-   "slug": "jackson-chourio-2025-topps-chrome-graded-sgc10"
+   "slug": "jackson-chourio-2024-topps-chrome-graded-sgc10"
   },
   {
    "player": "Jackson Chourio",
@@ -8957,7 +8957,7 @@
   {
    "player": "Jackson Chourio",
    "player_slug": "jackson-chourio",
-   "product": "2025 Topps Chrome",
+   "product": "2024 Topps Chrome",
    "lane": "graded-auto-wave",
    "lane_display": "Graded Auto Wave",
    "grade_bucket": "PSA10",
@@ -8965,14 +8965,14 @@
    "first_date": "2026-10-17",
    "last_date": "2026-10-17",
    "band_class": "forming",
-   "search_q": "Jackson Chourio 2025 Topps Chrome Wave PSA 10",
+   "search_q": "Jackson Chourio 2024 Topps Chrome Wave PSA 10",
    "id": "jackson-chourio.graded-auto-wave.psa10",
-   "slug": "jackson-chourio-2025-topps-chrome-graded-auto-wave-psa10"
+   "slug": "jackson-chourio-2024-topps-chrome-graded-auto-wave-psa10"
   },
   {
    "player": "Jackson Chourio",
    "player_slug": "jackson-chourio",
-   "product": "2025 Topps Chrome",
+   "product": "2026 Topps Chrome",
    "lane": "graded-gold-refractor",
    "lane_display": "Graded Gold Refractor",
    "grade_bucket": "PSA10",
@@ -8980,14 +8980,14 @@
    "first_date": "2026-10-16",
    "last_date": "2026-10-16",
    "band_class": "forming",
-   "search_q": "Jackson Chourio 2025 Topps Chrome Gold Refractor PSA 10",
+   "search_q": "Jackson Chourio 2026 Topps Chrome Gold Refractor PSA 10",
    "id": "jackson-chourio.graded-gold-refractor.psa10",
-   "slug": "jackson-chourio-2025-topps-chrome-graded-gold-refractor-psa10"
+   "slug": "jackson-chourio-2026-topps-chrome-graded-gold-refractor-psa10"
   },
   {
    "player": "Jackson Chourio",
    "player_slug": "jackson-chourio",
-   "product": "2025 Topps Chrome",
+   "product": "2024 Topps Chrome",
    "lane": "graded-sapphire",
    "lane_display": "Graded Sapphire",
    "grade_bucket": "PSA10",
@@ -8995,14 +8995,14 @@
    "first_date": "2026-10-17",
    "last_date": "2026-10-17",
    "band_class": "forming",
-   "search_q": "Jackson Chourio 2025 Topps Chrome Sapphire PSA 10",
+   "search_q": "Jackson Chourio 2024 Topps Chrome Sapphire PSA 10",
    "id": "jackson-chourio.graded-sapphire.psa10",
-   "slug": "jackson-chourio-2025-topps-chrome-graded-sapphire-psa10"
+   "slug": "jackson-chourio-2024-topps-chrome-graded-sapphire-psa10"
   },
   {
    "player": "Jackson Chourio",
    "player_slug": "jackson-chourio",
-   "product": "2025 Topps Chrome",
+   "product": "2024 Topps Chrome",
    "lane": "graded-sapphire",
    "lane_display": "Graded Sapphire",
    "grade_bucket": "PSA9",
@@ -9010,14 +9010,14 @@
    "first_date": "2026-10-17",
    "last_date": "2026-10-17",
    "band_class": "forming",
-   "search_q": "Jackson Chourio 2025 Topps Chrome Sapphire PSA 9",
+   "search_q": "Jackson Chourio 2024 Topps Chrome Sapphire PSA 9",
    "id": "jackson-chourio.graded-sapphire.psa9",
-   "slug": "jackson-chourio-2025-topps-chrome-graded-sapphire-psa9"
+   "slug": "jackson-chourio-2024-topps-chrome-graded-sapphire-psa9"
   },
   {
    "player": "Jackson Chourio",
    "player_slug": "jackson-chourio",
-   "product": "2025 Topps Chrome",
+   "product": "2026 Topps Chrome",
    "lane": "green",
    "lane_display": "Green",
    "grade_bucket": "raw",
@@ -9042,14 +9042,14 @@
     19.99,
     26.99
    ],
-   "search_q": "Jackson Chourio 2025 Topps Chrome Green",
+   "search_q": "Jackson Chourio 2026 Topps Chrome Green",
    "id": "jackson-chourio.green.raw",
-   "slug": "jackson-chourio-2025-topps-chrome-green-raw"
+   "slug": "jackson-chourio-2026-topps-chrome-green-raw"
   },
   {
    "player": "Jackson Chourio",
    "player_slug": "jackson-chourio",
-   "product": "2025 Topps Chrome",
+   "product": "2024 Topps Chrome",
    "lane": "iv",
    "lane_display": "Iv",
    "grade_bucket": "raw",
@@ -9080,14 +9080,14 @@
     210.27,
     324.99
    ],
-   "search_q": "Jackson Chourio 2025 Topps Chrome Image Variation",
+   "search_q": "Jackson Chourio 2024 Topps Chrome Image Variation",
    "id": "jackson-chourio.iv.raw",
-   "slug": "jackson-chourio-2025-topps-chrome-iv-raw"
+   "slug": "jackson-chourio-2024-topps-chrome-iv-raw"
   },
   {
    "player": "Jackson Chourio",
    "player_slug": "jackson-chourio",
-   "product": "2025 Topps Chrome",
+   "product": "2024 Topps Chrome",
    "lane": "mass",
    "lane_display": "Mass",
    "grade_bucket": "raw",
@@ -9155,9 +9155,9 @@
     16.67,
     210.27
    ],
-   "search_q": "Jackson Chourio 2025 Topps Chrome",
+   "search_q": "Jackson Chourio 2024 Topps Chrome",
    "id": "jackson-chourio.mass.raw",
-   "slug": "jackson-chourio-2025-topps-chrome-mass-raw"
+   "slug": "jackson-chourio-2024-topps-chrome-mass-raw"
   },
   {
    "player": "Jackson Chourio",
@@ -9193,7 +9193,7 @@
   {
    "player": "Jackson Chourio",
    "player_slug": "jackson-chourio",
-   "product": "2025 Topps Chrome",
+   "product": "2026 Topps Chrome",
    "lane": "orange",
    "lane_display": "Orange",
    "grade_bucket": "raw",
@@ -9201,14 +9201,14 @@
    "first_date": "2026-10-16",
    "last_date": "2026-10-16",
    "band_class": "forming",
-   "search_q": "Jackson Chourio 2025 Topps Chrome Orange",
+   "search_q": "Jackson Chourio 2026 Topps Chrome Orange",
    "id": "jackson-chourio.orange.raw",
-   "slug": "jackson-chourio-2025-topps-chrome-orange-raw"
+   "slug": "jackson-chourio-2026-topps-chrome-orange-raw"
   },
   {
    "player": "Jackson Chourio",
    "player_slug": "jackson-chourio",
-   "product": "2025 Topps Chrome",
+   "product": "2026 Topps Chrome",
    "lane": "purple",
    "lane_display": "Purple",
    "grade_bucket": "raw",
@@ -9231,14 +9231,14 @@
     25.0,
     30.0
    ],
-   "search_q": "Jackson Chourio 2025 Topps Chrome Purple",
+   "search_q": "Jackson Chourio 2026 Topps Chrome Purple",
    "id": "jackson-chourio.purple.raw",
-   "slug": "jackson-chourio-2025-topps-chrome-purple-raw"
+   "slug": "jackson-chourio-2026-topps-chrome-purple-raw"
   },
   {
    "player": "Jackson Chourio",
    "player_slug": "jackson-chourio",
-   "product": "2025 Topps Chrome",
+   "product": "2026 Topps Chrome",
    "lane": "sapphire",
    "lane_display": "Sapphire",
    "grade_bucket": "raw",
@@ -9246,14 +9246,14 @@
    "first_date": "2026-10-16",
    "last_date": "2026-10-16",
    "band_class": "forming",
-   "search_q": "Jackson Chourio 2025 Topps Chrome Sapphire",
+   "search_q": "Jackson Chourio 2026 Topps Chrome Sapphire",
    "id": "jackson-chourio.sapphire.raw",
-   "slug": "jackson-chourio-2025-topps-chrome-sapphire-raw"
+   "slug": "jackson-chourio-2026-topps-chrome-sapphire-raw"
   },
   {
    "player": "Jackson Chourio",
    "player_slug": "jackson-chourio",
-   "product": "2025 Topps Chrome",
+   "product": "2024 Topps Chrome",
    "lane": "wave",
    "lane_display": "Wave",
    "grade_bucket": "raw",
@@ -9278,9 +9278,9 @@
     9.99,
     39.99
    ],
-   "search_q": "Jackson Chourio 2025 Topps Chrome Wave",
+   "search_q": "Jackson Chourio 2024 Topps Chrome Wave",
    "id": "jackson-chourio.wave.raw",
-   "slug": "jackson-chourio-2025-topps-chrome-wave-raw"
+   "slug": "jackson-chourio-2024-topps-chrome-wave-raw"
   },
   {
    "player": "Jacob Misiorowski",
@@ -9365,7 +9365,7 @@
   {
    "player": "James Wood",
    "player_slug": "james-wood",
-   "product": "2025 Topps",
+   "product": "2024 Topps",
    "lane": "auto-1/1",
    "lane_display": "Auto 1/1",
    "grade_bucket": "raw",
@@ -9373,9 +9373,9 @@
    "first_date": "2026-10-08",
    "last_date": "2026-10-08",
    "band_class": "forming",
-   "search_q": "James Wood 2025 Topps 1/1",
+   "search_q": "James Wood 2024 Topps 1/1",
    "id": "james-wood.auto-1-1.raw",
-   "slug": "james-wood-2025-topps-auto-1-1-raw"
+   "slug": "james-wood-2024-topps-auto-1-1-raw"
   },
   {
    "player": "James Wood",
@@ -9460,7 +9460,7 @@
   {
    "player": "James Wood",
    "player_slug": "james-wood",
-   "product": "2025 Topps",
+   "product": "2026 Topps",
    "lane": "auto-iv",
    "lane_display": "Auto Iv",
    "grade_bucket": "raw",
@@ -9468,9 +9468,9 @@
    "first_date": "2026-10-12",
    "last_date": "2026-10-12",
    "band_class": "forming",
-   "search_q": "James Wood 2025 Topps Image Variation",
+   "search_q": "James Wood 2026 Topps Image Variation",
    "id": "james-wood.auto-iv.raw",
-   "slug": "james-wood-2025-topps-auto-iv-raw"
+   "slug": "james-wood-2026-topps-auto-iv-raw"
   },
   {
    "player": "James Wood",
@@ -9565,7 +9565,7 @@
   {
    "player": "James Wood",
    "player_slug": "james-wood",
-   "product": "2025 Topps",
+   "product": "2026 Topps",
    "lane": "black",
    "lane_display": "Black",
    "grade_bucket": "raw",
@@ -9587,9 +9587,9 @@
     100.0,
     145.0
    ],
-   "search_q": "James Wood 2025 Topps Black",
+   "search_q": "James Wood 2026 Topps Black",
    "id": "james-wood.black.raw",
-   "slug": "james-wood-2025-topps-black-raw"
+   "slug": "james-wood-2026-topps-black-raw"
   },
   {
    "player": "James Wood",
@@ -10134,7 +10134,7 @@
   {
    "player": "James Wood",
    "player_slug": "james-wood",
-   "product": "2025 Topps",
+   "product": "2026 Topps",
    "lane": "numbered",
    "lane_display": "Numbered",
    "grade_bucket": "raw",
@@ -10156,14 +10156,14 @@
     20.0,
     22.27
    ],
-   "search_q": "James Wood 2025 Topps Numbered",
+   "search_q": "James Wood 2026 Topps Numbered",
    "id": "james-wood.numbered.raw",
-   "slug": "james-wood-2025-topps-numbered-raw"
+   "slug": "james-wood-2026-topps-numbered-raw"
   },
   {
    "player": "James Wood",
    "player_slug": "james-wood",
-   "product": "2025 Topps",
+   "product": "2026 Topps",
    "lane": "orange",
    "lane_display": "Orange",
    "grade_bucket": "raw",
@@ -10171,14 +10171,14 @@
    "first_date": "2026-10-16",
    "last_date": "2026-10-16",
    "band_class": "forming",
-   "search_q": "James Wood 2025 Topps Orange",
+   "search_q": "James Wood 2026 Topps Orange",
    "id": "james-wood.orange.raw",
-   "slug": "james-wood-2025-topps-orange-raw"
+   "slug": "james-wood-2026-topps-orange-raw"
   },
   {
    "player": "James Wood",
    "player_slug": "james-wood",
-   "product": "2025 Topps",
+   "product": "2026 Topps",
    "lane": "purple",
    "lane_display": "Purple",
    "grade_bucket": "raw",
@@ -10186,14 +10186,14 @@
    "first_date": "2026-09-03",
    "last_date": "2026-09-03",
    "band_class": "forming",
-   "search_q": "James Wood 2025 Topps Purple",
+   "search_q": "James Wood 2026 Topps Purple",
    "id": "james-wood.purple.raw",
-   "slug": "james-wood-2025-topps-purple-raw"
+   "slug": "james-wood-2026-topps-purple-raw"
   },
   {
    "player": "James Wood",
    "player_slug": "james-wood",
-   "product": "2025 Topps",
+   "product": "2026 Topps",
    "lane": "sapphire",
    "lane_display": "Sapphire",
    "grade_bucket": "raw",
@@ -10234,9 +10234,9 @@
     249.99,
     425.0
    ],
-   "search_q": "James Wood 2025 Topps Sapphire",
+   "search_q": "James Wood 2026 Topps Sapphire",
    "id": "james-wood.sapphire.raw",
-   "slug": "james-wood-2025-topps-sapphire-raw"
+   "slug": "james-wood-2026-topps-sapphire-raw"
   },
   {
    "player": "James Wood",
@@ -12011,7 +12011,7 @@
   {
    "player": "Murakami",
    "player_slug": "murakami",
-   "product": "2026 Bowman",
+   "product": "2022 Bowman",
    "lane": "graded-gold-refractor",
    "lane_display": "Graded Gold Refractor",
    "grade_bucket": "PSA9",
@@ -12019,9 +12019,9 @@
    "first_date": "2026-08-09",
    "last_date": "2026-08-09",
    "band_class": "forming",
-   "search_q": "Murakami 2026 Bowman Gold Refractor PSA 9",
+   "search_q": "Murakami 2022 Bowman Gold Refractor PSA 9",
    "id": "murakami.graded-gold-refractor.psa9",
-   "slug": "murakami-2026-bowman-graded-gold-refractor-psa9"
+   "slug": "murakami-2022-bowman-graded-gold-refractor-psa9"
   },
   {
    "player": "Murakami",
@@ -14266,7 +14266,7 @@
   {
    "player": "Steven Kwan",
    "player_slug": "steven-kwan",
-   "product": "2026 Bowman Chrome",
+   "product": "2022 Bowman Chrome",
    "lane": "auto-gold",
    "lane_display": "Auto Gold",
    "grade_bucket": "raw",
@@ -14274,9 +14274,9 @@
    "first_date": "",
    "last_date": "",
    "band_class": "forming",
-   "search_q": "Steven Kwan 2026 Bowman Chrome Gold",
+   "search_q": "Steven Kwan 2022 Bowman Chrome Gold",
    "id": "steven-kwan.auto-gold.raw",
-   "slug": "steven-kwan-2026-bowman-chrome-auto-gold-raw"
+   "slug": "steven-kwan-2022-bowman-chrome-auto-gold-raw"
   },
   {
    "player": "Steven Kwan",
@@ -14345,7 +14345,7 @@
   {
    "player": "Steven Kwan",
    "player_slug": "steven-kwan",
-   "product": "2026 Bowman Chrome",
+   "product": "2022 Bowman Chrome",
    "lane": "auto-wave",
    "lane_display": "Auto Wave",
    "grade_bucket": "raw",
@@ -14353,9 +14353,9 @@
    "first_date": "",
    "last_date": "",
    "band_class": "forming",
-   "search_q": "Steven Kwan 2026 Bowman Chrome Wave",
+   "search_q": "Steven Kwan 2022 Bowman Chrome Wave",
    "id": "steven-kwan.auto-wave.raw",
-   "slug": "steven-kwan-2026-bowman-chrome-auto-wave-raw"
+   "slug": "steven-kwan-2022-bowman-chrome-auto-wave-raw"
   },
   {
    "player": "Steven Kwan",
@@ -14523,7 +14523,7 @@
   {
    "player": "Steven Kwan",
    "player_slug": "steven-kwan",
-   "product": "2026 Bowman Chrome",
+   "product": "2022 Bowman Chrome",
    "lane": "graded",
    "lane_display": "Graded",
    "grade_bucket": "PSA10",
@@ -14531,14 +14531,14 @@
    "first_date": "",
    "last_date": "",
    "band_class": "forming",
-   "search_q": "Steven Kwan 2026 Bowman Chrome PSA 10",
+   "search_q": "Steven Kwan 2022 Bowman Chrome PSA 10",
    "id": "steven-kwan.graded.psa10",
-   "slug": "steven-kwan-2026-bowman-chrome-graded-psa10"
+   "slug": "steven-kwan-2022-bowman-chrome-graded-psa10"
   },
   {
    "player": "Steven Kwan",
    "player_slug": "steven-kwan",
-   "product": "2026 Bowman Chrome",
+   "product": "2022 Bowman Chrome",
    "lane": "graded-auto",
    "lane_display": "Graded Auto",
    "grade_bucket": "PSA10",
@@ -14546,14 +14546,14 @@
    "first_date": "",
    "last_date": "",
    "band_class": "forming",
-   "search_q": "Steven Kwan 2026 Bowman Chrome Auto PSA 10",
+   "search_q": "Steven Kwan 2022 Bowman Chrome Auto PSA 10",
    "id": "steven-kwan.graded-auto.psa10",
-   "slug": "steven-kwan-2026-bowman-chrome-graded-auto-psa10"
+   "slug": "steven-kwan-2022-bowman-chrome-graded-auto-psa10"
   },
   {
    "player": "Steven Kwan",
    "player_slug": "steven-kwan",
-   "product": "2026 Bowman Chrome",
+   "product": "2022 Bowman Chrome",
    "lane": "graded-auto-numbered",
    "lane_display": "Graded Auto Numbered",
    "grade_bucket": "BGS9",
@@ -14561,14 +14561,14 @@
    "first_date": "",
    "last_date": "",
    "band_class": "forming",
-   "search_q": "Steven Kwan 2026 Bowman Chrome Numbered PSA 9",
+   "search_q": "Steven Kwan 2022 Bowman Chrome Numbered PSA 9",
    "id": "steven-kwan.graded-auto-numbered.bgs9",
-   "slug": "steven-kwan-2026-bowman-chrome-graded-auto-numbered-bgs9"
+   "slug": "steven-kwan-2022-bowman-chrome-graded-auto-numbered-bgs9"
   },
   {
    "player": "Steven Kwan",
    "player_slug": "steven-kwan",
-   "product": "2026 Bowman Chrome",
+   "product": "2022 Bowman Chrome",
    "lane": "graded-auto-numbered",
    "lane_display": "Graded Auto Numbered",
    "grade_bucket": "PSA9",
@@ -14576,14 +14576,14 @@
    "first_date": "",
    "last_date": "",
    "band_class": "forming",
-   "search_q": "Steven Kwan 2026 Bowman Chrome Numbered PSA 9",
+   "search_q": "Steven Kwan 2022 Bowman Chrome Numbered PSA 9",
    "id": "steven-kwan.graded-auto-numbered.psa9",
-   "slug": "steven-kwan-2026-bowman-chrome-graded-auto-numbered-psa9"
+   "slug": "steven-kwan-2022-bowman-chrome-graded-auto-numbered-psa9"
   },
   {
    "player": "Steven Kwan",
    "player_slug": "steven-kwan",
-   "product": "2026 Bowman Chrome",
+   "product": "2022 Bowman Chrome",
    "lane": "graded-blue",
    "lane_display": "Graded Blue",
    "grade_bucket": "PSA9",
@@ -14591,14 +14591,14 @@
    "first_date": "",
    "last_date": "",
    "band_class": "forming",
-   "search_q": "Steven Kwan 2026 Bowman Chrome Blue PSA 9",
+   "search_q": "Steven Kwan 2022 Bowman Chrome Blue PSA 9",
    "id": "steven-kwan.graded-blue.psa9",
-   "slug": "steven-kwan-2026-bowman-chrome-graded-blue-psa9"
+   "slug": "steven-kwan-2022-bowman-chrome-graded-blue-psa9"
   },
   {
    "player": "Steven Kwan",
    "player_slug": "steven-kwan",
-   "product": "2026 Bowman Chrome",
+   "product": "2022 Bowman Chrome",
    "lane": "graded-gold",
    "lane_display": "Graded Gold",
    "grade_bucket": "PSA10",
@@ -14606,14 +14606,14 @@
    "first_date": "",
    "last_date": "",
    "band_class": "forming",
-   "search_q": "Steven Kwan 2026 Bowman Chrome Gold PSA 10",
+   "search_q": "Steven Kwan 2022 Bowman Chrome Gold PSA 10",
    "id": "steven-kwan.graded-gold.psa10",
-   "slug": "steven-kwan-2026-bowman-chrome-graded-gold-psa10"
+   "slug": "steven-kwan-2022-bowman-chrome-graded-gold-psa10"
   },
   {
    "player": "Steven Kwan",
    "player_slug": "steven-kwan",
-   "product": "2026 Bowman Chrome",
+   "product": "2022 Bowman Chrome",
    "lane": "graded-numbered",
    "lane_display": "Graded Numbered",
    "grade_bucket": "PSA10",
@@ -14621,14 +14621,14 @@
    "first_date": "",
    "last_date": "",
    "band_class": "forming",
-   "search_q": "Steven Kwan 2026 Bowman Chrome Numbered PSA 10",
+   "search_q": "Steven Kwan 2022 Bowman Chrome Numbered PSA 10",
    "id": "steven-kwan.graded-numbered.psa10",
-   "slug": "steven-kwan-2026-bowman-chrome-graded-numbered-psa10"
+   "slug": "steven-kwan-2022-bowman-chrome-graded-numbered-psa10"
   },
   {
    "player": "Steven Kwan",
    "player_slug": "steven-kwan",
-   "product": "2026 Bowman Chrome",
+   "product": "2022 Bowman Chrome",
    "lane": "graded-numbered",
    "lane_display": "Graded Numbered",
    "grade_bucket": "PSA9",
@@ -14636,14 +14636,14 @@
    "first_date": "",
    "last_date": "",
    "band_class": "forming",
-   "search_q": "Steven Kwan 2026 Bowman Chrome Numbered PSA 9",
+   "search_q": "Steven Kwan 2022 Bowman Chrome Numbered PSA 9",
    "id": "steven-kwan.graded-numbered.psa9",
-   "slug": "steven-kwan-2026-bowman-chrome-graded-numbered-psa9"
+   "slug": "steven-kwan-2022-bowman-chrome-graded-numbered-psa9"
   },
   {
    "player": "Steven Kwan",
    "player_slug": "steven-kwan",
-   "product": "2026 Bowman Chrome",
+   "product": "2022 Bowman Chrome",
    "lane": "graded-purple",
    "lane_display": "Graded Purple",
    "grade_bucket": "PSA9",
@@ -14665,14 +14665,14 @@
     19.5,
     19.99
    ],
-   "search_q": "Steven Kwan 2026 Bowman Chrome Purple PSA 9",
+   "search_q": "Steven Kwan 2022 Bowman Chrome Purple PSA 9",
    "id": "steven-kwan.graded-purple.psa9",
-   "slug": "steven-kwan-2026-bowman-chrome-graded-purple-psa9"
+   "slug": "steven-kwan-2022-bowman-chrome-graded-purple-psa9"
   },
   {
    "player": "Steven Kwan",
    "player_slug": "steven-kwan",
-   "product": "2026 Bowman Chrome",
+   "product": "2022 Bowman Chrome",
    "lane": "graded-purple",
    "lane_display": "Graded Purple",
    "grade_bucket": "raw",
@@ -14680,14 +14680,14 @@
    "first_date": "",
    "last_date": "",
    "band_class": "forming",
-   "search_q": "Steven Kwan 2026 Bowman Chrome Purple",
+   "search_q": "Steven Kwan 2022 Bowman Chrome Purple",
    "id": "steven-kwan.graded-purple.raw",
-   "slug": "steven-kwan-2026-bowman-chrome-graded-purple-raw"
+   "slug": "steven-kwan-2022-bowman-chrome-graded-purple-raw"
   },
   {
    "player": "Steven Kwan",
    "player_slug": "steven-kwan",
-   "product": "2026 Bowman Chrome",
+   "product": "2022 Bowman Chrome",
    "lane": "graded-sapphire",
    "lane_display": "Graded Sapphire",
    "grade_bucket": "PSA9",
@@ -14695,14 +14695,14 @@
    "first_date": "",
    "last_date": "",
    "band_class": "forming",
-   "search_q": "Steven Kwan 2026 Bowman Chrome Sapphire PSA 9",
+   "search_q": "Steven Kwan 2022 Bowman Chrome Sapphire PSA 9",
    "id": "steven-kwan.graded-sapphire.psa9",
-   "slug": "steven-kwan-2026-bowman-chrome-graded-sapphire-psa9"
+   "slug": "steven-kwan-2022-bowman-chrome-graded-sapphire-psa9"
   },
   {
    "player": "Steven Kwan",
    "player_slug": "steven-kwan",
-   "product": "2026 Bowman Chrome",
+   "product": "2022 Bowman Chrome",
    "lane": "graded-sapphire",
    "lane_display": "Graded Sapphire",
    "grade_bucket": "SGC10",
@@ -14710,14 +14710,14 @@
    "first_date": "",
    "last_date": "",
    "band_class": "forming",
-   "search_q": "Steven Kwan 2026 Bowman Chrome Sapphire PSA 10",
+   "search_q": "Steven Kwan 2022 Bowman Chrome Sapphire PSA 10",
    "id": "steven-kwan.graded-sapphire.sgc10",
-   "slug": "steven-kwan-2026-bowman-chrome-graded-sapphire-sgc10"
+   "slug": "steven-kwan-2022-bowman-chrome-graded-sapphire-sgc10"
   },
   {
    "player": "Steven Kwan",
    "player_slug": "steven-kwan",
-   "product": "2026 Bowman Chrome",
+   "product": "2025 Bowman Chrome",
    "lane": "green",
    "lane_display": "Green",
    "grade_bucket": "raw",
@@ -14751,14 +14751,14 @@
     14.0,
     20.0
    ],
-   "search_q": "Steven Kwan 2026 Bowman Chrome Green",
+   "search_q": "Steven Kwan 2025 Bowman Chrome Green",
    "id": "steven-kwan.green.raw",
-   "slug": "steven-kwan-2026-bowman-chrome-green-raw"
+   "slug": "steven-kwan-2025-bowman-chrome-green-raw"
   },
   {
    "player": "Steven Kwan",
    "player_slug": "steven-kwan",
-   "product": "2026 Bowman Chrome",
+   "product": "2025 Bowman Chrome",
    "lane": "iv",
    "lane_display": "Iv",
    "grade_bucket": "raw",
@@ -14783,14 +14783,14 @@
     7.5,
     10.0
    ],
-   "search_q": "Steven Kwan 2026 Bowman Chrome Image Variation",
+   "search_q": "Steven Kwan 2025 Bowman Chrome Image Variation",
    "id": "steven-kwan.iv.raw",
-   "slug": "steven-kwan-2026-bowman-chrome-iv-raw"
+   "slug": "steven-kwan-2025-bowman-chrome-iv-raw"
   },
   {
    "player": "Steven Kwan",
    "player_slug": "steven-kwan",
-   "product": "2026 Bowman Chrome",
+   "product": "2022 Bowman Chrome",
    "lane": "mass",
    "lane_display": "Mass",
    "grade_bucket": "raw",
@@ -14837,14 +14837,14 @@
     3.0,
     25.0
    ],
-   "search_q": "Steven Kwan 2026 Bowman Chrome",
+   "search_q": "Steven Kwan 2022 Bowman Chrome",
    "id": "steven-kwan.mass.raw",
-   "slug": "steven-kwan-2026-bowman-chrome-mass-raw"
+   "slug": "steven-kwan-2022-bowman-chrome-mass-raw"
   },
   {
    "player": "Steven Kwan",
    "player_slug": "steven-kwan",
-   "product": "2026 Bowman Chrome",
+   "product": "2025 Bowman Chrome",
    "lane": "numbered",
    "lane_display": "Numbered",
    "grade_bucket": "raw",
@@ -14873,9 +14873,9 @@
     19.99,
     30.0
    ],
-   "search_q": "Steven Kwan 2026 Bowman Chrome Numbered",
+   "search_q": "Steven Kwan 2025 Bowman Chrome Numbered",
    "id": "steven-kwan.numbered.raw",
-   "slug": "steven-kwan-2026-bowman-chrome-numbered-raw"
+   "slug": "steven-kwan-2025-bowman-chrome-numbered-raw"
   },
   {
    "player": "Steven Kwan",
@@ -14910,7 +14910,7 @@
   {
    "player": "Steven Kwan",
    "player_slug": "steven-kwan",
-   "product": "2026 Bowman Chrome",
+   "product": "2022 Bowman Chrome",
    "lane": "purple",
    "lane_display": "Purple",
    "grade_bucket": "raw",
@@ -14942,9 +14942,9 @@
     10.5,
     14.99
    ],
-   "search_q": "Steven Kwan 2026 Bowman Chrome Purple",
+   "search_q": "Steven Kwan 2022 Bowman Chrome Purple",
    "id": "steven-kwan.purple.raw",
-   "slug": "steven-kwan-2026-bowman-chrome-purple-raw"
+   "slug": "steven-kwan-2022-bowman-chrome-purple-raw"
   },
   {
    "player": "Steven Kwan",
@@ -15093,7 +15093,7 @@
   {
    "player": "Tanner Bibee",
    "player_slug": "tanner-bibee",
-   "product": "2023 Topps",
+   "product": "2025 Topps",
    "lane": "auto-1/1",
    "lane_display": "Auto 1/1",
    "grade_bucket": "raw",
@@ -15101,14 +15101,14 @@
    "first_date": "",
    "last_date": "",
    "band_class": "forming",
-   "search_q": "Tanner Bibee 2023 Topps 1/1",
+   "search_q": "Tanner Bibee 2025 Topps 1/1",
    "id": "tanner-bibee.auto-1-1.raw",
-   "slug": "tanner-bibee-2023-topps-auto-1-1-raw"
+   "slug": "tanner-bibee-2025-topps-auto-1-1-raw"
   },
   {
    "player": "Tanner Bibee",
    "player_slug": "tanner-bibee",
-   "product": "2023 Topps",
+   "product": "2024 Topps",
    "lane": "auto-black",
    "lane_display": "Auto Black",
    "grade_bucket": "raw",
@@ -15116,9 +15116,9 @@
    "first_date": "",
    "last_date": "",
    "band_class": "forming",
-   "search_q": "Tanner Bibee 2023 Topps Black",
+   "search_q": "Tanner Bibee 2024 Topps Black",
    "id": "tanner-bibee.auto-black.raw",
-   "slug": "tanner-bibee-2023-topps-auto-black-raw"
+   "slug": "tanner-bibee-2024-topps-auto-black-raw"
   },
   {
    "player": "Tanner Bibee",
@@ -15168,7 +15168,7 @@
   {
    "player": "Tanner Bibee",
    "player_slug": "tanner-bibee",
-   "product": "2023 Topps",
+   "product": "2024 Topps",
    "lane": "auto-purple",
    "lane_display": "Auto Purple",
    "grade_bucket": "raw",
@@ -15191,9 +15191,9 @@
     9.0,
     12.99
    ],
-   "search_q": "Tanner Bibee 2023 Topps Purple",
+   "search_q": "Tanner Bibee 2024 Topps Purple",
    "id": "tanner-bibee.auto-purple.raw",
-   "slug": "tanner-bibee-2023-topps-auto-purple-raw"
+   "slug": "tanner-bibee-2024-topps-auto-purple-raw"
   },
   {
    "player": "Tanner Bibee",
@@ -15228,7 +15228,7 @@
   {
    "player": "Tanner Bibee",
    "player_slug": "tanner-bibee",
-   "product": "2023 Topps",
+   "product": "2026 Topps",
    "lane": "black",
    "lane_display": "Black",
    "grade_bucket": "raw",
@@ -15259,14 +15259,14 @@
     19.5,
     24.99
    ],
-   "search_q": "Tanner Bibee 2023 Topps Black",
+   "search_q": "Tanner Bibee 2026 Topps Black",
    "id": "tanner-bibee.black.raw",
-   "slug": "tanner-bibee-2023-topps-black-raw"
+   "slug": "tanner-bibee-2026-topps-black-raw"
   },
   {
    "player": "Tanner Bibee",
    "player_slug": "tanner-bibee",
-   "product": "2023 Topps",
+   "product": "2026 Topps",
    "lane": "blue",
    "lane_display": "Blue",
    "grade_bucket": "raw",
@@ -15288,14 +15288,14 @@
     1.0,
     1.99
    ],
-   "search_q": "Tanner Bibee 2023 Topps Blue",
+   "search_q": "Tanner Bibee 2026 Topps Blue",
    "id": "tanner-bibee.blue.raw",
-   "slug": "tanner-bibee-2023-topps-blue-raw"
+   "slug": "tanner-bibee-2026-topps-blue-raw"
   },
   {
    "player": "Tanner Bibee",
    "player_slug": "tanner-bibee",
-   "product": "2023 Topps",
+   "product": "2026 Topps",
    "lane": "case-hit",
    "lane_display": "Case Hit",
    "grade_bucket": "raw",
@@ -15319,14 +15319,14 @@
     15.99,
     20.0
    ],
-   "search_q": "Tanner Bibee 2023 Topps Case Hit",
+   "search_q": "Tanner Bibee 2026 Topps Case Hit",
    "id": "tanner-bibee.case-hit.raw",
-   "slug": "tanner-bibee-2023-topps-case-hit-raw"
+   "slug": "tanner-bibee-2026-topps-case-hit-raw"
   },
   {
    "player": "Tanner Bibee",
    "player_slug": "tanner-bibee",
-   "product": "2023 Topps",
+   "product": "2026 Topps",
    "lane": "gold",
    "lane_display": "Gold",
    "grade_bucket": "raw",
@@ -15367,14 +15367,14 @@
     8.99,
     15.0
    ],
-   "search_q": "Tanner Bibee 2023 Topps Gold",
+   "search_q": "Tanner Bibee 2026 Topps Gold",
    "id": "tanner-bibee.gold.raw",
-   "slug": "tanner-bibee-2023-topps-gold-raw"
+   "slug": "tanner-bibee-2026-topps-gold-raw"
   },
   {
    "player": "Tanner Bibee",
    "player_slug": "tanner-bibee",
-   "product": "2023 Topps",
+   "product": "2026 Topps",
    "lane": "gold-refractor",
    "lane_display": "Gold Refractor",
    "grade_bucket": "raw",
@@ -15382,9 +15382,9 @@
    "first_date": "",
    "last_date": "",
    "band_class": "forming",
-   "search_q": "Tanner Bibee 2023 Topps Gold Refractor",
+   "search_q": "Tanner Bibee 2026 Topps Gold Refractor",
    "id": "tanner-bibee.gold-refractor.raw",
-   "slug": "tanner-bibee-2023-topps-gold-refractor-raw"
+   "slug": "tanner-bibee-2026-topps-gold-refractor-raw"
   },
   {
    "player": "Tanner Bibee",
@@ -15419,7 +15419,7 @@
   {
    "player": "Tanner Bibee",
    "player_slug": "tanner-bibee",
-   "product": "2023 Topps",
+   "product": "2024 Topps",
    "lane": "graded-gold-refractor",
    "lane_display": "Graded Gold Refractor",
    "grade_bucket": "PSA10",
@@ -15427,9 +15427,9 @@
    "first_date": "",
    "last_date": "",
    "band_class": "forming",
-   "search_q": "Tanner Bibee 2023 Topps Gold Refractor PSA 10",
+   "search_q": "Tanner Bibee 2024 Topps Gold Refractor PSA 10",
    "id": "tanner-bibee.graded-gold-refractor.psa10",
-   "slug": "tanner-bibee-2023-topps-graded-gold-refractor-psa10"
+   "slug": "tanner-bibee-2024-topps-graded-gold-refractor-psa10"
   },
   {
    "player": "Tanner Bibee",
@@ -15464,7 +15464,7 @@
   {
    "player": "Tanner Bibee",
    "player_slug": "tanner-bibee",
-   "product": "2023 Topps",
+   "product": "2025 Topps",
    "lane": "graded-sapphire",
    "lane_display": "Graded Sapphire",
    "grade_bucket": "PSA9",
@@ -15472,9 +15472,9 @@
    "first_date": "",
    "last_date": "",
    "band_class": "forming",
-   "search_q": "Tanner Bibee 2023 Topps Sapphire PSA 9",
+   "search_q": "Tanner Bibee 2025 Topps Sapphire PSA 9",
    "id": "tanner-bibee.graded-sapphire.psa9",
-   "slug": "tanner-bibee-2023-topps-graded-sapphire-psa9"
+   "slug": "tanner-bibee-2025-topps-graded-sapphire-psa9"
   },
   {
    "player": "Tanner Bibee",
@@ -15494,7 +15494,7 @@
   {
    "player": "Tanner Bibee",
    "player_slug": "tanner-bibee",
-   "product": "2023 Topps",
+   "product": "2025 Topps",
    "lane": "green",
    "lane_display": "Green",
    "grade_bucket": "raw",
@@ -15502,14 +15502,14 @@
    "first_date": "",
    "last_date": "",
    "band_class": "forming",
-   "search_q": "Tanner Bibee 2023 Topps Green",
+   "search_q": "Tanner Bibee 2025 Topps Green",
    "id": "tanner-bibee.green.raw",
-   "slug": "tanner-bibee-2023-topps-green-raw"
+   "slug": "tanner-bibee-2025-topps-green-raw"
   },
   {
    "player": "Tanner Bibee",
    "player_slug": "tanner-bibee",
-   "product": "2023 Topps",
+   "product": "2026 Topps",
    "lane": "iv",
    "lane_display": "Iv",
    "grade_bucket": "raw",
@@ -15534,14 +15534,14 @@
     9.99,
     10.0
    ],
-   "search_q": "Tanner Bibee 2023 Topps Image Variation",
+   "search_q": "Tanner Bibee 2026 Topps Image Variation",
    "id": "tanner-bibee.iv.raw",
-   "slug": "tanner-bibee-2023-topps-iv-raw"
+   "slug": "tanner-bibee-2026-topps-iv-raw"
   },
   {
    "player": "Tanner Bibee",
    "player_slug": "tanner-bibee",
-   "product": "2023 Topps",
+   "product": "2026 Topps",
    "lane": "mass",
    "lane_display": "Mass",
    "grade_bucket": "raw",
@@ -15563,14 +15563,14 @@
     1.45,
     1.5
    ],
-   "search_q": "Tanner Bibee 2023 Topps",
+   "search_q": "Tanner Bibee 2026 Topps",
    "id": "tanner-bibee.mass.raw",
-   "slug": "tanner-bibee-2023-topps-mass-raw"
+   "slug": "tanner-bibee-2026-topps-mass-raw"
   },
   {
    "player": "Tanner Bibee",
    "player_slug": "tanner-bibee",
-   "product": "2023 Topps",
+   "product": "2026 Topps",
    "lane": "numbered",
    "lane_display": "Numbered",
    "grade_bucket": "raw",
@@ -15592,14 +15592,14 @@
     4.91,
     11.99
    ],
-   "search_q": "Tanner Bibee 2023 Topps Numbered",
+   "search_q": "Tanner Bibee 2026 Topps Numbered",
    "id": "tanner-bibee.numbered.raw",
-   "slug": "tanner-bibee-2023-topps-numbered-raw"
+   "slug": "tanner-bibee-2026-topps-numbered-raw"
   },
   {
    "player": "Tanner Bibee",
    "player_slug": "tanner-bibee",
-   "product": "2023 Topps",
+   "product": "2026 Topps",
    "lane": "orange",
    "lane_display": "Orange",
    "grade_bucket": "raw",
@@ -15622,14 +15622,14 @@
     4.25,
     9.5
    ],
-   "search_q": "Tanner Bibee 2023 Topps Orange",
+   "search_q": "Tanner Bibee 2026 Topps Orange",
    "id": "tanner-bibee.orange.raw",
-   "slug": "tanner-bibee-2023-topps-orange-raw"
+   "slug": "tanner-bibee-2026-topps-orange-raw"
   },
   {
    "player": "Tanner Bibee",
    "player_slug": "tanner-bibee",
-   "product": "2023 Topps",
+   "product": "2026 Topps",
    "lane": "purple",
    "lane_display": "Purple",
    "grade_bucket": "raw",
@@ -15656,14 +15656,14 @@
     3.25,
     4.99
    ],
-   "search_q": "Tanner Bibee 2023 Topps Purple",
+   "search_q": "Tanner Bibee 2026 Topps Purple",
    "id": "tanner-bibee.purple.raw",
-   "slug": "tanner-bibee-2023-topps-purple-raw"
+   "slug": "tanner-bibee-2026-topps-purple-raw"
   },
   {
    "player": "Tanner Bibee",
    "player_slug": "tanner-bibee",
-   "product": "2023 Topps",
+   "product": "2026 Topps",
    "lane": "red",
    "lane_display": "Red",
    "grade_bucket": "raw",
@@ -15685,14 +15685,14 @@
     23.26,
     29.0
    ],
-   "search_q": "Tanner Bibee 2023 Topps Red",
+   "search_q": "Tanner Bibee 2026 Topps Red",
    "id": "tanner-bibee.red.raw",
-   "slug": "tanner-bibee-2023-topps-red-raw"
+   "slug": "tanner-bibee-2026-topps-red-raw"
   },
   {
    "player": "Tanner Bibee",
    "player_slug": "tanner-bibee",
-   "product": "2023 Topps",
+   "product": "2026 Topps",
    "lane": "sapphire",
    "lane_display": "Sapphire",
    "grade_bucket": "raw",
@@ -15723,14 +15723,14 @@
     12.25,
     26.0
    ],
-   "search_q": "Tanner Bibee 2023 Topps Sapphire",
+   "search_q": "Tanner Bibee 2026 Topps Sapphire",
    "id": "tanner-bibee.sapphire.raw",
-   "slug": "tanner-bibee-2023-topps-sapphire-raw"
+   "slug": "tanner-bibee-2026-topps-sapphire-raw"
   },
   {
    "player": "Tanner Bibee",
    "player_slug": "tanner-bibee",
-   "product": "2023 Topps",
+   "product": "2026 Topps",
    "lane": "wave",
    "lane_display": "Wave",
    "grade_bucket": "raw",
@@ -15758,9 +15758,9 @@
     17.5,
     24.99
    ],
-   "search_q": "Tanner Bibee 2023 Topps Wave",
+   "search_q": "Tanner Bibee 2026 Topps Wave",
    "id": "tanner-bibee.wave.raw",
-   "slug": "tanner-bibee-2023-topps-wave-raw"
+   "slug": "tanner-bibee-2026-topps-wave-raw"
   },
   {
    "player": "Willson Contreras",
@@ -16750,5 +16750,110 @@
    "id": "zach-neto.wave.raw",
    "slug": "zach-neto-wave-raw"
   }
- ]
+ ],
+ "slug_aliases": {
+  "brice-turang-2025-topps-1-1-raw": "brice-turang-2026-topps-1-1-raw",
+  "brice-turang-2025-topps-auto-black-raw": "brice-turang-2026-topps-auto-black-raw",
+  "brice-turang-2025-topps-auto-case-hit-raw": "brice-turang-2026-topps-auto-case-hit-raw",
+  "brice-turang-2025-topps-auto-gold-raw": "brice-turang-2026-topps-auto-gold-raw",
+  "brice-turang-2025-topps-auto-gold-refractor-raw": "brice-turang-2023-topps-auto-gold-refractor-raw",
+  "brice-turang-2025-topps-auto-iv-raw": "brice-turang-2023-topps-auto-iv-raw",
+  "brice-turang-2025-topps-auto-raw": "brice-turang-2023-topps-auto-raw",
+  "brice-turang-2025-topps-auto-true-gold-raw": "brice-turang-2023-topps-auto-true-gold-raw",
+  "brice-turang-2025-topps-black-raw": "brice-turang-2026-topps-black-raw",
+  "brice-turang-2025-topps-blue-raw": "brice-turang-2023-topps-blue-raw",
+  "brice-turang-2025-topps-case-hit-raw": "brice-turang-2026-topps-case-hit-raw",
+  "brice-turang-2025-topps-gold-raw": "brice-turang-2026-topps-gold-raw",
+  "brice-turang-2025-topps-graded-auto-gold-psa10": "brice-turang-2023-topps-graded-auto-gold-psa10",
+  "brice-turang-2025-topps-graded-auto-gold-psa9": "brice-turang-2024-topps-graded-auto-gold-psa9",
+  "brice-turang-2025-topps-graded-auto-true-gold-psa10": "brice-turang-2023-topps-graded-auto-true-gold-psa10",
+  "brice-turang-2025-topps-graded-gold-psa8": "brice-turang-2023-topps-graded-gold-psa8",
+  "brice-turang-2025-topps-graded-gold-psa9": "brice-turang-2023-topps-graded-gold-psa9",
+  "brice-turang-2025-topps-graded-green-psa9": "brice-turang-2023-topps-graded-green-psa9",
+  "brice-turang-2025-topps-graded-iv-psa9": "brice-turang-2023-topps-graded-iv-psa9",
+  "brice-turang-2025-topps-graded-numbered-psa8": "brice-turang-2023-topps-graded-numbered-psa8",
+  "brice-turang-2025-topps-graded-orange-psa10": "brice-turang-2026-topps-graded-orange-psa10",
+  "brice-turang-2025-topps-graded-psa10": "brice-turang-2023-topps-graded-psa10",
+  "brice-turang-2025-topps-graded-purple-sgc10": "brice-turang-2023-topps-graded-purple-sgc10",
+  "brice-turang-2025-topps-graded-true-gold-psa9": "brice-turang-2023-topps-graded-true-gold-psa9",
+  "brice-turang-2025-topps-iv-raw": "brice-turang-2023-topps-iv-raw",
+  "brice-turang-2025-topps-mass-raw": "brice-turang-2023-topps-mass-raw",
+  "brice-turang-2025-topps-numbered-raw": "brice-turang-2023-topps-numbered-raw",
+  "brice-turang-2025-topps-orange-raw": "brice-turang-2026-topps-orange-raw",
+  "brice-turang-2025-topps-purple-raw": "brice-turang-2023-topps-purple-raw",
+  "brice-turang-2025-topps-sapphire-raw": "brice-turang-2026-topps-sapphire-raw",
+  "brice-turang-2025-topps-true-gold-raw": "brice-turang-2023-topps-true-gold-raw",
+  "brice-turang-2025-topps-wave-raw": "brice-turang-2026-topps-wave-raw",
+  "jackson-chourio-2025-topps-chrome-1-1-raw": "jackson-chourio-2026-topps-chrome-1-1-raw",
+  "jackson-chourio-2025-topps-chrome-auto-case-hit-raw": "jackson-chourio-2026-topps-chrome-auto-case-hit-raw",
+  "jackson-chourio-2025-topps-chrome-black-raw": "jackson-chourio-2026-topps-chrome-black-raw",
+  "jackson-chourio-2025-topps-chrome-graded-auto-wave-psa10": "jackson-chourio-2024-topps-chrome-graded-auto-wave-psa10",
+  "jackson-chourio-2025-topps-chrome-graded-bgs9": "jackson-chourio-2024-topps-chrome-graded-bgs9",
+  "jackson-chourio-2025-topps-chrome-graded-gold-refractor-psa10": "jackson-chourio-2026-topps-chrome-graded-gold-refractor-psa10",
+  "jackson-chourio-2025-topps-chrome-graded-psa10": "jackson-chourio-2024-topps-chrome-graded-psa10",
+  "jackson-chourio-2025-topps-chrome-graded-psa9": "jackson-chourio-2024-topps-chrome-graded-psa9",
+  "jackson-chourio-2025-topps-chrome-graded-sapphire-psa10": "jackson-chourio-2024-topps-chrome-graded-sapphire-psa10",
+  "jackson-chourio-2025-topps-chrome-graded-sapphire-psa9": "jackson-chourio-2024-topps-chrome-graded-sapphire-psa9",
+  "jackson-chourio-2025-topps-chrome-graded-sgc10": "jackson-chourio-2024-topps-chrome-graded-sgc10",
+  "jackson-chourio-2025-topps-chrome-green-raw": "jackson-chourio-2026-topps-chrome-green-raw",
+  "jackson-chourio-2025-topps-chrome-iv-raw": "jackson-chourio-2024-topps-chrome-iv-raw",
+  "jackson-chourio-2025-topps-chrome-mass-raw": "jackson-chourio-2024-topps-chrome-mass-raw",
+  "jackson-chourio-2025-topps-chrome-orange-raw": "jackson-chourio-2026-topps-chrome-orange-raw",
+  "jackson-chourio-2025-topps-chrome-purple-raw": "jackson-chourio-2026-topps-chrome-purple-raw",
+  "jackson-chourio-2025-topps-chrome-sapphire-raw": "jackson-chourio-2026-topps-chrome-sapphire-raw",
+  "jackson-chourio-2025-topps-chrome-wave-raw": "jackson-chourio-2024-topps-chrome-wave-raw",
+  "james-wood-2025-topps-auto-1-1-raw": "james-wood-2024-topps-auto-1-1-raw",
+  "james-wood-2025-topps-auto-iv-raw": "james-wood-2026-topps-auto-iv-raw",
+  "james-wood-2025-topps-black-raw": "james-wood-2026-topps-black-raw",
+  "james-wood-2025-topps-numbered-raw": "james-wood-2026-topps-numbered-raw",
+  "james-wood-2025-topps-orange-raw": "james-wood-2026-topps-orange-raw",
+  "james-wood-2025-topps-purple-raw": "james-wood-2026-topps-purple-raw",
+  "james-wood-2025-topps-sapphire-raw": "james-wood-2026-topps-sapphire-raw",
+  "murakami-2026-bowman-graded-gold-refractor-psa9": "murakami-2022-bowman-graded-gold-refractor-psa9",
+  "steven-kwan-2026-bowman-chrome-auto-gold-raw": "steven-kwan-2022-bowman-chrome-auto-gold-raw",
+  "steven-kwan-2026-bowman-chrome-auto-wave-raw": "steven-kwan-2022-bowman-chrome-auto-wave-raw",
+  "steven-kwan-2026-bowman-chrome-graded-auto-numbered-bgs9": "steven-kwan-2022-bowman-chrome-graded-auto-numbered-bgs9",
+  "steven-kwan-2026-bowman-chrome-graded-auto-numbered-psa9": "steven-kwan-2022-bowman-chrome-graded-auto-numbered-psa9",
+  "steven-kwan-2026-bowman-chrome-graded-auto-psa10": "steven-kwan-2022-bowman-chrome-graded-auto-psa10",
+  "steven-kwan-2026-bowman-chrome-graded-blue-psa9": "steven-kwan-2022-bowman-chrome-graded-blue-psa9",
+  "steven-kwan-2026-bowman-chrome-graded-gold-psa10": "steven-kwan-2022-bowman-chrome-graded-gold-psa10",
+  "steven-kwan-2026-bowman-chrome-graded-numbered-psa10": "steven-kwan-2022-bowman-chrome-graded-numbered-psa10",
+  "steven-kwan-2026-bowman-chrome-graded-numbered-psa9": "steven-kwan-2022-bowman-chrome-graded-numbered-psa9",
+  "steven-kwan-2026-bowman-chrome-graded-psa10": "steven-kwan-2022-bowman-chrome-graded-psa10",
+  "steven-kwan-2026-bowman-chrome-graded-purple-psa9": "steven-kwan-2022-bowman-chrome-graded-purple-psa9",
+  "steven-kwan-2026-bowman-chrome-graded-purple-raw": "steven-kwan-2022-bowman-chrome-graded-purple-raw",
+  "steven-kwan-2026-bowman-chrome-graded-sapphire-psa9": "steven-kwan-2022-bowman-chrome-graded-sapphire-psa9",
+  "steven-kwan-2026-bowman-chrome-graded-sapphire-sgc10": "steven-kwan-2022-bowman-chrome-graded-sapphire-sgc10",
+  "steven-kwan-2026-bowman-chrome-green-raw": "steven-kwan-2025-bowman-chrome-green-raw",
+  "steven-kwan-2026-bowman-chrome-iv-raw": "steven-kwan-2025-bowman-chrome-iv-raw",
+  "steven-kwan-2026-bowman-chrome-mass-raw": "steven-kwan-2022-bowman-chrome-mass-raw",
+  "steven-kwan-2026-bowman-chrome-numbered-raw": "steven-kwan-2025-bowman-chrome-numbered-raw",
+  "steven-kwan-2026-bowman-chrome-purple-raw": "steven-kwan-2022-bowman-chrome-purple-raw",
+  "tanner-bibee-2023-topps-auto-1-1-raw": "tanner-bibee-2025-topps-auto-1-1-raw",
+  "tanner-bibee-2023-topps-auto-black-raw": "tanner-bibee-2024-topps-auto-black-raw",
+  "tanner-bibee-2023-topps-auto-purple-raw": "tanner-bibee-2024-topps-auto-purple-raw",
+  "tanner-bibee-2023-topps-black-raw": "tanner-bibee-2026-topps-black-raw",
+  "tanner-bibee-2023-topps-blue-raw": "tanner-bibee-2026-topps-blue-raw",
+  "tanner-bibee-2023-topps-case-hit-raw": "tanner-bibee-2026-topps-case-hit-raw",
+  "tanner-bibee-2023-topps-gold-raw": "tanner-bibee-2026-topps-gold-raw",
+  "tanner-bibee-2023-topps-gold-refractor-raw": "tanner-bibee-2026-topps-gold-refractor-raw",
+  "tanner-bibee-2023-topps-graded-gold-refractor-psa10": "tanner-bibee-2024-topps-graded-gold-refractor-psa10",
+  "tanner-bibee-2023-topps-graded-sapphire-psa9": "tanner-bibee-2025-topps-graded-sapphire-psa9",
+  "tanner-bibee-2023-topps-green-raw": "tanner-bibee-2025-topps-green-raw",
+  "tanner-bibee-2023-topps-iv-raw": "tanner-bibee-2026-topps-iv-raw",
+  "tanner-bibee-2023-topps-mass-raw": "tanner-bibee-2026-topps-mass-raw",
+  "tanner-bibee-2023-topps-numbered-raw": "tanner-bibee-2026-topps-numbered-raw",
+  "tanner-bibee-2023-topps-orange-raw": "tanner-bibee-2026-topps-orange-raw",
+  "tanner-bibee-2023-topps-purple-raw": "tanner-bibee-2026-topps-purple-raw",
+  "tanner-bibee-2023-topps-red-raw": "tanner-bibee-2026-topps-red-raw",
+  "tanner-bibee-2023-topps-sapphire-raw": "tanner-bibee-2026-topps-sapphire-raw",
+  "tanner-bibee-2023-topps-wave-raw": "tanner-bibee-2026-topps-wave-raw"
+ },
+ "year_relabel": {
+  "swept_utc": "2026-10-24T12:07:12+00:00",
+  "rule": "majority title-year per builder row-group; ties/no-evidence/collisions = honest-FAIL",
+  "migrated": 96,
+  "honest_fail": 21,
+  "builder_rerun_note": "a build_card_page_registry.py rebuild resets slug years \u2014 re-run this sweep after any rebuild"
+ }
 }

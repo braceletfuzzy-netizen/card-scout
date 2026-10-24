@@ -103,7 +103,16 @@ def load_registry() -> dict:
 
 
 def lane_by_slug(slug: str) -> dict | None:
-    return load_registry()["by_slug"].get(slug)
+    data = load_registry()
+    hit = data["by_slug"].get(slug)
+    if hit is not None:
+        return hit
+    # SLUG ALIASES (Brief 7 Job B): the year-relabel sweep retires slugs but
+    # keeps them as alias keys -> current slug. Old links render (200), never 404.
+    target = (data.get("raw") or {}).get("slug_aliases", {}).get(slug)
+    if target:
+        return data["by_slug"].get(target)
+    return None
 
 
 # ---------------------------------------------------------------------------

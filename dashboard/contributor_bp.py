@@ -176,6 +176,23 @@ except Exception:  # local fallback mirrors the builder's thresholds
         return "provisional"  # engine flag only via the builder's bands.json check
 
 PRICE_RE = re.compile(r"\$\s?([1-9][\d,]*(?:\.\d{2})|[0-9](?:[\d,]*\.\d{2}))")
+# Date-noise patterns shared by the paste pool AND per-row card-year extraction
+# (Brief 7 Job A: same stripping logic at both layers, one definition).
+_ISO_DATE_RE = re.compile(r"\b20\d{2}[-/]\d{1,2}[-/]\d{1,2}\b")
+_MON_DATE_RE = re.compile(
+    r"\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+\d{1,2},?\s*(20\d{2})\b",
+    re.IGNORECASE)
+
+
+def _row_card_year(title: str) -> str | None:
+    """The ROW'S OWN card year (Brief 7 Job A): strip Sold-date noise first
+    (ISO + 'Mon D, YYYY' — sale dates are NEVER card years), then take the
+    year token. Exactly one distinct token = that year; zero or several
+    distinct tokens in one title = None (never a guess)."""
+    t = _ISO_DATE_RE.sub(" ", title)
+    t = _MON_DATE_RE.sub(" ", t)
+    ys = set(re.findall(r"\b20\d{2}\b", t))
+    return ys.pop() if len(ys) == 1 else None
 BIDS_RE = re.compile(r"(\d+)\s+bids?\b", re.IGNORECASE)
 GRADE_RE = re.compile(r"\b(PSA|BGS|SGC|CGC)\s*(9\.5|10|9|8(\.5)?|7(\.5)?)\b", re.IGNORECASE)
 
@@ -257,7 +274,11 @@ def parse_pull_dump(text: str, player_hint: str | None = None) -> dict:
             excluded["title-line"] = excluded.get("title-line", 0) + 1
             continue
         if not title or title == line:
-            title = carried_title or title  # Sold-only row inherits its context title
+            # Sold-only row inherits its context title (Oct 23 law). A price
+            # line that NAMES THE CARD ITSELF keeps its own text (Brief 7:
+            # its year tokens live on that line; blanking them broke row-level
+            # year attribution in the typed channel).
+            title = carried_title if not re.search(r"\b20\d{2}\b", line) else title
         m = PRICE_RE.search(line)
         if not m:
             excluded["no-price"] = excluded.get("no-price", 0) + 1
@@ -288,6 +309,7 @@ def parse_pull_dump(text: str, player_hint: str | None = None) -> dict:
         seen.add(key)
         rows.append({"title": title[:160], "price": price, "bids": bids,
                      "format": fmt, "grade_bucket": grade_bucket, "lane": lane,
+                     "card_year": _row_card_year(title),  # Brief 7 Job A
                      "date": date_m.group(1) if date_m else ""})
 
     # player guess -- ROW-DOMINANCE law (Oct 23 mis-attribution catch: the
@@ -326,18 +348,21 @@ def parse_pull_dump(text: str, player_hint: str | None = None) -> dict:
     # CARD-YEAR POOL (Brief 5 Job A): card years named in the LISTING TITLES
     # and the declared search header — what the paste itself declares about the
     # product. Sale dates are noise (2026-10-16 / "Sold Oct 15, 2026") and are
-    # stripped first so they can never pretend to be card years.
+    # stripped first so they can never pretend to be card years. (Brief 7: the
+    # stripping regexes are shared with the per-row extractor above.)
     _title_text = " ".join(r.get("title", "") for r in rows)
-    _title_text = re.sub(r"\b20\d{2}[-/]\d{1,2}[-/]\d{1,2}\b", " ", _title_text)
-    _title_text = re.sub(
-        r"\b(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\.?\s+\d{1,2},?\s*(20\d{2})\b",
-        " ", _title_text, flags=re.IGNORECASE)
+    _title_text = _ISO_DATE_RE.sub(" ", _title_text)
+    _title_text = _MON_DATE_RE.sub(" ", _title_text)
     paste_years: list[str] = sorted(set(re.findall(r"\b20\d{2}\b", _title_text))
                                     | (set(re.findall(r"\b20\d{2}\b", hdr.group(2)))
                                        if hdr else set()))
-    lanes: dict[str, list[float]] = {}
+    # YEAR-ATTRIBUTED ROW GROUPING (Brief 7 Job A): lane prices group on
+    # (card_year, lane) — each row's own title year, NOT the page-level pool.
+    # One mixed-year mega-paste credits 2024/2025/2026 lanes separately instead
+    # of honest-missing the whole paste. Year-None rows keep the legacy key.
+    lanes: dict[tuple[str | None, str], list[float]] = {}
     for r in rows:
-        lanes.setdefault(r["lane"], []).append(r["price"])
+        lanes.setdefault((r.get("card_year"), r["lane"]), []).append(r["price"])
     return {"rows": rows, "excluded": excluded, "player": player,
             "print_count": len(rows), "lanes": lanes, "paste_years": paste_years}
 
@@ -363,7 +388,9 @@ def _width(vals: list[float]) -> float | None:
 
 
 def refine_lanes(parse: dict) -> list[dict]:
-    """Match paste lane-groups to registry lanes; compute the refine story."""
+    """Match paste lane-groups to registry lanes; compute the refine story.
+    Brief 7 Job A: groups are (card_year, lane_name) pairs — the year is each
+    ROW's own title year, so one mixed-year paste refines per year-lane."""
     out: list[dict] = []
     player = parse.get("player")
     if not player:
@@ -375,76 +402,126 @@ def refine_lanes(parse: dict) -> list[dict]:
             registry_by_key.setdefault((l["product"] or "", l["lane"], l["grade_bucket"]), l)
             # also allow product-less paste grouping against ANY product with same lane
             registry_by_key.setdefault(("*", l["lane"], l["grade_bucket"]), l)
-    for lane_name, prices in sorted(parse.get("lanes", {}).items()):
+    for group_key, prices in sorted(parse.get("lanes", {}).items(),
+                                    key=lambda kv: ((kv[0][0] is not None, kv[0][0] or ""), kv[0][1])):
+        card_year, lane_name = group_key
         if len(prices) < 2:
             continue
-        # grade bucket of the group: majority of the group's rows
+        # grade bucket of the group: majority of the group's rows (same-year rows only)
         gbs: dict[str, int] = {}
         for r in parse["rows"]:
-            if r["lane"] == lane_name:
+            if r["lane"] == lane_name and r.get("card_year") == card_year:
                 gbs[r["grade_bucket"]] = gbs.get(r["grade_bucket"], 0) + 1
         gb = max(gbs, key=lambda k: gbs[k]) if gbs else "raw"
         match = registry_by_key.get(("*", lane_name, gb)) or registry_by_key.get(("*", lane_name, "raw"))
-        # Brief 5 JOB A — YEAR-MATCHED LANE RESOLVER (the queued founder fix):
-        # a 2025 paste once resolved to a 2023 lane because the resolver matched
-        # product/parallel tokens but ignored YEAR. Candidates for a paste
-        # lane-group = every registry lane sharing (lane, grade_bucket) — the
-        # exact set the wildcard lookup collapsed (last-insert-wins, which is
-        # where the wrong year crept in). When the paste text names card years
-        # (titles / declared search header; sale dates stripped as noise),
-        # prefer the same-candidates whose slug year matches; pick ONLY when
-        # that leaves exactly one distinct candidate year. No year, mixed
-        # years, or no year-carrying lane -> current behavior (honest miss or
-        # insertion-order match, never a guess).
-        paste_years = set(parse.get("paste_years") or [])
-        if match and paste_years:
-            cands = [l for l in reg
-                     if l["player"].lower() == player.lower()
-                     and l["lane"] == lane_name and l["grade_bucket"] == gb]
-            if not cands and gb != "raw":
-                cands = [l for l in reg
-                         if l["player"].lower() == player.lower()
-                         and l["lane"] == lane_name and l["grade_bucket"] == "raw"]
-            year_carrying = [l for l in cands
-                             if re.search(r"-(20\d{2})-", f"-{l['slug']}-")]
-            if not year_carrying:
-                pass  # no candidate carries a year: nothing to verify against, keep legacy
+        entry: dict = {"lane": lane_name, "lane_display": lane_name.replace("-", " ").title(),
+                       "grade_bucket": gb, "n_paste": len(prices), "card_year": card_year}
+        if card_year is None:
+            # Brief 5 legacy branch — byte-for-byte behavior for year-None groups
+            # (Brief 7 Job A: no year tokens in the group's rows = today's exact
+            # semantics: insertion-order match or honest miss, never a guess).
+            if match:
+                _refine_entry_for_match(entry, match, prices)
             else:
-                year_cands = [l for l in year_carrying
-                              if (ym := re.search(r"-(20\d{2})-", f"-{l['slug']}-"))
-                              and ym.group(1) in paste_years]
-                if len(year_cands) == 1:
-                    match = year_cands[0]  # unambiguous: the one year-matched lane
-                else:
-                    match = None  # declared year mismatches / ambiguous -> honest miss
-        entry = {"lane": lane_name, "grade_bucket": gb, "n_paste": len(prices)}
-        if match:
-            old_prints = list(match.get("prints") or [])
-            n_before = match["n"]
-            merged = sorted(old_prints + [p for p in prices])
-            w_old, w_new = _width(old_prints), _width(merged)
-            entry.update({
-                "slug": match["slug"], "lane_display": match["lane_display"],
-                "n_before": n_before, "n_after": n_before + len(prices),
-                "old_class": match["band_class"],
-                "pct": (round((1 - w_new / w_old) * 100) if (w_old and w_new and w_new < w_old and n_before >= 3) else None),
-                "widened": bool(w_old and w_new and w_new > w_old and n_before >= 3),
-            })
-            # the would-be class after the contribution (honest honest state)
-            new_class = ("forming" if (n_before + len(prices)) < 3 else
-                         "engine_grade" if match["band_class"] == "engine_grade" else
-                         "provisional")
-            if (n_before + len(prices)) >= 3 and match["band_class"] == "forming" and \
-                    band_class_for(n_before + len(prices), match["player"], match["lane"]) == "engine_grade":
-                new_class = "engine_grade"
-            entry["new_class"] = new_class
-            entry["upgrade"] = (entry["old_class"] != new_class)
+                entry.update({"slug": None, "starts_lane": True,
+                              "new_class": ("forming" if len(prices) < 3 else "provisional"),
+                              "upgrade": False})
+            out.append(entry)
+            continue
+        # Brief 7 JOB A BRANCH — the group carries a row-level year. Scope first:
+        # ONLY the current year's slug-year matters for the row-year group; the
+        # OTHER years' slugs of the same (player, lane, gb) family are EXCLUDED
+        # (that exclusion is the whole point of year attribution — the Chourio
+        # mega-paste must never land on the wrong year's lane). The current
+        # year's lanes stay eligible via the normal wildcard (grade-bucket
+        # fallback included). Multi-year families with one current-year lane
+        # resolve EXACTLY; several current-year lanes (k-suffixed) stay a
+        # miss. Nothing to credit = honest miss, never a guess.
+        same_year_cands = [l for l in reg
+                           if l["player"].lower() == player.lower()
+                           and l["lane"] == lane_name
+                           and l["grade_bucket"] in (gb, "raw")
+                           and str(re.search(r"-(20\d{2})-", f"-{l['slug']}-").group(1)
+                                   if re.search(r"-(20\d{2})-", f"-{l['slug']}-") else ""
+                                   ) == card_year]
+        if len(same_year_cands) > 1:
+            # PRODUCT-LINE DISCRIMINATION (Brief 7, sweep-collision class): the
+            # relabel can leave two same-year lanes that differ only in product
+            # ('2023 Topps' vs '2023 Topps Chrome' mass). The rows carry the
+            # discriminator: decisive words = the family's product-line words
+            # (candidate product tokens, years/brand-base stripped) that the
+            # group's row titles actually name. Keep candidates whose product
+            # words EQUAL the decisive set — chrome rows keep the chrome lane,
+            # plain rows keep the plain lane — never a size vote, only evidence.
+            def _prod_words(c: dict) -> frozenset:
+                pw = re.findall(r"[a-z]+", str(c.get("product") or "").lower())
+                return frozenset(w for w in pw if w != "topps")
+            row_text = " ".join(r.get("title", "") for r in parse["rows"]
+                                if r["lane"] == lane_name
+                                and r.get("card_year") == card_year).lower()
+            fam_words: set[str] = set()
+            for c in same_year_cands:
+                fam_words |= _prod_words(c)
+            decisive = {w for w in fam_words if w in row_text}
+            kept = [c for c in same_year_cands if _prod_words(c) == frozenset(decisive)]
+            if len(kept) == 1:
+                same_year_cands = kept
+        if len(same_year_cands) == 1:
+            match = same_year_cands[0]
+            entry["match_reason"] = "year-lane"
+        elif len(same_year_cands) > 1:
+            match = None  # several current-year lanes: ambiguous, honest miss
+            entry["miss_reason"] = (f"several {card_year} lanes share this "
+                                    f"parallel — cannot pick one")
         else:
-            entry.update({"slug": None, "lane_display": lane_name.replace("-", " ").title(),
-                          "starts_lane": True, "new_class": ("forming" if len(prices) < 3 else "provisional"),
+            match = None
+            family_years = sorted({ym.group(1) for l in reg
+                                   if l["player"].lower() == player.lower()
+                                   and l["lane"] == lane_name
+                                   and (ym := re.search(r"-(20\d{2})-", f"-{l['slug']}-"))})
+            if family_years:
+                entry["miss_reason"] = (f"rows say {card_year}; lanes for this "
+                                        f"parallel are labeled "
+                                        f"{', '.join(family_years)}")
+            else:
+                entry["miss_reason"] = (f"rows say {card_year}; no {card_year} lane "
+                                        f"exists for this parallel yet — the paste "
+                                        f"starts data for it")
+        if match:
+            _refine_entry_for_match(entry, match, prices)
+        else:
+            entry.update({"slug": None, "starts_lane": True,
+                          "new_class": ("forming" if len(prices) < 3 else "provisional"),
                           "upgrade": False})
         out.append(entry)
     return out
+
+
+def _refine_entry_for_match(entry: dict, match: dict, prices: list[float]) -> dict:
+    """Fill the matched-lane refine story into `entry` (shared by the legacy
+    and year-attributed branches — one width/pct/class implementation)."""
+    entry["slug"] = match["slug"]
+    entry["lane_display"] = match["lane_display"]
+    old_prints = list(match.get("prints") or [])
+    n_before = match["n"]
+    merged = sorted(old_prints + [p for p in prices])
+    w_old, w_new = _width(old_prints), _width(merged)
+    entry.update({
+        "n_before": n_before, "n_after": n_before + len(prices),
+        "old_class": match["band_class"],
+        "pct": (round((1 - w_new / w_old) * 100) if (w_old and w_new and w_new < w_old and n_before >= 3) else None),
+        "widened": bool(w_old and w_new and w_new > w_old and n_before >= 3),
+    })
+    # the would-be class after the contribution (honest honest state)
+    new_class = ("forming" if (n_before + len(prices)) < 3 else
+                 "engine_grade" if match["band_class"] == "engine_grade" else
+                 "provisional")
+    if (n_before + len(prices)) >= 3 and match["band_class"] == "forming" and \
+            band_class_for(n_before + len(prices), match["player"], match["lane"]) == "engine_grade":
+        new_class = "engine_grade"
+    entry["new_class"] = new_class
+    entry["upgrade"] = (entry["old_class"] != new_class)
+    return entry
 
 
 # ===========================================================================
@@ -776,6 +853,10 @@ def watch_trigger_tick() -> dict:
                         if target is None or direction not in ("BUY", "SELL"):
                             continue
                         for slug in dedupe_lanes(row.get("lanes") or []):
+                            # Brief 7: relabeled lanes — resolve via alias map;
+                            # the marker must keep suppressing under EITHER key
+                            # (pre-sweep markers were stored with old slugs)
+                            raw_slug, slug = slug, resolve_slug_alias(slug)
                             try:
                                 lane = next((l for l in all_lanes if l.get("slug") == slug), None)
                                 prints = (lane or {}).get("prints") or []
@@ -790,7 +871,7 @@ def watch_trigger_tick() -> dict:
                                 if key in markers:
                                     summary["scanned"] += 1
                                     continue
-                                if str(slug) in fired_this_lane:
+                                if str(slug) in fired_this_lane or str(raw_slug) in fired_this_lane:
                                     summary["skipped"] += 1
                                     continue
                                 built = build_crossing_email(email, slug, direction, float(target), hit)
@@ -801,6 +882,8 @@ def watch_trigger_tick() -> dict:
                                 if queue_crossing_email(email, subj, body):
                                     mark_sent(markers, key)
                                     fired_this_lane.add(str(slug))
+                                    if raw_slug != slug:
+                                        fired_this_lane.add(str(raw_slug))
                                     summary["queued"] += 1
                                     summary["scanned"] += 1
                                 else:
@@ -833,6 +916,24 @@ def dedupe_lanes(lanes: list) -> list[str]:
             seen.add(s)
             out.append(s)
     return out
+
+
+# ---------------------------------------------------------------------------
+# SLUG ALIAS MAP (Brief 7 Job B): registry year-relabel sweep keeps retired
+# slugs alive as aliases so old links, ledger rows and trigger marks keep
+# working. Loaded from the registry's optional slug_aliases block; a missing
+# block = no aliases (pre-sweep behavior). Builders ADD, never remove.
+# ---------------------------------------------------------------------------
+def _slug_aliases() -> dict[str, str]:
+    try:
+        return dict((BP.load_registry().get("raw") or {}).get("slug_aliases") or {})
+    except Exception:
+        return {}
+
+
+def resolve_slug_alias(slug: str) -> str:
+    """Retired slug -> current slug (alias map); unknown = itself."""
+    return _slug_aliases().get(slug, slug)
 
 
 def _write_deposit(email: str, text: str, paste_id: str) -> None:
@@ -1086,6 +1187,7 @@ REWARD_TEMPLATE = '''<!DOCTYPE html>
       {% else %}
         <p>{{ r.lane_display }} — your paste starts data for a lane we don't have yet
         ({{ r.n_paste }} prints; the band appears at 3). Keep pulling.</p>
+        {% if r.miss_reason %}<p class="refine-tip miss-reason">Why: {{ r.miss_reason }}</p>{% endif %}
       {% endif %}
       </div>
     {% endfor %}
@@ -1394,6 +1496,8 @@ def analyze():
     ledger_tick(email, name, parse, refined, paste_id,
                 direction=direction, target_price=target_price, seller_id=seller_id)
     # the refined lane's listings: the FIRST matched known lane with a slug
+    # (Brief 7: slugs are post-sweep current since refine resolves year lanes
+    # against the SAME registry the aliases point INTO — no alias needed here)
     lane_slug = next((r["slug"] for r in refined if r.get("slug")), None)
     # Brief 4 T5: the analyze path logs its search heat too — the refined lane's
     # community query, the user's direction, and the prints this paste added.
@@ -1417,7 +1521,7 @@ def analyze():
     hists = []
     if refined:
         for r in refined:
-            prices = parse["lanes"].get(r["lane"], [])
+            prices = parse["lanes"].get((r.get("card_year"), r["lane"]), [])
             if prices and r.get("slug"):
                 hs = sorted(prices)
                 hists.append({"label": r["lane_display"] + f" (n={len(prices)})",

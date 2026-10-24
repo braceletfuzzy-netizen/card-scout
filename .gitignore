@@ -40,3 +40,6 @@ Sessions/
 *.log
 card_hedger_vs_scpro.log
 card_scout_errors.log
+
+# /bands runtime cache + search deposits (published artifacts live in dashboard/registry/)
+data/
