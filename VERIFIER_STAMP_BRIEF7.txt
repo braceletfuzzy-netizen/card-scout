@@ -1,0 +1,41 @@
+VERIFIER STAMP Brief 7 - VERIFIED-2026-10-24 14:5x local
+
+Builder commit: b866597 (WALL-E Brief 7, year-attribution)
+
+DIFF AUDIT (8336608..b866597): 777 insertions / 358 changed lines across 5 files,
+zero commit-level deletions. band_pages.py = alias fallback in lane_by_slug
+(builders-add). contributor_bp.py = per-row card-year extraction (shared noise
+regexes with the Brief 5 pool layer), (year,lane) grouping, year-scoped
+candidate resolver, product-line discrimination on rows' own vocabulary, legacy
+byte-for-byte branch for year-None groups, dual-slug trigger suppression, one
+shared _refine_entry_for_match, miss-reason template line. Registry = relabel
+sweep output + slug_aliases block. README documents the lane. No route,
+signature, or band-math changes.
+
+INDEPENDENT RE-RUNS (hermes venv, own sessions):
+- brief7_year_attribution_battery.py: 6/6 PASS (B1 Turang-2023 relabeled-credit
+  heal + gold-refractor honest-miss w/ own wording; B2 Chourio 2024/2025/2026
+  per-year groups; B3 no cross-year leakage; B4 context-carry + year-less
+  regression byte-for-byte; B5 full regression brief5 6/6 + brief6 6/6 +
+  workspace 5/5 + brief4 + cardpage; B6 uv-3.14 deploy repro + prod 200s incl
+  alias routes)
+- cardpage 8/8, workspace 5/5, brief6 6/6: re-run independently, all PASS
+
+KILL-SHOTS (data-level, executed):
+K1 conserve: 757 lanes old = 757 new; 96 renamed, 0 dropped, 0 orphaned
+K2 aliases: 96 entries, 0 dangling
+K3 print integrity: 0 print loss across all 96 migrations (gold 36, true-gold
+   8 -> 2023, auto-gold 7 re-homed with n intact = SELL@30 observation lanes)
+K4 sweep report: present w/ 96 migrations + 21 honest fails (tied/no-evidence
+   kept as 2025, per brief)
+K5 fake slug: no resolution, no alias
+K6 class_counts byte-stable (488/262/7)
+K7 functional: resolve_slug_alias old->new, current->self, fake->self;
+   lane_by_slug('brice-turang-2025-topps-gold-raw') renders the 2026-gold lane
+   n=36 (old links 200)
+
+WORKING-TREE NOTE (not a builder claim): 28 tracked-file local deletions +
+4 modified files in cardscout-2.0 predate this review, belong to the scratch
+sweep rule class / runtime state; untouched by any commit in this range.
+
+WALLE STREAK: 9/9 - Brief 7 VERIFIED.
