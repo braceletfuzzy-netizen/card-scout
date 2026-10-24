@@ -228,8 +228,10 @@ def parse_pull_dump(text: str, player_hint: str | None = None) -> dict:
         except Exception:
             excluded["html-parse-error"] = excluded.get("html-parse-error", 0) + 1
             soup = None  # bs4 unavailable on this host — degrade to raw blob
-        # fall through to line mode with the page TEXT for anything blocks missed
-        text_for_lines = soup.get_text("\n") if soup is not None else blob
+        # SINGLE-PARSE INVARIANT (Brief 6, Oct 24): if bs4 extracted blocks, the
+        # rows are complete — never re-parse page text through line mode (that
+        # double-counted every row and let page chrome in as ghost prints).
+        text_for_lines = blob if (soup is None or not records) else ""
     else:
         text_for_lines = blob
 
