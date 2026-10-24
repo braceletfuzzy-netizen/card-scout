@@ -854,7 +854,7 @@ def compose_lane(lane: dict) -> dict:
 def band_page(slug: str):
     raw = lane_by_slug(slug)
     if not raw:
-        abp.abort(404)
+        abort(404)  # Brief-6-followup catch (Oct 24): 'abp.abort' NameError -> live 500 on every not-found lane slug
     lane = compose_lane(raw)
     items, meta = get_listings(slug)
     items = order_default(items)
