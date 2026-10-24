@@ -97,3 +97,27 @@ exist at a fame class.
   AFTER F-v2, since it consumes F).
 - Any customer-facing output; the DEAL-faucet wiring; Brief 7 year-attribution
   (separate, in flight).
+---
+
+## VERIFIER STAMP — VERIFIED-2026-10-24 (Hermes, independent re-run)
+
+- DIFF AUDIT: eb3727f = 1,083 insertions / **0 deletions**; registry overwrite
+  self-caught by builder + restored via git pre-commit (delta = pure append);
+  no Brief 6/7 files, no routes, no signatures touched. BUILDERS-ADD held.
+- BATTERY RE-RUN (verifier session, hermes venv): **7/7 PASS** — S1 constants,
+  B1 fidelity (Turang DISLOCATION +1 / Chapman PRICED-IN +2 / Kwan computed
+  STAR; cluster |Δ| 0.0164), B2 calibration (residual 0 across trio, append-only
+  intact), B3 g-gate (Bonds/Clemens exact-zero future), B4 retention separation
+  0.0775 ≥ 1 step, B5 determinism 0.000000, B6 coverage 5/5 honest NO-DATA rows.
+- KILL-SHOTS (verifier-designed, independent of builder battery): KS1 g-gate
+  arithmetic exact-zero PASS · KS2 frozen constants unmutated PASS · KS3
+  fabricated-player probe = no invention PASS · KS4 calibration store
+  append-only PASS.
+- HONEST BOUNDS ACCEPTED AS DISCLOSED (2025 awards cutoff, rings-to-2021,
+  AS-carry coverage gaps — all WARNed in-module, none hidden): these are the
+  documented edges, not defects; ingests extending them = separate briefs.
+- Wall-E verified-brief streak: **7/7**. Fame-vector v2 = the pricing matrix's
+  last founder-judgment dependency, REMOVED: F computed w/ provenance, founder
+  ladder = cold-start prior only.
+- NEXT (queued, not started): §230.3 two-book production build consumes F-v2;
+  §230.1 implied-future extraction arm; OBV-store scanner (CardHedge bars).
