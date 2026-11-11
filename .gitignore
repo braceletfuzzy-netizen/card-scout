@@ -43,3 +43,6 @@ card_scout_errors.log
 
 # /bands runtime cache + search deposits (published artifacts live in dashboard/registry/)
 data/
+
+# CAMEL public-user storage (runtime data, never committed)
+dashboard/users/
