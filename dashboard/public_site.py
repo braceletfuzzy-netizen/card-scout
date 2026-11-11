@@ -660,8 +660,21 @@ Sitemap: https://cardscout.pro/sitemap.xml
 
 @site_bp.route('/sitemap.xml')
 def sitemap():
-    """SEO sitemap."""
-    return Response(SITEMAP_TEMPLATE, mimetype='application/xml')
+    """SEO sitemap — Fire-7: registry-driven, the full 757-lane corpus."""
+    try:
+        import seo_sitemap as SS
+        urls = SS._build_urls()
+    except Exception:
+        urls = [(u, 'weekly', '0.5') for u in [
+            'https://cardscout.pro/', 'https://cardscout.pro/bands',
+            'https://cardscout.pro/pricing', 'https://cardscout.pro/deals']]
+    rows = "\n".join(
+        f"  <url><loc>{u}</loc><changefreq>{cf}</changefreq><priority>{pr}</priority></url>"
+        for u, cf, pr in urls)
+    xml = ('<?xml version="1.0" encoding="UTF-8"?>\n'
+           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+           f"{rows}\n</urlset>")
+    return Response(xml, mimetype='application/xml')
 
 
 @site_bp.route('/robots.txt')
