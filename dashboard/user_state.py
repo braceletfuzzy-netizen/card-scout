@@ -220,17 +220,21 @@ def me_login_redirect():
             redirect_uri=request.url_root + "me/login/callback",
             scope=["openid", "email", "profile"],
         )
+        # stash the Track-this-card prefill intent through the OAuth round-trip
+        pending_lane = (request.args.get("lane") or "").strip()
+        if pending_lane:
+            session["pending_lane"] = pending_lane
         authorization_url, state = oauth.authorization_url(provider_cfg["authorization_endpoint"])
         session["user_oauth_state"] = state
         return redirect(authorization_url)
     except Exception:
-        return redirect(url_for("user.user_home"))
+        return redirect(url_for("user.me_home"))
 
 
 @oauth_bp.route("/login/callback")
 def me_login_callback():
     if "user_oauth_state" not in session:
-        return redirect(url_for("user.user_home"))
+        return redirect(url_for("user.me_home"))
     import requests as _requests
     from requests_oauthlib import OAuth2Session
     try:
@@ -243,23 +247,26 @@ def me_login_callback():
         user_info = oauth.get(provider_cfg["userinfo_endpoint"]).json()
         email = (user_info.get("email") or "").strip().lower()
         if not email or "@" not in email:
-            return redirect(url_for("user.user_home"))
+            return redirect(url_for("user.me_home"))
         if not _rostered(email):
             # allowlist mode: not rostered -> redirect to bands, zero interior render
             return redirect("/bands")
+        pending_lane = session.pop("pending_lane", "")  # pre-clear grab protects the prefill
         session.clear()
         # SEPARATE session keys from the admin/customer surface (user_email only)
         session["user_email"] = email
         session.permanent = True
-        return redirect(url_for("user.user_home"))
+        if pending_lane:
+            return redirect(url_for("user.user_home", lane=pending_lane))
+        return redirect(url_for("user.me_home"))
     except Exception:
-        return redirect(url_for("user.user_home"))
+        return redirect(url_for("user.me_home"))
 
 
 @oauth_bp.route("/logout")
 def me_logout():
     session.pop("user_email", None)
-    return redirect(url_for("user.user_home"))
+    return redirect(url_for("user.me_home"))
 
 
 def _current_user():
