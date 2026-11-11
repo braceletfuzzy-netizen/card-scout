@@ -134,10 +134,20 @@ def add_holding(email: str, lane_slug: str, basis_cost: float | None, qty: int |
         return {"ok": False, "error": "qty must be at least 1"}
     d = load_user(email)
     hs = d.setdefault("holdings", [])
+    basis_detail = (d.get("_last_holding_basis") or None)  # per-row basis list, if caller set
+    basis_cost_exact = None
+    if isinstance(basis_detail, list) and basis_detail:
+        bases = [b.get("basis") for b in basis_detail if isinstance(b, dict) and b.get("basis") is not None]
+        basis_cost_exact = round(sum(bases), 2) if bases else None
     for h in hs:
         if h.get("lane_slug") == lane["slug"]:
-            h.update({"basis_cost": bc, "qty": q,
-                      "updated_utc": datetime.now(timezone.utc).isoformat()})
+            h["qty"] = q  # qty = caller's count; callers doing increments pass the new total
+            if basis_cost_exact is not None:
+                h["basis_cost"] = basis_cost_exact
+                h["basis_detail"] = basis_detail
+            elif bc is not None:
+                h["basis_cost"] = bc
+            h["updated_utc"] = datetime.now(timezone.utc).isoformat()
             break
     else:
         hs.append({
@@ -145,7 +155,8 @@ def add_holding(email: str, lane_slug: str, basis_cost: float | None, qty: int |
             "lane_slug": lane["slug"],
             "player": lane.get("player", ""),
             "lane_display": lane.get("lane_display", ""),
-            "basis_cost": bc,
+            "basis_cost": (basis_cost_exact if basis_cost_exact is not None else bc),
+            **({"basis_detail": basis_detail} if basis_detail else {}),
             "qty": q,
             "added_utc": datetime.now(timezone.utc).isoformat(),
         })
@@ -380,10 +391,18 @@ def add_holding_route():
     if not email:
         return jsonify({"ok": False, "error": "sign in first"}), 401
     payload = request.get_json(silent=True) or request.form
+    purchases = payload.get("purchases")  # optional: [{position_id, basis}, ...]
+    d_pre = load_user(email)
+    d_pre["_last_holding_basis"] = purchases if isinstance(purchases, list) else None
+    save_user(email, d_pre)
     r = add_holding(email,
                     normalize_slug(payload.get("lane_slug") or ""),
                     payload.get("basis_cost"),
                     payload.get("qty"))
+    d_post = load_user(email)
+    if r.get("ok"):
+        d_post.pop("_last_holding_basis", None)
+        save_user(email, d_post)
     return (jsonify(r), 200 if r.get("ok") else 400)
 
 
