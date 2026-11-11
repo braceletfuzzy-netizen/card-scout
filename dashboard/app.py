@@ -31,6 +31,16 @@ from sqlalchemy.exc import IntegrityError
 # Add scripts/ to path so we can import db_models
 import sys
 sys.path.insert(0, str(Path(__file__).parent.parent / 'scripts'))
+# Also put this directory itself on the path: modules here (public_site,
+# band_pages, and vault.py's `from app import ...`) import each other flat by
+# the module name `app`, matching the prod boot `gunicorn app:app`
+# (cwd = dashboard/). Aliasing here makes `from dashboard.app import app` from
+# the repo root resolve identically — vault.py's import then finds THIS module
+# object instead of re-executing app.py as a second identity (which dead-ends
+# in a circular import). CAMEL FIRE-1 (Nov 11); additive, no behavior change.
+sys.path.insert(0, str(Path(__file__).parent))
+if __name__ == 'dashboard.app':
+    sys.modules.setdefault('app', sys.modules[__name__])
 
 from db_models import Customer, Card, init_db  # noqa: E402
 
@@ -63,6 +73,17 @@ app.register_blueprint(contrib_bp)
 # because the email footer links there; token-gated, flag-flips only, zero sends
 from contributor_bp import unsub_bp as contrib_unsub_bp
 app.register_blueprint(contrib_unsub_bp)
+
+# Register public price-history blueprint (CAMEL FIRE-1, Nov 11; render-only;
+# reads the one-way dashboard/registry feed; band rendered shape-visual only).
+# Builders-add rule: no existing route/blueprint touched.
+from public_price_bp import bp as public_price_bp
+app.register_blueprint(public_price_bp)
+
+# Register public user surfaces (/me shells) — CAMEL FIRE-1.5, Nov 11; render-only
+# stubs (Fire-2 Hugo lane wires auth+storage into these templates; additive here).
+from user_bp import bp as user_bp
+app.register_blueprint(user_bp)
 import stripe
 import requests
 from db_models import WebhookEvent, RunHistory
