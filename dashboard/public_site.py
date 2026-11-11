@@ -419,32 +419,7 @@ PRICING_TEMPLATE = '''
       <p class="tier-best">For serious hunters with targets — and those who want new targets found</p>
     </div>
 
-    <div class="tier tier-coming-soon">
-      <span class="coming-soon-badge">Coming Soon</span>
-      <h3>Pro</h3>
-      <p class="price">${{ pro_price }}<span>/month</span></p>
-      <ul>
-        <li>Everything in Hunter+</li>
-        <li>Custom thresholds</li>
-        <li class="coming-soon-feature">Population context (PSA/BGS/SGC/CGC)</li>
-        <li class="coming-soon-feature">Player-level trend aggregation</li>
-        <li class="coming-soon-feature">Cert # lookup &amp; vault tracking</li>
-      </ul>
-      <p class="tier-best">For high-volume dealers — population data launches as we hit subscriber scale</p>
-    </div>
-
-    <div class="tier">
-      <h3>Enterprise</h3>
-      <p class="price">Contact Us</p>
-      <ul>
-        <li>Unlimited cards</li>
-        <li>Full stream access</li>
-        <li>Custom integrations</li>
-      </ul>
-      <p class="tier-best">For institutional volume</p>
-      <a href="mailto:support@cardscout.pro" class="btn btn-secondary" style="display:block; text-align:center; margin-top:16px;">Contact us</a>
-    </div>
-  </section>
+      </section>
 
   <section class="faq">
     <h2>Common questions</h2>
@@ -461,13 +436,12 @@ PRICING_TEMPLATE = '''
       <p>Yes. Cancel from your dashboard. No contracts, no questions.</p>
     </details>
     <details>
-      <summary>Why is Pro tier marked &ldquo;Coming Soon&rdquo;?</summary>
-      <p>Pro includes population data (PSA, BGS, SGC, CGC) and player-level
-      trend aggregation. These features depend on a third-party data
-      subscription we&apos;re activating once we have the subscriber base to
-      support the cost sustainably. We&apos;d rather be honest about timing
-      than over-promise and under-deliver. Tracker and Hunter
-      tiers are live today.</p>
+      <summary>More tiers coming?</summary>
+      <p>When a tier makes sense, it ships — not before. Population data
+      (PSA/BGS/SGC/CGC grading counts) is sketched for high-volume dealers,
+      and it lives or dies on a data subscription that only pays for itself
+      at subscriber scale. We&apos;d rather show fewer tiers, all real, than
+      advertise something we&apos;re not running yet.</p>
     </details>
   </section>
 
