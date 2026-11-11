@@ -199,6 +199,8 @@ EXTRA_CSS = '''
    green to the shared .honesty tokens in bands.css (same palette) */
 .honesty-deepest-grade { background: #ecfdf5; color: #065f46; border: 1px solid #a7f3d0; }
 .list-empty { background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 40px 24px; text-align: center; color: var(--color-muted); font-size: 18px; }
+.ts-chart { margin: 14px 0 6px; }
+.ts-spark { width: 100%; height: auto; display: block; background: var(--color-card); border: 1px solid var(--color-border); border-radius: var(--radius); }
 </style>
 '''
 
@@ -237,6 +239,8 @@ PRICE_PAGE_TEMPLATE = '''<!DOCTYPE html>
   <div class="price-grid">
     <div class="price-panel">
       <h2>Sale record</h2>
+      {% if ts_svg %}<div class="ts-chart">{{ ts_svg | safe }}</div>
+      <p class="faq-line" style="margin-top:4px;">Monthly medians of completed records — the shape of the market's history.</p>{% endif %}
       <p><strong>{{ lane.n }}</strong> clean completed sale{{ '' if lane.n == 1 else 's' }} in our record.
       {% if lane.first_date %}First: {{ lane.first_date }} · Most recent: {{ lane.last_date }}.{% endif %}</p>
       <p class="faq-line">What's this? — every completed sale we record for this exact card builds the record; more sales mean a clearer picture.</p>
@@ -359,11 +363,21 @@ def price_page(player_slug: str, lane_slug: str):
     if raw.get("player_slug") != player_slug:
         abort(404)  # honest routing: the URL's player must own the URL's lane
     lane = compose_lane(raw)
+    # Time-series sparkline (Fire-5): monthly medians of the dated print record.
+    ts_svg = ""
+    try:
+        import price_timeseries as TS
+        pts = TS.series_for_player_lane(lane.get("player"), lane.get("lane_display"),
+                                        player_slug=player_slug)
+        ts_svg = TS.sparkline_svg(pts)
+    except Exception:
+        ts_svg = ""  # honest degrade: the page renders without the chart
     return render_template_string(
         PRICE_PAGE_TEMPLATE,
         lane=lane,
         honesty_label=_honesty_label(lane["band_class"], lane["n"]),
         chip=_chip_class(lane["band_class"], lane["n"]),
+        ts_svg=ts_svg,
         ebay=ebay_search_url(raw.get("search_q") or "", lane["slug"]),
     )
 
