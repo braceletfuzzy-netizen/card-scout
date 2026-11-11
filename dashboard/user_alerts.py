@@ -97,6 +97,9 @@ def dispatch(email: str, send_enabled: bool | None = None) -> dict:
     if send_enabled is None:
         flag = (env_val("PUBLIC_USER_ALERTS_ENABLED") or "").strip().lower()
         send_enabled = flag in ("1", "true", "yes", "on")
+        if not send_enabled:
+            import camel_flags
+            send_enabled = camel_flags.user_alerts_enabled()  # flags-file layer
     report.update(rows=rows, qualifies=True)
     if not send_enabled:
         report.update(stage="dry_run", ok=True, sent=False)

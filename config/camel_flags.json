@@ -1,0 +1,7 @@
+{
+ "_comment": "CAMEL flags file - the no-Render-dashboard workaround. Flip a value + commit = auto-deploy. Law: read-in-place, values never echoed.",
+ "PUBLIC_USERS_MODE": "open",
+ "PUBLIC_USER_ALERTS_ENABLED": "false",
+ "_note_users_mode": "open = any Google email gets a zero-cost watchlist account. allowlist = roster-only.",
+ "_note_alerts": "true = send path activates (1/day max dedupe). false = dry-run render only."
+}

@@ -48,9 +48,8 @@ GOOGLE_CLIENT_SECRET = os.environ.get("GOOGLE_CLIENT_SECRET")
 GOOGLE_DISCOVERY_URL = "https://accounts.google.com/.well-known/openid-configuration"
 
 # PUBLIC_USERS_MODE: open | allowlist (default allowlist = safe first)
-PUBLIC_USERS_MODE = os.environ.get("PUBLIC_USERS_MODE", "allowlist").strip().lower()
-if PUBLIC_USERS_MODE not in ("open", "allowlist"):
-    PUBLIC_USERS_MODE = "allowlist"
+import camel_flags  # the flags layer (file-based, no-Render-dashboard workaround)
+PUBLIC_USERS_MODE = camel_flags.public_users_mode()
 
 
 def _email_hash(email: str) -> str:
@@ -63,8 +62,9 @@ def _user_file(email: str) -> Path:
 
 
 def _rostered(email: str) -> bool:
-    """Allowlist mode: the founder-curated CONTRIBUTOR_EMAILS roster governs."""
-    if PUBLIC_USERS_MODE != "allowlist":
+    """Allowlist mode: the founder-curated CONTRIBUTOR_EMAILS roster governs.
+    Mode comes from the flags layer (file-first, env-override)."""
+    if camel_flags.public_users_mode() != "allowlist":
         return True
     roster = (os.environ.get("CONTRIBUTOR_EMAILS") or "").strip()
     if not roster:
