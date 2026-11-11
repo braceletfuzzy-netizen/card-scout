@@ -46,10 +46,10 @@ LANDING_TEMPLATE = '''
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Card Scout — AI-Powered Card Deal Alerts</title>
-<meta name="description" content="Get Discord alerts when your favorite cards drop below market. Sports cards, TCG, and more. AI finds the deals, you make the trade.">
-<meta property="og:title" content="Card Scout — AI-Powered Card Deal Alerts">
-<meta property="og:description" content="Get Discord alerts when your favorite cards drop below market.">
+<title>Card Scout — Track card prices, get deal alerts</title>
+<meta name="description" content="CamelCamelCamel for trading cards: track any card's price history, get alerted when it hits the price you set — plus AI-verified deal alerts on Discord.">
+<meta property="og:title" content="Card Scout — Track card prices, get deal alerts">
+<meta property="og:description" content="Track any card, see its price history, get alerted when yours hits the market.">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://cardscout.pro/">
 <!-- Impact.com site-ownership verification (EPN/affiliate path, Oct 22) -->
@@ -63,9 +63,11 @@ LANDING_TEMPLATE = '''
   <nav>
     <a href="/" class="logo">Card Scout</a>
     <div class="nav-links">
+      <a href="/bands">Card Pages</a>
+      <a href="/lists/monthly">Monthly List</a>
+      <a href="/me">Track a card</a>
       <a href="/deals">Top Deals</a>
       <a href="/trending">📈 Trending</a>
-      <a href="/tracked">📊 Tracked</a>
       <a href="/pricing">Pricing</a>
       {% if logged_in %}
         <a href="/dashboard/{{ customer_id }}" class="cta">Dashboard</a>
@@ -78,13 +80,13 @@ LANDING_TEMPLATE = '''
 
 <main>
   <section class="hero">
-    <h1>Find the deals.<br><span class="highlight">Skip the noise.</span></h1>
-    <p class="hero-sub">Card Scout watches the market 24/7 and alerts you on Discord when your cards drop below typical asking prices.</p>
+    <h1>Track any card.<br><span class="highlight">Know its price.</span></h1>
+    <p class="hero-sub">CamelCamelCamel for trading cards. See any card's price history across 757 tracked instrument lanes, get an email when it hits the price <em>you</em> set, and — if you want — let the deal engine ping your Discord when a card dips below market.</p>
     <div class="hero-cta">
-      <a href="/pricing" class="btn btn-primary">View Pricing</a>
-      <a href="/deals" class="btn btn-secondary">See Top Deals</a>
+      <a href="/bands" class="btn btn-primary">Browse 757 Card Pages</a>
+      <a href="/me/login" class="btn btn-secondary">Track a card — free, one-click sign-in</a>
     </div>
-    <p class="hero-trust">Built for collectors, investors, and dealers. 4 simple tiers. No spam.</p>
+    <p class="hero-trust">Price tracking is free forever. Deal-alert tiers for the heavy hunters. No spam either way.</p>
   </section>
 
   <section class="how-it-works">
@@ -92,18 +94,18 @@ LANDING_TEMPLATE = '''
     <div class="steps">
       <div class="step">
         <div class="step-num">1</div>
-        <h3>Add your cards</h3>
-        <p>Search our database or paste an eBay or Sportscardspro URL. Each card you track counts as 1 toward your tier limit.</p>
+        <h3>Find your card</h3>
+        <p>Search 757 instrument lanes — by player, set, grade tier. Each lane's page carries the market's own record: prints, medians, and the price-history chart.</p>
       </div>
       <div class="step">
         <div class="step-num">2</div>
-        <h3>Set your tier</h3>
-        <p>Casual, Standard, Dealer, or Pro. Higher tiers get more frequent updates and stronger filters.</p>
+        <h3>Set your price</h3>
+        <p>Free: track any card and see its history. Set the exact level <em>you</em> want to hear about — we never suggest, never advise.</p>
       </div>
       <div class="step">
         <div class="step-num">3</div>
-        <h3>Get Discord alerts</h3>
-        <p>When a card drops below its 1-month median, you get a Discord alert with the deal link. No noise, no false positives.</p>
+        <h3>Get your alerts</h3>
+        <p>Email the moment your level hits — plus optional Discord deal alerts when a card dips below its 1-month median. No noise, no false positives.</p>
       </div>
     </div>
   </section>
@@ -128,15 +130,15 @@ LANDING_TEMPLATE = '''
 
   <section class="live-stat" style="text-align:left;background:#f8fafc;border-left:3px solid #3b82f6;padding:10px 14px;margin:18px 0;border-radius:0 6px 6px 0">
     <p style="margin:0;font-size:14px">
-      <strong>{{ daily.today_uniques }}</strong> people searched the hobby here today
+      <strong>{{ daily.today_uniques }}</strong> people used the tracker here today
       · {{ daily.week_uniques }} this week.
       <span style="color:#6b7280;font-size:12px">Counted anonymously — we count, we never track.</span>
     </p>
   </section>
   <section class="cta-section">
-    <h2>Ready to find deals?</h2>
-    <p>Start with our free trial. 14 days, no credit card required.</p>
-    <a href="/pricing" class="btn btn-primary btn-large">View Pricing</a>
+    <h2>Ready to know what your cards are worth?</h2>
+    <p>Track them free — price history, print records, your-price alerts.</p>
+    <a href="/me/login" class="btn btn-primary btn-large">Track a card</a>
   </section>
 </main>
 
@@ -199,9 +201,11 @@ DEALS_TEMPLATE = '''
   <nav>
     <a href="/" class="logo">Card Scout</a>
     <div class="nav-links">
+      <a href="/bands">Card Pages</a>
+      <a href="/lists/monthly">Monthly List</a>
+      <a href="/me">Track a card</a>
       <a href="/deals">Top Deals</a>
       <a href="/trending">📈 Trending</a>
-      <a href="/tracked">📊 Tracked</a>
       <a href="/pricing">Pricing</a>
       <a href="/" class="cta">Home</a>
     </div>
@@ -348,7 +352,7 @@ PRICING_TEMPLATE = '''
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pricing — Card Scout</title>
-<meta name="description" content="3 live tiers + 1 coming soon. Casual, Deal-Pro available now. Pro launches as we scale.">
+<meta name="description" content="Price tracking is free forever. Paid tiers add deal-hunting power: Discord alerts, deeper record depth, saved searches.">
 <link rel="canonical" href="https://cardscout.pro/pricing">
 <link rel="stylesheet" href="/static/style.css">
 </head>
@@ -357,6 +361,9 @@ PRICING_TEMPLATE = '''
   <nav>
     <a href="/" class="logo">Card Scout</a>
     <div class="nav-links">
+      <a href="/bands">Card Pages</a>
+      <a href="/lists/monthly">Monthly List</a>
+      <a href="/me">Track a card</a>
       <a href="/deals">Top Deals</a>
       <a href="/trending">📈 Trending</a>
       <a href="/tracked">📊 Tracked</a>
@@ -369,10 +376,24 @@ PRICING_TEMPLATE = '''
 <main>
   <section class="page-header">
     <h1>Simple, transparent pricing</h1>
-    <p class="page-sub">2 live tiers + Pro coming soon. Cancel anytime. 14-day free trial.</p>
+    <p class="page-sub"><strong>Price tracking is free forever</strong> — track any card, see its price history, get alerted at the price you set. The tiers below buy deal-hunting power. Cancel anytime. 14-day free trial on paid tiers.</p>
   </section>
 
   <section class="tiers">
+    <div class="tier tier-popular">
+      <span class="popular-badge">Free</span>
+      <h3>Tracker</h3>
+      <p class="price">$0<span>/month</span></p>
+      <ul>
+        <li>Unlimited tracking (within reason — no bots)</li>
+        <li>Price-history charts + print records</li>
+        <li>Your-price email alerts</li>
+        <li>Your holdings view — basis stays yours</li>
+        <li>One-click Google sign-in, no new password</li>
+      </ul>
+      <p class="tier-best">Everything the tracker does — free forever</p>
+    </div>
+
     <div class="tier">
       <h3>Casual</h3>
       <p class="price">${{ casual_price }}<span>/month</span></p>
@@ -450,9 +471,9 @@ PRICING_TEMPLATE = '''
   </section>
 
   <section class="cta-section">
-    <h2>Try Card Scout free for 14 days</h2>
-    <p>No credit card required. Cancel anytime.</p>
-    <a href="/dashboard/login" class="btn btn-primary btn-large">Get Started</a>
+    <h2>Start tracking — free forever</h2>
+    <p>One click with Google, no new password. Paid tiers add deal-hunting power when you want it.</p>
+    <a href="/me/login" class="btn btn-primary btn-large">Track your first card</a>
   </section>
 </main>
 
@@ -631,6 +652,7 @@ Allow: /
 Disallow: /dashboard/
 Disallow: /dashboard/login
 Disallow: /contributor/
+Disallow: /me/
 
 Sitemap: https://cardscout.pro/sitemap.xml
 '''
