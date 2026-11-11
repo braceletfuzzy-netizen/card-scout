@@ -352,7 +352,7 @@ PRICING_TEMPLATE = '''
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Pricing — Card Scout</title>
-<meta name="description" content="Price tracking is free forever. Paid tiers add deal-hunting power: Discord alerts, deeper record depth, saved searches.">
+<meta name="description" content="Price tracking is free forever. Paid tiers add deal-hunting power: real-time alerts, market-wide deal hunting, saved searches.">
 <link rel="canonical" href="https://cardscout.pro/pricing">
 <link rel="stylesheet" href="/static/style.css">
 </head>
@@ -395,26 +395,28 @@ PRICING_TEMPLATE = '''
     </div>
 
     <div class="tier">
-      <h3>Casual</h3>
-      <p class="price">${{ casual_price }}<span>/month</span></p>
+      <h3>Hunter</h3>
+      <p class="price">${{ hunter_price }}<span>/month</span></p>
       <ul>
-        <li>{{ casual_cards }} cards</li>
-        <li>Discord alerts</li>
+        <li>Everything in the free tracker</li>
+        <li>Real-time alerts — no daily batching</li>
+        <li>Market-wide deal hunt: deals on cards you never asked us to watch, delivered by email</li>
         <li>Self-serve dashboard</li>
       </ul>
-      <p class="tier-best">Best for hobbyists starting out</p>
+      <p class="tier-best">For collectors who want the machine hunting while they're away</p>
     </div>
 
     <div class="tier tier-popular">
       <span class="popular-badge">Most Popular</span>
-      <h3>Deal-Pro</h3>
-      <p class="price">${{ dealpro_price }}<span>/month</span></p>
+      <h3>Hunter+</h3>
+      <p class="price">${{ hunterplus_price }}<span>/month</span></p>
       <ul>
-        <li>{{ dealpro_cards }} cards</li>
-        <li>Discord alerts</li>
-        <li>All features unlocked</li>
+        <li>Everything in Hunter</li>
+        <li>Priority scan cadence — you're first to see the deal</li>
+        <li>Saved searches run continuously against live listings</li>
+        <li>Export your records</li>
       </ul>
-      <p class="tier-best">Best for active collectors and dealers</p>
+      <p class="tier-best">For serious hunters with targets — and those who want new targets found</p>
     </div>
 
     <div class="tier tier-coming-soon">
@@ -422,14 +424,13 @@ PRICING_TEMPLATE = '''
       <h3>Pro</h3>
       <p class="price">${{ pro_price }}<span>/month</span></p>
       <ul>
-        <li>150 cards</li>
-        <li>Discord alerts</li>
+        <li>Everything in Hunter+</li>
         <li>Custom thresholds</li>
         <li class="coming-soon-feature">Population context (PSA/BGS/SGC/CGC)</li>
         <li class="coming-soon-feature">Player-level trend aggregation</li>
         <li class="coming-soon-feature">Cert # lookup &amp; vault tracking</li>
       </ul>
-      <p class="tier-best">Best for dealers with daily volume — population data launches as we hit subscriber scale</p>
+      <p class="tier-best">For high-volume dealers — population data launches as we hit subscriber scale</p>
     </div>
 
     <div class="tier">
@@ -448,12 +449,12 @@ PRICING_TEMPLATE = '''
   <section class="faq">
     <h2>Common questions</h2>
     <details>
-      <summary>What counts as a "card"?</summary>
-      <p>Each card-grader combo counts as 1. So "Bo Jackson 1987 Topps PSA 10" and "Bo Jackson 1987 Topps PSA 9" are 2 cards.</p>
+      <summary>How many cards can I track?</summary>
+      <p>Unlimited on every tier (within reason — no bots). The free tier tracks your whole list; paid tiers add the machine's market-wide hunt.</p>
     </details>
     <details>
       <summary>What sources do you pull from?</summary>
-      <p>Aggregated live listings and recent sold prices across the major card marketplaces. We deduplicate, outlier-trim, and verify each alert against a 30-day market median before sending it to your Discord.</p>
+      <p>Aggregated live listings and recent sold prices across the major card marketplaces. We deduplicate, outlier-trim, and check each alert against the market's usual range before emailing you.</p>
     </details>
     <details>
       <summary>Can I cancel anytime?</summary>
@@ -465,7 +466,7 @@ PRICING_TEMPLATE = '''
       trend aggregation. These features depend on a third-party data
       subscription we&apos;re activating once we have the subscriber base to
       support the cost sustainably. We&apos;d rather be honest about timing
-      than over-promise and under-deliver. Casual and Deal-Pro
+      than over-promise and under-deliver. Tracker and Hunter
       tiers are live today.</p>
     </details>
   </section>
@@ -487,34 +488,22 @@ PRICING_TEMPLATE = '''
 
 @site_bp.route('/pricing')
 def pricing():
-    """Pricing page."""
+    """Pricing page — Hunter tiers (email-only; Discord stays a founder surface)."""
     import json
     from pathlib import Path
-    tier_caps_path = Path(r"C:/Users/J/Documents/LLM/cardscout-2.0/config/tier_caps.json")
-    casual_cards = 3
-    dealpro_cards = 50
-    
-    if tier_caps_path.exists():
-        with open(tier_caps_path, 'r') as f:
-            caps = json.load(f)
-            casual_cards = caps.get('Casual', {}).get('max_cards', 3)
-            dealpro_cards = caps.get('Deal-Pro', {}).get('max_cards', 50)
-            
-    casual_price = 15
-    dealpro_price = 50
-    pro_price = 150
-    
+    hunter_price, hunterplus_price, pro_price = 15, 50, 150
     pricing_config = Path(r"C:/Users/J/Documents/LLM/cardscout-2.0/config/pricing.json")
     if pricing_config.exists():
-        with open(pricing_config, 'r') as f:
-            pc = json.load(f)
-            casual_price = pc.get('Casual', 15)
-            dealpro_price = pc.get('Deal-Pro', 50)
-            pro_price = pc.get('Pro', 150)
-
-    return render_template_string(PRICING_TEMPLATE, 
-        casual_price=casual_price, dealpro_price=dealpro_price, pro_price=pro_price,
-        casual_cards=casual_cards, dealpro_cards=dealpro_cards)
+        try:
+            with open(pricing_config, 'r') as f:
+                pc = json.load(f)
+                hunter_price = pc.get('Hunter', 15)
+                hunterplus_price = pc.get('Hunter+', 50)
+                pro_price = pc.get('Pro', 150)
+        except ValueError:
+            pass
+    return render_template_string(PRICING_TEMPLATE,
+        hunter_price=hunter_price, hunterplus_price=hunterplus_price, pro_price=pro_price)
 
 
 # ============================================================================
