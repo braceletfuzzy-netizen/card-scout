@@ -17,9 +17,13 @@ LAWS carried (Fire-1 spec):
 """
 from __future__ import annotations
 
-from flask import Blueprint, render_template_string
+from flask import Blueprint, render_template_string, request
 
 bp = Blueprint("user", __name__)
+
+# Fire-2 registry lookup (reuse the stateful module's read-only loader)
+import user_state as US
+
 
 EXTRA_CSS = '''
 <style>
@@ -52,12 +56,50 @@ ME_TEMPLATE = '''<!DOCTYPE html>
 </header>
 <main class="band-main me-shell">
   <h1>Your cards</h1>
+{% if prefill %}
+  <div class="watch-empty">
+    <h2>Track: {{ prefill.player }}{% if prefill.lane_display %} · {{ prefill.lane_display }}{% endif %}{% if prefill.grade %} · {{ prefill.grade }}{% endif %}</h2>
+    <form method="post" action="/me/watchlist">
+      <input type="hidden" name="action" value="add">
+      <input type="hidden" name="lane_slug" value="{{ prefill.slug }}">
+      <input type="hidden" name="player_slug" value="{{ request.args.get('ps') or prefill.slug.rsplit('-',2)[0] }}">
+      <p class="faq-line">Tell us your prices — the levels you want to hear about:</p>
+      <p>
+        <label>Email-me-if price falls to: <input type="number" step="0.01" min="0" name="trigger_low" style="width:110px;"></label>
+        &nbsp; or &nbsp;
+        <label>rises to: <input type="number" step="0.01" min="0" name="trigger_high" style="width:110px;"></label>
+      </p>
+      <button type="submit" class="watch-cta">Add to my watchlist</button>
+    </form>
+    <p class="faq-line">(New here? You'll sign in with Google first — one click, no new password.)</p>
+  </div>
+{% else %}
   <div class="watch-empty">
     <h2>Your watchlist is empty</h2>
     <p class="faq-line">Add cards from any Card Page — then tell us your prices.
     We watch the market and email you when your level is hit.</p>
     <a class="watch-cta" href="/bands">Find a card to track</a>
   </div>
+{% endif %}
+  {% if holdings %}
+  <h2 style="margin-top:26px;">My holdings</h2>
+  <table class="list-table">
+    <thead><tr><th>Card</th><th>Basis (mine)</th><th>Qty</th><th>Record</th></tr></thead>
+    <tbody>
+    {% for h in holdings %}
+      <tr>
+        <td>{{ h.player }}{% if h.lane_display %} · {{ h.lane_display }}{% endif %}</td>
+        <td class="num">{% if h.basis_cost is not none %}${{ '%.2f' % h.basis_cost }}{% else %}—{% endif %}</td>
+        <td class="num">{{ h.qty }}</td>
+        <td><span class="honesty honesty-{{ h.band_class or 'forming' }}">{{ {0:'BAND FORMING',1:'PROVISIONAL'}.get(h.band_class if h.band_class=='forming' else 1,'RECORD BUILDING') }}</span>
+            <span class="faq-line" style="display:inline;">records {{ h.n }} · {{ h.first_date }} → {{ h.last_date }}</span>
+            <a href="/price/{{ h.player_slug }}/{{ h.lane_slug }}">page →</a></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+  <p class="faq-line">Basis figures are yours alone — private to you, never shown to anyone else. The record columns are the public record (print counts and dates), same as every Card Page.</p>
+  {% endif %}
   <p class="faq-line"><strong>How it works:</strong></p>
   <ol class="step-list">
     <li>Open any Card Page and hit "Track this card."</li>
@@ -107,9 +149,36 @@ LOGIN_PREP_TEMPLATE = '''<!DOCTYPE html>
 
 @bp.route("/me")
 def me_home():
-    """Fire-1.5 shell: renders the honest-empty watchlist page. Fire-2 (Hugo
-    lane) wires auth + storage into this exact template — render-only now."""
-    return render_template_string(ME_TEMPLATE)
+    """Fire-3.1: honest watchlist page + prefill support. ?lane=<slug> renders
+    a pre-filled add panel (the card's identity from the registry; the form
+    posts to the Fire-2 watchlist API, which enforces auth + storage)."""
+    lane_slug = (request.args.get("lane") or "").strip()
+    prefill = None
+    if lane_slug:
+        L = US._registry_lane(lane_slug)
+        if L:
+            prefill = {
+                "player": L.get("player", ""),
+                "lane_display": L.get("lane_display", ""),
+                "grade": ("" if L.get("grade_bucket") == "raw" else L.get("grade_bucket", "")),
+                "slug": L["slug"],
+            }
+    # Fire-3.2: holdings render for logged-in users (their own data only)
+    from flask import session as _sess
+    holdings = None
+    email = _sess.get("user_email")
+    if email:
+        try:
+            from user_state import holdings_view
+            holdings = US.holdings_view(email)  # user's own rows only
+        except Exception:
+            holdings = None  # honest degrade, never a blank 200
+    return render_template_string(
+        ME_TEMPLATE,
+        prefill=prefill,
+        logged_in=(email is not None),
+        holdings=holdings,
+    )
 
 
 @bp.route("/me/login")

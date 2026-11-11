@@ -106,6 +106,85 @@ def save_user(email: str, data: dict) -> None:
 def normalize_slug(v: str) -> str:
     return unicodedata.normalize("NFKC", v or "").strip()
 
+# ---------------------------------------------------------------------------
+# HOLDINGS (user's own purchases: basis + qty; basis is the USER'S data)
+# ---------------------------------------------------------------------------
+
+def load_holdings(email: str) -> list:
+    d = load_user(email)
+    h = d.get("holdings", [])
+    return h if isinstance(h, list) else []
+
+
+def add_holding(email: str, lane_slug: str, basis_cost: float | None, qty: int | None) -> dict:
+    """Add/update a holding row. Basis/qty are the USER'S OWN records — stored as
+    given (positive numbers only), never validated against any market value.
+    The lane must exist in the registry (honest 404-class refusals otherwise)."""
+    lane = _registry_lane(lane_slug)
+    if not lane:
+        return {"ok": False, "error": "unknown card"}
+    try:
+        bc = round(float(basis_cost), 2) if basis_cost is not None else None
+        q = int(qty) if qty is not None else 1
+    except (TypeError, ValueError):
+        return {"ok": False, "error": "basis/qty must be numbers"}
+    if bc is not None and bc < 0:
+        return {"ok": False, "error": "basis must be positive"}
+    if q < 1:
+        return {"ok": False, "error": "qty must be at least 1"}
+    d = load_user(email)
+    hs = d.setdefault("holdings", [])
+    for h in hs:
+        if h.get("lane_slug") == lane["slug"]:
+            h.update({"basis_cost": bc, "qty": q,
+                      "updated_utc": datetime.now(timezone.utc).isoformat()})
+            break
+    else:
+        hs.append({
+            "player_slug": lane.get("player_slug", ""),
+            "lane_slug": lane["slug"],
+            "player": lane.get("player", ""),
+            "lane_display": lane.get("lane_display", ""),
+            "basis_cost": bc,
+            "qty": q,
+            "added_utc": datetime.now(timezone.utc).isoformat(),
+        })
+    save_user(email, d)
+    return {"ok": True, "count": len(hs)}
+
+
+def remove_holding(email: str, lane_slug: str) -> dict:
+    d = load_user(email)
+    before = len(d.get("holdings", []))
+    d["holdings"] = [h for h in d.get("holdings", []) if h.get("lane_slug") != lane_slug]
+    US_removed = before - len(d.get("holdings", []))
+    save_user(email, d)
+    return {"ok": US_removed > 0, "removed": US_removed}
+
+
+def holdings_view(email: str) -> list[dict]:
+    """The user's holdings joined against the registry's public band-position data.
+    Renders ONLY: basis (theirs), qty (theirs), first/last dates + n (public record),
+    honesty class chip. NO band $ numbers, NO marks, NO advice."""
+    import json as _json
+    try:
+        reg = _json.loads((DASH_DIR / "registry" / "card_page_registry.json").read_text(encoding="utf-8"))
+        by_slug = {L.get("slug"): L for L in reg.get("lanes", [])}
+        alias = reg.get("slug_aliases", {})
+    except (OSError, ValueError):
+        by_slug, alias = {}, {}
+    out = []
+    for h in load_holdings(email):
+        lane = by_slug.get(h.get("lane_slug")) or by_slug.get(alias.get(h.get("lane_slug"), ""))
+        out.append({
+            **h,
+            "band_class": lane.get("band_class", "") if lane else "",
+            "n": lane.get("n", 0) if lane else 0,
+            "first_date": lane.get("first_date", "") if lane else "",
+            "last_date": lane.get("last_date", "") if lane else "",
+        })
+    return out
+
 
 # ---------------------------------------------------------------------------
 # OAUTH (public-user variant of the admin google pattern — additive; own
@@ -281,6 +360,41 @@ def user_watchlist():
         "email_domain": email.split("@")[-1],
         "rows": data["watchlist"],
     })
+
+
+# ---------------------------------------------------------------------------
+# HOLDINGS ROUTES (auth-gated; the user's own basis/qty records)
+# ---------------------------------------------------------------------------
+
+@oauth_bp.route("/holdings")
+def user_holdings():
+    email = _current_user()
+    if not email:
+        return redirect(url_for("user.me_home"))
+    return jsonify({"ok": True, "rows": holdings_view(email)})
+
+
+@oauth_bp.route("/holdings/add", methods=["POST"])
+def add_holding_route():
+    email = _current_user()
+    if not email:
+        return jsonify({"ok": False, "error": "sign in first"}), 401
+    payload = request.get_json(silent=True) or request.form
+    r = add_holding(email,
+                    normalize_slug(payload.get("lane_slug") or ""),
+                    payload.get("basis_cost"),
+                    payload.get("qty"))
+    return (jsonify(r), 200 if r.get("ok") else 400)
+
+
+@oauth_bp.route("/holdings/remove", methods=["POST"])
+def remove_holding_route():
+    email = _current_user()
+    if not email:
+        return jsonify({"ok": False, "error": "sign in first"}), 401
+    payload = request.get_json(silent=True) or request.form
+    r = remove_holding(email, normalize_slug(payload.get("lane_slug") or ""))
+    return (jsonify(r), 200 if r.get("ok") else 404)
 
 
 # ---------------------------------------------------------------------------

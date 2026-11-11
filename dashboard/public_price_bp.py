@@ -259,7 +259,7 @@ PRICE_PAGE_TEMPLATE = '''<!DOCTYPE html>
     <h2>Live listings</h2>
     <p>Jump straight to the current listings for this exact card — sorted by lowest-price buy-it-now.</p>
     <a class="price-cta" href="{{ ebay.href }}" {% if ebay.tagged %}rel="sponsored nofollow"{% else %}rel="noopener"{% endif %} target="_blank">See live listings on eBay</a>
-    <span style="display:inline-block; margin-left:14px;"><a class="track-link" href="/me">＋ Track this card</a></span>
+    <span style="display:inline-block; margin-left:14px;"><a class="track-link" href="/me?lane={{ lane.slug }}">＋ Track this card</a></span>
     <p class="faq-line">Where does this go? — eBay, pre-filled with a search for this exact card. eBay pays us when you buy; nothing hidden.</p>
   </div>
 
