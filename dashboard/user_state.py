@@ -305,11 +305,14 @@ def compute_alerts(email: str) -> list[dict]:
         if not lane:
             out.append({**r, "status": "watching", "hit_now": False})
             continue
-        band = lane.get("band") or {}
-        low = band.get("low")
-        rows = []
+        band = lane.get("band") or None
+        # Honesty-class awareness: a forming band = no numbers exist yet; the row
+        # honestly reports that instead of a numeric comparison (never fabricate).
+        if not (isinstance(band, dict) and isinstance(band.get("low"), (int, float))):
+            out.append({**r, "status": "BAND FORMING — not yet priced", "hit_now": False})
+            continue
         hit = False
-        if r.get("trigger_low") is not None and isinstance(low, (int, float)) and low <= r["trigger_low"]:
+        if r.get("trigger_low") is not None and isinstance(band.get("low"), (int, float)) and band["low"] <= r["trigger_low"]:
             hit = True
         if r.get("trigger_high") is not None:
             high = band.get("high")
