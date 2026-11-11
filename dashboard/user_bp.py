@@ -116,3 +116,9 @@ def me_home():
 def me_login():
     """Fire-1.5 shell: the Google-login explainer (no auth logic — Fire-2)."""
     return render_template_string(LOGIN_PREP_TEMPLATE)
+
+
+@bp.route("/me/home")
+def user_home():
+    """Fire-2 alias: the watchlist shell at /me/home for Fire-2 wiring."""
+    return render_template_string(ME_TEMPLATE)

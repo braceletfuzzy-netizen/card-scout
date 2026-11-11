@@ -84,6 +84,11 @@ app.register_blueprint(public_price_bp)
 # stubs (Fire-2 Hugo lane wires auth+storage into these templates; additive here).
 from user_bp import bp as user_bp
 app.register_blueprint(user_bp)
+
+# Register public-user stateful surfaces — CAMEL FIRE-2, Nov 11 (stateful unit:
+# Google-auth for public users + multi-tenant watchlists + dry-run alert param).
+from user_state import oauth_bp
+app.register_blueprint(oauth_bp)
 import stripe
 import requests
 from db_models import WebhookEvent, RunHistory
