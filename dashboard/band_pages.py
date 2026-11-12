@@ -36,6 +36,7 @@ import base64
 import json
 import os
 import re
+import sys
 import tempfile
 import threading
 import time
@@ -47,6 +48,25 @@ from pathlib import Path
 from flask import Blueprint, abort, redirect, render_template_string, request, url_for
 
 bp = Blueprint("bands", __name__)
+
+# ---------------------------------------------------------------------------
+# AGGREGATE-TAG FALLBACK (Nov 12, 2026; brief = Temp/hermes_brief_aggregate_tag.md)
+# ADD-only: when a lane has NO own-corpus band, the page shows an AGGREGATE band
+# (Card Hedge consensus) clearly tagged, or an AGGREGATE-QUEUING honest state —
+# NEVER an empty shell. Own-corpus lanes (CORPUS) are never overwritten.
+# ---------------------------------------------------------------------------
+try:
+    sys_path_added = False
+    _scripts_dir = str((Path(__file__).resolve().parent.parent / "scripts").resolve())
+    if _scripts_dir not in sys.path:
+        sys.path.insert(0, _scripts_dir)
+    from aggregate_lanes import get_aggregate_lane as _get_aggregate_lane, cache_read as _agg_cache_read, _grade_bucket_to_ch as _agg_grade  # noqa: E402
+    AGGREGATE_FALLBACK = True
+except Exception:  # degrade, never crash the page (same law as heatmap)
+    AGGREGATE_FALLBACK = False
+
+    def _get_aggregate_lane(*a, **k):  # type: ignore[misc]
+        return None
 
 # ---------------------------------------------------------------------------
 # PATHS (read-only registry from the 2.0 corpus; caches local to this repo)
@@ -483,8 +503,11 @@ IMPACT_VERIFICATION_META = (
 
 FOOTER_STATEMENT = '''
 <footer class="bands-footer">
-  <p>Bands on this site are built from our own record of completed sales — the
-  more people search, the sharper every band gets. Your searches built these bands.</p>
+  <p class="daily-count">TODAY: {{ daily.today }} SEARCHES BUILT BANDS</p>
+  <p>Bands stay free because eBay pays us when you buy — nothing hidden. Every
+  band is clearly tagged: CORPUS (built from Card Scout's own records) or
+  AGGREGATE (aggregated Card Hedge consensus, shown when a lane's own corpus is
+  still forming).</p>
 </footer>
 '''
 
@@ -505,6 +528,36 @@ BAND_VISUAL = '''
     <div class="band-median" style="left:{{ _medpct }}%"></div>
   </div>
   <div class="band-scale"><span class="band-edge">low</span><span class="band-edge">high</span></div>
+</div>
+'''
+
+AGGREGATE_BAND_VISUAL = '''
+{% macro aggregate_band_visual(agg) -%}
+{% set _med = agg.mid %}
+{% set _lo = agg.low %}
+{% set _hi = agg.high %}
+{% set _span = _hi - _lo or 1 %}
+{% set _medpct = ((_med - _lo) / _span * 100) | round(1) %}
+<div class="band-visual band-visual-aggregate" role="img" aria-label="AGGREGATE market band for this card (Card Hedge consensus, not our own records)">
+  <div class="band-track"><div class="band-box"></div><div class="band-median" style="left:{{ _medpct }}%"></div></div>
+  <div class="band-scale"><span class="band-edge">low ${{ '%.2f' % _lo }}</span><span class="band-edge">high ${{ '%.2f' % _hi }}</span></div>
+</div>
+{%- endmacro %}
+'''
+
+AGGREGATE_RIBBON = '''
+<div class="aggregate-ribbon">
+  AGGREGATE band · provisional, aggregated-market consensus · built from the
+  Card Hedge corpus — not from Card Scout's own records. Card Scout verified
+  sales prints will replace this band once your searches build them (n=3 needed).
+</div>
+'''
+
+QUEUING_NOTE = '''
+<div class="aggregate-queuing">
+  AGGREGATE-QUEUING — this lane is first in line: your search builds it. Our own
+  verified band needs 3 clean sale prints; the aggregated-market consensus joins
+  as a tagged fallback the moment the Card Hedge run reaches this lane.
 </div>
 '''
 
@@ -530,6 +583,7 @@ CARD_PAGE_TEMPLATE = '''<!DOCTYPE html>
     <div class="nav-links"><a href="/bands">Card Pages</a> <a href="/">Home</a></div>
   </nav>
 </header>
+''' + AGGREGATE_BAND_VISUAL + '''
 
 <main class="band-main">
   <div class="band-head">
@@ -543,27 +597,49 @@ CARD_PAGE_TEMPLATE = '''<!DOCTYPE html>
       </div>
     </div>
     <div class="band-head-right">
+      {% set _bsrc = band_source.source %}
+      {% if _bsrc == 'corpus' %}
       <span class="honesty honesty-{{ lane.band_class }}">
-        {%- if lane.band_class == 'engine_grade' -%}ENGINE-GRADE BAND
-        {%- elif lane.band_class == 'provisional' -%}PROVISIONAL BAND
-        {%- else -%}BAND FORMING — n={{ lane.n }} of 3
+        {%- if lane.band_class == 'engine_grade' -%}CORPUS · ENGINE-GRADE BAND
+        {%- elif lane.band_class == 'provisional' -%}CORPUS · PROVISIONAL BAND
+        {%- else -%}CORPUS · BAND FORMING — n={{ lane.n }} of 3
         {%- endif -%}
       </span>
+      {% elif _bsrc == 'aggregate' %}
+      <span class="honesty honesty-aggregate">AGGREGATE BAND{% if band_source.conf %}·{{ band_source.conf }}{% endif %}</span>
+      {% else %}
+      <span class="honesty honesty-aggregate-queuing">AGGREGATE-QUEUING</span>
+      {% endif %}
       <button id="fav-btn" class="fav-btn" data-slug="{{ lane.slug }}" title="Favorite this card — kept on this device, no account">☆ Favorite</button>
     </div>
   </div>
 
+  {% if _bsrc == 'corpus' %}
   <p class="provenance">
-    This band is assessed from {{ lane.n }} clean sale prints in our corpus
-    {%- if lane.first_date %} ({{ lane.first_date }} → {{ lane.last_date }}){% endif %} —
-    including searches like yours, which is how coverage grows.
+    CORPUS band · built from Card Scout's own records — {{ lane.n }} clean sale prints
+    {%- if lane.first_date %} ({{ lane.first_date }} → {{ lane.last_date }}){% endif %}.
   </p>
+  {% elif _bsrc == 'aggregate' %}
+  <p class="provenance provenance-aggregate">
+    AGGREGATE band · provisional, aggregated-market consensus · built from the
+    Card Hedge corpus ({{ lane.aggregate_band.n_ch_asks }} live asks, {{ lane.aggregate_band.sales_30d }} sales in 30d
+    {%- if lane.aggregate_band.as_of %}, as of {{ lane.aggregate_band.as_of }}{% endif %}).
+  </p>
+  {% else %}
+  <p class="provenance provenance-aggregate">
+    AGGREGATE-QUEUING · first search will build this lane — no band yet (our own
+    records show n={{ lane.n }} clean print{% if lane.n == 1 %}{% else %}s{% endif %}; a band appears at 3) and
+    the Card Hedge consensus hasn't reached this lane yet.
+  </p>
+  {% endif %}
 
-{% if lane.band_class != 'forming' %}
+{% if _bsrc == 'corpus' and lane.band_class != 'forming' %}
   ''' + BAND_VISUAL + '''
-{% else %}
-  <p class="band-forming-note">No band yet — {{ lane.n }} clean print{{ '' if lane.n == 1 else 's' }} so far
-  (a band appears at 3). Live listings below are the market right now.</p>
+{% elif _bsrc == 'aggregate' %}
+  {{ aggregate_band_visual(lane.aggregate_band) }}
+  ''' + AGGREGATE_RIBBON + '''
+{% elif _bsrc == 'queue' %}
+  ''' + QUEUING_NOTE + '''
 {% endif %}
 
 {% if deal_count is not none and deal_count > 0 %}
@@ -584,7 +660,13 @@ CARD_PAGE_TEMPLATE = '''<!DOCTYPE html>
   <div class="listings-note">Showing saved listings from the last hour — live refresh is running in the background.</div>
 {% endif %}
 {% if listings_meta.source in ('none', 'error') and not items %}
-  <div class="listings-note">{{ 'No live listings right now — check back soon.' if band_only_ok else '' }}</div>
+  {% if _bsrc == 'corpus' %}
+  <div class="listings-note">No live listings right now — the CORPUS band above is the market record for this lane.</div>
+  {% elif _bsrc == 'aggregate' %}
+  <div class="listings-note">No live listings right now — the AGGREGATE band above shows the Card Hedge consensus for this lane.</div>
+  {% else %}
+  <div class="listings-note">No live listings right now — this lane is queued; your search starts it.</div>
+  {% endif %}
 {% endif %}
 
   <section class="listings" id="listings">
@@ -622,13 +704,13 @@ CARD_PAGE_TEMPLATE = '''<!DOCTYPE html>
     </div>
     <p class="count-note">{{ items | length }} listings — every seller shown, lowest BIN first.</p>
 {% else %}
-    <p class="no-listings">No live listings right now — the band above is the market record for this lane.</p>
+    <p class="no-listings">{% if _bsrc == 'aggregate' %}No live listings right now — the AGGREGATE band above is the market consensus for this lane.{% elif _bsrc == 'queue' %}No live listings right now — this lane is queued; your search starts it.{% else %}No live listings right now — the band above is the market record for this lane.{% endif %}</p>
 {% endif %}
   </section>
 
   <section class="disclosure">
     <p>This page is free because eBay pays us when you buy — nothing hidden.
-    Your searches built these bands.</p>
+    {% if _bsrc == 'corpus' %}CORPUS band · built from Card Scout's own records.{% elif _bsrc == 'aggregate' %}AGGREGATE band · provisional, aggregated-market consensus · built from the Card Hedge corpus.{% else %}AGGREGATE-QUEUING · first search will build this lane.{% endif %}</p>
   </section>
 </main>
 ''' + FOOTER_STATEMENT + '''
@@ -723,7 +805,8 @@ GRATITUDE_TEMPLATE = '''<!DOCTYPE html>
   </div>
   <section class="disclosure">
     <p>This site is free because eBay pays us when you buy — nothing hidden.
-    Your searches built these bands.</p>
+    Your search is a deposit in our own records — every band on a card page is
+    tagged CORPUS or AGGREGATE so you always know where its numbers come from.</p>
   </section>
 </main>
 ''' + FOOTER_STATEMENT + '''
@@ -739,6 +822,16 @@ GRATITUDE_TEMPLATE = '''<!DOCTYPE html>
 def bands_index() -> str:
     reg = load_registry()
     q = (request.args.get("q") or "").strip()
+    # Daily-activity counter (ADDENDUM 2): +1 per page view, one integer/day,
+    # no cookies/fingerprints/IPs; only {date: count} is ever stored.
+    daily = {"today": 0, "total": 0}
+    try:
+        from daily_activity_counter import bump, read_today
+        if not q:                 # the index view counts; the q= seed redirect doesn't
+            bump()
+        daily = read_today()
+    except Exception:
+        pass
     if q:
         # SEARCH = THE SEED: one deposit per q= visit, then resolve or gratitude
         match = find_lane_for_query(q)
@@ -752,12 +845,13 @@ def bands_index() -> str:
             [l for l in reg["raw"].get("lanes", []) if l["band_class"] != "forming"],
             key=lambda e: -e["n"])[:8]
         return render_template_string(
-            GRATITUDE_TEMPLATE, q=q, example_lanes=example_lanes)
+            GRATITUDE_TEMPLATE, q=q, example_lanes=example_lanes, daily=daily)
 
     lanes = reg["raw"].get("lanes", [])
 
     grouped = group_lanes_for_index(lanes)
-    return render_template_string(INDEX_TEMPLATE, grouped=grouped)
+    return render_template_string(
+        INDEX_TEMPLATE, grouped=grouped, daily=daily)
 
 
 def group_lanes_for_index(lanes: list) -> list:
@@ -839,9 +933,15 @@ def collect_search_heat(
 
 
 def compose_lane(lane: dict) -> dict:
-    """Whitelisted fields for templates (no env values, no engine internals)."""
+    """Whitelisted fields for templates (no env values, no engine internals).
+
+    AGGREGATE-TAG FALLBACK (Nov 12): adds `source`/'CORPUS'/'AGGREGATE',
+    `band_source_tag`, and for no-corpus lanes `aggregate_band` (CH consensus)
+    — this never overwrites the lane's own CORPUS band; one source of truth
+    per row, explicit origin (bounds #3).
+    """
     grade_disp = "raw card" if lane["grade_bucket"] == "raw" else lane["grade_bucket"]
-    return {
+    out = {
         "slug": lane["slug"],
         "player": lane["player"],
         "product": lane.get("product") or "",
@@ -856,7 +956,35 @@ def compose_lane(lane: dict) -> dict:
         "deal": lane.get("deal"),
         "search_q": lane.get("search_q", ""),
         "crumb": " · ".join(x for x in [lane.get("product") or "", grade_disp] if x),
+        # --- new source-of-truth fields (additive only) ---
+        "has_corpus_band": bool(lane.get("band")),
+        "source": "CORPUS" if lane.get("band") else "AGGREGATE",
+        "band_source_tag": "CORPUS BAND" if lane.get("band") else "AGGREGATE",
+        "aggregate_band": None,
     }
+    if not lane.get("band") and AGGREGATE_FALLBACK:
+        agg = _get_aggregate_lane(
+            lane["player"], lane["lane"], lane.get("grade_bucket", "raw"),
+            (lane.get("product") or None))
+        if agg and agg.get("band"):
+            out["aggregate_band"] = agg["band"]  # flat keys: low/high/mid/…
+    return out
+
+
+def band_source_meta(out_lane: dict) -> dict:
+    """Derives the (source, conf, note) decision the template renders.
+
+    Per row: own_band (CORPUS) else aggregate_band (AGGREGATE) else both the
+    AGGREGATE-QUEUING tag and the honest 'first search will build this lane'
+    copy. Never empty, never unlabeled, never 404.
+    """
+    if out_lane.get("band"):
+        return {"source": "corpus", "conf": "", "note": ""}
+    agg = out_lane.get("aggregate_band")
+    if isinstance(agg, dict) and agg.get("high") is not None:
+        return {"source": "aggregate", "conf": agg.get("confidence_grade") or "",
+                "note": ""}
+    return {"source": "queue", "conf": "", "note": ""}
 
 
 @bp.route("/bands/<slug>")
@@ -873,11 +1001,24 @@ def band_page(slug: str):
         it["tagged"] = tag["tagged"]
     dc = deal_count(items, raw)
     heat_n, heat_phrases = collect_search_heat(slug)
+    # Daily-activity counter (ADDENDUM 2): +1 per band view, integer/day only.
+    daily = {"today": 0, "total": 0}
+    try:
+        from daily_activity_counter import bump, read_today
+        bump()
+        daily = read_today()
+    except Exception:
+        pass
+    # AGGREGATE-TAG FALLBACK: one source of truth per row — CORPUS else
+    # AGGREGATE else QUEUING (never an empty shell; never overwritten bands).
+    bs = band_source_meta(lane)
     return render_template_string(
         CARD_PAGE_TEMPLATE, lane=lane, items=items,
         listings_meta=meta, deal_count=dc,
         heat_n=heat_n, heat_phrases=heat_phrases,
-        band_only_ok=(lane["band_class"] != "forming"),
+        band_source=bs,
+        band_only_ok=(bs["source"] != "queue"),
+        daily=daily,
     )
 
 
