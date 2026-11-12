@@ -661,7 +661,18 @@ CARD_PAGE_TEMPLATE = '''<!DOCTYPE html>
       {% else %}
       <span class="honesty honesty-aggregate-queuing">AGGREGATE-QUEUING</span>
       {% endif %}
+      <div class="band-head-actions">
       <button id="fav-btn" class="fav-btn" data-slug="{{ lane.slug }}" title="Favorite this card — kept on this device, no account">☆ Favorite</button>
+      {# GTG (6) FOLLOW BUTTON — one-click watchlist+alert chain, Google-gated:
+         signed out -> /me/login?lane=<slug> carry (the OAuth round-trip
+         prefills the same card); signed in -> straight to THE /me add panel. #}
+      {% if user_email %}
+      <a id="follow-btn" class="follow-btn" href="/me?lane={{ lane.slug }}" title="Follow = email me when it hits MY price.">+ Follow</a>
+      {% else %}
+      <a id="follow-btn" class="follow-btn" href="/me/login?lane={{ lane.slug }}" title="Follow = email me when it hits MY price.">+ Follow</a>
+      {% endif %}
+      </div>
+      <span class="follow-copy">Follow = email me when it hits <em>MY</em> price.</span>
     </div>
   </div>
 
@@ -1165,6 +1176,11 @@ def band_page(slug: str):
     raw = lane_by_slug(slug)
     if not raw:
         abort(404)  # Brief-6-followup catch (Oct 24): 'abp.abort' NameError -> live 500 on every not-found lane slug
+    # GTG (6) FOLLOW BUTTON: the Google gate reads the SAME session key the
+    # public-user OAuth surface sets (user_email). Read-only, never written
+    # here; anonymous visitors keep zero state on this page.
+    from flask import session as _flask_session
+    user_email = _flask_session.get("user_email")
     lane = compose_lane(raw)
     items, meta = get_listings(slug)
     items = order_default(items)
@@ -1221,6 +1237,7 @@ def band_page(slug: str):
         refine_vars=refine_vars,
         refine_base_q=refine_base_q,
         band_graph=band_graph,
+        user_email=user_email,  # GTG (6): the Follow-button Google gate
     )
 
 
