@@ -100,4 +100,27 @@
     // restore the user's lens within the session
     applySort(sortState || 'default');
   }
+  // ---------------- BRIEF 2 refine box (client-side only) ----------------
+  // On click, compose base + user terms and hand off to /bands/refined
+  // (a 302 that does exactly ONE thing: tag the URL with the SAME
+  // server-side epn_tag helper every other link uses — campid stays in ONE
+  // place — then open eBay in a NEW TAB). Zero fetches, zero storage, zero
+  // cookies: the terms exist only inside the eBay URL; the endpoint stores
+  // and logs nothing.
+  var refineForm = document.getElementById('ebay-refine');
+  if (refineForm) {
+    refineForm.addEventListener('submit', function (ev) {
+      ev.preventDefault();
+      var base = refineForm.querySelector('input[name="base"]');
+      var terms = refineForm.querySelector('input[name="terms"]');
+      var slugEl = refineForm.querySelector('input[name="slug"]');
+      var q = ((base && base.value ? base.value : '') + ' ' +
+               (terms && terms.value ? terms.value : '')).trim();
+      if (!q) return;
+      var dest = '/bands/refined?slug=' + encodeURIComponent(slugEl && slugEl.value ? slugEl.value : '') +
+                 '&base=' + encodeURIComponent(base ? base.value : '') +
+                 '&terms=' + encodeURIComponent(terms ? terms.value : '');
+      window.open(dest, '_blank', 'noopener');
+    });
+  }
 })();
