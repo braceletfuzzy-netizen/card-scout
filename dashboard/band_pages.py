@@ -18,7 +18,7 @@ BANKED DECISIONS honored here (see spec §2; no re-decisions):
 - Cache law: 1h per-lane cache; ceiling = lane-hours; stale-serve fallback; the
   page NEVER hard-fails on API error/timeout (degrades to cached/band-only).
 - Deal ribbon highlights prices in-zone; it never leaks band numbers.
-- Zero secrets/positions/band-numbers/z-scores/FMV in rendered HTML.
+- Zero secrets/positions/z-scores/dislocation-math/FMV in rendered HTML; CORPUS+AGGREGATE band low/median/high chips ARE rendered (founder directive Nov-12: a price site shows the price).
 - Search = the seed: /bands?q=<query> logs exactly one deposit row; empty
   results render the gratitude page.
 - No auth (Phase 1). Favorites = localStorage. No Discord push anywhere.
@@ -578,7 +578,7 @@ BAND_VISUAL = '''
     <div class="band-dealzone" style="left:{{ _dl }}%; width:{{ _dw }}%"></div>
     <div class="band-median" style="left:{{ _medpct }}%"></div>
   </div>
-  <div class="band-scale"><span class="band-edge">low</span><span class="band-edge">high</span></div>
+  <div class="band-scale"><span class="band-edge">low ${{ '%.2f' % _lo }}</span><span class="band-edge">med ${{ '%.2f' % _med }}</span><span class="band-edge">high ${{ '%.2f' % _hi }}</span></div>
 </div>
 '''
 
@@ -655,7 +655,7 @@ CARD_PAGE_TEMPLATE = '''<!DOCTYPE html>
         {% for sib in sibling_lanes %}
         <a class="lane-btn{% if sib.slug == lane.slug %} active{% endif %}"
            {% if sib.slug == lane.slug %}aria-pressed="true"{% endif %}
-           href="/bands/{{ sib.slug }}">{{ sib.lane_display }}{% if sib.grade_bucket != 'raw' %} · {{ sib.grade_bucket }}{% endif %}</a>
+           href="/bands/{{ sib.slug }}">{{ sib._label or sib.lane_display }}{% if sib.grade_bucket != 'raw' %} · {{ sib.grade_bucket }}{% endif %}</a>
         {% endfor %}
       </nav>
       {% endif %}
@@ -1196,15 +1196,45 @@ def band_page(slug: str):
     user_email = _flask_session.get("user_email")
     # GTG (1) LANES AS GRANULARITY BUTTONS: the player's full lane set from the
     # SAME registry read (whitelisted fields only; add-only sibling view).
-    sibling_lanes = [
-        {
+    # GTG-3: dedupe by slug + deterministic group sort (autos / parallels / graded / mass)
+    def _lane_group(L2):
+        ld2 = (L2.get("lane_display", "") or "").lower()
+        gb2 = (L2.get("grade_bucket", "") or "").lower()
+        if "auto" in ld2 or "auto" in gb2:
+            return 0
+        if "graded" in ld2 or "psa" in ld2 or "sgc" in ld2 or "graded" in gb2:
+            return 2
+        if ld2 in ("mass", "numbered", "base"):
+            return 3
+        return 1  # parallels/sparks
+    _group_order = ["auto", "parallel", "graded", "bulk"]
+    sibling_lanes = []
+    _seen = set()
+    for L in load_registry()["raw"].get("lanes", []):
+        if L.get("player") != raw.get("player") or L["slug"] in _seen:
+            continue
+        _seen.add(L["slug"])
+        sibling_lanes.append({
             "slug": L["slug"],
             "lane_display": L.get("lane_display", ""),
             "grade_bucket": L.get("grade_bucket", "raw"),
-        }
-        for L in load_registry()["raw"].get("lanes", [])
-        if L.get("player") == raw.get("player")
-    ]
+            "product": (L.get("search_q") or ""),
+            "_group": _lane_group(L),
+        })
+    sibling_lanes.sort(key=lambda s: (s["_group"], s["lane_display"].lower()))
+    from collections import Counter as _C
+    _label_counts = _C(s["lane_display"] for s in sibling_lanes)
+    for s in sibling_lanes:
+        _grp, s["_label"] = s.pop("_group"), s["lane_display"]
+        if _label_counts[s["lane_display"]] > 1 and s["product"]:
+            # disambiguate by the distinct SET words in search_q
+            _pl = (raw.get("player") or "")
+            _words = (s["product"].lower()
+                      .replace(_pl.lower(), "")
+                      .replace((_pl.lower().split()[-1] if _pl else ""), "")
+                      .replace(s["lane_display"].lower(), "").split())
+            _uniq = [w.title() for w in _words if w][:3]
+            s["_label"] = (s["lane_display"] + " (" + " ".join(_uniq) + ")") if _uniq else s["lane_display"]
     lane = compose_lane(raw)
     items, meta = get_listings(slug)
     items = order_default(items)
