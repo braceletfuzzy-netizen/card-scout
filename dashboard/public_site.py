@@ -143,6 +143,7 @@ LANDING_TEMPLATE = '''
 </main>
 
 <footer>
+  <p class="daily-count">TODAY: {{ daily_activity.today }} SEARCHES BUILT BANDS</p>
   <p>&copy; 2026 Card Scout. Built by collectors, for collectors.</p>
 </footer>
 </body>
@@ -161,6 +162,15 @@ def landing():
     except Exception:
         _daily = {"today_uniques": 0, "yesterday_uniques": 0, "week_uniques": 0,
                   "today_hits": 0}
+    # McDonalds-style daily activity counter (ADDENDUM 2): one integer/day, no
+    # cookies/fingerprints/IPs. +1 per homepage view.
+    _daily_activity = {"today": 0, "total": 0}
+    try:
+        from daily_activity_counter import bump, read_today
+        bump()
+        _daily_activity = read_today()
+    except Exception:
+        pass
     # Check if logged in
     customer_id = request.cookies.get('customer_id') or _get_logged_in_customer()
     logged_in = bool(customer_id)
@@ -170,6 +180,7 @@ def landing():
         logged_in=logged_in,
         customer_id=customer_id if logged_in else None,
         daily=_daily,
+        daily_activity=_daily_activity,
     )
 
 
