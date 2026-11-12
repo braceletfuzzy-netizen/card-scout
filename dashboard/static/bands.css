@@ -223,6 +223,23 @@
 .follow-copy { display: block; font-size: 12px; color: var(--color-muted); text-align: right; }
 .follow-copy em { font-style: italic; color: var(--color-text); }
 
+/* GTG (1) LANES AS GRANULARITY BUTTONS — the player's sibling lanes as
+   clickable filter buttons under the h1; current lane = pressed style.
+   Existing tokens only (chip palette), no new colors. */
+.lane-btn-row { display: flex; flex-wrap: wrap; gap: 6px; margin: 8px 0 2px; }
+.lane-btn {
+  display: inline-block;
+  border: 1px solid var(--color-border);
+  background: var(--color-card);
+  color: var(--color-text);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 13px;
+  text-decoration: none;
+}
+.lane-btn:hover { border-color: var(--color-accent); }
+.lane-btn.active { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+
 .ebay-lane-search {
   margin-top: 18px;
   border: 1px solid var(--color-border);
