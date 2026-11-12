@@ -837,6 +837,10 @@ INDEX_TEMPLATE = '''<!DOCTYPE html>
   <p class="index-lede">One free page per card lane: the market band our records build,
   live listings below it. Search a card — if a page opens, that's your lane; if not,
   your search just started one.</p>
+  <p class="index-jargon-note" style="color:var(--color-muted);font-size:13px;margin:2px 0 10px;">
+    Chip tags in plain english: “our deepest records” = the strongest completed-sale
+    history · “records forming / early records” = the record is still growing.
+    Full provenance tags live on every card page, where they belong.</p>
   <form class="index-search" action="/bands" method="get">
     <input type="search" name="q" placeholder="Search a card or player…" aria-label="Search cards" autofocus>
     <button type="submit">Search</button>
@@ -850,9 +854,9 @@ INDEX_TEMPLATE = '''<!DOCTYPE html>
       <a class="lane-chip chip-{{ lane.band_class }}" href="/bands/{{ lane.slug }}">
         <span class="chip-title">{{ lane.lane_display }}{% if lane.grade_bucket != 'raw' %} · {{ lane.grade_bucket }}{% endif %}</span>
         <span class="chip-meta">
-          {%- if lane.band_class == 'engine_grade' -%}ENGINE-GRADE
-          {%- elif lane.band_class == 'provisional' -%}PROVISIONAL
-          {%- else -%}forming n={{ lane.n }}
+          {%- if lane.band_class == 'engine_grade' -%}our deepest records
+          {%- elif lane.band_class == 'provisional' -%}records forming
+          {%- else -%}early records · {{ lane.n }}
           {%- endif -%}
         </span>
       </a>
