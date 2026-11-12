@@ -205,6 +205,24 @@
 
 /* BRIEF 2 (Nov 12): always-listings layer — "Search this lane on eBay".
    Palette reused (accent/cards/borders only); no new colors invented. */
+
+/* GTG (6) FOLLOW BUTTON — prominent '+ Follow' beside Favorite; same token
+   palette (accent/focus), no new colors. */
+.band-head-actions { display: flex; align-items: center; gap: 8px; }
+.follow-btn {
+  display: inline-block;
+  background: var(--color-accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 7px 16px;
+  border-radius: var(--radius);
+  text-decoration: none;
+}
+.follow-btn:hover { filter: brightness(0.94); }
+.follow-copy { display: block; font-size: 12px; color: var(--color-muted); text-align: right; }
+.follow-copy em { font-style: italic; color: var(--color-text); }
+
 .ebay-lane-search {
   margin-top: 18px;
   border: 1px solid var(--color-border);
