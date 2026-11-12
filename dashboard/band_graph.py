@@ -31,7 +31,9 @@ import urllib.request
 from pathlib import Path
 
 REPO_DIR = Path(__file__).resolve().parent.parent
-AGG_DIR = Path(r"C:/Users/J/Documents/LLM/card-scout/data/aggregate_lanes")
+# Render-safe: repo-relative (Linux deploy) with the local-abs-path fallback
+_LOCAL_AGG = Path(r"C:/Users/J/Documents/LLM/card-scout/data/aggregate_lanes")
+AGG_DIR = _LOCAL_AGG if _LOCAL_AGG.exists() else (Path(__file__).resolve().parent.parent / "data" / "aggregate_lanes")
 
 WINDOWS = (7, 30, 90)
 
