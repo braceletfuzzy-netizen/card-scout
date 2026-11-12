@@ -203,6 +203,52 @@
 .lane-title { color: var(--color-muted); font-weight: 600; }
 .provenance { color: var(--color-muted); font-size: 14px; margin: 4px 0 8px; }
 
+/* BRIEF 2 (Nov 12): always-listings layer — "Search this lane on eBay".
+   Palette reused (accent/cards/borders only); no new colors invented. */
+.ebay-lane-search {
+  margin-top: 18px;
+  border: 1px solid var(--color-border);
+  background: var(--color-card);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+}
+.ebay-lane-search h2 { margin: 0 0 4px; }
+.ebay-lane-lede { color: var(--color-muted); font-size: 13px; margin: 0 0 10px; }
+.ebay-lane-links { list-style: none; padding: 0; margin: 0 0 12px; display: flex; flex-direction: column; gap: 6px; }
+.ebay-lane-links a { color: var(--color-text); font-size: 14px; text-decoration: none; }
+.ebay-lane-links a:hover { color: var(--color-accent); text-decoration: underline; }
+.ebay-lane-query { color: var(--color-muted); font-size: 13px; }
+.ebay-refine { display: flex; gap: 8px; max-width: 560px; }
+.ebay-refine-input { flex: 1; padding: 8px 12px; border: 1px solid var(--color-border); border-radius: var(--radius); font-size: 14px; }
+.ebay-refine-btn { padding: 8px 14px; background: var(--color-accent); color: #fff; border: none; border-radius: var(--radius); font-size: 14px; cursor: pointer; }
+.ebay-refine-btn:hover { background: var(--color-accent-hover); }
+.ebay-refine-note { color: var(--color-muted); font-size: 12px; margin: 8px 0 0; }
+
+/* BRIEF 2 ADDITIONAL: price-history graph (inline SVG; toggle 7d/30d/90d) */
+.band-graph-sec {
+  margin-top: 18px;
+  border: 1px solid var(--color-border);
+  background: var(--color-card);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+}
+.graph-head { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+.graph-head h2 { margin: 0; }
+.graph-toggle { display: flex; gap: 6px; }
+.graph-btn {
+  border: 1px solid var(--color-border);
+  background: var(--color-card);
+  color: var(--color-text);
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 13px;
+  text-decoration: none;
+}
+.graph-btn.active { background: var(--color-accent); border-color: var(--color-accent); color: #fff; }
+.band-graph-sec svg { width: 100%; height: auto; margin-top: 10px; }
+.graph-note { color: var(--color-muted); font-size: 12px; margin: 6px 0 0; }
+.graph-absent { color: var(--color-muted); font-size: 13px; margin: 10px 0; }
+
 @media (max-width: 760px) {
   .listing-row { grid-template-columns: 34px 74px 60px 1fr 110px; }
   .row-score, .row-fb, .row-ship { display: none; }
