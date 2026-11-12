@@ -72,7 +72,9 @@ LANDING_TEMPLATE = '''
       {% if logged_in %}
         <a href="/dashboard/{{ customer_id }}" class="cta">Dashboard</a>
       {% else %}
-        <a href="/dashboard/login" class="cta">Sign In</a>
+        {# GTG pass (Nov 12): Sign In -> /me/login (the real one-click Google
+           surface — Google sign-in is LIVE, not opening soon). #}
+        <a href="/me/login" class="cta">Sign In</a>
       {% endif %}
     </div>
   </nav>
@@ -520,7 +522,20 @@ def trending():
         from build_trending import fetch_top_movers, render_trending_html
         category = request.args.get('category', 'All')
         movers_data = fetch_top_movers(category, count=10)
-        return render_trending_html(category, movers_data)
+        html = render_trending_html(category, movers_data)
+        # GTG pass (Nov 12): feed the nav item with the community's own search
+        # stream — aggregated term+count ONLY (no identity, no per-user rows).
+        # Degrade-safe: any failure just renders the movers page unchanged.
+        try:
+            from build_trending_searches import top_search_terms, render_searches_section
+            html = html.replace(
+                '<p class="footer">',
+                render_searches_section(top_search_terms()) + '<p class="footer">',
+                1)
+        except Exception as _se:
+            from flask import current_app
+            current_app.logger.warning(f"trending searches section degraded: {_se}")
+        return html
     except Exception as e:  # graceful degrade: trending is optional surface, never 500
         from flask import current_app
         current_app.logger.warning(f"/trending degraded: {e}")
