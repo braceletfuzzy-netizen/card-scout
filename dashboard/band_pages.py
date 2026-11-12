@@ -556,9 +556,9 @@ FOOTER_STATEMENT = '''
 <footer class="bands-footer">
   <p class="daily-count">TODAY: {{ daily.today }} SEARCHES BUILT BANDS</p>
   <p>Bands stay free because eBay pays us when you buy — nothing hidden. Every
-  band is clearly tagged: CORPUS (built from Card Scout's own records) or
-  AGGREGATE (aggregated Card Hedge consensus, shown when a lane's own corpus is
-  still forming).</p>
+  band is clearly tagged: our own records (built from Card Scout's sale
+  history) or aggregated-market consensus (shown when a lane's own records are
+  still forming). The exact tags live on each band page.</p>
 </footer>
 '''
 
