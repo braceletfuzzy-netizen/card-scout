@@ -69,6 +69,57 @@ except Exception:  # degrade, never crash the page (same law as heatmap)
         return None
 
 # ---------------------------------------------------------------------------
+# BRIEF 2 (Nov 12, 2026) — ALWAYS-LISTINGS LAYER (add-only, degrade-never-crash):
+# every band page (CORPUS / AGGREGATE / QUEUING) renders a "Search this lane
+# on eBay" section underneath: 2-3 targeted, EPN-tagged search links built
+# from the lane's own structure (player + set + variant + grade-lane), plus a
+# one-line refine box. The query/URL/arming logic lives in targeted_links.py
+# (pure, unit-tested in scripts/test_targeted_links.py); if that import fails
+# the section is simply skipped (no dead page — same law as the heatmap).
+# ---------------------------------------------------------------------------
+try:
+    from targeted_links import build_targeted_links, refine_template_vars  # noqa: E402
+    TARGETED_LINKS = True
+except Exception:  # degrade, never crash the page
+    TARGETED_LINKS = False
+
+    def build_targeted_links(*a, **k):  # type: ignore[misc]
+        return []
+
+    def refine_template_vars():  # type: ignore[misc]
+        return {}
+
+# ---------------------------------------------------------------------------
+# BRIEF 2 ADDITIONS — KISS SEARCH FLOW + PRICE-HISTORY GRAPH (Nov 12, 2026):
+# 1. fuzzy_match.py: the accent-folded fuzzy player matcher (the 'brady
+#    turang' -> Brice Turang fix); miss pages list the matched player's lanes.
+# 2. band_graph.py: price-history SVG with granularity-selected default
+#    window (coarse=30d, deep=7d) + 7d/30d/90d toggle; own tp_pulls first,
+#    CH player-index-history second, honest hide third. Inline SVG only.
+# Both degrade to absent on import failure (same law as the heatmap).
+# ---------------------------------------------------------------------------
+try:
+    from fuzzy_match import best_fuzzy_lane, fuzzy_player_hits, fold as fuzzy_fold  # noqa: E402
+    FUZZY_MATCH = True
+except Exception:
+    FUZZY_MATCH = False
+
+    def best_fuzzy_lane(*a, **k):  # type: ignore[misc]
+        return None
+
+    def fuzzy_player_hits(*a, **k):  # type: ignore[misc]
+        return []
+
+try:
+    from band_graph import build_graph  # noqa: E402
+    BAND_GRAPH = True
+except Exception:
+    BAND_GRAPH = False
+
+    def build_graph(*a, **k):  # type: ignore[misc]
+        return {"svg": "", "window": 0, "windows": (7, 30, 90), "source": "", "points": []}
+
+# ---------------------------------------------------------------------------
 # PATHS (read-only registry from the 2.0 corpus; caches local to this repo)
 # ---------------------------------------------------------------------------
 DASH_DIR = Path(__file__).resolve().parent
@@ -661,11 +712,11 @@ CARD_PAGE_TEMPLATE = '''<!DOCTYPE html>
 {% endif %}
 {% if listings_meta.source in ('none', 'error') and not items %}
   {% if _bsrc == 'corpus' %}
-  <div class="listings-note">No live listings right now — the CORPUS band above is the market record for this lane.</div>
+  <div class="listings-note">No live listings matched in our rail just now — search the lane live on eBay below.</div>
   {% elif _bsrc == 'aggregate' %}
-  <div class="listings-note">No live listings right now — the AGGREGATE band above shows the Card Hedge consensus for this lane.</div>
+  <div class="listings-note">No live listings matched in our rail just now — search the lane live on eBay below.</div>
   {% else %}
-  <div class="listings-note">No live listings right now — this lane is queued; your search starts it.</div>
+  <div class="listings-note">No live listings matched in our rail just now — search the lane live on eBay below.</div>
   {% endif %}
 {% endif %}
 
@@ -704,9 +755,55 @@ CARD_PAGE_TEMPLATE = '''<!DOCTYPE html>
     </div>
     <p class="count-note">{{ items | length }} listings — every seller shown, lowest BIN first.</p>
 {% else %}
-    <p class="no-listings">{% if _bsrc == 'aggregate' %}No live listings right now — the AGGREGATE band above is the market consensus for this lane.{% elif _bsrc == 'queue' %}No live listings right now — this lane is queued; your search starts it.{% else %}No live listings right now — the band above is the market record for this lane.{% endif %}</p>
+    <p class="no-listings">{% if _bsrc == 'aggregate' %}No live listings matched in our rail just now — search the lane live on eBay below.{% elif _bsrc == 'queue' %}No live listings matched in our rail just now — search the lane live on eBay below.{% else %}No live listings matched in our rail just now — search the lane live on eBay below.{% endif %}</p>
 {% endif %}
   </section>
+
+{% if band_graph and band_graph.svg %}
+  <section class="band-graph-sec" id="band-graph">
+    <div class="graph-head">
+      <h2>Price history</h2>
+      <div class="graph-toggle" role="group" aria-label="History window">
+        {% for w in band_graph.windows %}
+        <a class="graph-btn{% if w == band_graph.window %} active{% endif %}"
+           href="/bands/{{ lane.slug }}?w={{ w }}">{{ w }}d</a>
+        {% endfor %}
+      </div>
+    </div>
+    {{ band_graph.svg | safe }}
+    <p class="graph-note">
+      {% if band_graph.source == 'tp_pulls' %}From Card Scout's own sale prints (monthly medians).
+      {% elif band_graph.source == 'ch_index' %}From the Card Hedge player market index.
+      {% endif %}
+      Shape only — today's numbers are the band above.
+    </p>
+  </section>
+{% elif band_graph and not band_graph.svg %}
+  <p class="graph-absent">Not enough history yet for a chart on this lane.</p>
+{% endif %}
+
+{% if ebay_links %}
+  <section class="ebay-lane-search" id="ebay-lane-search" aria-label="Search this lane on eBay">
+    <h2>Search this lane on eBay</h2>
+    <p class="ebay-lane-lede">Targeted searches built from this lane — every link opens eBay in a new tab.</p>
+    <ul class="ebay-lane-links">
+    {% for l in ebay_links %}
+      <li class="ebay-lane-link">
+        <a href="{{ l.href }}" {% if l.tagged %}rel="sponsored nofollow"{% endif %} target="_blank">{{ l.label }}{% if l.sub %} <span class="ebay-lane-query">“{{ l.sub }}”</span>{% endif %}</a>
+      </li>
+    {% endfor %}
+    </ul>
+    <form class="ebay-refine" id="ebay-refine" action="/bands/refined" method="get">
+      <input type="hidden" name="slug" value="{{ lane.slug }}">
+      <input type="hidden" name="base" value="{{ refine_base_q }}">
+      <input type="text" name="terms" class="ebay-refine-input"
+             placeholder="{{ refine_vars.placeholder if refine_vars.placeholder else 'refine (e.g. 2022 chrome update pink wave)' }}"
+             aria-label="Refine this lane's eBay search with extra terms">
+      <button type="submit" class="ebay-refine-btn">{{ refine_vars.button_label if refine_vars.button_label else 'Search refined' }}</button>
+    </form>
+    <p class="ebay-refine-note">Refine appends your words to the targeted query — typed fresh every time, nothing stored.</p>
+  </section>
+{% endif %}
 
   <section class="disclosure">
     <p>This page is free because eBay pays us when you buy — nothing hidden.
@@ -774,7 +871,7 @@ GRATITUDE_TEMPLATE = '''<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-''' + IMPACT_VERIFICATION_META + '''<title>Thanks — your search taught the machine · Card Scout</title>
+''' + IMPACT_VERIFICATION_META + '''<title>{{ heading_prefix }}{{ q | capitalize }} — search results · Card Scout</title>
 ''' + BASE_CSS + '''
 </head>
 <body class="band-page">
@@ -785,28 +882,64 @@ GRATITUDE_TEMPLATE = '''<!DOCTYPE html>
   </nav>
 </header>
 <main class="band-main gratitude">
-  <h1>Thank you — your search taught the machine.</h1>
-  <p class="gratitude-lede">"<span class="gratitude-q">{{ q }}</span>" doesn't have a card page yet.
-  That search is now a deposit in our record: when a few more like it arrive,
-  a band starts to form and a page opens — built in part by you. No account, no fee.</p>
-  <p class="gratitude-next">Try one of the live pages:</p>
+  <h1>{{ heading_prefix }}{{ q | capitalize }}”</h1>
+{% if close_players %}
+{# FUZZY-LANE MATCH: the player exists — list their lanes (never a dead end) #}
+  <p class="gratitude-lede">Closest match{{ 'es' if close_players | length > 1 else '' }} in our records:</p>
   <div class="lane-chips">
-    {% for lane in examples %}
-    <a class="lane-chip chip-{{ lane.band_class }}" href="/bands/{{ lane.slug }}">
-      <span class="chip-title">{{ lane.player }} · {{ lane.lane_display }}</span>
-      <span class="chip-meta">
-        {%- if lane.band_class == 'engine_grade' -%}ENGINE-GRADE
-        {%- elif lane.band_class == 'provisional' -%}PROVISIONAL
-        {%- else -%}forming n={{ lane.n }}
-        {%- endif -%}
-      </span>
+    {% for entry in close_players %}
+    <details class="player-group" {% if loop.first %}open{% endif %}>
+      <summary>{{ entry.player }} <span class="lane-count">{{ entry.lanes | length }} lanes</span></summary>
+      <div class="lane-chips">
+        {% for lane in entry.lanes %}
+        <a class="lane-chip chip-{{ lane.band_class }}" href="/bands/{{ lane.slug }}">
+          <span class="chip-title">{{ lane.lane_display }}</span>
+          <span class="chip-meta">{{ lane.search_q }}</span>
+        </a>
+        {% endfor %}
+      </div>
+    </details>
+    {% endfor %}
+  </div>
+{% elif instant_lanes %}
+{# INSTANT-BUILD: no own-corpus lane, but the AGGREGATE layer can render now #}
+  <p class="gratitude-lede">No page under that exact name yet — these players match closely:</p>
+  <div class="lane-chips">
+    {% for entry in instant_lanes %}
+    <a class="lane-chip" href="/bands/{{ entry.slug }}">
+      <span class="chip-title">{{ entry.player }} · {{ entry.lane_display }}</span>
+      <span class="chip-meta">live market data</span>
     </a>
     {% endfor %}
   </div>
+{% endif %}
+
+{# ALWAYS-LISTINGS: even a total miss keeps the targeted search + refine #}
+{% if ebay_links %}
+  <section class="ebay-lane-search" id="ebay-lane-search" aria-label="Search this lane on eBay">
+    <h2>Search eBay for “{{ q }}” now</h2>
+    <ul class="ebay-lane-links">
+    {% for l in ebay_links %}
+      <li class="ebay-lane-link">
+        <a href="{{ l.href }}" {% if l.tagged %}rel="sponsored nofollow"{% endif %} target="_blank">{{ l.label }} <span class="ebay-lane-query">“{{ l.tokens }}”</span></a>
+      </li>
+    {% endfor %}
+    </ul>
+    <form class="ebay-refine" id="ebay-refine" action="/bands/refined" method="get">
+      <input type="hidden" name="slug" value="">
+      <input type="hidden" name="base" value="{{ q }}">
+      <input type="text" name="terms" class="ebay-refine-input"
+             placeholder="{{ refine_vars.placeholder if refine_vars.placeholder else 'refine (e.g. 2022 chrome update pink wave)' }}"
+             aria-label="Refine this eBay search with extra terms">
+      <button type="submit" class="ebay-refine-btn">{{ refine_vars.button_label if refine_vars.button_label else 'Search refined' }}</button>
+    </form>
+    <p class="ebay-refine-note">Refine appends your words to the search — typed fresh every time, nothing stored.</p>
+  </section>
+{% endif %}
   <section class="disclosure">
     <p>This site is free because eBay pays us when you buy — nothing hidden.
-    Your search is a deposit in our own records — every band on a card page is
-    tagged CORPUS or AGGREGATE so you always know where its numbers come from.</p>
+    <span class="gratitude-footnote">Pages appear as real sales build each card's
+    record (3 clean prints minimum) — searches help grow that record.</span></p>
   </section>
 </main>
 ''' + FOOTER_STATEMENT + '''
@@ -833,7 +966,7 @@ def bands_index() -> str:
     except Exception:
         pass
     if q:
-        # SEARCH = THE SEED: one deposit per q= visit, then resolve or gratitude
+        # SEARCH = THE SEED: one deposit per q= visit, then resolve or miss-page
         match = find_lane_for_query(q)
         if match:
             record_deposit(q, match["slug"], "search-hit")
@@ -841,11 +974,47 @@ def bands_index() -> str:
             return redirect(url_for("bands.band_page", slug=match["slug"]))
         record_deposit(q, None, "search-expansion")
         heatmap_log(q, None, None, 0)
-        example_lanes = sorted(
-            [l for l in reg["raw"].get("lanes", []) if l["band_class"] != "forming"],
-            key=lambda e: -e["n"])[:8]
+        # KISS MISS FLOW (Nov 12, founder repro 'brady turang'): the miss page
+        # is never a dead end — (a) fuzzy player match lists real lanes;
+        # (b) total miss still shows targeted eBay links + refine.
+        close_players = fuzzy_player_hits(q, reg["raw"].get("lanes", []))[:4] if FUZZY_MATCH else []
+        # (b-instant): when a fuzzy player exists but has no OWN lane hit by
+        # find_lane_for_query, the CH AGGREGATE layer can instant-build the
+        # lane — warm its cache so the next click renders AGGREGATE live.
+        instant_lanes = []
+        if not close_players and AGGREGATE_FALLBACK:
+            for lane in reg["raw"].get("lanes", []):
+                if lane.get("band_class") == "forming":
+                    fuzzy_slug_ok = best_fuzzy_lane(q, [lane])
+                    if fuzzy_slug_ok and int(lane.get("n") or 0) >= 1:
+                        try:
+                            _get_aggregate_lane(
+                                lane["player"], lane["lane"],
+                                lane.get("grade_bucket", "raw"),
+                                (lane.get("product") or None),
+                                allow_fetch=False)
+                        except Exception:
+                            pass
+                    if fuzzy_slug_ok:
+                        instant_lanes.append(lane)
+            instant_lanes = sorted(
+                instant_lanes, key=lambda l: -int(l.get("n") or 0))[:4]
+        # (c) the targeted-search fallback for the typed words
+        miss_lane = {"player": q, "product": "", "lane_display": "",
+                     "slug": "", "search_q": q}
+        miss_links = []
+        if TARGETED_LINKS:
+            try:
+                miss_links = [l for l in build_targeted_links(miss_lane, epn_tag)[:1]]
+            except Exception:
+                miss_links = []
         return render_template_string(
-            GRATITUDE_TEMPLATE, q=q, example_lanes=example_lanes, daily=daily)
+            GRATITUDE_TEMPLATE, q=q,
+            close_players=close_players, instant_lanes=instant_lanes,
+            heading_prefix="Results for “" if (close_players or instant_lanes) else "No page for “",
+            heading_suffix="”", ebay_links=miss_links,
+            refine_vars=refine_template_vars() if TARGETED_LINKS else {},
+            daily=daily)
 
     lanes = reg["raw"].get("lanes", [])
 
@@ -1012,6 +1181,31 @@ def band_page(slug: str):
     # AGGREGATE-TAG FALLBACK: one source of truth per row — CORPUS else
     # AGGREGATE else QUEUING (never an empty shell; never overwritten bands).
     bs = band_source_meta(lane)
+    # BRIEF 2 (always-listings layer): 2-3 targeted, EPN-tagged eBay search
+    # links on EVERY state + the refine-box vars. Degrades to absent when the
+    # targeted_links module failed to import (TARGETED_LINKS False -> []).
+    ebay_links: list[dict] = []
+    if TARGETED_LINKS:
+        try:
+            ebay_links = build_targeted_links(raw, epn_tag)
+            refine_vars = refine_template_vars()
+            refine_base_q = (ebay_links[0]["tokens"] if ebay_links
+                             else (lane.get("search_q") or lane.get("player") or ""))
+        except Exception:
+            ebay_links = []
+            refine_vars, refine_base_q = {}, ""
+    else:
+        refine_vars, refine_base_q = {}, ""
+    # BRIEF 2 ADDITIONAL: price-history graph; default window chosen by lane
+    # granularity (deep=7d, coarse=30d), ?w=7|30|90 overrides. Degrade-safe.
+    try:
+        w_arg = request.args.get("w")
+        band_graph = (build_graph(raw, int(w_arg)) if (w_arg or "").strip().isdigit()
+                      else build_graph(raw)) if BAND_GRAPH else {"svg": "", "window": 0,
+                                                                "windows": (7, 30, 90),
+                                                                "source": "", "points": []}
+    except Exception:
+        band_graph = {"svg": "", "window": 0, "windows": (7, 30, 90), "source": "", "points": []}
     return render_template_string(
         CARD_PAGE_TEMPLATE, lane=lane, items=items,
         listings_meta=meta, deal_count=dc,
@@ -1019,7 +1213,31 @@ def band_page(slug: str):
         band_source=bs,
         band_only_ok=(bs["source"] != "queue"),
         daily=daily,
+        ebay_links=ebay_links,
+        refine_vars=refine_vars,
+        refine_base_q=refine_base_q,
+        band_graph=band_graph,
     )
+
+
+@bp.route("/bands/refined")
+def band_refined() -> str:
+    """BRIEF 2 refine endpoint: NO-JS degrade path — composes base + user
+    terms and 302s to the tagged eBay search. The normal path is fully
+    client-side (bands.js intercepts the submit and opens the URL directly);
+    this endpoint stores NOTHING, logs NOTHING, and echoes nothing but the
+    redirect. (No analytics, no deposit row: the user's terms are not our
+    seed and never enter any ledger.)"""
+    base = (request.args.get("base") or "").strip()[:200]
+    terms = (request.args.get("terms") or "").strip()[:200]
+    slug = (request.args.get("slug") or "").strip()[:120]
+    try:
+        from targeted_links import refine_href
+        target = refine_href(base, terms)
+    except Exception:
+        target = "https://www.ebay.com"
+    tag = epn_tag(target, slug)
+    return redirect(tag["href"], code=302)
 
 
 @bp.route("/bands/health")
