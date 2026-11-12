@@ -49,3 +49,8 @@ data/*
 # CAMEL public-user storage (runtime data, never committed)
 dashboard/users/
 
+
+# GTG graphs: shipped CH index-history caches (nightly warmer writes these)
+!data/aggregate_lanes/
+data/aggregate_lanes/*
+!data/aggregate_lanes/indexhist_*.json
