@@ -79,6 +79,16 @@ LANDING_TEMPLATE = '''
 </header>
 
 <main>
+  <!-- BRIEF 2 ADDITION (founder): first interactive element = the search box.
+       Top of the fold, ABOVE the hero CTA; routes to /bands?q= for the full
+       KISS flow (fuzzy match -> instant-build -> targeted-link fallback). -->
+  <section class="hero-search-sec">
+    <form class="hero-search" action="/bands" method="get" role="search">
+      <input type="search" name="q" placeholder="Search a card or player…"
+             aria-label="Search a card or player" autofocus>
+      <button type="submit">Search</button>
+    </form>
+  </section>
   <section class="hero">
     <h1>Track any card.<br><span class="highlight">Know its price.</span></h1>
     <p class="hero-sub">CamelCamelCamel for trading cards. See any card's price history across 757 tracked instrument lanes, get an email when it hits the price <em>you</em> set, and — if you want — let the deal engine ping your Discord when a card dips below market.</p>
