@@ -99,25 +99,50 @@ def render_footer(unsub_token: str | None) -> str:
 
 
 # ---------------------------------------------------------------------------
-# EPN tagging (same rule as band_pages: no campid = plain link)
+# EPN tagging — GTG PASS (Nov 12): ONE campid helper, REUSED, not duplicated.
+# epn_tag_email delegates to band_pages.epn_tag (the same arming switch the web
+# surface trusts: no campaign id -> plain link, the MPA guard). The customid
+# (the per-link lane tag EPN reports back) is preserved from the email surface:
+# email alerts tag ALL links with the LANE SLUG (not the email) so the
+# per-lane click attribution stays anonymous and consistent with the web.
 # ---------------------------------------------------------------------------
-def epn_tag(view_url: str, email: str) -> tuple[str, bool]:
-    campid = env_val("EPN_CAMPAIGN_ID")
-    if not campid:
+def epn_tag_email(view_url: str, lane_slug: str | None) -> tuple[str, bool]:
+    """THE shared helper: band_pages.epn_tag does the campid work."""
+    try:
+        sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "dashboard"))
+        from band_pages import epn_tag as _web_epn_tag  # noqa: E402
+        tag = _web_epn_tag(view_url, lane_slug or "email-alerts")
+        return tag["href"], tag["tagged"]
+    except Exception:
+        # degrade identical to the old local rule: no campid -> plain link
         return view_url, False
-    params = {
-        "mkcid": "1", "mkrid": "711-53200-19255-0", "siteid": "0",
-        "campid": campid, "customid": re.sub(r"[^a-z0-9]+", "-", (email or "anon").lower())[:40],
-        "toolid": "10001", "mkevt": "1",
-    }
-    sep = "&" if "?" in view_url else "?"
-    return view_url + sep + urllib.parse.urlencode(params), True
 
 
 # ---------------------------------------------------------------------------
-# EMAIL CONTENT (from the standard alert JSON — no new data path)
+# EMAIL CONTENT (from the standard alert JSON — no new data path)  GTG (3):
+# subject = 'Alert triggered: [player set variant] hit your $[X]';
+# body = THE TRIGGERING LISTING(S) as direct EPN-tagged eBay listing links.
 # ---------------------------------------------------------------------------
-def alert_row_html(a: dict, email: str) -> tuple[str, bool]:
+
+def _subject_lane(a: dict) -> str:
+    """'Brice Turang 2026 Topps Chrome Gold Refractor /50' — trimmed to ~90 chars."""
+    lane = " ".join(str(x) for x in [a.get("player", ""), a.get("lane", "")] if str(x).strip())
+    return lane[:90] if lane else "your card"
+
+
+def alert_listing_url(a: dict, lane_slug: str | None) -> str:
+    """THE TRIGGERING LISTING: an alert row's own listing URL when the pipeline
+    carries one, else the lane's targeted eBay search (same shape the /bands
+    pages hand the user — the click lands where the trigger came from)."""
+    url = str(a.get("url") or a.get("listing_url") or "").strip()
+    if url and url.startswith(("http://", "https://")):
+        return url
+    query = " ".join(str(x) for x in [a.get("player", ""), a.get("lane", "")] if str(x).strip())
+    return ("https://www.ebay.com/sch/i.html?_nkw=" + urllib.parse.quote_plus(query[:120])
+            + "&_sop=16")
+
+
+def alert_row_html(a: dict, email: str, lane_slug: str | None = None) -> tuple[str, bool]:
     player = str(a.get("player", "Unknown"))
     lane = str(a.get("lane", ""))
     price = a.get("price")
@@ -125,21 +150,21 @@ def alert_row_html(a: dict, email: str) -> tuple[str, bool]:
     evidence = str(a.get("evidence", ""))
     query = f"{player} {lane}".strip()
 
-    url, tagged = epn_tag(
-        f"https://www.ebay.com/sch/i.html?_nkw={urllib.parse.quote_plus(query)}&_sop=16",
-        email,
-    )
+    # GTG (3): the row's link IS the triggering listing, EPN-tagged via the ONE
+    # helper (band_pages.epn_tag; customid = the lane slug, anonymous).
+    url, tagged = epn_tag_email(alert_listing_url(a, lane_slug), lane_slug)
     band_note = ""
     # market-state only: show the OBSERVED last verified print context, never thresholds
     ctx = a.get("context") or a.get("baseline")
     if ctx:
-        band_note = f'<div style="color:#6b7280;font-size:12px">Market context: {str(ctx)[:120]}</div>'
+        band_note = f'<div style="color:#6b7280;font-size:12px">Market context: {_esc(str(ctx))[:120]}</div>'
 
-    link_txt = "View live eBay listings" + (" (affiliate link)" if tagged else "")
+    link_txt = ("Open the matching listing" + (" (affiliate link)" if tagged else ""))
     row = (
         f'<div style="border:1px solid #e5e7eb;border-radius:8px;padding:12px;margin:10px 0">'
-        f'<div style="font-weight:600">{player} — {lane}</div>'
-        f'<div>Last print: <strong>{_fmt_dollars(price)}</strong> · {call}</div>'
+        f'<div style="font-weight:600">{_esc(player)} — {_esc(lane)}</div>'
+        f'<div>Last print: <strong>{_fmt_dollars(price)}</strong>'
+        + (f" · {_esc(call)}" if call else "") + "</div>"
         f'{band_note}'
         f'<div style="margin-top:6px"><a href="{url}">{link_txt}</a></div>'
         f'</div>'
@@ -147,17 +172,40 @@ def alert_row_html(a: dict, email: str) -> tuple[str, bool]:
     return row, tagged
 
 
+def _esc(s: str) -> str:
+    return (s or "").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+
 def build_email(email: str, alerts: list[dict]) -> tuple[str, str, int, int]:  # subj, html, sent_rows, tagged_n
     lines = []
     tagged_n = 0
+    triggers: list[dict] = []
     for a in alerts:
         if str(a.get("call", "")) in ("QUIET", "NO-VALID-PRINT", "UNMEASURED"):
             continue  # honesty states never render as deals
-        row, tagged = alert_row_html(a, email)
+        triggers.append(a)
+    # GTG (3): the FIRST triggering row names the subject —
+    # 'Alert triggered: Brice Turang 2026 Topps Chrome Gold Refractor /50 hit your $27.99'
+    lane_slug = None
+    if triggers:
+        first = triggers[0]
+        price_txt = _fmt_dollars(first.get("price")).rstrip("0").rstrip(".") if first.get("price") is not None else ""
+        subj = (f"Alert triggered: {_subject_lane(first)} hit your "
+                f"{price_txt}")
+        # the lane slug (registry-resolved, best-effort, for the customid tag)
+        try:
+            from build_trending_searches import _resolve_slug  # noqa: E402  (same repo pattern)
+            _lane = _resolve_slug(f"{first.get('player', '')} {first.get('lane', '')}".strip()) or {}
+            lane_slug = _lane.get("slug")
+        except Exception:
+            lane_slug = None
+    else:
+        subj = "Card Scout — quiet markets this cycle"
+    for a in triggers:
+        row, tagged = alert_row_html(a, email, lane_slug)
         lines.append(row)
         tagged_n += 1 if tagged else 0
     n = len(lines)
-    subj = f"Card Scout — {n} new market signal{'s' if n != 1 else ''}" if n else "Card Scout — quiet markets this cycle"
     if n == 0:
         body = ("<p>No market signals this cycle. The bands are holding — "
                 "which is itself the market talking.</p>")
