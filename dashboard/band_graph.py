@@ -154,31 +154,76 @@ def own_series_recent(pts: list[dict], days: int) -> list[dict]:
 # ---------------------------------------------------------------------------
 def line_svg(pts: list[dict], width: int = 640, height: int = 150,
              label_left: str = "", label_right: str = "") -> str:
-    """Honest line chart of a [{x: date-or-month, y: value}] series."""
+    """Honest line chart of a [{x: date-or-month, y: value}] series.
+    GTG-4: renders Y-axis dollar ticks + X-axis date ticks (founder directive:
+    the chart shows prices and dates; only engine derivations stay sealed)."""
     if len(pts) < 2:
         return ""
     ys = [p["y"] for p in pts]
     lo, hi = min(ys), max(ys)
     rng = (hi - lo) or 1.0
-    step = (width - 24) / (len(pts) - 1)
+    step = (width - 80) / (len(pts) - 1)
+    left_pad = 58  # room for y-axis labels
     coords = []
     for i, p in enumerate(pts):
-        x = 12 + i * step
-        y = height - 18 - ((p["y"] - lo) / rng) * (height - 30)
+        x = left_pad + i * step
+        y = height - 30 - ((p["y"] - lo) / rng) * (height - 52)
         coords.append((round(x, 1), round(y, 1)))
     poly = " ".join(f"{x},{y}" for x, y in coords)
-    last = pts[-1]
     dot_x, dot_y = coords[-1]
-    return (
+    out = [
         f'<svg viewBox="0 0 {width} {height}" class="band-graph" role="img" '
-        f'aria-label="price history shape, {len(pts)} points">'
-        f'<polyline fill="none" stroke="#2563eb" stroke-width="1.8" points="{poly}"/>'
-        f'<circle cx="{dot_x}" cy="{dot_y}" r="3" fill="#2563eb"/>'
-        f'<text x="12" y="{height - 3}" font-size="10" fill="#9ca3af">{label_left}</text>'
-        f'<text x="{width - 12}" y="{height - 3}" font-size="10" fill="#9ca3af" '
-        f'text-anchor="end">{label_right}</text>'
-        f"</svg>"
-    )
+        f'aria-label="price history, {len(pts)} points">',
+        # gridline at median tick
+        f'<polyline fill="none" stroke="#2563eb" stroke-width="1.8" points="{poly}"/>',
+        f'<circle cx="{dot_x}" cy="{dot_y}" r="3" fill="#2563eb"/>',
+    ]
+    # ---- Y axis: three price ticks (hi / mid / lo)
+    import datetime as _dt
+
+    def _fmt_y(v: float) -> str:
+        if v >= 1000:
+            return f"${v:,.0f}"
+        cents_round = round(v, 2)
+        if abs(cents_round - round(cents_round)) < 1e-9:
+            return f"${cents_round:,.0f}"
+        return f"${cents_round:,.2f}"
+
+    mid = (lo + hi) / 2
+    for val, yy in ((hi, 14), (mid, (height - 30) / 2 + 22), (lo, height - 30 + 4)):
+        out.append(
+            f'<text x="4" y="{yy:.0f}" font-size="11" fill="#6b7280" '
+            f'text-anchor="start">{_fmt_y(val)}</text>'
+        )
+    # ---- X axis: first / mid / last date labels under the line
+    def _dlabel(p: dict) -> str:
+        x = str(p.get("x", ""))
+        try:
+            return _dt.date.fromisoformat(x).strftime("%b %d")
+        except ValueError:
+            return x  # monthly label (e.g. 2026-07)
+    n = len(pts)
+    for ti in sorted({0, n // 2, n - 1}):
+        cx = coords[ti][0]
+        anch = "start" if ti == 0 else ("end" if ti == n - 1 else "middle")
+        out.append(
+            f'<text x="{cx:.0f}" y="{height - 8}" font-size="10" fill="#6b7280" '
+            f'text-anchor="{anch}">{_dlabel(pts[ti])}</text>'
+        )
+    # optional source labels (kept, repositioned above x-axis)
+    # suppress raw-iso label_left (x-ticks already show dates)
+    import re as _re
+    _pretty = label_left if (label_left and not _re.fullmatch(r'\d{4}-\d{2}-\d{2}', str(label_left))) else ''
+    if _pretty:
+        out.append(f'<text x="{left_pad}" y="14" font-size="10" fill="#9ca3af">{_pretty}</text>')
+    if label_right:
+        out.append(
+            f'<text x="{width - 12}" y="14" font-size="10" fill="#9ca3af" '
+            f'text-anchor="end">{label_right}</text>'
+        )
+    out.append("</svg>")
+    return "".join(out)
+
 
 
 def build_graph(lane: dict, window: int | None = None) -> dict:
