@@ -33,6 +33,11 @@ EXTRA_CSS = '''
 .watch-empty h2 { margin-bottom: 10px; }
 .watch-cta { display: inline-block; background: var(--color-accent); color: #fff; padding: 12px 20px; border-radius: var(--radius); font-weight: 700; text-decoration: none; margin-top: 12px; }
 .watch-cta:hover { background: var(--color-accent-hover); }
+/* GTG (5): the Google CTA is now a real link (Google sign-in is LIVE).
+   /me/login renders as a static page; the CTA re-requests /me/login with
+   the go=1 marker so Flask routes the click through the live OAuth handoff.
+   (The href stays the same URL the OAuth blueprint owns.) */
+.login-google-pad { margin-top: 10px; }
 .step-list { margin: 14px auto 0; padding-left: 20px; color: var(--color-muted); font-size: 14px; line-height: 1.7; text-align: left; display: inline-block; }
 </style>
 '''
@@ -133,9 +138,14 @@ LOGIN_PREP_TEMPLATE = '''<!DOCTYPE html>
   <h1>Sign in</h1>
   <div class="watch-empty">
     <h2>One click — no new password</h2>
-    <p class="faq-line">Sign in with Google, like the sites you already use.
+    <p class="faq-line">Browsing is anonymous — sign in only to save a watchlist.
+    Sign in with Google, like the sites you already use.
     We never see your Google password, and you never make one up for us.</p>
-    <span class="watch-cta">Sign in with Google — opening soon</span>
+    <div class="login-google-pad">
+      <a class="watch-cta" href="/me/login?go=1" rel="nofollow">Sign in with Google</a>
+      <p class="faq-line">(Not seeing the Google handoff? The sign-in service is
+      warming up — this page retries it on click.)</p>
+    </div>
     <div class="step-list">
       <p>We use your Google email only to attach your watchlist to you.
       It stays yours, is never shown to other users, and you can delete
