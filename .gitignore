@@ -42,7 +42,10 @@ card_hedger_vs_scpro.log
 card_scout_errors.log
 
 # /bands runtime cache + search deposits (published artifacts live in dashboard/registry/)
-data/
+data/*
+# GTG-2: ship the tp_pulls time-series (graphs source #1)
+!data/tp_pulls.jsonl
 
 # CAMEL public-user storage (runtime data, never committed)
 dashboard/users/
+

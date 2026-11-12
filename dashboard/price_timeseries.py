@@ -19,7 +19,14 @@ from pathlib import Path
 
 DASH_DIR = Path(__file__).resolve().parent
 DL = Path(r"C:/Users/J/Documents/LLM/cardscout-2.0/data_lake/gold")
-_DL = Path(os.environ.get("TP_PULLS_DIR") or str(DL))
+# Render: env var wins; shipped data/tp_pulls.jsonl = the deploy fallback; local DL last.
+_SHIPPED = DASH_DIR.parent / "data" / "tp_pulls.jsonl"
+if os.environ.get("TP_PULLS_DIR"):
+    _DL = Path(os.environ["TP_PULLS_DIR"])
+elif _SHIPPED.exists():
+    _DL = _SHIPPED.parent
+else:
+    _DL = DL
 TP_PULLS = _DL / "tp_pulls.jsonl"
 CACHE_DIR = DASH_DIR / "pricehistory"
 CACHE_DIR.mkdir(exist_ok=True)
