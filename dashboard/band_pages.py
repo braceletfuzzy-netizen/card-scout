@@ -646,6 +646,19 @@ CARD_PAGE_TEMPLATE = '''<!DOCTYPE html>
             <input type="search" name="q" placeholder="Search a card or player…" aria-label="Search cards">
           </form>
       </div>
+      {# GTG (1) LANES AS GRANULARITY BUTTONS — sibling lanes of THIS player are
+         clickable filter buttons: one click re-filters the page within the
+         same player's lane set (the lane label is interactive, not static).
+         Current lane renders as the pressed button (aria-pressed). #}
+      {% if sibling_lanes %}
+      <nav class="lane-btn-row" aria-label="Filter within {{ lane.player }}'s lanes">
+        {% for sib in sibling_lanes %}
+        <a class="lane-btn{% if sib.slug == lane.slug %} active{% endif %}"
+           {% if sib.slug == lane.slug %}aria-pressed="true"{% endif %}
+           href="/bands/{{ sib.slug }}">{{ sib.lane_display }}{% if sib.grade_bucket != 'raw' %} · {{ sib.grade_bucket }}{% endif %}</a>
+        {% endfor %}
+      </nav>
+      {% endif %}
     </div>
     <div class="band-head-right">
       {% set _bsrc = band_source.source %}
@@ -1181,6 +1194,17 @@ def band_page(slug: str):
     # here; anonymous visitors keep zero state on this page.
     from flask import session as _flask_session
     user_email = _flask_session.get("user_email")
+    # GTG (1) LANES AS GRANULARITY BUTTONS: the player's full lane set from the
+    # SAME registry read (whitelisted fields only; add-only sibling view).
+    sibling_lanes = [
+        {
+            "slug": L["slug"],
+            "lane_display": L.get("lane_display", ""),
+            "grade_bucket": L.get("grade_bucket", "raw"),
+        }
+        for L in load_registry()["raw"].get("lanes", [])
+        if L.get("player") == raw.get("player")
+    ]
     lane = compose_lane(raw)
     items, meta = get_listings(slug)
     items = order_default(items)
@@ -1238,6 +1262,7 @@ def band_page(slug: str):
         refine_base_q=refine_base_q,
         band_graph=band_graph,
         user_email=user_email,  # GTG (6): the Follow-button Google gate
+        sibling_lanes=sibling_lanes,  # GTG (1): the player's clickable lane set
     )
 
 
