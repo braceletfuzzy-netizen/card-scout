@@ -76,9 +76,10 @@ def _load_client():
             __import__("sys").path.insert(0, sys_path)
         from cardhedger_client import CardHedgerClient  # noqa: E402
         import os
-        os.environ.setdefault(
-            "CARD_HEDGER_API_KEY",
-            "file:C:/Users/J/.secrets/card-scout/card-hedger-api-key.txt")
+        from pathlib import Path as _P
+        _local = _P(r"C:/Users/J/.secrets/card-scout/card-hedger-api-key.txt")
+        if not os.environ.get("CARD_HEDGER_API_KEY") and _local.exists():
+            os.environ["CARD_HEDGER_API_KEY"] = "file:" + str(_local)
         return CardHedgerClient()
     except Exception:
         return None
