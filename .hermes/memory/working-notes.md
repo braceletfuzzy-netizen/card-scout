@@ -18,3 +18,5 @@
 - PART 2 = paper/PAPER_ONE_METHODS.md (external): claims register (8 claims, each with math) + math module (FE spec, walk-forward rule, LOCO, elasticity conversion, stock/flow, two-tier identity) + source documents + citation ledger (supporting + opposing) + reproducibility statement (availability clause).
 
 - FOUNDER CORRECTION 2 (Nov-25): external data-sources = agency-report attribution ONLY ('we used Report A dated X from Agency Y') - no URLs/access-dates/route quirks in the paper module; those stay internal. Steered into the build mid-run.
+
+- FOUNDER CORRECTION 3 (Nov-25) - THE DISAGREEMENT PROTOCOL: never 'wrong and we're right'; steel-man their case first; carry what they get RIGHT explicitly; name the SPECIFIC gap (accounted-for variable / timeline grain / case class); note what stays genuinely contested. Worked exemplar: Oerebro drop-in warning = right, carried by structure-beats-open-door law; MTO = null-for-adolescents right, under-13 positive carried by targeting law. Tone = 'we extend, we account, we differ on the grain'. Claims register also scopes each claim against its counter-literature.
