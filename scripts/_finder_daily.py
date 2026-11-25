@@ -21,11 +21,11 @@ Smoke test: set env FIND_SMOKE=1 -> 1 name, 2 queries, Discord SUPPRESSED.
 
 CONVENTION NOTE (fleet stall-exit pattern, adopted Nov-23 — agent-loop course item #3):
   This fleet's stand-exit rule = "2 rounds without fewer failures => structured stop".
-  Module: For You/PolyScout/build/fleet_stall_exit.py (AppData hermes/scripts/ mirror
+  Module: build/fleet_stall_exit.py (AppData hermes/scripts/ mirror
   per the two-place law) — import-ready NOW, call-site NOT yet wired (convention-first;
   do not rewire the finder loop without a FIND_SMOKE=1 test run):
       import sys as _sys
-      _sys.path.insert(0, "C:/Users/J/Documents/LLM/cardscout-2.0/For You/PolyScout/build")
+      _sys.path.insert(0, "C:/Users/J/Documents/LLM/PolyScout/build")
       from fleet_stall_exit import check_stall, stall_exit_note
       # call-site (per query-round loop, after failures counted this round):
       #   _failure_history.append(failures_this_round)

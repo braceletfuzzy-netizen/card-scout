@@ -4,7 +4,7 @@ import json, urllib.request, re
 # Usage: python peer_review_scan.py "search terms" [limit]
 # Writes rows to build/peer_review_scan_v1.jsonl (append); prints title/venue/year/citations.
 # NEVER fabricate: only rows returned by the API are written. Secondhand-tag anything relayed.
-B = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'For You', 'PolyScout', 'build')
+B = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'build')
 os.makedirs(B, exist_ok=True)
 OUT = os.path.join(B, 'peer_review_scan_v1.jsonl')
 

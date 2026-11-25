@@ -4,7 +4,7 @@ Founder-direct alert ONLY on: a promise flips PENDING->scored, or a deadline-sli
 import json, os, urllib.request
 from datetime import date
 
-STAT = 'C:/Users/J/Documents/LLM/cardscout-2.0/For You/PolyScout/build/mamdani_statline_v1.json'
+STAT = 'C:/Users/J/Documents/LLM/PolyScout/build/mamdani_statline_v1.json'
 STATE = 'C:/Users/J/Documents/LLM/cardscout-2.0/data_lake/gold/mayor_row_state.json'
 FD = '1567567851408072814'
 

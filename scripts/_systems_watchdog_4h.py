@@ -7,7 +7,7 @@ CONVENTION NOTE (fleet stall-exit pattern, adopted Nov-23 — agent-loop course 
   two-place law) — import-ready NOW, call-site NOT yet wired (convention-first; do not
   rewire the watchdog cycle without a test run):
       import sys as _sys
-      _sys.path.insert(0, "C:/Users/J/Documents/LLM/cardscout-2.0/For You/PolyScout/build")
+      _sys.path.insert(0, "C:/Users/J/Documents/LLM/PolyScout/build")
       from fleet_stall_exit import check_stall, stall_exit_note
       # call-site (keep a persistent failure-count file across 4h cycles, e.g.
       # _watchdog_failures.json — append round count of failed checks; >=3 points
