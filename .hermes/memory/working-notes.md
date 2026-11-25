@@ -10,3 +10,11 @@
 - STANDS: 255 rerunnable scripts (60 w/ inline routes) + 353 data deliverables + standalone falsifier artifacts (backwards_test_v1 + pre_registered_civic_call) + RUNLOG + the briefs' source maps + own working-notes.
 - GAPS: (1) no top-level METHODS README indexing the corpus (2) 195 scripts w/o inline routes (routes in sibling JSONs/source-ledger) (3) the full working-notes HISTORY lives in cardscout-2.0 (the entity's copy = stub) - the methods ledger needs copying as methods.md (4) raws untracked by design -> rebuild needs the route bank.
 - FIX queued: POLYSCOUT_METHODS.md at entity root = the 9-step path + per-family status/commits + the route bank + script->deliverable map + falsifier registry + full working-notes copy. Awaiting GO.
+
+
+## THE TWO-PART REPRODUCIBILITY BUILD = FIRED (Nov-25, deleg_f4c4239c)
+- Founder: (1) internal = document of all methods for reproduction; (2) external = paper-ready module: all source documents + mathematical formulas/methods + cited references SUPPORTING and DISAGREEING; central idea = state all methodology and proofs reproducible from our same sources/inputs. CORRECTION: 'we don't have to submit lines of code' - the paper module = methods prose + math, no code listings; estimators cited to canon; availability clause for the code.
+- PART 1 = POLYSCOUT_METHODS.md (internal, entity root): 9-step manufacture path + route bank + models-with-betas + instrument status + call registry + laws + cross-exam bank + gaps + METHODS_LEDGER (full working-notes history copied).
+- PART 2 = paper/PAPER_ONE_METHODS.md (external): claims register (8 claims, each with math) + math module (FE spec, walk-forward rule, LOCO, elasticity conversion, stock/flow, two-tier identity) + source documents + citation ledger (supporting + opposing) + reproducibility statement (availability clause).
+
+- FOUNDER CORRECTION 2 (Nov-25): external data-sources = agency-report attribution ONLY ('we used Report A dated X from Agency Y') - no URLs/access-dates/route quirks in the paper module; those stay internal. Steered into the build mid-run.
