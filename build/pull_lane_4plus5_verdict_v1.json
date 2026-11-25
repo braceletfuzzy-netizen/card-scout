@@ -1,0 +1,38 @@
+{
+ "_record": "pull_lane_4plus5_verdict_v1",
+ "built": "2026-11-23",
+ "parent_lane": "policy_associations_v1 best-15: rank-4 beds-jail-swap + rank-15 smha-spend-null (both PULL-REQUIRED -> now PULLED/BANKED)",
+ "outputs": [
+  "beds_jail_swap_v1.json + beds_jail_swap_v1_rows.jsonl (1,653 county-year rows, 57 counties, 1997-2025)",
+  "smha_funding_null_v1.json (52-jurisdiction FY2024 exposure + 18-cell MW grid 2019-2024)",
+  "pull_lane_4plus5_verdict_v1.json (this file)"
+ ],
+ "lane4_headline": [
+  "BANKED the US Penrose micro-arc at county grain: NY jail census (nymx-kgkn, 1,924 rows) + certified psychiatric beds (2g9y-7kqm, 94 rows / 4,936 beds / 41 counties) + Census PEP pops (krt9-ym2k, 3,906 rows)",
+  "STATIC TEST (36 dual-grain counties): population-blind cross-section r=+0.626 p=4e-5 (positive = county scale confound); per-capita r=+0.286 p=0.09 \u2014 the naive inverse Penrose sign does NOT appear in the within-state cross-section",
+  "CHANGE TEST 2000->2024: ~zero (r=+0.19 p=0.27) \u2014 NY's 2020-2021 jail collapse (-49%, bail reform+COVID) is the dominant first axis, not beds",
+  "TIME-ARC: jail stock +13% 1997->2010 while NY holds the nation's max state-psychiatric-hospital count (23) => NY's bed-to-jail swap is largely PRE-1997-complete at the county margin; post-2019 the axis is policy, not beds",
+  "HONEST-NULLS banked: psych-bed capacity time-series NOT capturable keyless on Socrata (4 datasets probed: 2dbc-sqe7 acute-only, 4uks/xgig utilization-not-capacity, CON-not-capacity) \u2014 bed-arc half runs on a fixed 2026 snapshot, tagged per row; NYC aggregate rows excluded from county tests, flagged",
+  "BOARD-IN bridge banked (boarded_in_psych column) for the next pass \u2014 the direct jail->psych flow measure at facility-year grain"
+ ],
+ "lane5_headline": [
+  "REPLICATED the PMID-42750086 stratification design at the mortality margin: NRI FY2024 SMHA per-capita (Table 1, 52 jurisdictions, internal-consistency max error <7e-5) x CDC Mapping-IOV state rates (fpsi-y8tj, 51 jurisdictions, 2019-2024)",
+  "18 of 18 Mann-Whitney cells NON-SIGNIFICANT (suicide/homicide/overdose x 6 years; p range 0.15-0.90) \u2014 the anchor's null verdict replicates",
+  "SUICIDE runs opposite the naive direction (bottom-10 spend states HIGHER suicide in 6/6 years, ~+2.5/100k, p=0.24-0.51, nonsig) \u2014 directional trend like the paper's, in the opposite class-expected sign",
+  "OVERDOSE: top-spend states higher in 6/6 (up to +6.5/100k, p=0.31-0.90) \u2014 fentanyl supply wave dominates SMHA-spend rank",
+  "funding-not-beds adjacent check: NRI Table 3 split shows hospital-capacity share is organization-choice-mediated (13 states run hospitals outside the SMHA; MI 97.7% hospital-share at lowest total spend; OR $524 community vs IA $14.7 total) \u2014 replicates rank-5 null class",
+  "HONEST-NULLS banked: BRFSS cost-barriers question absent from keyless Socrata layer (5eh7-pjx8 probed); parity stratification arm behind NRI profiles sign-in this pass"
+ ],
+ "implication_for_the_grid": [
+  "rank-4 + rank-13 move PULL-REQUIRED -> PULLED (county-grain US panel exists; bed-arc time-series remains the open half)",
+  "rank-15 + rank-5 move PULL-REQUIRED -> PULLED (50-state+ exposure table exists; client-level outcome margin remains open/behind-wall)",
+  "congregation thesis read: two independent nulls (this mortality-level replication + the anchor's client-level null) sharpen 'dollars do not automatically become care where the service sits' \u2014 the component-grain conductor (county/city programs) is where the correlation actually lives (banked v7/v8/v11)"
+ ],
+ "routes_tried_and_banked": {
+  "web_search tool": "DOWN (Nous gateway unentitled) \u2014 PubMed fetched via eutils efetch directly",
+  "findtreatment.gov exportsAsJson": "city/state grain only (2000-row slice), county grain absent \u2014 not usable for county beds; locator listing endpoint returns JS shell",
+  "data.samhsa.gov": "DNS does not resolve from this host",
+  "census API": "returns 'Missing Key' wall keyless \u2014 replaced by data.ny.gov krt9-ym2k PEP series (better: annual 1970-2025)",
+  "NRI pdf direct /media/ URL on nri-incdata.org": "serves the profiles HTML page (domain redirect) \u2014 correct host is www.nri-inc.org"
+ }
+}

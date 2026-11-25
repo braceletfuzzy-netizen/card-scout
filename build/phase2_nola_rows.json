@@ -1,0 +1,16 @@
+[
+ {
+  "year": "2025",
+  "edu_total_usd": 615798921,
+  "basis": "district (AOR, all-charter-class)",
+  "source_refs": [
+   "NOLA-PS Adopted Budget Book FY2025-26 (nolapublicschools.com/documents/adopted-budget-2026/download), sections: PASS-THROUGH FUND Total Other Financing Uses FY2025 last-adopted $562,500,911; GENERAL FUND Total Expenditures by Object FY2025 $41,265,986; SYSTEMWIDE NEEDS FUND FY2025 dept-row sum $12,032,024"
+  ],
+  "data_quality": "Certain-as-published (official adopted book last-adopted columns; pass-through arithmetic verified: 578,623,911 Type2 - 16,123,000 = 562,500,911)",
+  "notes": "NOLA-PS system footprint (GF + pass-through to charters + 8J). FY2025 column = last adopted budget per the FY26 book.",
+  "honest_gaps": [
+   "8J FY2025 total is a wrapped-table department-row SUM (5 rows visible); may omit small rows (\u00b1~1M)",
+   "Same AOR/pass-through caveats as v1 - pass-through dollars are charter-school budgets, never add charter-level books"
+  ]
+ }
+]

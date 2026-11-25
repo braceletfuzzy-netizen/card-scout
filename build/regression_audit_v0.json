@@ -1,0 +1,39 @@
+{
+ "built": "2026-11-22",
+ "the_question": "regression-analysis: increased Care lane funding vs crime-decreasing?",
+ "the_data_inventory": {
+  "BOSTON": {
+   "care_ratio_series": "8 yrs (1980-2001) + FY27",
+   "crime_series": "murder/UCR sampleable (peak-1990-91-arc!)",
+   "status": "budget-done/crime-queued"
+  },
+  "OKC": {
+   "care_ratio": "4 pts (FY22/27 + MAPS-eras)",
+   "crime_series": "queued",
+   "status": "thin-budget/crime-queued"
+  },
+  "NYC": {
+   "care_cage": "5 yrs FY98-02 + anchors",
+   "crime_series": "murders KNOWN-arc (2245-1990 -> 960-2001!)",
+   "status": "budget-done/crime-bankable-now"
+  },
+  "DETROIT": "7 yrs budget done",
+  "CINCINNATI": "16 pts budget done (+PBB measures)",
+  "ST_LOUIS": "15 pts budget done",
+  "MEMPHIS": "7 yrs budget done + KPIs",
+  "NEW_ORLEANS": "10 pts budget done (Katrina-arc!)"
+ },
+ "the_lag_design": "THE LAGGED-SPEC: care-up-yr-t -> crime-check-yr-t+2/t+3/t+5 = THE timing-test (Boston: 1995-flip -> crime-check-1998-2000)",
+ "the_spec": [
+  "MODEL-1 pooled-correlation (quick, honest-thin)",
+  "MODEL-2 fixed-effects-panel (each-city-its-own-control = like-to-like-law)",
+  "MODEL-3 lagged-care-vs-crime t -> t+3 (direction-test)",
+  "MODEL-4 flip-event-study (pre/post windows around break-years: Boston-95, NO-2011)"
+ ],
+ "the_honest_frame": "correlation = YES-runnable; causation = NO-claimable (observational, confounders named); within-city deltas + lagged timing = strongest honest lane; claims carry falsifiers",
+ "the_prereq_lanes": [
+  "crime-series-ingest (UCR state-annual per-city-year)",
+  "N-expansion (T1-25-cities panel = statistically-relevant)"
+ ],
+ "the_verdict": "READY-after-the-crime-lane-lands; N-thin-until-T1-25; sequencing = crime-lane-ingest-first"
+}

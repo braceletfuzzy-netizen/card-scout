@@ -1,0 +1,18 @@
+{"tier": "T2", "key": "Braga meta", "query": "The Effects of Focused Deterrence Strategies on Crime", "data": {"error": "429 persist"}}
+{"tier": "T2", "key": "Braga 2018", "query": "Focused Deterrence Strategies and Crime Control", "data": {"error": "429 persist"}}
+{"tier": "T2", "key": "Reyes lead", "query": "Environmental Policy as Social Policy childhood lead exposure crime", "data": {"error": "429 persist"}}
+{"tier": "T3", "key": "Sampson", "query": "Neighborhoods and Violent Crime Multilevel Study Collective Efficacy", "data": {"error": "429 persist"}}
+{"tier": "T3", "key": "Akcomak", "query": "Why does social capital reduce crime", "data": {"error": "429 persist"}}
+{"tier": "T3", "key": "Heller", "query": "Summer Jobs Reduce Violence Among Disadvantaged Youth", "data": {"error": "429 persist"}}
+{"tier": "T3", "key": "DuBois", "query": "How Effective Are Mentoring Programs for Youth", "data": {"error": "429 persist"}}
+{"tier": "T4", "key": "Jackson", "query": "The Effects of School Spending on Educational and Economic Outcomes", "data": {"error": "429 persist"}}
+{"tier": "T4", "key": "Chetty teachers", "query": "The Long-Term Impacts of Teachers Teacher Value-Added Student Outcomes", "data": {"error": "429 persist"}}
+{"tier": "T4", "key": "Chetty STAR", "query": "How Does Your Kindergarten Classroom Affect Your Earnings", "data": {"error": "429 persist"}}
+{"tier": "T4", "key": "schoolbus", "query": "Another One Rides the Bus The Impact of School Transportation", "data": {"error": "429 persist"}}
+{"tier": "T5", "key": "Chetty MTO", "query": "The Effects of Exposure to Better Neighborhoods on Children Moving to Opportunity", "data": {"error": "429 persist"}}
+{"tier": "T5", "key": "Chetty Atlas", "query": "Where is the Land of Opportunity The Geography of Intergenerational Mobility", "data": [{"paperId": "ae28ac08599b5717436823c5d26c68002b2d3d65", "title": "Where is the Land of Opportunity? The Geography of Intergenerational Mobility in the United States*", "venue": "", "year": 2014, "citationCount": 3013, "openAccessPdf": {"url": "https://academic.oup.com/qje/article-pdf/129/4/1553/30631636/qju022.pdf", "status": "BRONZE", "license": null, "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1093/QJE/QJU022?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1093/QJE/QJU022, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."}, "authors": [{"authorId": "50976894", "name": "Raj Chetty"}, {"authorId": "3920191", "name": "Nathaniel Hendren"}, {"authorId": "2918159", "name": "Patrick M. Kline"}, {"authorId": "8418288", "name": "Emmanuel Saez"}], "abstract": null}]}
+{"tier": "T5", "key": "Sherraden CDA", "query": "Effects of Child Development Accounts college savings parenting", "data": {"error": "429 persist"}}
+{"tier": "T1", "key": "Frisvold", "query": "Does breakfast improve school test scores", "data": {"error": "429 persist"}}
+{"tier": "T1", "key": "Jacob Ludwig", "query": "housing vouchers crime trends experimental evidence", "data": {"error": "429 persist"}}
+{"tier": "T1", "key": "Ludwig housing", "query": "Public Housing Housing Vouchers and Student Achievement", "data": {"error": "429 persist"}}
+{"tier": "T1", "key": "Gennetian", "query": "Predicting material hardship child behavior", "data": {"error": "429 persist"}}

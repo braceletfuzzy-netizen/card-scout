@@ -1,0 +1,29 @@
+[
+ {
+  "year": "2022",
+  "edu_total_usd": 1036440424,
+  "basis": "external-district",
+  "source_refs": [
+   "DPSCD ACFR FY2022 (detroitk12.org /fs/resource-manager/view/6e9e5245-8807-44ee-84a4-a39ef82af74f), Governmental Funds statement: General Fund Total expenditures $1,036,440,424; also p.60 trend table 2022 row $1,036,440,424"
+  ],
+  "data_quality": "Certain-as-published (audited ACFR; figure appears in both the fund statement and the trend table)",
+  "notes": "DPSCD General Fund (incl transfers-out class per p.60 convention). DPSCD = independent state-established district; City of Detroit pays NO general-ops contribution.",
+  "honest_gaps": [
+   "GF-only scope (all governmental funds incl. capital projects = $1,078,803,378 in the same ACFR)",
+   "Audited-actual basis (not adopted-budget); matches the MI FID actuals class"
+  ]
+ },
+ {
+  "year": "2024",
+  "edu_total_usd": 1124595934,
+  "basis": "external-district",
+  "source_refs": [
+   "DPSCD ACFR FY2024 (detroitk12.org /fs/resource-manager/view/fe5f3728-2a0a-4a77-bacd-1d446ee88e2c), Changes in Fund Balances Gov Funds trend table: Total expenditures FY2024 = $1,124,595,934; p.60 GF comparison: Expenditures and Transfers Out 2024 = $1,124,595,934"
+  ],
+  "data_quality": "Certain-as-published (audited ACFR trend tables, two independent tables agree)",
+  "notes": "DPSCD FY2024 audited expenditures.",
+  "honest_gaps": [
+   "The 2024 trend-table total equals the p.60 GF figure (1,124,595,934 in both); GF vs all-funds distinction minimal this year"
+  ]
+ }
+]

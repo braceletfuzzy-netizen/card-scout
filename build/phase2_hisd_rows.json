@@ -1,0 +1,30 @@
+[
+ {
+  "year": "2022",
+  "edu_total_usd": 2028542973,
+  "basis": "external-district",
+  "source_refs": [
+   "HISD 2021-2022 Recommended Budget - Final (resources.finalsite.net/images/v1749058471/houstonisdorg/twp6yhu5o5wx3o7hwgak/2021-2022__Recommended_Budget-Final-.pdf), General Fund 2021-2022 Recommended Budget page: appropriations $2,028,542,973"
+  ],
+  "data_quality": "Certain-as-published (official GF recommended-budget table)",
+  "notes": "HISD GF (M&O) 2021-22 recommended appropriations. HISD is an independent TX district (state takeover era after Jan 2023); City of Houston does not fund operations.",
+  "honest_gaps": [
+   "Recommended-budget basis (June 2021 adoption packet), not final amended actuals",
+   "GF-only scope"
+  ]
+ },
+ {
+  "year": "2024",
+  "edu_total_usd": 2393364269,
+  "basis": "external-district",
+  "source_refs": [
+   "HISD 2023-2024 Recommended Budget Presentation (resources.finalsite.net/images/v1749058471/houstonisdorg/hqtsgujinejtk6ye8nzy/2023-2024_Recommended_Budget_Presentation.pdf), FY24 Recommended: GF revenues+other sources $2,224,824,843; appropriations incl. debt service $2,393,364,269"
+  ],
+  "data_quality": "Certain-as-published (official recommended-budget presentation; figure read from the appropriations column block)",
+  "notes": "HISD GF (M&O) FY2023-24 recommended appropriations $2.393B.",
+  "honest_gaps": [
+   "Wrapped-table extraction: 2,393,364,269 sits in the appropriations block adjacent to the Debt-service line; scope = GF M&O appropriations (recommended, pre-amendment)",
+   "Revenue total (2,224,824,843) < appropriations (2,393,364,269): deficit budget, consistent with the presentation narrative"
+  ]
+ }
+]

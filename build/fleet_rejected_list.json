@@ -1,0 +1,87 @@
+{
+  "_meta": {
+    "file": "fleet_rejected_list.json",
+    "created": "2026-11-23",
+    "purpose": "Standing rejected-ideas ledger — stops crons/workers re-proposing vetoed ideas after restart (agent-loop course adopt-item #2, digest: For You/Research/twitter-articles-digest-2026-11-23.md).",
+    "reader": "fleet_rejected.py (same dir; AppData hermes/scripts/ mirror per the two-place law)",
+    "shape_note": "Entry 'date' = ledger-seed date where the original veto date was not re-verified this session; the original banked date, when verified, lives in 'cause'. No fabricated vetoes — every class is a real banked law.",
+    "sources": [
+      "C:/Users/J/AppData/Local/hermes/memories/MEMORY.md",
+      "C:/Users/J/Documents/LLM/cardscout-2.0/memory/tier1-archive-2026-11-06.md",
+      "C:/Users/J/AppData/Local/hermes/skills/civic-data/civic-data-instruments/references/fleet-hardening-adopted-patterns.md",
+      "C:/Users/J/Documents/LLM/cardscout-2.0/For You/Research/twitter-articles-digest-2026-11-23.md"
+    ]
+  },
+  "rejected": [
+    {
+      "id": "process-all-enabled",
+      "idea_brief": "Hard-coded customer/ID sweeps — iterating over hard-coded customer or ID lists instead of the DB-enabled records.",
+      "vetoed_by": "founder",
+      "date": "2026-09-17",
+      "cause": "THE PROCESS-ALL-ENABLED LAW (banked Sept 17, user-corrected): cron jobs / alerts / scripts iterate over the DB (enabled customers, active records), never hard-coded IDs — scales without code edits."
+    },
+    {
+      "id": "customer-rebates",
+      "idea_brief": "Customer-facing rebates attached to deal alerts or purchases.",
+      "vetoed_by": "founder",
+      "date": "2026-11-23",
+      "cause": "MPA program terms 4.2d bar customer-facing rebates — banked with the affiliate doctrine (EPN qualifying-links, Oct 17): deal alerts are qualifying links by design; no rebate layer on top."
+    },
+    {
+      "id": "publish-engine-names",
+      "idea_brief": "Publishing the forward-chain / engine names (public label for the internal engine-grade pipeline).",
+      "vetoed_by": "founder",
+      "date": "2026-11-11",
+      "cause": "THE NAMING LAW: pull-query/forward-chain and engine names stay private (banked Oct 20 pull-query naming law; the Nov-11 Camel execution-spec flags ENGINE-GRADE rename as founder-decision — the engine names are never published in public copy)."
+    },
+    {
+      "id": "falsify-word-civic-language",
+      "idea_brief": "The falsify-word civic-language framing (claim dressing/labeling that fails reproducibility).",
+      "vetoed_by": "verifier",
+      "date": "2026-11-23",
+      "cause": "THE REPRODUCIBILITY-LAW SUPERSEDES: every claim verified, all in git, all reproducible — the falsify-word civic-language pattern is vetoed wherever it conflicts. (Banked in the working-notes reproducibility standard.)"
+    },
+    {
+      "id": "mixed-grade-medians",
+      "idea_brief": "Mixing graded and ungraded rows into one raw-median computation.",
+      "vetoed_by": "verifier",
+      "date": "2026-11-23",
+      "cause": "GRADED-ROWS-SEPARATE LAW: graded and ungraded rows stay separate in any median/summary math — caught the same day it was tried (banked with the Oct-13 study-arm traps)."
+    },
+    {
+      "id": "ask-times-n-corner-math",
+      "idea_brief": "Naive ask-times-N corner math (multiplying observed ask prices by N to estimate volume/value).",
+      "vetoed_by": "verifier",
+      "date": "2026-11-23",
+      "cause": "THE SUPPLY-LADDER LAW (transplanted Oct 14, ~230-row NBA probe): value sits on a 6.3x-100x supply ladder with rung multipliers — naive linear ask-times-N multiplication at the corners is structurally wrong."
+    },
+    {
+      "id": "memory-file-bypass-edits",
+      "idea_brief": "Bypass edits to memory files (patch/shell writes around the memory-tool guard).",
+      "vetoed_by": "verifier",
+      "date": "2026-11-23",
+      "cause": "THE TOOL-CLEAN LAW + MEMORY-TOOL GUARD #26045 (Nov-6): MEMORY.md and memory files are edited only through their owning tools — shell/patch bypass edits get rejected ('file wouldn't round-trip') and are vetoed as a class."
+    },
+    {
+      "id": "reactive-bookings-classification",
+      "idea_brief": "Classifying bookings as reactive (the reactive-bookings classification claim).",
+      "vetoed_by": "verifier",
+      "date": "2026-11-23",
+      "cause": "THE NIGHT'S RETRACTION — the reactive-bookings-classification claim was withdrawn by the verifier; re-test only after the facility grain widens (banked in the multi-state within-state panel working notes)."
+    },
+    {
+      "id": "apify-volume-scrapes",
+      "idea_brief": "Apify-actor-class volume scrapes as the standing collection route.",
+      "vetoed_by": "founder",
+      "date": "2026-11-23",
+      "cause": "THE SCALE-COST LAW: Apify per-run costs (~$0.04-0.05/card/run, banked Sept 14; Starter $29/mo) lose at scale to BrightData-class routes (BD free 5K/mo, web_unlocker1) — volume scraping goes BD/BrightData-class, not Apify-actor-class."
+    },
+    {
+      "id": "oversized-commit",
+      "idea_brief": "Oversized-commit pattern — committing giant source files (>100MB PDFs) whole to the repo.",
+      "vetoed_by": "founder",
+      "date": "2026-11-22",
+      "cause": "THE SPLIT-AND-TAG-LAW INSTEAD (Nov-22, founder-trick): critical source-PDF > GitHub's 100MB cap = split into <=90MB blocks + reassembly manifest (SHA256 per block + source-hash, byte-counts). Session-proven: the 118MB MO budget PDF in a committed cache dir silently hard-failed the push."
+    }
+  ]
+}

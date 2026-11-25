@@ -1,0 +1,2285 @@
+{
+ "_record": "care_bookings_ordering_v2",
+ "built_utc": "2026-11-24T02:32:47.562691+00:00",
+ "parent": "care_bookings_ordering_v1.json (built 2026-11-23T23:48:04Z — carried in full below in v1_carried)",
+ "extension": {
+  "EXT-1_wide_lane": "_bridge/_wide_arrests.jsonl: 26 CDE wide-lane cities (UCR-arrest intake proxy 2011-2019, months-guarded) merged as city-years; lane label per row; the ordering test A re-run with the widened bookings book (same-frame care where city-care exists; the wide cities have NO city care-book on disk, so EXT-1 carries the bookings-side breadth honestly — the care-side join must come from the STATE lane, which is EXT-2)",
+  "EXT-2_state_lane": "state_mh_series_v2.jsonl annual MH-spend (2019-2025, value_kind carried, TX biennial + 2026s excluded) vs state-matched city bookings_total (UCR intake) at t+t lag — test D': state care $ -> city arrest-intake ordering"
+ },
+ "laws": [
+  "check-us-not-kill-us reproducibility header",
+  "non-reporting != zero (honest-null, routes carried)",
+  "no fabricated years (lag pairs only where BOTH years exist in sources)",
+  "split-if-accounted-only (basis + partial-null flags carried per row)",
+  "lag-pair n carried with every r/t (thin-n flagged, never hidden)"
+ ],
+ "conventions_inherited": {
+  "care_usd_total": "city_component_annual_v1 units: source rows with subcomponent==\"total\" summed when present (dedup law - never sums total + PS/OTPS breakouts); else sum of non-total rows; not_applicable rows (e.g. Cincinnati county-levy libraries) contribute honest-null, counted in care_partial_nulls",
+  "bookings_total": "bookings_series_v1 city-year arrests = intake/booking volume PROXY (not jail-facility admissions) - measure label carried per panel row",
+  "murders": "murders_all_v1 (max-of-source dedupe per _merge_murders.py conventions)",
+  "population": "priority: population_series_v1 (decennial anchors) > populations_wide_v1 (PEP v2019) > populations_cities_v2 (PEP v2025) > triple_slider_v6d fallback (labeled inline)",
+  "per_capita": "None-propagating: population None -> per-capita None (never zero-substituted)",
+  "corr_report": "r + t + n per lag; per-city tables require >=3 pairs; pooled pools WITHIN-CITY-DEMEANED pairs (fixed-effect lens) after dropping cities with <3 pairs at that lag"
+ },
+ "v1_carried": {
+  "coverage": {
+   "care_book_rows": {
+    "city_component_annual_v1.jsonl rows_in": 2509,
+    "city-years_out": 94,
+    "cities": [
+     "Cincinnati",
+     "Denver",
+     "Detroit",
+     "Memphis",
+     "NYC",
+     "St. Louis"
+    ]
+   },
+   "bookings_rows_in": {
+    "bookings_series_v1.jsonl city-years": 90,
+    "nulls_carried": 1,
+    "bookings_facility_v1.jsonl facility-years": 1965,
+    "NYC facility years usable": 28
+   },
+   "murder_city_years": 558,
+   "panel_care+bookings+murders+pops_full_quad": 30,
+   "panel_care+bookings+murders": 30,
+   "panel_care+murders": 45,
+   "panel_care+bookings": 34,
+   "panel_rows_total": 95,
+   "test_pairs_by_lag": {
+    "A_care_to_bookings": {
+     "0": 30,
+     "1": 26,
+     "2": 19,
+     "3": 11,
+     "4": 7
+    },
+    "B_care_to_murders": {
+     "0": 42,
+     "1": 36,
+     "2": 30,
+     "3": 24,
+     "4": 15
+    },
+    "C_bookings_to_murders": {
+     "0": 50,
+     "1": 38,
+     "2": 34,
+     "3": 26,
+     "4": 15
+    }
+   }
+  },
+  "honest_gaps": {
+   "Denver": "care book 2021-2023 only; no bookings (CDE agency route not banked for Denver); care+murder+pop triple = 0 rows -> Denver rides raw lanes only, honest",
+   "care_years_beyond_bookings": "care book runs to 2026-2028 (budget/forecast-basis rows); bookings series ends 2024 - lag pairs beyond 2024 exist only for the murder lane",
+   "bookings_2024_NewOrleans": "bookings_total = honest-null (NOPD non-reporting), carried null, never zero",
+   "nyc_murders_gap": "NYC murders exist 1998-2001 + 2019-2024 only (DCJS-verified + 2020s pull); interior 2002-2018 honest-gap",
+   "facility_lane_non_NYC": "bookings_facility_v1 non-NYC panel rows (Detroit/Harris/Shelby/Orleans/StLouisMetro: 65/78 rows) are honest-null facility counts (routes-tried documented in source header) - facility lane = NYC-only honest; NY-statewide county jails = different state lane, not merged",
+   "nyc_facility_pre2013": "NYC DOC admitted-coverage starts ~2013 per source flags; facility deep-lane uses the admitted rows 2013-2025",
+   "nyc_care_book_seam": "NYC IBO agency-expenditure seam: HRA rows are 0 post-DSS-merge (DSS/HRA consolidation printed as one agency) - carried as printed, flagged",
+   "thin_tail": "t+3/t+4 lag pairs thin (test A: n=11/7) - the negative tail values are thin-n-flagged, carried as pattern-leads, NOT verdicts"
+  },
+  "flags": [
+   "NYC test-B per-city r=-0.994 (n=9) = MONOTONE-TREND ARTIFACT class: NYC care-USD grows smoothly 2019-2025 while murders fall 2020-2024 - the near-perfect r is the trend artifact, not a causal estimate [flag-not-verdict]",
+   "test-A short-lags positive (t+0 +0.14 / t+1 +0.27 / t+2 +0.26, within-city per-capita) = the money-follows-crisis signature now visible IN THE CARE LANE (the officers +0.243 / SAMHSA +0.394 class) - the t+3/t+4 negative tail is the thin-N Cincinnati-concentrated flips [flag-not-verdict]",
+   "test-C mid-stream ordering is RATE-SENSITIVE: raw-lane pooled t+0/t+1 negative (-0.46/-0.40 - arrest-heavy years co-move with murder-heavy years) while the per100k lane flips t+1 positive (+0.36) - population-growth cities (Houston) own much of the raw-lane inverse [flag-not-verdict]",
+   "per-city test-B sign-consistency lane (Detroit -0.82..-0.90 across t+1..t+4; Memphis t+1 -0.84; STL t+1 -0.81) is consistent-with-thesis but each city n=4-7 thin - the PATTERN (negative + deepening-with-lag) is the finding"
+  ],
+  "tests": {
+   "A_care_to_bookings": {
+    "measure": "care_usd_total (raw + per-capita) at year t vs bookings_total (UCR-arrest intake proxy, raw + per-100k) at year t+lag, within-city pooled and per-city",
+    "cities_in_frame": [
+     "Cincinnati",
+     "Detroit",
+     "Memphis",
+     "NYC",
+     "St. Louis"
+    ],
+    "pooled_within_city_per100k": {
+     "0": {
+      "r": 0.1366,
+      "t": 0.73,
+      "n": 30
+     },
+     "1": {
+      "r": 0.2692,
+      "t": 1.37,
+      "n": 26
+     },
+     "2": {
+      "r": 0.2624,
+      "t": 1.12,
+      "n": 19
+     },
+     "3": {
+      "r": -0.8616,
+      "t": -5.09,
+      "n": 11
+     },
+     "4": {
+      "r": -0.8669,
+      "t": -3.89,
+      "n": 7
+     }
+    },
+    "pooled_raw": {
+     "0": {
+      "r": -0.6593,
+      "t": -4.96,
+      "n": 34
+     },
+     "1": {
+      "r": -0.611,
+      "t": -4.16,
+      "n": 31
+     },
+     "2": {
+      "r": -0.3044,
+      "t": -1.57,
+      "n": 26
+     },
+     "3": {
+      "r": -0.0923,
+      "t": -0.41,
+      "n": 22
+     },
+     "4": {
+      "r": -0.0203,
+      "t": -0.08,
+      "n": 19
+     }
+    },
+    "per_city_per100k": {
+     "Cincinnati": {
+      "lags": {
+       "0": {
+        "r": 0.4988,
+        "t": 1.63,
+        "n": 10
+       },
+       "1": {
+        "r": 0.597,
+        "t": 2.1,
+        "n": 10
+       },
+       "2": {
+        "r": 0.2095,
+        "t": 0.57,
+        "n": 9
+       },
+       "3": {
+        "r": -0.8789,
+        "t": -4.51,
+        "n": 8
+       }
+      },
+      "n_available": {
+       "0": 10,
+       "1": 10,
+       "2": 9,
+       "3": 8
+      },
+      "y_years": [
+       2004,
+       2005,
+       2006,
+       2007,
+       2008,
+       2009,
+       2010,
+       2011,
+       2012,
+       2013,
+       2014,
+       2015,
+       2016,
+       2017,
+       2018,
+       2019,
+       2020,
+       2021,
+       2022,
+       2023,
+       2024,
+       2025,
+       2026,
+       2027
+      ]
+     },
+     "Denver": {
+      "lags": {},
+      "n_available": {
+       "0": 0,
+       "1": 0,
+       "2": 0,
+       "3": 0
+      },
+      "y_years": [
+       2021,
+       2022,
+       2023
+      ]
+     },
+     "Detroit": {
+      "lags": {
+       "0": {
+        "r": -0.5711,
+        "t": -1.2,
+        "n": 5
+       },
+       "1": {
+        "r": -0.4343,
+        "t": -0.68,
+        "n": 4
+       },
+       "2": {
+        "r": 0.7618,
+        "t": NaN,
+        "n": 3
+       }
+      },
+      "n_available": {
+       "0": 5,
+       "1": 4,
+       "2": 3,
+       "3": 2
+      },
+      "y_years": [
+       2020,
+       2021,
+       2022,
+       2023,
+       2024,
+       2025,
+       2026,
+       2027,
+       2028
+      ]
+     },
+     "Memphis": {
+      "lags": {
+       "0": {
+        "r": -0.6236,
+        "t": -1.13,
+        "n": 4
+       },
+       "1": {
+        "r": 0.7232,
+        "t": NaN,
+        "n": 3
+       }
+      },
+      "n_available": {
+       "0": 4,
+       "1": 3,
+       "2": 2,
+       "3": 1
+      },
+      "y_years": [
+       2021,
+       2022,
+       2023,
+       2024,
+       2025,
+       2026
+      ]
+     },
+     "NYC": {
+      "lags": {
+       "0": {
+        "r": 0.9906,
+        "t": 12.52,
+        "n": 5
+       },
+       "1": {
+        "r": 0.9503,
+        "t": 4.32,
+        "n": 4
+       },
+       "2": {
+        "r": 0.8613,
+        "t": NaN,
+        "n": 3
+       }
+      },
+      "n_available": {
+       "0": 5,
+       "1": 4,
+       "2": 3,
+       "3": 2
+      },
+      "y_years": [
+       1980,
+       1981,
+       1982,
+       1983,
+       1984,
+       1985,
+       1986,
+       1987,
+       1988,
+       1989,
+       1990,
+       1991,
+       1992,
+       1993,
+       1994,
+       1995,
+       1996,
+       1997,
+       1998,
+       1999,
+       2000,
+       2001,
+       2002,
+       2003,
+       2004,
+       2005,
+       2006,
+       2007,
+       2008,
+       2009,
+       2010,
+       2011,
+       2012,
+       2013,
+       2014,
+       2015,
+       2016,
+       2017,
+       2018,
+       2019,
+       2020,
+       2021,
+       2022,
+       2023,
+       2024,
+       2025
+      ]
+     },
+     "St. Louis": {
+      "lags": {
+       "0": {
+        "r": -0.5203,
+        "t": -1.22,
+        "n": 6
+       },
+       "1": {
+        "r": -0.3133,
+        "t": -0.57,
+        "n": 5
+       },
+       "2": {
+        "r": 0.9124,
+        "t": 3.15,
+        "n": 4
+       },
+       "3": {
+        "r": 0.2112,
+        "t": NaN,
+        "n": 3
+       }
+      },
+      "n_available": {
+       "0": 6,
+       "1": 5,
+       "2": 4,
+       "3": 3
+      },
+      "y_years": [
+       2019,
+       2020,
+       2021,
+       2022,
+       2023,
+       2024,
+       2025
+      ]
+     }
+    }
+   },
+   "B_care_to_murders": {
+    "measure": "care_usd_total (raw + per-capita) at year t vs murders (rate per 100k + raw) at year t+lag",
+    "pooled_within_city_rate": {
+     "0": {
+      "r": -0.1557,
+      "t": -1.0,
+      "n": 42
+     },
+     "1": {
+      "r": -0.1943,
+      "t": -1.16,
+      "n": 36
+     },
+     "2": {
+      "r": -0.2133,
+      "t": -1.16,
+      "n": 30
+     },
+     "3": {
+      "r": -0.1951,
+      "t": -0.93,
+      "n": 24
+     },
+     "4": {
+      "r": -0.4166,
+      "t": -1.65,
+      "n": 15
+     }
+    },
+    "pooled_raw": {
+     "0": {
+      "r": -0.7636,
+      "t": -7.76,
+      "n": 45
+     },
+     "1": {
+      "r": -0.6489,
+      "t": -5.19,
+      "n": 39
+     },
+     "2": {
+      "r": -0.6783,
+      "t": -5.38,
+      "n": 36
+     },
+     "3": {
+      "r": -0.7094,
+      "t": -5.6,
+      "n": 33
+     },
+     "4": {
+      "r": -0.7122,
+      "t": -5.17,
+      "n": 28
+     }
+    },
+    "per_city_rate": {
+     "Cincinnati": {
+      "lags": {
+       "0": {
+        "r": -0.3723,
+        "t": -1.33,
+        "n": 13
+       },
+       "1": {
+        "r": -0.3506,
+        "t": -1.18,
+        "n": 12
+       },
+       "2": {
+        "r": -0.2259,
+        "t": -0.7,
+        "n": 11
+       },
+       "3": {
+        "r": -0.2157,
+        "t": -0.62,
+        "n": 10
+       }
+      },
+      "n_available": {
+       "0": 13,
+       "1": 12,
+       "2": 11,
+       "3": 10
+      },
+      "y_years": [
+       2004,
+       2005,
+       2006,
+       2007,
+       2008,
+       2009,
+       2010,
+       2011,
+       2012,
+       2013,
+       2014,
+       2015,
+       2016,
+       2017,
+       2018,
+       2019,
+       2020,
+       2021,
+       2022,
+       2023,
+       2024,
+       2025,
+       2026,
+       2027
+      ]
+     },
+     "Denver": {
+      "lags": {},
+      "n_available": {
+       "0": 0,
+       "1": 0,
+       "2": 0,
+       "3": 0
+      },
+      "y_years": [
+       2021,
+       2022,
+       2023
+      ]
+     },
+     "Detroit": {
+      "lags": {
+       "0": {
+        "r": -0.4009,
+        "t": -0.98,
+        "n": 7
+       },
+       "1": {
+        "r": -0.8222,
+        "t": -2.89,
+        "n": 6
+       },
+       "2": {
+        "r": -0.878,
+        "t": -3.18,
+        "n": 5
+       },
+       "3": {
+        "r": -0.8189,
+        "t": -2.02,
+        "n": 4
+       }
+      },
+      "n_available": {
+       "0": 7,
+       "1": 6,
+       "2": 5,
+       "3": 4
+      },
+      "y_years": [
+       2020,
+       2021,
+       2022,
+       2023,
+       2024,
+       2025,
+       2026,
+       2027,
+       2028
+      ]
+     },
+     "Memphis": {
+      "lags": {
+       "0": {
+        "r": -0.573,
+        "t": -1.4,
+        "n": 6
+       },
+       "1": {
+        "r": -0.8418,
+        "t": -2.7,
+        "n": 5
+       },
+       "2": {
+        "r": -0.5303,
+        "t": -0.88,
+        "n": 4
+       },
+       "3": {
+        "r": 0.1953,
+        "t": NaN,
+        "n": 3
+       }
+      },
+      "n_available": {
+       "0": 6,
+       "1": 5,
+       "2": 4,
+       "3": 3
+      },
+      "y_years": [
+       2021,
+       2022,
+       2023,
+       2024,
+       2025,
+       2026
+      ]
+     },
+     "NYC": {
+      "lags": {
+       "0": {
+        "r": -0.9948,
+        "t": -25.83,
+        "n": 9
+       },
+       "1": {
+        "r": -0.9941,
+        "t": -20.41,
+        "n": 7
+       },
+       "2": {
+        "r": -0.9957,
+        "t": -18.62,
+        "n": 5
+       },
+       "3": {
+        "r": -0.9924,
+        "t": NaN,
+        "n": 3
+       }
+      },
+      "n_available": {
+       "0": 9,
+       "1": 7,
+       "2": 5,
+       "3": 3
+      },
+      "y_years": [
+       1980,
+       1981,
+       1982,
+       1983,
+       1984,
+       1985,
+       1986,
+       1987,
+       1988,
+       1989,
+       1990,
+       1991,
+       1992,
+       1993,
+       1994,
+       1995,
+       1996,
+       1997,
+       1998,
+       1999,
+       2000,
+       2001,
+       2002,
+       2003,
+       2004,
+       2005,
+       2006,
+       2007,
+       2008,
+       2009,
+       2010,
+       2011,
+       2012,
+       2013,
+       2014,
+       2015,
+       2016,
+       2017,
+       2018,
+       2019,
+       2020,
+       2021,
+       2022,
+       2023,
+       2024,
+       2025
+      ]
+     },
+     "St. Louis": {
+      "lags": {
+       "0": {
+        "r": -0.7243,
+        "t": -2.35,
+        "n": 7
+       },
+       "1": {
+        "r": -0.8133,
+        "t": -2.8,
+        "n": 6
+       },
+       "2": {
+        "r": -0.7472,
+        "t": -1.95,
+        "n": 5
+       },
+       "3": {
+        "r": -0.5176,
+        "t": -0.86,
+        "n": 4
+       }
+      },
+      "n_available": {
+       "0": 7,
+       "1": 6,
+       "2": 5,
+       "3": 4
+      },
+      "y_years": [
+       2019,
+       2020,
+       2021,
+       2022,
+       2023,
+       2024,
+       2025
+      ]
+     }
+    }
+   },
+   "C_bookings_to_murders": {
+    "measure": "bookings_total (per-100k + raw) at year t vs murders at t+lag; 9-city bookings panel",
+    "pooled_within_city_rate": {
+     "0": {
+      "r": -0.2671,
+      "t": -1.92,
+      "n": 50
+     },
+     "1": {
+      "r": 0.3597,
+      "t": 2.31,
+      "n": 38
+     },
+     "2": {
+      "r": 0.1521,
+      "t": 0.87,
+      "n": 34
+     },
+     "3": {
+      "r": 0.6345,
+      "t": 4.02,
+      "n": 26
+     },
+     "4": {
+      "r": 0.2805,
+      "t": 1.05,
+      "n": 15
+     }
+    },
+    "pooled_raw": {
+     "0": {
+      "r": -0.4564,
+      "t": -3.59,
+      "n": 51
+     },
+     "1": {
+      "r": -0.395,
+      "t": -2.95,
+      "n": 49
+     },
+     "2": {
+      "r": -0.173,
+      "t": -1.17,
+      "n": 46
+     },
+     "3": {
+      "r": 0.0019,
+      "t": 0.01,
+      "n": 43
+     },
+     "4": {
+      "r": 0.1144,
+      "t": 0.72,
+      "n": 41
+     }
+    },
+    "per_city_rate": {
+     "Boston": {
+      "lags": {
+       "0": {
+        "r": -0.1878,
+        "t": -0.33,
+        "n": 5
+       },
+       "1": {
+        "r": 0.9016,
+        "t": NaN,
+        "n": 3
+       },
+       "2": {
+        "r": 0.0104,
+        "t": NaN,
+        "n": 3
+       }
+      },
+      "n_available": {
+       "0": 5,
+       "1": 3,
+       "2": 3,
+       "3": 2
+      },
+      "y_years": [
+       2015,
+       2016,
+       2017,
+       2018,
+       2019,
+       2020,
+       2021,
+       2022,
+       2023,
+       2024
+      ]
+     },
+     "Cincinnati": {
+      "lags": {
+       "0": {
+        "r": 0.301,
+        "t": 0.89,
+        "n": 10
+       },
+       "1": {
+        "r": 0.3086,
+        "t": 0.86,
+        "n": 9
+       },
+       "2": {
+        "r": 0.5103,
+        "t": 1.45,
+        "n": 8
+       },
+       "3": {
+        "r": 0.7276,
+        "t": 2.37,
+        "n": 7
+       }
+      },
+      "n_available": {
+       "0": 10,
+       "1": 9,
+       "2": 8,
+       "3": 7
+      },
+      "y_years": [
+       2015,
+       2016,
+       2017,
+       2018,
+       2019,
+       2020,
+       2021,
+       2022,
+       2023,
+       2024
+      ]
+     },
+     "Detroit": {
+      "lags": {
+       "0": {
+        "r": 0.5137,
+        "t": 1.47,
+        "n": 8
+       },
+       "1": {
+        "r": 0.4812,
+        "t": 1.1,
+        "n": 6
+       },
+       "2": {
+        "r": 0.5169,
+        "t": 0.85,
+        "n": 4
+       },
+       "3": {
+        "r": -0.6263,
+        "t": -1.14,
+        "n": 4
+       }
+      },
+      "n_available": {
+       "0": 8,
+       "1": 6,
+       "2": 4,
+       "3": 4
+      },
+      "y_years": [
+       2015,
+       2016,
+       2017,
+       2018,
+       2019,
+       2020,
+       2021,
+       2022,
+       2023,
+       2024
+      ]
+     },
+     "Houston": {
+      "lags": {
+       "0": {
+        "r": -0.9755,
+        "t": NaN,
+        "n": 3
+       }
+      },
+      "n_available": {
+       "0": 3,
+       "1": 0,
+       "2": 1,
+       "3": 1
+      },
+      "y_years": [
+       2015,
+       2016,
+       2017,
+       2018,
+       2019,
+       2020,
+       2021,
+       2022,
+       2023,
+       2024
+      ]
+     },
+     "Memphis": {
+      "lags": {
+       "0": {
+        "r": 0.108,
+        "t": 0.19,
+        "n": 5
+       },
+       "1": {
+        "r": 0.7263,
+        "t": 1.83,
+        "n": 5
+       },
+       "2": {
+        "r": 0.2372,
+        "t": 0.35,
+        "n": 4
+       },
+       "3": {
+        "r": 0.356,
+        "t": NaN,
+        "n": 3
+       }
+      },
+      "n_available": {
+       "0": 5,
+       "1": 5,
+       "2": 4,
+       "3": 3
+      },
+      "y_years": [
+       2015,
+       2016,
+       2017,
+       2018,
+       2019,
+       2020,
+       2021,
+       2022,
+       2023,
+       2024
+      ]
+     },
+     "NYC": {
+      "lags": {
+       "0": {
+        "r": -0.7943,
+        "t": -2.61,
+        "n": 6
+       },
+       "1": {
+        "r": -0.7354,
+        "t": -1.88,
+        "n": 5
+       },
+       "2": {
+        "r": 0.1792,
+        "t": 0.26,
+        "n": 4
+       },
+       "3": {
+        "r": 0.6523,
+        "t": NaN,
+        "n": 3
+       }
+      },
+      "n_available": {
+       "0": 6,
+       "1": 5,
+       "2": 4,
+       "3": 3
+      },
+      "y_years": [
+       2015,
+       2016,
+       2017,
+       2018,
+       2019,
+       2020,
+       2021,
+       2022,
+       2023,
+       2024
+      ]
+     },
+     "New Orleans": {
+      "lags": {
+       "0": {
+        "r": -0.8358,
+        "t": -2.15,
+        "n": 4
+       },
+       "1": {
+        "r": 0.5643,
+        "t": NaN,
+        "n": 3
+       },
+       "2": {
+        "r": -0.4237,
+        "t": -0.66,
+        "n": 4
+       },
+       "3": {
+        "r": 0.9022,
+        "t": NaN,
+        "n": 3
+       }
+      },
+      "n_available": {
+       "0": 4,
+       "1": 3,
+       "2": 4,
+       "3": 3
+      },
+      "y_years": [
+       2015,
+       2016,
+       2017,
+       2018,
+       2019,
+       2020,
+       2021,
+       2022,
+       2023,
+       2024
+      ]
+     },
+     "Okc": {
+      "lags": {},
+      "n_available": {
+       "0": 0,
+       "1": 0,
+       "2": 0,
+       "3": 0
+      },
+      "y_years": [
+       2015,
+       2016,
+       2017,
+       2018,
+       2019,
+       2020,
+       2021,
+       2022,
+       2023,
+       2024
+      ]
+     },
+     "St. Louis": {
+      "lags": {
+       "0": {
+        "r": -0.0844,
+        "t": -0.22,
+        "n": 9
+       },
+       "1": {
+        "r": 0.4464,
+        "t": 1.12,
+        "n": 7
+       },
+       "2": {
+        "r": 0.5664,
+        "t": 1.54,
+        "n": 7
+       },
+       "3": {
+        "r": 0.6824,
+        "t": 1.87,
+        "n": 6
+       }
+      },
+      "n_available": {
+       "0": 9,
+       "1": 7,
+       "2": 7,
+       "3": 6
+      },
+      "y_years": [
+       2015,
+       2016,
+       2017,
+       2018,
+       2019,
+       2020,
+       2021,
+       2022,
+       2023,
+       2024
+      ]
+     }
+    },
+    "per_city_raw": {
+     "Boston": {
+      "lags": {
+       "0": {
+        "r": -0.123,
+        "t": -0.21,
+        "n": 5
+       },
+       "1": {
+        "r": 0.4599,
+        "t": 0.9,
+        "n": 5
+       },
+       "2": {
+        "r": 0.4628,
+        "t": 0.9,
+        "n": 5
+       },
+       "3": {
+        "r": 0.7772,
+        "t": 2.14,
+        "n": 5
+       }
+      },
+      "n_available": {
+       "0": 5,
+       "1": 5,
+       "2": 5,
+       "3": 5
+      },
+      "y_years": [
+       2015,
+       2016,
+       2017,
+       2018,
+       2019,
+       2020,
+       2021,
+       2022,
+       2023,
+       2024
+      ]
+     },
+     "Cincinnati": {
+      "lags": {
+       "0": {
+        "r": 0.3449,
+        "t": 1.04,
+        "n": 10
+       },
+       "1": {
+        "r": 0.3794,
+        "t": 1.08,
+        "n": 9
+       },
+       "2": {
+        "r": 0.5715,
+        "t": 1.71,
+        "n": 8
+       },
+       "3": {
+        "r": 0.7549,
+        "t": 2.57,
+        "n": 7
+       }
+      },
+      "n_available": {
+       "0": 10,
+       "1": 9,
+       "2": 8,
+       "3": 7
+      },
+      "y_years": [
+       2015,
+       2016,
+       2017,
+       2018,
+       2019,
+       2020,
+       2021,
+       2022,
+       2023,
+       2024
+      ]
+     },
+     "Detroit": {
+      "lags": {
+       "0": {
+        "r": 0.5389,
+        "t": 1.57,
+        "n": 8
+       },
+       "1": {
+        "r": 0.5418,
+        "t": 1.44,
+        "n": 7
+       },
+       "2": {
+        "r": 0.1986,
+        "t": 0.41,
+        "n": 6
+       },
+       "3": {
+        "r": -0.6665,
+        "t": -1.79,
+        "n": 6
+       }
+      },
+      "n_available": {
+       "0": 8,
+       "1": 7,
+       "2": 6,
+       "3": 6
+      },
+      "y_years": [
+       2015,
+       2016,
+       2017,
+       2018,
+       2019,
+       2020,
+       2021,
+       2022,
+       2023,
+       2024
+      ]
+     },
+     "Houston": {
+      "lags": {
+       "0": {
+        "r": -0.9722,
+        "t": NaN,
+        "n": 3
+       },
+       "1": {
+        "r": -0.8527,
+        "t": NaN,
+        "n": 3
+       },
+       "2": {
+        "r": -0.7608,
+        "t": NaN,
+        "n": 3
+       },
+       "3": {
+        "r": -0.7193,
+        "t": NaN,
+        "n": 3
+       }
+      },
+      "n_available": {
+       "0": 3,
+       "1": 3,
+       "2": 3,
+       "3": 3
+      },
+      "y_years": [
+       2015,
+       2016,
+       2017,
+       2018,
+       2019,
+       2020,
+       2021,
+       2022,
+       2023,
+       2024
+      ]
+     },
+     "Memphis": {
+      "lags": {
+       "0": {
+        "r": 0.1792,
+        "t": 0.32,
+        "n": 5
+       },
+       "1": {
+        "r": 0.73,
+        "t": 1.85,
+        "n": 5
+       },
+       "2": {
+        "r": 0.3879,
+        "t": 0.73,
+        "n": 5
+       },
+       "3": {
+        "r": 0.5755,
+        "t": 1.22,
+        "n": 5
+       }
+      },
+      "n_available": {
+       "0": 5,
+       "1": 5,
+       "2": 5,
+       "3": 5
+      },
+      "y_years": [
+       2015,
+       2016,
+       2017,
+       2018,
+       2019,
+       2020,
+       2021,
+       2022,
+       2023,
+       2024
+      ]
+     },
+     "NYC": {
+      "lags": {
+       "0": {
+        "r": -0.8054,
+        "t": -2.72,
+        "n": 6
+       },
+       "1": {
+        "r": -0.781,
+        "t": -2.5,
+        "n": 6
+       },
+       "2": {
+        "r": -0.2731,
+        "t": -0.57,
+        "n": 6
+       },
+       "3": {
+        "r": 0.0418,
+        "t": 0.08,
+        "n": 6
+       }
+      },
+      "n_available": {
+       "0": 6,
+       "1": 6,
+       "2": 6,
+       "3": 6
+      },
+      "y_years": [
+       2015,
+       2016,
+       2017,
+       2018,
+       2019,
+       2020,
+       2021,
+       2022,
+       2023,
+       2024
+      ]
+     },
+     "New Orleans": {
+      "lags": {
+       "0": {
+        "r": -0.7994,
+        "t": -1.88,
+        "n": 4
+       },
+       "1": {
+        "r": -0.4692,
+        "t": -0.92,
+        "n": 5
+       },
+       "2": {
+        "r": -0.3647,
+        "t": -0.68,
+        "n": 5
+       },
+       "3": {
+        "r": 0.5199,
+        "t": 0.86,
+        "n": 4
+       }
+      },
+      "n_available": {
+       "0": 4,
+       "1": 5,
+       "2": 5,
+       "3": 4
+      },
+      "y_years": [
+       2015,
+       2016,
+       2017,
+       2018,
+       2019,
+       2020,
+       2021,
+       2022,
+       2023,
+       2024
+      ]
+     },
+     "Okc": {
+      "lags": {},
+      "n_available": {
+       "0": 0,
+       "1": 0,
+       "2": 0,
+       "3": 0
+      },
+      "y_years": [
+       2015,
+       2016,
+       2017,
+       2018,
+       2019,
+       2020,
+       2021,
+       2022,
+       2023,
+       2024
+      ]
+     },
+     "St. Louis": {
+      "lags": {
+       "0": {
+        "r": 0.1004,
+        "t": 0.29,
+        "n": 10
+       },
+       "1": {
+        "r": 0.4501,
+        "t": 1.33,
+        "n": 9
+       },
+       "2": {
+        "r": 0.5601,
+        "t": 1.66,
+        "n": 8
+       },
+       "3": {
+        "r": 0.6653,
+        "t": 1.99,
+        "n": 7
+       }
+      },
+      "n_available": {
+       "0": 10,
+       "1": 9,
+       "2": 8,
+       "3": 7
+      },
+      "y_years": [
+       2015,
+       2016,
+       2017,
+       2018,
+       2019,
+       2020,
+       2021,
+       2022,
+       2023,
+       2024
+      ]
+     }
+    }
+   },
+   "D_nyc_facility_deep_lane": {
+    "measure": "NYC only: care_per_capita vs DOC facility_admitted_per_capita (Socrata 94ri-3ium) by lag; + discharges_per_arrest cross-check vs NYPD arrests (8h9b-rp9u override)",
+    "pooled_care_to_admit": {
+     "0": {
+      "r": 0.9838,
+      "t": 12.26,
+      "n": 7
+     },
+     "1": {
+      "r": 0.8151,
+      "t": 2.44,
+      "n": 5
+     },
+     "2": {
+      "r": 0.7211,
+      "t": 1.47,
+      "n": 4
+     },
+     "3": {
+      "r": 0.3382,
+      "t": NaN,
+      "n": 3
+     },
+     "4": null
+    },
+    "xcheck_discharges_per_arrest": [
+     {
+      "year": 2015,
+      "discharges": 61585,
+      "nypd_arrests": 339470,
+      "ratio": 0.1814
+     },
+     {
+      "year": 2016,
+      "discharges": 58700,
+      "nypd_arrests": 314864,
+      "ratio": 0.1864
+     },
+     {
+      "year": 2017,
+      "discharges": 54402,
+      "nypd_arrests": 286225,
+      "ratio": 0.1901
+     },
+     {
+      "year": 2018,
+      "discharges": 43250,
+      "nypd_arrests": 246773,
+      "ratio": 0.1753
+     },
+     {
+      "year": 2019,
+      "discharges": 35768,
+      "nypd_arrests": 214617,
+      "ratio": 0.1667
+     },
+     {
+      "year": 2020,
+      "discharges": 16161,
+      "nypd_arrests": 140413,
+      "ratio": 0.1151
+     },
+     {
+      "year": 2021,
+      "discharges": 15799,
+      "nypd_arrests": 155507,
+      "ratio": 0.1016
+     },
+     {
+      "year": 2022,
+      "discharges": 19300,
+      "nypd_arrests": 189774,
+      "ratio": 0.1017
+     },
+     {
+      "year": 2023,
+      "discharges": 21827,
+      "nypd_arrests": 226872,
+      "ratio": 0.0962
+     },
+     {
+      "year": 2024,
+      "discharges": 23094,
+      "nypd_arrests": 260503,
+      "ratio": 0.0887
+     }
+    ],
+    "xcheck_read": "ratio 0.181 (2015) -> 0.089 (2024) = discharge/arrest FALLS monotonically while arrests rebound post-2020 - consistent with fewer facility exits per intake (longer stays / case-flow shift) - mechanism-adjacent, flagged-not-verdict"
+   }
+  },
+  "verdict": {
+   "ordering_read": "THREE-LANE ORDERING RESULT (associational; honest-n carried):\n1. CARE->BOOKINGS (test A): short-lags POSITIVE - t+0 +0.14 (n=30) / t+1 +0.27 (n=26) / t+2 +0.26 (n=19), within-city demeaned per-capita; NYC alone t+0 +0.99 (n=5) - care dollars and arrest-intake co-move in the same window; the negative t+3/t+4 tail (-0.86/-0.87) is thin-n (11/7 pairs, Cincinnati-concentrated).\n2. CARE->MURDERS (test B): NEGATIVE at every lag, pooled deepening -0.16 (t+0) -> -0.42 (t+4, n=15); per-city lane Detroit/Memphis/STL consistently negative through t+1-t+3 - the care-raises-precede-crime-falls ordering signature survives in the component-book panel.\n3. BOOKINGS->MURDERS (test C, mid-stream): raw-lane pooled inverted at t+0/t+1 (-0.46/-0.40, n=51/49) - intake co-moves with violence in-year - while per-city t+3 lane (Boston +0.78 / STL +0.67 / CIN +0.75) hints intake-waves precede later declines, thin-n. The Simes-and-Jahn sharpest-test frame is now data-live but needs facility-grain widening before any mechanism claim.\nNET: the ORDERING the thesis needs is VISIBLE - care co-moves with intake now (A short-lag +) and precedes murder declines (B negative all lags, deepening with lag) - but every strong tail cell is thin-n and the NYC near-perfect cells are trend-artifact-flagged. PATTERN-LEAD, NOT VERDICT (the reproducibility law).",
+   "sharpest_next": "facility-grain widening: NYC facility-deep-lane (test D) shows care->admitted t+0 +0.98 (n=7) and the discharges_per_arrest ratio falls 0.18->0.09 across 2015-2024 - the NYC facility book is the only facility-grain city; widening = one more facility-key city (Fulton GA is banked reference-only) or an NYC sub-borough lane."
+  }
+ },
+ "ext1_wide_lane": {
+  "measure": "wide-lane bookings merge: 26 CDE wide cities 2011-2019 arrest-intake (months-guard). These cities have NO city care-book on disk — carried as bookings-side breadth; the care-side join for wide cities arrives via the STATE lane (EXT-2) only.",
+  "cities_added": [
+   "Albuquerque",
+   "Austin",
+   "Baltimore",
+   "Charlotte",
+   "Columbus",
+   "Dallas",
+   "Denver",
+   "Fort Worth",
+   "Fresno",
+   "Indianapolis",
+   "Kansas City",
+   "Long Beach",
+   "Milwaukee",
+   "Nashville",
+   "Omaha",
+   "Philadelphia",
+   "Phoenix",
+   "Portland",
+   "Raleigh",
+   "Sacramento",
+   "San Antonio",
+   "San Diego",
+   "San Francisco",
+   "Seattle",
+   "Tucson",
+   "Tulsa",
+   "Virginia Beach",
+   "Wichita"
+  ],
+  "extent_by_city": {
+   "Albuquerque": {
+    "span": [
+     2011,
+     2019
+    ],
+    "years": 9
+   },
+   "Austin": {
+    "span": [
+     2011,
+     2019
+    ],
+    "years": 9
+   },
+   "Baltimore": {
+    "span": [
+     2011,
+     2019
+    ],
+    "years": 9
+   },
+   "Charlotte": {
+    "span": [
+     2011,
+     2019
+    ],
+    "years": 9
+   },
+   "Columbus": {
+    "span": [
+     2011,
+     2019
+    ],
+    "years": 9
+   },
+   "Dallas": {
+    "span": [
+     2011,
+     2019
+    ],
+    "years": 9
+   },
+   "Denver": {
+    "span": [
+     2011,
+     2019
+    ],
+    "years": 9
+   },
+   "Fort Worth": {
+    "span": [
+     2011,
+     2019
+    ],
+    "years": 9
+   },
+   "Fresno": {
+    "span": [
+     2011,
+     2018
+    ],
+    "years": 8
+   },
+   "Indianapolis": {
+    "span": [
+     2011,
+     2019
+    ],
+    "years": 9
+   },
+   "Kansas City": {
+    "span": [
+     2011,
+     2019
+    ],
+    "years": 9
+   },
+   "Long Beach": {
+    "span": [
+     2011,
+     2019
+    ],
+    "years": 9
+   },
+   "Milwaukee": {
+    "span": [
+     2011,
+     2019
+    ],
+    "years": 9
+   },
+   "Nashville": {
+    "span": [
+     2011,
+     2019
+    ],
+    "years": 9
+   },
+   "Omaha": {
+    "span": [
+     2011,
+     2019
+    ],
+    "years": 9
+   },
+   "Philadelphia": {
+    "span": [
+     2011,
+     2019
+    ],
+    "years": 9
+   },
+   "Phoenix": {
+    "span": [
+     2011,
+     2019
+    ],
+    "years": 9
+   },
+   "Portland": {
+    "span": [
+     2011,
+     2019
+    ],
+    "years": 9
+   },
+   "Raleigh": {
+    "span": [
+     2011,
+     2019
+    ],
+    "years": 4
+   },
+   "Sacramento": {
+    "span": [
+     2011,
+     2019
+    ],
+    "years": 9
+   },
+   "San Antonio": {
+    "span": [
+     2011,
+     2019
+    ],
+    "years": 9
+   },
+   "San Diego": {
+    "span": [
+     2011,
+     2019
+    ],
+    "years": 9
+   },
+   "San Francisco": {
+    "span": [
+     2011,
+     2019
+    ],
+    "years": 9
+   },
+   "Seattle": {
+    "span": [
+     2011,
+     2019
+    ],
+    "years": 9
+   },
+   "Tucson": {
+    "span": [
+     2011,
+     2019
+    ],
+    "years": 9
+   },
+   "Tulsa": {
+    "span": [
+     2011,
+     2019
+    ],
+    "years": 9
+   },
+   "Virginia Beach": {
+    "span": [
+     2011,
+     2019
+    ],
+    "years": 9
+   },
+   "Wichita": {
+    "span": [
+     2011,
+     2019
+    ],
+    "years": 9
+   }
+  },
+  "city_years_added": 246,
+  "note": "no v1 pair dropped and no overlap exists: the wide lane is 28 cities whose years 2011-2019 are disjoint from the v1 books windows (v1 9-city bookings = 2015-2024; the two wide-lane cities INSIDE the v1 city set — Denver, plus v1-adjacent Nashville — remain separate city-years; Boston carries none: its wide-lane rows fail months/coverage guard), merged as additive city-years under the first-source-wins law (v1 rows carried verbatim)"
+ },
+ "ext2_state_care_to_bookings": {
+  "measure": "test D' EXTENSION: state_mh_usd_per_resident(t) vs state-matched city bookings_per_100k (UCR intake, months-guard, v1+wide books merged) at t+lag; pooled within-state + per-state",
+  "pooled_within_state": {
+   "t+0": {
+    "n": 36,
+    "states": [
+     "LA",
+     "MA",
+     "MI",
+     "MO",
+     "NY",
+     "OH",
+     "TN"
+    ],
+    "r": -0.335,
+    "mode": "within-state-demeaned"
+   },
+   "t+1": {
+    "n": 27,
+    "states": [
+     "LA",
+     "MI",
+     "MO",
+     "NY",
+     "OH",
+     "TN"
+    ],
+    "r": -0.1825,
+    "mode": "within-state-demeaned"
+   },
+   "t+2": {
+    "n": 19,
+    "states": [
+     "MI",
+     "MO",
+     "NY",
+     "OH",
+     "TN"
+    ],
+    "r": 0.0608,
+    "mode": "within-state-demeaned"
+   }
+  },
+  "per_state": {
+   "LA": {
+    "city": "New Orleans",
+    "n": 4,
+    "span": [
+     2019,
+     2023
+    ],
+    "same_year_r": -0.6408,
+    "bookings_lanes": [
+     "v1"
+    ]
+   },
+   "MA": {
+    "city": "Boston",
+    "n": 3,
+    "span": [
+     2022,
+     2024
+    ],
+    "same_year_r": 0.6104,
+    "bookings_lanes": [
+     "v1"
+    ]
+   },
+   "MI": {
+    "city": "Detroit",
+    "n": 5,
+    "span": [
+     2020,
+     2024
+    ],
+    "same_year_r": -0.91,
+    "bookings_lanes": [
+     "v1"
+    ]
+   },
+   "MO": {
+    "city": "St. Louis",
+    "n": 6,
+    "span": [
+     2019,
+     2024
+    ],
+    "same_year_r": -0.6032,
+    "bookings_lanes": [
+     "v1"
+    ]
+   },
+   "NY": {
+    "city": "NYC",
+    "n": 6,
+    "span": [
+     2019,
+     2024
+    ],
+    "same_year_r": 0.7679,
+    "bookings_lanes": [
+     "v1"
+    ]
+   },
+   "OH": {
+    "city": "Cincinnati",
+    "n": 6,
+    "span": [
+     2019,
+     2024
+    ],
+    "same_year_r": -0.7645,
+    "bookings_lanes": [
+     "v1"
+    ]
+   },
+   "TN": {
+    "city": "Memphis",
+    "n": 6,
+    "span": [
+     2019,
+     2024
+    ],
+    "same_year_r": -0.8821,
+    "bookings_lanes": [
+     "v1"
+    ]
+   }
+  },
+  "rows": [
+   {
+    "state": "LA",
+    "city": "New Orleans",
+    "year": 2019,
+    "mh_usd_per_resident": 55.64,
+    "mh_value_kind": "Recommended FY2018-2019 (LDH Budget Summary table row Office of Behavioral Health)",
+    "bookings_per_100k": 7113.0,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "LA",
+    "city": "New Orleans",
+    "year": 2021,
+    "mh_usd_per_resident": 61.17,
+    "mh_value_kind": "Total Expenditures & Request Recommended FY2021-2022 (OBH agency summary)",
+    "bookings_per_100k": 4392.0,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "LA",
+    "city": "New Orleans",
+    "year": 2022,
+    "mh_usd_per_resident": 62.52,
+    "mh_value_kind": "Continuation FY2021-2022 col printed in FY23 volume (prior-year actuals 278,068,480; EOB 306,065,184 also captured)",
+    "bookings_per_100k": 3725.2,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "LA",
+    "city": "New Orleans",
+    "year": 2023,
+    "mh_usd_per_resident": 76.16,
+    "mh_value_kind": "Total Expenditures & Request Recommended FY2022-2023 (OBH summary)",
+    "bookings_per_100k": 4017.1,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "MA",
+    "city": "Boston",
+    "year": 2022,
+    "mh_usd_per_resident": 140.17,
+    "mh_value_kind": "actual spending",
+    "bookings_per_100k": 723.4,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "MA",
+    "city": "Boston",
+    "year": 2023,
+    "mh_usd_per_resident": 141.18,
+    "mh_value_kind": "GAA",
+    "bookings_per_100k": 799.8,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "MA",
+    "city": "Boston",
+    "year": 2024,
+    "mh_usd_per_resident": 158.93,
+    "mh_value_kind": "GAA final",
+    "bookings_per_100k": 807.6,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "MI",
+    "city": "Detroit",
+    "year": 2020,
+    "mh_usd_per_resident": 379.49,
+    "mh_value_kind": "gross approp sum of BH components (HFA briefing pie: TradMedicaid BH 2,818,435,400 + HMP BH 371,843,300 + Non-Medicaid/StatePsych 632,076,300)",
+    "bookings_per_100k": 2175.8,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "MI",
+    "city": "Detroit",
+    "year": 2021,
+    "mh_usd_per_resident": 440.62,
+    "mh_value_kind": "gross approp sum (3,194,979,200 + 589,941,900 + 639,979,800)",
+    "bookings_per_100k": 2033.9,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "MI",
+    "city": "Detroit",
+    "year": 2022,
+    "mh_usd_per_resident": 490.56,
+    "mh_value_kind": "gross approp sum (3,605,430,100 + 603,614,300 + 718,055,000)",
+    "bookings_per_100k": 1666.8,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "MI",
+    "city": "Detroit",
+    "year": 2023,
+    "mh_usd_per_resident": 525.06,
+    "mh_value_kind": "gross approp sum (3,594,216,900 + 570,067,600 + 1,118,918,600)",
+    "bookings_per_100k": 1781.3,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "MI",
+    "city": "Detroit",
+    "year": 2024,
+    "mh_usd_per_resident": 537.35,
+    "mh_value_kind": "gross approp sum (3,975,261,300 + 590,860,800 + 861,072,200)",
+    "bookings_per_100k": 1715.3,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "MO",
+    "city": "St. Louis",
+    "year": 2019,
+    "mh_usd_per_resident": 366.74,
+    "mh_value_kind": "TAFP-after-veto grand total",
+    "bookings_per_100k": 6988.2,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "MO",
+    "city": "St. Louis",
+    "year": 2020,
+    "mh_usd_per_resident": 403.28,
+    "mh_value_kind": "TAFP",
+    "bookings_per_100k": 4465.2,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "MO",
+    "city": "St. Louis",
+    "year": 2021,
+    "mh_usd_per_resident": 407.56,
+    "mh_value_kind": "gov-recs (exec basis)",
+    "bookings_per_100k": 3194.7,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "MO",
+    "city": "St. Louis",
+    "year": 2022,
+    "mh_usd_per_resident": 442.6,
+    "mh_value_kind": "gov-recs (exec basis)",
+    "bookings_per_100k": 3154.5,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "MO",
+    "city": "St. Louis",
+    "year": 2023,
+    "mh_usd_per_resident": 551.69,
+    "mh_value_kind": "TAFP (exec basis) / 3,441,720,822 as-printed TAFP",
+    "bookings_per_100k": 3230.0,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "MO",
+    "city": "St. Louis",
+    "year": 2024,
+    "mh_usd_per_resident": 584.49,
+    "mh_value_kind": "actual-final (DMH dept total all funds)",
+    "bookings_per_100k": 3310.7,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "NY",
+    "city": "NYC",
+    "year": 2019,
+    "mh_usd_per_resident": 219.23,
+    "mh_value_kind": "available col (FY20 exec appropdata page)",
+    "bookings_per_100k": 2574.3,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "NY",
+    "city": "NYC",
+    "year": 2020,
+    "mh_usd_per_resident": 218.44,
+    "mh_value_kind": "recommended (FY20 appropdata page; also 4,403,776,500 available per FY21 page)",
+    "bookings_per_100k": 1604.5,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "NY",
+    "city": "NYC",
+    "year": 2021,
+    "mh_usd_per_resident": 224.56,
+    "mh_value_kind": "recommended (FY21 appropdata page; 4,467,462,000 available per FY22 page)",
+    "bookings_per_100k": 1840.8,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "NY",
+    "city": "NYC",
+    "year": 2022,
+    "mh_usd_per_resident": 225.01,
+    "mh_value_kind": "recommended (FY22 appropdata page; 4,487,892,000 available per FY23 page)",
+    "bookings_per_100k": 2269.3,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "NY",
+    "city": "NYC",
+    "year": 2023,
+    "mh_usd_per_resident": 263.37,
+    "mh_value_kind": "estimated total (baseline FY23 est in FY24 exec-budget doc)",
+    "bookings_per_100k": 2690.0,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "NY",
+    "city": "NYC",
+    "year": 2024,
+    "mh_usd_per_resident": 318.14,
+    "mh_value_kind": "recommended (FY24 exec budget, all funds)",
+    "bookings_per_100k": 3030.2,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "OH",
+    "city": "Cincinnati",
+    "year": 2019,
+    "mh_usd_per_resident": 14.08,
+    "mh_value_kind": "Total col (LSC statewide table, visual re-parse)",
+    "bookings_per_100k": 2358.0,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "OH",
+    "city": "Cincinnati",
+    "year": 2020,
+    "mh_usd_per_resident": 17.51,
+    "mh_value_kind": "Total col (LSC statewide table)",
+    "bookings_per_100k": 1968.5,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "OH",
+    "city": "Cincinnati",
+    "year": 2021,
+    "mh_usd_per_resident": 17.87,
+    "mh_value_kind": "Total col (LSC statewide table)",
+    "bookings_per_100k": 1848.9,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "OH",
+    "city": "Cincinnati",
+    "year": 2022,
+    "mh_usd_per_resident": 21.18,
+    "mh_value_kind": "Total col (LSC statewide table, visual re-parse)",
+    "bookings_per_100k": 1946.7,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "OH",
+    "city": "Cincinnati",
+    "year": 2023,
+    "mh_usd_per_resident": 18.08,
+    "mh_value_kind": "Total col (LSC statewide table, visual re-parse)",
+    "bookings_per_100k": 1765.8,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "OH",
+    "city": "Cincinnati",
+    "year": 2024,
+    "mh_usd_per_resident": 20.77,
+    "mh_value_kind": "Total col (LSC statewide table, visual re-parse)",
+    "bookings_per_100k": 1693.5,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "TN",
+    "city": "Memphis",
+    "year": 2019,
+    "mh_usd_per_resident": 46.7,
+    "mh_value_kind": "actual col",
+    "bookings_per_100k": 4806.2,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "TN",
+    "city": "Memphis",
+    "year": 2020,
+    "mh_usd_per_resident": 51.51,
+    "mh_value_kind": "actual col",
+    "bookings_per_100k": 3675.6,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "TN",
+    "city": "Memphis",
+    "year": 2021,
+    "mh_usd_per_resident": 53.51,
+    "mh_value_kind": "recommended",
+    "bookings_per_100k": 3204.4,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "TN",
+    "city": "Memphis",
+    "year": 2022,
+    "mh_usd_per_resident": 57.22,
+    "mh_value_kind": "actual col",
+    "bookings_per_100k": 3645.7,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "TN",
+    "city": "Memphis",
+    "year": 2023,
+    "mh_usd_per_resident": 58.24,
+    "mh_value_kind": "actual col",
+    "bookings_per_100k": 2407.4,
+    "bookings_lane": "v1"
+   },
+   {
+    "state": "TN",
+    "city": "Memphis",
+    "year": 2024,
+    "mh_usd_per_resident": 58.48,
+    "mh_value_kind": "adopted (amended appropriation act)",
+    "bookings_per_100k": 2684.5,
+    "bookings_lane": "v1"
+   }
+  ],
+  "care_source": "state_mh_series_v2.jsonl (annual rows; TX biennial excluded; 2026 excluded — no PEP vintage)",
+  "bookings_source": "bookings_series_v1.jsonl + _bridge/_wide_arrests.jsonl merged (first-source-wins: v1 row kept when both lanes carry a city-year); measure label carried per source row"
+ },
+ "honest_gaps": [
+  "EXT-1 wide cities have NO city-grain care book on disk — the widened bookings breadth cannot run test A' against city care dollars; carried as bookings-side breadth (pattern-lead lane for when the Census S&L care-codes lane is widened), honest-null on the A-prime join",
+  "EXT-2 state-care lane: MH grain heterogeneity carried from state_mh_series_v2 (MI combined-BH, NY OMH-subset, OK requested-basis) — pooled within-state r crosses grains only within a state (fixed-effect lens absorbs between-state level differences)",
+  "bookings measure = UCR ARREST INTAKE PROXY (not jail-facility admissions) — label carried from v1",
+  "Pittsburgh/Oklahoma City bookings: no v1 bookings rows (CDE arrest lane absent for those agencies in bookings_series_v1) — EXT-2 states PA/OK enter the pooled pool only via v1 cities present",
+  "Boston 2023 city-pop hole filled from PEP vintage-2025 SUMLEV-162 (sub-est2025_25 Boston city), cited; NYC pops via New York rows (PEP lane) same as v1"
+ ],
+ "flags_flags_not_verdicts": [
+  "EXT-2 pooled within-state t+0/t+1/t+2 r's are the state-CARE vs city-INTAKE ordering — the mirror of v1's test A at the state grain; sign/depth read jointly with v1 test-A short-lag positive (money-follows-crisis) and test-B negative-deepening ordering — pattern-lead, not verdict",
+  "state-care year t budget basis is often APPROPRIATION (set in year t-1 or t-2) — the t-lag pairing already mixes vintages; lag arcs carry this basis caveat (value_kind per row preserved)",
+  "per-state EXT-2 r with n<5 are thin-n flagged (carried, never hidden), same law as v1 thin tails"
+ ],
+ "verdict_extension": {
+  "ordering_read": "EXTENSION RESULT (banked-2): the care->bookings ordering test now runs on THREE books — (1) v1 city-care 9-city panel carried verbatim; (2) EXT-1 wide lane adds 28 cities of bookings breadth 2011-2019 (care-join honest-null until a wide care book exists); (3) EXT-2 adds the STATE-care book (7 states, 2019-2025) against state-matched city intake. EXT-2 pooled within-state: t+0 -0.335 (n=36) / t+1 -0.1825 (n=27) / t+2 0.0608 (n=19). READ JOINTLY WITH V1 (no pair dropped): at the city-CARE grain (v1 test A) the money co-moves POSITIVE with intake in-window (t+0 +0.14 -> t+2 +0.26, n 30/26/19) — the money-follows-crisis signature; at the STATE-CARE grain (EXT-2) the pooled lane reads NEGATIVE t+0 (-0.34) and fades to null by t+2 — DIRECTION-INCONSISTENT with the city-grain cell, i.e. the state-care dollar arm does NOT reproduce the same-window positive intake co-movement; per-state lane splits both ways (Detroit -0.91 / Cincinnati -0.76 / Memphis -0.88 NEGATIVE deep cells vs NYC +0.77 / Boston +0.61 POSITIVE — grain and basis heterogeneity, thin-n). The ordering thesis survives on city-grain care but the STATE-grain dollar arm is a genuine internal tension the rival test must carry — flag-not-verdict, the honest finding is the INCONSISTENCY ITSELF (money-follows-crisis at city grain vs not-visible at state grain). PATTERN-LEAD, NOT VERDICT (the reproducibility law).",
+  "sharpest_next": "Census S&L care-codes widening for the 28 wide cities (2012/2017/2022 quinquennial grain) would close EXT-1 care-join inside the wide window — then the 28-city panel runs the full three-lane ordering with n~200 and the city-vs-state grain split becomes decidable."
+ }
+}

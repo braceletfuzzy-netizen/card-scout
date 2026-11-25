@@ -1,0 +1,104 @@
+{
+ "_record": "lane13_transport_lever_pull",
+ "built": "2026-11-24",
+ "acs_vintage": "5yr 2022 table-based-SF (www2.census.gov, keyless)",
+ "tables": [
+  "b08303",
+  "b08301",
+  "b08013",
+  "b08136",
+  "b08141"
+ ],
+ "audit": {
+  "b08303": "captured: 619340 geo rows",
+  "b08301": "captured: 619340 geo rows",
+  "b08013": "captured: 288009 geo rows",
+  "b08136": "captured: 122554 geo rows",
+  "b08141": "captured: 301904 geo rows",
+  "b08303_saved": 64496686,
+  "b08301_saved": 88508035,
+  "b08013_saved": 15391442,
+  "b08136_saved": 26045730,
+  "b08141_saved": 71689538
+ },
+ "rows": [
+  {
+   "geo_id": "0500000US47157",
+   "geo_name": "Memphis (Shelby County, TN)",
+   "grain": "county"
+  },
+  {
+   "geo_id": "0500000US29510",
+   "geo_name": "St. Louis County, MO",
+   "grain": "county",
+   "b08136_cols": []
+  },
+  {
+   "geo_id": "0500000US39061",
+   "geo_name": "Cincinnati (Hamilton County, OH)",
+   "grain": "county"
+  },
+  {
+   "geo_id": "0500000US26163",
+   "geo_name": "Detroit (Wayne County, MI)",
+   "grain": "county",
+   "b08136_cols": []
+  },
+  {
+   "geo_id": "0500000US17031",
+   "geo_name": "Chicago (Cook County, IL)",
+   "grain": "county",
+   "b08136_cols": []
+  },
+  {
+   "geo_id": "0500000US48453",
+   "geo_name": "San Antonio (Bexar County, TX)",
+   "grain": "county",
+   "b08136_cols": []
+  },
+  {
+   "geo_id": "0500000US12086",
+   "geo_name": "Jacksonville (Duval County, FL)",
+   "grain": "county",
+   "b08136_cols": []
+  },
+  {
+   "geo_id": "0500000US40109",
+   "geo_name": "Oklahoma City (Oklahoma County, OK)",
+   "grain": "county",
+   "b08136_cols": []
+  },
+  {
+   "geo_id": "0500000US42101",
+   "geo_name": "Philadelphia County, PA",
+   "grain": "county",
+   "b08136_cols": []
+  },
+  {
+   "geo_id": "0500000US06075",
+   "geo_name": "San Francisco County, CA",
+   "grain": "county",
+   "b08136_cols": []
+  },
+  {
+   "geo_id": "1600000US4748000",
+   "geo_name": "Memphis city, TN",
+   "grain": "city-proper"
+  },
+  {
+   "geo_id": "1600000US2966000",
+   "geo_name": "St. Louis city, MO",
+   "grain": "city-proper"
+  },
+  {
+   "geo_id": "1600000US3915000",
+   "geo_name": "Cincinnati city, OH",
+   "grain": "city-proper"
+  },
+  {
+   "geo_id": "1600000US2622000",
+   "geo_name": "Detroit city, MI",
+   "grain": "city-proper"
+  }
+ ]
+}

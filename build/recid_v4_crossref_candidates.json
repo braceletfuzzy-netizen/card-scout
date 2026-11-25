@@ -1,0 +1,816 @@
+{
+ "education_rct": [
+  {
+   "doi": "10.15760/etd.3172",
+   "title": "The effects of correctional education on recidivism",
+   "year": 2000,
+   "venue": "",
+   "cites": 0,
+   "type": "report",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.31390/gradschool_disstheses.6761",
+   "title": "Vocational Education and Recidivism at the Louisiana Correctional Institute for Women.",
+   "year": null,
+   "venue": "",
+   "cites": 0,
+   "type": "dissertation",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.1177/074171367402400203",
+   "title": "Correctional Education and Recidivism in a Woman's Correctional Center",
+   "year": 1974,
+   "venue": "Adult Education",
+   "cites": 6,
+   "type": "journal-article",
+   "has_abstract": true
+  },
+  {
+   "doi": "10.21428/5487d235.ea02ea7f",
+   "title": "Correctional Education and Reintegration: A Qualitative Study of Young Ex-Offenders in Cape Flats",
+   "year": 2026,
+   "venue": "Reducing Recidivism Reader",
+   "cites": 0,
+   "type": "book-chapter",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.1007/978-1-4614-6188-3_7",
+   "title": "Reducing Recidivism Through Correctional Programming: Using Meta-Analysis to Inform the RNR Simulation Tool",
+   "year": 2013,
+   "venue": "Simulation Strategies to Reduce Recidivism",
+   "cites": 13,
+   "type": "book-chapter",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.4135/9781412952514.n304",
+   "title": "Recidivism",
+   "year": 2005,
+   "venue": "Encyclopedia of Prisons &amp; Correctional Facilities",
+   "cites": 0,
+   "type": "reference-entry",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.4135/9781544374062.n19",
+   "title": "Evaluation, Effectiveness, and Recidivism",
+   "year": 2024,
+   "venue": "Correctional Counseling, Treatment, and Rehabilitation",
+   "cites": 0,
+   "type": "book-chapter",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.4079/pp.v25i0.18353",
+   "title": "Reducing Recidivism through Correctional Education: The Roles of Neoclassical and Behavioral Economics",
+   "year": 2018,
+   "venue": "Policy Perspectives",
+   "cites": 5,
+   "type": "journal-article",
+   "has_abstract": true
+  }
+ ],
+ "education_rand": [
+  {
+   "doi": "10.7249/rb9728",
+   "title": "How Effective is Correctional Education? The Results of a Meta-Analysis",
+   "year": 2013,
+   "venue": "",
+   "cites": 3,
+   "type": "edited-book",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.15760/etd.3172",
+   "title": "The effects of correctional education on recidivism",
+   "year": 2000,
+   "venue": "",
+   "cites": 0,
+   "type": "report",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.7249/ig113",
+   "title": "Serving Time or Wasting Time? Correctional Education Programs Improve Job Prospects, Reduce Recidivism, and Save Taxpaye",
+   "year": 2013,
+   "venue": "",
+   "cites": 1,
+   "type": "edited-book",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.7249/rr266",
+   "title": "Evaluating the Effectiveness of Correctional Education: A Meta-Analysis of Programs That Provide Education to Incarcerat",
+   "year": 2013,
+   "venue": "",
+   "cites": 214,
+   "type": "edited-book",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.31390/gradschool_disstheses.6761",
+   "title": "Vocational Education and Recidivism at the Louisiana Correctional Institute for Women.",
+   "year": null,
+   "venue": "",
+   "cites": 0,
+   "type": "dissertation",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.1177/074171367402400203",
+   "title": "Correctional Education and Recidivism in a Woman's Correctional Center",
+   "year": 1974,
+   "venue": "Adult Education",
+   "cites": 6,
+   "type": "journal-article",
+   "has_abstract": true
+  },
+  {
+   "doi": "10.21428/5487d235.ea02ea7f",
+   "title": "Correctional Education and Reintegration: A Qualitative Study of Young Ex-Offenders in Cape Flats",
+   "year": 2026,
+   "venue": "Reducing Recidivism Reader",
+   "cites": 0,
+   "type": "book-chapter",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.1007/978-1-4614-6188-3_7",
+   "title": "Reducing Recidivism Through Correctional Programming: Using Meta-Analysis to Inform the RNR Simulation Tool",
+   "year": 2013,
+   "venue": "Simulation Strategies to Reduce Recidivism",
+   "cites": 13,
+   "type": "book-chapter",
+   "has_abstract": false
+  }
+ ],
+ "vocational": [
+  {
+   "doi": "10.2139/ssrn.4509303",
+   "title": "Prison-Based Training Programs, Recidivism, and Employment",
+   "year": 2023,
+   "venue": "",
+   "cites": 0,
+   "type": "posted-content",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.31525/ct1-nct03937128",
+   "title": "Improving Employment and Reducing Recidivism Among Prison Offenders Via Virtual Interview Training Tool",
+   "year": 2019,
+   "venue": "Case Medical Research",
+   "cites": 0,
+   "type": "journal-article",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.31525/ct1-nct04140942",
+   "title": "Improving Employment and Reducing Recidivism Among Prison Offenders Via Virtual Interview Training Tool (MICHR)",
+   "year": 2019,
+   "venue": "Case Medical Research",
+   "cites": 0,
+   "type": "journal-article",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.58721/eajhss.v5i1.1665",
+   "title": "Examination of Prison-Based Vocational Training on Recidivism: A Review of Kisumu County, Kenya",
+   "year": 2026,
+   "venue": "Eastern African Journal of Humanities and Social Sciences",
+   "cites": 0,
+   "type": "journal-article",
+   "has_abstract": true
+  },
+  {
+   "doi": "10.1037/e620162012-001",
+   "title": "Reducing Recidivism through Vocational Education and Training Programs",
+   "year": 2008,
+   "venue": "PsycEXTRA Dataset",
+   "cites": 0,
+   "type": "dataset",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.1016/j.jcrimjus.2026.102618",
+   "title": "Participation and dose-response effects of institutional vocational training on recidivism and employment",
+   "year": 2026,
+   "venue": "Journal of Criminal Justice",
+   "cites": 3,
+   "type": "journal-article",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.1177/0032885514548009",
+   "title": "The Effects of Prison-Based Educational Programming on Recidivism and Employment",
+   "year": 2014,
+   "venue": "The Prison Journal",
+   "cites": 114,
+   "type": "journal-article",
+   "has_abstract": true
+  },
+  {
+   "doi": "10.1080/07418825.2023.2201330",
+   "title": "Does Stable Employment after Prison Reduce Recidivism Irrespective of Prior Employment and Offending?",
+   "year": 2023,
+   "venue": "Justice Quarterly",
+   "cites": 13,
+   "type": "journal-article",
+   "has_abstract": false
+  }
+ ],
+ "jobs_null": [
+  {
+   "doi": "10.1177/00111287211022631",
+   "title": "Prison Visitation and the Likelihood of Post-Release Employment",
+   "year": 2021,
+   "venue": "Crime &amp; Delinquency",
+   "cites": 23,
+   "type": "journal-article",
+   "has_abstract": true
+  },
+  {
+   "doi": "10.1016/j.ijlcj.2025.100800",
+   "title": "Perspectives on peer mentoring and employment prospects post release for incarcerated women in England and Wales",
+   "year": 2026,
+   "venue": "International Journal of Law, Crime and Justice",
+   "cites": 0,
+   "type": "journal-article",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.1093/acprof:oso/9780195310313.003.0012",
+   "title": "Educational Achievement among Incarcerated Youth: Post-Release Schooling, Employment, and Crime Desistance",
+   "year": 2009,
+   "venue": "The Development of Persistent Criminality",
+   "cites": 4,
+   "type": "book-chapter",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.1177/00111287231210836",
+   "title": "When Prison Becomes the Devil\u2019s Workshop: The Association Between Idleness and Post-Release Employment, Recidivism, and ",
+   "year": 2023,
+   "venue": "Crime &amp; Delinquency",
+   "cites": 6,
+   "type": "journal-article",
+   "has_abstract": true
+  },
+  {
+   "doi": "10.51644/9781771123174-001",
+   "title": "Navigating Employment Post-Release",
+   "year": 2017,
+   "venue": "After Prison",
+   "cites": 1,
+   "type": "book-chapter",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.1037/e618282012-001",
+   "title": "FPI and Vocational Training Works: Post-Release Employment Project (PREP)",
+   "year": null,
+   "venue": "PsycEXTRA Dataset",
+   "cites": 0,
+   "type": "dataset",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.2139/ssrn.4347326",
+   "title": "The Causal Effect of Economic Freedom on Female Employment &amp;amp; Education",
+   "year": 2023,
+   "venue": "",
+   "cites": 8,
+   "type": "posted-content",
+   "has_abstract": true
+  },
+  {
+   "doi": "10.2139/ssrn.4083166",
+   "title": "The Impact of Post-Release Employment on Recidivism in North Carolina",
+   "year": 2022,
+   "venue": "",
+   "cites": 1,
+   "type": "posted-content",
+   "has_abstract": true
+  }
+ ],
+ "community_social_capital": [
+  {
+   "doi": "10.5040/9798216497202.ch-2",
+   "title": "Barriers to Reentry and Increased Recidivism",
+   "year": 2010,
+   "venue": "Prisoner Reentry and Social Capital",
+   "cites": 0,
+   "type": "other",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.5771/9780739143902-13",
+   "title": "Chapter 2: Barriers to Reentry and Increased Recidivism",
+   "year": 2010,
+   "venue": "Prisoner Reentry and Social Capital",
+   "cites": 0,
+   "type": "book-chapter",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.5040/9798216497202.ch-6",
+   "title": "The Impact of Social Capital on Reentry",
+   "year": 2010,
+   "venue": "Prisoner Reentry and Social Capital",
+   "cites": 0,
+   "type": "other",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.21428/5487d235.24fd2348",
+   "title": "Community Reentry Program Characteristics Associated with Outcomes Over Five Years for Individuals on Probation and Paro",
+   "year": 2026,
+   "venue": "Reducing Recidivism Reader",
+   "cites": 0,
+   "type": "book-chapter",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.18574/nyu/9781479862726.003.0010",
+   "title": "9. Social Support in Daily Life at Reentry",
+   "year": 2020,
+   "venue": "Beyond Recidivism",
+   "cites": 10,
+   "type": "book-chapter",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.4135/9781526400611",
+   "title": "Reentry, Homelessness, &amp; Recidivism in Washington State",
+   "year": 2017,
+   "venue": "",
+   "cites": 2,
+   "type": null,
+   "has_abstract": false
+  },
+  {
+   "doi": "10.1037/e649962012-001",
+   "title": "Efficacy of a Community Reentry Program on Recidivism",
+   "year": 2012,
+   "venue": "PsycEXTRA Dataset",
+   "cites": 0,
+   "type": "dataset",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.70675/bf4e6b6dz1100z48e5zbccazcf1b8719334d",
+   "title": "Prison, reentry and recidivism : micro-econometric applications",
+   "year": null,
+   "venue": "",
+   "cites": 0,
+   "type": "dissertation",
+   "has_abstract": true
+  }
+ ],
+ "mentoring": [
+  {
+   "doi": "10.15760/honors.322",
+   "title": "Prison Programs to Reduce Recidivism: What is the Ideal Structure of an Inmate Reentry Program?",
+   "year": 2016,
+   "venue": "",
+   "cites": 1,
+   "type": "report",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.21428/5487d235.24fd2348",
+   "title": "Community Reentry Program Characteristics Associated with Outcomes Over Five Years for Individuals on Probation and Paro",
+   "year": 2026,
+   "venue": "Reducing Recidivism Reader",
+   "cites": 0,
+   "type": "book-chapter",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.1080/24751979.2022.2123746",
+   "title": "The Cost of Recidivism: A Dynamic Systems Model to Evaluate the Benefits of a Restorative Reentry Program",
+   "year": 2022,
+   "venue": "Justice Evaluation Journal",
+   "cites": 4,
+   "type": "journal-article",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.1037/e649962012-001",
+   "title": "Efficacy of a Community Reentry Program on Recidivism",
+   "year": 2012,
+   "venue": "PsycEXTRA Dataset",
+   "cites": 0,
+   "type": "dataset",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.4135/9781526400611",
+   "title": "Reentry, Homelessness, &amp; Recidivism in Washington State",
+   "year": 2017,
+   "venue": "",
+   "cites": 2,
+   "type": null,
+   "has_abstract": false
+  },
+  {
+   "doi": "10.70675/bf4e6b6dz1100z48e5zbccazcf1b8719334d",
+   "title": "Prison, reentry and recidivism : micro-econometric applications",
+   "year": null,
+   "venue": "",
+   "cites": 0,
+   "type": "dissertation",
+   "has_abstract": true
+  },
+  {
+   "doi": "10.18297/etd/3473",
+   "title": "Evaluation of a jail reentry program.",
+   "year": null,
+   "venue": "",
+   "cites": 0,
+   "type": "dissertation",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.1007/s11292-017-9288-0",
+   "title": "Recidivism among juveniles in a multi-component gang reentry program: findings from a program evaluation in Harris Count",
+   "year": 2017,
+   "venue": "Journal of Experimental Criminology",
+   "cites": 9,
+   "type": "journal-article",
+   "has_abstract": false
+  }
+ ],
+ "cbt": [
+  {
+   "doi": "10.1177/0306624x18778448",
+   "title": "Reentry Programs for Adult Male Offender Recidivism and Reintegration: A Systematic Review and Meta-Analysis",
+   "year": 2018,
+   "venue": "International Journal of Offender Therapy and Comparative Cr",
+   "cites": 70,
+   "type": "journal-article",
+   "has_abstract": true
+  },
+  {
+   "doi": "10.1300/j076v25n01_11",
+   "title": "Effects of Brief Cognitive-Behavioral Therapy on Recidivism Among Sex and Non-Sex Offenders",
+   "year": 1997,
+   "venue": "Journal of Offender Rehabilitation",
+   "cites": 11,
+   "type": "journal-article",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.1177/0306624x10396441",
+   "title": "Moral Development and Recidivism: A Meta-Analysis",
+   "year": 2011,
+   "venue": "International Journal of Offender Therapy and Comparative Cr",
+   "cites": 5,
+   "type": "journal-article",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.21428/5487d235.39b8ccb7",
+   "title": "Understanding the Effectiveness of Cognitive Behavioral Therapy: A Study on Offenders",
+   "year": 2026,
+   "venue": "Reducing Recidivism Reader",
+   "cites": 0,
+   "type": "book-chapter",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.1177/0306624x16644501",
+   "title": "Cognitive-Behavioral Therapy Efficacy for Reducing Recidivism Rates of Moderate- and High-Risk Sexual Offenders: A Scopi",
+   "year": 2016,
+   "venue": "International Journal of Offender Therapy and Comparative Cr",
+   "cites": 58,
+   "type": "journal-article",
+   "has_abstract": true
+  },
+  {
+   "doi": "10.1037/e595162013-001",
+   "title": "Efficacy of Neurofeedback and Cognitive-Behavior Therapy on Reducing Sex-Offender Recidivism",
+   "year": 2013,
+   "venue": "PsycEXTRA Dataset",
+   "cites": 0,
+   "type": "dataset",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.1177/0306624x13509065",
+   "title": "A Multiyear Follow-Up Study Examining the Effectiveness of a Cognitive Behavioral Group Therapy Program on the Recidivis",
+   "year": 2013,
+   "venue": "International Journal of Offender Therapy and Comparative Cr",
+   "cites": 18,
+   "type": "journal-article",
+   "has_abstract": true
+  },
+  {
+   "doi": "10.1016/j.jbct.2020.12.004",
+   "title": "Does cognitive behavioral therapy for anxiety disorders improve threat reappraisal?: A meta-analysis",
+   "year": 2021,
+   "venue": "Journal of Behavioral and Cognitive Therapy",
+   "cites": 17,
+   "type": "journal-article",
+   "has_abstract": false
+  }
+ ],
+ "housing": [
+  {
+   "doi": "10.5040/9798216497202.ch-2",
+   "title": "Barriers to Reentry and Increased Recidivism",
+   "year": 2010,
+   "venue": "Prisoner Reentry and Social Capital",
+   "cites": 0,
+   "type": "other",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.18574/nyu/9781479862726.003.0006",
+   "title": "5. Interviewing the \u201cRabble Class\u201d: Recruitment and Retention in Studies of Prisoner Reentry",
+   "year": 2020,
+   "venue": "Beyond Recidivism",
+   "cites": 2,
+   "type": "book-chapter",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.18574/nyu/9781479862726.003.0018",
+   "title": "References",
+   "year": 2020,
+   "venue": "Beyond Recidivism",
+   "cites": 0,
+   "type": "book-chapter",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.18574/nyu/9781479862726.003.0021",
+   "title": "Index",
+   "year": 2020,
+   "venue": "Beyond Recidivism",
+   "cites": 0,
+   "type": "book-chapter",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.18574/nyu/9781479862726.003.0022",
+   "title": "Frontmatter",
+   "year": 2020,
+   "venue": "Beyond Recidivism",
+   "cites": 0,
+   "type": "book-chapter",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.18574/nyu/9781479862726.003.0017",
+   "title": "Acknowledgments",
+   "year": 2020,
+   "venue": "Beyond Recidivism",
+   "cites": 0,
+   "type": "book-chapter",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.18574/nyu/9781479862726.003.0023",
+   "title": "Contents",
+   "year": 2020,
+   "venue": "Beyond Recidivism",
+   "cites": 0,
+   "type": "book-chapter",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.18574/nyu/9781479862726.003.0020",
+   "title": "About the Contributors",
+   "year": 2020,
+   "venue": "Beyond Recidivism",
+   "cites": 0,
+   "type": "book-chapter",
+   "has_abstract": false
+  }
+ ],
+ "sca": [
+  {
+   "doi": "10.7249/rra4745-1",
+   "title": "Evaluation of Pima County\u2019s Bureau of Justice Assistance Fiscal Year 2021 Second Chance Act Pay for Success Initiative",
+   "year": 2026,
+   "venue": "",
+   "cites": 0,
+   "type": "edited-book",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.4135/9781452218519.n165",
+   "title": "Second Chance Act",
+   "year": 2012,
+   "venue": "Encyclopedia of Community Corrections",
+   "cites": 0,
+   "type": "reference-entry",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.1037/e587782012-001",
+   "title": "Allowable Uses for Second Chance Act Program Grant Funds: Policy",
+   "year": 2012,
+   "venue": "PsycEXTRA Dataset",
+   "cites": 1,
+   "type": "dataset",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.5771/9781666922806-109",
+   "title": "Second Chance Act and Second Chance Pell Pilot Program",
+   "year": 2023,
+   "venue": "Offender Rehabilitation Issues",
+   "cites": 0,
+   "type": "book-chapter",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.5040/9781666998245.ch-004",
+   "title": "Grandparenting as Second Chance",
+   "year": 2019,
+   "venue": "Grandparents in a Digital Age",
+   "cites": 0,
+   "type": "other",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.15760/honors.108",
+   "title": "The Media?s Presentation of The Second Chance Act: Funding for Reentry Following Prison",
+   "year": 2014,
+   "venue": "",
+   "cites": 0,
+   "type": "report",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.1037/e610502007-013",
+   "title": "APA Member Provides First Rate Testimony on Second Chance Act",
+   "year": 2007,
+   "venue": "PsycEXTRA Dataset",
+   "cites": 1,
+   "type": "dataset",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.1002/fgc.31036",
+   "title": "Effectiveness of the Second Chance Act Grant Program: A phased evaluation approach (DOJ)",
+   "year": 2020,
+   "venue": "Federal Grants &amp; Contracts",
+   "cites": 0,
+   "type": "journal-article",
+   "has_abstract": false
+  }
+ ],
+ "family": [
+  {
+   "doi": "10.18574/nyu/9781479862726.003.0011",
+   "title": "10. Formerly Incarcerated Men\u2019s Negotiation of Family Support",
+   "year": 2020,
+   "venue": "Beyond Recidivism",
+   "cites": 3,
+   "type": "book-chapter",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.18574/nyu/9781479862726.003.0010",
+   "title": "9. Social Support in Daily Life at Reentry",
+   "year": 2020,
+   "venue": "Beyond Recidivism",
+   "cites": 10,
+   "type": "book-chapter",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.5040/9798216497202.ch-2",
+   "title": "Barriers to Reentry and Increased Recidivism",
+   "year": 2010,
+   "venue": "Prisoner Reentry and Social Capital",
+   "cites": 0,
+   "type": "other",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.18574/nyu/9781479862726.003.0006",
+   "title": "5. Interviewing the \u201cRabble Class\u201d: Recruitment and Retention in Studies of Prisoner Reentry",
+   "year": 2020,
+   "venue": "Beyond Recidivism",
+   "cites": 2,
+   "type": "book-chapter",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.18574/nyu/9781479862726.003.0018",
+   "title": "References",
+   "year": 2020,
+   "venue": "Beyond Recidivism",
+   "cites": 0,
+   "type": "book-chapter",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.18574/nyu/9781479862726.003.0021",
+   "title": "Index",
+   "year": 2020,
+   "venue": "Beyond Recidivism",
+   "cites": 0,
+   "type": "book-chapter",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.18574/nyu/9781479862726.003.0022",
+   "title": "Frontmatter",
+   "year": 2020,
+   "venue": "Beyond Recidivism",
+   "cites": 0,
+   "type": "book-chapter",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.18574/nyu/9781479862726.003.0017",
+   "title": "Acknowledgments",
+   "year": 2020,
+   "venue": "Beyond Recidivism",
+   "cites": 0,
+   "type": "book-chapter",
+   "has_abstract": false
+  }
+ ],
+ "education2": [
+  {
+   "doi": "10.65150/ep-jsshrs/v2e7/2026-29",
+   "title": "Postsecondary Education Programs Among Incarcerated and Formerly Incarcerated Adults: A Systematic Review of Recidivism ",
+   "year": 2026,
+   "venue": "Journal of Social Science and Human Research Studies",
+   "cites": 0,
+   "type": "journal-article",
+   "has_abstract": true
+  },
+  {
+   "doi": "10.1093/med/9780199374847.003.0003",
+   "title": "Injecting While Incarcerated",
+   "year": 2018,
+   "venue": "Oxford Medicine Online",
+   "cites": 1,
+   "type": "book",
+   "has_abstract": true
+  },
+  {
+   "doi": "10.1353/rhe.0.0187",
+   "title": "Beyond Recidivism: Exploring\nFormerly Incarcerated Student\nPerspectives on the Value of\nHigher Education in Prison",
+   "year": 2023,
+   "venue": "The Review of Higher Education",
+   "cites": 0,
+   "type": "journal-article",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.46569/20.500.12680/jm214x00d",
+   "title": "What Are the Opportunities to Reduce Recidivism Among Formerly Incarcerated \nPersons?",
+   "year": null,
+   "venue": "",
+   "cites": 0,
+   "type": "dissertation",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.1353/rhe.2023.a900569",
+   "title": "Beyond Recidivism: Exploring Formerly Incarcerated Student Perspectives on the Value of Higher Education in Prison",
+   "year": 2023,
+   "venue": "The Review of Higher Education",
+   "cites": 14,
+   "type": "journal-article",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.23860/diss-2191",
+   "title": "An examination of risk and resiliency factors in predicting recidivism rates among incarcerated women",
+   "year": null,
+   "venue": "",
+   "cites": 0,
+   "type": "dissertation",
+   "has_abstract": false
+  },
+  {
+   "doi": "10.1177/0011128714541204",
+   "title": "Recidivism Among Released State Prison Inmates Who Received Mental Health Treatment While Incarcerated",
+   "year": 2014,
+   "venue": "Crime &amp; Delinquency",
+   "cites": 19,
+   "type": "journal-article",
+   "has_abstract": true
+  },
+  {
+   "doi": "10.1037/e452852008-161",
+   "title": "The Rights of Prisoners While Incarcerated",
+   "year": null,
+   "venue": "PsycEXTRA Dataset",
+   "cites": 0,
+   "type": "dataset",
+   "has_abstract": false
+  }
+ ]
+}

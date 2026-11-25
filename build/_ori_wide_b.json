@@ -1,0 +1,77 @@
+{
+ "Baltimore MD": [
+  "MDBPD0000",
+  "2021-07-01",
+  "byStateAbbr exact match"
+ ],
+ "Milwaukee WI": [
+  "WIMPD0000",
+  "2004-01-01",
+  "byStateAbbr exact match"
+ ],
+ "Portland OR": [
+  "OR0260200",
+  "2015-05-01",
+  "byStateAbbr exact match"
+ ],
+ "Kansas City MO": [
+  "MOKPD0000",
+  "2010-01-01",
+  "byStateAbbr exact match"
+ ],
+ "Las Vegas NV": [
+  null,
+  null,
+  "not found in state directory"
+ ],
+ "Albuquerque NM": [
+  "NM0010100",
+  "2018-01-01",
+  "byStateAbbr exact match"
+ ],
+ "Tucson AZ": [
+  "AZ0100300",
+  "2024-01-01",
+  "byStateAbbr exact match"
+ ],
+ "Fresno CA": [
+  "CA0100500",
+  "2021-01-01",
+  "byStateAbbr exact match"
+ ],
+ "Sacramento CA": [
+  "CA0340400",
+  "2022-11-01",
+  "byStateAbbr exact match"
+ ],
+ "Long Beach CA": [
+  "CA0194100",
+  "2022-09-01",
+  "byStateAbbr exact match"
+ ],
+ "Omaha NE": [
+  "NB0280200",
+  "2023-08-01",
+  "byStateAbbr exact match"
+ ],
+ "Raleigh NC": [
+  "NC0920100",
+  "2019-01-01",
+  "byStateAbbr exact match"
+ ],
+ "Virginia Beach VA": [
+  "VA1280000",
+  "1999-02-01",
+  "byStateAbbr exact match"
+ ],
+ "Tulsa OK": [
+  "OK0720500",
+  "2021-01-01",
+  "byStateAbbr exact match"
+ ],
+ "Wichita KS": [
+  "KS0870300",
+  "2000-11-01",
+  "byStateAbbr exact match"
+ ]
+}

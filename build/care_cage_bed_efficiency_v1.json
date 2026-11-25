@@ -1,0 +1,1697 @@
+{
+ "_record": "care_cage_bed_efficiency_v1",
+ "built": "2026-11-24",
+ "built_by": "KNOCKOUT-RESUME lane-6 subagent (the founder's named lane: care-bed vs cage-bed per-dollar outcome efficiency)",
+ "laws": [
+  "direction-class only, no causal claims",
+  "honest-null = routes-tried-no-capture, never a placeholder",
+  "cross-vintage joins tagged per row (TAC beds 2023 snapshot x NRI FY2024 dollars x CDC 2023 rates x CDE 2023 arrests)"
+ ],
+ "sources": {
+  "care_bed_side": "TAC 2023 state psych-bed census (Documents/LLM/tac_beds_2023.json, 51 jurisdictions, 36,114 beds; civil/forensic split)",
+  "care_dollar_side": "NRI FY2024 Table 1 SMHA expenditures (_nri_table1_parsed.json, 52 jurisdictions incl DC)",
+  "cage_intake_side": "CDE UCR arrest state endpoint 2023 (proven keyless route; 51/51 pulled; arrests = booking-intake proxy, NOT jail census)",
+  "cage_bench_side": "BJS/Annual Survey of Jails = HTTP 403/404 on every path tried (UA header too) \u2014 jail-BED STOCK by state NOT keyless this pass; NY county jail census carries the bench-side anchor instead (beds_jail_swap_v1_rows.jsonl)",
+  "outcome_side": "CDC Mapping-IOV state all-homicide/all-suicide 2023 (banked _lane5_state_raw.json)",
+  "city_side": "care_cage_wide v1+b (45 Census-COG city-years) murders_all_v1 denominators banked"
+ },
+ "state_grain_tests": {
+  "T1_beds100k_x_homicide2023": {
+   "n": 50,
+   "r": 0.448
+  },
+  "T2_smhaPercap_x_homicide2023": {
+   "n": 50,
+   "r": 0.01
+  },
+  "T3_cageIntake1000_x_homicide2023": {
+   "n": 50,
+   "r": 0.119
+  },
+  "T4_beds100k_x_cageIntake1000": {
+   "n": 51,
+   "r": -0.078
+  },
+  "T5_beds100k_x_suicide2023": {
+   "n": 50,
+   "r": -0.361
+  },
+  "T6_smhaPercap_x_suicide2023": {
+   "n": 50,
+   "r": -0.156
+  }
+ },
+ "city_grain_tests": {
+  "care100k_x_murder_rate": "r=+0.021 n=44 (cross-city raw \u2014 the scale confound again; within-city panel already carries the REAL -0.5-to-0.9 reads)",
+  "cage100k_x_murder_rate": "r=+0.477 n=44"
+ },
+ "headline_reads": [
+  "CARE-BED EFFICIENCY: beds/100k x suicide r=-0.361 (n=50) \u2014 the only clean negative in the state cross-section; homicide side POSITIVE +0.448 (beds sit where violence sits \u2014 the cross-grain confound class, same as the NY county finding r=+0.286)",
+  "SMHA-DOLLAR EFFICIENCY: SMHA$/capita x homicide ~ZERO +0.010 and x suicide -0.156 nonsig \u2014 replicates the rank-15 SMHA-spend-null class at the outcome margin: dollars alone do not price the outcome",
+  "THE PER-DOLLAR TABLE: national SMHA $1.70M per psych bed; per-state the ratio fans from ~$0.1M-class to multi-million \u2014 Iowa+Vermont = high-spend/low-beds (rank-5 'funding-not-beds' corroborator in the wild), Oregon/NY = high-spend+high-beds",
+  "CAGE-BED PER-DOLLAR: state jail-BENCH stock not keyless (BJS blocked) \u2014 the cage side ships as arrest-INTAKE proxy (CDE 2023, 51/51 real) + NY county bench anchor; intake x homicide +0.119 (intake-follows-crime reaction class)",
+  "NY BENCH ANCHOR: latest jail-census/100k x certified-beds/100k r=+0.033 (n=57) \u2014 inside-NY the cross-section is FLAT, consistent with lane-4's verdict that NY's swap is pre-1997-complete; boarded-in-psych flow: 320 (1997) -> peak 541 (2005) -> 161 (2025), the direct care->cage bridge column banked for the next pass"
+ ],
+ "honest_nulls": [
+  "state jail-bed STOCK (BJS AJ) keyless route fails \u2014 403/404 w/ and w/o browser UA on 8 paths",
+  "Census COG state-grain corrections-$ route: govs/state tab-35 file is coded (no per-row state key) \u2014 abandoned mid-hunt for the proven CDE intake proxy; logged as routes-tried-no-capture"
+ ],
+ "panel_rows": [
+  {
+   "state": "Alabama",
+   "geoid": "01",
+   "psych_beds_total_2023": 408,
+   "psych_beds_per_100k_2023": 8.0,
+   "civil_beds": 268,
+   "forensic_beds": 140,
+   "smha_total_usd": 685168334,
+   "smha_per_capita_usd": 133.15,
+   "civilian_population": 5146020,
+   "homicide_rate_2023": 14.0,
+   "suicide_rate_2023": 17.0,
+   "arrests_2023": 142553,
+   "arrests_per_1000_2023": 27.7,
+   "smha_usd_per_psych_bed": 1679334.0,
+   "cage_intake_arrests_2023": 142553,
+   "cage_intake_per_1000": 27.7
+  },
+  {
+   "state": "Alaska",
+   "geoid": "02",
+   "psych_beds_total_2023": 60,
+   "psych_beds_per_100k_2023": 8.2,
+   "civil_beds": 50,
+   "forensic_beds": 10,
+   "smha_total_usd": 218242493,
+   "smha_per_capita_usd": 303.73,
+   "civilian_population": 718543,
+   "homicide_rate_2023": 8.3,
+   "suicide_rate_2023": 28.1,
+   "arrests_2023": 22258,
+   "arrests_per_1000_2023": 31.0,
+   "smha_usd_per_psych_bed": 3637375.0,
+   "cage_intake_arrests_2023": 22258,
+   "cage_intake_per_1000": 31.0
+  },
+  {
+   "state": "Arizona",
+   "geoid": "04",
+   "psych_beds_total_2023": 259,
+   "psych_beds_per_100k_2023": 3.5,
+   "civil_beds": 116,
+   "forensic_beds": 143,
+   "smha_total_usd": 343228173,
+   "smha_per_capita_usd": 45.37,
+   "civilian_population": 7565095,
+   "homicide_rate_2023": 7.1,
+   "suicide_rate_2023": 20.3,
+   "arrests_2023": 236986,
+   "arrests_per_1000_2023": 31.3,
+   "smha_usd_per_psych_bed": 1325205.0,
+   "cage_intake_arrests_2023": 236986,
+   "cage_intake_per_1000": 31.3
+  },
+  {
+   "state": "Arkansas",
+   "geoid": "05",
+   "psych_beds_total_2023": 186,
+   "psych_beds_per_100k_2023": 6.1,
+   "civil_beds": 0,
+   "forensic_beds": 186,
+   "smha_total_usd": 120146773,
+   "smha_per_capita_usd": 38.95,
+   "civilian_population": 3084635,
+   "homicide_rate_2023": 10.6,
+   "suicide_rate_2023": 20.4,
+   "arrests_2023": 109500,
+   "arrests_per_1000_2023": 35.5,
+   "smha_usd_per_psych_bed": 645950.0,
+   "cage_intake_arrests_2023": 109500,
+   "cage_intake_per_1000": 35.5
+  },
+  {
+   "state": "California",
+   "geoid": "06",
+   "psych_beds_total_2023": 6542,
+   "psych_beds_per_100k_2023": 16.8,
+   "civil_beds": 2020,
+   "forensic_beds": 4522,
+   "smha_total_usd": 8957042513,
+   "smha_per_capita_usd": 227.93,
+   "civilian_population": 39297676,
+   "homicide_rate_2023": 5.1,
+   "suicide_rate_2023": 10.8,
+   "arrests_2023": 781811,
+   "arrests_per_1000_2023": 19.9,
+   "smha_usd_per_psych_bed": 1369160.0,
+   "cage_intake_arrests_2023": 781811,
+   "cage_intake_per_1000": 19.9
+  },
+  {
+   "state": "Colorado",
+   "geoid": "08",
+   "psych_beds_total_2023": 482,
+   "psych_beds_per_100k_2023": 8.3,
+   "civil_beds": 192,
+   "forensic_beds": 290,
+   "smha_total_usd": 395418103,
+   "smha_per_capita_usd": 66.76,
+   "civilian_population": 5922969,
+   "homicide_rate_2023": 6.3,
+   "suicide_rate_2023": 22.1,
+   "arrests_2023": 177304,
+   "arrests_per_1000_2023": 29.9,
+   "smha_usd_per_psych_bed": 820370.0,
+   "cage_intake_arrests_2023": 177304,
+   "cage_intake_per_1000": 29.9
+  },
+  {
+   "state": "Connecticut",
+   "geoid": "09",
+   "psych_beds_total_2023": 515,
+   "psych_beds_per_100k_2023": 14.2,
+   "civil_beds": 286,
+   "forensic_beds": 229,
+   "smha_total_usd": 1177519363,
+   "smha_per_capita_usd": 320.84,
+   "civilian_population": 3670099,
+   "homicide_rate_2023": 4.2,
+   "suicide_rate_2023": 9.8,
+   "arrests_2023": 73803,
+   "arrests_per_1000_2023": 20.1,
+   "smha_usd_per_psych_bed": 2286445.0,
+   "cage_intake_arrests_2023": 73803,
+   "cage_intake_per_1000": 20.1
+  },
+  {
+   "state": "Delaware",
+   "geoid": "10",
+   "psych_beds_total_2023": 124,
+   "psych_beds_per_100k_2023": 12.2,
+   "civil_beds": 82,
+   "forensic_beds": 42,
+   "smha_total_usd": 169330573,
+   "smha_per_capita_usd": 161.49,
+   "civilian_population": 1048534,
+   "homicide_rate_2023": 5.3,
+   "suicide_rate_2023": 14.0,
+   "arrests_2023": 26144,
+   "arrests_per_1000_2023": 24.9,
+   "smha_usd_per_psych_bed": 1365569.0,
+   "cage_intake_arrests_2023": 26144,
+   "cage_intake_per_1000": 24.9
+  },
+  {
+   "state": "District of Columbia",
+   "geoid": "11",
+   "psych_beds_total_2023": 240,
+   "psych_beds_per_100k_2023": 35.7,
+   "civil_beds": 107,
+   "forensic_beds": 133,
+   "smha_total_usd": 268842946,
+   "smha_per_capita_usd": 384.55,
+   "civilian_population": 699116,
+   "homicide_rate_2023": 35.9,
+   "suicide_rate_2023": 6.0,
+   "arrests_2023": 25025,
+   "arrests_per_1000_2023": 35.8,
+   "smha_usd_per_psych_bed": 1120179.0,
+   "cage_intake_arrests_2023": 25025,
+   "cage_intake_per_1000": 35.8
+  },
+  {
+   "state": "Florida",
+   "geoid": "12",
+   "psych_beds_total_2023": 2522,
+   "psych_beds_per_100k_2023": 11.3,
+   "civil_beds": 1414,
+   "forensic_beds": 1108,
+   "smha_total_usd": 1220080167,
+   "smha_per_capita_usd": 52.34,
+   "civilian_population": 23310846,
+   "homicide_rate_2023": 6.0,
+   "suicide_rate_2023": 16.0,
+   "arrests_2023": 234721,
+   "arrests_per_1000_2023": 10.1,
+   "smha_usd_per_psych_bed": 483775.0,
+   "cage_intake_arrests_2023": 234721,
+   "cage_intake_per_1000": 10.1
+  },
+  {
+   "state": "Georgia",
+   "geoid": "13",
+   "psych_beds_total_2023": 1055,
+   "psych_beds_per_100k_2023": 9.7,
+   "civil_beds": 393,
+   "forensic_beds": 662,
+   "smha_total_usd": 1000980839,
+   "smha_per_capita_usd": 89.97,
+   "civilian_population": 11125586,
+   "homicide_rate_2023": 9.7,
+   "suicide_rate_2023": 15.1,
+   "arrests_2023": 201750,
+   "arrests_per_1000_2023": 18.1,
+   "smha_usd_per_psych_bed": 948797.0,
+   "cage_intake_arrests_2023": 201750,
+   "cage_intake_per_1000": 18.1
+  },
+  {
+   "state": "Hawaii",
+   "geoid": "15",
+   "psych_beds_total_2023": 297,
+   "psych_beds_per_100k_2023": 20.6,
+   "civil_beds": 24,
+   "forensic_beds": 273,
+   "smha_total_usd": 234516819,
+   "smha_per_capita_usd": 166.77,
+   "civilian_population": 1406187,
+   "homicide_rate_2023": 2.9,
+   "suicide_rate_2023": 15.5,
+   "arrests_2023": 35496,
+   "arrests_per_1000_2023": 25.2,
+   "smha_usd_per_psych_bed": 789619.0,
+   "cage_intake_arrests_2023": 35496,
+   "cage_intake_per_1000": 25.2
+  },
+  {
+   "state": "Idaho",
+   "geoid": "16",
+   "psych_beds_total_2023": 170,
+   "psych_beds_per_100k_2023": 8.8,
+   "civil_beds": 98,
+   "forensic_beds": 72,
+   "smha_total_usd": 122655674,
+   "smha_per_capita_usd": 61.38,
+   "civilian_population": 1998196,
+   "homicide_rate_2023": 2.5,
+   "suicide_rate_2023": 23.4,
+   "arrests_2023": 53703,
+   "arrests_per_1000_2023": 26.9,
+   "smha_usd_per_psych_bed": 721504.0,
+   "cage_intake_arrests_2023": 53703,
+   "cage_intake_per_1000": 26.9
+  },
+  {
+   "state": "Illinois",
+   "geoid": "17",
+   "psych_beds_total_2023": 1359,
+   "psych_beds_per_100k_2023": 10.8,
+   "civil_beds": 407,
+   "forensic_beds": 952,
+   "smha_total_usd": 1128110403,
+   "smha_per_capita_usd": 88.87,
+   "civilian_population": 12693926,
+   "homicide_rate_2023": 9.3,
+   "suicide_rate_2023": 12.5,
+   "arrests_2023": 169071,
+   "arrests_per_1000_2023": 13.3,
+   "smha_usd_per_psych_bed": 830103.0,
+   "cage_intake_arrests_2023": 169071,
+   "cage_intake_per_1000": 13.3
+  },
+  {
+   "state": "Indiana",
+   "geoid": "18",
+   "psych_beds_total_2023": 815,
+   "psych_beds_per_100k_2023": 11.9,
+   "civil_beds": 549,
+   "forensic_beds": 266,
+   "smha_total_usd": 756835315,
+   "smha_per_capita_usd": 109.32,
+   "civilian_population": 6923251,
+   "homicide_rate_2023": 7.6,
+   "suicide_rate_2023": 17.3,
+   "arrests_2023": 134189,
+   "arrests_per_1000_2023": 19.4,
+   "smha_usd_per_psych_bed": 928632.0,
+   "cage_intake_arrests_2023": 134189,
+   "cage_intake_per_1000": 19.4
+  },
+  {
+   "state": "Iowa",
+   "geoid": "19",
+   "psych_beds_total_2023": 64,
+   "psych_beds_per_100k_2023": 2.0,
+   "civil_beds": null,
+   "forensic_beds": null,
+   "smha_total_usd": 1302020737,
+   "smha_per_capita_usd": 401.7,
+   "civilian_population": 3241257,
+   "homicide_rate_2023": 3.1,
+   "suicide_rate_2023": 15.7,
+   "arrests_2023": 76227,
+   "arrests_per_1000_2023": 23.5,
+   "smha_usd_per_psych_bed": 20344074.0,
+   "cage_intake_arrests_2023": 76227,
+   "cage_intake_per_1000": 23.5
+  },
+  {
+   "state": "Kansas",
+   "geoid": "20",
+   "psych_beds_total_2023": 304,
+   "psych_beds_per_100k_2023": 10.4,
+   "civil_beds": 200,
+   "forensic_beds": 104,
+   "smha_total_usd": 769917107,
+   "smha_per_capita_usd": 260.96,
+   "civilian_population": 2950274,
+   "homicide_rate_2023": 6.3,
+   "suicide_rate_2023": 19.4,
+   "arrests_2023": 70035,
+   "arrests_per_1000_2023": 23.7,
+   "smha_usd_per_psych_bed": 2532622.0,
+   "cage_intake_arrests_2023": 70035,
+   "cage_intake_per_1000": 23.7
+  },
+  {
+   "state": "Kentucky",
+   "geoid": "21",
+   "psych_beds_total_2023": 410,
+   "psych_beds_per_100k_2023": 9.1,
+   "civil_beds": 370,
+   "forensic_beds": 40,
+   "smha_total_usd": 274759334,
+   "smha_per_capita_usd": 60.09,
+   "civilian_population": 4572233,
+   "homicide_rate_2023": 7.0,
+   "suicide_rate_2023": 18.0,
+   "arrests_2023": 202385,
+   "arrests_per_1000_2023": 44.3,
+   "smha_usd_per_psych_bed": 670145.0,
+   "cage_intake_arrests_2023": 202385,
+   "cage_intake_per_1000": 44.3
+  },
+  {
+   "state": "Louisiana",
+   "geoid": "22",
+   "psych_beds_total_2023": 689,
+   "psych_beds_per_100k_2023": 15.0,
+   "civil_beds": 450,
+   "forensic_beds": 239,
+   "smha_total_usd": 999294126,
+   "smha_per_capita_usd": 218.04,
+   "civilian_population": 4583145,
+   "homicide_rate_2023": 18.3,
+   "suicide_rate_2023": 15.7,
+   "arrests_2023": 106536,
+   "arrests_per_1000_2023": 23.2,
+   "smha_usd_per_psych_bed": 1450354.0,
+   "cage_intake_arrests_2023": 106536,
+   "cage_intake_per_1000": 23.2
+  },
+  {
+   "state": "Maine",
+   "geoid": "23",
+   "psych_beds_total_2023": 159,
+   "psych_beds_per_100k_2023": 11.5,
+   "civil_beds": null,
+   "forensic_beds": null,
+   "smha_total_usd": 252688364,
+   "smha_per_capita_usd": 179.96,
+   "civilian_population": 1404172,
+   "homicide_rate_2023": 3.4,
+   "suicide_rate_2023": 19.6,
+   "arrests_2023": 33691,
+   "arrests_per_1000_2023": 24.0,
+   "smha_usd_per_psych_bed": 1589235.0,
+   "cage_intake_arrests_2023": 33691,
+   "cage_intake_per_1000": 24.0
+  },
+  {
+   "state": "Maryland",
+   "geoid": "24",
+   "psych_beds_total_2023": 946,
+   "psych_beds_per_100k_2023": 15.3,
+   "civil_beds": 1,
+   "forensic_beds": 945,
+   "smha_total_usd": 644198292,
+   "smha_per_capita_usd": 103.34,
+   "civilian_population": 6233607,
+   "homicide_rate_2023": 9.4,
+   "suicide_rate_2023": 9.7,
+   "arrests_2023": 106638,
+   "arrests_per_1000_2023": 17.1,
+   "smha_usd_per_psych_bed": 680971.0,
+   "cage_intake_arrests_2023": 106638,
+   "cage_intake_per_1000": 17.1
+  },
+  {
+   "state": "Massachusetts",
+   "geoid": "25",
+   "psych_beds_total_2023": 664,
+   "psych_beds_per_100k_2023": 9.5,
+   "civil_beds": 583,
+   "forensic_beds": 81,
+   "smha_total_usd": 1194840781,
+   "smha_per_capita_usd": 167.51,
+   "civilian_population": 7132747,
+   "homicide_rate_2023": 2.6,
+   "suicide_rate_2023": 9.4,
+   "arrests_2023": 92037,
+   "arrests_per_1000_2023": 12.9,
+   "smha_usd_per_psych_bed": 1799459.0,
+   "cage_intake_arrests_2023": 92037,
+   "cage_intake_per_1000": 12.9
+  },
+  {
+   "state": "Michigan",
+   "geoid": "26",
+   "psych_beds_total_2023": 497,
+   "psych_beds_per_100k_2023": 5.0,
+   "civil_beds": 204,
+   "forensic_beds": 293,
+   "smha_total_usd": 346966330,
+   "smha_per_capita_usd": 34.22,
+   "civilian_population": 10138576,
+   "homicide_rate_2023": 6.3,
+   "suicide_rate_2023": 15.2,
+   "arrests_2023": 182172,
+   "arrests_per_1000_2023": 18.0,
+   "smha_usd_per_psych_bed": 698121.0,
+   "cage_intake_arrests_2023": 182172,
+   "cage_intake_per_1000": 18.0
+  },
+  {
+   "state": "Minnesota",
+   "geoid": "27",
+   "psych_beds_total_2023": 192,
+   "psych_beds_per_100k_2023": 3.4,
+   "civil_beds": 192,
+   "forensic_beds": null,
+   "smha_total_usd": 2028367852,
+   "smha_per_capita_usd": 350.17,
+   "civilian_population": 5792546,
+   "homicide_rate_2023": 3.4,
+   "suicide_rate_2023": 14.2,
+   "arrests_2023": 121389,
+   "arrests_per_1000_2023": 21.0,
+   "smha_usd_per_psych_bed": 10564416.0,
+   "cage_intake_arrests_2023": 121389,
+   "cage_intake_per_1000": 21.0
+  },
+  {
+   "state": "Mississippi",
+   "geoid": "28",
+   "psych_beds_total_2023": 366,
+   "psych_beds_per_100k_2023": 12.4,
+   "civil_beds": 288,
+   "forensic_beds": 78,
+   "smha_total_usd": 269269587,
+   "smha_per_capita_usd": 91.83,
+   "civilian_population": 2932371,
+   "homicide_rate_2023": 18.5,
+   "suicide_rate_2023": 15.5,
+   "arrests_2023": 60034,
+   "arrests_per_1000_2023": 20.5,
+   "smha_usd_per_psych_bed": 735709.0,
+   "cage_intake_arrests_2023": 60034,
+   "cage_intake_per_1000": 20.5
+  },
+  {
+   "state": "Missouri",
+   "geoid": "29",
+   "psych_beds_total_2023": 890,
+   "psych_beds_per_100k_2023": 14.4,
+   "civil_beds": 0,
+   "forensic_beds": 890,
+   "smha_total_usd": 1070176020,
+   "smha_per_capita_usd": 171.78,
+   "civilian_population": 6230103,
+   "homicide_rate_2023": 9.9,
+   "suicide_rate_2023": 18.4,
+   "arrests_2023": 137685,
+   "arrests_per_1000_2023": 22.1,
+   "smha_usd_per_psych_bed": 1202445.0,
+   "cage_intake_arrests_2023": 137685,
+   "cage_intake_per_1000": 22.1
+  },
+  {
+   "state": "Montana",
+   "geoid": "30",
+   "psych_beds_total_2023": 174,
+   "psych_beds_per_100k_2023": 15.5,
+   "civil_beds": 120,
+   "forensic_beds": 54,
+   "smha_total_usd": 362048419,
+   "smha_per_capita_usd": 319.3,
+   "civilian_population": 1133895,
+   "homicide_rate_2023": 4.4,
+   "suicide_rate_2023": 27.4,
+   "arrests_2023": 30337,
+   "arrests_per_1000_2023": 26.8,
+   "smha_usd_per_psych_bed": 2080738.0,
+   "cage_intake_arrests_2023": 30337,
+   "cage_intake_per_1000": 26.8
+  },
+  {
+   "state": "Nebraska",
+   "geoid": "31",
+   "psych_beds_total_2023": 194,
+   "psych_beds_per_100k_2023": 9.9,
+   "civil_beds": 82,
+   "forensic_beds": 112,
+   "smha_total_usd": 355892675,
+   "smha_per_capita_usd": 178.02,
+   "civilian_population": 1999174,
+   "homicide_rate_2023": 3.2,
+   "suicide_rate_2023": 14.4,
+   "arrests_2023": 48604,
+   "arrests_per_1000_2023": 24.3,
+   "smha_usd_per_psych_bed": 1834498.0,
+   "cage_intake_arrests_2023": 48604,
+   "cage_intake_per_1000": 24.3
+  },
+  {
+   "state": "Nevada",
+   "geoid": "32",
+   "psych_beds_total_2023": 287,
+   "psych_beds_per_100k_2023": 9.0,
+   "civil_beds": 88,
+   "forensic_beds": 199,
+   "smha_total_usd": 138756809,
+   "smha_per_capita_usd": 42.62,
+   "civilian_population": 3255772,
+   "homicide_rate_2023": 8.1,
+   "suicide_rate_2023": 21.6,
+   "arrests_2023": 110801,
+   "arrests_per_1000_2023": 34.0,
+   "smha_usd_per_psych_bed": 483473.0,
+   "cage_intake_arrests_2023": 110801,
+   "cage_intake_per_1000": 34.0
+  },
+  {
+   "state": "New Hampshire",
+   "geoid": "33",
+   "psych_beds_total_2023": 154,
+   "psych_beds_per_100k_2023": 11.0,
+   "civil_beds": 124,
+   "forensic_beds": 30,
+   "smha_total_usd": 397344557,
+   "smha_per_capita_usd": 282.1,
+   "civilian_population": 1408510,
+   "homicide_rate_2023": 2.1,
+   "suicide_rate_2023": 15.8,
+   "arrests_2023": 37522,
+   "arrests_per_1000_2023": 26.6,
+   "smha_usd_per_psych_bed": 2580159.0,
+   "cage_intake_arrests_2023": 37522,
+   "cage_intake_per_1000": 26.6
+  },
+  {
+   "state": "New Jersey",
+   "geoid": "34",
+   "psych_beds_total_2023": 1555,
+   "psych_beds_per_100k_2023": 16.8,
+   "civil_beds": 1105,
+   "forensic_beds": 450,
+   "smha_total_usd": 2265153024,
+   "smha_per_capita_usd": 238.6,
+   "civilian_population": 9493352,
+   "homicide_rate_2023": 3.2,
+   "suicide_rate_2023": 7.6,
+   "arrests_2023": 150553,
+   "arrests_per_1000_2023": 15.9,
+   "smha_usd_per_psych_bed": 1456690.0,
+   "cage_intake_arrests_2023": 150553,
+   "cage_intake_per_1000": 15.9
+  },
+  {
+   "state": "New Mexico",
+   "geoid": "35",
+   "psych_beds_total_2023": 137,
+   "psych_beds_per_100k_2023": 6.5,
+   "civil_beds": 49,
+   "forensic_beds": 88,
+   "smha_total_usd": 424082497,
+   "smha_per_capita_usd": 200.33,
+   "civilian_population": 2116914,
+   "homicide_rate_2023": 13.7,
+   "suicide_rate_2023": 23.1,
+   "arrests_2023": 52342,
+   "arrests_per_1000_2023": 24.7,
+   "smha_usd_per_psych_bed": 3095493.0,
+   "cage_intake_arrests_2023": 52342,
+   "cage_intake_per_1000": 24.7
+  },
+  {
+   "state": "New York",
+   "geoid": "36",
+   "psych_beds_total_2023": 3300,
+   "psych_beds_per_100k_2023": 16.8,
+   "civil_beds": 2543,
+   "forensic_beds": 757,
+   "smha_total_usd": 8537391040,
+   "smha_per_capita_usd": 430.14,
+   "civilian_population": 19847942,
+   "homicide_rate_2023": 3.8,
+   "suicide_rate_2023": 8.8,
+   "arrests_2023": 396443,
+   "arrests_per_1000_2023": 20.0,
+   "smha_usd_per_psych_bed": 2587088.0,
+   "cage_intake_arrests_2023": 396443,
+   "cage_intake_per_1000": 20.0
+  },
+  {
+   "state": "North Carolina",
+   "geoid": "37",
+   "psych_beds_total_2023": 453,
+   "psych_beds_per_100k_2023": 4.2,
+   "civil_beds": 262,
+   "forensic_beds": 191,
+   "smha_total_usd": 1385256571,
+   "smha_per_capita_usd": 126.51,
+   "civilian_population": 10949942,
+   "homicide_rate_2023": 8.2,
+   "suicide_rate_2023": 14.7,
+   "arrests_2023": 239961,
+   "arrests_per_1000_2023": 21.9,
+   "smha_usd_per_psych_bed": 3057962.0,
+   "cage_intake_arrests_2023": 239961,
+   "cage_intake_per_1000": 21.9
+  },
+  {
+   "state": "North Dakota",
+   "geoid": "38",
+   "psych_beds_total_2023": 57,
+   "psych_beds_per_100k_2023": 7.3,
+   "civil_beds": 49,
+   "forensic_beds": 8,
+   "smha_total_usd": 146425519,
+   "smha_per_capita_usd": 185.47,
+   "civilian_population": 789463,
+   "homicide_rate_2023": 3.1,
+   "suicide_rate_2023": 18.1,
+   "arrests_2023": 32977,
+   "arrests_per_1000_2023": 41.8,
+   "smha_usd_per_psych_bed": 2568869.0,
+   "cage_intake_arrests_2023": 32977,
+   "cage_intake_per_1000": 41.8
+  },
+  {
+   "state": "Ohio",
+   "geoid": "39",
+   "psych_beds_total_2023": 1126,
+   "psych_beds_per_100k_2023": 9.6,
+   "civil_beds": 236,
+   "forensic_beds": 890,
+   "smha_total_usd": 2990922464,
+   "smha_per_capita_usd": 251.83,
+   "civilian_population": 11876876,
+   "homicide_rate_2023": 7.4,
+   "suicide_rate_2023": 15.2,
+   "arrests_2023": 188842,
+   "arrests_per_1000_2023": 15.9,
+   "smha_usd_per_psych_bed": 2656237.0,
+   "cage_intake_arrests_2023": 188842,
+   "cage_intake_per_1000": 15.9
+  },
+  {
+   "state": "Oklahoma",
+   "geoid": "40",
+   "psych_beds_total_2023": 376,
+   "psych_beds_per_100k_2023": 9.4,
+   "civil_beds": 176,
+   "forensic_beds": 200,
+   "smha_total_usd": 522996858,
+   "smha_per_capita_usd": 128.3,
+   "civilian_population": 4076488,
+   "homicide_rate_2023": 7.2,
+   "suicide_rate_2023": 22.0,
+   "arrests_2023": 85546,
+   "arrests_per_1000_2023": 21.0,
+   "smha_usd_per_psych_bed": 1390949.0,
+   "cage_intake_arrests_2023": 85546,
+   "cage_intake_per_1000": 21.0
+  },
+  {
+   "state": "Oregon",
+   "geoid": "41",
+   "psych_beds_total_2023": 704,
+   "psych_beds_per_100k_2023": 16.6,
+   "civil_beds": 50,
+   "forensic_beds": 654,
+   "smha_total_usd": 2736819102,
+   "smha_per_capita_usd": 640.8,
+   "civilian_population": 4270922,
+   "homicide_rate_2023": 4.4,
+   "suicide_rate_2023": 21.0,
+   "arrests_2023": 102452,
+   "arrests_per_1000_2023": 24.0,
+   "smha_usd_per_psych_bed": 3887527.0,
+   "cage_intake_arrests_2023": 102452,
+   "cage_intake_per_1000": 24.0
+  },
+  {
+   "state": "Pennsylvania",
+   "geoid": "42",
+   "psych_beds_total_2023": 1348,
+   "psych_beds_per_100k_2023": 10.7,
+   "civil_beds": 989,
+   "forensic_beds": 359,
+   "smha_total_usd": 5369395205,
+   "smha_per_capita_usd": 410.63,
+   "civilian_population": 13075943,
+   "homicide_rate_2023": 7.1,
+   "suicide_rate_2023": 15.2,
+   "arrests_2023": 297936,
+   "arrests_per_1000_2023": 22.8,
+   "smha_usd_per_psych_bed": 3983231.0,
+   "cage_intake_arrests_2023": 297936,
+   "cage_intake_per_1000": 22.8
+  },
+  {
+   "state": "Rhode Island",
+   "geoid": "44",
+   "psych_beds_total_2023": 126,
+   "psych_beds_per_100k_2023": 11.5,
+   "civil_beds": 72,
+   "forensic_beds": 54,
+   "smha_total_usd": 112039792,
+   "smha_per_capita_usd": 101.09,
+   "civilian_population": 1108283,
+   "homicide_rate_2023": 2.7,
+   "suicide_rate_2023": 10.2,
+   "arrests_2023": 23431,
+   "arrests_per_1000_2023": 21.1,
+   "smha_usd_per_psych_bed": 889205.0,
+   "cage_intake_arrests_2023": 23431,
+   "cage_intake_per_1000": 21.1
+  },
+  {
+   "state": "South Carolina",
+   "geoid": "45",
+   "psych_beds_total_2023": 423,
+   "psych_beds_per_100k_2023": 8.0,
+   "civil_beds": 210,
+   "forensic_beds": 213,
+   "smha_total_usd": 616859372,
+   "smha_per_capita_usd": 113.36,
+   "civilian_population": 5441738,
+   "homicide_rate_2023": 10.5,
+   "suicide_rate_2023": 15.2,
+   "arrests_2023": 152549,
+   "arrests_per_1000_2023": 28.0,
+   "smha_usd_per_psych_bed": 1458296.0,
+   "cage_intake_arrests_2023": 152549,
+   "cage_intake_per_1000": 28.0
+  },
+  {
+   "state": "South Dakota",
+   "geoid": "46",
+   "psych_beds_total_2023": 67,
+   "psych_beds_per_100k_2023": 7.4,
+   "civil_beds": 41,
+   "forensic_beds": 26,
+   "smha_total_usd": 120691568,
+   "smha_per_capita_usd": 130.98,
+   "civilian_population": 921481,
+   "homicide_rate_2023": 4.1,
+   "suicide_rate_2023": 19.7,
+   "arrests_2023": 46977,
+   "arrests_per_1000_2023": 51.0,
+   "smha_usd_per_psych_bed": 1801367.0,
+   "cage_intake_arrests_2023": 46977,
+   "cage_intake_per_1000": 51.0
+  },
+  {
+   "state": "Tennessee",
+   "geoid": "47",
+   "psych_beds_total_2023": 550,
+   "psych_beds_per_100k_2023": 7.8,
+   "civil_beds": 467,
+   "forensic_beds": 83,
+   "smha_total_usd": 1091639407,
+   "smha_per_capita_usd": 151.46,
+   "civilian_population": 7207513,
+   "homicide_rate_2023": 10.9,
+   "suicide_rate_2023": 17.9,
+   "arrests_2023": 256534,
+   "arrests_per_1000_2023": 35.6,
+   "smha_usd_per_psych_bed": 1984799.0,
+   "cage_intake_arrests_2023": 256534,
+   "cage_intake_per_1000": 35.6
+  },
+  {
+   "state": "Texas",
+   "geoid": "48",
+   "psych_beds_total_2023": 1509,
+   "psych_beds_per_100k_2023": 5.0,
+   "civil_beds": 570,
+   "forensic_beds": 939,
+   "smha_total_usd": 1631963339,
+   "smha_per_capita_usd": 52.34,
+   "civilian_population": 31179223,
+   "homicide_rate_2023": 7.1,
+   "suicide_rate_2023": 14.4,
+   "arrests_2023": 576754,
+   "arrests_per_1000_2023": 18.5,
+   "smha_usd_per_psych_bed": 1081487.0,
+   "cage_intake_arrests_2023": 576754,
+   "cage_intake_per_1000": 18.5
+  },
+  {
+   "state": "Utah",
+   "geoid": "49",
+   "psych_beds_total_2023": 246,
+   "psych_beds_per_100k_2023": 7.3,
+   "civil_beds": 120,
+   "forensic_beds": 126,
+   "smha_total_usd": 363950295,
+   "smha_per_capita_usd": 104.01,
+   "civilian_population": 3499189,
+   "homicide_rate_2023": 2.2,
+   "suicide_rate_2023": 20.7,
+   "arrests_2023": 101285,
+   "arrests_per_1000_2023": 28.9,
+   "smha_usd_per_psych_bed": 1479473.0,
+   "cage_intake_arrests_2023": 101285,
+   "cage_intake_per_1000": 28.9
+  },
+  {
+   "state": "Vermont",
+   "geoid": null,
+   "psych_beds_total_2023": 16,
+   "psych_beds_per_100k_2023": 2.5,
+   "civil_beds": 12,
+   "forensic_beds": 4,
+   "smha_total_usd": 300300348,
+   "smha_per_capita_usd": 463.17,
+   "civilian_population": 648358,
+   "homicide_rate_2023": null,
+   "suicide_rate_2023": null,
+   "arrests_2023": 12942,
+   "arrests_per_1000_2023": 20.0,
+   "smha_usd_per_psych_bed": 18768772.0,
+   "cage_intake_arrests_2023": 12942,
+   "cage_intake_per_1000": 20.0
+  },
+  {
+   "state": "Virginia",
+   "geoid": "51",
+   "psych_beds_total_2023": 1241,
+   "psych_beds_per_100k_2023": 14.3,
+   "civil_beds": 401,
+   "forensic_beds": 840,
+   "smha_total_usd": 1372187618,
+   "smha_per_capita_usd": 157.53,
+   "civilian_population": 8710778,
+   "homicide_rate_2023": 6.6,
+   "suicide_rate_2023": 14.3,
+   "arrests_2023": 215099,
+   "arrests_per_1000_2023": 24.7,
+   "smha_usd_per_psych_bed": 1105711.0,
+   "cage_intake_arrests_2023": 215099,
+   "cage_intake_per_1000": 24.7
+  },
+  {
+   "state": "Washington",
+   "geoid": "53",
+   "psych_beds_total_2023": 1034,
+   "psych_beds_per_100k_2023": 13.3,
+   "civil_beds": 431,
+   "forensic_beds": 603,
+   "smha_total_usd": 2154786472,
+   "smha_per_capita_usd": 272.41,
+   "civilian_population": 7910036,
+   "homicide_rate_2023": 5.3,
+   "suicide_rate_2023": 16.5,
+   "arrests_2023": 142560,
+   "arrests_per_1000_2023": 18.0,
+   "smha_usd_per_psych_bed": 2083933.0,
+   "cage_intake_arrests_2023": 142560,
+   "cage_intake_per_1000": 18.0
+  },
+  {
+   "state": "West Virginia",
+   "geoid": "54",
+   "psych_beds_total_2023": 300,
+   "psych_beds_per_100k_2023": 16.9,
+   "civil_beds": 225,
+   "forensic_beds": 75,
+   "smha_total_usd": 266996226,
+   "smha_per_capita_usd": 150.86,
+   "civilian_population": 1769795,
+   "homicide_rate_2023": 5.0,
+   "suicide_rate_2023": 19.7,
+   "arrests_2023": 32518,
+   "arrests_per_1000_2023": 18.4,
+   "smha_usd_per_psych_bed": 889987.0,
+   "cage_intake_arrests_2023": 32518,
+   "cage_intake_per_1000": 18.4
+  },
+  {
+   "state": "Wisconsin",
+   "geoid": "55",
+   "psych_beds_total_2023": 450,
+   "psych_beds_per_100k_2023": 7.6,
+   "civil_beds": 120,
+   "forensic_beds": 330,
+   "smha_total_usd": 1644378662,
+   "smha_per_capita_usd": 275.91,
+   "civilian_population": 5959809,
+   "homicide_rate_2023": 4.8,
+   "suicide_rate_2023": 15.6,
+   "arrests_2023": 204354,
+   "arrests_per_1000_2023": 34.3,
+   "smha_usd_per_psych_bed": 3654175.0,
+   "cage_intake_arrests_2023": 204354,
+   "cage_intake_per_1000": 34.3
+  },
+  {
+   "state": "Wyoming",
+   "geoid": "56",
+   "psych_beds_total_2023": 72,
+   "psych_beds_per_100k_2023": 12.4,
+   "civil_beds": 30,
+   "forensic_beds": 42,
+   "smha_total_usd": 35699579,
+   "smha_per_capita_usd": 61.0,
+   "civilian_population": 585264,
+   "homicide_rate_2023": 3.1,
+   "suicide_rate_2023": 26.9,
+   "arrests_2023": 19022,
+   "arrests_per_1000_2023": 32.5,
+   "smha_usd_per_psych_bed": 495827.0,
+   "cage_intake_arrests_2023": 19022,
+   "cage_intake_per_1000": 32.5
+  }
+ ],
+ "city_pairs": [
+  {
+   "city": "Austin",
+   "year": 2012,
+   "care_per100k": 29656.6,
+   "cage_per100k": 35054.8,
+   "murder_rate": 0.0,
+   "state": "Texas",
+   "state_beds100k_2023": 5.0
+  },
+  {
+   "city": "Charlotte",
+   "year": 2012,
+   "care_per100k": 3638.7,
+   "cage_per100k": 36619.7,
+   "murder_rate": 0.01,
+   "state": "North Carolina",
+   "state_beds100k_2023": 4.2
+  },
+  {
+   "city": "Columbus",
+   "year": 2012,
+   "care_per100k": 21214.2,
+   "cage_per100k": 34163.3,
+   "murder_rate": 0.01,
+   "state": "Ohio",
+   "state_beds100k_2023": 9.6
+  },
+  {
+   "city": "Dallas",
+   "year": 2012,
+   "care_per100k": 19342.4,
+   "cage_per100k": 29305.7,
+   "murder_rate": 0.01,
+   "state": "Texas",
+   "state_beds100k_2023": 5.0
+  },
+  {
+   "city": "Denver",
+   "year": 2012,
+   "care_per100k": 69932.9,
+   "cage_per100k": 68383.7,
+   "murder_rate": 0.01,
+   "state": "Colorado",
+   "state_beds100k_2023": 8.3
+  },
+  {
+   "city": "Fort Worth",
+   "year": 2012,
+   "care_per100k": 15203.3,
+   "cage_per100k": 31139.9,
+   "murder_rate": 0.01,
+   "state": "Texas",
+   "state_beds100k_2023": 5.0
+  },
+  {
+   "city": "Indianapolis",
+   "year": 2012,
+   "care_per100k": 70192.7,
+   "cage_per100k": 35421.8,
+   "murder_rate": 0.01,
+   "state": "Indiana",
+   "state_beds100k_2023": 11.9
+  },
+  {
+   "city": "Nashville",
+   "year": 2012,
+   "care_per100k": 35116.6,
+   "cage_per100k": 45262.1,
+   "murder_rate": 0.01,
+   "state": "Tennessee",
+   "state_beds100k_2023": 7.8
+  },
+  {
+   "city": "Philadelphia",
+   "year": 2012,
+   "care_per100k": 131243.5,
+   "cage_per100k": 59541.9,
+   "murder_rate": 0.02,
+   "state": "Pennsylvania",
+   "state_beds100k_2023": 10.7
+  },
+  {
+   "city": "Phoenix",
+   "year": 2012,
+   "care_per100k": 14400.4,
+   "cage_per100k": 31993.1,
+   "murder_rate": 0.01,
+   "state": "Arizona",
+   "state_beds100k_2023": 3.5
+  },
+  {
+   "city": "San Antonio",
+   "year": 2012,
+   "care_per100k": 24171.8,
+   "cage_per100k": 22700.4,
+   "murder_rate": 0.01,
+   "state": "Texas",
+   "state_beds100k_2023": 5.0
+  },
+  {
+   "city": "San Diego",
+   "year": 2012,
+   "care_per100k": 25347.1,
+   "cage_per100k": 25477.9,
+   "murder_rate": 0.0,
+   "state": "California",
+   "state_beds100k_2023": 16.8
+  },
+  {
+   "city": "San Francisco",
+   "year": 2012,
+   "care_per100k": 179118.3,
+   "cage_per100k": 78647.3,
+   "murder_rate": 0.01,
+   "state": "California",
+   "state_beds100k_2023": 16.8
+  },
+  {
+   "city": "Seattle",
+   "year": 2012,
+   "care_per100k": 47572.4,
+   "cage_per100k": 31474.0,
+   "murder_rate": 0.0,
+   "state": "Washington",
+   "state_beds100k_2023": 13.3
+  },
+  {
+   "city": "Baltimore",
+   "year": 2012,
+   "care_per100k": 32571.9,
+   "cage_per100k": 80967.3,
+   "murder_rate": 0.03,
+   "state": "Maryland",
+   "state_beds100k_2023": 15.3
+  },
+  {
+   "city": "Baltimore",
+   "year": 2014,
+   "care_per100k": 33826.9,
+   "cage_per100k": 85015.4,
+   "murder_rate": 0.03,
+   "state": "Maryland",
+   "state_beds100k_2023": 15.3
+  },
+  {
+   "city": "Milwaukee",
+   "year": 2012,
+   "care_per100k": 9516.0,
+   "cage_per100k": 44653.7,
+   "murder_rate": 0.02,
+   "state": "Wisconsin",
+   "state_beds100k_2023": 7.6
+  },
+  {
+   "city": "Milwaukee",
+   "year": 2014,
+   "care_per100k": 8961.7,
+   "cage_per100k": 43752.9,
+   "murder_rate": 0.01,
+   "state": "Wisconsin",
+   "state_beds100k_2023": 7.6
+  },
+  {
+   "city": "Portland",
+   "year": 2012,
+   "care_per100k": 16497.4,
+   "cage_per100k": 34002.4,
+   "murder_rate": 0.0,
+   "state": "Oregon",
+   "state_beds100k_2023": 16.6
+  },
+  {
+   "city": "Portland",
+   "year": 2014,
+   "care_per100k": 17479.0,
+   "cage_per100k": 35718.4,
+   "murder_rate": 0.0,
+   "state": "Oregon",
+   "state_beds100k_2023": 16.6
+  },
+  {
+   "city": "Kansas City",
+   "year": 2012,
+   "care_per100k": 23620.6,
+   "cage_per100k": 50079.1,
+   "murder_rate": 0.02,
+   "state": "Missouri",
+   "state_beds100k_2023": 14.4
+  },
+  {
+   "city": "Kansas City",
+   "year": 2014,
+   "care_per100k": 28421.8,
+   "cage_per100k": 53974.4,
+   "murder_rate": 0.02,
+   "state": "Missouri",
+   "state_beds100k_2023": 14.4
+  },
+  {
+   "city": "Las Vegas",
+   "year": 2012,
+   "care_per100k": 16585.7,
+   "cage_per100k": 13633.6,
+   "murder_rate": 0.01,
+   "state": "Nevada",
+   "state_beds100k_2023": 9.0
+  },
+  {
+   "city": "Las Vegas",
+   "year": 2014,
+   "care_per100k": 12076.8,
+   "cage_per100k": 14557.2,
+   "murder_rate": 0.02,
+   "state": "Nevada",
+   "state_beds100k_2023": 9.0
+  },
+  {
+   "city": "Albuquerque",
+   "year": 2012,
+   "care_per100k": 31709.1,
+   "cage_per100k": 32376.1,
+   "murder_rate": 0.01,
+   "state": "New Mexico",
+   "state_beds100k_2023": 6.5
+  },
+  {
+   "city": "Albuquerque",
+   "year": 2014,
+   "care_per100k": 28830.2,
+   "cage_per100k": 33976.7,
+   "murder_rate": 0.01,
+   "state": "New Mexico",
+   "state_beds100k_2023": 6.5
+  },
+  {
+   "city": "Tucson",
+   "year": 2012,
+   "care_per100k": 9149.4,
+   "cage_per100k": 25054.1,
+   "murder_rate": 0.01,
+   "state": "Arizona",
+   "state_beds100k_2023": 3.5
+  },
+  {
+   "city": "Tucson",
+   "year": 2014,
+   "care_per100k": 8047.3,
+   "cage_per100k": 24926.0,
+   "murder_rate": 0.01,
+   "state": "Arizona",
+   "state_beds100k_2023": 3.5
+  },
+  {
+   "city": "Fresno",
+   "year": 2012,
+   "care_per100k": 4931.4,
+   "cage_per100k": 31072.3,
+   "murder_rate": 0.01,
+   "state": "California",
+   "state_beds100k_2023": 16.8
+  },
+  {
+   "city": "Fresno",
+   "year": 2014,
+   "care_per100k": 3844.0,
+   "cage_per100k": 31727.5,
+   "murder_rate": 0.01,
+   "state": "California",
+   "state_beds100k_2023": 16.8
+  },
+  {
+   "city": "Sacramento",
+   "year": 2012,
+   "care_per100k": 19631.6,
+   "cage_per100k": 44162.3,
+   "murder_rate": 0.01,
+   "state": "California",
+   "state_beds100k_2023": 16.8
+  },
+  {
+   "city": "Sacramento",
+   "year": 2014,
+   "care_per100k": 20526.3,
+   "cage_per100k": 43234.8,
+   "murder_rate": 0.01,
+   "state": "California",
+   "state_beds100k_2023": 16.8
+  },
+  {
+   "city": "Long Beach",
+   "year": 2012,
+   "care_per100k": 43236.6,
+   "cage_per100k": 49199.9,
+   "murder_rate": 0.01,
+   "state": "California",
+   "state_beds100k_2023": 16.8
+  },
+  {
+   "city": "Long Beach",
+   "year": 2014,
+   "care_per100k": 44748.7,
+   "cage_per100k": 55590.9,
+   "murder_rate": 0.0,
+   "state": "California",
+   "state_beds100k_2023": 16.8
+  },
+  {
+   "city": "Omaha",
+   "year": 2012,
+   "care_per100k": 18920.8,
+   "cage_per100k": 21251.1,
+   "murder_rate": 0.01,
+   "state": "Nebraska",
+   "state_beds100k_2023": 9.9
+  },
+  {
+   "city": "Omaha",
+   "year": 2014,
+   "care_per100k": 9753.3,
+   "cage_per100k": 21698.1,
+   "murder_rate": 0.01,
+   "state": "Nebraska",
+   "state_beds100k_2023": 9.9
+  },
+  {
+   "city": "Raleigh",
+   "year": 2012,
+   "care_per100k": 29368.5,
+   "cage_per100k": 26738.0,
+   "murder_rate": 0.0,
+   "state": "North Carolina",
+   "state_beds100k_2023": 4.2
+  },
+  {
+   "city": "Raleigh",
+   "year": 2014,
+   "care_per100k": 21121.4,
+   "cage_per100k": 26079.0,
+   "murder_rate": 0.0,
+   "state": "North Carolina",
+   "state_beds100k_2023": 4.2
+  },
+  {
+   "city": "Virginia Beach",
+   "year": 2012,
+   "care_per100k": 54846.0,
+   "cage_per100k": 33552.4,
+   "murder_rate": 0.0,
+   "state": "Virginia",
+   "state_beds100k_2023": 14.3
+  },
+  {
+   "city": "Virginia Beach",
+   "year": 2014,
+   "care_per100k": 61452.7,
+   "cage_per100k": 37058.9,
+   "murder_rate": 0.0,
+   "state": "Virginia",
+   "state_beds100k_2023": 14.3
+  },
+  {
+   "city": "Tulsa",
+   "year": 2012,
+   "care_per100k": 25891.2,
+   "cage_per100k": 23942.4,
+   "murder_rate": 0.01,
+   "state": "Oklahoma",
+   "state_beds100k_2023": 9.4
+  },
+  {
+   "city": "Tulsa",
+   "year": 2014,
+   "care_per100k": 36315.6,
+   "cage_per100k": 28365.7,
+   "murder_rate": 0.01,
+   "state": "Oklahoma",
+   "state_beds100k_2023": 9.4
+  },
+  {
+   "city": "Wichita",
+   "year": 2012,
+   "care_per100k": 9727.8,
+   "cage_per100k": 20968.4,
+   "murder_rate": 0.01,
+   "state": "Kansas",
+   "state_beds100k_2023": 10.4
+  },
+  {
+   "city": "Wichita",
+   "year": 2014,
+   "care_per100k": 9891.2,
+   "cage_per100k": 20435.0,
+   "murder_rate": 0.01,
+   "state": "Kansas",
+   "state_beds100k_2023": 10.4
+  }
+ ],
+ "ny_anchor": {
+  "latest_county": {
+   "Albany": {
+    "year": 2025,
+    "jail100k": 179.3,
+    "beds100k": 8.13
+   },
+   "Allegany": {
+    "year": 2025,
+    "jail100k": 158.1,
+    "beds100k": 0.0
+   },
+   "Broome": {
+    "year": 2025,
+    "jail100k": 220.7,
+    "beds100k": 28.59
+   },
+   "Cattaraugus": {
+    "year": 2025,
+    "jail100k": 163.2,
+    "beds100k": 18.56
+   },
+   "Cayuga": {
+    "year": 2025,
+    "jail100k": 200.4,
+    "beds100k": 18.76
+   },
+   "Chautauqua": {
+    "year": 2025,
+    "jail100k": 152.3,
+    "beds100k": 32.08
+   },
+   "Chemung": {
+    "year": 2025,
+    "jail100k": 155.4,
+    "beds100k": 30.93
+   },
+   "Chenango": {
+    "year": 2025,
+    "jail100k": 214.4,
+    "beds100k": 0.0
+   },
+   "Clinton": {
+    "year": 2025,
+    "jail100k": 195.8,
+    "beds100k": 38.54
+   },
+   "Columbia": {
+    "year": 2025,
+    "jail100k": 59.8,
+    "beds100k": 36.43
+   },
+   "Cortland": {
+    "year": 2025,
+    "jail100k": 143.9,
+    "beds100k": 23.88
+   },
+   "Delaware": {
+    "year": 2025,
+    "jail100k": 178.3,
+    "beds100k": 0.0
+   },
+   "Dutchess": {
+    "year": 2025,
+    "jail100k": 78.5,
+    "beds100k": 20.05
+   },
+   "Erie": {
+    "year": 2025,
+    "jail100k": 49.6,
+    "beds100k": 16.88
+   },
+   "Essex": {
+    "year": 2025,
+    "jail100k": 156.4,
+    "beds100k": 0.0
+   },
+   "Franklin": {
+    "year": 2025,
+    "jail100k": 169.9,
+    "beds100k": 25.54
+   },
+   "Fulton": {
+    "year": 2025,
+    "jail100k": 197.3,
+    "beds100k": 0.0
+   },
+   "Genesee": {
+    "year": 2025,
+    "jail100k": 167.8,
+    "beds100k": 0.0
+   },
+   "Greene": {
+    "year": 2025,
+    "jail100k": 65.6,
+    "beds100k": 0.0
+   },
+   "Hamilton": {
+    "year": 2025,
+    "jail100k": 59.9,
+    "beds100k": 0.0
+   },
+   "Herkimer": {
+    "year": 2025,
+    "jail100k": 130.0,
+    "beds100k": 0.0
+   },
+   "Jefferson": {
+    "year": 2025,
+    "jail100k": 142.5,
+    "beds100k": 34.58
+   },
+   "Lewis": {
+    "year": 2025,
+    "jail100k": 102.0,
+    "beds100k": 0.0
+   },
+   "Livingston": {
+    "year": 2025,
+    "jail100k": 205.1,
+    "beds100k": 0.0
+   },
+   "Madison": {
+    "year": 2025,
+    "jail100k": 104.3,
+    "beds100k": 0.0
+   },
+   "Monroe": {
+    "year": 2025,
+    "jail100k": 107.4,
+    "beds100k": 21.72
+   },
+   "Montgomery": {
+    "year": 2025,
+    "jail100k": 255.8,
+    "beds100k": 40.34
+   },
+   "Nassau": {
+    "year": 2025,
+    "jail100k": 51.8,
+    "beds100k": 14.88
+   },
+   "Niagara": {
+    "year": 2025,
+    "jail100k": 208.7,
+    "beds100k": 25.79
+   },
+   "Oneida": {
+    "year": 2025,
+    "jail100k": 138.7,
+    "beds100k": 24.64
+   },
+   "Onondaga": {
+    "year": 2025,
+    "jail100k": 97.1,
+    "beds100k": 24.56
+   },
+   "Ontario": {
+    "year": 2025,
+    "jail100k": 91.9,
+    "beds100k": 15.97
+   },
+   "Orange": {
+    "year": 2025,
+    "jail100k": 104.1,
+    "beds100k": 13.01
+   },
+   "Orleans": {
+    "year": 2025,
+    "jail100k": 110.5,
+    "beds100k": 0.0
+   },
+   "Oswego": {
+    "year": 2025,
+    "jail100k": 113.9,
+    "beds100k": 27.08
+   },
+   "Otsego": {
+    "year": 2025,
+    "jail100k": 47.9,
+    "beds100k": 32.98
+   },
+   "Putnam": {
+    "year": 2025,
+    "jail100k": 46.5,
+    "beds100k": 20.23
+   },
+   "Rensselaer": {
+    "year": 2025,
+    "jail100k": 125.8,
+    "beds100k": 39.37
+   },
+   "Rockland": {
+    "year": 2025,
+    "jail100k": 36.7,
+    "beds100k": 7.33
+   },
+   "Saratoga": {
+    "year": 2025,
+    "jail100k": 78.7,
+    "beds100k": 6.67
+   },
+   "Schenectady": {
+    "year": 2025,
+    "jail100k": 153.8,
+    "beds100k": 32.15
+   },
+   "Schoharie": {
+    "year": 2025,
+    "jail100k": 66.3,
+    "beds100k": 0.0
+   },
+   "Schuyler": {
+    "year": 2025,
+    "jail100k": 65.0,
+    "beds100k": 0.0
+   },
+   "Seneca": {
+    "year": 2025,
+    "jail100k": 152.1,
+    "beds100k": 0.0
+   },
+   "St. Lawrence": {
+    "year": 2025,
+    "jail100k": 142.2,
+    "beds100k": 0.0
+   },
+   "Steuben": {
+    "year": 2025,
+    "jail100k": 166.6,
+    "beds100k": 0.0
+   },
+   "Suffolk": {
+    "year": 2025,
+    "jail100k": 38.4,
+    "beds100k": 12.05
+   },
+   "Sullivan": {
+    "year": 2025,
+    "jail100k": 147.7,
+    "beds100k": 22.25
+   },
+   "Tioga": {
+    "year": 2025,
+    "jail100k": 111.7,
+    "beds100k": 0.0
+   },
+   "Tompkins": {
+    "year": 2025,
+    "jail100k": 59.6,
+    "beds100k": 24.91
+   },
+   "Ulster": {
+    "year": 2025,
+    "jail100k": 101.5,
+    "beds100k": 10.92
+   },
+   "Warren": {
+    "year": 2025,
+    "jail100k": 158.4,
+    "beds100k": 45.97
+   },
+   "Washington": {
+    "year": 2025,
+    "jail100k": 116.3,
+    "beds100k": 0.0
+   },
+   "Wayne": {
+    "year": 2025,
+    "jail100k": 65.8,
+    "beds100k": 17.58
+   },
+   "Westchester": {
+    "year": 2025,
+    "jail100k": 41.6,
+    "beds100k": 54.01
+   },
+   "Wyoming": {
+    "year": 2025,
+    "jail100k": 105.7,
+    "beds100k": 25.11
+   },
+   "Yates": {
+    "year": 2025,
+    "jail100k": 130.4,
+    "beds100k": 0.0
+   }
+  },
+  "boarding_arc": {
+   "1997": 320,
+   "1998": 349,
+   "1999": 356,
+   "2000": 259,
+   "2001": 205,
+   "2002": 330,
+   "2003": 366,
+   "2004": 540,
+   "2005": 541,
+   "2006": 466,
+   "2007": 428,
+   "2008": 324,
+   "2009": 273,
+   "2010": 347,
+   "2011": 470,
+   "2012": 570,
+   "2013": 584,
+   "2014": 597,
+   "2015": 411,
+   "2016": 335,
+   "2017": 313,
+   "2018": 282,
+   "2019": 255,
+   "2020": 117,
+   "2021": 146,
+   "2022": 196,
+   "2023": 180,
+   "2024": 167,
+   "2025": 161
+  }
+ }
+}

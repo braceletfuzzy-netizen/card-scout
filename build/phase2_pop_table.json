@@ -1,0 +1,428 @@
+[
+{
+"city": "NYC",
+"year": 2001,
+"population": 8008300.0,
+"population_source": "Census 2000 count 8,008,278 base for 2000-2010 decade [Likely]"
+},
+{
+"city": "NYC",
+"year": 2002,
+"population": 8008300.0,
+"population_source": "Census 2000 count base [Likely]"
+},
+{
+"city": "Boston",
+"year": 2019,
+"population": 692600.0,
+"population_source": "Census PEP vintage-2020 est 692,600 [Likely]"
+},
+{
+"city": "Boston",
+"year": 2020,
+"population": 675647.0,
+"population_source": "Census 2020 count 675,647 [Certain]"
+},
+{
+"city": "Boston",
+"year": 2021,
+"population": 656083.0,
+"population_source": "Census PEP vintage-2022 est [Likely]"
+},
+{
+"city": "Boston",
+"year": 2022,
+"population": 654240.0,
+"population_source": "Census PEP vintage-2023 est [Likely]"
+},
+{
+"city": "Memphis",
+"year": 2020,
+"population": 633104.0,
+"population_source": "Census 2020 count 633,104 [Certain]"
+},
+{
+"city": "Memphis",
+"year": 2021,
+"population": 633104.0,
+"population_source": "2020 census count held (crime series wave1b class) [Likely]"
+},
+{
+"city": "Memphis",
+"year": 2022,
+"population": 633104.0,
+"population_source": "2020 census count held [Likely]"
+},
+{
+"city": "Memphis",
+"year": 2026,
+"population": 621056.0,
+"population_source": "Census PEP est class (crime series 2023-2026) [Likely]"
+},
+{
+"city": "St. Louis",
+"year": 1998,
+"population": 348189.0,
+"population_source": "Census 2000 count 348,189 applied back to 1998 [Likely]"
+},
+{
+"city": "St. Louis",
+"year": 1999,
+"population": 348189.0,
+"population_source": "Census 2000 count applied [Likely]"
+},
+{
+"city": "St. Louis",
+"year": 2000,
+"population": 348189.0,
+"population_source": "Census 2000 count 348,189 [Certain]"
+},
+{
+"city": "St. Louis",
+"year": 2001,
+"population": 348189.0,
+"population_source": "Census 2000 count [Certain]"
+},
+{
+"city": "St. Louis",
+"year": 2002,
+"population": 348189.0,
+"population_source": "Census 2000 count [Certain]"
+},
+{
+"city": "St. Louis",
+"year": 2010,
+"population": 319294.0,
+"population_source": "Census 2010 count 319,294 [Certain]"
+},
+{
+"city": "St. Louis",
+"year": 2011,
+"population": 319294.0,
+"population_source": "Census 2010 count [Certain]"
+},
+{
+"city": "St. Louis",
+"year": 2012,
+"population": 319294.0,
+"population_source": "Census 2010 count [Certain]"
+},
+{
+"city": "St. Louis",
+"year": 2013,
+"population": 319294.0,
+"population_source": "Census 2010 count [Certain]"
+},
+{
+"city": "St. Louis",
+"year": 2014,
+"population": 317416.0,
+"population_source": "Census PEP est [Likely]"
+},
+{
+"city": "St. Louis",
+"year": 2015,
+"population": 315685.0,
+"population_source": "Census PEP est [Likely]"
+},
+{
+"city": "St. Louis",
+"year": 2016,
+"population": 311404.0,
+"population_source": "Census PEP est (crime series 2016 value) [Likely]"
+},
+{
+"city": "St. Louis",
+"year": 2017,
+"population": 308044.0,
+"population_source": "Census PEP est (crime series 2017) [Likely]"
+},
+{
+"city": "St. Louis",
+"year": 2018,
+"population": 302846.0,
+"population_source": "Census PEP est (crime series 2018) [Likely]"
+},
+{
+"city": "St. Louis",
+"year": 2019,
+"population": 300576.0,
+"population_source": "Census PEP est [Likely]"
+},
+{
+"city": "St. Louis",
+"year": 2020,
+"population": 301578.0,
+"population_source": "Census 2020 count 301,578 [Certain]"
+},
+{
+"city": "St. Louis",
+"year": 2021,
+"population": 293310.0,
+"population_source": "Census PEP est [Likely]"
+},
+{
+"city": "St. Louis",
+"year": 2022,
+"population": 285658.0,
+"population_source": "Census PEP est (crime series 2022) [Likely]"
+},
+{
+"city": "St. Louis",
+"year": 2026,
+"population": 278144.0,
+"population_source": "Census PEP 2025 est (edu v1) [Likely]"
+},
+{
+"city": "St. Louis",
+"year": 2027,
+"population": 278144.0,
+"population_source": "Census PEP 2025 est [Likely]"
+},
+{
+"city": "Cincinnati",
+"year": 2014,
+"population": 298550.0,
+"population_source": "Census PEP est [Likely]"
+},
+{
+"city": "Cincinnati",
+"year": 2015,
+"population": 298800.0,
+"population_source": "Census PEP est [Likely]"
+},
+{
+"city": "Cincinnati",
+"year": 2016,
+"population": 299690.0,
+"population_source": "Census PEP est (2016 ACS class) [Likely]"
+},
+{
+"city": "Cincinnati",
+"year": 2017,
+"population": 301301.0,
+"population_source": "Census PEP est [Likely]"
+},
+{
+"city": "Cincinnati",
+"year": 2018,
+"population": 302605.0,
+"population_source": "Census PEP est [Likely]"
+},
+{
+"city": "Cincinnati",
+"year": 2019,
+"population": 303940.0,
+"population_source": "Census PEP est 303,940 [Likely]"
+},
+{
+"city": "Cincinnati",
+"year": 2020,
+"population": 309317.0,
+"population_source": "Census 2020 count 309,317 [Certain]"
+},
+{
+"city": "Cincinnati",
+"year": 2021,
+"population": 308935.0,
+"population_source": "Census PEP est [Likely]"
+},
+{
+"city": "Cincinnati",
+"year": 2022,
+"population": 309960.0,
+"population_source": "Census PEP est [Likely]"
+},
+{
+"city": "Cincinnati",
+"year": 2023,
+"population": 309317.0,
+"population_source": "Census PEP est class [Likely]"
+},
+{
+"city": "Cincinnati",
+"year": 2024,
+"population": 314367.0,
+"population_source": "Census PEP 2025 est (edu v1 pop) [Likely]"
+},
+{
+"city": "Cincinnati",
+"year": 2027,
+"population": 314367.0,
+"population_source": "Census PEP 2025 est [Likely]"
+},
+{
+"city": "Detroit",
+"year": 2012,
+"population": 701475.0,
+"population_source": "Census 2010 count 713,777; 2012 PEP est ~701,475 [Likely]"
+},
+{
+"city": "Detroit",
+"year": 2013,
+"population": 688701.0,
+"population_source": "Census PEP est [Likely]"
+},
+{
+"city": "Detroit",
+"year": 2015,
+"population": 677124.0,
+"population_source": "Census PEP est ~677,124 [Likely]"
+},
+{
+"city": "Detroit",
+"year": 2016,
+"population": 677116.0,
+"population_source": "Census PEP est [Likely]"
+},
+{
+"city": "Detroit",
+"year": 2022,
+"population": 639111.0,
+"population_source": "Census PEP est (crime series class) [Likely]"
+},
+{
+"city": "Detroit",
+"year": 2024,
+"population": 649095.0,
+"population_source": "Census PEP 2025 est (edu v1 pop) [Likely]"
+},
+{
+"city": "Houston",
+"year": 2004,
+"population": 2016582.0,
+"population_source": "Census PEP est ~2.02M [Likely]"
+},
+{
+"city": "Houston",
+"year": 2005,
+"population": 2085420.0,
+"population_source": "Census PEP est [Likely]"
+},
+{
+"city": "Houston",
+"year": 2006,
+"population": 2153888.0,
+"population_source": "Census PEP est [Likely]"
+},
+{
+"city": "Houston",
+"year": 2007,
+"population": 2203584.0,
+"population_source": "Census PEP est [Likely]"
+},
+{
+"city": "Houston",
+"year": 2011,
+"population": 2131554.0,
+"population_source": "Census 2010 2,100,263; 2011 PEP est [Likely]"
+},
+{
+"city": "Houston",
+"year": 2019,
+"population": 2320260.0,
+"population_source": "Census PEP 2019 est 2,320,260 [Likely]"
+},
+{
+"city": "Houston",
+"year": 2022,
+"population": 2304580.0,
+"population_source": "Census PEP est [Likely]"
+},
+{
+"city": "Houston",
+"year": 2024,
+"population": 2397315.0,
+"population_source": "Census PEP 2025 est (edu v1 pop) [Likely]"
+},
+{
+"city": "New Orleans",
+"year": 1990,
+"population": 495080.0,
+"population_source": "Census 1990 count 495,080 [Certain]"
+},
+{
+"city": "New Orleans",
+"year": 1994,
+"population": 495080.0,
+"population_source": "Census 1990 count held [Likely]"
+},
+{
+"city": "New Orleans",
+"year": 2004,
+"population": 462269.0,
+"population_source": "Census PEP 2004 est ~462,269 [Likely]"
+},
+{
+"city": "New Orleans",
+"year": 2005,
+"population": 455000.0,
+"population_source": "Pre-Katrina PEP est class [Likely]"
+},
+{
+"city": "New Orleans",
+"year": 2006,
+"population": 210000.0,
+"population_source": "Post-Katrina PEP est class (~200-230K) [Likely-range]"
+},
+{
+"city": "New Orleans",
+"year": 2007,
+"population": 230100.0,
+"population_source": "Post-Katrina PEP est class [Likely-range]"
+},
+{
+"city": "New Orleans",
+"year": 2009,
+"population": 354850.0,
+"population_source": "Post-Katrina PEP est class [Likely-range]"
+},
+{
+"city": "New Orleans",
+"year": 2011,
+"population": 360040.0,
+"population_source": "Census PEP est [Likely]"
+},
+{
+"city": "New Orleans",
+"year": 2017,
+"population": 393292.0,
+"population_source": "Census PEP est [Likely]"
+},
+{
+"city": "New Orleans",
+"year": 2019,
+"population": 390144.0,
+"population_source": "Census PEP 2019 est 390,144 [Likely]"
+},
+{
+"city": "New Orleans",
+"year": 2022,
+"population": 369749.0,
+"population_source": "Census PEP est [Likely]"
+},
+{
+"city": "New Orleans",
+"year": 2024,
+"population": 362154.0,
+"population_source": "Census PEP 2025 est (edu v1 pop) [Likely]"
+},
+{
+"city": "New Orleans",
+"year": 2025,
+"population": 362154.0,
+"population_source": "Census PEP 2025 est [Likely]"
+},
+{
+"city": "Okc",
+"year": 2022,
+"population": 681054.0,
+"population_source": "Census PEP est (crime series class) [Likely]"
+},
+{
+"city": "Okc",
+"year": 2027,
+"population": 725264.0,
+"population_source": "Census PEP 2025 est class [Likely]"
+}
+]

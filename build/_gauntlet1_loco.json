@@ -1,0 +1,1140 @@
+{
+ "FE-3_maslow_joint_t0": {
+  "drift_check_fixed_betas": {
+   "n": 45,
+   "dir_acc": 0.4,
+   "dir_acc_lag1": 0.6,
+   "misses": [
+    "Cincinnati:2021+2",
+    "Cincinnati:2021+3",
+    "Cincinnati:2022+1",
+    "Cincinnati:2022+2",
+    "Cincinnati:2022+3",
+    "Cincinnati:2023+1",
+    "Cincinnati:2023+2",
+    "Detroit:2021+3",
+    "Detroit:2022+2",
+    "Detroit:2022+3",
+    "Memphis:2021+3",
+    "Memphis:2022+2",
+    "Memphis:2022+3",
+    "Memphis:2023+1",
+    "Memphis:2023+2",
+    "NYC:2021+1",
+    "NYC:2022+1",
+    "NYC:2022+2",
+    "NYC:2022+3",
+    "NYC:2023+1",
+    "NYC:2023+2",
+    "NYC:2024+1",
+    "St. Louis:2021+2",
+    "St. Louis:2021+3",
+    "St. Louis:2022+1",
+    "St. Louis:2022+2",
+    "St. Louis:2022+3"
+   ]
+  },
+  "refits": {
+   "Cincinnati": {
+    "n_train_rows": 19,
+    "n_train_cities": 4,
+    "betas_refit": [
+     -0.044,
+     -0.349,
+     -0.248,
+     0.723,
+     0.025
+    ],
+    "se_refit": [
+     0.023,
+     0.018,
+     0.022,
+     0.02,
+     0.018
+    ],
+    "within_r2": 0.829
+   },
+   "Detroit": {
+    "n_train_rows": 19,
+    "n_train_cities": 4,
+    "betas_refit": [
+     -0.25,
+     -0.326,
+     0.013,
+     0.715,
+     -0.084
+    ],
+    "se_refit": [
+     0.055,
+     0.031,
+     0.064,
+     0.039,
+     0.032
+    ],
+    "within_r2": 0.658
+   },
+   "Memphis": {
+    "n_train_rows": 19,
+    "n_train_cities": 4,
+    "betas_refit": [
+     -0.269,
+     -0.233,
+     -0.148,
+     0.54,
+     -0.048
+    ],
+    "se_refit": [
+     0.04,
+     0.031,
+     0.04,
+     0.038,
+     0.034
+    ],
+    "within_r2": 0.653
+   },
+   "NYC": {
+    "n_train_rows": 20,
+    "n_train_cities": 4,
+    "betas_refit": [
+     -0.065,
+     -0.331,
+     0.025,
+     0.782,
+     -0.002
+    ],
+    "se_refit": [
+     0.029,
+     0.024,
+     0.032,
+     0.038,
+     0.023
+    ],
+    "within_r2": 0.711
+   },
+   "St. Louis": {
+    "n_train_rows": 19,
+    "n_train_cities": 4,
+    "betas_refit": [
+     -0.293,
+     -0.271,
+     -0.028,
+     0.504,
+     0.174
+    ],
+    "se_refit": [
+     0.032,
+     0.027,
+     0.033,
+     0.032,
+     0.029
+    ],
+    "within_r2": 0.717
+   }
+  },
+  "per_city": {
+   "Cincinnati": {
+    "form_A_practical_within": {
+     "status": "scored",
+     "n_pairs": 9,
+     "n_pairs_lag1": 4,
+     "dir_acc": 0.222,
+     "dir_acc_lag1": 0.5,
+     "within_city_rho_lag1": 0.8,
+     "years": [
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    },
+    "form_B_strict_blind": {
+     "status": "scored",
+     "n_pairs": 9,
+     "n_pairs_lag1": 4,
+     "dir_acc": 0.667,
+     "dir_acc_lag1": 0.75,
+     "within_city_rho_lag1": 0.8,
+     "years": [
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    }
+   },
+   "Detroit": {
+    "form_A_practical_within": {
+     "status": "scored",
+     "n_pairs": 9,
+     "n_pairs_lag1": 4,
+     "dir_acc": 0.667,
+     "dir_acc_lag1": 1.0,
+     "within_city_rho_lag1": 0.8,
+     "years": [
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    },
+    "form_B_strict_blind": {
+     "status": "scored",
+     "n_pairs": 9,
+     "n_pairs_lag1": 4,
+     "dir_acc": 0.333,
+     "dir_acc_lag1": 0.5,
+     "within_city_rho_lag1": 0.8,
+     "years": [
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    }
+   },
+   "Memphis": {
+    "form_A_practical_within": {
+     "status": "scored",
+     "n_pairs": 9,
+     "n_pairs_lag1": 4,
+     "dir_acc": 0.444,
+     "dir_acc_lag1": 0.75,
+     "within_city_rho_lag1": 0.8,
+     "years": [
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    },
+    "form_B_strict_blind": {
+     "status": "scored",
+     "n_pairs": 9,
+     "n_pairs_lag1": 4,
+     "dir_acc": 0.778,
+     "dir_acc_lag1": 0.75,
+     "within_city_rho_lag1": 0.8,
+     "years": [
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    }
+   },
+   "NYC": {
+    "form_A_practical_within": {
+     "status": "scored",
+     "n_pairs": 9,
+     "n_pairs_lag1": 4,
+     "dir_acc": 0.222,
+     "dir_acc_lag1": 0.0,
+     "within_city_rho_lag1": -0.8,
+     "years": [
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    },
+    "form_B_strict_blind": {
+     "status": "scored",
+     "n_pairs": 9,
+     "n_pairs_lag1": 4,
+     "dir_acc": 1.0,
+     "dir_acc_lag1": 1.0,
+     "within_city_rho_lag1": -0.8,
+     "years": [
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    }
+   },
+   "St. Louis": {
+    "form_A_practical_within": {
+     "status": "scored",
+     "n_pairs": 9,
+     "n_pairs_lag1": 4,
+     "dir_acc": 0.444,
+     "dir_acc_lag1": 0.75,
+     "within_city_rho_lag1": 1.0,
+     "years": [
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    },
+    "form_B_strict_blind": {
+     "status": "scored",
+     "n_pairs": 9,
+     "n_pairs_lag1": 4,
+     "dir_acc": 0.889,
+     "dir_acc_lag1": 0.75,
+     "within_city_rho_lag1": 1.0,
+     "years": [
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    }
+   }
+  },
+  "loco_form_A_lag1_distribution": {
+   "cities": {
+    "Cincinnati": {
+     "dir_acc_lag1": 0.5,
+     "n": 4,
+     "rho_lag1": 0.8
+    },
+    "Detroit": {
+     "dir_acc_lag1": 1.0,
+     "n": 4,
+     "rho_lag1": 0.8
+    },
+    "Memphis": {
+     "dir_acc_lag1": 0.75,
+     "n": 4,
+     "rho_lag1": 0.8
+    },
+    "NYC": {
+     "dir_acc_lag1": 0.0,
+     "n": 4,
+     "rho_lag1": -0.8
+    },
+    "St. Louis": {
+     "dir_acc_lag1": 0.75,
+     "n": 4,
+     "rho_lag1": 1.0
+    }
+   },
+   "n_cities": 5,
+   "mean": 0.6,
+   "min": 0.0,
+   "max": 1.0
+  },
+  "banked_anchor": "backwards_test_v1.json FE-3_arc_tplus1 t+1 dir=0.938 n=16 (files-then)"
+ },
+ "FE-3_arc_tplus1": {
+  "drift_check_fixed_betas": {
+   "n": 36,
+   "dir_acc": 0.694,
+   "dir_acc_lag1": 0.938,
+   "misses": [
+    "Cincinnati:2021+2",
+    "Cincinnati:2022+1",
+    "Cincinnati:2022+3",
+    "Cincinnati:2023+2",
+    "Detroit:2021+3",
+    "Detroit:2022+2",
+    "Detroit:2022+3",
+    "Memphis:2022+3",
+    "Memphis:2023+2",
+    "St. Louis:2022+3",
+    "St. Louis:2023+2"
+   ]
+  },
+  "refits": {
+   "Cincinnati": {
+    "n_train_rows": 14,
+    "n_train_cities": 3,
+    "betas_refit": [
+     -0.069,
+     0.024,
+     -0.385,
+     0.606,
+     -0.117
+    ],
+    "se_refit": [
+     0.017,
+     0.015,
+     0.018,
+     0.023,
+     0.013
+    ],
+    "within_r2": 0.9
+   },
+   "Detroit": {
+    "n_train_rows": 14,
+    "n_train_cities": 3,
+    "betas_refit": [
+     -0.543,
+     0.205,
+     0.114,
+     0.553,
+     -0.059
+    ],
+    "se_refit": [
+     0.031,
+     0.021,
+     0.032,
+     0.03,
+     0.019
+    ],
+    "within_r2": 0.831
+   },
+   "Memphis": {
+    "n_train_rows": 13,
+    "n_train_cities": 3,
+    "betas_refit": [
+     -0.514,
+     0.209,
+     -0.493,
+     0.014,
+     -0.185
+    ],
+    "se_refit": [
+     0.046,
+     0.037,
+     0.047,
+     0.063,
+     0.032
+    ],
+    "within_r2": 0.712
+   },
+   "St. Louis": {
+    "n_train_rows": 13,
+    "n_train_cities": 3,
+    "betas_refit": [
+     -0.202,
+     0.043,
+     -0.144,
+     0.679,
+     -0.306
+    ],
+    "se_refit": [
+     0.037,
+     0.029,
+     0.039,
+     0.046,
+     0.03
+    ],
+    "within_r2": 0.754
+   }
+  },
+  "per_city": {
+   "Cincinnati": {
+    "form_A_practical_within": {
+     "status": "scored",
+     "n_pairs": 9,
+     "n_pairs_lag1": 4,
+     "dir_acc": 0.556,
+     "dir_acc_lag1": 0.75,
+     "within_city_rho_lag1": 1.0,
+     "years": [
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    },
+    "form_B_strict_blind": {
+     "status": "scored",
+     "n_pairs": 9,
+     "n_pairs_lag1": 4,
+     "dir_acc": 1.0,
+     "dir_acc_lag1": 1.0,
+     "within_city_rho_lag1": 0.8,
+     "years": [
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    }
+   },
+   "Detroit": {
+    "form_A_practical_within": {
+     "status": "scored",
+     "n_pairs": 9,
+     "n_pairs_lag1": 4,
+     "dir_acc": 0.667,
+     "dir_acc_lag1": 1.0,
+     "within_city_rho_lag1": 0.8,
+     "years": [
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    },
+    "form_B_strict_blind": {
+     "status": "scored",
+     "n_pairs": 9,
+     "n_pairs_lag1": 4,
+     "dir_acc": 0.444,
+     "dir_acc_lag1": 0.75,
+     "within_city_rho_lag1": 0.8,
+     "years": [
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    }
+   },
+   "Memphis": {
+    "form_A_practical_within": {
+     "status": "scored",
+     "n_pairs": 9,
+     "n_pairs_lag1": 4,
+     "dir_acc": 0.778,
+     "dir_acc_lag1": 0.75,
+     "within_city_rho_lag1": 1.0,
+     "years": [
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    },
+    "form_B_strict_blind": {
+     "status": "scored",
+     "n_pairs": 9,
+     "n_pairs_lag1": 4,
+     "dir_acc": 0.778,
+     "dir_acc_lag1": 1.0,
+     "within_city_rho_lag1": 1.0,
+     "years": [
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    }
+   },
+   "St. Louis": {
+    "form_A_practical_within": {
+     "status": "scored",
+     "n_pairs": 9,
+     "n_pairs_lag1": 4,
+     "dir_acc": 0.667,
+     "dir_acc_lag1": 0.75,
+     "within_city_rho_lag1": 1.0,
+     "years": [
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    },
+    "form_B_strict_blind": {
+     "status": "scored",
+     "n_pairs": 9,
+     "n_pairs_lag1": 4,
+     "dir_acc": 0.0,
+     "dir_acc_lag1": 0.0,
+     "within_city_rho_lag1": 0.8,
+     "years": [
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    }
+   }
+  },
+  "loco_form_A_lag1_distribution": {
+   "cities": {
+    "Cincinnati": {
+     "dir_acc_lag1": 0.75,
+     "n": 4,
+     "rho_lag1": 1.0
+    },
+    "Detroit": {
+     "dir_acc_lag1": 1.0,
+     "n": 4,
+     "rho_lag1": 0.8
+    },
+    "Memphis": {
+     "dir_acc_lag1": 0.75,
+     "n": 4,
+     "rho_lag1": 1.0
+    },
+    "St. Louis": {
+     "dir_acc_lag1": 0.75,
+     "n": 4,
+     "rho_lag1": 1.0
+    }
+   },
+   "n_cities": 4,
+   "mean": 0.812,
+   "min": 0.75,
+   "max": 1.0
+  },
+  "banked_anchor": "backwards_test_v1.json FE-3_arc_tplus1 t+1 dir=0.938 n=16 (files-then)"
+ },
+ "FE-6_care_plus_unemp": {
+  "drift_check_fixed_betas": {
+   "n": 78,
+   "dir_acc": 0.577,
+   "dir_acc_lag1": 0.806,
+   "misses": [
+    "Cincinnati:2014+1",
+    "Cincinnati:2014+2",
+    "Cincinnati:2015+1",
+    "Cincinnati:2015+3",
+    "Cincinnati:2016+2",
+    "Cincinnati:2016+3",
+    "Cincinnati:2017+1",
+    "Cincinnati:2017+2",
+    "Cincinnati:2018+2",
+    "Cincinnati:2018+3",
+    "Cincinnati:2019+1",
+    "Cincinnati:2019+2",
+    "Cincinnati:2019+3",
+    "Cincinnati:2020+3",
+    "Cincinnati:2021+2",
+    "Cincinnati:2021+3",
+    "Detroit:2020+3",
+    "Detroit:2021+2",
+    "Detroit:2021+3",
+    "Detroit:2022+1",
+    "Detroit:2022+2",
+    "Detroit:2022+3",
+    "Memphis:2021+3",
+    "Memphis:2022+2",
+    "Memphis:2022+3",
+    "NYC:2020+2",
+    "NYC:2020+3",
+    "NYC:2021+1",
+    "NYC:2021+2",
+    "NYC:2021+3",
+    "St. Louis:2020+3",
+    "St. Louis:2021+2",
+    "St. Louis:2021+3"
+   ]
+  },
+  "refits": {
+   "Cincinnati": {
+    "n_train_rows": 24,
+    "n_train_cities": 4,
+    "betas_refit": [
+     -0.335,
+     0.28
+    ],
+    "se_refit": [
+     0.025,
+     0.025
+    ],
+    "within_r2": 0.267
+   },
+   "Detroit": {
+    "n_train_rows": 30,
+    "n_train_cities": 4,
+    "betas_refit": [
+     -0.14,
+     0.388
+    ],
+    "se_refit": [
+     0.027,
+     0.027
+    ],
+    "within_r2": 0.202
+   },
+   "Memphis": {
+    "n_train_rows": 31,
+    "n_train_cities": 4,
+    "betas_refit": [
+     -0.33,
+     0.328
+    ],
+    "se_refit": [
+     0.026,
+     0.026
+    ],
+    "within_r2": 0.302
+   },
+   "NYC": {
+    "n_train_rows": 30,
+    "n_train_cities": 4,
+    "betas_refit": [
+     -0.434,
+     0.275
+    ],
+    "se_refit": [
+     0.022,
+     0.022
+    ],
+    "within_r2": 0.375
+   },
+   "St. Louis": {
+    "n_train_rows": 29,
+    "n_train_cities": 4,
+    "betas_refit": [
+     -0.351,
+     0.239
+    ],
+    "se_refit": [
+     0.032,
+     0.032
+    ],
+    "within_r2": 0.246
+   }
+  },
+  "per_city": {
+   "Cincinnati": {
+    "form_A_practical_within": {
+     "status": "scored",
+     "n_pairs": 30,
+     "n_pairs_lag1": 11,
+     "dir_acc": 0.467,
+     "dir_acc_lag1": 0.636,
+     "within_city_rho_lag1": 0.1,
+     "years": [
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    },
+    "form_B_strict_blind": {
+     "status": "scored",
+     "n_pairs": 30,
+     "n_pairs_lag1": 11,
+     "dir_acc": 0.0,
+     "dir_acc_lag1": 0.0,
+     "within_city_rho_lag1": 0.073,
+     "years": [
+      2014,
+      2015,
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    }
+   },
+   "Detroit": {
+    "form_A_practical_within": {
+     "status": "scored",
+     "n_pairs": 12,
+     "n_pairs_lag1": 5,
+     "dir_acc": 0.75,
+     "dir_acc_lag1": 1.0,
+     "within_city_rho_lag1": 0.8,
+     "years": [
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    },
+    "form_B_strict_blind": {
+     "status": "scored",
+     "n_pairs": 12,
+     "n_pairs_lag1": 5,
+     "dir_acc": 0.75,
+     "dir_acc_lag1": 1.0,
+     "within_city_rho_lag1": 0.8,
+     "years": [
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    }
+   },
+   "Memphis": {
+    "form_A_practical_within": {
+     "status": "scored",
+     "n_pairs": 9,
+     "n_pairs_lag1": 4,
+     "dir_acc": 0.667,
+     "dir_acc_lag1": 1.0,
+     "within_city_rho_lag1": 0.8,
+     "years": [
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    },
+    "form_B_strict_blind": {
+     "status": "scored",
+     "n_pairs": 9,
+     "n_pairs_lag1": 4,
+     "dir_acc": 0.667,
+     "dir_acc_lag1": 0.75,
+     "within_city_rho_lag1": 0.8,
+     "years": [
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    }
+   },
+   "NYC": {
+    "form_A_practical_within": {
+     "status": "scored",
+     "n_pairs": 12,
+     "n_pairs_lag1": 5,
+     "dir_acc": 0.583,
+     "dir_acc_lag1": 0.8,
+     "within_city_rho_lag1": 1.0,
+     "years": [
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    },
+    "form_B_strict_blind": {
+     "status": "scored",
+     "n_pairs": 12,
+     "n_pairs_lag1": 5,
+     "dir_acc": 1.0,
+     "dir_acc_lag1": 1.0,
+     "within_city_rho_lag1": 0.9,
+     "years": [
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    }
+   },
+   "St. Louis": {
+    "form_A_practical_within": {
+     "status": "scored",
+     "n_pairs": 15,
+     "n_pairs_lag1": 6,
+     "dir_acc": 0.8,
+     "dir_acc_lag1": 1.0,
+     "within_city_rho_lag1": 0.714,
+     "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    },
+    "form_B_strict_blind": {
+     "status": "scored",
+     "n_pairs": 15,
+     "n_pairs_lag1": 6,
+     "dir_acc": 1.0,
+     "dir_acc_lag1": 1.0,
+     "within_city_rho_lag1": 0.714,
+     "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    }
+   }
+  },
+  "loco_form_A_lag1_distribution": {
+   "cities": {
+    "Cincinnati": {
+     "dir_acc_lag1": 0.636,
+     "n": 11,
+     "rho_lag1": 0.1
+    },
+    "Detroit": {
+     "dir_acc_lag1": 1.0,
+     "n": 5,
+     "rho_lag1": 0.8
+    },
+    "Memphis": {
+     "dir_acc_lag1": 1.0,
+     "n": 4,
+     "rho_lag1": 0.8
+    },
+    "NYC": {
+     "dir_acc_lag1": 0.8,
+     "n": 5,
+     "rho_lag1": 1.0
+    },
+    "St. Louis": {
+     "dir_acc_lag1": 1.0,
+     "n": 6,
+     "rho_lag1": 0.714
+    }
+   },
+   "n_cities": 5,
+   "mean": 0.887,
+   "min": 0.636,
+   "max": 1.0
+  },
+  "banked_anchor": "backwards_test_v1.json FE-3_arc_tplus1 t+1 dir=0.938 n=16 (files-then)"
+ },
+ "FE-2_care_cage_bookings": {
+  "drift_check_fixed_betas": {
+   "n": 48,
+   "dir_acc": 0.479,
+   "dir_acc_lag1": 0.737,
+   "misses": [
+    "Cincinnati:2017+3",
+    "Cincinnati:2018+2",
+    "Cincinnati:2018+3",
+    "Cincinnati:2019+3",
+    "Cincinnati:2020+2",
+    "Cincinnati:2020+3",
+    "Cincinnati:2021+1",
+    "Cincinnati:2021+2",
+    "Cincinnati:2021+3",
+    "Cincinnati:2022+1",
+    "Cincinnati:2022+2",
+    "Cincinnati:2022+3",
+    "Detroit:2022+1",
+    "Detroit:2022+2",
+    "Detroit:2022+3",
+    "Memphis:2021+2",
+    "Memphis:2022+2",
+    "Memphis:2022+3",
+    "Memphis:2023+1",
+    "Memphis:2023+2",
+    "St. Louis:2019+2",
+    "St. Louis:2020+1",
+    "St. Louis:2020+3",
+    "St. Louis:2021+2",
+    "St. Louis:2021+3"
+   ]
+  },
+  "refits": {
+   "Cincinnati": {
+    "n_train_rows": 11,
+    "n_train_cities": 3,
+    "betas_refit": [
+     -0.448,
+     0.458,
+     0.055
+    ],
+    "se_refit": [
+     0.043,
+     0.044,
+     0.044
+    ],
+    "within_r2": 0.47
+   },
+   "Detroit": {
+    "n_train_rows": 17,
+    "n_train_cities": 3,
+    "betas_refit": [
+     -0.301,
+     0.391,
+     -0.067
+    ],
+    "se_refit": [
+     0.055,
+     0.049,
+     0.053
+    ],
+    "within_r2": 0.324
+   },
+   "Memphis": {
+    "n_train_rows": 15,
+    "n_train_cities": 3,
+    "betas_refit": [
+     -0.447,
+     0.487,
+     0.045
+    ],
+    "se_refit": [
+     0.036,
+     0.037,
+     0.037
+    ],
+    "within_r2": 0.491
+   },
+   "St. Louis": {
+    "n_train_rows": 14,
+    "n_train_cities": 3,
+    "betas_refit": [
+     -0.603,
+     -0.476,
+     -0.576
+    ],
+    "se_refit": [
+     0.044,
+     0.056,
+     0.054
+    ],
+    "within_r2": 0.655
+   }
+  },
+  "per_city": {
+   "Cincinnati": {
+    "form_A_practical_within": {
+     "status": "scored",
+     "n_pairs": 21,
+     "n_pairs_lag1": 8,
+     "dir_acc": 0.524,
+     "dir_acc_lag1": 0.5,
+     "within_city_rho_lag1": 0.667,
+     "years": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    },
+    "form_B_strict_blind": {
+     "status": "scored",
+     "n_pairs": 21,
+     "n_pairs_lag1": 8,
+     "dir_acc": 1.0,
+     "dir_acc_lag1": 1.0,
+     "within_city_rho_lag1": 0.238,
+     "years": [
+      2017,
+      2018,
+      2019,
+      2020,
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    }
+   },
+   "Detroit": {
+    "form_A_practical_within": {
+     "status": "scored",
+     "n_pairs": 4,
+     "n_pairs_lag1": 2,
+     "dir_acc": 0.75,
+     "dir_acc_lag1": 0.5,
+     "within_city_rho_lag1": null,
+     "years": [
+      2022,
+      2024
+     ]
+    },
+    "form_B_strict_blind": {
+     "status": "scored",
+     "n_pairs": 4,
+     "n_pairs_lag1": 2,
+     "dir_acc": 1.0,
+     "dir_acc_lag1": 1.0,
+     "within_city_rho_lag1": null,
+     "years": [
+      2022,
+      2024
+     ]
+    }
+   },
+   "Memphis": {
+    "form_A_practical_within": {
+     "status": "scored",
+     "n_pairs": 9,
+     "n_pairs_lag1": 4,
+     "dir_acc": 0.333,
+     "dir_acc_lag1": 0.5,
+     "within_city_rho_lag1": 0.4,
+     "years": [
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    },
+    "form_B_strict_blind": {
+     "status": "scored",
+     "n_pairs": 9,
+     "n_pairs_lag1": 4,
+     "dir_acc": 0.667,
+     "dir_acc_lag1": 0.5,
+     "within_city_rho_lag1": 0.4,
+     "years": [
+      2021,
+      2022,
+      2023,
+      2024
+     ]
+    }
+   },
+   "St. Louis": {
+    "form_A_practical_within": {
+     "status": "scored",
+     "n_pairs": 14,
+     "n_pairs_lag1": 5,
+     "dir_acc": 0.5,
+     "dir_acc_lag1": 0.6,
+     "within_city_rho_lag1": -0.7,
+     "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+     ]
+    },
+    "form_B_strict_blind": {
+     "status": "scored",
+     "n_pairs": 14,
+     "n_pairs_lag1": 5,
+     "dir_acc": 0.0,
+     "dir_acc_lag1": 0.0,
+     "within_city_rho_lag1": -0.5,
+     "years": [
+      2019,
+      2020,
+      2021,
+      2022,
+      2023
+     ]
+    }
+   }
+  },
+  "loco_form_A_lag1_distribution": {
+   "cities": {
+    "Cincinnati": {
+     "dir_acc_lag1": 0.5,
+     "n": 8,
+     "rho_lag1": 0.667
+    },
+    "Detroit": {
+     "dir_acc_lag1": 0.5,
+     "n": 2,
+     "rho_lag1": null
+    },
+    "Memphis": {
+     "dir_acc_lag1": 0.5,
+     "n": 4,
+     "rho_lag1": 0.4
+    },
+    "St. Louis": {
+     "dir_acc_lag1": 0.6,
+     "n": 5,
+     "rho_lag1": -0.7
+    }
+   },
+   "n_cities": 4,
+   "mean": 0.525,
+   "min": 0.5,
+   "max": 0.6
+  },
+  "banked_anchor": "backwards_test_v1.json FE-3_arc_tplus1 t+1 dir=0.938 n=16 (files-then)"
+ }
+}

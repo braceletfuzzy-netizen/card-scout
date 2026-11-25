@@ -1,0 +1,56 @@
+{
+  "city": "Memphis",
+  "fiscal_year": 2026,
+  "budget_document": {
+    "title": "City of Memphis FY26 Adopted Budget Book (with CIP), Ordinance No. 5944",
+    "url_primary": "https://www.memphistn.gov/wp-content/uploads/2025/10/FY26-Adopted-Budget-Book.pdf",
+    "url_doc_page": "https://www.memphistn.gov/document/fy26-adopted-budget-book/",
+    "retrieved": "2026-11-20",
+    "note": "GFOA Distinguished Budget Presentation Award (22+ years). FY26 = July 1, 2025 - June 30, 2026, adopted per Ordinance 5944."
+  },
+  "budget_total_all_funds_expenditures_usd": 1743297481,
+  "budget_total_revenues_all_funds_usd": 1693926091,
+  "general_fund_expenditures_usd": 883134861,
+  "tax_rate_per_100_assessed": 2.58081,
+  "buckets_operating": {
+    "from_function_table_fy26_adopted": {
+      "public_safety": {"police_usd": 308319778, "fire_usd": 246654620, "subtotal_usd": 554974398, "share": 0.3181},
+      "infrastructure_public_works": {"public_works_usd": 203001191, "solid_waste_usd": 104915610, "city_engineer_usd": 15233532, "subtotal_usd": 323150333, "share": 0.1854},
+      "human_services_community": {"housing_community_dev_usd": 6293120, "grants_subsidies_usd": 64653371, "community_enhancement_usd": 15962329, "subtotal_usd": 85810820, "share": 0.0492},
+      "education_prek_libraries": {"pre_k_separate_fund_usd": 7000000, "libraries_usd": 26144616, "subtotal_usd": 33144616, "share": 0.0190},
+      "admin_general": {"executive_usd": 24287295, "finance_admin_usd": 16125955, "hr_usd": 150075457, "it_usd": 27627786, "general_services_usd": 66042489, "city_attorney_usd": 33707346, "city_engineer_see_infra_null": null, "court_clerk_usd": 8002930, "city_courts_usd": 966641, "legislative_usd": 3620382, "subtotal_usd": 326088281, "share": 0.1871, "notes": "HR includes Health Insurance Fund pass-through? — verifier flag: HR function 8.61% may embed benefits administration; boundary honest-flag."},
+      "debt_retirement": {"debt_service_fund_usd": 199853279, "retirement_investors_usd": 199403790, "redemption_serial_bonds_usd": 175000000, "notes": "Retirement Investors = the pension-actuarial line (11.44%); Debt Service Fund 11.46%; combined = the mandatory-class", "subtotal_usd": 574257069, "share": 0.3294},
+      "parks_culture": {"memphis_parks_usd": 51602943, "share": 0.0296},
+      "unallocated_contingency": {"usd": 170366300, "share": 0.0977}
+    },
+    "capital": {
+      "go_bond_cip_usd": 97373480,
+      "enterprise_funds_cip_usd": 113080000,
+      "capital_acquisition_usd": 10000000,
+      "notes": "FY26 CIP per ordinance (multi-year, recorded separately from operating shares)"
+    }
+  },
+  "service_out": {
+    "note": "Tier-1 countables absent from the budget book's summary tables = honest-nulls; the Division summaries (police/fire/library pages 294-348-class) are the next-pass pull for response-times/calls/visits.",
+    "police_budget_usd": 308319778,
+    "fire_budget_usd": 246654620,
+    "library_budget_usd": 26144616,
+    "parks_budget_usd": 51602943
+  },
+  "revenue_context": {
+    "local_taxes_share": 0.478,
+    "charges_for_services_share": 0.2334,
+    "transfers_in_share": 0.0833
+  },
+  "derived": {
+    "per_capita_budget_usd": null,
+    "notes": "pop-denominator pending (Memphis ~610k-class, unverified this pass — null by honest-nulls law until sourced)."
+  },
+  "falsifier_context": "Founder-intuition row [FOUNDER-INTUITION]: 'Mamdani is doing awesome' — Memphis row = the comparative-side of the two-city pair; the founder's home-city = the ground-truth anchor for founder-eyes sampling.",
+  "retrieved": "2026-11-20",
+  "honest_nulls": [
+    "service-out Tier-1 units (response times, boardings, permit-days) not in the summary tables — Division pages next pass",
+    "per-capita denominators unsourced this pass",
+    "NYC bucket-graded split equivalent: Memphis uses FUNCTION table (cleaner than NYC's all-funds PS/OTPS split — the comparative-note)"
+  ]
+}

@@ -1,0 +1,92 @@
+{
+ "_record": "lane12_component_timearcs_v1",
+ "built": "2026-11-24",
+ "built_by": "KNOCKOUT-BATCH-2 LANE-12 subagent (component-grain TIME-ARCS; the 2509-row city_component_annual_v1 rendered as the arc-columns datatype per quadrants_spec_v1 AX-LOCATION/TIME-ARC)",
+ "reproducibility_header": "Built entirely from banked build/ files: city_component_annual_v1.jsonl (2,509 rows read; NYC IBO-era \"total\" rows vs Socrata-era \"city_funds\" rows deduped per era year \u2014 never summed), murders_all_v1.json (558 city-years), population bank (population_series_v1 + populations_cities_v2 + populations_wide_v1 + phase2_pop_table; alias New York->NYC, Okc->Oklahoma City), bookings_series_v1.jsonl (arrest booking proxy). Laws: honest-null (no denominator = null row, no interpolation), no-fabrication, direction-class only (n-thin panels, no p-values), NYC dedup never sums eras. Machinery (pooled-within-city-z) carried verbatim from q4_bonds_arc_build_v1.py.",
+ "input_artifacts": {
+  "city_component_annual_v1.jsonl_rows_read": 2509,
+  "rows_expected": 2509,
+  "nyc_dedup_rows_skipped": 1782,
+  "city_year_lane_cells": 438,
+  "cities": {
+   "NYC": 45,
+   "Cincinnati": 24,
+   "Detroit": 9,
+   "Memphis": 6,
+   "St. Louis": 7,
+   "Denver": 3
+  },
+  "murders_city_years": 558,
+  "popbank_keys": 238,
+  "bookings_keys": 89
+ },
+ "merge_law": {
+  "grain": "city-year x lane (the component grain; aggregate-only construction forbidden by the 80x rule)",
+  "nyc_dedup": "IBO era kept as 'total' rows; Socrata-era 2020-2025 kept as 'city_funds' rows; if both exist for a lane-year, 'total' preferred and eras NEVER summed (verified against the banked q4 merge law)",
+  "arc_columns": "each city-year row carries murder_rate at t0/t+1/t+2 AND spend lanes at t (per-100k banks); the arc is a datatype, not a re-run"
+ },
+ "arc_viability_falsifier": {
+  "murder_rate_t0_city_years": 32,
+  "t+1_available": 28,
+  "t+2_available": 24,
+  "verdict": "VIABLE: t+2 columns populated beyond the honest-null floor",
+  "note": "the arc-columns datatype SHIPS regardless (the falsifier only limits the 3-lag claim, per the pre-registered falsifier #4)"
+ },
+ "tests": {
+  "care_total_t_vs_murder_rate_t+0": {
+   "pooled_within_z": {
+    "r": -0.421,
+    "n_city_years": 31,
+    "single_or_degenerate_dropped": [
+     "NYC"
+    ]
+   }
+  },
+  "care_total_t_vs_murder_rate_t+1": {
+   "pooled_within_z": {
+    "r": -0.484,
+    "n_city_years": 28,
+    "single_or_degenerate_dropped": []
+   }
+  },
+  "care_total_t_vs_murder_rate_t+2": {
+   "pooled_within_z": {
+    "r": -0.308,
+    "n_city_years": 24,
+    "single_or_degenerate_dropped": []
+   }
+  },
+  "bonds_core_t_vs_murder_rate_t+0": {
+   "pooled_within_z": {
+    "r": -0.475,
+    "n_city_years": 31,
+    "single_or_degenerate_dropped": [
+     "NYC"
+    ]
+   }
+  },
+  "bonds_core_t_vs_murder_rate_t+1": {
+   "pooled_within_z": {
+    "r": -0.466,
+    "n_city_years": 28,
+    "single_or_degenerate_dropped": []
+   }
+  },
+  "bonds_core_t_vs_murder_rate_t+2": {
+   "pooled_within_z": {
+    "r": -0.477,
+    "n_city_years": 24,
+    "single_or_degenerate_dropped": []
+   }
+  },
+  "care_t_vs_bookings_rate_t+0": {
+   "pooled_within_z": {
+    "r": -0.616,
+    "n_city_years": 23,
+    "single_or_degenerate_dropped": []
+   }
+  }
+ },
+ "panel_rows": 94,
+ "panel_file": "lane12_component_timearcs_panel_v1.jsonl"
+}

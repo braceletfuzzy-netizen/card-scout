@@ -1,0 +1,49 @@
+{
+ "city": "Memphis",
+ "built": "2026-11-21",
+ "fire": {
+  "city": "Memphis",
+  "division": "Fire Services",
+  "source": "FY26 Adopted Budget Book p.295-301",
+  "note": "the Fire = the KPI-header-page-empty [p.298 = the 92-chars] = the table-format = the NOT-carried for-this-division (the honest-null!) \u2014 the outputs = the narrative-embedded [p.296] = the countables-pulled:",
+  "service_out_v1": [
+   {
+    "metric": "citizens reached via fire-education/outreach",
+    "value": 183053,
+    "period": "FY25"
+   },
+   {
+    "metric": "fire-communications calls-for-service",
+    "value": 304075,
+    "period": "FY25"
+   },
+   {
+    "metric": "incidents",
+    "value": 163948,
+    "period": "FY25"
+   },
+   {
+    "metric": "responses",
+    "value": 366641,
+    "period": "FY25"
+   },
+   {
+    "metric": "% emergency-911-calls answered within-20-seconds",
+    "value": "93%",
+    "period": "FY24"
+   },
+   {
+    "metric": "new firefighters hired",
+    "value": 184,
+    "note": "from-24-states, 119-with-NR-EMS-certs"
+   }
+  ],
+  "comparative": "the Police = the calls-answered-within-20s = 94.3% (the FY25-actual) vs-the Fire = the 93% (the FY24) \u2014 the same-metric-class across-the-safety-divisions!"
+ },
+ "kpi_tables_found": {
+  "Library Services": 335
+ },
+ "raw_tables": {
+  "Library Services": "Key Performance Indicator\nKey Performance Indicator\nFY24 Actual\nFY25 Goal\nFY25 Actual\nFY26 Goal\nCategory\nADMINISTRATION\nSubmit accurate invoices to ensure\npayment is within 30 days of receipt\n90%\n90%\n90%\n90%\nGovernment\nAdhere to Contract Compliance for\nMinority\nWomen Business Enterprise (MWBE)\ngoal for technology spend\n40%\n38%\n40%\n40%\nGovernment\nOPERATIONS\nNetwork Availability\n99%\n99%\n99%\n99%\nGovernment\nServer Availability\n99%\n99%\n99%\n99%\nGovernment\nEnterprise Oracle E-Business Suite\nAvailability\n99%\n99%\n99%\n99%\nGovernment\nCritical Applications Availability\n99%\n99%\n99%\n99%\nGovernment\nInternet Circuit Availability\n99%\n99%\n99%\n99%\nGovernment\nInformation Technology Legal Levels\nAdministration\nThe Information Technology Administration ensures that the Divisions\u2019 mission, vision, and values are upheld. Directs all\nCity IT functions, HR employee relations, strategic initiatives, manages the operating and capital improvement budgets,\nprocesses contracts and procures technical hardware and software.\nOperations\nThe Operations Departments are the central hub for all technological functions. These departments maintain and support\nover 120 applications, manage the network infrastructure, manage a world-class data center, implement, and maintain the\nCity\u2019s security policies and procedures, plan and oversee projects, conduct training, provide technical support for software\nand hardware, and telephone systems.\nInformation Technology\nFY26 Adopted Budget Book w/ CIP | Memphis\nPage 336\n"
+ }
+}

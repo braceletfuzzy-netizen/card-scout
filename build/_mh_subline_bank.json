@@ -1,0 +1,15 @@
+{
+ "Houston|mh_subline_police_program_usd": {
+  "2024": 6732000,
+  "2025": 6990000,
+  "2026": 7227000
+ },
+ "Oklahoma City|mih_behavioral_program_usd": {
+  "2025": 4171088,
+  "2026": 4360706,
+  "2027": 4619468
+ },
+ "Houston|opioid_abatement_fund_flag": "FY2026 book lists Houston Opioid Abatement Fund as separate fund (SUD-vein, capital/grant); program-USD not printed in scanned pages",
+ "Boston|bphc_citywide_mh_initiative_flag": "FY23 book: +$600k elder MH; citywide MH initiative in PHC budget, no single printed MH-subline USD",
+ "NOLA|mciu_flag": "FY24 book narrative: MCIU launched 2023; no printed subline USD in Operating Budget; ARPA $10M youth MH = federal/one-time, noted-not-summed"
+}

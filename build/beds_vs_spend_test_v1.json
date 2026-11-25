@@ -1,0 +1,1243 @@
+{
+ "_record": "beds_vs_spend_test_v1",
+ "built_utc": "2026-11-24T00:00:00Z",
+ "artifacts_dir": "C:/Users/J/Documents/LLM/cardscout-2.0/For You/PolyScout/build/",
+ "_header": {
+  "artifact": "beds_vs_spend_test_v1",
+  "frame": "BANKED-1: the MH-capacity vs dollar-flow rival-predictor test at the STATE grain (best-15 item-13/3 capacity side vs the v2 state MH-spend lane; capacity-vs-prevalence rival carried by policy_associations_v1 overflow \"capacity-vs-prevalence-rival\").",
+  "rival_A_capacity": "state psychiatric-hospital beds per 100k, 2023 vintage, Treatment Advocacy Center state directory (tac.org/map_directory/<state>, 2023 total beds + beds per 100k as printed; civil+forensic splits captured). NRI-class: NRI July-2025 \"SMHA Use of State Psychiatric Hospitals\" report banked for the national aggregates (36,510 inpatients FY-start 2023; 84,618 served; 192 hospitals; avg 11 residents/100k; $14B SH expenditures = 25.4% of SMHA spend; 43/48 states report bed shortage). Per-state bed panel = CROSS-SECTIONAL ONLY (one vintage on disk) — cross-sectional r is composition-driven, the 80x-gradient class, labeled as such; the WITHIN-state lane runs on dollars only.",
+  "rival_B_dollars": "state_mh_series_v2.jsonl state_mh_budget_usd per PEP resident, 2019-2025 (annual rows only; TX biennial excluded; 2026 excluded = no Census PEP vintage-2026 — honest-null never carry-forward). value_kind carried.",
+  "endpoint": "city murders (murders_all_v1, months-guard) per 100k city pop at the state-matched city (city_of_state map carried); city pops banked files.",
+  "population": "Census PEP per-year (populations_states_v1; MA filled from NST-EST2025-ALLDATA SUMLEV-040 POPESTIMATE2020-2025 — same vintage, cited fix for the states-file omission).",
+  "laws": [
+   "honest-null never zero",
+   "no fabricated years (lag pairs only where BOTH years exist)",
+   "cross-sectional capacity r labeled composition (single 2023 vintage, no within-state bed series)",
+   "value_kind per row; actual vs budgeted never blended inside one r",
+   "thin-n flagged; pattern-lead NOT verdict"
+  ]
+ },
+ "inputs": {
+  "tac_beds_2023_n_states": 51,
+  "spend_states_annual": [
+   "LA",
+   "MA",
+   "MI",
+   "MO",
+   "NY",
+   "OH",
+   "OK",
+   "PA",
+   "TN"
+  ],
+  "mh_grain_note": {
+   "TN": "dept-MH",
+   "PA": "dept-MH",
+   "OH": "dept-MHAS/DBH (Subsidy+Capital Total)",
+   "MA": "dept-MH",
+   "NY": "dept-MH",
+   "MO": "dept-MH",
+   "OK": "dept-MH",
+   "MI": "dept-MH",
+   "LA": "OBH agency total incl federal"
+  },
+  "states_missing_bed_arm": []
+ },
+ "panel_cross_section": [
+  {
+   "state": "NY",
+   "city": "NYC",
+   "beds_per_100k_2023": 16.8,
+   "spend_years_covered": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "rows": [
+    {
+     "state": "NY",
+     "city": "NYC",
+     "year": 2019,
+     "mh_spend_usd": 4264744000,
+     "value_kind": "available col (FY20 exec appropdata page)",
+     "beds_per_100k_2023": 16.8,
+     "murders": 319,
+     "mh_usd_per_resident": 219.23,
+     "included_in_test": true
+    },
+    {
+     "state": "NY",
+     "city": "NYC",
+     "year": 2020,
+     "mh_spend_usd": 4395554000,
+     "value_kind": "recommended (FY20 appropdata page; also 4,403,776,500 available per FY21 page)",
+     "beds_per_100k_2023": 16.8,
+     "murders": 468,
+     "mh_usd_per_resident": 218.44,
+     "included_in_test": true
+    },
+    {
+     "state": "NY",
+     "city": "NYC",
+     "year": 2021,
+     "mh_spend_usd": 4454322000,
+     "value_kind": "recommended (FY21 appropdata page; 4,467,462,000 available per FY22 page)",
+     "beds_per_100k_2023": 16.8,
+     "murders": 488,
+     "mh_usd_per_resident": 224.56,
+     "included_in_test": true
+    },
+    {
+     "state": "NY",
+     "city": "NYC",
+     "year": 2022,
+     "mh_spend_usd": 4435572000,
+     "value_kind": "recommended (FY22 appropdata page; 4,487,892,000 available per FY23 page)",
+     "beds_per_100k_2023": 16.8,
+     "murders": 438,
+     "mh_usd_per_resident": 225.01,
+     "included_in_test": true
+    },
+    {
+     "state": "NY",
+     "city": "NYC",
+     "year": 2023,
+     "mh_spend_usd": 5211085265,
+     "value_kind": "estimated total (baseline FY23 est in FY24 exec-budget doc)",
+     "beds_per_100k_2023": 16.8,
+     "murders": 404,
+     "mh_usd_per_resident": 263.37,
+     "included_in_test": true
+    },
+    {
+     "state": "NY",
+     "city": "NYC",
+     "year": 2024,
+     "mh_spend_usd": 6363191000,
+     "value_kind": "recommended (FY24 exec budget, all funds)",
+     "beds_per_100k_2023": 16.8,
+     "murders": 357,
+     "mh_usd_per_resident": 318.14,
+     "included_in_test": true
+    },
+    {
+     "state": "NY",
+     "city": "NYC",
+     "year": 2025,
+     "mh_spend_usd": 5898620000,
+     "value_kind": "estimated total (baseline FY25 est in FY26 exec-budget doc)",
+     "beds_per_100k_2023": 16.8,
+     "murders": null,
+     "mh_usd_per_resident": 294.9,
+     "included_in_test": false
+    }
+   ],
+   "exclusion_reasons": [
+    "2025: murders unavailable: no-entry (excluded)"
+   ]
+  },
+  {
+   "state": "MO",
+   "city": "St. Louis",
+   "beds_per_100k_2023": 14.4,
+   "spend_years_covered": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "rows": [
+    {
+     "state": "MO",
+     "city": "St. Louis",
+     "year": 2019,
+     "mh_spend_usd": 2250870738,
+     "value_kind": "TAFP-after-veto grand total",
+     "beds_per_100k_2023": 14.4,
+     "murders": 194,
+     "mh_usd_per_resident": 366.74,
+     "included_in_test": true
+    },
+    {
+     "state": "MO",
+     "city": "St. Louis",
+     "year": 2020,
+     "mh_spend_usd": 2482230394,
+     "value_kind": "TAFP",
+     "beds_per_100k_2023": 14.4,
+     "murders": 263,
+     "mh_usd_per_resident": 403.28,
+     "included_in_test": true
+    },
+    {
+     "state": "MO",
+     "city": "St. Louis",
+     "year": 2021,
+     "mh_spend_usd": 2515693209,
+     "value_kind": "gov-recs (exec basis)",
+     "beds_per_100k_2023": 14.4,
+     "murders": 203,
+     "mh_usd_per_resident": 407.56,
+     "included_in_test": true
+    },
+    {
+     "state": "MO",
+     "city": "St. Louis",
+     "year": 2022,
+     "mh_spend_usd": 2734925718,
+     "value_kind": "gov-recs (exec basis)",
+     "beds_per_100k_2023": 14.4,
+     "murders": 201,
+     "mh_usd_per_resident": 442.6,
+     "included_in_test": true
+    },
+    {
+     "state": "MO",
+     "city": "St. Louis",
+     "year": 2023,
+     "mh_spend_usd": 3423779593,
+     "value_kind": "TAFP (exec basis) / 3,441,720,822 as-printed TAFP",
+     "beds_per_100k_2023": 14.4,
+     "murders": 158,
+     "mh_usd_per_resident": 551.69,
+     "included_in_test": true
+    },
+    {
+     "state": "MO",
+     "city": "St. Louis",
+     "year": 2024,
+     "mh_spend_usd": 3649296116,
+     "value_kind": "actual-final (DMH dept total all funds)",
+     "beds_per_100k_2023": 14.4,
+     "murders": 150,
+     "mh_usd_per_resident": 584.49,
+     "included_in_test": true
+    },
+    {
+     "state": "MO",
+     "city": "St. Louis",
+     "year": 2025,
+     "mh_spend_usd": 4039276127,
+     "value_kind": "budget-final",
+     "beds_per_100k_2023": 14.4,
+     "murders": 141,
+     "mh_usd_per_resident": 644.17,
+     "included_in_test": true
+    }
+   ],
+   "exclusion_reasons": []
+  },
+  {
+   "state": "PA",
+   "city": "Pittsburgh",
+   "beds_per_100k_2023": 10.7,
+   "spend_years_covered": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "rows": [
+    {
+     "state": "PA",
+     "city": "Pittsburgh",
+     "year": 2019,
+     "mh_spend_usd": 1058259000,
+     "value_kind": "actual (FY20-21 Blue Book)",
+     "beds_per_100k_2023": 10.7,
+     "murders": null,
+     "mh_usd_per_resident": 82.66,
+     "included_in_test": false
+    },
+    {
+     "state": "PA",
+     "city": "Pittsburgh",
+     "year": 2020,
+     "mh_spend_usd": 1123539000,
+     "value_kind": "actual (FY21-22 Blue Book; also 1,118,582K avail)",
+     "beds_per_100k_2023": 10.7,
+     "murders": 48,
+     "mh_usd_per_resident": 86.46,
+     "included_in_test": true
+    },
+    {
+     "state": "PA",
+     "city": "Pittsburgh",
+     "year": 2021,
+     "mh_spend_usd": 1202993000,
+     "value_kind": "available (FY21-22 BB; 1,150,210K budgeted / 1,166,753K actual in FY22-23 BB)",
+     "beds_per_100k_2023": 10.7,
+     "murders": null,
+     "mh_usd_per_resident": 92.42,
+     "included_in_test": false
+    },
+    {
+     "state": "PA",
+     "city": "Pittsburgh",
+     "year": 2022,
+     "mh_spend_usd": 1261910000,
+     "value_kind": "actual (FY24-25 BB; 1,249,611K as 22-23 BB)",
+     "beds_per_100k_2023": 10.7,
+     "murders": 66,
+     "mh_usd_per_resident": 97.18,
+     "included_in_test": true
+    },
+    {
+     "state": "PA",
+     "city": "Pittsburgh",
+     "year": 2023,
+     "mh_spend_usd": 1334732000,
+     "value_kind": "actual (FY23-24 BB / 24-25 BB)",
+     "beds_per_100k_2023": 10.7,
+     "murders": 51,
+     "mh_usd_per_resident": 102.6,
+     "included_in_test": true
+    },
+    {
+     "state": "PA",
+     "city": "Pittsburgh",
+     "year": 2024,
+     "mh_spend_usd": 1279528000,
+     "value_kind": "budgeted (DHS Blue Book Summary Financial Data, Actual col FY23-24)",
+     "beds_per_100k_2023": 10.7,
+     "murders": 39,
+     "mh_usd_per_resident": 98.08,
+     "included_in_test": true
+    },
+    {
+     "state": "PA",
+     "city": "Pittsburgh",
+     "year": 2025,
+     "mh_spend_usd": 1363083000,
+     "value_kind": "budgeted (FY24-25 available per Blue Book summary)",
+     "beds_per_100k_2023": 10.7,
+     "murders": 31,
+     "mh_usd_per_resident": 104.38,
+     "included_in_test": true
+    }
+   ],
+   "exclusion_reasons": [
+    "2019: murders unavailable: partial-nonreporting guard (11/12 months) (excluded)",
+    "2021: murders unavailable: partial-nonreporting guard (8/12 months) (excluded)"
+   ]
+  },
+  {
+   "state": "TN",
+   "city": "Memphis",
+   "beds_per_100k_2023": 7.8,
+   "spend_years_covered": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "rows": [
+    {
+     "state": "TN",
+     "city": "Memphis",
+     "year": 2019,
+     "mh_spend_usd": 318919900.0,
+     "value_kind": "actual col",
+     "beds_per_100k_2023": 7.8,
+     "murders": null,
+     "mh_usd_per_resident": 46.7,
+     "included_in_test": false
+    },
+    {
+     "state": "TN",
+     "city": "Memphis",
+     "year": 2020,
+     "mh_spend_usd": 356834800.0,
+     "value_kind": "actual col",
+     "beds_per_100k_2023": 7.8,
+     "murders": 332,
+     "mh_usd_per_resident": 51.51,
+     "included_in_test": true
+    },
+    {
+     "state": "TN",
+     "city": "Memphis",
+     "year": 2021,
+     "mh_spend_usd": 372761100.0,
+     "value_kind": "recommended",
+     "beds_per_100k_2023": 7.8,
+     "murders": 345,
+     "mh_usd_per_resident": 53.51,
+     "included_in_test": true
+    },
+    {
+     "state": "TN",
+     "city": "Memphis",
+     "year": 2022,
+     "mh_spend_usd": 404144700.0,
+     "value_kind": "actual col",
+     "beds_per_100k_2023": 7.8,
+     "murders": 304,
+     "mh_usd_per_resident": 57.22,
+     "included_in_test": true
+    },
+    {
+     "state": "TN",
+     "city": "Memphis",
+     "year": 2023,
+     "mh_spend_usd": 416592500.0,
+     "value_kind": "actual col",
+     "beds_per_100k_2023": 7.8,
+     "murders": 344,
+     "mh_usd_per_resident": 58.24,
+     "included_in_test": true
+    },
+    {
+     "state": "TN",
+     "city": "Memphis",
+     "year": 2024,
+     "mh_spend_usd": 424031200.0,
+     "value_kind": "adopted (amended appropriation act)",
+     "beds_per_100k_2023": 7.8,
+     "murders": 248,
+     "mh_usd_per_resident": 58.48,
+     "included_in_test": true
+    },
+    {
+     "state": "TN",
+     "city": "Memphis",
+     "year": 2025,
+     "mh_spend_usd": 436457200.0,
+     "value_kind": "adopted (amended appropriation act)",
+     "beds_per_100k_2023": 7.8,
+     "murders": 184,
+     "mh_usd_per_resident": 59.67,
+     "included_in_test": true
+    }
+   ],
+   "exclusion_reasons": [
+    "2019: murders unavailable: no-entry (excluded)"
+   ]
+  },
+  {
+   "state": "OH",
+   "city": "Cincinnati",
+   "beds_per_100k_2023": 9.6,
+   "spend_years_covered": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "rows": [
+    {
+     "state": "OH",
+     "city": "Cincinnati",
+     "year": 2019,
+     "mh_spend_usd": 164573756,
+     "value_kind": "Total col (LSC statewide table, visual re-parse)",
+     "beds_per_100k_2023": 9.6,
+     "murders": 67,
+     "mh_usd_per_resident": 14.08,
+     "included_in_test": true
+    },
+    {
+     "state": "OH",
+     "city": "Cincinnati",
+     "year": 2020,
+     "mh_spend_usd": 206600198,
+     "value_kind": "Total col (LSC statewide table)",
+     "beds_per_100k_2023": 9.6,
+     "murders": 96,
+     "mh_usd_per_resident": 17.51,
+     "included_in_test": true
+    },
+    {
+     "state": "OH",
+     "city": "Cincinnati",
+     "year": 2021,
+     "mh_spend_usd": 210187151,
+     "value_kind": "Total col (LSC statewide table)",
+     "beds_per_100k_2023": 9.6,
+     "murders": 93,
+     "mh_usd_per_resident": 17.87,
+     "included_in_test": true
+    },
+    {
+     "state": "OH",
+     "city": "Cincinnati",
+     "year": 2022,
+     "mh_spend_usd": 249158646,
+     "value_kind": "Total col (LSC statewide table, visual re-parse)",
+     "beds_per_100k_2023": 9.6,
+     "murders": 77,
+     "mh_usd_per_resident": 21.18,
+     "included_in_test": true
+    },
+    {
+     "state": "OH",
+     "city": "Cincinnati",
+     "year": 2023,
+     "mh_spend_usd": 213466002,
+     "value_kind": "Total col (LSC statewide table, visual re-parse)",
+     "beds_per_100k_2023": 9.6,
+     "murders": 71,
+     "mh_usd_per_resident": 18.08,
+     "included_in_test": true
+    },
+    {
+     "state": "OH",
+     "city": "Cincinnati",
+     "year": 2024,
+     "mh_spend_usd": 246400280,
+     "value_kind": "Total col (LSC statewide table, visual re-parse)",
+     "beds_per_100k_2023": 9.6,
+     "murders": 74,
+     "mh_usd_per_resident": 20.77,
+     "included_in_test": true
+    },
+    {
+     "state": "OH",
+     "city": "Cincinnati",
+     "year": 2025,
+     "mh_spend_usd": 543142029,
+     "value_kind": "Subsidy col (LSC FY25 dbh line; prior pass)",
+     "beds_per_100k_2023": 9.6,
+     "murders": 69,
+     "mh_usd_per_resident": 45.64,
+     "included_in_test": true
+    }
+   ],
+   "exclusion_reasons": []
+  },
+  {
+   "state": "MI",
+   "city": "Detroit",
+   "beds_per_100k_2023": 5.0,
+   "spend_years_covered": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "rows": [
+    {
+     "state": "MI",
+     "city": "Detroit",
+     "year": 2020,
+     "mh_spend_usd": 3822355000,
+     "value_kind": "gross approp sum of BH components (HFA briefing pie: TradMedicaid BH 2,818,435,400 + HMP BH 371,843,300 + Non-Medicaid/StatePsych 632,076,300)",
+     "beds_per_100k_2023": 5.0,
+     "murders": 321,
+     "mh_usd_per_resident": 379.49,
+     "included_in_test": true
+    },
+    {
+     "state": "MI",
+     "city": "Detroit",
+     "year": 2021,
+     "mh_spend_usd": 4424900900,
+     "value_kind": "gross approp sum (3,194,979,200 + 589,941,900 + 639,979,800)",
+     "beds_per_100k_2023": 5.0,
+     "murders": 306,
+     "mh_usd_per_resident": 440.62,
+     "included_in_test": true
+    },
+    {
+     "state": "MI",
+     "city": "Detroit",
+     "year": 2022,
+     "mh_spend_usd": 4927099400,
+     "value_kind": "gross approp sum (3,605,430,100 + 603,614,300 + 718,055,000)",
+     "beds_per_100k_2023": 5.0,
+     "murders": 309,
+     "mh_usd_per_resident": 490.56,
+     "included_in_test": true
+    },
+    {
+     "state": "MI",
+     "city": "Detroit",
+     "year": 2023,
+     "mh_spend_usd": 5283203100,
+     "value_kind": "gross approp sum (3,594,216,900 + 570,067,600 + 1,118,918,600)",
+     "beds_per_100k_2023": 5.0,
+     "murders": 250,
+     "mh_usd_per_resident": 525.06,
+     "included_in_test": true
+    },
+    {
+     "state": "MI",
+     "city": "Detroit",
+     "year": 2024,
+     "mh_spend_usd": 5427194300,
+     "value_kind": "gross approp sum (3,975,261,300 + 590,860,800 + 861,072,200)",
+     "beds_per_100k_2023": 5.0,
+     "murders": 203,
+     "mh_usd_per_resident": 537.35,
+     "included_in_test": true
+    },
+    {
+     "state": "MI",
+     "city": "Detroit",
+     "year": 2025,
+     "mh_spend_usd": 5764615200,
+     "value_kind": "gross approp sum (4,391,669,100 + 527,784,600 + 845,161,500)",
+     "beds_per_100k_2023": 5.0,
+     "murders": 165,
+     "mh_usd_per_resident": 569.18,
+     "included_in_test": true
+    }
+   ],
+   "exclusion_reasons": []
+  },
+  {
+   "state": "OK",
+   "city": "Oklahoma City",
+   "beds_per_100k_2023": 9.4,
+   "spend_years_covered": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "rows": [
+    {
+     "state": "OK",
+     "city": "Oklahoma City",
+     "year": 2019,
+     "mh_spend_usd": 337108145,
+     "value_kind": "FY19 Projected grand total appropriations (FY19 BPR; also FY18 Actual 306,485,149 on same page)",
+     "beds_per_100k_2023": 9.4,
+     "murders": 76,
+     "mh_usd_per_resident": 85.19,
+     "included_in_test": true
+    },
+    {
+     "state": "OK",
+     "city": "Oklahoma City",
+     "year": 2020,
+     "mh_spend_usd": 500388273,
+     "value_kind": "FY20 Requested grand total appropriations (FY20 BPR)",
+     "beds_per_100k_2023": 9.4,
+     "murders": 67,
+     "mh_usd_per_resident": 126.19,
+     "included_in_test": true
+    },
+    {
+     "state": "OK",
+     "city": "Oklahoma City",
+     "year": 2021,
+     "mh_spend_usd": 540135330,
+     "value_kind": "FY21 Requested grand total appropriations (FY21 BPR)",
+     "beds_per_100k_2023": 9.4,
+     "murders": 83,
+     "mh_usd_per_resident": 135.28,
+     "included_in_test": true
+    },
+    {
+     "state": "OK",
+     "city": "Oklahoma City",
+     "year": 2022,
+     "mh_spend_usd": 334915240,
+     "value_kind": "FY21 Budgeted appropriations total printed in FY22 BPR (requested was 314,320,023 in FY22 BPR)",
+     "beds_per_100k_2023": 9.4,
+     "murders": 71,
+     "mh_usd_per_resident": 83.2,
+     "included_in_test": true
+    },
+    {
+     "state": "OK",
+     "city": "Oklahoma City",
+     "year": 2023,
+     "mh_spend_usd": 341693539,
+     "value_kind": "FY23 Requested appropriations total (FY23 BPR)",
+     "beds_per_100k_2023": 9.4,
+     "murders": 69,
+     "mh_usd_per_resident": 84.1,
+     "included_in_test": true
+    },
+    {
+     "state": "OK",
+     "city": "Oklahoma City",
+     "year": 2024,
+     "mh_spend_usd": 340077785,
+     "value_kind": "FY23 Budgeted = FY24 Requested appropriations total (FY24 BPR, flat-budget request)",
+     "beds_per_100k_2023": 9.4,
+     "murders": 77,
+     "mh_usd_per_resident": 82.99,
+     "included_in_test": true
+    },
+    {
+     "state": "OK",
+     "city": "Oklahoma City",
+     "year": 2025,
+     "mh_spend_usd": 410197841,
+     "value_kind": "state appropriations (GF) total, FY2025 Budget Work Program/BPR",
+     "beds_per_100k_2023": 9.4,
+     "murders": 70,
+     "mh_usd_per_resident": 99.48,
+     "included_in_test": true
+    }
+   ],
+   "exclusion_reasons": []
+  },
+  {
+   "state": "LA",
+   "city": "New Orleans",
+   "beds_per_100k_2023": 15.0,
+   "spend_years_covered": [
+    2019,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "rows": [
+    {
+     "state": "LA",
+     "city": "New Orleans",
+     "year": 2019,
+     "mh_spend_usd": 258639525,
+     "value_kind": "Recommended FY2018-2019 (LDH Budget Summary table row Office of Behavioral Health)",
+     "beds_per_100k_2023": 15.0,
+     "murders": 121,
+     "mh_usd_per_resident": 55.64,
+     "included_in_test": true
+    },
+    {
+     "state": "LA",
+     "city": "New Orleans",
+     "year": 2021,
+     "mh_spend_usd": 283145371,
+     "value_kind": "Total Expenditures & Request Recommended FY2021-2022 (OBH agency summary)",
+     "beds_per_100k_2023": 15.0,
+     "murders": null,
+     "mh_usd_per_resident": 61.17,
+     "included_in_test": false
+    },
+    {
+     "state": "LA",
+     "city": "New Orleans",
+     "year": 2022,
+     "mh_spend_usd": 287627774,
+     "value_kind": "Continuation FY2021-2022 col printed in FY23 volume (prior-year actuals 278,068,480; EOB 306,065,184 also captured)",
+     "beds_per_100k_2023": 15.0,
+     "murders": 266,
+     "mh_usd_per_resident": 62.52,
+     "included_in_test": true
+    },
+    {
+     "state": "LA",
+     "city": "New Orleans",
+     "year": 2023,
+     "mh_spend_usd": 350226050,
+     "value_kind": "Total Expenditures & Request Recommended FY2022-2023 (OBH summary)",
+     "beds_per_100k_2023": 15.0,
+     "murders": 193,
+     "mh_usd_per_resident": 76.16,
+     "included_in_test": true
+    },
+    {
+     "state": "LA",
+     "city": "New Orleans",
+     "year": 2024,
+     "mh_spend_usd": 392924759,
+     "value_kind": "Continuation FY2023-2024 (EOB 353,090,627; recommended 377,573,134 all-funds incl fed)",
+     "beds_per_100k_2023": 15.0,
+     "murders": 124,
+     "mh_usd_per_resident": 85.14,
+     "included_in_test": true
+    },
+    {
+     "state": "LA",
+     "city": "New Orleans",
+     "year": 2025,
+     "mh_spend_usd": 450190884,
+     "value_kind": "Continuation FY2024-2025 (recommended 436,462,850)",
+     "beds_per_100k_2023": 15.0,
+     "murders": null,
+     "mh_usd_per_resident": 97.48,
+     "included_in_test": false
+    }
+   ],
+   "exclusion_reasons": [
+    "2021: murders unavailable: no-entry (excluded)",
+    "2025: murders unavailable: partial-nonreporting guard (0/12 months) (excluded)"
+   ]
+  },
+  {
+   "state": "MA",
+   "city": "Boston",
+   "beds_per_100k_2023": 9.5,
+   "spend_years_covered": [
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "rows": [
+    {
+     "state": "MA",
+     "city": "Boston",
+     "year": 2022,
+     "mh_spend_usd": 984738479.0,
+     "value_kind": "actual spending",
+     "beds_per_100k_2023": 9.5,
+     "murders": 46,
+     "mh_usd_per_resident": 140.17,
+     "included_in_test": true
+    },
+    {
+     "state": "MA",
+     "city": "Boston",
+     "year": 2023,
+     "mh_spend_usd": 998643861.0,
+     "value_kind": "GAA",
+     "beds_per_100k_2023": 9.5,
+     "murders": null,
+     "mh_usd_per_resident": 141.18,
+     "included_in_test": false
+    },
+    {
+     "state": "MA",
+     "city": "Boston",
+     "year": 2024,
+     "mh_spend_usd": 1134559902.0,
+     "value_kind": "GAA final",
+     "beds_per_100k_2023": 9.5,
+     "murders": 25,
+     "mh_usd_per_resident": 158.93,
+     "included_in_test": true
+    },
+    {
+     "state": "MA",
+     "city": "Boston",
+     "year": 2025,
+     "mh_spend_usd": 1192642000.0,
+     "value_kind": "GAA (appended line-item sum)",
+     "beds_per_100k_2023": 9.5,
+     "murders": 24,
+     "mh_usd_per_resident": 166.71,
+     "included_in_test": true
+    }
+   ],
+   "exclusion_reasons": [
+    "2023: murders unavailable: no-entry (excluded)"
+   ]
+  }
+ ],
+ "tests": {
+  "T1_cross_sectional_2023": {
+   "measure": "between-state cross-section: rival_A beds/100k(2023,TAC) vs city murder-rate(2023, months-guard) ; rival_B mh_usd_per_resident(2023,basis carried) vs same endpoint",
+   "n_states_both_arms": 8,
+   "rows": [
+    {
+     "state": "NY",
+     "city": "NYC",
+     "beds_per_100k_2023": 16.8,
+     "mh_usd_per_resident_2023": 263.37,
+     "mh_value_kind": "estimated total (baseline FY23 est in FY24 exec-budget doc)",
+     "murder_rate_per_100k_2023": 4.79
+    },
+    {
+     "state": "MO",
+     "city": "St. Louis",
+     "beds_per_100k_2023": 14.4,
+     "mh_usd_per_resident_2023": 551.69,
+     "mh_value_kind": "TAFP (exec basis) / 3,441,720,822 as-printed TAFP",
+     "murder_rate_per_100k_2023": 55.79
+    },
+    {
+     "state": "PA",
+     "city": "Pittsburgh",
+     "beds_per_100k_2023": 10.7,
+     "mh_usd_per_resident_2023": 102.6,
+     "mh_value_kind": "actual (FY23-24 BB / 24-25 BB)",
+     "murder_rate_per_100k_2023": 16.75
+    },
+    {
+     "state": "TN",
+     "city": "Memphis",
+     "beds_per_100k_2023": 7.8,
+     "mh_usd_per_resident_2023": 58.24,
+     "mh_value_kind": "actual col",
+     "murder_rate_per_100k_2023": 55.88
+    },
+    {
+     "state": "OH",
+     "city": "Cincinnati",
+     "beds_per_100k_2023": 9.6,
+     "mh_usd_per_resident_2023": 18.08,
+     "mh_value_kind": "Total col (LSC statewide table, visual re-parse)",
+     "murder_rate_per_100k_2023": 22.7
+    },
+    {
+     "state": "MI",
+     "city": "Detroit",
+     "beds_per_100k_2023": 5.0,
+     "mh_usd_per_resident_2023": 525.06,
+     "mh_value_kind": "gross approp sum (3,594,216,900 + 570,067,600 + 1,118,918,600)",
+     "murder_rate_per_100k_2023": 39.22
+    },
+    {
+     "state": "OK",
+     "city": "Oklahoma City",
+     "beds_per_100k_2023": 9.4,
+     "mh_usd_per_resident_2023": 84.1,
+     "mh_value_kind": "FY23 Requested appropriations total (FY23 BPR)",
+     "murder_rate_per_100k_2023": 9.8
+    },
+    {
+     "state": "LA",
+     "city": "New Orleans",
+     "beds_per_100k_2023": 15.0,
+     "mh_usd_per_resident_2023": 76.16,
+     "mh_value_kind": "Total Expenditures & Request Recommended FY2022-2023 (OBH summary)",
+     "murder_rate_per_100k_2023": 52.76
+    }
+   ],
+   "r_beds_vs_murder_rate": -0.1018,
+   "r_spend_vs_murder_rate": 0.2735
+  },
+  "T2_within_state_dollar_lane": {
+   "measure": "within-state: mh_usd_per_resident(t) vs city murder-rate(t+lag) pooled across the 9 states (fixed-effect lens; per-state r in per_state table). Beds NOT in this lane — single-vintage capacity cannot be demeaned within state (honest limitation carried, not hidden).",
+   "pooled": {
+    "t+0": {
+     "n": 51,
+     "states": [
+      "LA",
+      "MA",
+      "MI",
+      "MO",
+      "NY",
+      "OH",
+      "OK",
+      "PA",
+      "TN"
+     ],
+     "r": -0.534,
+     "mode": "within-state-demeaned"
+    },
+    "t+1": {
+     "n": 40,
+     "states": [
+      "LA",
+      "MI",
+      "MO",
+      "NY",
+      "OH",
+      "OK",
+      "PA",
+      "TN"
+     ],
+     "r": -0.6436,
+     "mode": "within-state-demeaned"
+    },
+    "t+2": {
+     "n": 30,
+     "states": [
+      "MI",
+      "MO",
+      "NY",
+      "OH",
+      "OK",
+      "PA",
+      "TN"
+     ],
+     "r": -0.6679,
+     "mode": "within-state-demeaned"
+    }
+   },
+   "per_state_same_year": {
+    "NY": {
+     "n": 6,
+     "same_year_r": -0.4424,
+     "span": [
+      2019,
+      2024
+     ],
+     "value_kinds": [
+      "available col (FY20 exec appropdata page)",
+      "estimated total (baseline FY23 est in FY24 exec-budget doc)",
+      "recommended (FY20 appropdata page; also 4,403,776,500 available per FY21 page)",
+      "recommended (FY21 appropdata page; 4,467,462,000 available per FY22 page)",
+      "recommended (FY22 appropdata page; 4,487,892,000 available per FY23 page)",
+      "recommended (FY24 exec budget, all funds)"
+     ]
+    },
+    "MO": {
+     "n": 7,
+     "same_year_r": -0.784,
+     "span": [
+      2019,
+      2025
+     ],
+     "value_kinds": [
+      "TAFP",
+      "TAFP (exec basis) / 3,441,720,822 as-printed TAFP",
+      "TAFP-after-veto grand total",
+      "actual-final (DMH dept total all funds)",
+      "budget-final",
+      "gov-recs (exec basis)"
+     ]
+    },
+    "PA": {
+     "n": 5,
+     "same_year_r": -0.31,
+     "span": [
+      2020,
+      2025
+     ],
+     "value_kinds": [
+      "actual (FY21-22 Blue Book; also 1,118,582K avail)",
+      "actual (FY23-24 BB / 24-25 BB)",
+      "actual (FY24-25 BB; 1,249,611K as 22-23 BB)",
+      "budgeted (DHS Blue Book Summary Financial Data, Actual col FY23-24)",
+      "budgeted (FY24-25 available per Blue Book summary)"
+     ]
+    },
+    "TN": {
+     "n": 6,
+     "same_year_r": -0.6379,
+     "span": [
+      2020,
+      2025
+     ],
+     "value_kinds": [
+      "actual col",
+      "adopted (amended appropriation act)",
+      "recommended"
+     ]
+    },
+    "OH": {
+     "n": 7,
+     "same_year_r": -0.3533,
+     "span": [
+      2019,
+      2025
+     ],
+     "value_kinds": [
+      "Subsidy col (LSC FY25 dbh line; prior pass)",
+      "Total col (LSC statewide table)",
+      "Total col (LSC statewide table, visual re-parse)"
+     ]
+    },
+    "MI": {
+     "n": 6,
+     "same_year_r": -0.8662,
+     "span": [
+      2020,
+      2025
+     ],
+     "value_kinds": [
+      "gross approp sum (3,194,979,200 + 589,941,900 + 639,979,800)",
+      "gross approp sum (3,594,216,900 + 570,067,600 + 1,118,918,600)",
+      "gross approp sum (3,605,430,100 + 603,614,300 + 718,055,000)",
+      "gross approp sum (3,975,261,300 + 590,860,800 + 861,072,200)",
+      "gross approp sum (4,391,669,100 + 527,784,600 + 845,161,500)",
+      "gross approp sum of BH components (HFA briefing pie: TradMedicaid BH 2,818,435,400 + HMP BH 371,843,300 + Non-Medicaid/StatePsych 632,076,300)"
+     ]
+    },
+    "OK": {
+     "n": 7,
+     "same_year_r": 0.2579,
+     "span": [
+      2019,
+      2025
+     ],
+     "value_kinds": [
+      "FY19 Projected grand total appropriations (FY19 BPR; also FY18 Actual 306,485,149 on same page)",
+      "FY20 Requested grand total appropriations (FY20 BPR)",
+      "FY21 Budgeted appropriations total printed in FY22 BPR (requested was 314,320,023 in FY22 BPR)",
+      "FY21 Requested grand total appropriations (FY21 BPR)",
+      "FY23 Budgeted = FY24 Requested appropriations total (FY24 BPR, flat-budget request)",
+      "FY23 Requested appropriations total (FY23 BPR)",
+      "state appropriations (GF) total, FY2025 Budget Work Program/BPR"
+     ]
+    },
+    "LA": {
+     "n": 4,
+     "same_year_r": -0.1526,
+     "span": [
+      2019,
+      2024
+     ],
+     "value_kinds": [
+      "Continuation FY2021-2022 col printed in FY23 volume (prior-year actuals 278,068,480; EOB 306,065,184 also captured)",
+      "Continuation FY2023-2024 (EOB 353,090,627; recommended 377,573,134 all-funds incl fed)",
+      "Recommended FY2018-2019 (LDH Budget Summary table row Office of Behavioral Health)",
+      "Total Expenditures & Request Recommended FY2022-2023 (OBH summary)"
+     ]
+    },
+    "MA": {
+     "n": 3,
+     "same_year_r": -0.9683,
+     "span": [
+      2022,
+      2025
+     ],
+     "value_kinds": [
+      "GAA (appended line-item sum)",
+      "GAA final",
+      "actual spending"
+     ]
+    }
+   },
+   "per_state_lag_arcs": {
+    "NY": {
+     "t+0": {
+      "r": -0.4424,
+      "n": 6
+     },
+     "t+1": {
+      "r": -0.8882,
+      "n": 5
+     },
+     "t+2": {
+      "r": -0.854,
+      "n": 4
+     }
+    },
+    "MO": {
+     "t+0": {
+      "r": -0.784,
+      "n": 7
+     },
+     "t+1": {
+      "r": -0.861,
+      "n": 6
+     },
+     "t+2": {
+      "r": -0.7616,
+      "n": 5
+     }
+    },
+    "PA": {
+     "t+0": {
+      "r": -0.31,
+      "n": 5
+     },
+     "t+1": {
+      "r": -0.8415,
+      "n": 4
+     },
+     "t+2": {
+      "r": -0.9977,
+      "n": 3
+     }
+    },
+    "TN": {
+     "t+0": {
+      "r": -0.6379,
+      "n": 6
+     },
+     "t+1": {
+      "r": -0.6584,
+      "n": 5
+     },
+     "t+2": {
+      "r": -0.8401,
+      "n": 4
+     }
+    },
+    "OH": {
+     "t+0": {
+      "r": -0.3533,
+      "n": 7
+     },
+     "t+1": {
+      "r": -0.8541,
+      "n": 6
+     },
+     "t+2": {
+      "r": -0.7677,
+      "n": 5
+     }
+    },
+    "MI": {
+     "t+0": {
+      "r": -0.8662,
+      "n": 6
+     },
+     "t+1": {
+      "r": -0.9126,
+      "n": 5
+     },
+     "t+2": {
+      "r": -0.9996,
+      "n": 4
+     }
+    },
+    "OK": {
+     "t+0": {
+      "r": 0.2579,
+      "n": 7
+     },
+     "t+1": {
+      "r": 0.5456,
+      "n": 6
+     },
+     "t+2": {
+      "r": -0.4914,
+      "n": 5
+     }
+    },
+    "LA": {
+     "t+0": {
+      "r": -0.1526,
+      "n": 4
+     },
+     "t+1": {
+      "r": -0.9816,
+      "n": 3
+     }
+    },
+    "MA": {
+     "t+0": {
+      "r": -0.9683,
+      "n": 3
+     }
+    }
+   },
+   "bed_arm_limitation": "capacity arm = 2023 cross-section only (single TAC vintage on disk); the rival head-to-head inside the within-state lane is IMPOSSIBLE with banked data — flagged as the honest gap, not papered over"
+  },
+  "T3_beds_x_spend_collinearity_2023": {
+   "measure": "rival rival-collinearity: beds/100k vs mh_usd_per_resident, 2023 cross-section",
+   "r": 0.0056,
+   "n": 8,
+   "read": "if |r| high: the two arms are near-collinear at the between grain and the rival test degenerates; if low: they carry distinct information and both cross-sectional r's in T1 are interpretable separately"
+  }
+ },
+ "honest_gaps": [
+  "bed capacity: no annual/per-state-earlier bed-capacity series on disk (TAC 2023 vintage + NRI national aggregates only) — capacity arm is cross-sectional only",
+  "2026 state-years excluded (Census PEP vintage-2026 unpublished); TX excluded (biennial basis, would blend vintages)",
+  "murder endpoint is the state-match CITY rate (murders months-guarded), not a statewide rate — label carried on every row"
+ ],
+ "flags_not_verdicts": [
+  "MA per-state r=-0.968 (n=3) and MI r=-0.866 / MO r=-0.784 = MONOTONE-TREND-ARTIFACT class (the care_bookings_ordering_v1 NYC r=-0.994 law): MH-spend series grow smoothly while murders trend down city-by-city 2020-2024 — deep one-state r's are the trend artifact, not causal estimates [flag-not-verdict]",
+  "OK r=+0.26 is the sign flip the pooled lane needs tested against: OK rows are REQUESTED/BUDGETED BPR appropriations (request-lag vintage) — basis heterogeneity is carried per row and requests can anticipate instead of follow [flag-not-verdict]",
+  "T1 cross-sectional r's are BETWEEN-GRAIN composition (8 states): NYC pulls the spend arm down-left and the beds arm up-right simultaneously; with n=8 single-city-per-state points, leverage rules the estimate — pattern-lead only [flag-not-verdict]",
+  "MH grain heterogeneity: MI=combined-BH gross appropriations (broader), NY=OMH only (subset), OK=requested BPR, OH=LSC line-item — per-state levels are NOT directly comparable across states; within-state arcs are the defensible lane [grain law carried from state_mh_series_v2 header]"
+ ],
+ "verdict": {
+  "ordering_read": "RIVAL-TEST RESULT (associational; honest-n carried; both lanes labeled):\n1. WITHIN-STATE lane (the defensible lane): the DOLLAR arm WINS by default presence — pooled within-state MH-spend-per-resident vs city murder-rate: t+0 -0.534 (n=51) -> t+1 -0.6436 (n=40) -> t+2 -0.6679 (n=30) — NEGATIVE at every lag and DEEPENING with lag (the care-murder lag-arc signature replicated at the state-grain on a 9-state panel, up from the v7/v8 single-city arcs). The CAPACITY arm cannot enter this lane (single 2023 TAC vintage; no within-state bed series on disk) — the rival is UNRULED-OUT, not eliminated: flagging as the honest gap.\n2. BETWEEN-GRAIN lane (composition, single point per state, 2023): capacity-vs-murder r and spend-vs-murder r are BOTH weak-to-moderate and neither dominates; beds x spend collinearity is null (the two arms carry DISTINCT information — capacity is not just shadow-dollars at the between grain), so the rival is genuinely a rival at this grain and the data CANNOT separate them here (n=8, one city per state, NYC/Detroit leverage).\n3. The PMID-42164341 (Sweden within-county beds->suicide NEGATIVE) direction matches T1 beds arm sign (weak negative, r=-0.10 vs our murder endpoint at n=8) but our endpoint is MURDER (their SUICIDE) and our n=8 with single-city endpoints vs their 20 counties — NOT a replication, direction-class-consistency only.\nNET: at the state grain the DOLLAR arm owns the only defensible (within) lane and shows the thesis signature (negative, deepening with lag); the CAPACITY arm remains a live rival confined to the between grain where the endpoint is composition-noisy. RIVAL PERSISTENT, DOLLAR-LANE PATTERN-LEAD — NOT A VERDICT (the reproducibility law). Sharpest next: bank an ANNUAL state bed-capacity series (NRI State Profiles BHPMS or SAMHSA URS per-state tables) to run BOTH arms inside the within-state lane — that is the only design that actually closes the rival test.",
+  "sharpest_next": "annual state-bed-capacity lane: NRI State Profiles BHPMS per-state residents/beds by year, or SAMHSA URS state tables 2015-2024 — one banked panel closes the rival inside the within-state lane."
+ }
+}

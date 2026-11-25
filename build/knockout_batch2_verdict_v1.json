@@ -1,0 +1,57 @@
+{
+ "_record": "knockout_batch2_verdict_v1",
+ "built": "2026-11-24",
+ "built_by": "KNOCKOUT-BATCH-2 assembling subagent (lanes 10-12; batch 2 of the policy_associations_v1 PULL-REQUIRED clears)",
+ "parent_batch": "follows pull_lane_4plus5_verdict_v1 (batch 1: lanes 4/5/13/15 PULLED/BANKED 2026-11-23)",
+ "laws_held": [
+  "direction-class only, no causal claims",
+  "honest-null = routes-tried-no-capture, never a placeholder",
+  "component-grain by construction (the 80x rule) enforced on LANE-12",
+  "format-lock: all three lanes extend banked conventions, none rewrite them",
+  "no fabricated dollars, no fabricated rows — every number read live from on-disk or keyless-pulled files"
+ ],
+ "lanes": [
+  {
+   "lane": 10,
+   "id": "indenture-frame (rank-14)",
+   "artifact": "lane10_indenture_frame_v1.json",
+   "verdict": "ROUTE-VERIFIED + CAPTURED on the exposure side; outcome joins honest-null",
+   "headline": "NY-Fed CCP keyless route FOUND and banked (Nov-2026 report + county archive): national SL balance 240.7B->1,655.7B across 95 quarters, by-age no-exit stall arc (107 quarters), 12-state per-capita/delinquency block; Census API + CFPB re-confirmed walled (honest-nulls); the first honest outcome join at n=11 big-states reads ~zero (|rho|<0.43, no direction)"
+  },
+  {
+   "lane": 11,
+   "id": "beds-suicide-within / capacity-vs-prevalence (v10 pairing-4 gap; rank-3 adjacent)",
+   "artifact": "lane11_capacity_vs_prevalence_v1.json",
+   "verdict": "SPLIT VERDICT: capacity arm 8/8 honest-null between states; prevalence arm carries the suicide/fatality margin; arms orthogonal",
+   "headline": "First on-disk completion of the v10 pairing-4 competing design: NRI Fig-4 capacity buckets (50 states, vector+vision classified) vs CDC Mapping-IOV outcomes vs CDC BRFSS prevalence (1,086 rows) — capacity-vs-suicide rho -0.13/-0.14 (p~0.3, the Sweden within-county effect does NOT survive between-state); prevalence arms rho up to +0.51; capacity x prevalence collinearity rho ~0.03 (orthogonal axes)"
+  },
+  {
+   "lane": 12,
+   "id": "component-grain TIME-ARCS datatype (quadrants_spec_v1 Q4/AX-LOCATION; 2,509-row file)",
+   "artifact": "lane12_component_timearcs_v1.json + lane12_component_timearcs_panel_v1.jsonl (94 city-year rows)",
+   "verdict": "ARC-COLUMNS DATATYPE SHIPPED + 3-lag claims VIABLE at the full-grain merge",
+   "headline": "city_component_annual_v1 (2,509 rows, 6 cities, 1980-2028) rendered as the t0/t+1/t+2 arc-columns panel per one-pager #8's 'the arc becomes a datatype': 438 city-year-lane cells, NYC era-dedup law (423/423 cells match the banked q4 panel EXACTLY); within-city pooled reads NEGATIVE-with-lag (bonds-core -0.475/-0.466/-0.477 at t0/t+1/t+2; care -0.421/-0.484/-0.308; bookings -0.616 replicating the banked -0.611); t+2 viable (24 city-years) per the pre-registered arc-viability falsifier"
+  }
+ ],
+ "implication_for_the_grid": [
+  "rank-14 indenture-frame moves PULL-REQUIRED -> PULLED (exposure half captured keyless; civic-join first read null-honest)",
+  "axis_availability_v1 Q2 debt_arc upgrades NULL -> CAPTURED (NY-Fed state+county, with the CFPB/census halves still null)",
+  "v10 pairing-4's open design gap (capacity vs prevalence in one design) is CLOSED at the US-state grain: prevalence carries suicide, capacity does not",
+  "the arc-columns datatype (one-pager #8 Axis D) is now a shipped artifact with the 2,509-row file as its source of record — future tests return arcs from the merge, not re-runs"
+ ],
+ "routes_tried_and_banked": {
+  "census_api": "walled keyless (missing_key) — re-confirmed twice this batch",
+  "cfpb_socrata": "Salesforce shell, no Socrata layer — honest-null",
+  "ny_fed_ccp": "CAPTURED: hhdc-iframe exposes keyless xlsx archive + Nov-2026 quarterly (HHD_C_Report_2026Q3.xlsx pattern)",
+  "nri_fig4_extraction": "PDF vector-choropleth fill-classification + 200dpi pixel + vision verification (9 check-states confirmed) — bucket grain only, per-state exact values not published",
+  "cdc_brfss_5eh7-pjx8": "keyless OK (the measure lane-5 marked available-this-pass; now banked as a panel of 1,086 rows)"
+ },
+ "outputs": [
+  "lane10_indenture_frame_v1.json  (build/ lane10_indenture_frame_v1.json)",
+  "lane11_capacity_vs_prevalence_v1.json  (build/)",
+  "lane12_component_timearcs_v1.json + lane12_component_timearcs_panel_v1.jsonl (build/)",
+  "knockout_batch2_verdict_v1.json (this file)",
+  "supporting: _lane10_* xlsx/json pulls, _lane11_* capacity buckets + raw test jsons, knockout_batch2_lane12_build.py"
+ ],
+ "verdict": "BATCH-2 (lanes 10-12) CLEARS: 3 lanes moved PULL-REQUIRED -> PULLED/BANKED with artifacts + reproducibility headers; the debt-route half of axis G1 verified keyless; the arc-columns datatype shipped; the capacity-vs-prevalence design gap closed with a split verdict (capacity null / prevalence carrier)."
+}

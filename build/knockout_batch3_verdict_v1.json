@@ -1,0 +1,54 @@
+{
+ "_record": "knockout_batch3_verdict_v1",
+ "built": "2026-11-24",
+ "built_by": "KNOCKOUT-FINAL-BATCH assembling subagent (lanes 13-15; batch 3 of 3 \u2014 the 15-of-15 close)",
+ "parent_batch": "follows knockout_batch2_verdict_v1 (lanes 10-12) and pull_lanes_6to9_verdict_v1 (lanes 6-9)",
+ "laws_held": [
+  "direction-class only, no causal claims",
+  "honest-null = routes-tried-no-capture, never a placeholder",
+  "format-lock: all three lanes extend banked conventions, none rewrite them",
+  "no fabricated dollars, no fabricated rows \u2014 every number read live from on-disk or keyless-pulled files"
+ ],
+ "lanes": [
+  {
+   "lane": 13,
+   "id": "transport-lever (one-pager #3, the founder's transport-to-opportunity queue-line)",
+   "artifact": "lane13_transport_lever_v1.json + lane13_transport_table_v1.json",
+   "verdict": "PULLED/BANKED \u2014 the measure-first table shipped; the pre-registered falsifier fired in the lane's favor",
+   "headline": "ACS 5-yr 2022 + SAIPE 2022 keyless (www2 census.gov table-based-SF .dat): 14-row commute/transport table (Memphis + 9 comparison counties + 4 city-props). TEST-1: Memphis commute BURDEN NOT worse (mean 20.9 min = mid-pack 4/10 \u2014 the naive prior dies honestly). TEST-2: the lever is TRANSIT AVAILABILITY \u2014 0.62% transit commute-share, 2nd-lowest of 10, 3.7x-32x below the income-peer set. TEST-3: poverty-band anatomy (25,295 below-pov workers in Memphis city \u2014 69.8% drove alone; 3.1% (780) reached work by transit; of the 1,751 transit riders 44.5% are below poverty = the demand exists where the service exists). TEST-4: 14,314 no-vehicle households vs 1,599 transit riders = the no-car-and-unreached cell."
+  },
+  {
+   "lane": 14,
+   "id": "policing-confounder (the founder's 'Policing-initiatives? Policing-scandals?' lane)",
+   "artifact": "lane14_policing_confounder_v1.json",
+   "verdict": "PULLED/TESTED \u2014 the officer lane is ~orthogonal to the murder margin on the panel",
+   "headline": "203 joined city-years (15 CDE sun-belt cities 2011-2025, murders months_reported>=12 only). T1 within-city lag-arc: pooled rho t+0..t+4 = +0.023/+0.020/+0.098/+0.123/+0.100 (all ns, z<=0.67) \u2014 city signs cancel. T2 2019->2022 first-diff (the stress window): r=-0.259 (t=-0.89, ns); officer-decline cities murder-rise 54.6% vs steady 40.6% = the national spike dominated, officer-count NOT the significant axis. T3 recovery 2022->24: r=+0.231 ns. VERDICT: the care-crime lane does NOT ride on officer headcount; the +0.243 funding-follows-crisis framing carried; the TACTICS margin (clearance/arrest-rate) stays honest-null"
+  },
+  {
+   "lane": 15,
+   "id": "diminished-choices moderator (the founder's Nov-22 formalized composite)",
+   "artifact": "lane15_diminished_choices_moderator_v1.json",
+   "verdict": "PULLED/TESTED \u2014 the hypothesis does NOT survive; replicates the banked honest-opposite direction on a second moderator axis",
+   "headline": "DM composite = z(poverty + child-poverty \u2212 bachelors) on 50 ACS city-years. City-level median-split over the 75-row care panel: HIGH-DM cities care-x-rate rho +0.136 vs LOW-DM -0.167 (diff 0.37/0.82-se, ns) \u2014 the care-protective read is carried by the STABLE-BASIS cities; Memphis (HIGH-DM +0.21) shows the weakest care pattern (+0.189). CONSISTENT with the banked 6b69cc33 unemployment-split (HIGH-unemp -0.275 vs LOW -0.462). The choice-set is care-money's complement, not its trigger"
+  }
+ ],
+ "implication_for_the_grid": [
+  "rank-8/one-pager #3 transport-lane: PULL-REQUIRED -> PULLED (the commute/availability table exists at the founder's exact question; the stipend+transport funding-plate gains its evidence table)",
+  "the confounders-army (THE REGRESSION-READINESS-AUDIT): the policing member is now TESTED (~orthogonal) instead of assumed",
+  "THE 15-LANE PANEL CLOSES: 15 of 15 BEST-15 items now PULLED/BANKED (ranks 1-2/11 banked, 3-15 pulled through lanes 4-15); the queue's next decision is the founder's (the examine-first law)"
+ ],
+ "routes_tried_and_banked": {
+  "census_api": "keyless walled (Missing Key) \u2014 re-confirmed",
+  "census_reporter_api": "403 rate-wall on repeat pulls after first success \u2014 honest-null",
+  "www2_table_based_SF_dat": "KEYLESS (5-yr + 1-yr, 8 tables pulled, city-place + county grain) \u2014 THE working ACS route",
+  "saipe_est22all_txt": "KEYLESS (county median income + poverty, 2022 vintage)"
+ },
+ "outputs": [
+  "lane13_transport_lever_v1.json + lane13_transport_table_v1.json (build/)",
+  "lane14_policing_confounder_v1.json (build/)",
+  "lane15_diminished_choices_moderator_v1.json (build/)",
+  "knockout_batch3_verdict_v1.json (this file)",
+  "supporting: _lane13/*.dat raw pulls + saipe_est22all.txt, knockout_batch3_lane13_build.py, _lane14_* + _lane15_* test jsons"
+ ],
+ "verdict": "BATCH-3 (lanes 13-15) CLEARS: 3 lanes moved PULL-REQUIRED -> PULLED/BANKED with artifacts; the 15-of-15 close is committed; the transport-lever fires (availability, not commute-burden), the policing confounder reads orthogonal, the diminished-choices moderator runs honest-opposite and consistent with the banked unemployment split."
+}

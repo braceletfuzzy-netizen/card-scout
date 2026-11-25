@@ -1,0 +1,295 @@
+{
+ "model_lane": "FE-6_wide",
+ "per_city": {
+  "Cincinnati": {
+   "years": [
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "n_consecutive_runs": {
+    "2014-2025": 12
+   },
+   "longest_consecutive_run": "2014-2025 (n=12)",
+   "n_pairs": 11,
+   "pairs": [
+    [
+     2014,
+     -2.87,
+     2015,
+     -1.4
+    ],
+    [
+     2015,
+     -1.4,
+     2016,
+     -4.04
+    ],
+    [
+     2016,
+     -4.04,
+     2017,
+     0.22
+    ],
+    [
+     2017,
+     0.22,
+     2018,
+     -3.38
+    ],
+    [
+     2018,
+     -3.38,
+     2019,
+     -1.47
+    ],
+    [
+     2019,
+     -1.47,
+     2020,
+     6.82
+    ],
+    [
+     2020,
+     6.82,
+     2021,
+     6.36
+    ],
+    [
+     2021,
+     6.36,
+     2022,
+     1.41
+    ],
+    [
+     2022,
+     1.41,
+     2023,
+     -0.39
+    ],
+    [
+     2023,
+     -0.39,
+     2024,
+     0.15
+    ],
+    [
+     2024,
+     0.15,
+     2025,
+     -1.42
+    ]
+   ],
+   "honest_null": false,
+   "lag1_pearson_r": 0.431,
+   "lag1_spearman_rho": 0.2,
+   "residual_2022": 1.41,
+   "residual_2023": -0.39
+  },
+  "Detroit": {
+   "years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "n_consecutive_runs": {
+    "2020-2025": 6
+   },
+   "longest_consecutive_run": "2020-2025 (n=6)",
+   "n_pairs": 5,
+   "pairs": [
+    [
+     2020,
+     8.01,
+     2021,
+     7.07
+    ],
+    [
+     2021,
+     7.07,
+     2022,
+     7.75
+    ],
+    [
+     2022,
+     7.75,
+     2023,
+     -0.36
+    ],
+    [
+     2023,
+     -0.36,
+     2024,
+     -7.89
+    ],
+    [
+     2024,
+     -7.89,
+     2025,
+     -14.58
+    ]
+   ],
+   "honest_null": false,
+   "lag1_pearson_r": 0.93,
+   "lag1_spearman_rho": 0.7,
+   "residual_2022": 7.75,
+   "residual_2023": -0.36
+  },
+  "Memphis": {
+   "years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "n_consecutive_runs": {
+    "2021-2025": 5
+   },
+   "longest_consecutive_run": "2021-2025 (n=5)",
+   "n_pairs": 4,
+   "pairs": [
+    [
+     2021,
+     8.33,
+     2022,
+     2.19
+    ],
+    [
+     2022,
+     2.19,
+     2023,
+     10.19
+    ],
+    [
+     2023,
+     10.19,
+     2024,
+     -5.19
+    ],
+    [
+     2024,
+     -5.19,
+     2025,
+     -15.51
+    ]
+   ],
+   "honest_null": false,
+   "lag1_pearson_r": 0.441,
+   "lag1_spearman_rho": 0.2,
+   "residual_2022": 2.19,
+   "residual_2023": 10.19
+  },
+  "NYC": {
+   "years": [
+    2001
+   ],
+   "n_consecutive_runs": {
+    "2001-2001": 1
+   },
+   "longest_consecutive_run": "2001-2001 (n=1)",
+   "n_pairs": 0,
+   "pairs": [],
+   "honest_null": true
+  },
+  "St. Louis": {
+   "years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ],
+   "n_consecutive_runs": {
+    "2019-2025": 7
+   },
+   "longest_consecutive_run": "2019-2025 (n=7)",
+   "n_pairs": 6,
+   "pairs": [
+    [
+     2019,
+     0.04,
+     2020,
+     21.88
+    ],
+    [
+     2020,
+     21.88,
+     2021,
+     4.36
+    ],
+    [
+     2021,
+     4.36,
+     2022,
+     6.26
+    ],
+    [
+     2022,
+     6.26,
+     2023,
+     -8.5
+    ],
+    [
+     2023,
+     -8.5,
+     2024,
+     -10.49
+    ],
+    [
+     2024,
+     -10.49,
+     2025,
+     -13.55
+    ]
+   ],
+   "honest_null": false,
+   "lag1_pearson_r": 0.383,
+   "lag1_spearman_rho": 0.486,
+   "residual_2022": 6.26,
+   "residual_2023": -8.5
+  }
+ },
+ "pooled": {
+  "n_pairs": 26,
+  "lag1_pearson_r": 0.459,
+  "lag1_spearman_rho": 0.521,
+  "note": "pairs are not independent (4-5 cities; a city-year enters twice) — no inference, direction-class read only"
+ },
+ "founder_literal_2022_2023": {
+  "Cincinnati": {
+   "residual_2022": 1.41,
+   "residual_2023": -0.39,
+   "sign_holds": false
+  },
+  "Detroit": {
+   "residual_2022": 7.75,
+   "residual_2023": -0.36,
+   "sign_holds": false
+  },
+  "Memphis": {
+   "residual_2022": 2.19,
+   "residual_2023": 10.19,
+   "sign_holds": true
+  },
+  "St. Louis": {
+   "residual_2022": 6.26,
+   "residual_2023": -8.5,
+   "sign_holds": false
+  }
+ }
+}

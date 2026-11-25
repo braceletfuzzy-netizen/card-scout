@@ -1,0 +1,99 @@
+{
+ "pairing": "PAIRING-1: the lag-arc as named signature",
+ "entries": [
+  {
+   "authors": "Wan WY, Wang J, Weatherburn DJ",
+   "year": 2024,
+   "title": "Does gambling expenditure have any effect on crime?",
+   "venue": "Addiction",
+   "key_finding": "Panel ARDL (autoregressive distributed lag) explicitly decomposes expenditure-crime relationship into short-run vs long-run components. Method template exists but applied to gambling, not public spending.",
+   "novelty_verdict": "EXTENDED",
+   "effect_size": "short-run vs long-run elasticities reported in full text",
+   "design": "State-level panel ARDL (Australia, NSW)",
+   "N": "NSW quarterly panel",
+   "url": "https://pubmed.ncbi.nlm.nih.gov/39168822/",
+   "confidence": "high"
+  },
+  {
+   "authors": "Saigal T, Gupta S",
+   "year": 2026,
+   "title": "Does Economic Growth Reduce Crime? Evidence from India Using an ARDL Model",
+   "venue": "Preprint (Europe PMC PPR1168892)",
+   "key_finding": "India 1995-2022 annual time series; ARDL bounding of short-run and long-run effects of government expenditure (among GFCF, inflation, rule of law) on crime.",
+   "novelty_verdict": "VERIFIED (lag structure applied to govt expenditure; country macro, not US city)",
+   "effect_size": "not stated in abstract",
+   "design": "Annual time-series ARDL, India 1995-2022",
+   "N": "28 annual observations",
+   "url": "https://europepmc.org/article/PPR/PPR1168892",
+   "confidence": "high"
+  },
+  {
+   "authors": "Chalfin A, Hansen B, Weisburst EK, Williams MC",
+   "year": 2022,
+   "title": "Police Force Size and Civilian Race",
+   "venue": "(NBER working paper; PubMed record)",
+   "key_finding": "Each additional police officer abates ~0.1 homicides; per-capita effects twice as large for Black victims; level-elasticity of sworn-force size, no lag-arc timing",
+   "novelty_verdict": "EXTENDED",
+   "effect_size": "~0.1 homicide per additional officer (national panel event-study)",
+   "design": "National county/city panel, event-study identification",
+   "N": "all US large jurisdictions",
+   "url": "https://europepmc.org/article/MED/37009208",
+   "confidence": "high"
+  },
+  {
+   "authors": "Lund JJ, Schleimer JP, Reeping PM, Pear VA et al.",
+   "year": 2025,
+   "title": "Public funds, public safety (scoping review)",
+   "venue": "(PMID 41466474)",
+   "key_finding": "Of 33 spending-violence studies: 'All studies were ecologic, 24 were serial cross-sectional'; NO named lag-arc/timing taxonomy; timing treated as nuisance, not signature.",
+   "novelty_verdict": "NOVEL-ANGLE SUPPORTING (absence evidence)",
+   "effect_size": "not stated in abstract",
+   "design": "Scoping review",
+   "N": 33,
+   "url": "https://europepmc.org/article/MED/41466474",
+   "confidence": "high"
+  },
+  {
+   "authors": "Okafor CO",
+   "year": 2026,
+   "title": "Prosecutor politics: The impact of election cycles on criminal sentencing in the era of rising incarceration",
+   "venue": "(PMID 42899263)",
+   "key_finding": "Election-timing drives admissions (+3%, ~63,000 additional prison admissions 1986-2006): anticipatory timing effects exist in criminal-legal outputs - near-analog to anticipatory-spending mechanics.",
+   "novelty_verdict": "EXTENDED",
+   "effect_size": "+3% admissions in election years (~63,000 excess)",
+   "design": "Panel DiD exploiting DA election timing, ~40 states",
+   "N": "1986-2006, nearly 40 states",
+   "url": "https://europepmc.org/article/MED/42899263",
+   "confidence": "high"
+  },
+  {
+   "authors": "Guo X, Peng L, Shi X",
+   "year": 2026,
+   "title": "The Impact of Unemployment Insurance Benefit Cuts on Mental Health: Evidence From Early Pandemic Program Expirations",
+   "venue": "(PMID 42298292)",
+   "key_finding": "High-frequency Census Pulse DiD: timing of benefit termination moves anxiety outcomes - spending/benefit TIMING has measurable population effects (MH endpoint, not crime).",
+   "novelty_verdict": "EXTENDED",
+   "effect_size": "DiD on anxiety probability among non-college working-age adults",
+   "design": "Quasi-natural experiment, >20 states, weekly data",
+   "N": "Household Pulse Survey sample",
+   "url": "https://europepmc.org/article/MED/42298292",
+   "confidence": "high"
+  },
+  {
+   "authors": "Basu S, Phillips R, Hoang H",
+   "year": 2025,
+   "title": "Impact of Community Health Center Losses on County-Level Mortality: A Natural Experiment in the United States, 2011-2019",
+   "venue": "(PMID 40405553)",
+   "key_finding": "PS-matched county DiD on CHC site losses (177 counties, 2014): infrastructure-loss shocks move mortality - design template for discretionary-spending shocks.",
+   "novelty_verdict": "EXTENDED",
+   "effect_size": "mortality effect estimates in full text",
+   "design": "Propensity-matched county DiD",
+   "N": "3,142 counties; 177 treated",
+   "url": "https://europepmc.org/article/MED/40405553",
+   "confidence": "high"
+  }
+ ],
+ "summary": "Novelty verdict summary (PAIRING-1): Lagged structure of expenditure-outcome relationships is methodologically VERIFIED (panel ARDL short-run/long-run decompositions: Wan 2024 gambling-crime; Saigal & Gupta 2026 India govt-expenditure-crime) and adjacent causal timing effects exist (Chalfin 2022 officer elasticity; Okafor 2026 election-cycle admissions; Guo 2026 benefit-expiration timing). BUT: a NAMED 'lag-arc' signature - a systematic temporal response curve of violent crime to discretionary public-spending changes, characterized as a signature (e.g., effects peaking t-0..t-2) - was NOT found in any retrieved work. The anchor absence-evidence is Lund 2025: the whole spending-violence literature is ecologic, 24/33 serial cross-sectional, with no timing taxonomy. => the lag-arc as a named signature = NOVEL-ANGLE; the underlying lagged-effects phenomenon = VERIFIED/EXTENDED. Confidence in absence-search: medium (Crossref wall blocked the econ-literature sweep: NBER/RePEc econometrics of expenditure timing not fully covered by biomed routes).",
+ "source_routes": "EuropePMC (resultType=core) + PubMed esearch/efetch; Crossref partial (first-pass only); OpenAlex + Semantic Scholar hard-429-walled",
+ "abstract_policy": "Every entry's abstract loaded first-hand unless tagged secondhand; effect sizes only where stated in loaded abstract."
+}

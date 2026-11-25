@@ -1,0 +1,115 @@
+{
+ "flip_era": "No care-side flip detected: GF-basis care/cage ratio is flat-to-down across the Cortex/NGA-revival era (FY13 0.133 \u2192 FY19 0.118) vs pre-Cortex FY00 0.164. The only visible \"step\" appears as era-level funding shifts OUTSIDE the ratio: (a) FY10-12 cage surge (police+polret+jails ~210-219M GF), (b) FY15 care bump from one-off CDA/AHC print, (c) FY17-19 GF-ratio floor at ~0.118 as cage drifted up and care stagnated in nominal GF terms \u2014 care did NOT rise with the revival; revival-era care money appears in special funds (Prop P parks, 2017+) rather than the GF care ratio.",
+ "ratio_series": [
+  {
+   "year": "FY98",
+   "care": 28235562,
+   "cage": 148535006,
+   "ratio": 0.1901,
+   "basis": "GF"
+  },
+  {
+   "year": "FY99",
+   "care": 26444307,
+   "cage": 158246151,
+   "ratio": 0.1671,
+   "basis": "GF"
+  },
+  {
+   "year": "FY00",
+   "care": 26936237,
+   "cage": 164326786,
+   "ratio": 0.1639,
+   "basis": "GF"
+  },
+  {
+   "year": "FY01",
+   "care": 28314635,
+   "cage": 170079568,
+   "ratio": 0.1665,
+   "basis": "GF"
+  },
+  {
+   "year": "FY02",
+   "care": 33633521,
+   "cage": 180952061,
+   "ratio": 0.1859,
+   "basis": "GF"
+  },
+  {
+   "year": "FY10",
+   "care": 28778657,
+   "cage": 210009371,
+   "ratio": 0.137,
+   "basis": "GF"
+  },
+  {
+   "year": "FY11",
+   "care": 27963863,
+   "cage": 219398988,
+   "ratio": 0.1275,
+   "basis": "GF"
+  },
+  {
+   "year": "FY12",
+   "care": 35839224,
+   "cage": 218519274,
+   "ratio": 0.164,
+   "basis": "GF"
+  },
+  {
+   "year": "FY13",
+   "care": 29159961,
+   "cage": 219413295,
+   "ratio": 0.1329,
+   "basis": "GF"
+  },
+  {
+   "year": "FY14",
+   "care": 30140124,
+   "cage": 225191026,
+   "ratio": 0.1338,
+   "basis": "GF"
+  },
+  {
+   "year": "FY15",
+   "care": 38100953,
+   "cage": 234303653,
+   "ratio": 0.1626,
+   "basis": "GF"
+  },
+  {
+   "year": "FY17",
+   "care": 29754329,
+   "cage": 252206201,
+   "ratio": 0.118,
+   "basis": "GF"
+  },
+  {
+   "year": "FY18",
+   "care": 29682136,
+   "cage": 253641454,
+   "ratio": 0.117,
+   "basis": "GF"
+  },
+  {
+   "year": "FY19",
+   "care": 30089560,
+   "cage": 254577601,
+   "ratio": 0.1182,
+   "basis": "GF"
+  },
+  {
+   "year": "FY27",
+   "care": 138132842,
+   "cage": 366003385,
+   "ratio": 0.3774,
+   "basis": "ALL_FUNDS"
+  }
+ ],
+ "ledger_class": "Cortex/NGA revival is LEDGER-INVISIBLE in the city operating budget: Cortex (founded 2002, 501(c)(3), $29M founder land collateral, Chapter 353 master-developer tax abatements + TIF in the private/nonprofit lane) and NGA-North ($1.7B federal construction, opened Sep 2025; city role = site subsidy/land assembly via McKee-era northside, not operating-budget lines) both sit OUTSIDE the GF care/cage ledger. City TIF trustee lines are tiny and stable in all sampled books (FY02 1.89M / FY12 1.39M / FY14 0.62M / FY18 1.28M special-funds) \u2014 consistent with the CIN/OTR private-capital class candidate, i.e., the revival printed abatements/TIF/eminent-domain authority, not care-ratio movement.",
+ "confidence": "medium-high on GF figures (all page-cited from adopted AOP PDFs); medium on cross-era comparability (department restructurings: corrections folded, police local control 2015, Prop P special funds 2017+, FY27 all-funds basis)",
+ "falsifier": "A GF-only FY27 extraction showing care/cage >= 0.30 would falsify \"no flip\"; alternatively an all-funds series recomputation across all sampled years (including Prop P + special-fund parks/health money) showing a monotonic care-side climb from FY15 onward would falsify the ledger-invisible verdict. Both are one PDF-column pass away from the same archive.",
+ "generated": "2026-11-22",
+ "source_note": "City of St. Louis Annual Operating Plan (AOP) adopted volumes FY2000, FY2002, FY2012, FY2015, FY2019 via stlouis-mo.gov budget documents archive (URLs inside jsonl rows); FY2027 from band_a_ingestion_v1.json line-item extraction. Wikipedia (Cortex Innovation Community, NGA pages) for org-structure facts."
+}

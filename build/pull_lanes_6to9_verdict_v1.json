@@ -1,0 +1,51 @@
+{
+ "_record": "pull_lanes_6to9_verdict_v1",
+ "built": "2026-11-24",
+ "parent_lane": "policy_associations_v1 best-15 lanes 6-9 executed: rank-7 medical-debt-crime GAP (PULLED+TESTED), BONDS library pair deep-dive (deepened at component grain), rank-4/13 care-vs-cage bed efficiency (the founder's named lane, PULLED+TESTED), ranks 8-10 youth-activities infrastructure (three-line anatomy status-checked)",
+ "outputs": [
+  "care_cage_bed_efficiency_v1.json (51-jurisdiction state panel: TAC 2023 beds x NRI FY2024 SMHA x CDC 2023 homicide/suicide x CDE 2023 arrest intake; + 45-row city cross-panel + NY bench anchor) + _lane6 support panels in home",
+  "library_crime_deepdive_v1.json (63 library city-years; within-city arcs t0/t+1/t+2; parks head-to-head; bookings side)",
+  "medical_debt_crime_phase1_v1.json (2,386-county medical-debt table + 1,101-county homicide join + partialled pattern reads) + _lane8 raw CSVs + _lane8_joined.json",
+  "youth_infrastructure_three_line_v1.json (three-line anatomy availability check + program-line arcs + NYC youth-line honest-null)"
+ ],
+ "lane6_headline": [
+  "THE FOUNDER'S NAMED LANE EXECUTED: care-bed side = TAC 2023 (36,114 psych beds, 51 jurisd, civil/forensic split) x NRI FY2024 SMHA dollars; cage side = CDE state arrest-intake 2023 (51/51, proven keyless) + NY county jail-bench panel (banked lane-4)",
+  "BEDS x OUTCOMES: suicide r=-0.361 (n=50) = the clean negative; homicide r=+0.448 = the confound class (beds sit where violence sits) — SAME sign pattern lane-4 found at NY county grain (+0.286), the honest read is 'more beds where problems are dense'",
+  "SMHA-DOLLAR x OUTCOMES ~ZERO (homicide +0.010, suicide -0.156) = the rank-15 funding-null replicated on a THIRD margin (after anchor client-level null and lane-5 mortality-level null)",
+  "THE EFFICIENCY TABLE: $1.70M SMHA per psych bed nationally; Iowa+Vermont = high-spend/low-beds (funding-not-beds corroboration), Oregon/NY = high-spend+high-beds",
+  "CAGE-HALF HONEST-NULL: BJS Annual-Survey-of-Jails state stock NOT keyless (8 path attempts, UA + non-UA, 403/404 — routes-tried banked); Census COG state tab-35 abandoned (coded w/o state key); the cage dollar-margin stays at city grain (banked care_cage_wide) + NY bench",
+  "NY BENCH: latest jail/100k x beds/100k r=+0.033 flat (swap pre-1997-complete verdict carried); boarded_in_psych flow banked (320->541 peak->161 arc 1997-2025) for the bridge test"
+ ],
+ "lane7_headline": [
+  "THE LIBRARY HALF IS NO LONGER NEAR-EMPTY: within-city library$-per-100k vs murder-rate: Detroit -0.837, Memphis -0.887, NYC -0.742; arcs NEGATIVE 3/3 at t+1 (pooled-z -0.805, n=10 thin-flag), 2/3 at t+2",
+  "HEAD-TO-HEAD inside the same rows: libraries >= parks in Detroit+Memphis, parks > libraries in NYC — carrier mix is city-specific (composition thesis carried, not a universal library effect)",
+  "BOOKINGS-INTAKE SIDE: pooled +0.208 mixed-grain flagged (NYC +0.867 = the known mixed-grain exception) — the murder margin, not intake, is where the library read lives",
+  "63 library city-years banked; Cincinnati+StL honest-null county-levy law held"
+ ],
+ "lane8_headline": [
+  "THE GAP LANE IS NO LONGER A GAP-FROM-INACTION: the county medical-debt-in-collections route EXISTS KEYLESS (Urban Institute Debt-in-America 2026 vintage: 2,386 counties with share-of-residents-in-collections + student + auto + card companions) — the one-pager #4 Phase-1 table is BANKED",
+  "PATTERN READ (pre-registered): medcoll x county homicide r=+0.204 raw / +0.051 income-partialled = the confound-collapse falsifier FIRED — the founder's medical-debt->crime macro-arrow degrades to a fairness-claim exactly as §7.2-7.3 pre-registered (~zero is also-the-answer-class)",
+  "THE SPIN: student-debt shackle carries the crime read independently (+0.291 income-partialled) and the two debt geographies SPLIT (-0.174) — the civic-twin shackles-index must be TWO-LANE (education-debt lane carries; medical lane prices as access-covariate: no_hins x homicide +0.208 like medcoll)",
+  "outcome side banked: CHR 2024 homicide rate 1,427 counties + firearm fatalities"
+ ],
+ "lane9_headline": [
+  "THREE-LINE ANATOMY STATUS: program-line (parks+libraries proxy) = ON DISK 63 city-years, within-city arcs t0 -0.671 / t+1 -0.588 / t+2 -0.274, 4-of-5 cities negative at t0; construction-line = ONE realized anchor (Raleigh $41.9M committed, banked); maintenance-line = NOT ON DISK (multi-city honest-gap)",
+  "Raleigh flagship carried verbatim (format-lock), never cited as evidence (single-site guard)",
+  "NYC youth-line: arc banked (505->1,529 per-100k 1990->2000) but the crime-window overlap is n=3 = not-informative, shipped honest-null; multi-city youth-line + Kingsport CIP pull remain the open halves",
+  "ranks 8/10 literature sides unchanged (v11/v12 verified canon); lane verdict: the GAP stays UNSATURATED, first real tests named"
+ ],
+ "implication_for_the_grid": [
+  "rank-7 medical-debt-crime: PULL-REQUIRED -> PULLED+TESTED (verdict: confound-collapse fired on the medical half; student-half carries +0.291 — the grid's rank-14 indenture lane gains the stronger empirical carrier)",
+  "rank-11 library-crime-pair: BANKED -> DEEPENED (the near-empty half now has 3-city arcs + head-to-head)",
+  "rank-4/13 care-vs-cage-bed: PULLED (the founder's efficiency table exists; jail-BED stock remains the open half, BJS keyless-null banked)",
+  "ranks 8/9/10 youth: status-checked, program-line signal real, treatment-definition (3-line) remains the paper's contribution and remains un-saturated"
+ ],
+ "routes_tried_and_banked": {
+  "BJS Annual Survey of Jails": "403/404 on 8 path attempts (UA + non-UA) — state jail-bed stock NOT keyless (lane-6 honest-null)",
+  "Census COG state tab-35": "coded records w/o per-row state key — abandoned (logged)",
+  "CDE state arrests": "51/51 200-OK (proven route extended to all states)",
+  "Urban Institute debt-interactive-map GitHub": "KEYLESS (3 county + 5 state/national CSVs, 20261022 vintage)",
+  "County Health Rankings xlsx": "2024 + 2025 vintages keyless (16-25MB); homicide rate in 2024 'Additional Measure Data'",
+  "CDC WONDER county": "not attempted after CHR homicide landed (redundant)"
+ }
+}

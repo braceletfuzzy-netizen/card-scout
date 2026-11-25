@@ -1,0 +1,128 @@
+[
+ {
+  "city": "Austin",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 0.846,
+  "murders": 31,
+  "population": 854482,
+  "rate": 3.63
+ },
+ {
+  "city": "Charlotte",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 0.099,
+  "murders": 52,
+  "population": 773264,
+  "rate": 6.72
+ },
+ {
+  "city": "Columbus",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 0.621,
+  "murders": 71,
+  "population": 812740,
+  "rate": 8.74
+ },
+ {
+  "city": "Dallas",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 0.66,
+  "murders": 154,
+  "population": 1242115,
+  "rate": 12.4
+ },
+ {
+  "city": "Denver",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 1.023,
+  "murders": 39,
+  "population": 635163,
+  "rate": 6.14
+ },
+ {
+  "city": "Fort Worth",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 0.488,
+  "murders": 46,
+  "population": 781046,
+  "rate": 5.89
+ },
+ {
+  "city": "Indianapolis",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 1.982,
+  "murders": 97,
+  "population": 835499,
+  "rate": 11.61
+ },
+ {
+  "city": "Nashville",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 0.776,
+  "murders": 63,
+  "population": 625550,
+  "rate": 10.07
+ },
+ {
+  "city": "Philadelphia",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 2.204,
+  "murders": 331,
+  "population": 1551824,
+  "rate": 21.33
+ },
+ {
+  "city": "Phoenix",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 0.45,
+  "murders": 123,
+  "population": 1499274,
+  "rate": 8.2
+ },
+ {
+  "city": "San Antonio",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 1.065,
+  "murders": 89,
+  "population": 1383075,
+  "rate": 6.43
+ },
+ {
+  "city": "San Diego",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 0.995,
+  "murders": 47,
+  "population": 1336776,
+  "rate": 3.52
+ },
+ {
+  "city": "San Francisco",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 2.277,
+  "murders": 69,
+  "population": 828876,
+  "rate": 8.32
+ },
+ {
+  "city": "Seattle",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 1.511,
+  "murders": 25,
+  "population": 635928,
+  "rate": 3.93
+ }
+]

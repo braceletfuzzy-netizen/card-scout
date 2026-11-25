@@ -1,0 +1,23 @@
+{
+ "city": "New Orleans",
+ "year": 2025,
+ "murders": null,
+ "violent_crime_total": null,
+ "population": 362154,
+ "murder_rate_per_100k": null,
+ "data_quality": "N/A for murders; budget facts banked",
+ "notes": "NOPD 2025 murders honest-null: not fabricable. Routes tried: (1) FBI CDE summarizer re-checked = 0/12 months (NOPD stopped filing Sept 2024 per wave1); (2) NOPD published 2025 annual report on nola.gov/nopd - no such PDF located (live site only posts CompStat dashboards, and the 2025 annual totals were not found as a PDF); (3) Louisiana state UCR (CLE 'Crime in Louisiana' portal, lcle.la.gov) - 2025 publication not yet posted; the portal's agency-level post-2021 lookups are interactive-only with no static CSV. News route: RIT CPSI '2025 Homicide Statistics for 24 U.S. Cities' not surfaced in the 2026-02 working-paper copies found. NO 2025 MURDER COUNT REMAINS UNVERIFIED - left null.",
+ "honest_gaps": [
+  "murders 2025: NOPD non-reporting to FBI (CDE 0/12); state CLE 2025 publication not posted; NOPD annual report PDF not found on nola.gov - null carried",
+  "BUDGET LANE banked for care/cage pairing: FY2025 EXECUTIVE (submitted 2024-10-01, captures only = the 404'd 2025-AdoptedBudget book): total $1.47B, GF $575.9M, GF revenue $776,115,673 (nola.gov 2025/2025-Operating-Budget-Final.pdf, Wayback 20241212011301, pdf-pages 12-15; p16 table: NOPD $149,118,779 / Fire $132,276,612 / EMS $17,125,308 / Sheriff $64,642,985)",
+  "FY2025 ADOPTED facts (no adopted book ever posted on nola.gov): council press 2024-11-19 - 'The $1.8 billion budget' (all funds) passed Nov 21 2024; WWNO 2024-11-21 - Cantrell proposed $1.78B and council's omnibus amendment added ~$69M from GF+reserves; FY25 GF \u2248 $575.9M exec-basis with post-omnibus additions (official adopted GF total never published before the city's FY25 book was pulled from nola.gov)",
+  "LATER AMENDMENT: FY25 was revised in 2025 (Legislative Auditor Oct 2025: ~$160M shortfall; $125M state loan) - press-cited 'FY25 NOPD $149.4M / fire $132.5M adopted' figures in the Dec 2025 FY26 coverage; ratio-lane users should prefer the FY26 press row (already in neworleans_care_cage_series_v1) for a post-amendment read"
+ ],
+ "source_refs": [
+  "https://web.archive.org/web/20241212011301id_/https://nola.gov/nola/media/Mayor-s-Office/Budget/2025/2025-Operating-Budget-Final.pdf (exec submission; GF revenue 776,115,673 p12; $1.47B total / $575.9M GF pdf-p14; dept table p16-19)",
+  "https://council.nola.gov/news/november-2024/new-orleans-city-council-approves-2025-executive-b/ ($1.8B adopted budget, Nov 21 2024 vote)",
+  "web.archive.org/web/20241123001456/https://www.wwno.org/politics/2024-11-21/council-plans-to-add-tens-of-millions-to-2025-city-budget (omnibus +$69M: 10M homeless svc, 12M Charity housing, 10M schools settlement, 3M RTA ferry, 1M 911 district...)",
+  "web.archive.org/web/20241207114403/https://www.nola.com/news/cantrell-leads-upbeat-town-hall-on-city-budget/... ('about $775 million available for the general fund')",
+  "web.archive.org/web/20251202182017/https://neworleanscitybusiness.com/blog/2025/12/02/new-orleans-2026-budget-deficit-public-safety/ (FY25 adopted-level NOPD $149.4M / fire $132.5M)"
+ ]
+}

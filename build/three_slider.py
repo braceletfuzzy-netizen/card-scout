@@ -1,0 +1,44 @@
+import json
+
+# POLYSCOUT — THE THREE-SLIDER MODEL v0 (the CARE+/CRIME+/EDU+ = the the interactions!)
+model = {
+    'built': '2026-11-22',
+    'the_founder_question': 'how-do-the-three-interact — if-I-change-the-one-slider = what-does-that-look-like-in-the-output?',
+    'THE_HONEST_CORE (the the the one-sentence!)': 'THE SLIDERS = the INPUTS-TO-A-BALANCE (the the budget-pie = the the zero-sum-ish!) — BUT-THE-OUTPUT = the not-the-formula = the the OBSERVED-ASSOCIATION = the the the sliders = the move-together = the we-DESCRIBE-the-patterns = the never-the-guarantee!',
+    'the_three_sliders': {
+        'CRIME+ (the outcome)': 'the field-normalized-crime = the 100-x-city-crime/band-median; the higher = the worse; the the OUTPUT-side = the what-the-city-experiences!',
+        'CARE+ (the budget-choic-1)': '100-x-city-care-per-cage-vs-band; the higher = the more-care; the INPUT-side = the what-the-budget-chose!',
+        'EDU+ (the budget-choic-2)': '100-x-city-edu-per-capita-vs-band; the higher = the more-edu; the INPUT-side = the what-the-budget-chose!'
+    },
+    'THE_INTERACTIONS (the the four-observed-patterns = the the from-the-tonights-data!)': [
+        {'pattern': 'THE PIE-CONSTRAINT (the the budgets = the near-zero-sum!)',
+         'reads': ['the CARE-up + the EDU-down = the the trade-off-printed (the the the same-dollar-competed!)',
+                   'the BOTH-up = the the budget-GREW (the the revenue-growth-class!)',
+                   'the BOTH-down = the the austerity-print (the the Detroit-EM-legible!)'],
+         'the_expected': 'the EDU+ and-CARE+ = the WEAK-to-the-moderate-negative-correlated WITHIN-cities-year-over-year (the the competing-for-the-same-fund!)'},
+        {'pattern': 'THE THE-LEAD-LAG (the the the timing-arch!)',
+         'reads': ['the the care/EDU-raise-in-year-t = the the crime-checked-in-the-t+2/3/5 = THE lagged-test = the the design!',
+                   'the the SAME-year = the the weak (the the money-needs-time = the the not-the-instant!)'],
+         'the_expected': 'the CARE+-up-at-t = the the CRIME+-down-at-t+3 = the the positive-signed-association = the THE test!'},
+        {'pattern': 'THE THE-TWIN-CONTROL (the the the NO-vs-HOUSTON = the the the strongest-lesson!)',
+         'reads': ['the the SAME-shock = the the ONE-flipped/the ONE-absorbed =',
+                   'the = the the SLIDER-MOVES-ARE-CHOICES = the not-the-mechanical = the the the same-inputs = the different-hands!'],
+         'the_expected': 'the the interaction-effects = the the city-specific = the the leadership/policy-vocabulary = the the never-the-formula-guaranteed!'},
+        {'pattern': 'THE THE-GOODHART-GUARD (the the always!)',
+         'reads': ['the the if-the-CARE+ = the the maximized-by-the-cutting-the-cage-below-the-service-floor = the the the fingerprint = the the catches-it-via-the-clearance/the-response-metrics = the the not-fooled!'],
+         'the_expected': 'the the metric-pairing = the the guards-the-gaming = the the never-alone!'}
+    ],
+    'the_the_output_of_one_slider_change (the the the concrete = the the what-it-looks-like!):': {
+        'the_example': 'THE MEMPHIS-2024-ARC (the the LIVE!): the the CARE+ = the 45.8-→-51.5 [+5.7-points] WITH the EDU+-lane-parked = the the CRIME+-115.2-trending-down-to-100 = the the = the the the one-slider-up = the the the observed = the the the CRIME+-falling-with-it = THE the ARC-not-the-the-guarantee!',
+        'the_the_frame': 'the CHANGE-THE-SLIDER = the = the SEE-the-the-city-travel-ALONG-the-the-line = the the = the the board-shows-the-the-trail (the the where-it-was/the where-it-is/the where-the-the-peer-cities-sat!)'
+    },
+    'the_honest_laws': [
+        'the sliders = the DESCRIPTIVE-of-the-recorded-budgets = the not-the-prescriptive-simulator!',
+        'the one-slider-moved-in-the-past = the looked-up = the never-the-predicted-forward!',
+        'the interaction-effects = the hypothesis-tagged (the the falsifiers-carried!)',
+        'the the Y+n = the the founder\u0027s-phrase = the the unvermesured-lanes = the named!'
+    ]
+}
+import json as j
+j.dump(model, open('C:/Users/J/Documents/LLM/cardscout-2.0/For You/PolyScout/build/three_slider_model_v0.json', 'w', encoding='utf-8'), indent=1)
+print('WROTE three_slider_model_v0.json')

@@ -1,0 +1,428 @@
+{
+ "_record": "output_vector_v2 \u2014 THE ALL-FOUR-COLUMNS OUTPUT VECTOR, v2 (deleg_58fa077b truncated; this pass finalizes)",
+ "built": "2026-11-25",
+ "parent": "deleg_58fa077b (hit iteration cap mid-build) \u2014 finalize pass per the founder's all-four-columns order",
+ "laws_held": [
+  "zero-fabricated \u2014 every number below traces to the banked file named alongside it",
+  "honest-nulls carry routes",
+  "walk-forward-before-call \u2014 gate-failing families register NOTHING",
+  "direction-class at small n",
+  "the [A] economy gate-shut stands unless ITS refit (ACS 2021-24 .dat deep-first route) is run"
+ ],
+ "column_order": "crime | economy | housing+schools | fiscal | infrastructure",
+ "families": {
+  "crime": {
+   "verdict": "FIT (the anchor) \u2014 banked t+1 arc instrument, LOCO GATE-OPEN",
+   "headline": "walk-forward t+1 direction 0.938 (drift-check reproduces it EXACTLY from current files); LOCO arc 0.75-1.00 mean 0.812 per-city; the ONE registered call lives here (Louisville 2026 DOWN, cron 790da3db5eeb)",
+   "source": "pre_expansion_gauntlet_v1.json + joint_regression_v2.json + pre_registered_civic_call_v1.json",
+   "loco_per_city": {
+    "Cincinnati": 0.75,
+    "Detroit": 1.0,
+    "Memphis": 0.75,
+    "St. Louis": 0.75
+   },
+   "residual_stick": "STICKS-WEAK: pooled lag-1 r 0.459 (> 0.3); arcs carry the signal, single next-year reads do not (1/4 sign-holds 2022->2023)",
+   "composition": "HOLD-BOUNDED: care-/snap+/FE-6 signs never flip in 17 drop-refits; fragile cols named (home/cage/bookings) and non-headline",
+   "registered_call": {
+    "city": "Louisville KY",
+    "prediction": "DOWN vs own 2021-25 mean 30.69",
+    "registered": "2026-11-25T07:20:00-06:00",
+    "falsifier_route": "LMPD full-year 2026 homicide count published on the keyless FBI CDE summarizer (cde.ucr.cjis.gov/LATEST/summarized/agency/KY0568000/HOM, refreshes ~Mar-2027) or the LMPD year-end report; convert rate = count / CDE agency-jurisdiction pop \u00d7 1e5. The call is FALSIFIED iff sign(2026 rate \u2212 30.69) != negative (i.e. the rate finishes at-or-above 30.69). Unresolvable if the 0/12-months non-reporting class recurs (the Jacksonville 2011-2020 banked pattern) \u2014 in that case the call is void, not scored.",
+    "cron": "civic_call_recheck_v1.py, the 10am class (790da3db5eeb \u2014 UNTOUCHED this pass)"
+   }
+  },
+  "economy": {
+   "verdict": "GATE-SHUT \u2014 the fit ran and FAILED ITS GATE honestly. No instrument is real, NOTHING registered.",
+   "headline": "walk-forward t+1 pooled direction 0.5 (n=10) = coin; LOCO mean 0.56; care$ channel within_R2 0.292 with care beta -0.0 (the channel does not price)",
+   "source": "_econ_fit_v1.json (output = LAUS annual unemployment 1990-2025, _econ_pulls_v1.json)",
+   "wf_pooled_direction_acc": 0.5,
+   "wf_n": 10,
+   "wf_per_city": {
+    "Cincinnati": 0.0,
+    "Detroit": 1.0,
+    "Memphis": 1.0,
+    "NYC": 0.0,
+    "St. Louis": 0.5
+   },
+   "loco_mean": 0.56,
+   "loco_per_city": {
+    "Cincinnati": 0.2,
+    "Detroit": 0.4,
+    "Memphis": 0.8,
+    "NYC": 0.6,
+    "St. Louis": 0.8
+   },
+   "fit_A_t0": {
+    "spec": [
+     "bachelors_pct",
+     "poverty_rate",
+     "snap_receipt_share_pct"
+    ],
+    "betas": [
+     0.67,
+     -0.324,
+     -0.083
+    ],
+    "n_rows": 25,
+    "n_cities": 5,
+    "within_R2": 0.175,
+    "frame": {
+     "Cincinnati": 5,
+     "Detroit": 5,
+     "Memphis": 5,
+     "NYC": 5,
+     "St. Louis": 5
+    }
+   },
+   "fit_B_with_care": {
+    "spec": [
+     "bachelors_pct",
+     "poverty_rate",
+     "snap_receipt_share_pct",
+     "care_per_100k"
+    ],
+    "betas": [
+     0.416,
+     -0.176,
+     -0.142,
+     -0.0
+    ],
+    "n_rows": 25,
+    "n_cities": 5,
+    "within_R2": 0.292
+   },
+   "the_aliased_pull_lesson": "initial 6-city pull was ALIASED (all series identical; caught in-session before any fit registered) - refetched per-city, 2010 values differ (9.7/9.5/15.7/9.9/8.7/11.3), 2023 values distinct (3.4/3.4/4.3/4.2/4.5/3.5) \u2014 the identity gate (distinct per-city values asserted in-session) is now a standing law for any multi-series pull",
+   "cross_check": "7/7 within 1.0pt (Cincinnati/Cincinnati-class rows, banked col vs fresh pull)",
+   "re_open_route": "ACS 2021-2024 .dat deep-first (route already banked in _edu_raw acs1y_b*.dat lanes); BFS/BEA stay state-grain honest-nulls (API-key)",
+   "honest_nulls": [
+    "BFS city/county applications: route api.census.gov/data/timeseries/econ/bfs requires key - honest-null, STATE-grain series banked (FRED BABATOTALNSA*, 2004-2026) and no city-year fit attempted per grain law",
+    "BEA county-quad GDP: BEA API requires key - state annual NGSP banked (FRED {ST}NGSP / NGSP{ST}, 1997-2025); city-fit not attempted per grain law"
+   ]
+  },
+  "housing_schools": {
+   "verdict": "GATE-SHUT on both lanes (this pass's refits) \u2014 nothing registers",
+   "B1_rent_burden": {
+    "verdict": "GATE-SHUT (nothing registers)",
+    "headline": "inputs -> B25070 severe rent-burden: walk-forward t+1 0.533 (n=15) below the 0.6 gate; LOCO mean 0.68 (within-sample descriptive only \u2014 LOCO does not open a gate the temporal test shut)",
+    "source": "_housing_schools_fit_v1.json (outcome = maslow_joint_panel_v1 rent_burden_50pct_plus_share, ACS B25070 lanes on disk; 5 cities x 2021-25, n=25)",
+    "fit_t0": {
+     "spec": [
+      "poverty_rate",
+      "bachelors_pct",
+      "snap_receipt_share_pct"
+     ],
+     "betas": [
+      0.545,
+      -0.2,
+      -0.174
+     ],
+     "n_rows": 25,
+     "n_cities": 5,
+     "within_R2": 0.255,
+     "frame": {
+      "Cincinnati": 5,
+      "Detroit": 5,
+      "Memphis": 5,
+      "NYC": 5,
+      "St. Louis": 5
+     }
+    },
+    "wf_tplus1_pooled": 0.533,
+    "wf_per_city": {
+     "Cincinnati": {
+      "hits": 1,
+      "n": 3,
+      "acc": 0.333
+     },
+     "Detroit": {
+      "hits": 1,
+      "n": 3,
+      "acc": 0.333
+     },
+     "Memphis": {
+      "hits": 2,
+      "n": 3,
+      "acc": 0.667
+     },
+     "NYC": {
+      "hits": 1,
+      "n": 3,
+      "acc": 0.333
+     },
+     "St. Louis": {
+      "hits": 3,
+      "n": 3,
+      "acc": 1.0
+     }
+    },
+    "loco_mean": 0.68
+   },
+   "B2_grad_lane": {
+    "verdict": "GATE-SHUT (nothing registers)",
+    "headline": "inputs -> B15003 HS+ state-share: walk-forward t+1 exactly 0.6 (n=10) = AT the gate, not above it \u2014 strict-threshold law holds the gate shut; LOCO mean 0.8 is 1.0/1.0/0.5/0.75/0.75 = city-heterogeneous",
+    "source": "_housing_schools_fit_v1.json (outcome = edu_outputvector_v1 city_year_joint_rows B15003 state share joined to city-year; grain-honest note: STATE-share outcome, not a city graduation rate; n=20)",
+    "fit_t0": {
+     "spec": [
+      "poverty_rate",
+      "bachelors_pct",
+      "snap_receipt_share_pct"
+     ],
+     "betas": [
+      0.014,
+      -0.047,
+      -0.076
+     ],
+     "n_rows": 20,
+     "n_cities": 5,
+     "within_R2": 0.398,
+     "frame": {
+      "Cincinnati": 4,
+      "Detroit": 4,
+      "Memphis": 4,
+      "NYC": 4,
+      "St. Louis": 4
+     }
+    },
+    "wf_tplus1_pooled": 0.6,
+    "wf_per_city": {
+     "Cincinnati": {
+      "hits": 2,
+      "n": 2,
+      "acc": 1.0
+     },
+     "Detroit": {
+      "hits": 2,
+      "n": 2,
+      "acc": 1.0
+     },
+     "Memphis": {
+      "hits": 0,
+      "n": 2,
+      "acc": 0.0
+     },
+     "NYC": {
+      "hits": 2,
+      "n": 2,
+      "acc": 1.0
+     },
+     "St. Louis": {
+      "hits": 0,
+      "n": 2,
+      "acc": 0.0
+     }
+    },
+    "loco_mean": 0.8
+   },
+   "naep_companion_descriptive": "NAEP state-scale lanes banked (edu_outputvector_v1: 192 rows, g4/g8 math+reading, 2013-2024); g8-math x hs-share rho 0.173 n=48 carried as descriptive",
+   "law_note": "walk-forward-before-call: both B lanes at/below 0.6 coin-level at this n \u2014 no call, no cron, no registration; deepening route = ACS .dat year-expansion for v3"
+  },
+  "fiscal": {
+   "verdict": "EXTRACT (extraction-level banked) \u2014 no fit, no call (extraction without a city-year panel does not fit; fit = v2/v3)",
+   "headline": "CAFR/book line-grain extracts live per city; the Memphis MATA line-grain catch is the archetype test passed",
+   "stl": {
+    "general_fund_unassigned_balance": "$443.9 million (MD&A; fund balance +$26.9M/5.4% this yr, \u2212$24.1M/4.9% prior yr)",
+    "police_retirement_funded_recent_first": [
+     79.45,
+     70.97,
+     69.4
+    ],
+    "source": "_acfr/stlouis_fy2025_extract_v1.json (FY2025 signed final, 290pp)"
+   },
+   "nyc": {
+    "general_fund_unassigned_2025": "-$7,607,130 thousand \u2248 -$7.61B (NYC General Fund unassigned NEGATIVE; prior year -$6.16B) \u2014 from FS balance sheet Unassigned row",
+    "debt_per_capita_2025": 12134,
+    "debt_arc_note": "last column of Ratios of Outstanding Debt table = per-capita (dollars); 10yr: 514(2016)...12134(2025)",
+    "total_net_position_2025": "-$195.02B deficit (government-wide total net position; prior -$196.09B class) \u2014 read from FS 'Total net position (deficit)'",
+    "source": "_acfr/nyc_fy25_extract_v1.json"
+   },
+   "detroit": {
+    "general_fund_balance_2022": "$1.04B (+$182M yoy)",
+    "unassigned_surplus_2022": "$229.6M (+$50.5M yoy)",
+    "pension_components_banked": [
+     "GRS Component II (p155)",
+     "PFRS Component II (p156)",
+     "GRS Component I (p157)",
+     "PFRS Component I (p158)"
+    ],
+    "source": "_acfr/detroit_fy22_extract_v1.json (FY24 series = v2 task)"
+   },
+   "memphis": {
+    "mata_city_subsidy_by_fy": {
+     "2015": 22990040,
+     "2016": 23420040,
+     "2017": 25920040,
+     "2018": 14649771,
+     "2022": 6700000,
+     "2023": 7791441,
+     "2024": 30670000,
+     "2025": 30670000
+    },
+    "pattern_read": "FY18 = printed Total MATA line (fed 7,722,771 + local 6,927,000); FY23 = last column of the multi-col line (flagged); FY19-21 books absent from disk; MATA = Memphis Area Transit Authority (the city's transit operator); FY24-25 jump to $30.67M = post-TIGER/Mayoral transit commitment",
+    "hidden_deficit_check": "MATA-style pattern = an agency whose operating subsidy spikes quietly inside intergovernmental lines; the books DO show the spike when read at line grain \u2014 the lane catches it AT the budget-book grain, not the summary grain",
+    "honest_null": "FY19-21 books absent from disk = honest-null, never backfilled; memphistn.gov direct = 403 both urllib & curl",
+    "source": "_acfr/memphis_fiscal_pattern_v1.json + memphis_books_scan_v1.json"
+   },
+   "cincy_denver": {
+    "verdict": "HONEST-NULL (JS-walled budget portals) \u2014 v2 route task; nothing invented",
+    "raws_on_disk": "build/_board2b/ cincy_*fy*.pdf + cincy_cbr + vol2 (landing, extraction pending)"
+   },
+   "fit_status": "no city-year fiscal panel assembled yet => no fit => walk-forward-before-call trivially holds (nothing to gate)"
+  },
+  "infrastructure": {
+   "verdict": "NULL (SDWA output-fit) + DESCRIPTIVE EXTRACT (bridges cross-section, no fit per law) + 311 lane banked",
+   "sdwa": {
+    "verdict": "HONEST-NULL on the output-fit",
+    "read": "near-zero counts at the municipal-grain: five of six systems carry < 20 violations in the file window (Cincinnati 0, Detroit 1, Memphis 1, NYC 10, St. Louis 18; Denver's 128 = ALL 'MR' monitoring/reporting class, rule codes 320/122/340); ONE health-based-ind violation across all six (NYC 2017 TT treatment-technique, contaminant 0800). No city-year panel can be fit at this signal size -> honest-null for the SDWA output-fit, route banked.",
+    "systems": {
+     "Cincinnati": "OH3102612 (Cincinnati Public Water System, pop 800k; OH3100411 Miller inactive-I)",
+     "Denver": "CO0116001 (Denver Water Board, pop 1.287M)",
+     "Detroit": "MI0001800 (City of Detroit, pop 633k)",
+     "Memphis": "TN0000450 (MLGW, pop 659.5k)",
+     "New York": "NY7003493 (NYC System, pop 8.27M)",
+     "St. Louis": "MO6010715 (St Louis City PWS, pop 304.7k)"
+    },
+    "counts": {
+     "Cincinnati": {
+      "violations_total_10yr_file": 0,
+      "health_based": 0,
+      "by_begin_year": {}
+     },
+     "Denver": {
+      "violations_total_10yr_file": 128,
+      "health_based": 0,
+      "by_begin_year": {
+       "2014": 93,
+       "2019": 1,
+       "2022": 1,
+       "2023": 31,
+       "2024": 2
+      }
+     },
+     "Detroit": {
+      "violations_total_10yr_file": 1,
+      "health_based": 0,
+      "by_begin_year": {
+       "2020": 1
+      }
+     },
+     "Memphis": {
+      "violations_total_10yr_file": 1,
+      "health_based": 0,
+      "by_begin_year": {
+       "2008": 1
+      }
+     },
+     "New York": {
+      "violations_total_10yr_file": 10,
+      "health_based": 1,
+      "by_begin_year": {
+       "1998": 2,
+       "1999": 2,
+       "2000": 1,
+       "2001": 1,
+       "2002": 1,
+       "2003": 1,
+       "2004": 1,
+       "2017": 1
+      }
+     },
+     "St. Louis": {
+      "violations_total_10yr_file": 18,
+      "health_based": 0,
+      "by_begin_year": {
+       "2022": 16,
+       "2025": 2
+      }
+     }
+    },
+    "route": "https://data.epa.gov/efservice/Violation/PWSID/{id}/JSON (keyless, live Nov-25)"
+   },
+   "bridges": {
+    "verdict": "DESCRIPTIVE CROSS-SECTION (n=6 cities, 2025) \u2014 real variance 0.023-0.094 poor-share, fit NOT attempted (direction-class needs a city-year panel; 2020-24 NBI archives banked as the v2/v3 arc route)",
+    "counts": {
+     "St. Louis": {
+      "bridges_box": 280,
+      "poor": 23,
+      "poor_share": 0.082
+     },
+     "Cincinnati": {
+      "bridges_box": 308,
+      "poor": 7,
+      "poor_share": 0.023
+     },
+     "Detroit": {
+      "bridges_box": 379,
+      "poor": 28,
+      "poor_share": 0.074
+     },
+     "Memphis": {
+      "bridges_box": 535,
+      "poor": 44,
+      "poor_share": 0.082
+     },
+     "Denver": {
+      "bridges_box": 618,
+      "poor": 36,
+      "poor_share": 0.058
+     },
+     "New York": {
+      "bridges_box": 1200,
+      "poor": 113,
+      "poor_share": 0.094
+     }
+    },
+    "grain": "city lat/lon-box (FHWA NBI 2025 JSON, BL05/BL06 in city bounds)",
+    "route": "https://www.fhwa.dot.gov/bridge/nbi/2025/JSON/{ST}25.json (keyless, live)",
+    "accuracy_patched": "sdwa_read/count phrasing corrected this pass to match the file exactly (five-of-six < 20; ONE health-based-ind flag)"
+   },
+   "calls_311": {
+    "verdict": "explanatory read only (n tiny per city); the calls lane is BANKED and direction-fit-ready at n=97 when inputs are deepened (v2)",
+    "within_city_spearman_care_to_calls": [
+     {
+      "city": "Cincinnati",
+      "n": 12,
+      "rho": 0.636,
+      "p": 0.026
+     },
+     {
+      "city": "Detroit",
+      "n": 6,
+      "rho": 0.257,
+      "p": 0.623
+     },
+     {
+      "city": "Memphis",
+      "n": 6,
+      "rho": 0.771,
+      "p": 0.072
+     },
+     {
+      "city": "NYC",
+      "n": 6,
+      "rho": 0.829,
+      "p": 0.042
+     },
+     {
+      "city": "St. Louis",
+      "n": 7,
+      "rho": 0.821,
+      "p": 0.023
+     }
+    ],
+    "paired_rows": 37
+   },
+   "honest_nulls": [
+    "SDWA output-fit: signal too thin (0 health-based violations across 6 systems) \u2014 route banked: data.epa.gov/efservice/Violation/PWSID/{pwsid}/JSON",
+    "Bridges fit: single cross-section (NBI 2025) \u2014 2020-2024 archives exist at fhwa.dot.gov/bridge/nbi/ascii.cfm for the v2 arc; city-box grain noted (owner agencies mix inside boxes, e.g. NYSDOT 84000 codes in NYC)",
+    "311 fit: inputs (care_per_100k) banked for only 18 of 97 call-years \u2014 honest-null on the fit, lane stays ready"
+   ]
+  }
+ },
+ "the_five_family_verdicts_one_line": [
+  "CRIME: FIT \u2014 the anchor holds (0.938 t+1 / 0.812 LOCO arc) and carries the one live call (Louisville DOWN, cron untouched)",
+  "ECONOMY: GATE-SHUT \u2014 walk-forward 0.50 coin + LOCO 0.56 + care-beta 0.0; refit route banked (ACS .dat deep-first); aliased-pull lesson hardened into an identity-gate law",
+  "HOUSING+SCHOOLS: GATE-SHUT both lanes (this pass) \u2014 rent-burden WF 0.533/B2 grad WF 0.600-at-the-gate-not-above; nothing registers",
+  "FISCAL: EXTRACT \u2014 CAFR/book line-grain banked for STL/NYC/DET/MEM (MATA spike archetype caught); Cincy/Denver JS-walled = v2; no fit",
+  "INFRASTRUCTURE: NULL (SDWA, route banked) + DESCRIPTIVE (NBI 2025 bridges cross-section, poor-share 2.3%-9.4%) + 311 lane banked (rho 0.63-0.83)"
+ ]
+}

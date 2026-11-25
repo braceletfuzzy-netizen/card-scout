@@ -1,0 +1,38 @@
+{
+ "_record": "medical_debt_crime_phase1_v1",
+ "built": "2026-11-24",
+ "built_by": "KNOCKOUT-RESUME lane-8 subagent (rank-7 GAP / one-pager #4: medical-debt -> crime, Phase 1 = the debt TABLE + first pattern read)",
+ "laws": [
+  "direction-class only, no causal claims \u2014 cross-sectional ecological, confounded by design",
+  "honest-null convention",
+  "no fabricated dollars: medcoll/share + rate rows are published proportions"
+ ],
+ "routes_tried": {
+  "CFPB per-zip credit panel": "not keyless (panel micro data; only county-class public route exists)",
+  "Urban Institute Debt-in-America county route": "KEYLESS CAPTURED \u2014 github.com/UrbanInstitute/debt-interactive-map data/20261022-update/county_medical.csv (3,143 counties; 2,386 w/ valid medical-debt-in-collections share) \u2014 the 2026 county-ecological paper class validated route, now BANKED",
+  "CHR homicide outcome": "CAPTURED \u2014 County Health Rankings 2024 Additional Measure Data 'Homicide Rate' (1,427 counties reported, 2018-2022 window per source tab) + Firearm Fatalities Rate"
+ },
+ "the_debt_table": {
+  "counties_with_medical_debt_share": 2386,
+  "share_range": "0.29% (min) / 4.7% (p50) / 11.7% (p90) / 27.7% (max) of residents w/ medical debt in collections",
+  "student_debt_companion": "county_student.csv + county_overall.csv banked same vintage (2026 vintage Oct-22 update)"
+ },
+ "pattern_reads": {
+  "joined_counties": 1101,
+  "medcoll_share_x_homicide_raw": "r=+0.204 n=1101 (POSITIVE \u2014 debt sits where violence sits; cross-sectional confound class)",
+  "medcoll_x_homicide_income_partialled": "r=+0.051 (~ZERO \u2014 the confound-collapse falsifier \u00a77.3 FIRES on the pattern claim: the raw debt-crime association is income-borne)",
+  "no_hins_x_homicide_raw": "r=+0.208 (the access covariate prices crime the same way)",
+  "top_decile_debt_vs_bottom": "homicide 9.78 vs 4.59 per 100k (2.1x raw gap; gone after income partial)",
+  "student_debt_x_homicide_income_partialled": "r=+0.291 (the SECOND shackle prices crime BETTER than the medical one after controls)",
+  "two_shackles_geography": "medcoll_share x student_balance r=-0.174 \u2014 the two shackles are DIFFERENT geographies (falsifier \u00a77.5: the single shackles-index dies / restructures to a two-lane index)"
+ },
+ "verdict": "PHASE-1 TABLE BANKED + THE PATTERN READ IS THE HONEST-NULL CLASS: the founder's medical-debt -> crime macro-arrow does NOT price independently of income at the county grain (+0.204 raw collapses to +0.051 partialled) \u2014 one-pager #4's falsifier 3 fired as written, before any program talk. THE SPIN IS REAL THOUGH: the debt TABLE exists keyless now (2,386 counties), the student-debt shackle shows the STRONGER independent read (+0.291 income-partialled), and the two-debt geographies split (-0.174) \u2014 the shackles-index must be two-lane, and the education-debt lane, not the medical lane, is the one the crime read carries. ~zero is also-the-answer-class; the thesis degrades to a fairness-claim on the medical half exactly as pre-registered.",
+ "falsifiers_fired_or_survived": {
+  "route_falsifier_1": "SURVIVED (route exists keyless)",
+  "pattern_falsifier_2": "FIRED (partial ~zero on medical-debt->homicide)",
+  "confound_collapse_falsifier_3": "FIRED (income explains the raw association)",
+  "student_split_falsifier_5": "FIRED (split confirmed \u2014 two-lane index required)",
+  "lag_misread_guard_6": "carried (this is a cross-section; the arc test needs vintage series)"
+ },
+ "note_on_medical_collection_share": "'medcoll' = share of residents with MEDICAL DEBT IN COLLECTIONS (the exact countable the one-pager names); student side 'stdtot' = avg student-loan balance per resident"
+}

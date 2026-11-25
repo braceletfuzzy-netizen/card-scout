@@ -1,0 +1,730 @@
+{
+ "health_access_band": [
+  {
+   "query": "health clinic access neighborhood violence crime",
+   "n_returned": 4,
+   "hits": [
+    {
+     "doi": "10.58837/chula.the.2003.2023",
+     "title": "Establish a neighborhood clinic to increase access to basic health services for Myanmar migrant factory workers in Mae Sot Distric",
+     "venue": "?",
+     "year": null,
+     "cites": 0
+    },
+    {
+     "doi": "10.58837/chula.the.2003.2024",
+     "title": "Establish a neighborhood clinic to increase access to basic health services for Myanmar migrant factory workers in Mae Sot Distric",
+     "venue": "?",
+     "year": null,
+     "cites": 0
+    },
+    {
+     "doi": "10.18574/nyu/9780814789308.003.0005",
+     "title": "5. The Nonlinear Effect of Neighborhood Disadvantage on Youth Violence",
+     "venue": "Economics and Youth Violence",
+     "year": 2020,
+     "cites": 4
+    },
+    {
+     "doi": "10.18297/etd/1380",
+     "title": "Examining crime symbiosis : the impact of alcohol outlets on violence in nearby neighborhood park environs.",
+     "venue": "?",
+     "year": null,
+     "cites": 0
+    }
+   ]
+  },
+  {
+   "query": "Medicaid expansion homicide crime quasi-experimental",
+   "n_returned": 4,
+   "hits": [
+    {
+     "doi": "10.2139/ssrn.6545598",
+     "title": "Impact of Medicaid Expansion on Emergency Care Utilization, Outcomes, and Disparities: A Quasi-Experimental Analysis of the Afford",
+     "venue": "?",
+     "year": 2026,
+     "cites": 0
+    },
+    {
+     "doi": "10.3389/fpubh.2021.707907",
+     "title": "A Quasi-Experimental Study of Medicaid Expansion and Urban Mortality in the American Northeast",
+     "venue": "Frontiers in Public Health",
+     "year": 2021,
+     "cites": 3
+    },
+    {
+     "doi": "10.2139/ssrn.5115271",
+     "title": "Medicaid Expansion, Ride-sharing and Crime: Evidence from US Cities",
+     "venue": "?",
+     "year": 2025,
+     "cites": 0
+    },
+    {
+     "doi": "10.1177/00469580221121534",
+     "title": "How Would Medicaid Expansion Affect Texas Hospitals? Evidence From a Retrospective Quasi-Experimental Study",
+     "venue": "INQUIRY: The Journal of Health Care Organization, Provision, and Financing",
+     "year": 2022,
+     "cites": 2
+    }
+   ]
+  },
+  {
+   "query": " Federally Qualified Health Centers community violence",
+   "n_returned": 4,
+   "hits": [
+    {
+     "doi": "10.1377/forefront.20230321.913861",
+     "title": "Community-Based Doulas And Federally Qualified Health Centers: Addressing Climate Change And Maternal Health",
+     "venue": "Forefront Group",
+     "year": 2023,
+     "cites": 2
+    },
+    {
+     "doi": "10.4135/9781412971942.n142",
+     "title": "Federally Qualified Health Centers (FQHCs)",
+     "venue": "Encyclopedia of Health Services Research",
+     "year": 2009,
+     "cites": 1
+    },
+    {
+     "doi": "10.35565/cqi.2020.2013",
+     "title": "Oral Health Value-Based Care: The Federally Qualified Health Center (FQHC) Story",
+     "venue": "?",
+     "year": 2020,
+     "cites": 1
+    },
+    {
+     "doi": "10.15620/cdc/251847",
+     "title": "Million Hearts: Federally Qualified Health Centers: Excellence in Blood Pressure Control",
+     "venue": "?",
+     "year": 2026,
+     "cites": 0
+    }
+   ]
+  }
+ ],
+ "child_protection_band": [
+  {
+   "query": "child protective services expenditure crime neighborhood",
+   "n_returned": 4,
+   "hits": [
+    {
+     "doi": "10.5040/9798216510468.ch-6",
+     "title": "Child Protective Services",
+     "venue": "Children and Crime",
+     "year": 2018,
+     "cites": 0
+    },
+    {
+     "doi": "10.4135/9781412979993.n37",
+     "title": "Child Protective Services",
+     "venue": "Encyclopedia of Victimology and Crime Prevention",
+     "year": 2010,
+     "cites": 0
+    },
+    {
+     "doi": "10.4135/9781071951804.n41",
+     "title": "Child Protective Services",
+     "venue": "The Sage Encyclopedia of Crime and Gender",
+     "year": 2026,
+     "cites": 0
+    },
+    {
+     "doi": "10.1016/j.childyouth.2025.108698",
+     "title": "Neighborhood eviction filings and judgments, child maltreatment reports, and child protective services involvement",
+     "venue": "Children and Youth Services Review",
+     "year": 2026,
+     "cites": 1
+    }
+   ]
+  },
+  {
+   "query": "child welfare intervention juvenile delinquency",
+   "n_returned": 4,
+   "hits": [
+    {
+     "doi": "10.4324/9780203792261-12",
+     "title": "Crime and Juvenile Delinquency",
+     "venue": "Family and Child Well-Being After Welfare Reform",
+     "year": 2017,
+     "cites": 0
+    },
+    {
+     "doi": "10.2139/ssrn.1656507",
+     "title": "Michigan Juvenile Delinquency Cases and the Indian Child Welfare Act",
+     "venue": "?",
+     "year": 2010,
+     "cites": 0
+    },
+    {
+     "doi": "10.15760/etd.649",
+     "title": "Child Welfare and Delinquency: Examining Differences in First-Time Referrals of Crossover Youth within the Juvenile Justice System",
+     "venue": "?",
+     "year": 2000,
+     "cites": 1
+    },
+    {
+     "doi": "10.1037/e306292005-008",
+     "title": "In Brief: Child Delinquency: Early Intervention and Prevention",
+     "venue": "PsycEXTRA Dataset",
+     "year": 2004,
+     "cites": 1
+    }
+   ]
+  },
+  {
+   "query": "child maltreatment prevention crime rates city",
+   "n_returned": 4,
+   "hits": [
+    {
+     "doi": "10.4135/9781412979993.n29",
+     "title": "Child Abuse, Neglect, and Maltreatment",
+     "venue": "Encyclopedia of Victimology and Crime Prevention",
+     "year": 2010,
+     "cites": 0
+    },
+    {
+     "doi": "10.4135/9781412979993.n30",
+     "title": "Child Abuse, Neglect, and Maltreatment: Interventions for",
+     "venue": "Encyclopedia of Victimology and Crime Prevention",
+     "year": 2010,
+     "cites": 0
+    },
+    {
+     "doi": "10.4135/9781412979993.n34",
+     "title": "Child Abuse, Neglect, and Maltreatment: Theories of",
+     "venue": "Encyclopedia of Victimology and Crime Prevention",
+     "year": 2010,
+     "cites": 0
+    },
+    {
+     "doi": "10.4135/9781412979993.n31",
+     "title": "Child Abuse, Neglect, and Maltreatment: Mandatory Reporting",
+     "venue": "Encyclopedia of Victimology and Crime Prevention",
+     "year": 2010,
+     "cites": 0
+    }
+   ]
+  }
+ ],
+ "safety_gray_band": [
+  {
+   "query": "code enforcement vacant building crime reduction",
+   "n_returned": 4,
+   "hits": [
+    {
+     "doi": "10.18356/7e40d16c-en",
+     "title": "Building code enforcement",
+     "venue": "?",
+     "year": 2012,
+     "cites": 1
+    },
+    {
+     "doi": "10.1002/9781119149705.ch39",
+     "title": "Code Enforcement and the Building Code Application Process",
+     "venue": "Applying the Building Code",
+     "year": 2016,
+     "cites": 0
+    },
+    {
+     "doi": "10.1002/9781119149705.part6",
+     "title": "Part VI: Code Enforcement",
+     "venue": "Applying the Building Code",
+     "year": 2016,
+     "cites": 0
+    },
+    {
+     "doi": "10.52468/2542-1514.2024.8(3).142-151",
+     "title": "The Criminal Code of Mongolia. The General Part. Crime",
+     "venue": "Law Enforcement Review",
+     "year": 2024,
+     "cites": 1
+    }
+   ]
+  },
+  {
+   "query": "blight remediation gunfire assault trial",
+   "n_returned": 4,
+   "hits": [
+    {
+     "doi": "10.1257/rct.7155-1.0",
+     "title": "A Cluster Randomized Controlled Trial of Blight Remediation and Community Outreach to Improve Residents\u2019 Perceptions of Safety and",
+     "venue": "AEA Randomized Controlled Trials",
+     "year": 2021,
+     "cites": 0
+    },
+    {
+     "doi": "10.1257/rct.7155",
+     "title": "A Cluster Randomized Controlled Trial of Blight Remediation and Community Outreach to Improve Residents\u2019 Perceptions of Safety and",
+     "venue": "AEA Randomized Controlled Trials",
+     "year": 2021,
+     "cites": 0
+    },
+    {
+     "doi": "10.1332/policypress/9781447327868.003.0005",
+     "title": "A new urban medicine show: on the limits of blight remediation",
+     "venue": "Why Detroit Matters",
+     "year": 2017,
+     "cites": 0
+    },
+    {
+     "doi": "10.5810/kentucky/9781949668124.003.0001",
+     "title": "Why Naval Gunfire Support?",
+     "venue": "U.S. Naval Gunfire Support in the Pacific War",
+     "year": 2021,
+     "cites": 0
+    }
+   ]
+  },
+  {
+   "query": "proactive rental inspection housing crime",
+   "n_returned": 4,
+   "hits": [
+    {
+     "doi": "10.2139/ssrn.1914480",
+     "title": "Thoughts on Rental Housing and Rental Housing Assistance",
+     "venue": "?",
+     "year": 2011,
+     "cites": 3
+    },
+    {
+     "doi": "10.2139/ssrn.2542973",
+     "title": "The Rental Housing Act and Provincial Rental Housing Tribunals",
+     "venue": "?",
+     "year": 2014,
+     "cites": 1
+    },
+    {
+     "doi": "10.2172/1019210",
+     "title": "The Potential for Energy Retrofits within the City of Sacramento's Rental Housing Inspection Program",
+     "venue": "?",
+     "year": 2011,
+     "cites": 0
+    },
+    {
+     "doi": "10.1016/j.jhe.2022.101879",
+     "title": "Discrimination against the atypical type of tenants in the Tokyo private rental housing market: Evidence from moving-in inspection",
+     "venue": "Journal of Housing Economics",
+     "year": 2022,
+     "cites": 7
+    }
+   ]
+  }
+ ],
+ "waste_environment_band": [
+  {
+   "query": "municipal trash collection litter crime broken windows",
+   "n_returned": 4,
+   "hits": [
+    {
+     "doi": "10.4135/9781412950664.n39",
+     "title": "Broken Windows Theory",
+     "venue": "Encyclopedia of Crime and Punishment",
+     "year": 2002,
+     "cites": 0
+    },
+    {
+     "doi": "10.4324/9780203118214-23",
+     "title": "Broken windows",
+     "venue": "Environmental Criminology and Crime Analysis",
+     "year": 2013,
+     "cites": 0
+    },
+    {
+     "doi": "10.4135/9781452274461.n20",
+     "title": "Broken Windows Theory",
+     "venue": "Encyclopedia of Street Crime in America",
+     "year": 2013,
+     "cites": 0
+    },
+    {
+     "doi": "10.4135/9781452229300.n255",
+     "title": "Broken Windows",
+     "venue": "The Concise Dictionary of Crime and Justice",
+     "year": 2002,
+     "cites": 0
+    }
+   ]
+  },
+  {
+   "query": "brownfield redevelopment crime neighborhood",
+   "n_returned": 4,
+   "hits": [
+    {
+     "doi": "10.31979/etd.6qnz-96xj",
+     "title": "Brownfield Cleanup in a Post-Redevelopment Era",
+     "venue": "?",
+     "year": null,
+     "cites": 0
+    },
+    {
+     "doi": "10.31274/cc-20240624-155",
+     "title": "An Analysis of Brownfield Redevelopment and Gentrification: A Case Study of the Beacon Hill Neighborhood, Kansas City, Missouri",
+     "venue": "?",
+     "year": 2023,
+     "cites": 0
+    },
+    {
+     "doi": "10.1108/978-1-83708-144-820261012",
+     "title": "Geotechnical considerations in brownfield redevelopment",
+     "venue": "Delivering Sustainable Brownfield Redevelopment",
+     "year": 2026,
+     "cites": 0
+    },
+    {
+     "doi": "10.4135/9781529616927",
+     "title": "Heritage Point: Brownfield Redevelopment",
+     "venue": "?",
+     "year": 2023,
+     "cites": 0
+    }
+   ]
+  },
+  {
+   "query": "water shutoff utility termination crime",
+   "n_returned": 4,
+   "hits": [
+    {
+     "doi": "10.1021/acsami.3c07989.s001",
+     "title": "Water-Induced Cellulose Nanofibers/Poly(vinyl alcohol) Hydrogels Regulated by Hydrogen Bonding for In Situ Water Shutoff",
+     "venue": "?",
+     "year": null,
+     "cites": 0
+    },
+    {
+     "doi": "10.1021/acs.langmuir.5c05423.s001",
+     "title": "Superhydrophobic Mesoporous Silica Nanospheres as Reservoir-Adaptive Smart Plugs for Selectivity Water Shutoff",
+     "venue": "?",
+     "year": null,
+     "cites": 0
+    },
+    {
+     "doi": "10.1016/b978-075067703-5/50043-9",
+     "title": "Water Shutoff",
+     "venue": "Oil Field Chemicals",
+     "year": 2003,
+     "cites": 0
+    },
+    {
+     "doi": "10.1089/env.2023.0022",
+     "title": "How Did Utility Shutoff Procedures and Household Shutoff Outcomes Change During the Covid-19 Pandemic? Assessing Sociodemographic ",
+     "venue": "Environmental Justice",
+     "year": 2025,
+     "cites": 4
+    }
+   ]
+  }
+ ],
+ "economic_dev_band": [
+  {
+   "query": "local business retention incentives crime",
+   "n_returned": 4,
+   "hits": [
+    {
+     "doi": "10.3386/w26603",
+     "title": "Evaluating State and Local Business Tax Incentives",
+     "venue": "?",
+     "year": 2020,
+     "cites": 11
+    },
+    {
+     "doi": "10.21236/ada448815",
+     "title": "Increasing Army Retention Through Incentives",
+     "venue": "?",
+     "year": 2006,
+     "cites": 0
+    },
+    {
+     "doi": "10.1920/bn.ifs.2017.0193",
+     "title": "The business rates revaluation, appeals and local revenue retention",
+     "venue": "?",
+     "year": 2017,
+     "cites": 1
+    },
+    {
+     "doi": "10.4324/9781315293493-5",
+     "title": "Business Incentives Beyond the State",
+     "venue": "Unstately Power",
+     "year": 2017,
+     "cites": 0
+    }
+   ]
+  },
+  {
+   "query": "zoning land use reform crime",
+   "n_returned": 4,
+   "hits": [
+    {
+     "doi": "10.1080/00947598.1993.10395787",
+     "title": "<i>Lucas</i>Case: The Need TO Reform Land-Use Law",
+     "venue": "Land Use Law &amp; Zoning Digest",
+     "year": 1993,
+     "cites": 0
+    },
+    {
+     "doi": "10.1080/00947598.1986.10395064",
+     "title": "Land Use Law &amp; Zoning Digest",
+     "venue": "Land Use Law &amp; Zoning Digest",
+     "year": 1986,
+     "cites": 3
+    },
+    {
+     "doi": "10.1080/00947598.1983.10394919",
+     "title": "Land Use Law &amp; Zoning Digest",
+     "venue": "Land Use Law &amp; Zoning Digest",
+     "year": 1983,
+     "cites": 0
+    },
+    {
+     "doi": "10.1080/00947598.1995.10394722",
+     "title": "Washington State Regulatory Reform: Jekyll and Hyde '95",
+     "venue": "Land Use Law &amp; Zoning Digest",
+     "year": 1995,
+     "cites": 1
+    }
+   ]
+  },
+  {
+   "query": "opportunity zones crime effects",
+   "n_returned": 4,
+   "hits": [
+    {
+     "doi": "10.2139/ssrn.5952524",
+     "title": "Understanding the Employment Effects of Opportunity Zones",
+     "venue": "?",
+     "year": 2025,
+     "cites": 1
+    },
+    {
+     "doi": "10.4324/9780203762363-14",
+     "title": "Explaining White- Collar Crime: The Opportunity Perspective",
+     "venue": "Understanding White-Collar Crime",
+     "year": 2014,
+     "cites": 0
+    },
+    {
+     "doi": "10.4324/9781315267609-7",
+     "title": "Applying the Opportunity Perspective to White-Collar Crime",
+     "venue": "White-Collar Crime",
+     "year": null,
+     "cites": 0
+    },
+    {
+     "doi": "10.17918/00010537",
+     "title": "Organizing Opportunity: How to Drive Responsible Real Estate Investment in Opportunity Zones",
+     "venue": "?",
+     "year": 2019,
+     "cites": 0
+    }
+   ]
+  }
+ ],
+ "courts_legal_aid_band": [
+  {
+   "query": "eviction right to counsel eviction filing crime",
+   "n_returned": 4,
+   "hits": [
+    {
+     "doi": "10.1377/forefront.20240514.686706",
+     "title": "Right To Counsel In Eviction Cases: A Public Health Imperative",
+     "venue": "Forefront Group",
+     "year": 2024,
+     "cites": 1
+    },
+    {
+     "doi": "10.15760/etd.3647",
+     "title": "The Affective Discourses of Eviction: Right to Counsel in New York City",
+     "venue": "?",
+     "year": null,
+     "cites": 0
+    },
+    {
+     "doi": "10.2139/ssrn.4912297",
+     "title": "Eviction Moratoria and Race Disparities of Eviction Filing Rates in the U.S",
+     "venue": "?",
+     "year": 2024,
+     "cites": 0
+    },
+    {
+     "doi": "10.2139/ssrn.4953866",
+     "title": "Eviction Moratoria and Race Disparities of Eviction Filing Rates in the U.S.",
+     "venue": "?",
+     "year": 2024,
+     "cites": 0
+    }
+   ]
+  },
+  {
+   "query": "civil legal aid crime violence",
+   "n_returned": 4,
+   "hits": [
+    {
+     "doi": "10.1007/978-3-030-80271-4_7",
+     "title": "Lawyers Providing Legal Aid in Print: Legal Question and Answer Columns in Finnish Newspapers Around 1900",
+     "venue": "World Histories of Crime, Culture and Violence",
+     "year": 2021,
+     "cites": 0
+    },
+    {
+     "doi": "10.1007/978-3-030-80271-4_9",
+     "title": "Training and Disciplining Lawyers Through Legal Aid: Chile, 1932\u20131960s",
+     "venue": "World Histories of Crime, Culture and Violence",
+     "year": 2021,
+     "cites": 1
+    },
+    {
+     "doi": "10.1007/978-3-030-80271-4_10",
+     "title": "Archival Confrontations and Rewriting the History of Legal Aid in the U.S.",
+     "venue": "World Histories of Crime, Culture and Violence",
+     "year": 2021,
+     "cites": 0
+    },
+    {
+     "doi": "10.1007/978-3-030-80271-4_6",
+     "title": "\u201cTo Poor and Rich Alike\u201d: Legal Modernisation, the Women\u2019s Movement, and Legal Aid in Late-Nineteenth-Century Finland",
+     "venue": "World Histories of Crime, Culture and Violence",
+     "year": 2021,
+     "cites": 1
+    }
+   ]
+  },
+  {
+   "query": "pretrial release bail reform crime municipality",
+   "n_returned": 4,
+   "hits": [
+    {
+     "doi": "10.1525/9780520352230-015",
+     "title": "12. Pretrial Release Programs and Nonfinancial Releases",
+     "venue": "Bail Reform in America",
+     "year": 1976,
+     "cites": 0
+    },
+    {
+     "doi": "10.2307/jj.8501107.17",
+     "title": "Pretrial Release Programs and Nonfinancial Releases",
+     "venue": "Bail Reform in America",
+     "year": 2023,
+     "cites": 0
+    },
+    {
+     "doi": "10.2139/ssrn.4709342",
+     "title": "Pretrial Justice Without Money Bail or Risk Assessments: Principles for Racially Just Bail Reform",
+     "venue": "?",
+     "year": 2024,
+     "cites": 0
+    },
+    {
+     "doi": "10.1017/9781316443194.004",
+     "title": "The Bail Process: How Pretrial Release Operates and the Types of Release Before Trial",
+     "venue": "The Bail Book",
+     "year": null,
+     "cites": 0
+    }
+   ]
+  }
+ ],
+ "digital_band": [
+  {
+   "query": "broadband expansion crime",
+   "n_returned": 4,
+   "hits": [
+    {
+     "doi": "10.2139/ssrn.3072289",
+     "title": "The Internet Effects on Sex Crime and Murder \u2013 Evidence from the Broadband Internet Expansion in Germany",
+     "venue": "?",
+     "year": 2017,
+     "cites": 3
+    },
+    {
+     "doi": "10.1016/j.jebo.2019.07.001",
+     "title": "The internet effects on sex crime offenses - Evidence from the German broadband internet expansion",
+     "venue": "Journal of Economic Behavior &amp; Organization",
+     "year": 2019,
+     "cites": 9
+    },
+    {
+     "doi": "10.2139/ssrn.7537265",
+     "title": "Impacts of the USDA Broadband Expansion Programs on Broadband Speeds in the United States",
+     "venue": "?",
+     "year": 2026,
+     "cites": 0
+    },
+    {
+     "doi": "10.18356/9789211068153",
+     "title": "Transnational Organized Crime in the Pacific: Expansion, Challenges and Impact",
+     "venue": "?",
+     "year": 2024,
+     "cites": 1
+    }
+   ]
+  },
+  {
+   "query": "digital divide juvenile crime",
+   "n_returned": 4,
+   "hits": [
+    {
+     "doi": "10.1017/cbo9780511527562.002",
+     "title": "Recriminalizing Violent Juvenile Crime",
+     "venue": "Recriminalizing Delinquency",
+     "year": 1996,
+     "cites": 1
+    },
+    {
+     "doi": "10.17226/9747",
+     "title": "Juvenile Crime, Juvenile Justice",
+     "venue": "?",
+     "year": 2001,
+     "cites": 24
+    },
+    {
+     "doi": "10.21203/rs.3.rs-6581939/v1",
+     "title": "Digital Exposure and Juvenile Crime: Evidence from Dynamic Panel Analysis in Thailand",
+     "venue": "?",
+     "year": 2025,
+     "cites": 0
+    },
+    {
+     "doi": "10.1111/jfcj.70025",
+     "title": "Digital exposure and juvenile crime: Evidence from dynamic panel analysis in Thailand",
+     "venue": "Juvenile &amp; Family Court Journal",
+     "year": 2026,
+     "cites": 0
+    }
+   ]
+  },
+  {
+   "query": "internet access neighborhood violence youth",
+   "n_returned": 4,
+   "hits": [
+    {
+     "doi": "10.3386/w13773",
+     "title": "Neighborhood Violence and Urban Youth",
+     "venue": "?",
+     "year": 2008,
+     "cites": 10
+    },
+    {
+     "doi": "10.18574/nyu/9780814789308.003.0005",
+     "title": "5. The Nonlinear Effect of Neighborhood Disadvantage on Youth Violence",
+     "venue": "Economics and Youth Violence",
+     "year": 2020,
+     "cites": 4
+    },
+    {
+     "doi": "10.1177/1541204014547723",
+     "title": "Neighborhood Structure, Immigrant Status, and Youth Violence",
+     "venue": "Youth Violence and Juvenile Justice",
+     "year": 2014,
+     "cites": 12
+    },
+    {
+     "doi": "10.7208/chicago/9780226309477.003.0010",
+     "title": "Neighborhood Violence and Urban Youth",
+     "venue": "The Problems of Disadvantaged Youth",
+     "year": 2009,
+     "cites": 7
+    }
+   ]
+  }
+ ]
+}

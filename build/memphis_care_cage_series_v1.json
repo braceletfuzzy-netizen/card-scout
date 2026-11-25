@@ -1,0 +1,54 @@
+{
+ "city": "Memphis",
+ "run": "FINGERPRINT-HUNT RUN 6 \u2014 care/cage backwards-run",
+ "built": "2026-11-22",
+ "inverse_surge_era": null,
+ "inverse_surge_finding": {
+  "verdict": "NO INVERSE FINGERPRINT IN THE CITY BOOKS \u2014 the founder's pre-registered lens is CONFIRMED STRUCTURALLY",
+  "evidence": "Care/cage (GF operating, consistent lanes incl. courts+clerk on cage side) is BANDED across 7 fiscal years: 0.40-0.52, mean ~0.473. The MSTF-era budget (FY26 adopted, first full year after the Sept 29, 2025 start) sits at 0.516 \u2014 actually the LARGEST care-side reading in the series. Cage grows with the whole book (Police GF 279.7M FY20 -> 305.1M FY26 = +9.1% nominal over six years, ~+1.5%/yr, well under GF growth ~+18.6%); care grows FASTER (Parks 36.7M -> 51.6M = +40%; Libraries 21.2M -> 26.1M = +24%). NO cage-side surge in the city books \u2014 care did not stagnate either: both lanes rose roughly in parallel.",
+  "the_2023_dip": "FY2023 shows the only band-break-down (0.399, care -16%): it is driven by the Grants & Subsidies line plunging 69.7M->48.3M (ARPA/federal pass-through timing), NOT by cage rising. Parks and Libraries both grew that year. If anything this is care-side noise, not a cage surge.",
+  "the_2024_care_jump": "FY2024 care jumps +31% (Grants & Subsidies 48.3M->82.9M actual; Parks 40.9M->49.9M). This is the mayorial-transition year (Paul Young took office Jan 2024). Cage rose only +7%. The city-side response to the crime-emergency era was a CARE-lead, not a DETERRENCE-lead."
+ },
+ "ratio_series": {
+  "FY2020_actual": 0.458,
+  "FY2021_actual": 0.479,
+  "FY2022_actual": 0.486,
+  "FY2023_adopted": 0.399,
+  "FY2024_actual": 0.515,
+  "FY2025_adopted": 0.458,
+  "FY2026_adopted_TASK_FORCE_ERA": 0.516,
+  "band_min": 0.399,
+  "band_max": 0.526,
+  "fire_included_series_fy26": 0.293,
+  "note": "FY2026 care/cage corrected to 0.516 after adding Court Clerk (8.0M) + Judicial City Courts (0.97M) + Community Enhancement (16.0M care) per FY26 book GF function table p.121-122; totals reconcile to GF total 883,134,861 [Certain]."
+ },
+ "task_force_attribution": {
+  "MSTF_structure": "Memphis Safe Task Force = multi-agency op created by presidential memorandum Sept 15 2025; led by U.S. Marshals Service with FBI, DEA, HSI, ICE, Tennessee Highway Patrol, Tennessee National Guard, plus local police. Operations began Sept 29, 2025. 13,020 arrests reported by Sept 24, 2026 (13,500+ at one-year mark). [Certain - Wikipedia/official releases]",
+  "in_city_budget?": "NO task-force operating line exists in the FY26 city budget book. Text-layer scan of all 381 pages finds zero 'Safe Task Force' appropriations. Police Services GF = 305.1M, Police Services all-funds = 308.3M. The only city-side violence-adjacent lines are: GVIP (Group Violence Intervention Program) 1.16M FY26 (down from 1.96M FY24 actual \u2014 a CARE-model violence-intervention program, cut, not grown); Office of Public Safety + Joint Office of Neighborhood Safety & Engagement (no separate legal-level lines).",
+  "city_budget_cage_side_effect": "MPD does receive grant money: Violent Crime Intervention Fund (VCIF) grant $39.5M over five years + $2.6M in other federal grants over five fiscal years (FY26 book p.362) \u2014 federal, flow-through, not a city tax decision.",
+  "external_spending_scale": "State: Gov. Lee announced Oct 2025 a $100M Downtown Public Safety Grant Fund for the Memphis area, part of $175M in state public safety grants. [Certain - Wikipedia, Oct 2025]. National Guard + federal agency personnel costs are federal/state \u2014 magnitude not itemized in city books.",
+  "founder_lens_verdict": "The founder's structural read is CONFIRMED: the city may cage-cheap while the state/federal cages-expensive. Memphis city government did NOT re-allocate toward deterrence \u2014 the 12,000+ arrests are carried by an external op (Marshals-led + National Guard + state grants ~100-175M). The city budget ratio band held; the cage-surge, if any, is OUTSIDE the city ledger. The gauge would therefore predict flat-or-falling crime from the city's own budget (which matches: city data showed crime already down 27% from 2023 peak before MSTF, then a further drop that has PLATEAUED since \u2014 the founder's flat-or-rising-after-initial-decline read is consistent with the city-care-constant picture)."
+ },
+ "founder_eyes_lane": {
+  "contradictions_found": "NONE contradicting the lived read. One point TO NOTE: the founder says 'Task Force 12,000+ arrests = pure deterrence push' \u2014 the arrest mix (MLK50/ProPublica analysis, Oct 2025-Feb 2026) shows just over a quarter of 5,200+ sampled arrests were violent crimes; most were outstanding warrants + traffic-stop immigration arrests. That does not contradict the deterrence lens but sharpens it: the external op is deterrence-by-presence, not crime-clearing.",
+  "anchor_facts": "Murders fell 37% post-deployment (Marshals claim); overall crime -37% at one-year mark then plateaued; crime was ALREADY falling pre-deployment."
+ },
+ "confidence": "medium-high for the ratio series itself (all rows [Certain] from official book text layers, cross-checked between four books); medium for the inverse-surge VERDICT because the care lane includes Grants & Subsidies (mixed ARPA/pass-through attribution) and the external task-force spending magnitude is only bounded (~$100-175M state grants announced; federal costs un-itemized). Bounded-falsifier stated below.",
+ "falsifier": "If state MSTF spending (~$100-175M announced Oct 2025, annualized) plus un-itemized federal Marshals/NG costs are added to the FY26 cage lane, a blended city+state ratio of care 162.2M / cage ~430-490M would read ~0.33-0.38 \u2014 an inverse fingerprint WOULD appear at the blended level, but it is invisible in the CITY books and its federal component is un-sourced here. City-side-only test: the band 0.458-0.516 excludes FY23's 0.399 (Grants/ARPA-timing artifact); if the FY23 Grants-dip is a genuine care collapse rather than ARPA timing, the band widens and the FY20-22/24-26 tight core (0.458-0.516) still shows no cage directional break. The verdict 'no inverse fingerprint in city books' survives both.",
+ "data_quality_summary": "7 era rows; all dollar figures [Certain] from official budget books; no [Likely] rows were needed \u2014 prior-year comparison columns inside newer books replaced the old-book hunt for FY21-FY25; FY20 came from the FY22 book's own prior-year column. Only the external task-force cost magnitude is [Likely]-grade (bounded, not point-estimated).",
+ "source_files": {
+  "series_jsonl": "memphis_care_cage_series_v1.jsonl (7 rows)",
+  "fy26_book": "memphis_fy26_adopted.pdf (381pp) \u2014 GF function table p.121, all-funds p.114, AHF p.165, HUB p.163, GVIP p.279-280, MPD grants p.362, Fire p.302, Parks p.353-358, Libraries p.344-347",
+  "fy24_book": "memphis_fy24_adopted.pdf (300pp) \u2014 GF function table p.90 (FY22/FY23/FY24)",
+  "fy23_book": "memphis_fy23_adopted.pdf (416pp) \u2014 GF division table p.148 (FY21 actual), FY23 adopted bridge p.20",
+  "fy22_book": "memphis_fy22_adopted.pdf (206pp) \u2014 Exhibit D p.18 (FY20 actual)",
+  "pre_ingested": "memphis_fy26_row.json + memphis_kpis_v1.json (16 police KPI rows) + memphis_works_parks_kpis_v1.json"
+ },
+ "honest_gaps_global": [
+  "Jail = Shelby County (outside city budget) \u2014 not counted in cage lane; county jail spending not pulled this pass",
+  "Fire kept as flagged separate lane (service edge case), consistent with Boston-run convention",
+  "CIP capital outlays excluded (operating view only); GO-bond CIP $97.3M FY26 sits outside the ratio",
+  "FY19 and older books: not pulled \u2014 four books already span FY20-FY26 continuously with prior-year columns pre-replacing them; a FY19 data point could be added later from the FY21 book if requested",
+  "Web-search gateway unavailable this run (Nous tool gateway down) \u2014 task-force attribution grounded via Wikipedia API + in-book text scan instead"
+ ]
+}

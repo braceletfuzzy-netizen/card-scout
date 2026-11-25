@@ -1,0 +1,248 @@
+{
+ "_record": "housing_schools_output_fit_v1 (output-vector v2, family B: [B1] panel inputs -> B25070 rent-burden; [B2] panel inputs -> B15003 grad/state-share lane)",
+ "laws_held": [
+  "direction-class only, no causal claims",
+  "within-city FE",
+  "walk-forward t+1 BEFORE any call (gate 0.6)",
+  "LOCO hold-out city",
+  "zero fabricated numbers \u2014 every cell traces to maslow_joint_panel_v1.jsonl / edu_outputvector_v1.json / grad_lane files on disk"
+ ],
+ "gate_rule": "walk-forward t+1 pooled direction-class > 0.6 strictly => registration ELIGIBLE; <=0.6 => GATE-SHUT (nothing registers)",
+ "B1_rent_burden": {
+  "outcome_col": "rent_burden_50pct_plus_share",
+  "outcome_source": "maslow_joint_panel_v1.jsonl rent_burden_50pct_plus_share (ACS B25070 lanes pulled Nov-22; _b25070_pct.json 10-city 2024 cross-check on disk)",
+  "fit_t0": {
+   "spec": [
+    "poverty_rate",
+    "bachelors_pct",
+    "snap_receipt_share_pct"
+   ],
+   "betas": [
+    0.545,
+    -0.2,
+    -0.174
+   ],
+   "n_rows": 25,
+   "n_cities": 5,
+   "within_R2": 0.255,
+   "frame": {
+    "Cincinnati": 5,
+    "Detroit": 5,
+    "Memphis": 5,
+    "NYC": 5,
+    "St. Louis": 5
+   }
+  },
+  "walk_forward_tplus1": {
+   "pooled_direction_acc": 0.533,
+   "pooled_n": 15,
+   "per_city": {
+    "Cincinnati": {
+     "hits": 1,
+     "n": 3,
+     "acc": 0.333
+    },
+    "Detroit": {
+     "hits": 1,
+     "n": 3,
+     "acc": 0.333
+    },
+    "Memphis": {
+     "hits": 2,
+     "n": 3,
+     "acc": 0.667
+    },
+    "NYC": {
+     "hits": 1,
+     "n": 3,
+     "acc": 0.333
+    },
+    "St. Louis": {
+     "hits": 3,
+     "n": 3,
+     "acc": 1.0
+    }
+   }
+  },
+  "loco_t0": {
+   "Cincinnati": {
+    "direction_acc": 0.8,
+    "n": 5,
+    "betas_loco": [
+     0.535,
+     -0.215,
+     -0.122
+    ],
+    "train_rows": 20
+   },
+   "Detroit": {
+    "direction_acc": 0.6,
+    "n": 5,
+    "betas_loco": [
+     0.533,
+     0.207,
+     -0.055
+    ],
+    "train_rows": 20
+   },
+   "Memphis": {
+    "direction_acc": 0.6,
+    "n": 5,
+    "betas_loco": [
+     0.497,
+     -0.135,
+     -0.37
+    ],
+    "train_rows": 20
+   },
+   "NYC": {
+    "direction_acc": 0.8,
+    "n": 5,
+    "betas_loco": [
+     0.561,
+     -0.241,
+     -0.155
+    ],
+    "train_rows": 20
+   },
+   "St. Louis": {
+    "direction_acc": 0.6,
+    "n": 5,
+    "betas_loco": [
+     0.686,
+     -0.732,
+     -0.136
+    ],
+    "train_rows": 20
+   }
+  },
+  "loco_mean": 0.68
+ },
+ "B2_grad_lane": {
+  "outcome_col": "hs_grad_or_higher_share",
+  "outcome_source": "edu_outputvector_v1.json city_year_joint_rows \u2014 B15003 state-share rows joined to panel cities (Cincinnati->OH, Denver->CO, Detroit->MI, Memphis->TN, NYC->NY, St. Louis->MO); B15003 HS+ = L17..L25 sum law (categories mutually exclusive)",
+  "grain_honest_note": "outcome is STATE grain (ACS B15003 state share) joined to city-year rows \u2014 grain law flags this as state-share-informed, NOT a city graduation rate",
+  "fit_t0": {
+   "spec": [
+    "poverty_rate",
+    "bachelors_pct",
+    "snap_receipt_share_pct"
+   ],
+   "betas": [
+    0.014,
+    -0.047,
+    -0.076
+   ],
+   "n_rows": 20,
+   "n_cities": 5,
+   "within_R2": 0.398,
+   "frame": {
+    "Cincinnati": 4,
+    "Detroit": 4,
+    "Memphis": 4,
+    "NYC": 4,
+    "St. Louis": 4
+   }
+  },
+  "walk_forward_tplus1": {
+   "pooled_direction_acc": 0.6,
+   "pooled_n": 10,
+   "per_city": {
+    "Cincinnati": {
+     "hits": 2,
+     "n": 2,
+     "acc": 1.0
+    },
+    "Detroit": {
+     "hits": 2,
+     "n": 2,
+     "acc": 1.0
+    },
+    "Memphis": {
+     "hits": 0,
+     "n": 2,
+     "acc": 0.0
+    },
+    "NYC": {
+     "hits": 2,
+     "n": 2,
+     "acc": 1.0
+    },
+    "St. Louis": {
+     "hits": 0,
+     "n": 2,
+     "acc": 0.0
+    }
+   }
+  },
+  "loco_t0": {
+   "Cincinnati": {
+    "direction_acc": 1.0,
+    "n": 4,
+    "betas_loco": [
+     0.039,
+     -0.053,
+     -0.068
+    ],
+    "train_rows": 16
+   },
+   "Detroit": {
+    "direction_acc": 1.0,
+    "n": 4,
+    "betas_loco": [
+     0.008,
+     -0.061,
+     -0.088
+    ],
+    "train_rows": 16
+   },
+   "Memphis": {
+    "direction_acc": 0.5,
+    "n": 4,
+    "betas_loco": [
+     0.006,
+     -0.017,
+     -0.076
+    ],
+    "train_rows": 16
+   },
+   "NYC": {
+    "direction_acc": 0.75,
+    "n": 4,
+    "betas_loco": [
+     0.004,
+     -0.024,
+     -0.085
+    ],
+    "train_rows": 16
+   },
+   "St. Louis": {
+    "direction_acc": 0.75,
+    "n": 4,
+    "betas_loco": [
+     0.037,
+     -0.118,
+     -0.062
+    ],
+    "train_rows": 16
+   }
+  },
+  "loco_mean": 0.8
+ },
+ "verdicts": {
+  "B1_rent_burden": {
+   "wf_tplus1_pooled_direction_acc": 0.533,
+   "wf_n": 15,
+   "loco_mean": 0.68,
+   "verdict": "GATE-SHUT (nothing registers)",
+   "gate_threshold": 0.6
+  },
+  "B2_grad_lane": {
+   "wf_tplus1_pooled_direction_acc": 0.6,
+   "wf_n": 10,
+   "loco_mean": 0.8,
+   "verdict": "GATE-SHUT (nothing registers)",
+   "gate_threshold": 0.6
+  }
+ }
+}

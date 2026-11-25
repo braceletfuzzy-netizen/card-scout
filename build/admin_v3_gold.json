@@ -1,0 +1,132 @@
+[
+ {
+  "city": "San Antonio",
+  "n_dept": 50,
+  "admin_pct_v3_gold": 3.3,
+  "admin_usd": 136289608,
+  "basis": "dept-grain",
+  "counts": {
+   "admin": 10,
+   "frontline": 17,
+   "other": 22,
+   "excluded": 1
+  }
+ },
+ {
+  "city": "Jacksonville",
+  "n_dept": 39,
+  "admin_pct_v3_gold": 14.8,
+  "admin_usd": 488590881,
+  "basis": "dept-grain",
+  "counts": {
+   "admin": 7,
+   "frontline": 9,
+   "other": 23,
+   "excluded": 0
+  }
+ },
+ {
+  "city": "Atlanta",
+  "n_dept": 29,
+  "admin_pct_v3_gold": 41.1,
+  "admin_usd": 1233561948,
+  "basis": "dept-grain",
+  "counts": {
+   "admin": 7,
+   "frontline": 7,
+   "other": 15,
+   "excluded": 0
+  }
+ },
+ {
+  "city": "Austin",
+  "n_dept": 34,
+  "admin_pct_v3_gold": 8.2,
+  "admin_usd": 580300807,
+  "basis": "dept-grain",
+  "counts": {
+   "admin": 5,
+   "frontline": 16,
+   "other": 13,
+   "excluded": 0
+  }
+ },
+ {
+  "city": "Boston",
+  "n_dept": 80,
+  "admin_pct_v3_gold": 2.4,
+  "admin_usd": 109908387,
+  "basis": "dept-grain",
+  "counts": {
+   "admin": 12,
+   "frontline": 14,
+   "other": 53,
+   "excluded": 1
+  }
+ },
+ {
+  "city": "Fort Worth",
+  "n_dept": 21,
+  "admin_pct_v3_gold": 3.0,
+  "admin_usd": 33421863,
+  "basis": "dept-grain",
+  "counts": {
+   "admin": 3,
+   "frontline": 7,
+   "other": 11,
+   "excluded": 0
+  }
+ },
+ {
+  "city": "Houston",
+  "n_dept": 22,
+  "admin_pct_v3_gold": 4.5,
+  "admin_usd": 103705380,
+  "basis": "dept-grain",
+  "counts": {
+   "admin": 5,
+   "frontline": 8,
+   "other": 9,
+   "excluded": 0
+  }
+ },
+ {
+  "city": "Philadelphia",
+  "n_dept": 70,
+  "admin_pct_v3_gold": 19.5,
+  "admin_usd": 916063487,
+  "basis": "dept-grain",
+  "counts": {
+   "admin": 15,
+   "frontline": 13,
+   "other": 40,
+   "excluded": 2
+  }
+ },
+ {
+  "city": "Chicago",
+  "n_dept": 40,
+  "admin_pct_v3_gold": 5.0,
+  "admin_usd": 521291786,
+  "basis": "dept-grain",
+  "counts": {
+   "admin": 12,
+   "frontline": 12,
+   "other": 15,
+   "excluded": 1
+  }
+ },
+ {
+  "city": "Los Angeles",
+  "n_dept": 36,
+  "admin_pct_v3_gold": 9.7,
+  "admin_usd": 545316770,
+  "basis": "dept-grain",
+  "counts": {
+   "admin": 7,
+   "frontline": 9,
+   "other": 20,
+   "excluded": 0
+  }
+ }
+]

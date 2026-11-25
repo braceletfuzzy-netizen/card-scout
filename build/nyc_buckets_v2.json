@@ -1,0 +1,48 @@
+{
+ "city": "NYC",
+ "fiscal_year": 2026,
+ "source": "the BFA (adopt25/adopt25-bfa.pdf)",
+ "bucket_note": "the BFA = the 15-agency-volume (the HHS-heavy coverage); the citywide = the $115.07B-all-funds = the NOT-summed-here (the partial-instrument honest-flag)",
+ "buckets": {
+  "public_safety": {
+   "usd": 774602000,
+   "members": {
+    "Police Department": 758531000,
+    "Department Of Correction": 16071000
+   }
+  },
+  "infrastructure_environment": {
+   "usd": 197347000,
+   "members": {
+    "Department Of Environmental Protect.": 158402000,
+    "Department Of Transportation": 34332000,
+    "Department Of Sanitation": 702000,
+    "Department Of Parks And Recreation": 3911000
+   }
+  },
+  "human_services_health": {
+   "usd": 651771000,
+   "members": {
+    "Admin For Children's Services": 227260000,
+    "Department Of Health And Mental Hygiene": 156996000,
+    "Department Of Social Services": 67590000,
+    "Department Of Homeless Services": 8575000,
+    "Department For The Aging": 47584000,
+    "Department Of Youth & Community Dev": 143766000
+   }
+  },
+  "housing": {
+   "usd": 79979000,
+   "members": {
+    "Housing Preservation And Development": 79979000
+   }
+  },
+  "admin_general_econ": {
+   "usd": 149530000,
+   "members": {
+    "Department Of Finance": 89990000,
+    "Department Of Small Business Services": 59540000
+   }
+  }
+ }
+}

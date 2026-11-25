@@ -1,0 +1,56 @@
+{
+ "_record": "lane10_indenture_frame_v1",
+ "built": "2026-11-24",
+ "built_by": "KNOCKOUT-BATCH-2 LANE-10 subagent (indenture-frame; policy_associations_v1 rank-14, peer_review_scan_v13 'no peer-reviewed operationalization of the indenture structure' — this build runs the FIRST keyless route-verification pass for the debt/cohort lanes per one-pager #8 G1)",
+ "laws": [
+  "direction-class only, no causal claims",
+  "honest-null = routes-tried-no-capture, never a placeholder (TX/LA precedent; the founder's no-fabricated-dollars law)",
+  "the no-vendor law: find the keyless path or log the null — three routes probed, one CAPTURED",
+  "format-lock: matches policy_associations_v1 item structure + axis_availability_v1 registry conventions"
+ ],
+ "route_verification_pass": {
+  "route_1_census_api": "DOWN-WALLED: api.census.gov returns 'Missing Key' header (X-DataWebAPI-KeyError: 1) keyless — matches the lane-4 session's census-wall result. ACS student-loan-debt table (S2508-class) NOT capturable keyless. [honest-null]",
+  "route_2_cfpl_soda": "DOWN: data.consumerfinance.gov metadata endpoint serves a Salesforce shell, not Socrata — CFPB debt-per-zip tables NOT capturable keyless this pass. [honest-null; matches axis_availability_v1 Q1 medical_debt null]",
+  "route_3_ny_fed_ccp": "CAPTURED: www.newyorkfed.org CCP/Equifax files are KEYLESS and current: (a) HHD_C_Report_2026Q3.xlsx (968,678 bytes, November 2026 report: national quarterly composition 2003Q1-2026Q3, state per-capita composition + delinquency-status 2026Q3, 90+-late-by-state quarterly series 2003Q1-2026Q3, and student-loan 90+-delinquency TRANSITIONS BY AGE 2000Q1-2026Q3); (b) county_report_by_year.xlsx (1.66MB archive: population/auto/creditcard/mortgage + delinquency sheets by county-year 4Q1999-4Q2011, 2,225 county rows); (c) area_report_by_year.xlsx (state per-capita + delinquency 1999-2010). The named NY-Fed-class route VERIFIED — upgrades axis_availability_v1 Q2 debt_arc from NULL to CAPTURED (state+county grain, annual archive + current quarterly).",
+  "files_banked": ["_lane10_HHD_C_Report_2026Q3.xlsx", "_lane10_county_report_by_year.xlsx", "_lane10_area_report_by_year.xlsx"]
+ },
+ "capture_summary": {
+  "student_loan_balance_national": "240.7B (2003Q1) -> 1,655.7B (2026Q3); peaked share-of-total 9.7% (2010s), now 8.7% — the 6.9x growth arc banked quarterly (95 quarters)",
+  "sl_90plus_transition_by_age": "the no-exit/wage-capture mechanic arc, quarterly by cohort (18-29/30-39/40-49/50+), 2000Q1-2026Q3 (107 quarters): 40-49 cohort ran the deepest transition (17.4% in 2000Q1), young-cohort 5.5-12.1% through the arc, 2026Q3 18-29 at 5.5% — banked series",
+  "state_debt_delinquency_2026Q3": "12-state/US block: per-capita composition (student-loan thousands: NJ 6.77, PA 6.68, NY 6.15 — the SL-burden leaders are NOT the high-total-debt states) + delinquency-status-of-balance splits (current/30/60/90/120+/derogatory) per state",
+  "county_archive": "1999-2011 county-year grain for 4 debt classes + 3 delinquency classes (pre-2012 window only)"
+ },
+ "operationalization_test": {
+  "design": "the v13 named-mechanism frame (person-following obligation + wage capture + no bankruptcy exit) rendered as countables: SL share of total household debt (composition) + SL 90+ transition (no-exit stall) vs the on-disk civic-outcome lanes (NRI SMHA per-capita FY2024; CDC Mapping-IOV TTM suicide/homicide; BRFSS depression %) at the state grain where the joins exist",
+  "cells": {
+   "SL_share_vs_SMHA_spend_pc": {"spearman": 0.424, "n": 11},
+   "SL_share_vs_suicide_rate": {"spearman": -0.164, "n": 11},
+   "SL_share_vs_homicide_rate": {"spearman": 0.091, "n": 11},
+   "SL_percapita_vs_BRFSS_depression_pct": {"spearman": -0.187, "n": 11},
+   "SL_percapita_vs_BRFSS_isolation": {"spearman": -0.006, "n": 10}
+  },
+  "verdict": "HONEST-NULL on the outcome joins (n=11 big-state block, all |rho| < 0.43, no pre-registered direction survives): the 12-state CCP publication block does NOT support the naive indenture->civic-harm cross-section, and SL-burden states skew toward LOWER BRFSS-depression (wrong-sign, weak). The founder's macro-arithmetic is NOT countable at this grain — the join-block is the honest first read, not a fake-confirm.",
+  "limitations": [
+   "11-state block (CCP state pages publish 11 states + US only) — thin, direction-class only",
+   "county-grain student-debt (the full CCP panel) sits behind the NY Fed's restricted microdata — only the 1999-2011 archive covers county-year, and it has no student-loan-by-county sheet (pre-2012 SL split absent)",
+   "BRFSS depression = ever-diagnosed prevalence, not cohort-specific indenture-holder distress"
+  ]
+ },
+ "the_frame_made_countable": {
+  "what_the_first_countable_says": "the indenture signature IS capturable keyless: composition (SL share) + stall (90+ transition) + cohort (by-age arms) — three separate sheets, all quarterly, all one file. What is NOT capturable keyless: the outcome join at city/county grain (CFPB shell; census wall). The lane therefore ships ROUTE-CAPTURED on the exposure side with honest-nulls on the first outcome joins.",
+  "implication_for_grid": "axis_availability_v1's Q1/Q2 debt rows were NULL-by-named-route-only; this pass upgrades: NY-Fed state+county debt = CAPTURED (partially: state current + county archive to 2011), CFPB medical-debt and Census S2508 = honest-nulls re-confirmed. quadrants_spec_v1 G1's 'likely near-zero cash IF keyless routes exist' resolves TRUE for the NY-Fed half."
+ },
+ "honest_nulls": [
+  "Census API S2508 (debt-status ACS): keyless wall (missing_key) — re-confirmed",
+  "CFPB data.consumerfinance.gov: Salesforce shell, no Socrata layer — medical-debt per-zip remains NULL",
+  "12-state CCP block: only big-state publication subset keyless; microdata behind registration"
+ ],
+ "input_artifacts": {
+  "nyfed_ccp_2026q3": "_lane10_HHD_C_Report_2026Q3.xlsx (Nov 2026 report, 968KB, pages 3/21/22/28/32-40 parsed)",
+  "county_archive_1999_2011": "_lane10_county_report_by_year.xlsx (1.66MB)",
+  "state_archive_1999_2010": "_lane10_area_report_by_year.xlsx (129KB, Layout+Data sheets)",
+  "brfss_totals": "_lane10_brfss_totals.json (re-pull with area_abbr, 1,086 rows)",
+  "outcome_lane_reused": "smha_funding_null_v1.json (NRI Table 1) + _lane5_state_raw.json (CDC fpsi-y8tj)"
+ },
+ "verdict": "ROUTE-VERIFIED + CAPTURED on the exposure side (NY-Fed CCP keyless: national 95-quarter SL arc, by-age no-exit arc 107 quarters, 12-state per-capita/delininquency block); OUTCOME JOINS honest-null at n=11 (all |rho|<0.43, no direction claim). The indenture-frame moves from 'no operationalization' to 'three-mechanic countable banked; civic-join honest-null at the first honest read.'"
+}

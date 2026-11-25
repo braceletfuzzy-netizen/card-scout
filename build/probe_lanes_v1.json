@@ -1,0 +1,37 @@
+[
+ {
+  "url": "https://data.louisvilleky.gov/",
+  "status": 200,
+  "head": "<!DOCTYPE html><html lang=\"en-us\"><head>\n    <title>Louisville Kentucky Open Data</title><meta name=\"twitter:title\" content=\"Louisville Kentucky Open Data\"><meta property=\"og:title\" content=\"Louisville Kentucky Open Data\"><meta name=\"description\" content=\"Explore our open data and tools, and use it build insights of your own.\"><meta name=\"twitter:description\" content=\"Explore our open data and too"
+ },
+ {
+  "url": "https://data.louisvilleky.gov/api/3/catalog/v1?q=homicide",
+  "status": "ERR HTTPError: HTTP Error 404: Not Found"
+ },
+ {
+  "url": "https://opendata.louisvilleky.gov/",
+  "status": "ERR URLError: <urlopen error [Errno 11001] getaddrinfo failed>"
+ },
+ {
+  "url": "https://data.coj.net/",
+  "status": "ERR URLError: <urlopen error [Errno 11001] getaddrinfo failed>"
+ },
+ {
+  "url": "https://opendata.jacksonville.gov/",
+  "status": "ERR URLError: <urlopen error [Errno 11001] getaddrinfo failed>"
+ },
+ {
+  "url": "https://www.coj.net/",
+  "status": 200,
+  "head": "\r\n\r\n\r\n\r\n\r\n\r\n\r\n<!DOCTYPE html>\r\n\r\n<html lang=\"EN\">\r\n<head id=\"head\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\" />\r\n    <meta charset=\"UTF-8\" />\r\n    <link rel=\"icon\" href=\"/Content/Images/favicon.svg\" type=\"image/svg+xml\" />\r\n    <!--Styles-->\r\n    <link href=\"/_content/Kentico.Content.Web.Rcl/Content/Bundles/Public/systemPageComponents.min.css\" rel=\"stylesheet\" />\r\n\r"
+ },
+ {
+  "url": "https://jaxgis.coj.net/server/rest/services?f=json",
+  "status": "ERR URLError: <urlopen error timed out>"
+ },
+ {
+  "url": "https://services.arcgis.com/3NyIcTl9zGF7ETQc/arcgis/rest/services?f=json",
+  "status": 200,
+  "head": "{\"error\":{\"code\":400,\"message\":\"Invalid URL\",\"details\":[\"Invalid URL\"]}}"
+ }
+]

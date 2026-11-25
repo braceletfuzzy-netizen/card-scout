@@ -1,0 +1,252 @@
+{
+ "built": "2026-11-22",
+ "rule_set": {
+  "in": "(general government|office of the mayor|mayor\\u2019?s office|city council|board ",
+  "out": "(police|sheriff|fire|ems|emergency medical|sanitation|solid waste|street|transpo"
+ },
+ "cities": [
+  {
+   "city": "New Orleans",
+   "total": 1600000000,
+   "admin_v2": 1000000,
+   "admin_pct": 0.1,
+   "rows_classified": {
+    "admin": 1,
+    "frontline": 11,
+    "other": 5
+   },
+   "ambiguous_rows": [
+    "Juvenile Justice Intervention Center FY2026 adopted",
+    "Orleans Parish Communication District (911) FY2026 adopted",
+    "Department of Public Works FY2026 adopted",
+    "CAO public-safety overtime FY2026 adopted (total)",
+    "CAO overtime - other agencies FY2026"
+   ]
+  },
+  {
+   "city": "St. Louis",
+   "total": 1414518857,
+   "admin_v2": 132854328,
+   "admin_pct": 9.4,
+   "rows_classified": {
+    "admin": 11,
+    "frontline": 18,
+    "other": 54
+   },
+   "ambiguous_rows": [
+    "121 St. Louis Agency on Training & Development (SLATE)",
+    "124 Register",
+    "126 Civil Rights Enforcement Agency",
+    "134 Land Reutilization Authority NS",
+    "139 City Counselor",
+    "142 Community Development Agency (CDA)"
+   ]
+  },
+  {
+   "city": "Cincinnati",
+   "total": 1279450580,
+   "admin_v2": 147042040,
+   "admin_pct": 11.5,
+   "rows_classified": {
+    "admin": 7,
+    "frontline": 10,
+    "other": 11
+   },
+   "ambiguous_rows": [
+    "Clerk of Council",
+    "City Manager",
+    "Buildings & Inspections",
+    "Citizen Complaint Authority",
+    "Enterprise Services",
+    "Economic Inclusion"
+   ]
+  },
+  {
+   "city": "Boston",
+   "total": 4942400000,
+   "admin_v2": 0,
+   "admin_pct": null,
+   "rows_classified": {
+    "admin": 0,
+    "frontline": 1,
+    "other": 14
+   },
+   "ambiguous_rows": [
+    "City Appropriations (all city depts excl BPS/BPHC)",
+    "Boston Public Health Commission",
+    "Boston School Department (BPS)",
+    "Reserve for Collective Bargaining",
+    "Other Post-Employment Benefits",
+    "Total Appropriations subtotal"
+   ]
+  },
+  {
+   "city": "Atlanta",
+   "total": 3002085354,
+   "admin_v2": 1150766371,
+   "admin_pct": 38.3,
+   "rows_classified": {
+    "admin": 1,
+    "frontline": 6,
+    "other": 5
+   },
+   "ambiguous_rows": [
+    "Public Works",
+    "Information Management",
+    "Executive Offices",
+    "ALL OTHER (19 depts)",
+    "GENERAL FUND subtotal"
+   ]
+  },
+  {
+   "city": "Austin",
+   "total": 6344246000,
+   "admin_v2": 0,
+   "admin_pct": null,
+   "rows_classified": {
+    "admin": 0,
+    "frontline": 2,
+    "other": 7
+   },
+   "ambiguous_rows": [
+    "General Fund",
+    "General Fund + Enterprise Reserve Funds",
+    "Internal Service Funds",
+    "Special Revenue Funds (Hotel/Motel Tax, Econ Dev)",
+    "Debt Retirement Funds",
+    "Less inter-fund transfers"
+   ]
+  },
+  {
+   "city": "San Antonio",
+   "total": 4421957497,
+   "admin_v2": 1400000000,
+   "admin_pct": 31.7,
+   "rows_classified": {
+    "admin": 1,
+    "frontline": 1,
+    "other": 6
+   },
+   "ambiguous_rows": [
+    "General Fund",
+    "General Fund service delivery (excl reserves)",
+    "General Fund public-safety share (64.9% of GF)",
+    "General Fund revenue: property tax",
+    "General Fund revenue: sales tax",
+    "General Fund revenue: CPS Energy"
+   ]
+  },
+  {
+   "city": "Jacksonville",
+   "total": 3516195862,
+   "admin_v2": 0,
+   "admin_pct": null,
+   "rows_classified": {
+    "admin": 0,
+    "frontline": 0,
+    "other": 6
+   },
+   "ambiguous_rows": [
+    "General Funds (net)",
+    "Capital Project Funds",
+    "Special Revenue Funds",
+    "Enterprise Funds",
+    "Internal Service Funds",
+    "Pension Trust Funds"
+   ]
+  },
+  {
+   "city": "Fort Worth",
+   "total": 3324976954,
+   "admin_v2": 0,
+   "admin_pct": null,
+   "rows_classified": {
+    "admin": 0,
+    "frontline": 7,
+    "other": 5
+   },
+   "ambiguous_rows": [
+    "General Fund",
+    "Debt Service Funds",
+    "Internal Service Funds",
+    "Special Revenue Funds",
+    "Fiduciary Funds"
+   ]
+  },
+  {
+   "city": "Houston",
+   "total": 7500000000,
+   "admin_v2": 0,
+   "admin_pct": null,
+   "rows_classified": {
+    "admin": 0,
+    "frontline": 2,
+    "other": 5
+   },
+   "ambiguous_rows": [
+    "General Fund total available resources",
+    "General Fund total revenue+other sources",
+    "GF Public Safety",
+    "GF Development & Maintenance Services",
+    "GF Human & Cultural Services"
+   ]
+  },
+  {
+   "city": "Philadelphia",
+   "total": 6842559000,
+   "admin_v2": 0,
+   "admin_pct": null,
+   "rows_classified": {
+    "admin": 0,
+    "frontline": 0,
+    "other": 10
+   },
+   "ambiguous_rows": [
+    "General Fund Total Obligations (adopted)",
+    "Personal Services (payroll)",
+    "Total Employee Benefits",
+    "Purchase of Services",
+    "Materials, Supplies & Equipment",
+    "Contributions, Indemnities etc"
+   ]
+  },
+  {
+   "city": "Los Angeles",
+   "total": 14848242440,
+   "admin_v2": 6875672709,
+   "admin_pct": 46.3,
+   "rows_classified": {
+    "admin": 3,
+    "frontline": 10,
+    "other": 8
+   },
+   "ambiguous_rows": [
+    "Total-Departmental",
+    "Total-Non Departmental",
+    "GRAND TOTAL (Salaries+Expenses+Equipment+Special)",
+    "TRANO (Tax & Rev Anticipation Notes, non-dept)",
+    "Special Parking Revenue Fund",
+    "Prop A Local Transit Assistance"
+   ]
+  },
+  {
+   "city": "Chicago",
+   "total": 18668568460,
+   "admin_v2": 8190935451,
+   "admin_pct": 43.9,
+   "rows_classified": {
+    "admin": 1,
+    "frontline": 11,
+    "other": 10
+   },
+   "ambiguous_rows": [
+    "Total All Functions (gross incl deductions/transfers)",
+    "Deductions & Transfers",
+    "NET TOTAL ALL FUNCTIONS",
+    "Corporate Fund",
+    "Federal Grant Fund",
+    "State Grant Fund"
+   ]
+  }
+ ]
+}

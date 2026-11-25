@@ -1,0 +1,11 @@
+{
+ "flip_era": "No 1990s care-ratio break detectable. Consistent series (care = parks+libs+health; cage = police, city lines only): 1992 = 0.56 (Census year, full coverage), 1998 = 0.36, 1999 = 0.33, 2025 anchor = 0.06. Direction is DOWN not up: through Renaissance-II (1994-99) police grew $57.5M->$69.8M while parks fell $19.6M->$10.6M and library fell out of the city's visible lines. The apparent 1992->1998 'break' down partly reflects annual-survey coverage loss (library + welfare lines go dark), but the police-side growth is real.",
+ "ratio_series": {
+  "1992": 0.56,
+  "1998": 0.36,
+  "1999": 0.33,
+  "2025 (anchor, police-only cage)": 0.06
+ },
+ "confidence": "Medium \u2014 1992 data is Census-of-Governments high-quality, full coverage. 1998/99 annual-survey partial. Modern anchor only has 2025-actual for police/fire/parks lines, and no library line city-side.",
+ "falsifier": "If a future find puts city-wide 1980s Pittsburgh budget with same code-level breakdown (Census of Governments 1982 or 1987 city files), and 1980s care/cage matches or exceeds 1998-99 values, the \"care ratio break during Renaissance-II\" hypothesis is dead. Best candidates to break the deadlock: Census of Governments 1982 & 1987 city files, or Pittsburgh PA Annual Financial Report 1980s (city controller, archived)."
+}

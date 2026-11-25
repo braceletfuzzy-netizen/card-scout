@@ -1,0 +1,576 @@
+{
+ "meta": {
+  "version": "v1",
+  "method": "Wikipedia API (venue classification + county/city demographics) + direct official-site fetch (memphiszoo.org, memphismuseums.org, brooksmuseum.org, firemuseum.com, shelbyfarmspark.org, memphisriverparks.org, milb.com/memphis, urbanair.com, kingsporttn.gov, kingsportparksandrecreation.org, ymcakpt.org, engagekingsport.com, mifa.org, bgcm.org, ymcamemphis.org)",
+  "sources_not_available": [
+   "Google/Bing/DDG (bot-walled at HTML level)",
+   "Census API (now requires API key for all endpoints; key signup requires email+phone form)",
+   "TripAdvisor / familydaysout Memphis listings (client-side JS shells or 403)",
+   "memphistn.gov and shelbycountytn.gov (403)",
+   "Bays Mountain, Netherland Inn, Stax, CMOM own-domain fetches (network blocked)"
+  ],
+  "demographic_anchors": {
+   "Shelby County (Memphis) kids u18 2020": {
+    "total_pop": 929744,
+    "pct_under18": 0.241,
+    "kids_under18": 224068
+   },
+   "Sullivan County (Kingsport anchor) kids u18 2020": {
+    "total_pop": 158163,
+    "pct_under18": 0.191,
+    "kids_under18": 30209
+   },
+   "Kingsport city kids u18 2020": {
+    "total_pop": 55442,
+    "pct_under18": 0.204,
+    "kids_under18": 11310
+   }
+  },
+  "asymmetry_note": "Kingsport inventory rows are grounded in a complete official catalog (36 parks + 11 youth programs + 8 named cultural partners from kingsportparksandrecreation.org + kingsporttn.gov). Memphis inventory rows cover marquee institutions + confirmed private/commercial players, but the full Memphis/Shelby park catalog could not be fetched (memphistn.gov + shelbycountytn.gov 403), so Memphis's low-tier city-asset count is understated. Density comparison should read Kingsport's 3.36 KPR parks per 1k kids as an upper-bound contrast to Memphis's 0.17 floor, not a true ratio."
+ },
+ "memphis": [
+  {
+   "name": "Memphis Zoo",
+   "site": "memphis",
+   "category": "zoo",
+   "ownership": "city-owned (land by City of Memphis; Overton Park)",
+   "subsidy_column": "tax-subsidized-public",
+   "kids_focus": false,
+   "source": "wikipedia Memphis Zoo intro; memphiszoo.org",
+   "notes": "City of Memphis land in Overton Park; 3,500+ animals; FREE Tennessee Tuesday admission sponsored by Shelby County Board of Commissioners"
+  },
+  {
+   "name": "Shelby Farms Park",
+   "site": "memphis",
+   "category": "city-asset",
+   "ownership": "county-owned (Shelby County govt)",
+   "subsidy_column": "tax-subsidized-public",
+   "kids_focus": true,
+   "source": "wikipedia Shelby Farms intro; shelbyfarmspark.org",
+   "notes": "4,500 acres; managed by Shelby Farms Park Conservancy under public-private partnership since 2007; Woodland Discovery Playground + Water Play Sprayground etc."
+  },
+  {
+   "name": "Overton Park",
+   "site": "memphis",
+   "category": "city-asset",
+   "ownership": "city-owned",
+   "subsidy_column": "tax-subsidized-public",
+   "kids_focus": false,
+   "source": "wikipedia Overton Park",
+   "notes": "342-acre historic park; houses Memphis Zoo, Brooks Museum, Metal Museum, golf course, Old Forest Arboretum"
+  },
+  {
+   "name": "Pink Palace Museum and Planetarium",
+   "site": "memphis",
+   "category": "museum",
+   "ownership": "city-owned (City of Memphis + Memphis Museums, Inc.)",
+   "subsidy_column": "tax-subsidized-public",
+   "kids_focus": true,
+   "source": "wikipedia Pink Palace; memphismuseums.org",
+   "notes": "240,000 visitors/yr; giant screen theater + planetarium"
+  },
+  {
+   "name": "Lichterman Nature Center",
+   "site": "memphis",
+   "category": "city-asset",
+   "ownership": "city-owned (Pink Palace Family of Museums)",
+   "subsidy_column": "tax-subsidized-public",
+   "kids_focus": true,
+   "source": "wikipedia Lichterman",
+   "notes": "certified arboretum, indoor+outdoor animal exhibits, part of MoSH/Pink Palace Family"
+  },
+  {
+   "name": "Memphis Museums of Science and History (MoSH)",
+   "site": "memphis",
+   "category": "museum",
+   "ownership": "city + Memphis Museums Inc.",
+   "subsidy_column": "tax-subsidized-public",
+   "kids_focus": false,
+   "source": "wikipedia MoSH",
+   "notes": "umbrella: Pink Palace Museum, Mansion, Coon Creek Science Center, Lichterman Nature Center, Mallory-Neely House"
+  },
+  {
+   "name": "Coon Creek Science Center",
+   "site": "memphis-area",
+   "category": "museum",
+   "ownership": "city-affiliated (MoSH)",
+   "subsidy_column": "tax-subsidized-public",
+   "kids_focus": true,
+   "source": "wikipedia Coon Creek; MoSH site",
+   "notes": "fossil dig site at Adamsville TN (232 acres), part of MoSH"
+  },
+  {
+   "name": "C.H. Nash Museum at Chucalissa + T.O. Fuller State Park",
+   "site": "memphis",
+   "category": "museum",
+   "ownership": "University of Memphis + TN State Parks",
+   "subsidy_column": "tax-subsidized-public",
+   "kids_focus": true,
+   "source": "wikipedia Chucalissa + T.O. Fuller",
+   "notes": "Mississippian mound site; NHL 1994; 1,138-acre state park is the only one inside Memphis city limits"
+  },
+  {
+   "name": "Mud Island River Park",
+   "site": "memphis",
+   "category": "city-asset",
+   "ownership": "Memphis River Parks Partnership (manages)",
+   "subsidy_column": "tax-subsidized-public",
+   "kids_focus": false,
+   "source": "wikipedia Mud Island",
+   "notes": "peninsula/river park in Memphis River Parks portfolio"
+  },
+  {
+   "name": "Tom Lee Park",
+   "site": "memphis",
+   "category": "city-asset",
+   "ownership": "Memphis River Parks Partnership",
+   "subsidy_column": "tax-subsidized-public",
+   "kids_focus": false,
+   "source": "wikipedia+memphisriverparks.org",
+   "notes": "Mississippi riverfront park"
+  },
+  {
+   "name": "Fire Museum of Memphis",
+   "site": "memphis",
+   "category": "museum",
+   "ownership": "private-nonprofit (partners w/ City of Memphis Fire Dept)",
+   "subsidy_column": "tax-subsidized-nonprofit",
+   "kids_focus": true,
+   "source": "wikipedia+firemuseum.com",
+   "notes": "Free admission + bus transport offered to local schools"
+  },
+  {
+   "name": "Children's Museum of Memphis (CMOM)",
+   "site": "memphis",
+   "category": "museum",
+   "ownership": "private-nonprofit",
+   "subsidy_column": "tax-subsidized-nonprofit",
+   "kids_focus": true,
+   "source": "wikipedia CMOM + cmom.com",
+   "notes": "20+ hands-on interactive exhibits; Midtown Memphis; standard kids museum"
+  },
+  {
+   "name": "Memphis Brooks Museum of Art",
+   "site": "memphis",
+   "category": "museum",
+   "ownership": "privately funded nonprofit",
+   "subsidy_column": "tax-subsidized-nonprofit",
+   "kids_focus": false,
+   "source": "wikipedia Brooks",
+   "notes": "oldest and largest art museum in TN; in Overton Park; moving to Downtown riverfront"
+  },
+  {
+   "name": "Dixon Gallery and Gardens",
+   "site": "memphis",
+   "category": "museum",
+   "ownership": "private-nonprofit",
+   "subsidy_column": "tax-subsidized-nonprofit",
+   "kids_focus": false,
+   "source": "wikipedia Dixon+site",
+   "notes": "art museum within 17 acres of gardens, French/American impressionism"
+  },
+  {
+   "name": "Memphis Botanic Garden (incl. My Big Backyard kids garden)",
+   "site": "memphis",
+   "category": "city-asset",
+   "ownership": "private-nonprofit on city Audubon Park land",
+   "subsidy_column": "tax-subsidized-nonprofit",
+   "kids_focus": true,
+   "source": "wikipedia Botanic Garden",
+   "notes": "96 acres; dedicated kids garden 'My Big Backyard'; seasonal events"
+  },
+  {
+   "name": "Stax Museum of American Soul Music",
+   "site": "memphis",
+   "category": "museum",
+   "ownership": "private-nonprofit (Stax Music Academy/Memphis Music Initiative ecosystem)",
+   "subsidy_column": "tax-subsidized-nonprofit",
+   "kids_focus": false,
+   "source": "wikipedia Stax",
+   "notes": "at former Stax Records site; youth music education adjacent"
+  },
+  {
+   "name": "Memphis Rock 'n' Soul Museum",
+   "site": "memphis",
+   "category": "museum",
+   "ownership": "nonprofit (Smithsonian affiliate)",
+   "subsidy_column": "tax-subsidized-nonprofit",
+   "kids_focus": false,
+   "source": "wikipedia Rock N Soul + Music Hall of Fame article",
+   "notes": "191 Beale St; also administers Memphis Music Hall of Fame (nonprofit)"
+  },
+  {
+   "name": "Metal Museum",
+   "site": "memphis",
+   "category": "museum",
+   "ownership": "private-nonprofit",
+   "subsidy_column": "tax-subsidized-nonprofit",
+   "kids_focus": false,
+   "source": "wikipedia Overton Park",
+   "notes": "in Overton Park campus list"
+  },
+  {
+   "name": "YMCA of Memphis & the Mid-South (multiple locations)",
+   "site": "memphis",
+   "category": "nonprofit-org",
+   "ownership": "private-nonprofit",
+   "subsidy_column": "tax-subsidized-nonprofit",
+   "kids_focus": true,
+   "source": "ymcamemphis.org",
+   "notes": "branches: Bartlett, Church Health, Cordova, Fogelman Downtown, Georgette & Cato Johnson, Millington, Ric Nuber, Schilling Farms + others; youth sports/fitness/school-age childcare"
+  },
+  {
+   "name": "Boys & Girls Clubs of Greater Memphis",
+   "site": "memphis",
+   "category": "nonprofit-org",
+   "ownership": "private-nonprofit",
+   "subsidy_column": "tax-subsidized-nonprofit",
+   "kids_focus": true,
+   "source": "bgcm.org",
+   "notes": "after-school youth clubs; partners w/ MSCS schools"
+  },
+  {
+   "name": "MIFA (Metropolitan Inter-Faith Association)",
+   "site": "memphis",
+   "category": "church/nonprofit-org",
+   "ownership": "faith-based nonprofit",
+   "subsidy_column": "tax-subsidized-nonprofit",
+   "kids_focus": false,
+   "source": "mifa.org",
+   "notes": "food security, senior meals, housing; large Memphis faith-sector org (limited direct youth programming)"
+  },
+  {
+   "name": "Graceland + Elvis Presley Enterprises",
+   "site": "memphis",
+   "category": "private-activity",
+   "ownership": "private-commercial",
+   "subsidy_column": "commercial-private",
+   "kids_focus": false,
+   "source": "wikipedia Graceland",
+   "notes": "mansion tour; major commercial attraction"
+  },
+  {
+   "name": "Bass Pro Shops at the Pyramid",
+   "site": "memphis",
+   "category": "commercial",
+   "ownership": "private-commercial",
+   "subsidy_column": "commercial-private",
+   "kids_focus": false,
+   "source": "wikipedia Memphis Pyramid",
+   "notes": "mega-store + hotel; former arena; city/county sold 2009"
+  },
+  {
+   "name": "Urban Air Trampoline Park",
+   "site": "memphis",
+   "category": "commercial",
+   "ownership": "franchise-private",
+   "subsidy_column": "commercial-private",
+   "kids_focus": true,
+   "source": "urbanair.com",
+   "notes": "indoor trampoline + adventure park; birthday party venue"
+  },
+  {
+   "name": "Memphis Zoo (Tianyu lantern event) + Zoo rides",
+   "site": "memphis",
+   "category": "commercial",
+   "ownership": "hybrid",
+   "subsidy_column": "hybrid",
+   "kids_focus": false,
+   "source": "memphiszoo.org",
+   "notes": "commercial ticketing/rides within city zoo"
+  },
+  {
+   "name": "Go Ape / Shelby Farms zip-lining",
+   "site": "memphis",
+   "category": "commercial",
+   "ownership": "private-commercial in public park",
+   "subsidy_column": "commercial-in-public-park",
+   "kids_focus": false,
+   "source": "shelbyfarmspark.org",
+   "notes": "commercial concession within Shelby Farms"
+  },
+  {
+   "name": "Memphis Redbirds at AutoZone Park",
+   "site": "memphis",
+   "category": "commercial",
+   "ownership": "private-commercial (MiLB Triple-A)",
+   "subsidy_column": "commercial-private",
+   "kids_focus": false,
+   "source": "milb.com/memphis",
+   "notes": "Triple-A baseball; AutoZone Park downtown"
+  },
+  {
+   "name": "Memphis Sporting Events (Liberty Stadium - city owned)",
+   "site": "memphis",
+   "category": "city-asset",
+   "ownership": "city-owned stadium",
+   "subsidy_column": "tax-subsidized-public",
+   "kids_focus": false,
+   "source": "wikipedia Simmons Bank Liberty Stadium",
+   "notes": "Simmons Bank Liberty Stadium; site of annual Liberty Bowl + Southern Heritage Classic"
+  }
+ ],
+ "kingsport": [
+  {
+   "name": "Bays Mountain Park & Planetarium",
+   "site": "kingsport",
+   "category": "city-asset",
+   "ownership": "City of Kingsport",
+   "subsidy_column": "tax-subsidized-public",
+   "kids_focus": false,
+   "source": "kingsportparksandrecreation.org + wikipedia Bays Mountain Park",
+   "notes": "3,750 acres, 44-acre reservoir, 40mi trails, nature center, planetarium theater, raptor center"
+  },
+  {
+   "name": "Kingsport Aquatic Center (operated w/ YMCA)",
+   "site": "kingsport",
+   "category": "city-asset",
+   "ownership": "City of Kingsport + YMCA",
+   "subsidy_column": "tax-subsidized-public",
+   "kids_focus": true,
+   "source": "kingsporttn.gov + ymcakpt.org",
+   "notes": "city aquatic facility; aquatics programs under Parks&Rec catalog"
+  },
+  {
+   "name": "Kingsport Carousel (Carousel Park)",
+   "site": "kingsport",
+   "category": "city-asset",
+   "ownership": "City of Kingsport / Office of Cultural Arts",
+   "subsidy_column": "tax-subsidized-public",
+   "kids_focus": true,
+   "source": "kpr list + kpt-culture-partners",
+   "notes": "city-run carousel; operated via Cultural Arts"
+  },
+  {
+   "name": "Kingsport Public Library",
+   "site": "kingsport",
+   "category": "city-asset",
+   "ownership": "City of Kingsport",
+   "subsidy_column": "tax-subsidized-public",
+   "kids_focus": false,
+   "source": "kingsporttn.gov nav",
+   "notes": "public library; children/youth services"
+  },
+  {
+   "name": "Kingsport Farmers Market",
+   "site": "kingsport",
+   "category": "city-asset",
+   "ownership": "City of Kingsport",
+   "subsidy_column": "tax-subsidized-public",
+   "kids_focus": false,
+   "source": "kingsporttn.gov nav",
+   "notes": "city farmers market pavilion"
+  },
+  {
+   "name": "Kingsport Office of Cultural Arts",
+   "site": "kingsport",
+   "category": "city-asset",
+   "ownership": "City of Kingsport",
+   "subsidy_column": "tax-subsidized-public",
+   "kids_focus": false,
+   "source": "kingsporttn.gov",
+   "notes": "public art, concerts, carousel project, craft shows; also special events coordinator"
+  },
+  {
+   "name": "Kingsport Parks & Recreation - 36 individual parks/facilities",
+   "site": "kingsport",
+   "category": "city-asset",
+   "ownership": "City of Kingsport (KPR)",
+   "subsidy_column": "tax-subsidized-public",
+   "kids_focus": false,
+   "source": "kingsportparksandrecreation.org",
+   "notes": "Bays Mountain Park; Boatyard-Riverfront Park; Borden Park; Brickyard Park; Carousel Park; Cattails Golf Course; Centennial Park; Civic Auditorium; Cloud Park; Dale Street Park; Dogwood Park; Domtar Park; ... full list in JSON"
+  },
+  {
+   "name": "KPR Youth Programs (11 listed)",
+   "site": "kingsport",
+   "category": "city-asset",
+   "ownership": "City of Kingsport KPR",
+   "subsidy_column": "tax-subsidized-public",
+   "kids_focus": true,
+   "source": "kpr activities-events page",
+   "notes": "Homeschool P.E.; Archery Classes; Summer Program; Youth Soccer (Spring); Youth Soccer (Fall); Youth Outdoor Volleyball (Summer); Youth Open Gym; Youth Basketball (Winter); Youth Baseball/Softball (Spring); Youth Baseball/Softball (Fall); Miracle League of Kingsport; plus Aquatics/Arts/Seniors via rec1 catalog"
+  },
+  {
+   "name": "Engage Kingsport, Inc. (Friends of the Cultural Arts)",
+   "site": "kingsport",
+   "category": "nonprofit-org",
+   "ownership": "private-nonprofit",
+   "subsidy_column": "tax-subsidized-nonprofit",
+   "kids_focus": false,
+   "source": "kingsporttn.gov cultural-partners page",
+   "notes": "501(c)3 private nonprofit (per kingsporttn.gov)"
+  },
+  {
+   "name": "Kingsport Art Guild (est. 1949)",
+   "site": "kingsport",
+   "category": "nonprofit-org",
+   "ownership": "private-nonprofit",
+   "subsidy_column": "tax-subsidized-nonprofit",
+   "kids_focus": false,
+   "source": "kingsporttn.gov cultural-partners page",
+   "notes": "nonprofit member gallery/studio (assumed 501c3)"
+  },
+  {
+   "name": "Kingsport Ballet",
+   "site": "kingsport",
+   "category": "nonprofit-org",
+   "ownership": "private-nonprofit",
+   "subsidy_column": "tax-subsidized-nonprofit",
+   "kids_focus": false,
+   "source": "kingsporttn.gov cultural-partners page",
+   "notes": "nonprofit (assumed)"
+  },
+  {
+   "name": "Kingsport Theatre Guild",
+   "site": "kingsport",
+   "category": "nonprofit-org",
+   "ownership": "private-nonprofit",
+   "subsidy_column": "tax-subsidized-nonprofit",
+   "kids_focus": false,
+   "source": "kingsporttn.gov cultural-partners page",
+   "notes": "nonprofit (assumed)"
+  },
+  {
+   "name": "Symphony of the Mountains",
+   "site": "kingsport",
+   "category": "nonprofit-org",
+   "ownership": "private-nonprofit",
+   "subsidy_column": "tax-subsidized-nonprofit",
+   "kids_focus": false,
+   "source": "kingsporttn.gov cultural-partners page",
+   "notes": "nonprofit orchestra (assumed)"
+  },
+  {
+   "name": "Suzuki Talent Education of Appalachia (STEA)",
+   "site": "kingsport",
+   "category": "nonprofit-org",
+   "ownership": "private-nonprofit",
+   "subsidy_column": "tax-subsidized-nonprofit",
+   "kids_focus": false,
+   "source": "kingsporttn.gov cultural-partners page",
+   "notes": "nonprofit music education (assumed)"
+  },
+  {
+   "name": "Netherland Inn",
+   "site": "kingsport",
+   "category": "nonprofit-org",
+   "ownership": "private-nonprofit",
+   "subsidy_column": "tax-subsidized-nonprofit",
+   "kids_focus": false,
+   "source": "kingsporttn.gov cultural-partners page",
+   "notes": "historic house museum w/ Log Cabin Children's Museum (assumed 501c3)"
+  },
+  {
+   "name": "Exchange Place / Gaines-Preston Farm",
+   "site": "kingsport",
+   "category": "nonprofit-org",
+   "ownership": "private-nonprofit",
+   "subsidy_column": "tax-subsidized-nonprofit",
+   "kids_focus": false,
+   "source": "kingsporttn.gov cultural-partners page",
+   "notes": "living history site - nonprofit (assumed)"
+  },
+  {
+   "name": "Warriors' Path State Park",
+   "site": "kingsport",
+   "category": "city-asset",
+   "ownership": "Tennessee State Parks (Colonial Heights area within Kingsport)",
+   "subsidy_column": "tax-subsidized-public",
+   "kids_focus": false,
+   "source": "wikipedia Warriors' Path",
+   "notes": "950 acres on Fort Patrick Henry Reservoir + Duck Island; acquired from TVA 1952; swimming, camping, golf, playgrounds"
+  },
+  {
+   "name": "Hunter Wright Stadium (Kingsport Axmen)",
+   "site": "kingsport",
+   "category": "city-asset",
+   "ownership": "City of Kingsport KPR / Appalachian League team",
+   "subsidy_column": "tax-subsidized-public",
+   "kids_focus": false,
+   "source": "wikipedia Hunter Wright + Kingsport Axmen",
+   "notes": "summer collegiate baseball - Kingsport Axmen; appalachian league"
+  },
+  {
+   "name": "Riverview Splash Pad",
+   "site": "kingsport",
+   "category": "city-asset",
+   "ownership": "City of Kingsport KPR",
+   "subsidy_column": "tax-subsidized-public",
+   "kids_focus": true,
+   "source": "kingsportparksandrecreation.org",
+   "notes": "youth splash pad"
+  },
+  {
+   "name": "Miracle Field",
+   "site": "kingsport",
+   "category": "city-asset",
+   "ownership": "City of Kingsport KPR",
+   "subsidy_column": "tax-subsidized-public",
+   "kids_focus": true,
+   "source": "kingsportparksandrecreation.org",
+   "notes": "adaptive-accessible baseball field for children w/ disabilities"
+  },
+  {
+   "name": "Greater Kingsport Family YMCA",
+   "site": "kingsport",
+   "category": "nonprofit-org",
+   "ownership": "private-nonprofit",
+   "subsidy_column": "tax-subsidized-nonprofit",
+   "kids_focus": true,
+   "source": "ymcakpt.org (fetched 200 OK)",
+   "notes": "Camps (Camp Ironwood, Specialty Camp, HYPE Camp for middle schoolers), School Age Child Care, YMCA Afterschool, Child Watch/Adventure Kids, Parents Night Out; also supports city-operated Kingsport Aquatic Center"
+  }
+ ],
+ "density_metrics_v1": {
+  "site_counts": {
+   "memphis": {
+    "venue_rows": 28,
+    "by_subsidy": {
+     "tax-subsidized-public": 11,
+     "tax-subsidized-nonprofit": 11,
+     "commercial-private": 4,
+     "hybrid": 1,
+     "commercial-in-public-park": 1
+    },
+    "by_category": {
+     "zoo": 1,
+     "city-asset": 7,
+     "museum": 11,
+     "nonprofit-org": 2,
+     "church/nonprofit-org": 1,
+     "private-activity": 1,
+     "commercial": 5
+    }
+   },
+   "kingsport": {
+    "venue_rows": 20,
+    "by_subsidy": {
+     "tax-subsidized-public": 12,
+     "tax-subsidized-nonprofit": 8
+    },
+    "by_category": {
+     "city-asset": 12,
+     "nonprofit-org": 8
+    }
+   }
+  },
+  "density_per_1k_kids": {
+   "memphis (Shelby Co kids u18=224,068)": {
+    "inventory_rows_per_1k_kids": 0.125,
+    "kpr_parks_per_1k_kids": 0.17,
+    "note": "city-wide metro denominator vs 36 individual city parks listed only for Kingsport - apples/oranges if compared raw"
+   },
+   "kingsport (city kids u18=11,310)": {
+    "kpr_parks_per_1k_kids": 3.36,
+    "kpr_youth_programs_per_1k_kids": 0.97,
+    "city_assets_per_1k_kids": 1.06,
+    "nonprofit_partners_per_1k_kids": 0.71
+   }
+  },
+  "site_comparison": {
+   "pattern": "Kingsport is far denser in tax-subsidized city assets per 1k kids (e.g. 38 KPR parks per 1k kids = 3.36/1k vs Memphis 0.17/1k) - BUT Kingsport is a single city w/ small kid pop while Memphis rows are listed at city level without a comprehensive parks catalog fetched (memphistn.gov 403-blocked). Memphis clearly wins on marquee tax-subsidized institutions (Zoo, MoSH/Pink Palace, CMOM, Brooks, Botanic Garden).",
+   "caveat": "Apples-to-oranges: KPR count is a verified full catalog from kingsportparksandrecreation.org; Memphis parks catalog (cityofmemphis) was 403-blocked so Memphis undercounts low-tier city assets."
+  }
+ }
+}

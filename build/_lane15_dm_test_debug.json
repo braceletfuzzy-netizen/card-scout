@@ -1,0 +1,48 @@
+{
+ "within_city_care_x_rate": {
+  "Boston": {
+   "n": 11,
+   "rho": -0.455
+  },
+  "Cincinnati": {
+   "n": 12,
+   "rho": -0.137
+  },
+  "Detroit": {
+   "n": 7,
+   "rho": -0.134
+  },
+  "Houston": {
+   "n": 6,
+   "rho": -0.257
+  },
+  "Memphis": {
+   "n": 6,
+   "rho": 0.189
+  },
+  "NYC": {
+   "n": 4,
+   "rho": 0.2
+  },
+  "New Orleans": {
+   "n": 10,
+   "rho": 0.627
+  },
+  "St. Louis": {
+   "n": 19,
+   "rho": -0.157
+  }
+ },
+ "by_group": {
+  "HIGH-DM": {
+   "cities": 4,
+   "mean_rho": 0.136,
+   "pooled_z": 0.33
+  },
+  "LOW-DM": {
+   "cities": 4,
+   "mean_rho": -0.167,
+   "pooled_z": -0.35
+  }
+ }
+}

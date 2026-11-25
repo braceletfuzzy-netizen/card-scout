@@ -1,0 +1,136 @@
+{
+  "flip_era": {
+    "primary": "2006-2011 recovery trough",
+    "detail": "Care/cage ratio bottomed at 0.095 in FY2006 (immediate post-Katrina trough, all care lines slashed while police/sheriff held) and then MORE THAN DOUBLED to 0.31 by FY2011 adopted budget — the Katrina-rebuild itself. Ratio then PLATEAUED (0.31 FY2017, 0.32 FY2019, 0.37 FY2022): the flip is a one-time structural reset that completed by ~FY2011-2013, not an ongoing drift. The 2006 trough is itself the sharpest single-year care-ratio break in the series (-27% vs FY2005, care cut harder than cage) — a catastrophe-printed anti-care break that the recovery then reversed, overshooting to ~2x the pre-storm ratio by 2011 (driven by Library Fund doubling, Parks & Parkways recovery, and post-2005 dedicated NORD/parkway millages visible in the FY2020 book)."
+  },
+  "ratio_series": [
+    {
+      "era": "pre-Katrina FY2004 actual",
+      "ratio": 0.1643,
+      "care_usd": 27520673,
+      "cage_usd": 167483935,
+      "basis": "GF, as-published in FY2011 book"
+    },
+    {
+      "era": "Katrina FY2005 actual",
+      "ratio": 0.1307,
+      "care_usd": 23847524,
+      "cage_usd": 182494643,
+      "basis": "GF"
+    },
+    {
+      "era": "trough FY2006 actual",
+      "ratio": 0.0948,
+      "care_usd": 13091642,
+      "cage_usd": 138117208,
+      "basis": "GF"
+    },
+    {
+      "era": "early-recovery FY2007 actual",
+      "ratio": 0.1305,
+      "care_usd": 17501756,
+      "cage_usd": 134139592,
+      "basis": "GF"
+    },
+    {
+      "era": "mid-recovery FY2009 actual",
+      "ratio": 0.166,
+      "care_usd": 26771726,
+      "cage_usd": 161274483,
+      "basis": "GF"
+    },
+    {
+      "era": "recovery-peak FY2011 adopted",
+      "ratio": 0.3108,
+      "care_usd": 50300154,
+      "cage_usd": 161827563,
+      "basis": "ALL FUNDS (GF+non-GF), from adopted book"
+    },
+    {
+      "era": "stable-era FY2017 adopted",
+      "ratio": 0.3129,
+      "care_usd": 71178991,
+      "cage_usd": 227469549,
+      "basis": "ALL FUNDS"
+    },
+    {
+      "era": "stable-era FY2019 adopted",
+      "ratio": 0.3181,
+      "care_usd": 85759647,
+      "cage_usd": 269563243,
+      "basis": "ALL FUNDS"
+    },
+    {
+      "era": "stable/COVID-era FY2022 adopted",
+      "ratio": 0.3651,
+      "care_usd": 108051559,
+      "cage_usd": 295935695,
+      "basis": "ALL FUNDS"
+    },
+    {
+      "era": "modern FY2026 adopted (press)",
+      "ratio": null,
+      "care_usd": 20600000,
+      "cage_usd": 169800000,
+      "basis": "press-labeled, INCOMPLETE care lane — not comparable"
+    }
+  ],
+  "ledger_class": {
+    "classification": "city-operates-police, sheriff-operates-jail (hybrid cage ledger; unique among Band-A cities)",
+    "details": [
+      "NOPD is fully city-run (like most cities, unlike STL where PD sits in a separate agency) — NOPD is the largest single cage line in every year of the series.",
+      "The Orleans jail (Orleans Justice Center / formerly Orleans Parish Prison) is run by the ORLEANS PARISH SHERIFF; the city pays a per-diem appropriation published as the 'Criminal Sheriff' line every year: 2004 actual $35.1M -> 2011 adopted $22.6M -> 2017 adopted $44.7M -> 2019 adopted $53.2M -> 2022 adopted $55.7M. This is city MONEY but not city OPERATIONS — it behaves like Memphis's state-cage external-money class on the money axis while sitting inside the city GF ledger.",
+      "Courts (Criminal District, Municipal+Traffic, Juvenile, Clerk, DA) are partial-external constitutional offices inside the GF — included in cage per spec.",
+      "Care lane is structurally city-heavy on operations but partly millage-dedicated (Library Fund 4.91 mills, NORD/Parkway dedicated mills 2.79 combined in FY2020 book) — care money is OWN-Raised, not external; the FEDERAL external-money class shows up in the FEMA Fund and CDBG (HUD) lanes funding capital recovery (libraries/parks rebuilt post-Katrina — e.g., FY2020 book lists a standing FEMA Fund as one of five major funds; the whole $2.1B FY2025-adopted capital book is FEMA/recovery-capital shaped).",
+      "Internal-money-class evidence: dedicated public-safety millages (6.40 police/fire double-triple platoon + 5.26 police + 7.71 fire in FY2020 book) means cage is ALSO partly tax-dedicated, muting discretionary-flip readings — both lanes carry dedicated mills, care via Library/NORD/Parkway, cage via police/fire platoon mills."
+    ]
+  },
+  "confidence": {
+    "overall": "HIGH for 2004-2022 series (official adopted-book tables, page-cited), PRESS-LABELED-ONLY for FY2026 (no FY26 adopted book posted on nola.gov as of run date; press figures used, care lane incomplete, ratio suppressed to null by design)",
+    "per_point": [
+      {
+        "era": "2004/2005/2006/2007/2009",
+        "confidence": "Certain-as-published",
+        "basis": "official FY2011 book Statement of Expenditures, pdf-page 62 (doc p52); GF-basis historicals"
+      },
+      {
+        "era": "FY2011",
+        "confidence": "Certain-as-published",
+        "basis": "official FY2011 adopted book pdf-page 46 (doc p36), GF+NonGF dept tables; internal book total inconsistency (~$4.9M GF) flagged"
+      },
+      {
+        "era": "FY2017",
+        "confidence": "Certain-as-published",
+        "basis": "official FY2017 adopted budget pdf-page 77"
+      },
+      {
+        "era": "FY2019",
+        "confidence": "Certain-as-published",
+        "basis": "official FY2019 adopted book pdf-page 105"
+      },
+      {
+        "era": "FY2022",
+        "confidence": "Certain-as-published",
+        "basis": "official FY2022 adopted book pdf-pages 90-91 (doc p83-84)"
+      },
+      {
+        "era": "FY2024 (context only)",
+        "confidence": "Certain (total only)",
+        "basis": "FY2024 adopted book narrative pdf-page 104: total $1,566,194,315; dept table extraction deferred"
+      },
+      {
+        "era": "FY2026",
+        "confidence": "Likely (press)",
+        "basis": "band_a_ingestion_v1.json press-recorded adoption; total $1.6B; NOPD $162.0M, NOFD $132.5M, NORDC $19.4M, JJIC $7.8M, Council on Aging $1.2M"
+      }
+    ]
+  },
+  "falsifier": {
+    "claim": "Katrina reset printed a real, durable care-ratio break (care/cage flipped from ~0.16 pre-storm to ~0.31-0.37 across the whole 2011-2022 run)",
+    "falsified_if": [
+      "The 2004-2009 GF-basis columns are not comparable to the 2011+ all-funds columns — i.e., the apparent flip is a ledger-basis artifact. TEST: recompute FY2011 care/cage using GF-only columns (pdf-46 GF side only) vs pre-storm GF-only. GF-only FY2011 care = Recreation 8,002,700 + Parks 6,867,566 + Library 180,603 + Health 12,549,028 + HumSvc 2,727,542 = $30.3M vs pre-2004 care $27.5M — ratio barely moves pre-storm, so basis-flip alone CANNOT explain 0.31 vs 0.16: the flip survives the ledger-basis check (all-funds adds Library Fund $8.4M + Health $9.2M + HumSvc $1.3M = the difference; both add to CARE, not cage, so the flip is not an artifact).",
+      "Library Fund and NORD/Parkway dedicated mills were created/raised only in response to Katrina — i.e., the flip is a millage-referendum artifact rather than an appropriation flip. The care gain in 2011+ is ~half dedicated-millage (Library 4.91 mills) — a REAL but vote-printed structural change, not an appropriation-line flip.",
+      "Population denominator: pre-storm 485k vs post ~230k-385k — cage per-capita falls faster than care per-capita post-storm; the RATIO break could be a shrinkage artifact rather than a policy flip. Pre/post population-halving inflates both lanes per-capita, especially cage NOPD ($109M GF for ~230k = $475/head vs 2004 $252/head) — the ratio break to 0.31 by 2011 is therefore the WEAK direction for a true care-priority flip and the per-capita read should be run before claiming a flip."
+    ]
+  }
+}

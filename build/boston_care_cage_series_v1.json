@@ -1,0 +1,35 @@
+{
+  "flip_year": 1995,
+  "flip_year_sensitivity_fire_included": 1995,
+  "ratio_series": {
+    "1980": 1.263,
+    "1983": 1.728,
+    "1991": 1.461,
+    "1993": 1.358,
+    "1994": 1.607,
+    "1995": 4.417,
+    "1999": 2.834,
+    "2001": 2.721
+  },
+  "ratio_series_fire_included": {
+    "1980": 0.778,
+    "1983": 0.996,
+    "1991": 0.953,
+    "1993": 0.897,
+    "1994": 1.013,
+    "1995": 2.734,
+    "1999": 1.784,
+    "2001": 1.767
+  },
+  "pre1990_band": {
+    "min": 1.263,
+    "max": 1.728
+  },
+  "confidence": "medium \u2014 1980/1983 totals exclude BPS rows not printed in those volumes; 1999/2001 books are Volume II only so care lane is schools-only (cage lane complete). Direction of the 1991-1995 ratio jump is robust to fire-inclusion sensitivity and is driven by Schools+Health appropriations roughly doubling while Police/Sheriff grew more slowly.",
+  "falsifier": "If the missing Parks/Library/Health rows from other volumes of the FY99/FY01 sets add >=60% to the care lane, the 1999/2001 ratios would fall back toward the pre-1990 band and the flip would be an artifact of volume coverage rather than budget composition. A parallel check from the FY93/FY94 books (gold) already shows Parks+Library at ~27M on a ~220M care lane (~12%), so a >=5x care-lane expansion from missing volumes is implausible \u2014 but the check is stated so the conclusion can be killed cleanly.",
+  "data_caveats": [
+    "1980/1983: BPS appropriation not separable in those volumes",
+    "1999/2001: single-volume (II) coverage; care lane = BPS only",
+    "FY94 sheriff drop reflects state jail takeover (basis break between 1993 and 1994 cage lanes)"
+  ]
+}

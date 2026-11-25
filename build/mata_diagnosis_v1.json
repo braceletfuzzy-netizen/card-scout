@@ -1,0 +1,565 @@
+{
+ "_record": {
+  "lane": "mata-deep-dive",
+  "title": "THE TRANSIT-AUTHORITY DIAGNOSIS: why Memphis transit-share collapses to 0.5% (why MATA is under-funded, under-run, and under-located)",
+  "built": "2026-11-24 18:48",
+  "task_ref": "MATA-deep-dive subagent (founder question: why is Memphis Transit Authority inefficient or non-existent?)",
+  "parent_lanes": [
+   "worker_ladder_acs1yr_commute_v1.json (transit-share 0.47-0.78%, 4 vintages)",
+   "2026-11-24 memphis-crime-reduction-brief (L2 lever)"
+  ],
+  "laws": [
+   "zero-fabricated-dollars: every $ below is a NTD Socrata figure or a dated news figure, or a labeled computed ratio",
+   "every claim dated + sourced",
+   "honest-nulls named"
+  ],
+  "session_blockers": [
+   "data.transport.gov: DNS A-record empty (8.8.8.8 + 1.1.1.1 DoH both return no Answer) -> not a local block; NTD Socrata recovered at datahub.transportation.gov instead",
+   "web_search tool: Nous Tool Gateway down ('not entitled or unreachable')",
+   "commercialappeal.com / dailymemphian.com: paywall/bot-block; fox13memphis article 404; localmemphis bot-block"
+  ]
+ },
+ "funding_lane": {
+  "source": "FTA National Transit Database, '2022-2025 NTD Annual Data - Funding Sources (by Expense Type)' = datahub.transportation.gov/resource/4tmr-gwuu (+ 'Taxes Levied by Agency' c8k8-y2cj; + 'Service wwdp-t4re'), pulled live 2026-11-24 keyless",
+  "mata_ops_usd": {
+   "2022": {
+    "total": 60387320,
+    "fares": 2399373,
+    "local": 12874775,
+    "state": 8423114,
+    "federal": 36690058
+   },
+   "2023": {
+    "total": 53272742,
+    "fares": 2584377,
+    "local": 29183592,
+    "state": 6194796,
+    "federal": 15309977
+   },
+   "2024": {
+    "total": 51726801,
+    "fares": 2538255,
+    "local": 26030646,
+    "state": 8719000,
+    "federal": 14438900
+   },
+   "2025": {
+    "total": 55898199,
+    "fares": 2620559,
+    "local": 32284966,
+    "state": 7606726,
+    "federal": 13385948
+   },
+   "uza_population_2020": 1056190,
+   "agency_voms": "137 (2022) -> 134 (2025)",
+   "taxes_levied_by_agency": 0
+  },
+  "mata_2019_2021_from_ntd_pdf_profiles_wayback": {
+   "source": "transit.dot.gov Annual Agency Profile PDFs 2019-2023 NTD ID 40003, fetched via web.archive.org mirror 2026-11-24 (direct transit.dot.gov = 403 to this IP)",
+   "2019": {
+    "total": 58402315,
+    "fares": 7670335,
+    "local": 29517284,
+    "state": 7909119,
+    "federal": 13305577
+   },
+   "2020": {
+    "total": 57884046,
+    "fares": 5736604,
+    "local": 22834097,
+    "state": 6416073,
+    "federal": 22897272
+   },
+   "2021": {
+    "total": 65528066,
+    "fares": 2874065,
+    "local": 4080492,
+    "state": 8716484,
+    "federal": 49857025
+   }
+  },
+  "peer_ops_2024_usd": {
+   "sorta_cincinnati": {
+    "total": 158964229,
+    "local": 110759133,
+    "state": 3605761,
+    "fares": 33355628,
+    "uza_pop": 1686744,
+    "ntd_id": 50012
+   },
+   "bi_state_stl": {
+    "total": 314000964,
+    "local": 253979595,
+    "state": 4951770,
+    "fares": 34815475,
+    "uza_pop": 2156323,
+    "ntd_id": 70006
+   },
+   "ddot_detroit": {
+    "total": 169069640,
+    "local": 105428630,
+    "state": 50438882,
+    "fares": 8743307,
+    "uza_pop": 3776890,
+    "ntd_id": 50119
+   },
+   "cota_columbus": {
+    "total": 216470167,
+    "agency_levied_sales_tax_2024": 161381903,
+    "fares": 29898443,
+    "uza_pop": 1567254,
+    "ntd_id": 50016
+   },
+   "indygo_indianapolis": {
+    "total": 136401033,
+    "local": 104274309,
+    "state": 11369828,
+    "fares": 10628310,
+    "uza_pop": 1699881,
+    "ntd_id": 50050
+   },
+   "grtc_richmond": {
+    "total": 77018171,
+    "local": 37689203,
+    "state": 22142931,
+    "fares": 3567488,
+    "uza_pop": 1059150,
+    "ntd_id": 30006
+   }
+  },
+  "per_capita_computed_2024_usd_per_city_resident": {
+   "note": "computed ratio = NTD ops total or components / 2020 census city population (Memphis 633,104; Cincinnati 309,317; St. Louis 301,578; Detroit 639,111; Columbus 905,748; Indianapolis 880,621; Richmond 226,610); NOT an NTD field",
+   "memphis": {
+    "ops": 82,
+    "local": 41,
+    "state": 14,
+    "farebox_pct": 4.9
+   },
+   "cincinnati": {
+    "ops": 514,
+    "local": 358,
+    "farebox_pct": 21.0
+   },
+   "st_louis": {
+    "ops": 1041,
+    "local": 842,
+    "farebox_pct": 11.1
+   },
+   "detroit": {
+    "ops": 264,
+    "local": 165,
+    "state": 79,
+    "farebox_pct": 5.2
+   },
+   "columbus": {
+    "ops": 239,
+    "sales_tax_equiv": 178,
+    "farebox_pct": 13.8
+   },
+   "indianapolis": {
+    "ops": 155,
+    "local": 118,
+    "farebox_pct": 7.8
+   },
+   "richmond": {
+    "ops": 340,
+    "local": 166,
+    "state": 98,
+    "farebox_pct": 4.6
+   }
+  },
+  "tn_state_claim_verdict": {
+   "claim": "TN provides minimal transit funding - one of the worst states",
+   "verdict": "PARTIALLY SUPPORTED, REFRAMED: MATA's state $ is a flat ~$6.2-8.7M/yr FY22-25 (14.0% of its ops spend 2022-25) - not the smallest SHARE in the peer set (MO gives Bi-State just 1.1%; OH 2.1%), but those peers' totals ride on dedicated LOCAL streams that dwarf whole state grants. The structural finding: MATA levies $0 of its own taxes (NTD taxes_levied=0 every year) while COTA runs a dedicated agency-levied sales tax ($161.4M in 2024 alone - 3.1x MATA's ENTIRE 2024 budget); DDOT has a state+city dedicated mix and GRTC a state matching formula. NO dedicated state or regional funding stream exists for Memphis transit.",
+   "caveat_honest_null": "no verified state-by-state transit-funding RANKING was reachable this session (Bing SERP degraded; T4America/TransitCenter rank pages unretrieved) - the 'worst in nation' wording is NOT independently verified; what IS verified is the $-level absence of any dedicated stream documented above"
+  },
+  "crisis_dollar_figures_sourced": [
+   {
+    "date": "2024-05-21",
+    "fact": "MATA discloses $60M cumulative deficit; cannot repay $20M loan due June",
+    "source": "Fox13 Memphis headline via Wikipedia ref (fox13memphis.com 404 to fetch; headline text in wiki citation)"
+   },
+   {
+    "date": "2024-08-20",
+    "fact": "current operating budget ~$84-85M vs only ~$67M in available funding; proposal $67.8M balanced; $30.6M straight from City of Memphis; fares ~5% of revenue; ridership >6M (2019) -> ~3M (2024 YTD)",
+    "source": "Action News 5 (WMC) Imani Williams, pub 2024-08-20/21"
+   },
+   {
+    "date": "2024-08-27",
+    "fact": "FY25 budget OKs: 6 bus routes + Ready! Zone eliminated, 241 layoffs (~half of staff), ~$10M op-budget cut, effective Nov 3",
+    "source": "Commercial Appeal (Muckerman/Finton) + Daily Memphian (Callahan) via Wikipedia refs; WREG 2024-09-24 confirms 23->18 routes"
+   },
+   {
+    "date": "2024-09-10",
+    "fact": "MATA CFO Davidson: unrestricted net deficit past 10 yrs: -$90M in 2014, -$91M in 2019",
+    "source": "Action News 5, 2024-09-10"
+   },
+   {
+    "date": "2025-06-10",
+    "fact": "City FY26 budget gives MATA $30M (same as FY25); board chair Greer requests $45M; advocates request $50M; council holds half ($15M) contingent on PwC audit; $38M level = restore something; $45M = all levers",
+    "source": "WREG 2025-06-24; MLK50 2025-06-03 + 2025-06-16"
+   },
+   {
+    "date": "2025-12-02",
+    "fact": "FY2026 revenue est. $66.85M = $30.67M city + $27M federal + $1M zero-fare reimbursement + state/grants",
+    "source": "WREG citing Holmes council presentation"
+   },
+   {
+    "date": "2026-04-14",
+    "fact": "City Council approves $13M loan to MATA for federal-funding delays; board vacant for months",
+    "source": "WREG 2026-04-14"
+   },
+   {
+    "date": "2026-09-02",
+    "fact": "$48M fleet investment lands; 12 new buses delivered; 56 bus replacement plan over 12 months",
+    "source": "WREG 2026-09-02"
+   }
+  ]
+ },
+ "service_design_lane": {
+  "ntd_service_bus_mode_2022_2025": {
+   "source": "datahub.transportation.gov/resource/wwdp-t4re pulled live 2026-11-24",
+   "mata_upt_bus": {
+    "2022": 2485053,
+    "2023": 2208154,
+    "2024": 2627188,
+    "2025": 2265143
+   },
+   "mata_vrh_bus": {
+    "2022": 261127,
+    "2023": 257407,
+    "2024": 229752,
+    "2025": 215801
+   },
+   "mata_typical_weekday_bus_vrh": {
+    "2022": 848,
+    "2023": 836,
+    "2024": 746,
+    "2025": 693
+   },
+   "peer_2024": {
+    "sorta": {
+     "upt": 13315628,
+     "vrh": 829081,
+     "weekday_upt": 42688
+    },
+    "bi_state": {
+     "upt": 12728183,
+     "vrh": 863096,
+     "weekday_upt": 40365
+    },
+    "ddot": {
+     "upt": 12857631,
+     "vrh": 580489,
+     "weekday_upt": 40492
+    },
+    "cota": {
+     "upt": 11853423,
+     "vrh": 909197,
+     "weekday_upt": 37106
+    },
+    "grtc": {
+     "upt": 8780975,
+     "vrh": 444294,
+     "weekday_upt": 27463
+    }
+   },
+   "productivity_upt_per_vrh_2024": {
+    "mata": 11.4,
+    "cota": 13.0,
+    "grtc": 19.8,
+    "sorta": 16.1
+   }
+  },
+  "cut_history": [
+   {
+    "date": "2017",
+    "fact": "Transit Vision redesign begins; Dries, Commercial Appeal/Memphis Daily News 2017-04-28: MATA prepares case for $30M increase to fund improvements; plan adopted by city 2017; the $30M/yr was never received",
+    "source": "Memphis Daily News 2017-04-28 via wiki; MLK50 2026-11-24 confirms 'MATA has never received that funding, and service has declined since then'"
+   },
+   {
+    "date": "2020-06-20",
+    "fact": "COVID-era fare cut to $1 (pre-pandemic $1.75); flat $1 fares through 2025-11-16",
+    "source": "Wikipedia fares table"
+   },
+   {
+    "date": "2021-02/08",
+    "fact": "On-demand Groove (Feb 2021) + Ready! (Aug 2021) zones = Transit Vision partial implementation",
+    "source": "Wikipedia"
+   },
+   {
+    "date": "2024-08-18",
+    "fact": "Trolley suspended indefinitely (brakes; TDOT recommendation); 18 operators laid off",
+    "source": "WREG 2024-11-25 (Scott quote); MLK50"
+   },
+   {
+    "date": "2024-11-03",
+    "fact": "23 -> 18 bus routes; 60-min frequency on ALL remaining routes Mon-Sat to 7pm, Sun to 6pm; fare to $1.75; Ready! $2",
+    "source": "WREG 2024-09-24"
+   },
+   {
+    "date": "2025",
+    "fact": "Reduced schedule = 70% of COVID service schedule (Better Transit for a Better Memphis); interim CEO Lewis: 'routes at two-hour headways... we're at the bare minimum of service levels now'",
+    "source": "MLK50 2025-06-16"
+   },
+   {
+    "date": "2026-11-24",
+    "fact": "Fixed-route service hours 320,000/yr (2017) -> 215,000/yr (now, McNeil @ Better Transit coalition); NTD VRH corroborates (262k 2022 -> 216k 2025)",
+    "source": "MLK50 2026-11-24 + NTD wwdp-t4re"
+   }
+  ],
+  "mata_forward_redesign_status": {
+   "honest_null": "no plan formally branded 'MATA Forward' found this session; the Memphis redesign lineage = Transit Vision (2017-2019, city-adopted, never funded). The 2025-26 era replacement = a $125,000 University of Memphis long-term spend-plan contract (Fox13, 2026-09-14) + trustee-era operational plan. No published rider-complaint or OTP time-series from MATA itself beyond trustee updates",
+   "otp_record": "MATA on-time performance ~60% through 2026 (low 56% Feb 2026), 64% Oct 2026 claimed not yet on city dashboard; missed trips 26-30% of scheduled trips (late 2025) -> 7% by Oct 2026; 91% of buses put out daily (from 53-55 of 75-structured)",
+   "source": "MLK50 2026-11-24 + WREG 2026-09-17 MATA statement + WREG 2024-10-14 (Young: structured for 75 buses, 53-55 operating)"
+  }
+ },
+ "governance_lane": {
+  "structure": {
+   "board": "seven (later nine) board members, mayoral-nominated and council-approved per Memphis City Code; board supervises operations (routes, schedules, fares via management contracts) but cannot take on debt or buy/sell real estate without mayor+council approval; budget submitted to mayor and to City Council for approval",
+   "source": "Memphis City Code provisions as summarized in MLK50 2025-09-05 (incl. City Attorney Wade's reading)"
+  },
+  "chronology": [
+   {
+    "date": "2024-01-31",
+    "event": "CEO Gary Rosenfeld steps down; deputy Bacarra Mauldin interim",
+    "source": "ABC24 2024-01-31 via wiki refs"
+   },
+   {
+    "date": "2024-05",
+    "event": "$60M deficit discovered through TN Comptroller; $20M loan cannot be repaid by June",
+    "source": "Fox13 2024-05-21 via wiki"
+   },
+   {
+    "date": "2024-08-27",
+    "event": "board OKs FY25 austerity budget (routes+241 layoffs); council fight peaks",
+    "source": "CA/Daily Memphian 2024-08-27/28 via wiki"
+   },
+   {
+    "date": "2024-09-24",
+    "event": "cuts approved; effective Nov 3",
+    "source": "WREG 2024-09-24"
+   },
+   {
+    "date": "2024-10-11",
+    "event": "Mayor Paul Young replaces ALL 9 board members after TransPro draft diagnostic ($336,000 study): boardings/rev-hr 23% below peer average (4th lowest of peer group), cost/rev-hr 29% above peer average (2nd highest), no financial audit, gaps in contract/project tracking, 'lack of board oversight... culture of poor accountability'",
+    "source": "WREG 2024-10-11 + 2024-10-14"
+   },
+   {
+    "date": "2025-01-15",
+    "event": "8-month 'crisis management' TransPro contract ($1.3M; Lewis at $486/hr); John Lewis interim CEO",
+    "source": "WREG 2025-01-15"
+   },
+   {
+    "date": "2025-06-10",
+    "event": "city passes FY26 budget with $30M for MATA; council holds $15M pending PwC forensic audit",
+    "source": "WREG 2025-06-24; MLK50 2025-06-16"
+   },
+   {
+    "date": "2025-09-04/05",
+    "event": "5 of 9 board members resign during CEO search halt; quorum lost; CFO absent; PwC report shows widespread missing financial documentation/controls + unstructured budget process + grant-dollar handling issues",
+    "source": "MLK50 2025-09-05"
+   },
+   {
+    "date": "2025-09-09/10",
+    "event": "City Council votes trusteeship: MATA spending led by TWO-PERSON CITY TRUST; no CEO; trustee Rodrick Holmes paid $75,000/MONTH by the city",
+    "source": "WREG 2025-09-10; MLK50 2026-11-24 ($75k/mo)"
+   },
+   {
+    "date": "2025-11-16",
+    "event": "Zero-Fare pilot (90 days) starts - political re-entry by mayor+council",
+    "source": "WREG 2025-11-14"
+   },
+   {
+    "date": "2026-04-14",
+    "event": "$13M city loan for federal-funding delays; trusteeship continues",
+    "source": "WREG 2026-04-14"
+   },
+   {
+    "date": "2026-09-02",
+    "event": "9-member board restored; trusteeship remains; trusteeship expected to run to spring 2027",
+    "source": "WREG 2026-09-02; Memphis Flyer 2026-11-10"
+   }
+  ],
+  "mayor_vs_council_dynamic": "the 2025-26 pattern IS the mayor-vs-council fight: council withholds/transfers transit money pending audits, calls out 'Grizzlies suites and trips to other countries', forces rolling receipts-based disbursement; mayor sets board + trustee and keeps funding flat at $30M",
+  "tn_code_constraint_honest_null": "specific TN Code sections (e.g. T.C.A. ch. 13-3-... enabling authorities) NOT pulled live this session; carried via MLK50's city-code summary (Memphis City Code board provisions). Named as an open retrieval item."
+ },
+ "diagnosis": {
+  "headline": "Transit-share collapses to 0.5% because Memphis runs transit at one-fifth to one-half the per-resident money of every functioning peer AND because the money it does get is spent on a decade of financial-integrity failure and board churn instead of service. Funding is the binding constraint; governance failure + service-design retreat are the transmission mechanism; geography is a minor secondary effect.",
+  "ranked_causes": [
+   {
+    "rank": 1,
+    "cause": "FUNDING-STARVED (dollar evidence)",
+    "evidence": [
+     "NTD 2024 ops: Memphis $82/city-res vs Cincy $514, STL $1,041, Detroit $264 (5.7x-12.7x below Cincy/STL; 2.1-4.8x below Columbus/Indy/Richmond class)",
+     "farebox 4.9% and fares $2.5M = ~5% of budget (A5 2024-08-20: ~5%) - a rounding error, no self-funding",
+     "zero dedicated streams: NTD taxes_levied_by_agency = $0 every reported year vs COTA's $161.4M agency sales tax (2024)",
+     "city allocation flat $30M (FY25+FY26) despite a 2017 city-adopted plan calling for +$30M/yr that was never appropriated (MLK50 2026-11-24)",
+     "crisis mechanism: the 2024-25 'flat funding + more costs + fewer riders' formula (Mauldin, A5 2024-08-20) is literally a funding-deficit spiral: ops cut $85M -> $67M budget -> $53M NTD actual (2023) -> $52M (2024)"
+    ],
+    "falsifier": "per-capita transit funding should NOT predict transit-share between these cities if geography or management dominated; it tracks (Cincy $514 -> 4-6.6% share; Memphis $82 -> 0.5-0.8%)"
+   },
+   {
+    "rank": 2,
+    "cause": "GOVERNANCE FAILURE (structure evidence) - the 2014-2024 decade of hidden deficit",
+    "evidence": [
+     "MATA CFO to council: -$90M (2014), -$91M (2019) unrestricted net deficit, ten straight years, unreported (A5 2024-09-10)",
+     "TransPro diagnostic: no audit, gaps in contracts/projects/financial-commitment tracking, 'frivolous use of taxpayers dollars', boardings/rev-hr 23% below peer avg, cost/rev-hr 29% above (WREG 2024-10-11 + 2025-01-15)",
+     "board churn: full board replaced Oct 2024; 5 resign Sept 2025; trust replaces CEO Sept 2025; new board Sept 2026; 4 CEOs/interims in 30 months",
+     "trustee cost = state-class figure: $75,000/MONTH (MLK50 2026-11-24) for one interim leader",
+     "PwC: widespread missing financial documentation, unstructured budget process, grant-handling issues (MLK50 2025-09-05)"
+    ],
+    "falsifier": "if money were the only problem, the FY26-27 funding-plateau years would show stability; instead trustee + board churn continue, which is what failure-of-institutions looks like when the dollar constraint is solved-but-not"
+   },
+   {
+    "rank": 3,
+    "cause": "SERVICE-DESIGNED-OUT (route evidence)",
+    "evidence": [
+     "2017 Transit Vision promised +$30M/yr; never received; service fell from 320,000 annual hours (2017) to 215,000 (2026) - a one-third cut while peer cities grew (COTA VRH 820k->909k; GRTC 395k->444k, 2022-24)",
+     "Nov 2024: 23->18 routes, 60-min headways everywhere, Span 7pm/Sun 6pm (WREG 2024-09-24); 'current reduced schedule = 70% of COVID service schedule' (advocates, MLK50 2025-06-16)",
+     "'most routes: buses every 1-2 hours on weekdays' (Greer to council, WREG 2025-06-24); a case study rider took 6 hrs for a 3-mile grocery trip (WREG)",
+     "NATURAL EXPERIMENT: zero-fare policy (2025-11-16) lifted ridership +18-25% within weeks (WREG 2025-12-02, MLK50 2026-11-24: 2.7M trips, $4M rider savings, +20% year) WITHOUT adding a single bus route - proving suppressed demand exists when cost-barrier falls; but the supply side (VRH 693 weekday hrs 2025 vs 848 in 2022) caps the ceiling"
+    ],
+    "falsifier": "the zero-fare +20-23% on a static network bounds the demand elasticity; it cannot reach 2-3% share on 693 weekday VRH"
+   },
+   {
+    "rank": 4,
+    "cause": "GEOGRAPHY/JOBS-HOUSING (secondary - the 'no-service-so-no-choice signature')",
+    "evidence": [
+     "banked worker_ladder lane: Memphis mean commute 21.5/20.9/20.9/21.4 min (2021-2024) FLAT + ge45-share lowest of 6 cities = short commutes, not transit-served ones",
+     "this is the no-service-so-no-choice signature: with 693 weekday bus-VRH spread over 18 routes at 60-min headways, transit is not competitive, so everyone who CAN drive does; the city's ~6% no-vehicle households are structurally forced into rides/carpools",
+     "MATAplus denial of 300 paratransit trips/MONTH (Greer, WREG 2025-06-24) = even the legally-mandated floor is unmet"
+    ],
+    "falsifier": "Houston (car-80%, similarly dispersed, mean commute 26-28min) runs 3-3.4% transit share on 3x Memphis per-resident funding - geography does not explain the 0.5%"
+   }
+  ],
+  "tribe_frame": "The founder's lens: a transit system is tribe-infrastructure - the daily shared ride that stitches the city into one labor market. Memphis's 0.5% means the tribe has no shared circulating commons; the bus is a residual charity for the no-vehicle poor, not a shared infrastructure input. The machine just counts it."
+ },
+ "lever_tieback": {
+  "target": "move transit-share from 0.55% (ACS 2024) to 2-3% (peer-mid range; the bus-only exemplar class runs 2-4%)",
+  "honest_math_computed": [
+   "2% = 5,434 daily transit commuters vs 1,499 now = 3.6x; 3% = 8,151 = 5.4x (banked ACS 2024 city grain)",
+   "MATA productivity is not the problem (11.4 UPT/VRH vs GRTC 19.8, COTA 13.0) - the input is: 215,801 annual bus-VRH (2025)",
+   "at MATA's own $/VRH ($225, NTD 2024) 3.6x commuter base needs ~777,000 VRH = ~$175M/yr ops (vs $51.7M today = +$123M/yr)",
+   "at GRTC-class productivity ($173/VRH, 19.8 UPT/VRH) the same need = ~447,000 VRH = ~$77M/yr ops (+$25M/yr) - the productive-system floor",
+   "per-resident frame: taking MATA to the GRTC per-res level ($340/res) = $215M/yr (3.0-4.2x the Cincy-level); to IndyGo per-res ($155/res) = $98M/yr (+$73/res/yr - just ABOVE the banked $67-$69 per-resident class, i.e. ~1.1x the class)",
+   "dedicated-stream scale: COTA's 0.25% sales tax generated $161.4M in 2024 (Franklin County levy); Shelby County's narrower base implies a similar 0.5% levy class would be the right instrument class (a rate to be set by whoever designs the levy, not asserted here)"
+  ],
+  "years": "COTA levy-to-Ride-time took 4-6 yrs (2018 levy -> lines 2018-2025); GRTC levy-to-Pulse took 2 yrs (2016->2018); realistic Memphis arc: yr-1 levy+board rebuild, yr-2 frequency floor (no route >30-min), yrs 3-5 BRT spine (mConnect $12M grant already awarded 2019, still unspent 2026) - holding 2%+ by year 5 is the honest timeline; MATA's own trustee targets trusteeship exit spring 2027 (Memphis Flyer 2026-11-10)"
+ },
+ "exemplars": {
+  "peer_class": [
+   {
+    "agency": "SORTA/Metro Cincinnati",
+    "why": "legacy full-coverage network + massive local stream jump ($46.9M->$110.8M local 2023->2024, NTD) = 5-6.6% ACS share; farebox 21% - the high-funding regional model",
+    "numbers": {
+     "ops_2024": 158964229,
+     "ops_per_city_res": 514,
+     "acs_share": "3.9-6.6% (2021-2024, banked lane)"
+    }
+   },
+   {
+    "agency": "Bi-State/Metro STL",
+    "why": "the St. Louis City+County 0.1% sales taxes (2024 Measure to move money to STL City) + $254M local 2024 (NTD) = the money case; share 4.9-7.9%",
+    "numbers": {
+     "ops_2024": 314000964,
+     "ops_per_city_res": 1041,
+     "acs_share": "4.9-7.9% (banked)"
+    }
+   },
+   {
+    "agency": "DDOT Detroit",
+    "why": "state+city dedicated mix ($50.4M state + $105.4M local 2024) even amid a bus-availability crisis (1/3 of buses down per Detroit News 2024-08-06) - still 3.9-5.6% share",
+    "numbers": {
+     "ops_2024": 169069640,
+     "ops_per_city_res": 264,
+     "state_per_res": 79,
+     "acs_share": "3.9-5.6% (banked)"
+    }
+   }
+  ],
+  "aspirational_bus_only_class": [
+   {
+    "agency": "COTA (Columbus OH)",
+    "verified": {
+     "ops_2024_usd": 216470167,
+     "agency_levied_sales_tax_2024_usd": 161381903,
+     "ops_per_city_res": 239,
+     "acs_share": "1.93-2.34% (2022-2024 ACS1 city grain, this session)",
+     "weekday_bus_upt_2024": 37106,
+     "upt_per_vrh": 13.0
+    },
+    "why_it_works": "a permanent DEDICATED agency-levied 0.25%-class sales tax (levy 0.5% total incl county share; banked levy rate from 2024 election) funds a frequency-first bus redesign + BRT spines; the levy, not leadership, guarantees the money lands every year",
+    "lesson_for_memphis": "MATA's $0 agency tax is the first structural fix; Shelby-county-scale dedicated levy >> annual council appropriation"
+   },
+   {
+    "agency": "GRTC (Richmond VA)",
+    "verified": {
+     "ops_2024_usd": 77018171,
+     "ops_per_city_res": 340,
+     "state_share_2022_25_pct": 33.8,
+     "acs_share": "2.47% (2022) -> 4.20% (2024, ACS1 city grain)",
+     "weekday_bus_upt_2024": 27463,
+     "upt_per_vrh": 19.8,
+     "best_upt_vrh_in_set": true
+    },
+    "why_it_works": "the PULSE BRT spine (2018, the region's first) + the region's first bus-network redesign (2020) + strong state matching ($22-35M/yr) = highest productivity in the set (19.8 UPT/VRH) at MID funding - proof that frequency design converts dollars into riders better than raw size",
+    "lesson_for_memphis": "share rose 2.5->4.2% two years after the redesign - the frequency+BRT arc pays in-mode-share within ~2 election cycles"
+   },
+   {
+    "agency": "IndyGo (Indianapolis IN)",
+    "verified": {
+     "ops_2024_usd": 136401033,
+     "ops_per_city_res": 155,
+     "local_2024": 104274309,
+     "acs_share": "1.18-1.30% (2022-2024)",
+     "red_line": "Red/Purple/Blue BRT lines 2019-2025"
+    },
+    "why_it_works": "the Marion County transit income tax (2016 voter-approved) tripled local funding; the Red Line bus-rapid-transit spine came online 2019 - closest analog to Memphis's mConnect ($12M federal, awarded 2019, stalled 2026)",
+    "lesson_for_memphis": "the income-tax stream works mid-size; and a stalled BRT grant is recoverable - if IndyGo could turn a $75M 2017 federal share into 3 lines by 2025, mConnect's 7-yr stall is a governance choice, not a fate"
+   }
+  ],
+  "brt_european_frame": "honored by pointer only per falsifier discipline: the honest floor for a US mid-size bus-only system = GRTC productivity 19.8 UPT/VRH at $340/city-res; European frequency-first systems imply lower $/rider again but require corridor densification Memphis lacks this session - not probed further"
+ },
+ "mata_zero_fare_natural_experiment": {
+  "banked_facts": [
+   {
+    "date": "2025-11-16",
+    "fact": "zero-fare pilot starts (90 days, all services)",
+    "source": "WREG 2025-11-14"
+   },
+   {
+    "date": "2025-12-02",
+    "fact": "ridership +18% in 2 weeks (+3-4K daily adds); total 56,037 Nov 16-22",
+    "source": "WREG 2025-12-02"
+   },
+   {
+    "date": "2026-11-18",
+    "fact": "MATA: zero-fare saved riders $4M, 2.7M trips; +20% ridership year-over-year (Fox13 2026-11-17)",
+    "source": "Bing news RSS 2026-11-18/17"
+   },
+   {
+    "date": "2026-09-17",
+    "fact": "Consumer Affairs 50-city study: Memphis 2nd-least-useful transit system, LOWEST per-resident boardings (~3/yr), 6th-from-bottom overall; transit share 0.55% same era",
+    "source": "WREG 2026-09-17 + Yahoo 2026"
+   }
+  ]
+ },
+ "honest_nulls": [
+  "state-by-state transit-funding RANKING ('TN worst in nation') not independently verified this session; verified instead: no dedicated stream + $0 self-levied taxes + flat ~$6-9M/yr state grant (NTD)",
+  "TN Code sections for MATA authority not pulled live; board structure carried via Memphis City Code as reported in MLK50 2025-09-05",
+  "no MATA-published rider-complaint/OTP time-series found; OTP figures are trustee/council-presentation numbers (60-64% through 2026)",
+  "MATA Forward: no plan by that exact name found; the lineage is Transit Vision (2017-2019, unfunded) -> U of Memphis $125K long-term plan (2026-09-14)",
+  "Richmond B08301 row absent from the 2023 1-yr .dat pull (2022 + 2024 present) - share interpolation for 2023 named, not faked",
+  "weekday span (first/last bus) NTD fields garbled for 2022-24 MATA rows; only 2025 partially parseable - span trend carried from news dates instead",
+  "driver-count time series not found (fleet VOMS only); '241 layoffs ~ half of staff' implies pre-cut headcount ~470-500, labeled as inference from the dated 241 figure (Daily Memphian/CA 2024-08-27)"
+ ],
+ "files": {
+  "deliverable": [
+   "mata_diagnosis_v1.json",
+   "mata_diagnosis_v1.md"
+  ],
+  "scratch": "C:/Users/J/scratch/mata_v1/ (ntd_ops.json, ntd_service.json, ntd_taxes.json, wreg_bodies.json, mlk50.json, acs_exemplars.json, route-notes.md, profile2019-2023 NTD PDFs)",
+  "repo_additions": "For You/PolyScout/build/mata_diagnosis_v1.json + .md + working-notes append"
+ }
+}

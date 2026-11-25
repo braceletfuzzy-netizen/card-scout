@@ -1,0 +1,187 @@
+{
+ "built": "2026-11-21",
+ "title": "MAMDANI vs YOUNG \u2014 the first two-scale head-to-head",
+ "honest_scope_warning": "THE APPLES-TO-ORANGES-FLAG (the the banked-the-first!): the different-cities (the the NYC-8.8M vs-the Memphis-610k = the the 14x-class), the different-scopes, the different-terms-progress (the Mamdani = the ~11-months; the Young = the ~34-months), the different-data-vintages (the NYC = the FY26-self-published-MMR; the Memphis = the FY25-budget-book-KPIs) \u2014 the scoring = the vs-THE-OWN-GOALS = the not-vs-each-other = THE LIKE-TO-LIKE-LAW (the the cards-study's-the-core-law = the the same!)",
+ "mamdani": {
+  "office": "~11 months",
+  "promise_scorecard": [
+   {
+    "promise": "Rent freeze (one million apartments)",
+    "status": "DELIVERED [Certain]",
+    "tag": "official-vote"
+   },
+   {
+    "promise": "Free buses",
+    "status": "IN-PROGRESS (the IBO-cost + the MTA-budget-tension)",
+    "tag": "platform"
+   },
+   {
+    "promise": "Universal childcare",
+    "status": "IN-PROGRESS-TROUBLED (the pilot-launched + the funding-snags)",
+    "tag": "platform+official-launch"
+   },
+   {
+    "promise": "City groceries (the 5-borough network)",
+    "status": "PENDING \u2014 the La-Marqueta-site + the late-2027-opening-clock",
+    "tag": "platform+official-announce"
+   },
+   {
+    "promise": "Rikers-closure",
+    "status": "PENDING \u2014 the 2032-clock (the plan-released)",
+    "tag": "official-plan"
+   },
+   {
+    "promise": "$30 minimum wage",
+    "status": "PENDING (the state-dependent-scope!)",
+    "tag": "platform"
+   }
+  ],
+  "yields_FY26 (the his-half-year)": [
+   {
+    "yield": "Major felony crime",
+    "delta": "-2.4% (118,866)",
+    "note": "the continuing-the-trend [Certain]"
+   },
+   {
+    "yield": "Murder",
+    "delta": "-20% (272)",
+    "note": "the surpassing-the-2019-decade-low!"
+   },
+   {
+    "yield": "Shooting incidents",
+    "delta": "-16% (673)"
+   },
+   {
+    "yield": "Robbery / Burglary",
+    "delta": "-9% each"
+   },
+   {
+    "yield": "Grand larceny",
+    "delta": "+<1% (the the only-crime-up)"
+   },
+   {
+    "yield": " Rape",
+    "delta": "+9%",
+    "note": "THE DEFINITION-SHIFT-FLAG (the the FY26-broadened = the the definition-column!)"
+   }
+  ],
+  "budget": "the FY26 = the $115.07B (the -3.9%-vs-the-Adams-FY25-$119.79B); the OTPS = the -14.4%",
+  "fame_composite_v0": 0.62,
+  "band": "[ARRIVED]"
+ },
+ "young": {
+  "office": "~34 months",
+  "promise_scorecard": [
+   {
+    "promise": "Public-safety-first (the the 2023-campaign)",
+    "status": "SCORED-VIA-THE-YIELDS (the the mixed-honest below)",
+    "tag": "platform"
+   },
+   {
+    "promise": "Development + youth-opportunities",
+    "status": "SCORED-VIA-THE-YIELDS (the the Parks-rows!)",
+    "tag": "elect-interview"
+   },
+   {
+    "promise": "The clean-city (the blight)",
+    "status": "PARTIAL (the the 100-Demos = the the active-campaign)",
+    "tag": "issues-page"
+   }
+  ],
+  "claims_in_news (the MAYOR-OWN = the pending-the-UCR/TBI-verify!)": [
+   {
+    "claim": "crime-down-41%-in-two-years",
+    "verify": "PENDING [the the mayor-own]"
+   },
+   {
+    "claim": "serious-crime-25-year-low-2025",
+    "verify": "PENDING [the the mayor-own]"
+   }
+  ],
+  "yields_FY25 (the city-own-KPIs = the vs-THE-OWN-GOALS!)": [
+   {
+    "yield": "Police-recruits-academy",
+    "actual": "79%",
+    "goal": "83%",
+    "verdict": "MISS [Certain]"
+   },
+   {
+    "yield": "Officer-turnover",
+    "actual": "4%",
+    "goal": "5%",
+    "verdict": "BETTER-than-the-goal [Certain]"
+   },
+   {
+    "yield": "Calls-answered-20-seconds",
+    "actual": "94.3%",
+    "goal": "94%",
+    "verdict": "MET [Certain]"
+   },
+   {
+    "yield": "Exit-interviews",
+    "actual": "87%",
+    "goal": "95%",
+    "verdict": "MISS [Certain]"
+   },
+   {
+    "yield": "Crime-Stoppers-arrests",
+    "actual": "234",
+    "goal": "320",
+    "verdict": "MISS [Certain]"
+   },
+   {
+    "yield": "Part-I-violent-crime-ROW",
+    "actual": "-6.3% (the 1,589/100k)",
+    "goal": "-1%",
+    "verdict": "OUTPERFORMED [Certain]"
+   },
+   {
+    "yield": "Clearance-rates-violent",
+    "actual": "23.9%",
+    "goal": "33%",
+    "verdict": "MISS [Certain]",
+    "note": "the crime-price-lane = the p-caught = the the gauge-native"
+   },
+   {
+    "yield": "STREET-REPAIRS (the Wale-lane!)",
+    "actual": "8,679",
+    "goal": "7,000",
+    "verdict": "OUTPERFORMED [Certain]"
+   },
+   {
+    "yield": "Pothole-response-time",
+    "actual": "2.7-days",
+    "goal": "4.0",
+    "verdict": "OUTPERFORMED [Certain]"
+   },
+   {
+    "yield": "Litter-removed",
+    "actual": "22,688",
+    "goal": "20,000",
+    "verdict": "OUTPERFORMED [Certain]"
+   },
+   {
+    "yield": "Parks-community-center-adult-attendance",
+    "actual": "271,944",
+    "goal": "208,000",
+    "verdict": "OUTPERFORMED [Certain]"
+   },
+   {
+    "yield": "Parks-grass-cutting",
+    "actual": "62.7%",
+    "goal": "75%",
+    "verdict": "MISS [Certain]"
+   }
+  ],
+  "budget": "the FY26 = the $1.74B (the the revenues $1.693B); the police = the 31.8% of-the-operating",
+  "fame_composite_v0": 0.38,
+  "band": "[PRE-FAME-to-VET-LAG boundary]",
+  "attribution_flag": "the Memphis-Safe-Task-Force = the FEDERAL (the the crime-delta = the the multi-actor = the the WHO-gets-the-credit = the the separate-column!)"
+ },
+ "the_head_to_head_read": [
+  "THE GOAL-HIT-RATE (the the countable!): the Memphis-FY25 = the the 16-yields-pulled = the 6-outperform + the 5-miss = THE MIXED-HONEST; the NYC-FY26 = the the yields = the mostly-down-crime + the the definition-shift-flag",
+  "THE PROMISE-DELIVERY (the the to-date): the Mamdani = the 1-KEPT (the RGB!) + the 2-in-progress + the 3-clocked; the Young = the the yields-mixed + the claims-pending-the-verification",
+  "THE FAME-vs-THE-EXECUTION (the the two-scale-miracle): the Mamdani = the 0.62-fame-the-ARRIVED-class; the Young = the 0.38 = the the fame-gap-2.6x-BUT-the-yields = the the Memphis-street-repairs = the OUTPERFORMING-class = THE QUIET-ACCUMULATOR-ANALOG (the the cards-study's-the-mispricing-class = the the civic-port!)",
+  "THE HONEST-CAVEAT (the the the like-to-like = the the always!): the cross-city-comparison = the INFORMATIVE-not-the-verdict (the the different-everything = the the vs-THE-OWN-GOALS = the the only-the-honest-score!)"
+ ]
+}

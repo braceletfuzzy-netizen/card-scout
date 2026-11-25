@@ -1,0 +1,89 @@
+{
+ "annual_counts_cde": {
+  "2013": 76,
+  "2014": 100,
+  "2015": 127,
+  "2016": 182,
+  "2017": 161,
+  "2018": 126,
+  "2019": 137,
+  "2020": 204,
+  "2021": 252,
+  "2022": 244,
+  "2023": 198,
+  "2024": 210,
+  "2025": 136
+ },
+ "denominators": {
+  "2025": 691630
+ },
+ "rates": {
+  "2013": {
+   "count": 76,
+   "pop": null,
+   "rate_per_100k": null
+  },
+  "2014": {
+   "count": 100,
+   "pop": null,
+   "rate_per_100k": null
+  },
+  "2015": {
+   "count": 127,
+   "pop": null,
+   "rate_per_100k": null
+  },
+  "2016": {
+   "count": 182,
+   "pop": null,
+   "rate_per_100k": null
+  },
+  "2017": {
+   "count": 161,
+   "pop": null,
+   "rate_per_100k": null
+  },
+  "2018": {
+   "count": 126,
+   "pop": null,
+   "rate_per_100k": null
+  },
+  "2019": {
+   "count": 137,
+   "pop": null,
+   "rate_per_100k": null
+  },
+  "2020": {
+   "count": 204,
+   "pop": null,
+   "rate_per_100k": null
+  },
+  "2021": {
+   "count": 252,
+   "pop": null,
+   "rate_per_100k": null
+  },
+  "2022": {
+   "count": 244,
+   "pop": null,
+   "rate_per_100k": null
+  },
+  "2023": {
+   "count": 198,
+   "pop": null,
+   "rate_per_100k": null
+  },
+  "2024": {
+   "count": 210,
+   "pop": null,
+   "rate_per_100k": null
+  },
+  "2025": {
+   "count": 136,
+   "pop": 691630,
+   "rate_per_100k": 19.66
+  }
+ },
+ "acs_poverty_2023_place_45818": null,
+ "acs_poverty_2023_place_48066": null
+}

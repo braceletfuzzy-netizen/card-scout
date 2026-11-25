@@ -1,0 +1,508 @@
+{
+ "health_access_band": [
+  {
+   "q": "Medicaid expansion homicide",
+   "cr_best": {
+    "DOI": "10.1377/forefront.20160321.054035",
+    "title": [
+     "The Economics Of Medicaid Expansion"
+    ],
+    "is-referenced-by-count": 1
+   }
+  },
+  {
+   "q": "Medicaid expansion homicide",
+   "pm": [
+    {
+     "title": "Medicaid Expansion and Mortality Among Persons Who Were Formerly Incarcerated.",
+     "venue": "JAMA network open",
+     "year": 2024,
+     "abstract_len": 247
+    },
+    {
+     "title": "Modeling the Relationship Between Firearm Restrictions, Medicaid Expansion, and Political Partisanship with Pediatric Firearm Mort",
+     "venue": "Journal of pediatric surgery",
+     "year": 2024,
+     "abstract_len": 315
+    },
+    {
+     "title": "The effect of health insurance on crime: Evidence from the Affordable Care Act Medicaid expansion.",
+     "venue": "Health economics",
+     "year": 2020,
+     "abstract_len": 1011
+    }
+   ]
+  },
+  {
+   "q": "ACA Medicaid crime arrest did",
+   "cr_best": {
+    "DOI": "10.1016/j.jhealeco.2020.102333",
+    "title": [
+     "Did the ACA Medicaid expansion save lives?"
+    ],
+    "is-referenced-by-count": 71
+   }
+  },
+  {
+   "q": "ACA Medicaid crime arrest did",
+   "pm": [
+    {
+     "title": "The consequences of Medicaid expansion under the Affordable Care Act for police arrests.",
+     "venue": "PloS one",
+     "year": 2022,
+     "abstract_len": 1178
+    }
+   ]
+  },
+  {
+   "q": "community health center violence",
+   "cr_best": {
+    "DOI": "10.1177/1077801207301614",
+    "title": [
+     "Migration, Sexual Exploitation, and Women's Health"
+    ],
+    "is-referenced-by-count": 41
+   }
+  },
+  {
+   "q": "community health center violence",
+   "pm": [
+    {
+     "title": "Health Equity and Access to Health Care as a Social Determinant of Health: The Role of the Primary Care Provider.",
+     "venue": "Primary care",
+     "year": 2023,
+     "abstract_len": 620
+    },
+    {
+     "title": "Community Health Worker Activities in Public Health Programs to Prevent Violence: Coding Roles and Scope.",
+     "venue": "American journal of public health",
+     "year": 2022,
+     "abstract_len": 1244
+    },
+    {
+     "title": "Public health and international drug policy.",
+     "venue": "Lancet (London, England)",
+     "year": 2016,
+     "abstract_len": 1648
+    }
+   ]
+  }
+ ],
+ "child_protection_band": [
+  {
+   "q": "child maltreatment prevention homicide",
+   "cr_best": {
+    "DOI": "10.4135/9781483327174.n2",
+    "title": [
+     "Child Maltreatment and Parricide"
+    ],
+    "is-referenced-by-count": 0
+   }
+  },
+  {
+   "q": "child maltreatment prevention homicide",
+   "pm": [
+    {
+     "title": "Burden and consequences of child maltreatment in high-income countries.",
+     "venue": "Lancet (London, England)",
+     "year": 2009,
+     "abstract_len": 1220
+    },
+    {
+     "title": "Child homicide spectrum.",
+     "venue": "American journal of diseases of children (1960)",
+     "year": 1983,
+     "abstract_len": 803
+    },
+    {
+     "title": "Filicide research in the twenty-first century.",
+     "venue": "Archives of women's mental health",
+     "year": 2019,
+     "abstract_len": 0
+    }
+   ]
+  },
+  {
+   "q": "child welfare spending delinquency",
+   "cr_best": {
+    "DOI": "10.1177/0011128784030001001",
+    "title": [
+     "Child Welfare, the Private Sector, and Community-Based Corrections"
+    ],
+    "is-referenced-by-count": 16
+   }
+  },
+  {
+   "q": "child welfare spending delinquency",
+   "pm": [
+    {
+     "title": "[Children in danger].",
+     "venue": "Vie et sante",
+     "year": 1990,
+     "abstract_len": 1500
+    },
+    {
+     "title": "Is child maltreatment a leading cause of delinquency?",
+     "venue": "Child welfare",
+     "year": 1994,
+     "abstract_len": 657
+    },
+    {
+     "title": "Alcohol Outlet Density, Parental Monitoring, and Adolescent Deviance: A Multilevel Analysis.",
+     "venue": "Children and youth services review",
+     "year": 2009,
+     "abstract_len": 1573
+    }
+   ]
+  }
+ ],
+ "safety_gray_band": [
+  {
+   "q": "abandoned building remediation crime",
+   "cr_best": {
+    "DOI": "10.1201/9781003517214-8",
+    "title": [
+     "Remediation Measures for Abandoned Room and Pillar Mines"
+    ],
+    "is-referenced-by-count": 0
+   }
+  },
+  {
+   "q": "abandoned building remediation crime",
+   "pm": [
+    {
+     "title": "A Difference-In-Differences Study of the Effects of a New Abandoned Building Remediation Strategy on Safety.",
+     "venue": "PloS one",
+     "year": 2015,
+     "abstract_len": 1874
+    },
+    {
+     "title": "Creating Safe And Healthy Neighborhoods With Place-Based Violence Interventions.",
+     "venue": "Health affairs (Project Hope)",
+     "year": 2019,
+     "abstract_len": 1083
+    },
+    {
+     "title": "Urban Blight Remediation as a Cost-Beneficial Solution to Firearm Violence.",
+     "venue": "American journal of public health",
+     "year": 2016,
+     "abstract_len": 141
+    }
+   ]
+  },
+  {
+   "q": "vacant lot greening randomized crime",
+   "cr_best": {
+    "DOI": "10.1016/j.landurbplan.2021.104096",
+    "title": [
+     "Resident-led vacant lot greening and crime: Do ownership and visual condition-care matter?"
+    ],
+    "is-referenced-by-count": 20
+   }
+  },
+  {
+   "q": "vacant lot greening randomized crime",
+   "pm": [
+    {
+     "title": "Sustainability of violence prevention after a randomized vacant lot greening intervention in Philadelphia: A 10-y follow-up.",
+     "venue": "Proceedings of the National Academy of Sciences of the United States o",
+     "year": 2026,
+     "abstract_len": 96
+    },
+    {
+     "title": "Greening vacant lots to reduce violent crime: a randomised controlled trial.",
+     "venue": "Injury prevention : journal of the International Society for Child and",
+     "year": 2013,
+     "abstract_len": 321
+    },
+    {
+     "title": "Development and Validation of a Vacant Lot Care Condition Instrument for Longitudinal Evaluation of Place-based Interventions.",
+     "venue": "Epidemiology (Cambridge, Mass.)",
+     "year": 2026,
+     "abstract_len": 332
+    }
+   ]
+  },
+  {
+   "q": "code enforcement vacancy crime",
+   "cr_best": {
+    "DOI": "10.1023/b:cris.0000015328.82955.f0",
+    "title": [
+     "Forging the vacancy chain: Law enforcement efforts and mobility in criminal economies"
+    ],
+    "is-referenced-by-count": 14
+   }
+  },
+  {
+   "q": "code enforcement vacancy crime",
+   "pm": []
+  }
+ ],
+ "waste_environment_band": [
+  {
+   "q": "illegal dumping intervention crime",
+   "cr_best": {
+    "DOI": "10.31979/etd.9hq7-yrq7",
+    "title": [
+     "Illegal Dumping as an Indicator for Community Social Disorganization and Crime"
+    ],
+    "is-referenced-by-count": 2
+   }
+  },
+  {
+   "q": "illegal dumping intervention crime",
+   "pm": [
+    {
+     "title": "Dynamics of street views and socio-economic conditions in profiling illegal dumping 'black spots': An LLM-enabled study in Hong Ko",
+     "venue": "Waste management (New York, N.Y.)",
+     "year": 2025,
+     "abstract_len": 1369
+    },
+    {
+     "title": "Pets, protected animals and farm animals: three perceptual spaces of animal abuse.",
+     "venue": "Frontiers in psychology",
+     "year": 2025,
+     "abstract_len": 2383
+    },
+    {
+     "title": "Feathered Detectives: Real-Time GPS Tracking of Scavenging Gulls Pinpoints Illegal Waste Dumping.",
+     "venue": "PloS one",
+     "year": 2016,
+     "abstract_len": 1266
+    }
+   ]
+  },
+  {
+   "q": "brownfield redevelopment neighborhood crime",
+   "cr_best": {
+    "DOI": "10.31979/etd.6qnz-96xj",
+    "title": [
+     "Brownfield Cleanup in a Post-Redevelopment Era"
+    ],
+    "is-referenced-by-count": 0
+   }
+  },
+  {
+   "q": "brownfield redevelopment neighborhood crime",
+   "pm": []
+  }
+ ],
+ "economic_dev_band": [
+  {
+   "q": "opportunity zone designated crime",
+   "cr_best": {
+    "DOI": "10.2139/ssrn.6894760",
+    "title": [
+     "Designated for Success? Testing for Cherry-Picking in New York City's Opportunity Zone Designations Using Permutation Inference and Detrended Difference-in-Differences"
+    ],
+    "is-referenced-by-count": 0
+   }
+  },
+  {
+   "q": "opportunity zone designated crime",
+   "pm": []
+  },
+  {
+   "q": "zoning reform neighborhood safety",
+   "cr_best": {
+    "DOI": "10.1016/b978-0-443-44207-0.00005-5",
+    "title": [
+     "Exclusionary Zoning, Zoning Exclusion and Zoning Reform"
+    ],
+    "is-referenced-by-count": 0
+   }
+  },
+  {
+   "q": "zoning reform neighborhood safety",
+   "pm": [
+    {
+     "title": "The associations of code reform zoning and activity-oriented zoning with neighborhood social connectedness in the U.S., including ",
+     "venue": "Health & place",
+     "year": 2026,
+     "abstract_len": 386
+    },
+    {
+     "title": "Communities on the Move: Pedestrian-Oriented Zoning as a Facilitator of Adult Active Travel to Work in the United States.",
+     "venue": "Frontiers in public health",
+     "year": 2016,
+     "abstract_len": 466
+    },
+    {
+     "title": "Healthy aging and where you live: community design relationships with physical activity and body weight in older Americans.",
+     "venue": "Journal of physical activity & health",
+     "year": 2010,
+     "abstract_len": 239
+    }
+   ]
+  },
+  {
+   "q": "enterprise zone crime",
+   "cr_best": {
+    "DOI": "10.3386/w14530",
+    "title": [
+     "Do Enterprise Zones Create Jobs? Evidence from California's Enterprise Zone Program"
+    ],
+    "is-referenced-by-count": 33
+   }
+  },
+  {
+   "q": "enterprise zone crime",
+   "pm": [
+    {
+     "title": "Violence and weapon-related trauma at Puruchuco-Huaquerones, Peru.",
+     "venue": "American journal of physical anthropology",
+     "year": 2010,
+     "abstract_len": 1749
+    }
+   ]
+  }
+ ],
+ "courts_legal_aid_band": [
+  {
+   "q": "Eviction Diversion Program",
+   "cr_best": {
+    "DOI": "10.1177/10957960251398019",
+    "title": [
+     "The Limits of Success: Philadelphia\u2019s Eviction Diversion Program"
+    ],
+    "is-referenced-by-count": 0
+   }
+  },
+  {
+   "q": "Eviction Diversion Program",
+   "pm": [
+    {
+     "title": "Drug-related charges and their association with social determinants of health.",
+     "venue": "Journal of substance use and addiction treatment",
+     "year": 2025,
+     "abstract_len": 437
+    }
+   ]
+  },
+  {
+   "q": "right to counsel eviction law",
+   "cr_best": {
+    "DOI": "10.2307/1227310",
+    "title": [
+     "Police Interrogation: The Right to Counsel: Constitutional Law. Criminal Procedure. Right to Counsel"
+    ],
+    "is-referenced-by-count": 3
+   }
+  },
+  {
+   "q": "right to counsel eviction law",
+   "pm": [
+    {
+     "title": "A Descriptive Analysis of Tenant Right to Counsel Law and Praxis 2017-2024.",
+     "venue": "Housing policy debate",
+     "year": 2025,
+     "abstract_len": 1326
+    },
+    {
+     "title": "Evictions, legal counsel, and population health: A mixed methods study.",
+     "venue": "Social science & medicine (1982)",
+     "year": 2025,
+     "abstract_len": 585
+    }
+   ]
+  },
+  {
+   "q": "bail reform crime county",
+   "cr_best": {
+    "DOI": "10.2139/ssrn.3541091",
+    "title": [
+     "Does Bail Reform Increase Crime? An Empirical Assessment of the Public Safety Implications of Bail Reform in Cook County, Illinois"
+    ],
+    "is-referenced-by-count": 1
+   }
+  },
+  {
+   "q": "bail reform crime county",
+   "pm": []
+  },
+  {
+   "q": "civil legal services housing eviction outcomes",
+   "cr_best": {
+    "DOI": "10.64240/70104f09bd",
+    "title": [
+     "Eviction, Legal Aid, and Housing Justice"
+    ],
+    "is-referenced-by-count": 0
+   }
+  },
+  {
+   "q": "civil legal services housing eviction outcomes",
+   "pm": [
+    {
+     "title": "Barriers to Implementing Medical-Legal Partnerships for Survivors of Intimate Partner Violence: Qualitative Perspectives from the ",
+     "venue": "Journal of general internal medicine",
+     "year": 2026,
+     "abstract_len": 481
+    }
+   ]
+  }
+ ],
+ "digital_band": [
+  {
+   "q": "broadband access crime arrest",
+   "cr_best": {
+    "DOI": "10.1787/1277ddc6-en",
+    "title": [
+     "Mobile broadband subscriptions"
+    ],
+    "is-referenced-by-count": 5
+   }
+  },
+  {
+   "q": "broadband access crime arrest",
+   "pm": []
+  },
+  {
+   "q": "broadband expansion property crime",
+   "cr_best": {
+    "DOI": "10.2139/ssrn.3072289",
+    "title": [
+     "The Internet Effects on Sex Crime and Murder \u2013 Evidence from the Broadband Internet Expansion in Germany"
+    ],
+    "is-referenced-by-count": 3
+   }
+  },
+  {
+   "q": "broadband expansion property crime",
+   "pm": []
+  },
+  {
+   "q": "home internet adolescent crime",
+   "cr_best": {
+    "DOI": "10.4324/9781843929338.ch24",
+    "title": [
+     "Public policing and Internet crime"
+    ],
+    "is-referenced-by-count": 2
+   }
+  },
+  {
+   "q": "home internet adolescent crime",
+   "pm": [
+    {
+     "title": "Bullying, cyberbullying, and suicide.",
+     "venue": "Archives of suicide research : official journal of the International A",
+     "year": 2010,
+     "abstract_len": 1087
+    },
+    {
+     "title": "Online Searches for Gun-Related Harm.",
+     "venue": "JAMA network open",
+     "year": 2026,
+     "abstract_len": 206
+    },
+    {
+     "title": "Associations of perceived neighbourhood and home environments with sedentary behaviour among adolescents in 14 countries: the IPEN",
+     "venue": "The international journal of behavioral nutrition and physical activit",
+     "year": 2024,
+     "abstract_len": 331
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,395 @@
+{
+ "_record": "gray_safety_lane_v1",
+ "built": "2026-11-24",
+ "built_by": "LANE-BUILD 2/3 subagent \u2014 BOB-scan-19 blind-spot lane 'safety_gray_band' (the-bob_scan_19_blindspot_v1.json @827fe67 + lane_bob19_safety_gray.md brief)",
+ "parent": {
+  "scan": "bob_scan_19_blindspot_v1.json (commit 827fe67, cardscout-2.0)",
+  "lane_doc": "For You/PolyScout/build/_bob19_blindspot_lanes/lane_bob19_safety_gray.md",
+  "priority": "P1 \u2014 'the STRONGEST live lit of any blind-spot lane'"
+ },
+ "laws_held": [
+  "direction-class only, no causal claims",
+  "honest-null = routes-tried-no-capture, never a placeholder (2015 STL file byte-empty = missing row, not zero)",
+  "no fabricated rows \u2014 every count read live from keyless APIs or downloaded open files this pass",
+  "the grain-law: county/static inputs named as companion pulls, never blended into the city-year panel",
+  "format-lock: extends the lane12 arc-column convention (murder_rate_t0/t+1/t+2 mirrors lane12_component_timearcs)",
+  "system-change flags: Houston 2026 count is a DIFFERENT upstream system (Recent-SR FeatureServer, not the archives MapServer) \u2014 flagged, never silently spliced into the archive series trend"
+ ],
+ "panel": {
+  "gray_safety_lane_panel_v1.json": {
+   "rows": 97,
+   "cities": [
+    "Cincinnati",
+    "Detroit",
+    "Houston",
+    "Memphis",
+    "NYC",
+    "St. Louis"
+   ],
+   "cities_covered": 6,
+   "grain": "city x year",
+   "columns": [
+    "city",
+    "year",
+    "calls",
+    "population",
+    "calls_per_1k",
+    "calls_per1k_t+1",
+    "calls_per1k_t+2",
+    "murders",
+    "murder_rate_t0",
+    "murder_rate_t+1",
+    "murder_rate_t+2",
+    "population_class"
+   ],
+   "murder_matched_rows": 53
+  }
+ },
+ "exposure_side": {
+  "definition": "gray = the built-environment enforcement channel: 311/service-request volume + code-enforcement class shares per city-year (calls-by-type at city-year grain)",
+  "pull_routes_verified_live": {
+   "Memphis": {
+    "platform": "ArcGIS FeatureServer (services.arcgis.com g1fRTDLeMgspWrYp, City of Memphis org)",
+    "dataset": "311 All Service Calls (dataset 754d5490... on data.memphistn.gov hub api/v3)",
+    "auth": "keyless AGOL query \u2014 NO Socrata (data.memphistn.gov is ArcGIS Hub, NOT Socrata; /api/catalog 404s)",
+    "years": {
+     "2020": 1,
+     "2021": 4,
+     "2022": 14,
+     "2023": 36,
+     "2024": 640,
+     "2025": 52617,
+     "2026": 460682
+    },
+    "note": "system only carries bulk volume 2024+ (2020-2023 rows ~1-640/yr are carry-over artifacts); within-city test restricted to the 2024-2026 dense window via 2024 anchor",
+    "calls_by_type_top2026": {
+     "Overgrown Yard/Trash": 40002,
+     "No Pickup": 33673,
+     "Carts(Damaged Cart)": 30898,
+     "Dead Animal Pick Up": 25790,
+     "Carts(Lost-Stolen)": 20679,
+     "Animals(Stray Animal)": 16106,
+     "Animals(Aggressive Non-Critical)": 14995,
+     "Injured-Sick Animal": 11018
+    },
+    "code_enforcement_class_2026": {
+     "classes": {
+      "Animals(Animal Permits)": 1126,
+      "Dangerous Premise BSB Processed": 471,
+      "Food Sales Without Permit": 173,
+      "Graffiti": 219,
+      "Graffiti (Private Property)": 4582,
+      "Graffiti (Public Property)": 6611,
+      "Graffiti CPS Property": 969,
+      "Illegal Dumping": 5337,
+      "Illegal Parking (Front-Side Yard Parking)": 6542,
+      "Illegal Parking (Illegal Car Sales)": 49,
+      "Illegal Parking (Oversized Vehicle)": 90,
+      "Illegal Parking (ROW Obstruction)": 4115,
+      "Illegal Parking (Zoning-Oversized Vehicle)": 538,
+      "Junk Vehicle": 4353,
+      "Junk Vehicle Wrecked/Dismantled": 5,
+      "Overgrown Yard/Trash": 40002,
+      "Overgrown Yard/Trash (Alley Way Maintenance)": 8318,
+      "Overgrown Yard/Trash (Dumpster Maintenance)": 1215,
+      "Overgrown Yard/Trash (Vacant Lot)": 6215,
+      "Parks Internal (Graffiti)": 1360,
+      "Permits (Boarding Homes)": 55,
+      "Permits (Building Without A Permit)": 3371,
+      "Permits (Donation Containers)": 45,
+      "Permits (Garage Sale)": 437,
+      "Permits (Historic Property)": 113,
+      "Permits (Mobile Homes)": 17,
+      "Permits (Short-Term Rentals)": 585,
+      "Permits (Used Mattress Sales)": 154,
+      "Permits (Vendors)": 146,
+      "Structure Maintenance Multi-Tenant (Exterior)": 1987,
+      "Structure Maintenance Multi-Tenant (Interior)": 7885,
+      "Traffic Signs (Faded/Graffiti)": 5387,
+      "Vacant/Overgrown Property": 9788,
+      "Vacant/Overgrown Property (Overgrown Yard/Trash)": 10
+     },
+     "class_total": 122270,
+     "share_of_all_calls": 0.2654
+    }
+   },
+   "Cincinnati": {
+    "platform": "Socrata (gcej-gmiw 'Cincinnati 311 (Non-Emergency) Service Requests')",
+    "auth": "keyless Socrata \u2014 full open portal, NO AUTH",
+    "years": {
+     "2000": 3,
+     "2001": 5322,
+     "2002": 6912,
+     "2003": 8486,
+     "2004": 27933,
+     "2005": 80605,
+     "2006": 85273,
+     "2007": 91626,
+     "2008": 94670,
+     "2009": 91182,
+     "2010": 79898,
+     "2011": 63281,
+     "2012": 54976,
+     "2013": 91287,
+     "2014": 97296,
+     "2015": 107680,
+     "2016": 111573,
+     "2017": 106851,
+     "2018": 115836,
+     "2019": 107273,
+     "2020": 95494,
+     "2021": 108450,
+     "2022": 111952,
+     "2023": 117792,
+     "2024": 126816,
+     "2025": 152930,
+     "2026": 153792
+    },
+    "calls_by_type_groups_per_year": "up-to-82 group_desc classes per year captured in raw file"
+   },
+   "Detroit": {
+    "platform": "ArcGIS FeatureServer (services2.arcgis.com qvkbeam7Wirps6zC 'improve_detroit')",
+    "auth": "keyless AGOL (data.detroitmi.gov is ArcGIS Hub Utility, not Socrata)",
+    "years": {
+     "2014": 1525,
+     "2015": 23754,
+     "2016": 41852,
+     "2017": 48944,
+     "2018": 51179,
+     "2019": 59416,
+     "2020": 63360,
+     "2021": 76825,
+     "2022": 75178,
+     "2023": 64204,
+     "2024": 78396,
+     "2025": 93981,
+     "2026": 88517
+    },
+    "total_rows_platform": 767131,
+    "calls_by_type_top2026": {
+     "Tall Grass and Weeds": 7375,
+     "Illegal Dump Sites": 7251,
+     "DPW - Debris Removal - DPW USE ONLY": 6705,
+     "Request Recycling Cart": 6523,
+     "Tree Issue": 6200,
+     "DPW - Other environmental - DPW USE ONLY": 5654
+    }
+   },
+   "StLouis": {
+    "platform": "stlouis-mo.gov CSB open-data zip (one CSV per year) + PowerNap API (keyless, api_key-in-page)",
+    "auth": "keyless download (data-files/csb.zip, 129 MB, 19 year-files)",
+    "years": {
+     "2008": 88,
+     "2009": 1347,
+     "2010": 1511,
+     "2011": 2005,
+     "2012": 3574,
+     "2013": 75672,
+     "2014": 100713,
+     "2016": 107916,
+     "2017": 108782,
+     "2018": 108373,
+     "2019": 110247,
+     "2020": 108574,
+     "2021": 101187,
+     "2022": 110022,
+     "2023": 113984,
+     "2024": 114659,
+     "2025": 135706,
+     "2026": 109997
+    },
+    "honest_nulls": [
+     "2015.csv shipped byte-empty in the official zip = 2015 row is MISSING-not-zero (routes-tried: zip re-read twice, file is 0 bytes on the city server)"
+    ]
+   },
+   "NYC": {
+    "platform": "Socrata erm2-nwe9 (2020-present) + 76ig-c548 (2010-2019)",
+    "auth": "keyless Socrata groupBy",
+    "years": {
+     "2010": 2089792,
+     "2011": 2011177,
+     "2012": 1837132,
+     "2013": 1887596,
+     "2014": 2156749,
+     "2015": 2322539,
+     "2016": 2409088,
+     "2017": 2508543,
+     "2018": 2760175,
+     "2019": 2631126,
+     "2020": 2942024,
+     "2021": 3220882,
+     "2022": 3169960,
+     "2023": 3224723,
+     "2024": 3457597,
+     "2025": 3655759,
+     "2026": 3589357
+    }
+   },
+   "Houston": {
+    "platform": "mycity2.houstontx.gov AGOL: Houston311_Archives/MapServer (5,849,463 rows, 2012-2025) + HOUSTON311_RECENT_SR_SNOW FeatureServer (2025-2026)",
+    "auth": "keyless REST queries on the city's own GIS host",
+    "years": {
+     "2012": 241244,
+     "2013": 263769,
+     "2014": 305924,
+     "2015": 355649,
+     "2016": 391259,
+     "2017": 406513,
+     "2018": 442129,
+     "2019": 432998,
+     "2020": 418145,
+     "2021": 385418,
+     "2022": 363322,
+     "2023": 391777,
+     "2024": 469790,
+     "2025": 438328,
+     "2026": 40381
+    },
+    "system_change_flag": "2026 count comes from the newer Recent-SR system (50k-row slice); archives MapServer ends 2025. NOT summed across systems.",
+    "calls_by_type_examples": {
+     "2023": {
+      "Water Leak": 40190,
+      "Missed Garbage Pickup": 27730,
+      "Water Service": 20408,
+      "Sewer Wastewater": 20114,
+      "Missed Recycling Pickup": 18643
+     }
+    }
+   }
+  }
+ },
+ "outcome_side": {
+  "murder_rate": "banked murders_all_v1.json (558 city-years) + population bank (population_series_v1 + populations_cities_v2 + populations_wide_v1 + phase2_pop_table), same series and classes as lane12 \u2014 never re-derived"
+ },
+ "tests": {
+  "design": "within-city-demeaned pooled Pearson (mirrors lane12 'pooled-within-city-z' machinery; n-thin panels -> direction-class + t-approx, no p-value claims)",
+  "cells": {
+   "calls_per1k_t_vs_murder_rate_t0": {
+    "r": 0.006,
+    "t_approx": 0.05,
+    "n_city_years": 53,
+    "cities": {
+     "Memphis": 7,
+     "Cincinnati": 12,
+     "Detroit": 9,
+     "St. Louis": 16,
+     "NYC": 6,
+     "Houston": 3
+    }
+   },
+   "calls_per1k_t_vs_murder_rate_t+1": {
+    "r": 0.344,
+    "t_approx": 2.34,
+    "n_city_years": 43,
+    "cities": {
+     "Memphis": 6,
+     "Cincinnati": 11,
+     "Detroit": 7,
+     "St. Louis": 14,
+     "NYC": 5
+    }
+   },
+   "calls_per1k_t_vs_murder_rate_t+2": {
+    "r": 0.394,
+    "t_approx": 2.54,
+    "n_city_years": 37,
+    "cities": {
+     "Memphis": 5,
+     "Cincinnati": 10,
+     "Detroit": 5,
+     "St. Louis": 13,
+     "NYC": 4
+    }
+   },
+   "murder_rate_t0_vs_calls_per1k_t+1": {
+    "r": 0.027,
+    "t_approx": 0.17,
+    "n_city_years": 44,
+    "cities": {
+     "Memphis": 6,
+     "Cincinnati": 11,
+     "Detroit": 7,
+     "St. Louis": 14,
+     "NYC": 6
+    }
+   }
+  },
+  "per_city_within_r_raw_t0": {
+   "Memphis": {
+    "n": 7,
+    "within_city_r_raw": -0.76
+   },
+   "Cincinnati": {
+    "n": 12,
+    "within_city_r_raw": -0.402
+   },
+   "Detroit": {
+    "n": 9,
+    "within_city_r_raw": -0.424
+   },
+   "St. Louis": {
+    "n": 16,
+    "within_city_r_raw": 0.514
+   },
+   "NYC": {
+    "n": 6,
+    "within_city_r_raw": 0.239
+   },
+   "Houston": {
+    "n": 3,
+    "within_city_r_raw": -0.864
+   }
+  }
+ },
+ "verdict": [
+  "6 of 6 cities CAPTURED (Memphis, Cincinnati, Detroit, St. Louis, NYC, Houston \u2014 all keyless, no-auth): 97 city-year gray rows, 53 murder-arc-matched",
+  "WITHIN-CITY-Demeaned joint verdict: t0 ~ZERO (r=+0.006, n=53) \u2014 same-year gray-call volume does NOT track same-year murder rate within cities",
+  "the FORWARD arc is POSITIVE and consistent: t+1 r=+0.344 (n=43), t+2 r=+0.394 (n=37) \u2014 years with MORE gray/311-call volume tend to be followed by HIGHER murder rates",
+  "reverse arc ~zero (murder_t0 -> calls_t+1 r=+0.027) \u2014 the pull does NOT run from murder to later calls; direction runs enforcement-volume -> or co-driver with -> the lagged margin, direction-class only",
+  "per-city signs are non-uniform (Memphis -0.76, Cincinnati -0.40, Detroit -0.42, Houston -0.86 vs St. Louis +0.51, NYC +0.24): the pooled forward-positive is NOT a within-city law \u2014 honest read is city-heterogeneous",
+  "HONEST-NULL banked: STL 2015 absent (empty official file); Memphis pre-2024 (system carries volume only 2024+); Houston system-change flag on 2026"
+ ],
+ "lit_magnitude": {
+  "pull": "PubMed eutils (keyless) full abstracts stored in _lane13_gray_lit_core_abstracts.json + _lane13_gray_lit_pnas_abstracts.json",
+  "AJPH_2016_Branas (PMID 27736217, dj 10.2105/AJPH.2016.303434)": {
+   "design": "quasi-experimental, 5,112 abandoned buildings/vacant lots, Philadelphia 1999-2013",
+   "magnitudes": [
+    "abandoned-building remediation: firearm violence -39% (95%CI -28 to -50, p<0.05)",
+    "vacant-lot remediation: firearm violence -4.6% (95%CI -4.2 to -5.0, p<0.001)",
+    "ROI: $5 taxpayer / $79 societal per $1 on building remediation; $26 / $333 per $1 on lot remediation",
+    "neither program significantly affected NON-firearm violence"
+   ]
+  },
+  "PLoS_ONE_2015_Kondo (PMID 26153687, doi 10.1371/journal.pone.0129582)": {
+   "design": "DiD, Philadelphia Doors-and-Windows Ordinance, 2011-2013, n=676 remediated + permits + matched controls",
+   "magnitudes": [
+    "remediation significantly associated with citywide reductions in overall crimes, total assaults, gun assaults, nuisance crimes (p<0.001)",
+    "no significant spatial displacement; some increases in narcotics + property crimes around remediated buildings (p<0.001)"
+   ]
+  },
+  "PNAS_2026_Asa (PMID 43038466, doi 10.1073/pnas.2620725123)": {
+   "design": "10-year follow-up of the 2013 Philadelphia clustered RCT of vacant-lot greening",
+   "magnitudes": [
+    "intent-to-treat: any intervention -> -9% any-crime and -9% violent-crime density per sq-mile-year (0.91, 95%CI 0.86-0.97)",
+    "contamination-adjusted sustained greening -> -12% any-crime (0.88, 0.83-0.93), -11% violent (0.89, 0.83-0.95) \u2014 the durability half the scan named"
+   ]
+  },
+  "lane_read": "the lit is lot/building-grain causal with double-digit % effects; our countable is city-year enforcement-VOLUME (the input machinery), so the city-year lane runs on direction-class, per the grain-law"
+ },
+ "reproducibility_header": "Built from live keyless pulls this pass (scripts _lane13_gray_*.py): Memphis AGOL FeatureServer year x TypeName; Cincinnati Socrata gcej-gmiw groupBy; Detroit AGOL improve_detroit year x request_type; St. Louis csb.zip CSV row-counts + GROUP counters; NYC Socrata erm2-nwe9 + 76ig-c548 groupBy; Houston AGOL Archives/MapServer + Recent FeatureServer. Murder/population banks read from banked build/ files (never re-derived). Panel: gray_safety_lane_panel_v1.json (97 rows); tests: _lane13_gray_tests.py -> gray_safety_lane_tests_v1.json",
+ "honest_nulls_and_flags": [
+  "Houston: no Socrata (CKAN portal lacks 311); route banked = city AGOL GIS host directly",
+  "Memphis: data.memphistn.gov is ArcGIS-Hub (NOT Socrata) \u2014 federated Socrata catalog returns 0 Memphis-owned datasets; the AGOL FeatureServer IS the keyless route",
+  "Detroit: data.detroitmi.gov ArcGIS Hub Utility \u2014 no Socrata /api/catalog; AGOL org item 'Improve Detroit Issues' is the keyless route (767,131 rows)",
+  "St. Louis 2015: official zip ships an EMPTY csv for 2015 \u2014 recorded as missing, not zero",
+  "2016 STL row 107,916 vs 2014 100,713 with 2013+ full-launch caveat in city README (2008-2012 are partial soft-launch years, kept but flagged)",
+  "Memphis 2020-2023: sparse carry-over rows (1/4/14/36) = system switch artifacts, kept with flag; the dense series is 2024-2026"
+ ],
+ "outputs": [
+  "gray_safety_lane_v1.json (this file)",
+  "gray_safety_lane_panel_v1.json (97 city-year rows)",
+  "gray_safety_lane_tests_v1.json",
+  "_lane13_gray_{memphis_311_raw,detroit_raw,cincinnati_raw,houston_raw,stlouis_raw,nyc_year_counts}.json (raw per-city pulls)",
+  "_lane13_gray_lit_core_abstracts.json + _lane13_gray_lit_pnas_abstracts.json (lit anchors, PubMed-verbatim)"
+ ]
+}

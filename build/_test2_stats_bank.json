@@ -1,0 +1,5954 @@
+{
+ "panel": {
+  "NYC|2018": {
+   "city": "NYC",
+   "year": 2018,
+   "care_usd_total": 16083451082,
+   "care_components": {
+    "nyc_libraries": 377875729,
+    "nyc_human_services": 11944234350,
+    "nyc_youth": 620742309,
+    "nyc_housing": 994866318,
+    "nyc_health": 1658535690,
+    "nyc_parks": 487196686
+   },
+   "care_partial_nulls": null,
+   "bookings_total": 246773,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|2017": {
+   "city": "NYC",
+   "year": 2017,
+   "care_usd_total": 15315570288,
+   "care_components": {
+    "nyc_libraries": 369871017,
+    "nyc_human_services": 11304377858,
+    "nyc_youth": 549820517,
+    "nyc_housing": 1022280156,
+    "nyc_health": 1595394972,
+    "nyc_parks": 473825768
+   },
+   "care_partial_nulls": null,
+   "bookings_total": 286225,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|2016": {
+   "city": "NYC",
+   "year": 2016,
+   "care_usd_total": 14293238630,
+   "care_components": {
+    "nyc_libraries": 359548381,
+    "nyc_human_services": 10735724730,
+    "nyc_youth": 508135145,
+    "nyc_housing": 842163383,
+    "nyc_health": 1425182122,
+    "nyc_parks": 422484869
+   },
+   "care_partial_nulls": null,
+   "bookings_total": 314864,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|2015": {
+   "city": "NYC",
+   "year": 2015,
+   "care_usd_total": 14268497017,
+   "care_components": {
+    "nyc_libraries": 322392465,
+    "nyc_human_services": 10902296696,
+    "nyc_youth": 419393769,
+    "nyc_housing": 714764450,
+    "nyc_health": 1470119050,
+    "nyc_parks": 439530587
+   },
+   "care_partial_nulls": null,
+   "bookings_total": 339470,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|2014": {
+   "city": "NYC",
+   "year": 2014,
+   "care_usd_total": 13553231749,
+   "care_components": {
+    "nyc_libraries": 238573841,
+    "nyc_human_services": 10503910381,
+    "nyc_youth": 368053995,
+    "nyc_housing": 684836177,
+    "nyc_health": 1394753164,
+    "nyc_parks": 363104191
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|2013": {
+   "city": "NYC",
+   "year": 2013,
+   "care_usd_total": 13580886970,
+   "care_components": {
+    "nyc_libraries": 298626053,
+    "nyc_human_services": 10456025218,
+    "nyc_youth": 307731199,
+    "nyc_housing": 666395787,
+    "nyc_health": 1480286945,
+    "nyc_parks": 371821768
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|2012": {
+   "city": "NYC",
+   "year": 2012,
+   "care_usd_total": 13293749418,
+   "care_components": {
+    "nyc_libraries": 199364762,
+    "nyc_human_services": 10215890836,
+    "nyc_youth": 299967237,
+    "nyc_housing": 729148365,
+    "nyc_health": 1528519015,
+    "nyc_parks": 320859203
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|2011": {
+   "city": "NYC",
+   "year": 2011,
+   "care_usd_total": 12112664612,
+   "care_components": {
+    "nyc_libraries": 295989798,
+    "nyc_human_services": 8869799670,
+    "nyc_youth": 318831578,
+    "nyc_housing": 702321868,
+    "nyc_health": 1582048076,
+    "nyc_parks": 343673622
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|2010": {
+   "city": "NYC",
+   "year": 2010,
+   "care_usd_total": 12565355272,
+   "care_components": {
+    "nyc_libraries": 210534824,
+    "nyc_human_services": 9265180769,
+    "nyc_youth": 381489604,
+    "nyc_housing": 725869462,
+    "nyc_health": 1655210972,
+    "nyc_parks": 327069641
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|2009": {
+   "city": "NYC",
+   "year": 2009,
+   "care_usd_total": 12438336711,
+   "care_components": {
+    "nyc_libraries": 366307044,
+    "nyc_human_services": 9032974887,
+    "nyc_youth": 354146456,
+    "nyc_housing": 698065267,
+    "nyc_health": 1661098142,
+    "nyc_parks": 325744915
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|2008": {
+   "city": "NYC",
+   "year": 2008,
+   "care_usd_total": 12484787390,
+   "care_components": {
+    "nyc_libraries": 266399544,
+    "nyc_human_services": 9392384878,
+    "nyc_youth": 364266692,
+    "nyc_housing": 594745822,
+    "nyc_health": 1550271712,
+    "nyc_parks": 316718742
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|2007": {
+   "city": "NYC",
+   "year": 2007,
+   "care_usd_total": 11066241802,
+   "care_components": {
+    "nyc_libraries": 330061324,
+    "nyc_human_services": 8089993271,
+    "nyc_youth": 280185916,
+    "nyc_housing": 567367941,
+    "nyc_health": 1513878654,
+    "nyc_parks": 284754696
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|2006": {
+   "city": "NYC",
+   "year": 2006,
+   "care_usd_total": 10385522352,
+   "care_components": {
+    "nyc_libraries": 261140353,
+    "nyc_human_services": 7582022757,
+    "nyc_youth": 279372849,
+    "nyc_housing": 533212450,
+    "nyc_health": 1467786043,
+    "nyc_parks": 261987900
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|2005": {
+   "city": "NYC",
+   "year": 2005,
+   "care_usd_total": 10597348612,
+   "care_components": {
+    "nyc_libraries": 362309813,
+    "nyc_human_services": 7863390932,
+    "nyc_youth": 238020929,
+    "nyc_housing": 460517144,
+    "nyc_health": 1432047115,
+    "nyc_parks": 241062679
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|2004": {
+   "city": "NYC",
+   "year": 2004,
+   "care_usd_total": 9745742821,
+   "care_components": {
+    "nyc_libraries": 241790395,
+    "nyc_human_services": 7203547781,
+    "nyc_youth": 236383213,
+    "nyc_housing": 405087478,
+    "nyc_health": 1441246770,
+    "nyc_parks": 217687184
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|2003": {
+   "city": "NYC",
+   "year": 2003,
+   "care_usd_total": 9136231604,
+   "care_components": {
+    "nyc_libraries": 337638972,
+    "nyc_human_services": 6673595944,
+    "nyc_youth": 144022476,
+    "nyc_housing": 376369703,
+    "nyc_health": 1414923174,
+    "nyc_parks": 189681335
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|2002": {
+   "city": "NYC",
+   "year": 2002,
+   "care_usd_total": 8329578924,
+   "care_components": {
+    "nyc_libraries": 123808070,
+    "nyc_human_services": 6431763433,
+    "nyc_youth": 141385066,
+    "nyc_housing": 385323135,
+    "nyc_health": 1049134555,
+    "nyc_parks": 198164665
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": 4893200000,
+   "care_usd_total_alt_books": 11056900000,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": 1.7022764088939752
+  },
+  "NYC|2001": {
+   "city": "NYC",
+   "year": 2001,
+   "care_usd_total": 8186859083,
+   "care_components": {
+    "nyc_libraries": 382775490,
+    "nyc_human_services": 6158415534,
+    "nyc_youth": 138576790,
+    "nyc_housing": 403148879,
+    "nyc_health": 906946950,
+    "nyc_parks": 196995440
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": 649,
+   "population": 7499958,
+   "pop_source": "triple_slider_v6d.json (care_arc bank: books-grain care/cage + pop)",
+   "cage_usd_total_books": 4421700000,
+   "care_usd_total_alt_books": 10733600000,
+   "care_per_capita": 1091.5873239556809,
+   "murder_rate_per100k": 8.65338179227137,
+   "care_ratio_cage": 1.8515184392880566
+  },
+  "NYC|2000": {
+   "city": "NYC",
+   "year": 2000,
+   "care_usd_total": 7531776708,
+   "care_components": {
+    "nyc_libraries": 232520563,
+    "nyc_human_services": 5832854951,
+    "nyc_youth": 122406105,
+    "nyc_housing": 365665357,
+    "nyc_health": 790726502,
+    "nyc_parks": 187603230
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": 667,
+   "population": 7475250,
+   "pop_source": "triple_slider_v6d.json (care_arc bank: books-grain care/cage + pop)",
+   "cage_usd_total_books": 4208300000,
+   "care_usd_total_alt_books": 9967700000,
+   "care_per_capita": 1007.5618485000501,
+   "murder_rate_per100k": 8.922778502391225,
+   "care_ratio_cage": 1.7897432949171874
+  },
+  "NYC|1999": {
+   "city": "NYC",
+   "year": 1999,
+   "care_usd_total": 6887070583,
+   "care_components": {
+    "nyc_libraries": 212243339,
+    "nyc_human_services": 5526302525,
+    "nyc_youth": 108441360,
+    "nyc_housing": 371637685,
+    "nyc_health": 491602605,
+    "nyc_parks": 176843069
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": 671,
+   "population": 7454757,
+   "pop_source": "triple_slider_v6d.json (care_arc bank: books-grain care/cage + pop)",
+   "cage_usd_total_books": 3913100000,
+   "care_usd_total_alt_books": 9363900000,
+   "care_per_capita": 923.8491050747865,
+   "murder_rate_per100k": 9.00096408239732,
+   "care_ratio_cage": 1.7600037267128363
+  },
+  "NYC|1998": {
+   "city": "NYC",
+   "year": 1998,
+   "care_usd_total": 6911014917,
+   "care_components": {
+    "nyc_libraries": 202049786,
+    "nyc_human_services": 5593102750,
+    "nyc_youth": 88405773,
+    "nyc_housing": 388919780,
+    "nyc_health": 472029634,
+    "nyc_parks": 166507194
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": 633,
+   "population": 7423978,
+   "pop_source": "triple_slider_v6d.json (care_arc bank: books-grain care/cage + pop)",
+   "cage_usd_total_books": 3567500000,
+   "care_usd_total_alt_books": 9239700000,
+   "care_per_capita": 930.90455238418,
+   "murder_rate_per100k": 8.526426128956741,
+   "care_ratio_cage": 1.9372151133847233
+  },
+  "NYC|1997": {
+   "city": "NYC",
+   "year": 1997,
+   "care_usd_total": 7254935444,
+   "care_components": {
+    "nyc_libraries": 107576775,
+    "nyc_human_services": 6079554929,
+    "nyc_youth": 86396254,
+    "nyc_housing": 408697159,
+    "nyc_health": 420275407,
+    "nyc_parks": 152434920
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|1996": {
+   "city": "NYC",
+   "year": 1996,
+   "care_usd_total": 8926278561,
+   "care_components": {
+    "nyc_libraries": 252998729,
+    "nyc_human_services": 7640963295,
+    "nyc_youth": 48453946,
+    "nyc_housing": 407187532,
+    "nyc_health": 419307651,
+    "nyc_parks": 157367408
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|1995": {
+   "city": "NYC",
+   "year": 1995,
+   "care_usd_total": 9060852414,
+   "care_components": {
+    "nyc_libraries": 167866879,
+    "nyc_human_services": 7827797691,
+    "nyc_youth": 65136824,
+    "nyc_housing": 429119357,
+    "nyc_health": 414601489,
+    "nyc_parks": 156330174
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|1994": {
+   "city": "NYC",
+   "year": 1994,
+   "care_usd_total": 8956726781,
+   "care_components": {
+    "nyc_libraries": 172571753,
+    "nyc_human_services": 7757918160,
+    "nyc_youth": 67737029,
+    "nyc_housing": 445665391,
+    "nyc_health": 351573249,
+    "nyc_parks": 161261199
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|1993": {
+   "city": "NYC",
+   "year": 1993,
+   "care_usd_total": 8198743365,
+   "care_components": {
+    "nyc_libraries": 146463384,
+    "nyc_human_services": 7139697647,
+    "nyc_youth": 64446593,
+    "nyc_housing": 374771475,
+    "nyc_health": 314970458,
+    "nyc_parks": 158393808
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|1992": {
+   "city": "NYC",
+   "year": 1992,
+   "care_usd_total": 7869527521,
+   "care_components": {
+    "nyc_libraries": 129169150,
+    "nyc_human_services": 6883893088,
+    "nyc_youth": 47550927,
+    "nyc_housing": 396992375,
+    "nyc_health": 268394283,
+    "nyc_parks": 143527698
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|1991": {
+   "city": "NYC",
+   "year": 1991,
+   "care_usd_total": 7637238468,
+   "care_components": {
+    "nyc_libraries": 138760971,
+    "nyc_human_services": 6511863444,
+    "nyc_youth": 40850507,
+    "nyc_housing": 460657466,
+    "nyc_health": 300800132,
+    "nyc_parks": 184305948
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|1990": {
+   "city": "NYC",
+   "year": 1990,
+   "care_usd_total": 6838254755,
+   "care_components": {
+    "nyc_libraries": 95035421,
+    "nyc_human_services": 5754867591,
+    "nyc_youth": 36956483,
+    "nyc_housing": 471026803,
+    "nyc_health": 291619576,
+    "nyc_parks": 188748881
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|1989": {
+   "city": "NYC",
+   "year": 1989,
+   "care_usd_total": 6238449234,
+   "care_components": {
+    "nyc_libraries": 185069429,
+    "nyc_human_services": 5177519366,
+    "nyc_youth": 0,
+    "nyc_housing": 463327488,
+    "nyc_health": 230221509,
+    "nyc_parks": 182311442
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|1988": {
+   "city": "NYC",
+   "year": 1988,
+   "care_usd_total": 5780646482,
+   "care_components": {
+    "nyc_libraries": 132957035,
+    "nyc_human_services": 4838837942,
+    "nyc_youth": 0,
+    "nyc_housing": 435270663,
+    "nyc_health": 194241815,
+    "nyc_parks": 179339027
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|1987": {
+   "city": "NYC",
+   "year": 1987,
+   "care_usd_total": 5604738395,
+   "care_components": {
+    "nyc_libraries": 119956286,
+    "nyc_human_services": 4750315117,
+    "nyc_youth": 0,
+    "nyc_housing": 388468758,
+    "nyc_health": 177648369,
+    "nyc_parks": 168349865
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|1986": {
+   "city": "NYC",
+   "year": 1986,
+   "care_usd_total": 5590002214,
+   "care_components": {
+    "nyc_libraries": 114544671,
+    "nyc_human_services": 4791416578,
+    "nyc_youth": 0,
+    "nyc_housing": 371505171,
+    "nyc_health": 153891645,
+    "nyc_parks": 158644149
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|1985": {
+   "city": "NYC",
+   "year": 1985,
+   "care_usd_total": 5141650674,
+   "care_components": {
+    "nyc_libraries": 63177816,
+    "nyc_human_services": 4440946929,
+    "nyc_youth": 0,
+    "nyc_housing": 361118591,
+    "nyc_health": 132515262,
+    "nyc_parks": 143892076
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|1984": {
+   "city": "NYC",
+   "year": 1984,
+   "care_usd_total": 4722893390,
+   "care_components": {
+    "nyc_libraries": 87423437,
+    "nyc_human_services": 4081057447,
+    "nyc_youth": 0,
+    "nyc_housing": 313128848,
+    "nyc_health": 118380705,
+    "nyc_parks": 122902953
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|1983": {
+   "city": "NYC",
+   "year": 1983,
+   "care_usd_total": 4339482506,
+   "care_components": {
+    "nyc_libraries": 118037966,
+    "nyc_human_services": 3714525174,
+    "nyc_youth": 0,
+    "nyc_housing": 286450595,
+    "nyc_health": 104663106,
+    "nyc_parks": 115805665
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|1982": {
+   "city": "NYC",
+   "year": 1982,
+   "care_usd_total": 4052759233,
+   "care_components": {
+    "nyc_libraries": 71988003,
+    "nyc_human_services": 3491582505,
+    "nyc_youth": 0,
+    "nyc_housing": 277911774,
+    "nyc_health": 98939089,
+    "nyc_parks": 112337862
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|1981": {
+   "city": "NYC",
+   "year": 1981,
+   "care_usd_total": 3786736538,
+   "care_components": {
+    "nyc_libraries": 62856517,
+    "nyc_human_services": 3265227325,
+    "nyc_youth": 0,
+    "nyc_housing": 264199376,
+    "nyc_health": 100232601,
+    "nyc_parks": 94220719
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|1980": {
+   "city": "NYC",
+   "year": 1980,
+   "care_usd_total": 3607291969,
+   "care_components": {
+    "nyc_libraries": 57904981,
+    "nyc_human_services": 3125808044,
+    "nyc_youth": 0,
+    "nyc_housing": 238009029,
+    "nyc_health": 99052875,
+    "nyc_parks": 86517040
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|2020": {
+   "city": "NYC",
+   "year": 2020,
+   "care_usd_total": 34067729000,
+   "care_components": {
+    "nyc_youth": 5097892000,
+    "nyc_libraries": 853427000,
+    "nyc_health": 2836596000,
+    "nyc_human_services": 22912294000,
+    "nyc_housing": 1421357000,
+    "nyc_parks": 946163000
+   },
+   "care_partial_nulls": null,
+   "bookings_total": 140413,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": 468,
+   "population": 8751188,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": 3892.9261947063646,
+   "murder_rate_per100k": 5.347845343969299,
+   "care_ratio_cage": null
+  },
+  "NYC|2021": {
+   "city": "NYC",
+   "year": 2021,
+   "care_usd_total": 33113644000,
+   "care_components": {
+    "nyc_youth": 4515571000,
+    "nyc_libraries": 846905000,
+    "nyc_health": 3268295000,
+    "nyc_human_services": 22197873000,
+    "nyc_housing": 1402629000,
+    "nyc_parks": 882371000
+   },
+   "care_partial_nulls": null,
+   "bookings_total": 155507,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": 488,
+   "population": 8447958,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": 3919.7216652829,
+   "murder_rate_per100k": 5.776543870128142,
+   "care_ratio_cage": null
+  },
+  "NYC|2022": {
+   "city": "NYC",
+   "year": 2022,
+   "care_usd_total": 36416427000,
+   "care_components": {
+    "nyc_youth": 5153173000,
+    "nyc_libraries": 847940000,
+    "nyc_health": 3684803000,
+    "nyc_human_services": 24270937000,
+    "nyc_housing": 1475185000,
+    "nyc_parks": 984389000
+   },
+   "care_partial_nulls": null,
+   "bookings_total": 189774,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": 438,
+   "population": 8362665,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": 4354.643764876388,
+   "murder_rate_per100k": 5.237564819348856,
+   "care_ratio_cage": null
+  },
+  "NYC|2023": {
+   "city": "NYC",
+   "year": 2023,
+   "care_usd_total": 39026744000,
+   "care_components": {
+    "nyc_youth": 5888053000,
+    "nyc_libraries": 931937000,
+    "nyc_health": 3531242000,
+    "nyc_human_services": 25905339000,
+    "nyc_housing": 1712353000,
+    "nyc_parks": 1057820000
+   },
+   "care_partial_nulls": null,
+   "bookings_total": 226872,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": 404,
+   "population": 8433834,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": 4627.402436424525,
+   "murder_rate_per100k": 4.790229449619236,
+   "care_ratio_cage": null
+  },
+  "NYC|2024": {
+   "city": "NYC",
+   "year": 2024,
+   "care_usd_total": 42783055000,
+   "care_components": {
+    "nyc_youth": 6533658000,
+    "nyc_libraries": 915746000,
+    "nyc_health": 3408487000,
+    "nyc_human_services": 28057325000,
+    "nyc_housing": 2732109000,
+    "nyc_parks": 1135730000
+   },
+   "care_partial_nulls": null,
+   "bookings_total": 260503,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": 357,
+   "population": 8596825,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": 4976.611132598372,
+   "murder_rate_per100k": 4.152695908082344,
+   "care_ratio_cage": null
+  },
+  "NYC|2025": {
+   "city": "NYC",
+   "year": 2025,
+   "care_usd_total": 47116868000,
+   "care_components": {
+    "nyc_youth": 7949854000,
+    "nyc_libraries": 998556000,
+    "nyc_health": 3778409000,
+    "nyc_human_services": 30410580000,
+    "nyc_housing": 2759500000,
+    "nyc_parks": 1219969000
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": 8584629,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": 5488.515345275841,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "NYC|2019": {
+   "city": "NYC",
+   "year": 2019,
+   "care_usd_total": null,
+   "care_components": {
+    "nyc_parks": null,
+    "nyc_health": null,
+    "nyc_human_services": null,
+    "nyc_housing": null,
+    "nyc_libraries": null,
+    "nyc_youth": null
+   },
+   "care_partial_nulls": [
+    "nyc_parks",
+    "nyc_health",
+    "nyc_human_services",
+    "nyc_housing",
+    "nyc_libraries",
+    "nyc_youth"
+   ],
+   "bookings_total": 214617,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": 319,
+   "population": 8336817,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": 3.8264004115719463,
+   "care_ratio_cage": null
+  },
+  "Cincinnati|2004": {
+   "city": "Cincinnati",
+   "year": 2004,
+   "care_usd_total": 68760729.0,
+   "care_components": {
+    "cincinnati_parks": 33375541.0,
+    "cincinnati_health": 33731686.0,
+    "cincinnati_housing": 1653502.0,
+    "cincinnati_libraries": null
+   },
+   "care_partial_nulls": [
+    "cincinnati_libraries"
+   ],
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "Cincinnati|2005": {
+   "city": "Cincinnati",
+   "year": 2005,
+   "care_usd_total": -8200.0,
+   "care_components": {
+    "cincinnati_parks": -8200.0,
+    "cincinnati_health": 0.0,
+    "cincinnati_housing": 0.0,
+    "cincinnati_libraries": null
+   },
+   "care_partial_nulls": [
+    "cincinnati_libraries"
+   ],
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "Cincinnati|2006": {
+   "city": "Cincinnati",
+   "year": 2006,
+   "care_usd_total": 61067448.0,
+   "care_components": {
+    "cincinnati_parks": 33297268.0,
+    "cincinnati_health": 25833283.0,
+    "cincinnati_housing": 1936897.0,
+    "cincinnati_libraries": null
+   },
+   "care_partial_nulls": [
+    "cincinnati_libraries"
+   ],
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "Cincinnati|2007": {
+   "city": "Cincinnati",
+   "year": 2007,
+   "care_usd_total": 69647820.0,
+   "care_components": {
+    "cincinnati_parks": 35496116.0,
+    "cincinnati_health": 32600345.0,
+    "cincinnati_housing": 1551359.0,
+    "cincinnati_libraries": null
+   },
+   "care_partial_nulls": [
+    "cincinnati_libraries"
+   ],
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "Cincinnati|2008": {
+   "city": "Cincinnati",
+   "year": 2008,
+   "care_usd_total": 68882119.0,
+   "care_components": {
+    "cincinnati_parks": 35399330.0,
+    "cincinnati_health": 32042589.0,
+    "cincinnati_housing": 1440200.0,
+    "cincinnati_libraries": null
+   },
+   "care_partial_nulls": [
+    "cincinnati_libraries"
+   ],
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "Cincinnati|2009": {
+   "city": "Cincinnati",
+   "year": 2009,
+   "care_usd_total": 70196441.0,
+   "care_components": {
+    "cincinnati_parks": 35219520.0,
+    "cincinnati_health": 31473060.0,
+    "cincinnati_housing": 3503861.0,
+    "cincinnati_libraries": null
+   },
+   "care_partial_nulls": [
+    "cincinnati_libraries"
+   ],
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "Cincinnati|2010": {
+   "city": "Cincinnati",
+   "year": 2010,
+   "care_usd_total": 68967180.0,
+   "care_components": {
+    "cincinnati_parks": 34768510.0,
+    "cincinnati_health": 33121680.0,
+    "cincinnati_housing": 1076990.0,
+    "cincinnati_libraries": null
+   },
+   "care_partial_nulls": [
+    "cincinnati_libraries"
+   ],
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "Cincinnati|2011": {
+   "city": "Cincinnati",
+   "year": 2011,
+   "care_usd_total": 66565160.0,
+   "care_components": {
+    "cincinnati_parks": 34418340.0,
+    "cincinnati_health": 30967800.0,
+    "cincinnati_housing": 1179020.0,
+    "cincinnati_libraries": null
+   },
+   "care_partial_nulls": [
+    "cincinnati_libraries"
+   ],
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "Cincinnati|2012": {
+   "city": "Cincinnati",
+   "year": 2012,
+   "care_usd_total": 85656785.0,
+   "care_components": {
+    "cincinnati_parks": 43193570.0,
+    "cincinnati_health": 41297210.0,
+    "cincinnati_housing": 1166005.0,
+    "cincinnati_libraries": null
+   },
+   "care_partial_nulls": [
+    "cincinnati_libraries"
+   ],
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "Cincinnati|2013": {
+   "city": "Cincinnati",
+   "year": 2013,
+   "care_usd_total": 42463135.0,
+   "care_components": {
+    "cincinnati_parks": 21514048.0,
+    "cincinnati_health": 20358175.0,
+    "cincinnati_housing": 590912.0,
+    "cincinnati_libraries": null
+   },
+   "care_partial_nulls": [
+    "cincinnati_libraries"
+   ],
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "Cincinnati|2014": {
+   "city": "Cincinnati",
+   "year": 2014,
+   "care_usd_total": 88984654.68,
+   "care_components": {
+    "cincinnati_parks": 44561686.68,
+    "cincinnati_health": 41869700.0,
+    "cincinnati_housing": 2553268.0,
+    "cincinnati_libraries": null
+   },
+   "care_partial_nulls": [
+    "cincinnati_libraries"
+   ],
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": 63,
+   "population": 297671,
+   "pop_source": "triple_slider_v6d.json (care_arc bank: books-grain care/cage + pop)",
+   "cage_usd_total_books": 125981850,
+   "care_usd_total_alt_books": 88297320,
+   "care_per_capita": 298.93625741170626,
+   "murder_rate_per100k": 21.164305558821653,
+   "care_ratio_cage": 0.7063291631294508
+  },
+  "Cincinnati|2015": {
+   "city": "Cincinnati",
+   "year": 2015,
+   "care_usd_total": 87519815.0,
+   "care_components": {
+    "cincinnati_parks": 43316464.0,
+    "cincinnati_health": 41271951.0,
+    "cincinnati_housing": 2931400.0,
+    "cincinnati_libraries": null
+   },
+   "care_partial_nulls": [
+    "cincinnati_libraries"
+   ],
+   "bookings_total": 0,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": 67,
+   "population": 297671,
+   "pop_source": "triple_slider_v6d.json (care_arc bank: books-grain care/cage + pop)",
+   "cage_usd_total_books": 126274290,
+   "care_usd_total_alt_books": 90963810,
+   "care_per_capita": 294.0152550970703,
+   "murder_rate_per100k": 22.508070991127788,
+   "care_ratio_cage": 0.6930929090949551
+  },
+  "Cincinnati|2016": {
+   "city": "Cincinnati",
+   "year": 2016,
+   "care_usd_total": 95382094.0,
+   "care_components": {
+    "cincinnati_parks": 44100274.0,
+    "cincinnati_health": 47001260.0,
+    "cincinnati_housing": 4280560.0,
+    "cincinnati_libraries": null
+   },
+   "care_partial_nulls": [
+    "cincinnati_libraries"
+   ],
+   "bookings_total": 0,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": 59,
+   "population": 297671,
+   "pop_source": "triple_slider_v6d.json (care_arc bank: books-grain care/cage + pop)",
+   "cage_usd_total_books": 133260280,
+   "care_usd_total_alt_books": 101583500,
+   "care_per_capita": 320.4279019454364,
+   "murder_rate_per100k": 19.820540126515514,
+   "care_ratio_cage": 0.7157578687362806
+  },
+  "Cincinnati|2017": {
+   "city": "Cincinnati",
+   "year": 2017,
+   "care_usd_total": 99146094.0,
+   "care_components": {
+    "cincinnati_parks": 45601586.83,
+    "cincinnati_health": 49816461.0,
+    "cincinnati_housing": 3728046.17,
+    "cincinnati_libraries": null
+   },
+   "care_partial_nulls": [
+    "cincinnati_libraries"
+   ],
+   "bookings_total": 7073,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": 72,
+   "population": 297671,
+   "pop_source": "triple_slider_v6d.json (care_arc bank: books-grain care/cage + pop)",
+   "cage_usd_total_books": 135975300,
+   "care_usd_total_alt_books": 101090620,
+   "care_per_capita": 333.07273466343713,
+   "murder_rate_per100k": 24.18777778151046,
+   "care_ratio_cage": 0.7291478231708258
+  },
+  "Cincinnati|2018": {
+   "city": "Cincinnati",
+   "year": 2018,
+   "care_usd_total": 109938497.0,
+   "care_components": {
+    "cincinnati_parks": 45986440.0,
+    "cincinnati_health": 60543290.0,
+    "cincinnati_housing": 3408767.0,
+    "cincinnati_libraries": null
+   },
+   "care_partial_nulls": [
+    "cincinnati_libraries"
+   ],
+   "bookings_total": 7022,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": 61,
+   "population": 301952,
+   "pop_source": "triple_slider_v6d.json (care_arc bank: books-grain care/cage + pop)",
+   "cage_usd_total_books": 152901610,
+   "care_usd_total_alt_books": 106688450,
+   "care_per_capita": 364.0926273050021,
+   "murder_rate_per100k": 20.201886392539212,
+   "care_ratio_cage": 0.7190146460851524
+  },
+  "Cincinnati|2019": {
+   "city": "Cincinnati",
+   "year": 2019,
+   "care_usd_total": 107340340.0,
+   "care_components": {
+    "cincinnati_parks": 49151592.0,
+    "cincinnati_health": 53837398.0,
+    "cincinnati_housing": 4351350.0,
+    "cincinnati_libraries": null
+   },
+   "care_partial_nulls": [
+    "cincinnati_libraries"
+   ],
+   "bookings_total": 7167,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": 67,
+   "population": 303940,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "cage_usd_total_books": 153653450,
+   "care_usd_total_alt_books": 107437600,
+   "care_per_capita": 353.1629268934658,
+   "murder_rate_per100k": 22.043824439034022,
+   "care_ratio_cage": 0.6985872429157952
+  },
+  "Cincinnati|2020": {
+   "city": "Cincinnati",
+   "year": 2020,
+   "care_usd_total": 109705514.36,
+   "care_components": {
+    "cincinnati_parks": 49738384.0,
+    "cincinnati_health": 55705976.32,
+    "cincinnati_housing": 4261154.04,
+    "cincinnati_libraries": null
+   },
+   "care_partial_nulls": [
+    "cincinnati_libraries"
+   ],
+   "bookings_total": 6096,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": 96,
+   "population": 309670,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "cage_usd_total_books": 154133200,
+   "care_usd_total_alt_books": 116430870,
+   "care_per_capita": 354.2658777408209,
+   "murder_rate_per100k": 31.00074272612781,
+   "care_ratio_cage": 0.7117578455517695
+  },
+  "Cincinnati|2021": {
+   "city": "Cincinnati",
+   "year": 2021,
+   "care_usd_total": 107060504.0,
+   "care_components": {
+    "cincinnati_parks": 49285880.0,
+    "cincinnati_health": 54333594.0,
+    "cincinnati_housing": 3441030.0,
+    "cincinnati_libraries": null
+   },
+   "care_partial_nulls": [
+    "cincinnati_libraries"
+   ],
+   "bookings_total": 5706,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": 93,
+   "population": 308610,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "cage_usd_total_books": 154992860,
+   "care_usd_total_alt_books": 116976180,
+   "care_per_capita": 346.91197304040696,
+   "murder_rate_per100k": 30.135121998639057,
+   "care_ratio_cage": 0.6907447478548366
+  },
+  "Cincinnati|2022": {
+   "city": "Cincinnati",
+   "year": 2022,
+   "care_usd_total": 118001046.0,
+   "care_components": {
+    "cincinnati_parks": 50164532.0,
+    "cincinnati_health": 64459339.0,
+    "cincinnati_housing": 3377175.0,
+    "cincinnati_libraries": null
+   },
+   "care_partial_nulls": [
+    "cincinnati_libraries"
+   ],
+   "bookings_total": 6037,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": 77,
+   "population": 310113,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "cage_usd_total_books": 167352540,
+   "care_usd_total_alt_books": 118512370,
+   "care_per_capita": 380.50983351230036,
+   "murder_rate_per100k": 24.829658866284227,
+   "care_ratio_cage": 0.70510460134038
+  },
+  "Cincinnati|2023": {
+   "city": "Cincinnati",
+   "year": 2023,
+   "care_usd_total": 123968492.38,
+   "care_components": {
+    "cincinnati_parks": 55432192.38,
+    "cincinnati_health": 64909830.0,
+    "cincinnati_housing": 3626470.0,
+    "cincinnati_libraries": null
+   },
+   "care_partial_nulls": [
+    "cincinnati_libraries"
+   ],
+   "bookings_total": 5522,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": 71,
+   "population": 312728,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "cage_usd_total_books": 168190360,
+   "care_usd_total_alt_books": 119661820,
+   "care_per_capita": 396.40995491289556,
+   "murder_rate_per100k": 22.703435573405642,
+   "care_ratio_cage": 0.7370725193762591
+  },
+  "Cincinnati|2024": {
+   "city": "Cincinnati",
+   "year": 2024,
+   "care_usd_total": 137685731.88,
+   "care_components": {
+    "cincinnati_parks": 58577893.88,
+    "cincinnati_health": 68003350.0,
+    "cincinnati_housing": 11104488.0,
+    "cincinnati_libraries": null
+   },
+   "care_partial_nulls": [
+    "cincinnati_libraries"
+   ],
+   "bookings_total": 5332,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": 74,
+   "population": 314855,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "cage_usd_total_books": 182063770,
+   "care_usd_total_alt_books": 130549820,
+   "care_per_capita": 437.2988578234425,
+   "murder_rate_per100k": 23.502882279144366,
+   "care_ratio_cage": 0.7562500319530898
+  },
+  "Cincinnati|2025": {
+   "city": "Cincinnati",
+   "year": 2025,
+   "care_usd_total": 149581096.56,
+   "care_components": {
+    "cincinnati_parks": 65040121.56,
+    "cincinnati_health": 71369620.0,
+    "cincinnati_housing": 13171355.0,
+    "cincinnati_libraries": null
+   },
+   "care_partial_nulls": [
+    "cincinnati_libraries"
+   ],
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": 69,
+   "population": 314367,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "cage_usd_total_books": 181286480,
+   "care_usd_total_alt_books": 134004140,
+   "care_per_capita": 475.81678916680187,
+   "murder_rate_per100k": 21.948868678964395,
+   "care_ratio_cage": 0.8251089466793111
+  },
+  "Cincinnati|2026": {
+   "city": "Cincinnati",
+   "year": 2026,
+   "care_usd_total": 158760879.0,
+   "care_components": {
+    "cincinnati_parks": 69488239.0,
+    "cincinnati_health": 78033880.0,
+    "cincinnati_housing": 11238760.0,
+    "cincinnati_libraries": null
+   },
+   "care_partial_nulls": [
+    "cincinnati_libraries"
+   ],
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": 45,
+   "population": 309317,
+   "pop_source": "triple_slider_v6d.json (care_arc bank: books-grain care/cage + pop)",
+   "cage_usd_total_books": 190043650,
+   "care_usd_total_alt_books": 141702670,
+   "care_per_capita": 513.2627013710853,
+   "murder_rate_per100k": 14.548181962194123,
+   "care_ratio_cage": 0.8353916534438273
+  },
+  "Cincinnati|2027": {
+   "city": "Cincinnati",
+   "year": 2027,
+   "care_usd_total": 139264047.0,
+   "care_components": {
+    "cincinnati_parks": 68191227.0,
+    "cincinnati_health": 71072820.0,
+    "cincinnati_housing": 0.0,
+    "cincinnati_libraries": null
+   },
+   "care_partial_nulls": [
+    "cincinnati_libraries"
+   ],
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": 191956400,
+   "care_usd_total_alt_books": 139741180,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": 0.7254983267033556
+  },
+  "Detroit|2024": {
+   "city": "Detroit",
+   "year": 2024,
+   "care_usd_total": 600025644.0,
+   "care_components": {
+    "detroit_housing": 203241599.0,
+    "detroit_health": 129858370.0,
+    "detroit_parks": 168350980.0,
+    "detroit_libraries": 98574695.0
+   },
+   "care_partial_nulls": null,
+   "bookings_total": 11047,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": 203,
+   "population": 644035,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "cage_usd_total_books": 370731109,
+   "care_usd_total_alt_books": 136230721,
+   "care_per_capita": 931.6662044764648,
+   "murder_rate_per100k": 31.52002608553883,
+   "care_ratio_cage": 1.618492836003142
+  },
+  "Detroit|2020": {
+   "city": "Detroit",
+   "year": 2020,
+   "care_usd_total": 160373216.0,
+   "care_components": {
+    "detroit_health": 33769914.0,
+    "detroit_housing": 93080547.0,
+    "detroit_libraries": 33522999.0,
+    "detroit_parks": -244.0
+   },
+   "care_partial_nulls": null,
+   "bookings_total": 13891,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": 321,
+   "population": 638419,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": 251.20370164421797,
+   "murder_rate_per100k": 50.280458445002424,
+   "care_ratio_cage": null
+  },
+  "Detroit|2021": {
+   "city": "Detroit",
+   "year": 2021,
+   "care_usd_total": 186498323.0,
+   "care_components": {
+    "detroit_health": 41410471.0,
+    "detroit_housing": 62427194.0,
+    "detroit_libraries": 35466670.0,
+    "detroit_parks": 47193988.0
+   },
+   "care_partial_nulls": null,
+   "bookings_total": 12916,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": 306,
+   "population": 635046,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": 293.67687222657884,
+   "murder_rate_per100k": 48.185485775833556,
+   "care_ratio_cage": null
+  },
+  "Detroit|2022": {
+   "city": "Detroit",
+   "year": 2022,
+   "care_usd_total": 189319625.0,
+   "care_components": {
+    "detroit_health": 42757539.0,
+    "detroit_housing": 69936162.0,
+    "detroit_libraries": 27835308.0,
+    "detroit_parks": 48790616.0
+   },
+   "care_partial_nulls": null,
+   "bookings_total": 10571,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": 309,
+   "population": 634219,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "cage_usd_total_books": 357320900,
+   "care_usd_total_alt_books": 122913559,
+   "care_per_capita": 298.50828341629625,
+   "murder_rate_per100k": 48.72134073561341,
+   "care_ratio_cage": 0.5298308187402416
+  },
+  "Detroit|2023": {
+   "city": "Detroit",
+   "year": 2023,
+   "care_usd_total": 429071989.0,
+   "care_components": {
+    "detroit_health": 94608619.0,
+    "detroit_housing": 172819831.0,
+    "detroit_libraries": 65457126.0,
+    "detroit_parks": 96186413.0
+   },
+   "care_partial_nulls": null,
+   "bookings_total": 11355,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": 250,
+   "population": 637452,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": 673.1047812227431,
+   "murder_rate_per100k": 39.21863920734424,
+   "care_ratio_cage": null
+  },
+  "Detroit|2025": {
+   "city": "Detroit",
+   "year": 2025,
+   "care_usd_total": 405303627.0,
+   "care_components": {
+    "detroit_health": 87891672.0,
+    "detroit_housing": 148009352.0,
+    "detroit_libraries": 68159398.0,
+    "detroit_parks": 101243205.0
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": 165,
+   "population": 649095,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": 624.413417142329,
+   "murder_rate_per100k": 25.42000785709334,
+   "care_ratio_cage": null
+  },
+  "Detroit|2026": {
+   "city": "Detroit",
+   "year": 2026,
+   "care_usd_total": 199307497.0,
+   "care_components": {
+    "detroit_health": 44235715.0,
+    "detroit_housing": 67600702.0,
+    "detroit_libraries": 40419705.0,
+    "detroit_parks": 47051375.0
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": 123,
+   "population": 649095,
+   "pop_source": "triple_slider_v6d.json (care_arc bank: books-grain care/cage + pop)",
+   "cage_usd_total_books": 436600205,
+   "care_usd_total_alt_books": 153261462,
+   "care_per_capita": 307.054432710158,
+   "murder_rate_per100k": 18.949460402560486,
+   "care_ratio_cage": 0.45649886261505535
+  },
+  "Detroit|2027": {
+   "city": "Detroit",
+   "year": 2027,
+   "care_usd_total": 203586617.0,
+   "care_components": {
+    "detroit_health": 45073585.0,
+    "detroit_housing": 68742212.0,
+    "detroit_libraries": 41228098.0,
+    "detroit_parks": 48542722.0
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "Detroit|2028": {
+   "city": "Detroit",
+   "year": 2028,
+   "care_usd_total": 207927892.0,
+   "care_components": {
+    "detroit_health": 45927992.0,
+    "detroit_housing": 69905519.0,
+    "detroit_libraries": 42052660.0,
+    "detroit_parks": 50041721.0
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": null,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "Memphis|2021": {
+   "city": "Memphis",
+   "year": 2021,
+   "care_usd_total": 130440246.0,
+   "care_components": {
+    "memphis_libraries": 21206316.0,
+    "memphis_parks": 34872835.0,
+    "memphis_housing": 6465421.0,
+    "memphis_human_services": 67895674.0
+   },
+   "care_partial_nulls": null,
+   "bookings_total": 19949,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": 345,
+   "population": 622541,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "cage_usd_total_books": 283008537,
+   "care_usd_total_alt_books": 135489924,
+   "care_per_capita": 209.52876356737949,
+   "murder_rate_per100k": 55.418036723685674,
+   "care_ratio_cage": 0.46090569345616594
+  },
+  "Memphis|2022": {
+   "city": "Memphis",
+   "year": 2022,
+   "care_usd_total": 105006818.0,
+   "care_components": {
+    "memphis_libraries": 22919401.0,
+    "memphis_parks": 38949776.0,
+    "memphis_housing": 4832737.0,
+    "memphis_human_services": 38304904.0
+   },
+   "care_partial_nulls": null,
+   "bookings_total": 22563,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": 304,
+   "population": 618901,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "cage_usd_total_books": 287688669,
+   "care_usd_total_alt_books": 139775703,
+   "care_per_capita": 169.666583185356,
+   "murder_rate_per100k": 49.1193260311423,
+   "care_ratio_cage": 0.3650015774517696
+  },
+  "Memphis|2023": {
+   "city": "Memphis",
+   "year": 2023,
+   "care_usd_total": 127084880.0,
+   "care_components": {
+    "memphis_libraries": 22872537.0,
+    "memphis_parks": 40878283.0,
+    "memphis_housing": 4808050.0,
+    "memphis_human_services": 58526010.0
+   },
+   "care_partial_nulls": null,
+   "bookings_total": 14821,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": 344,
+   "population": 615634,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "cage_usd_total_books": 292653661,
+   "care_usd_total_alt_books": 116838773,
+   "care_per_capita": 206.4292745364941,
+   "murder_rate_per100k": 55.87735570160193,
+   "care_ratio_cage": 0.4342500946878638
+  },
+  "Memphis|2024": {
+   "city": "Memphis",
+   "year": 2024,
+   "care_usd_total": 165662953.0,
+   "care_components": {
+    "memphis_libraries": 22504072.0,
+    "memphis_parks": 53332046.0,
+    "memphis_housing": 4407394.0,
+    "memphis_human_services": 85419441.0
+   },
+   "care_partial_nulls": null,
+   "bookings_total": 16489,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": 248,
+   "population": 614222,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "cage_usd_total_books": 310025710,
+   "care_usd_total_alt_books": 159742276,
+   "care_per_capita": 269.7118517409015,
+   "murder_rate_per100k": 40.376280888668916,
+   "care_ratio_cage": 0.5343523058136049
+  },
+  "Memphis|2025": {
+   "city": "Memphis",
+   "year": 2025,
+   "care_usd_total": 144167104.0,
+   "care_components": {
+    "memphis_libraries": 24977210.0,
+    "memphis_parks": 47297960.0,
+    "memphis_housing": 6165685.0,
+    "memphis_human_services": 65726249.0
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": 184,
+   "population": 609647,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "cage_usd_total_books": 309422737,
+   "care_usd_total_alt_books": 141667104,
+   "care_per_capita": 236.4763609104941,
+   "murder_rate_per100k": 30.181400056098038,
+   "care_ratio_cage": 0.4659227870510369
+  },
+  "Memphis|2026": {
+   "city": "Memphis",
+   "year": 2026,
+   "care_usd_total": 148694050.0,
+   "care_components": {
+    "memphis_libraries": 26144616.0,
+    "memphis_parks": 51602943.0,
+    "memphis_housing": 6293120.0,
+    "memphis_human_services": 64653371.0
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": 147,
+   "population": 621056,
+   "pop_source": "triple_slider_v6d.json (care_arc bank: books-grain care/cage + pop)",
+   "cage_usd_total_books": 314040649,
+   "care_usd_total_alt_books": 162156379,
+   "care_per_capita": 239.4213243250206,
+   "murder_rate_per100k": 23.669363149216817,
+   "care_ratio_cage": 0.47348663452800344
+  },
+  "St. Louis|2019": {
+   "city": "St. Louis",
+   "year": 2019,
+   "care_usd_total": 70072095.0,
+   "care_components": {
+    "stlouis_health": 21913981.0,
+    "stlouis_human_services": 18412451.0,
+    "stlouis_parks": 29745663.0
+   },
+   "care_partial_nulls": null,
+   "bookings_total": 21005,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": 194,
+   "population": 300576,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)",
+   "cage_usd_total_books": 254577601,
+   "care_usd_total_alt_books": 30089560,
+   "care_per_capita": 233.1260479878633,
+   "murder_rate_per100k": 64.54274459704035,
+   "care_ratio_cage": 0.2752484693262547
+  },
+  "St. Louis|2020": {
+   "city": "St. Louis",
+   "year": 2020,
+   "care_usd_total": 68050086.0,
+   "care_components": {
+    "stlouis_health": 22635482.0,
+    "stlouis_human_services": 17893262.0,
+    "stlouis_parks": 27521342.0
+   },
+   "care_partial_nulls": null,
+   "bookings_total": 13466,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": 263,
+   "population": 301578,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)",
+   "cage_usd_total_books": 435802532,
+   "care_usd_total_alt_books": 52496591,
+   "care_per_capita": 225.6467182619422,
+   "murder_rate_per100k": 87.20795283475586,
+   "care_ratio_cage": 0.15614890002520682
+  },
+  "St. Louis|2021": {
+   "city": "St. Louis",
+   "year": 2021,
+   "care_usd_total": 68994044.0,
+   "care_components": {
+    "stlouis_health": 22560624.0,
+    "stlouis_human_services": 19525922.0,
+    "stlouis_parks": 26907498.0
+   },
+   "care_partial_nulls": null,
+   "bookings_total": 9378,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": 203,
+   "population": 293553,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)",
+   "cage_usd_total_books": 427352568,
+   "care_usd_total_alt_books": 56011171,
+   "care_per_capita": 235.03096204092617,
+   "murder_rate_per100k": 69.15275946762594,
+   "care_ratio_cage": 0.16144525426134798
+  },
+  "St. Louis|2022": {
+   "city": "St. Louis",
+   "year": 2022,
+   "care_usd_total": 102426533.0,
+   "care_components": {
+    "stlouis_health": 34646545.0,
+    "stlouis_human_services": 32160153.0,
+    "stlouis_parks": 35619835.0
+   },
+   "care_partial_nulls": null,
+   "bookings_total": 9038,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": 201,
+   "population": 286509,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)",
+   "cage_usd_total_books": 238772348,
+   "care_usd_total_alt_books": 53874474,
+   "care_per_capita": 357.49848346823313,
+   "murder_rate_per100k": 70.15486424510225,
+   "care_ratio_cage": 0.42897150301508113
+  },
+  "St. Louis|2023": {
+   "city": "St. Louis",
+   "year": 2023,
+   "care_usd_total": 89555171.0,
+   "care_components": {
+    "stlouis_health": 30158360.0,
+    "stlouis_human_services": 27590743.0,
+    "stlouis_parks": 31806068.0
+   },
+   "care_partial_nulls": null,
+   "bookings_total": 9147,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": 158,
+   "population": 283190,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)",
+   "cage_usd_total_books": 247141231,
+   "care_usd_total_alt_books": 48294687,
+   "care_per_capita": 316.2370528620361,
+   "murder_rate_per100k": 55.79293054133268,
+   "care_ratio_cage": 0.36236434785744026
+  },
+  "St. Louis|2024": {
+   "city": "St. Louis",
+   "year": 2024,
+   "care_usd_total": 122053162.0,
+   "care_components": {
+    "stlouis_health": 33205131.0,
+    "stlouis_human_services": 49833073.0,
+    "stlouis_parks": 39014958.0
+   },
+   "care_partial_nulls": null,
+   "bookings_total": 9260,
+   "bookings_measure": "UCR arrests by agency (intake/booking proxy)",
+   "bookings_months_present": 12,
+   "murders": 150,
+   "population": 279695,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": 436.37949194658466,
+   "murder_rate_per100k": 53.62984679740431,
+   "care_ratio_cage": null
+  },
+  "St. Louis|2025": {
+   "city": "St. Louis",
+   "year": 2025,
+   "care_usd_total": 115843343.0,
+   "care_components": {
+    "stlouis_health": 35726433.0,
+    "stlouis_human_services": 37169260.0,
+    "stlouis_parks": 42947650.0
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": 141,
+   "population": 278144,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)",
+   "cage_usd_total_books": 254810117,
+   "care_usd_total_alt_books": 50326211,
+   "care_per_capita": 416.48693842038654,
+   "murder_rate_per100k": 50.693166129774504,
+   "care_ratio_cage": 0.45462615206915036
+  },
+  "Denver|2021": {
+   "city": "Denver",
+   "year": 2021,
+   "care_usd_total": 402549272,
+   "care_components": {
+    "denver_parks": 92495327,
+    "denver_libraries": 46763483,
+    "denver_health": 83074806,
+    "denver_housing": 23807086,
+    "denver_human_services": 156408570
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": 100,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "Denver|2022": {
+   "city": "Denver",
+   "year": 2022,
+   "care_usd_total": 589376656,
+   "care_components": {
+    "denver_parks": 160082210,
+    "denver_libraries": 56528685,
+    "denver_health": 128766126,
+    "denver_housing": 33765977,
+    "denver_human_services": 210233658
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": 90,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  },
+  "Denver|2023": {
+   "city": "Denver",
+   "year": 2023,
+   "care_usd_total": 605428183,
+   "care_components": {
+    "denver_parks": 140619025,
+    "denver_libraries": 60421737,
+    "denver_health": 140998366,
+    "denver_housing": 35905642,
+    "denver_human_services": 227483413
+   },
+   "care_partial_nulls": null,
+   "bookings_total": null,
+   "bookings_measure": null,
+   "bookings_months_present": null,
+   "murders": 88,
+   "population": null,
+   "pop_source": null,
+   "cage_usd_total_books": null,
+   "care_usd_total_alt_books": null,
+   "care_per_capita": null,
+   "murder_rate_per100k": null,
+   "care_ratio_cage": null
+  }
+ },
+ "bookings_panel": {
+  "Boston|2015": {
+   "city": "Boston",
+   "year": 2015,
+   "bookings_total": 16116,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "Boston|2016": {
+   "city": "Boston",
+   "year": 2016,
+   "bookings_total": 13957,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "Boston|2017": {
+   "city": "Boston",
+   "year": 2017,
+   "bookings_total": 13809,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "Boston|2018": {
+   "city": "Boston",
+   "year": 2018,
+   "bookings_total": 11925,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "Boston|2019": {
+   "city": "Boston",
+   "year": 2019,
+   "bookings_total": 9948,
+   "bookings_per100k": 1436.326884204447,
+   "murders": 42,
+   "murder_rate_per100k": 6.064106266243142,
+   "population": 692600
+  },
+  "Boston|2020": {
+   "city": "Boston",
+   "year": 2020,
+   "bookings_total": 4341,
+   "bookings_per100k": 648.2345650437159,
+   "murders": 58,
+   "murder_rate_per100k": 8.661046941381139,
+   "population": 669665
+  },
+  "Boston|2021": {
+   "city": "Boston",
+   "year": 2021,
+   "bookings_total": 4339,
+   "bookings_per100k": 657.5398100272168,
+   "murders": 37,
+   "murder_rate_per100k": 5.6070460868879985,
+   "population": 659884
+  },
+  "Boston|2022": {
+   "city": "Boston",
+   "year": 2022,
+   "bookings_total": 4782,
+   "bookings_per100k": 723.4339968593706,
+   "murders": 46,
+   "murder_rate_per100k": 6.959005406844635,
+   "population": 661014
+  },
+  "Boston|2023": {
+   "city": "Boston",
+   "year": 2023,
+   "bookings_total": 5338,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "Boston|2024": {
+   "city": "Boston",
+   "year": 2024,
+   "bookings_total": 5446,
+   "bookings_per100k": 807.6392050552341,
+   "murders": 25,
+   "murder_rate_per100k": 3.707488087840774,
+   "population": 674311
+  },
+  "NYC|2015": {
+   "city": "NYC",
+   "year": 2015,
+   "bookings_total": 339470,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "NYC|2016": {
+   "city": "NYC",
+   "year": 2016,
+   "bookings_total": 314864,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "NYC|2017": {
+   "city": "NYC",
+   "year": 2017,
+   "bookings_total": 286225,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "NYC|2018": {
+   "city": "NYC",
+   "year": 2018,
+   "bookings_total": 246773,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "NYC|2019": {
+   "city": "NYC",
+   "year": 2019,
+   "bookings_total": 214617,
+   "bookings_per100k": 2574.327827994785,
+   "murders": 319,
+   "murder_rate_per100k": 3.8264004115719463,
+   "population": 8336817
+  },
+  "NYC|2020": {
+   "city": "NYC",
+   "year": 2020,
+   "bookings_total": 140413,
+   "bookings_per100k": 1604.5021544503443,
+   "murders": 468,
+   "murder_rate_per100k": 5.347845343969299,
+   "population": 8751188
+  },
+  "NYC|2021": {
+   "city": "NYC",
+   "year": 2021,
+   "bookings_total": 155507,
+   "bookings_per100k": 1840.7643598606905,
+   "murders": 488,
+   "murder_rate_per100k": 5.776543870128142,
+   "population": 8447958
+  },
+  "NYC|2022": {
+   "city": "NYC",
+   "year": 2022,
+   "bookings_total": 189774,
+   "bookings_per100k": 2269.3005160436296,
+   "murders": 438,
+   "murder_rate_per100k": 5.237564819348856,
+   "population": 8362665
+  },
+  "NYC|2023": {
+   "city": "NYC",
+   "year": 2023,
+   "bookings_total": 226872,
+   "bookings_per100k": 2690.0221180544936,
+   "murders": 404,
+   "murder_rate_per100k": 4.790229449619236,
+   "population": 8433834
+  },
+  "NYC|2024": {
+   "city": "NYC",
+   "year": 2024,
+   "bookings_total": 260503,
+   "bookings_per100k": 3030.223367347829,
+   "murders": 357,
+   "murder_rate_per100k": 4.152695908082344,
+   "population": 8596825
+  },
+  "St. Louis|2015": {
+   "city": "St. Louis",
+   "year": 2015,
+   "bookings_total": 25308,
+   "bookings_per100k": 8008.607322553084,
+   "murders": 188,
+   "murder_rate_per100k": 59.491788234549546,
+   "population": 316010
+  },
+  "St. Louis|2016": {
+   "city": "St. Louis",
+   "year": 2016,
+   "bookings_total": 25184,
+   "bookings_per100k": null,
+   "murders": 188,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "St. Louis|2017": {
+   "city": "St. Louis",
+   "year": 2017,
+   "bookings_total": 23139,
+   "bookings_per100k": 7505.522344003919,
+   "murders": 205,
+   "murder_rate_per100k": 66.49518477552199,
+   "population": 308293
+  },
+  "St. Louis|2018": {
+   "city": "St. Louis",
+   "year": 2018,
+   "bookings_total": 20722,
+   "bookings_per100k": 6806.729865915108,
+   "murders": 187,
+   "murder_rate_per100k": 61.4254649612067,
+   "population": 304434
+  },
+  "St. Louis|2019": {
+   "city": "St. Louis",
+   "year": 2019,
+   "bookings_total": 21005,
+   "bookings_per100k": 6988.249228148621,
+   "murders": 194,
+   "murder_rate_per100k": 64.54274459704035,
+   "population": 300576
+  },
+  "St. Louis|2020": {
+   "city": "St. Louis",
+   "year": 2020,
+   "bookings_total": 13466,
+   "bookings_per100k": 4465.1798208092105,
+   "murders": 263,
+   "murder_rate_per100k": 87.20795283475586,
+   "population": 301578
+  },
+  "St. Louis|2021": {
+   "city": "St. Louis",
+   "year": 2021,
+   "bookings_total": 9378,
+   "bookings_per100k": 3194.6530950118035,
+   "murders": 203,
+   "murder_rate_per100k": 69.15275946762594,
+   "population": 293553
+  },
+  "St. Louis|2022": {
+   "city": "St. Louis",
+   "year": 2022,
+   "bookings_total": 9038,
+   "bookings_per100k": 3154.52568680216,
+   "murders": 201,
+   "murder_rate_per100k": 70.15486424510225,
+   "population": 286509
+  },
+  "St. Louis|2023": {
+   "city": "St. Louis",
+   "year": 2023,
+   "bookings_total": 9147,
+   "bookings_per100k": 3229.986934566899,
+   "murders": 158,
+   "murder_rate_per100k": 55.79293054133268,
+   "population": 283190
+  },
+  "St. Louis|2024": {
+   "city": "St. Louis",
+   "year": 2024,
+   "bookings_total": 9260,
+   "bookings_per100k": 3310.7492089597595,
+   "murders": 150,
+   "murder_rate_per100k": 53.62984679740431,
+   "population": 279695
+  },
+  "New Orleans|2015": {
+   "city": "New Orleans",
+   "year": 2015,
+   "bookings_total": 20756,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "New Orleans|2016": {
+   "city": "New Orleans",
+   "year": 2016,
+   "bookings_total": 24677,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "New Orleans|2017": {
+   "city": "New Orleans",
+   "year": 2017,
+   "bookings_total": 32155,
+   "bookings_per100k": 8213.429103457787,
+   "murders": 157,
+   "murder_rate_per100k": 40.10288817424578,
+   "population": 391493
+  },
+  "New Orleans|2018": {
+   "city": "New Orleans",
+   "year": 2018,
+   "bookings_total": 31930,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "New Orleans|2019": {
+   "city": "New Orleans",
+   "year": 2019,
+   "bookings_total": 27751,
+   "bookings_per100k": 7113.01468175853,
+   "murders": 121,
+   "murder_rate_per100k": 31.014189632545932,
+   "population": 390144
+  },
+  "New Orleans|2020": {
+   "city": "New Orleans",
+   "year": 2020,
+   "bookings_total": 17686,
+   "bookings_per100k": 4613.40616285955,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": 383361
+  },
+  "New Orleans|2021": {
+   "city": "New Orleans",
+   "year": 2021,
+   "bookings_total": 16580,
+   "bookings_per100k": 4391.98317377737,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": 377506
+  },
+  "New Orleans|2022": {
+   "city": "New Orleans",
+   "year": 2022,
+   "bookings_total": 13822,
+   "bookings_per100k": 3725.224909577995,
+   "murders": 266,
+   "murder_rate_per100k": 71.69077021760575,
+   "population": 371038
+  },
+  "New Orleans|2023": {
+   "city": "New Orleans",
+   "year": 2023,
+   "bookings_total": 14694,
+   "bookings_per100k": 4017.146825158154,
+   "murders": 193,
+   "murder_rate_per100k": 52.763667977101115,
+   "population": 365782
+  },
+  "New Orleans|2024": {
+   "city": "New Orleans",
+   "year": 2024,
+   "bookings_total": null,
+   "bookings_per100k": null,
+   "murders": 124,
+   "murder_rate_per100k": 34.11495087722194,
+   "population": 363477
+  },
+  "Cincinnati|2015": {
+   "city": "Cincinnati",
+   "year": 2015,
+   "bookings_total": 0,
+   "bookings_per100k": 0.0,
+   "murders": 67,
+   "murder_rate_per100k": 22.508070991127788,
+   "population": 297671
+  },
+  "Cincinnati|2016": {
+   "city": "Cincinnati",
+   "year": 2016,
+   "bookings_total": 0,
+   "bookings_per100k": 0.0,
+   "murders": 59,
+   "murder_rate_per100k": 19.820540126515514,
+   "population": 297671
+  },
+  "Cincinnati|2017": {
+   "city": "Cincinnati",
+   "year": 2017,
+   "bookings_total": 7073,
+   "bookings_per100k": 2376.1132256753262,
+   "murders": 72,
+   "murder_rate_per100k": 24.18777778151046,
+   "population": 297671
+  },
+  "Cincinnati|2018": {
+   "city": "Cincinnati",
+   "year": 2018,
+   "bookings_total": 7022,
+   "bookings_per100k": 2325.5351844001693,
+   "murders": 61,
+   "murder_rate_per100k": 20.201886392539212,
+   "population": 301952
+  },
+  "Cincinnati|2019": {
+   "city": "Cincinnati",
+   "year": 2019,
+   "bookings_total": 7167,
+   "bookings_per100k": 2358.0311903665197,
+   "murders": 67,
+   "murder_rate_per100k": 22.043824439034022,
+   "population": 303940
+  },
+  "Cincinnati|2020": {
+   "city": "Cincinnati",
+   "year": 2020,
+   "bookings_total": 6096,
+   "bookings_per100k": 1968.5471631091161,
+   "murders": 96,
+   "murder_rate_per100k": 31.00074272612781,
+   "population": 309670
+  },
+  "Cincinnati|2021": {
+   "city": "Cincinnati",
+   "year": 2021,
+   "bookings_total": 5706,
+   "bookings_per100k": 1848.9355497229512,
+   "murders": 93,
+   "murder_rate_per100k": 30.135121998639057,
+   "population": 308610
+  },
+  "Cincinnati|2022": {
+   "city": "Cincinnati",
+   "year": 2022,
+   "bookings_total": 6037,
+   "bookings_per100k": 1946.7097477371153,
+   "murders": 77,
+   "murder_rate_per100k": 24.829658866284227,
+   "population": 310113
+  },
+  "Cincinnati|2023": {
+   "city": "Cincinnati",
+   "year": 2023,
+   "bookings_total": 5522,
+   "bookings_per100k": 1765.7517075541684,
+   "murders": 71,
+   "murder_rate_per100k": 22.703435573405642,
+   "population": 312728
+  },
+  "Cincinnati|2024": {
+   "city": "Cincinnati",
+   "year": 2024,
+   "bookings_total": 5332,
+   "bookings_per100k": 1693.4779501675375,
+   "murders": 74,
+   "murder_rate_per100k": 23.502882279144366,
+   "population": 314855
+  },
+  "Memphis|2015": {
+   "city": "Memphis",
+   "year": 2015,
+   "bookings_total": 40640,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "Memphis|2016": {
+   "city": "Memphis",
+   "year": 2016,
+   "bookings_total": 38979,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "Memphis|2017": {
+   "city": "Memphis",
+   "year": 2017,
+   "bookings_total": 30105,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "Memphis|2018": {
+   "city": "Memphis",
+   "year": 2018,
+   "bookings_total": 31382,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "Memphis|2019": {
+   "city": "Memphis",
+   "year": 2019,
+   "bookings_total": 31292,
+   "bookings_per100k": 4806.219886249315,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": 651073
+  },
+  "Memphis|2020": {
+   "city": "Memphis",
+   "year": 2020,
+   "bookings_total": 23093,
+   "bookings_per100k": 3675.578800602277,
+   "murders": 332,
+   "murder_rate_per100k": 52.842513393667176,
+   "population": 628282
+  },
+  "Memphis|2021": {
+   "city": "Memphis",
+   "year": 2021,
+   "bookings_total": 19949,
+   "bookings_per100k": 3204.4475785530594,
+   "murders": 345,
+   "murder_rate_per100k": 55.418036723685674,
+   "population": 622541
+  },
+  "Memphis|2022": {
+   "city": "Memphis",
+   "year": 2022,
+   "bookings_total": 22563,
+   "bookings_per100k": 3645.6557672390254,
+   "murders": 304,
+   "murder_rate_per100k": 49.1193260311423,
+   "population": 618901
+  },
+  "Memphis|2023": {
+   "city": "Memphis",
+   "year": 2023,
+   "bookings_total": 14821,
+   "bookings_per100k": 2407.436886201867,
+   "murders": 344,
+   "murder_rate_per100k": 55.87735570160193,
+   "population": 615634
+  },
+  "Memphis|2024": {
+   "city": "Memphis",
+   "year": 2024,
+   "bookings_total": 16489,
+   "bookings_per100k": 2684.5342563437976,
+   "murders": 248,
+   "murder_rate_per100k": 40.376280888668916,
+   "population": 614222
+  },
+  "Houston|2015": {
+   "city": "Houston",
+   "year": 2015,
+   "bookings_total": 73431,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "Houston|2016": {
+   "city": "Houston",
+   "year": 2016,
+   "bookings_total": 78169,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "Houston|2017": {
+   "city": "Houston",
+   "year": 2017,
+   "bookings_total": 63026,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "Houston|2018": {
+   "city": "Houston",
+   "year": 2018,
+   "bookings_total": 48506,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "Houston|2019": {
+   "city": "Houston",
+   "year": 2019,
+   "bookings_total": 37260,
+   "bookings_per100k": 1581.7585793209898,
+   "murders": 275,
+   "murder_rate_per100k": 11.674278296115734,
+   "population": 2355606
+  },
+  "Houston|2020": {
+   "city": "Houston",
+   "year": 2020,
+   "bookings_total": 33408,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "Houston|2021": {
+   "city": "Houston",
+   "year": 2021,
+   "bookings_total": 32553,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "Houston|2022": {
+   "city": "Houston",
+   "year": 2022,
+   "bookings_total": 32283,
+   "bookings_per100k": 1400.8192382126028,
+   "murders": 435,
+   "murder_rate_per100k": 18.875456699268412,
+   "population": 2304580
+  },
+  "Houston|2023": {
+   "city": "Houston",
+   "year": 2023,
+   "bookings_total": 34700,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "Houston|2024": {
+   "city": "Houston",
+   "year": 2024,
+   "bookings_total": 34400,
+   "bookings_per100k": 1479.2505016121252,
+   "murders": 334,
+   "murder_rate_per100k": 14.362490335420052,
+   "population": 2325502
+  },
+  "Detroit|2015": {
+   "city": "Detroit",
+   "year": 2015,
+   "bookings_total": 14409,
+   "bookings_per100k": 2140.294849418842,
+   "murders": 295,
+   "murder_rate_per100k": 43.818931263693415,
+   "population": 673225
+  },
+  "Detroit|2016": {
+   "city": "Detroit",
+   "year": 2016,
+   "bookings_total": 13949,
+   "bookings_per100k": 2082.9569058331454,
+   "murders": 303,
+   "murder_rate_per100k": 45.24596332837071,
+   "population": 669673
+  },
+  "Detroit|2017": {
+   "city": "Detroit",
+   "year": 2017,
+   "bookings_total": 9702,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "Detroit|2018": {
+   "city": "Detroit",
+   "year": 2018,
+   "bookings_total": 10681,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "Detroit|2019": {
+   "city": "Detroit",
+   "year": 2019,
+   "bookings_total": 11746,
+   "bookings_per100k": 1753.0532169407088,
+   "murders": 281,
+   "murder_rate_per100k": 41.93835807596962,
+   "population": 670031
+  },
+  "Detroit|2020": {
+   "city": "Detroit",
+   "year": 2020,
+   "bookings_total": 13891,
+   "bookings_per100k": 2175.8437640483758,
+   "murders": 321,
+   "murder_rate_per100k": 50.280458445002424,
+   "population": 638419
+  },
+  "Detroit|2021": {
+   "city": "Detroit",
+   "year": 2021,
+   "bookings_total": 12916,
+   "bookings_per100k": 2033.868412681916,
+   "murders": 306,
+   "murder_rate_per100k": 48.185485775833556,
+   "population": 635046
+  },
+  "Detroit|2022": {
+   "city": "Detroit",
+   "year": 2022,
+   "bookings_total": 10571,
+   "bookings_per100k": 1666.7744107319395,
+   "murders": 309,
+   "murder_rate_per100k": 48.72134073561341,
+   "population": 634219
+  },
+  "Detroit|2023": {
+   "city": "Detroit",
+   "year": 2023,
+   "bookings_total": 11355,
+   "bookings_per100k": 1781.3105927975755,
+   "murders": 250,
+   "murder_rate_per100k": 39.21863920734424,
+   "population": 637452
+  },
+  "Detroit|2024": {
+   "city": "Detroit",
+   "year": 2024,
+   "bookings_total": 11047,
+   "bookings_per100k": 1715.2794490982633,
+   "murders": 203,
+   "murder_rate_per100k": 31.52002608553883,
+   "population": 644035
+  },
+  "Okc|2015": {
+   "city": "Okc",
+   "year": 2015,
+   "bookings_total": 27562,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "Okc|2016": {
+   "city": "Okc",
+   "year": 2016,
+   "bookings_total": 26744,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "Okc|2017": {
+   "city": "Okc",
+   "year": 2017,
+   "bookings_total": 24141,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "Okc|2018": {
+   "city": "Okc",
+   "year": 2018,
+   "bookings_total": 21061,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "Okc|2019": {
+   "city": "Okc",
+   "year": 2019,
+   "bookings_total": 17661,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "Okc|2020": {
+   "city": "Okc",
+   "year": 2020,
+   "bookings_total": 15264,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "Okc|2021": {
+   "city": "Okc",
+   "year": 2021,
+   "bookings_total": 14024,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "Okc|2022": {
+   "city": "Okc",
+   "year": 2022,
+   "bookings_total": 14739,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "Okc|2023": {
+   "city": "Okc",
+   "year": 2023,
+   "bookings_total": 14687,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  },
+  "Okc|2024": {
+   "city": "Okc",
+   "year": 2024,
+   "bookings_total": 15108,
+   "bookings_per100k": null,
+   "murders": null,
+   "murder_rate_per100k": null,
+   "population": null
+  }
+ },
+ "nyc_fac_panel": {
+  "1990": {
+   "city": "NYC",
+   "year": 1990,
+   "facility_discharges": null,
+   "facility_admitted": 3,
+   "flags": [
+    "dataset backfill sparse pre-2013 (admissions coverage starts ~2013)"
+   ],
+   "nypd_arrests_8h9b": null,
+   "population": null,
+   "pop_source": null,
+   "discharges_per_arrest": null,
+   "facility_admitted_per_capita": null,
+   "care_usd_total": 6838254755,
+   "murders": null,
+   "murder_rate_per100k": null
+  },
+  "1991": {
+   "city": "NYC",
+   "year": 1991,
+   "facility_discharges": null,
+   "facility_admitted": 4,
+   "flags": [
+    "dataset backfill sparse pre-2013 (admissions coverage starts ~2013)"
+   ],
+   "nypd_arrests_8h9b": null,
+   "population": null,
+   "pop_source": null,
+   "discharges_per_arrest": null,
+   "facility_admitted_per_capita": null,
+   "care_usd_total": 7637238468,
+   "murders": null,
+   "murder_rate_per100k": null
+  },
+  "1992": {
+   "city": "NYC",
+   "year": 1992,
+   "facility_discharges": null,
+   "facility_admitted": 3,
+   "flags": [
+    "dataset backfill sparse pre-2013 (admissions coverage starts ~2013)"
+   ],
+   "nypd_arrests_8h9b": null,
+   "population": null,
+   "pop_source": null,
+   "discharges_per_arrest": null,
+   "facility_admitted_per_capita": null,
+   "care_usd_total": 7869527521,
+   "murders": null,
+   "murder_rate_per100k": null
+  },
+  "1994": {
+   "city": "NYC",
+   "year": 1994,
+   "facility_discharges": null,
+   "facility_admitted": 2,
+   "flags": [
+    "dataset backfill sparse pre-2013 (admissions coverage starts ~2013)"
+   ],
+   "nypd_arrests_8h9b": null,
+   "population": null,
+   "pop_source": null,
+   "discharges_per_arrest": null,
+   "facility_admitted_per_capita": null,
+   "care_usd_total": 8956726781,
+   "murders": null,
+   "murder_rate_per100k": null
+  },
+  "1995": {
+   "city": "NYC",
+   "year": 1995,
+   "facility_discharges": null,
+   "facility_admitted": 2,
+   "flags": [
+    "dataset backfill sparse pre-2013 (admissions coverage starts ~2013)"
+   ],
+   "nypd_arrests_8h9b": null,
+   "population": null,
+   "pop_source": null,
+   "discharges_per_arrest": null,
+   "facility_admitted_per_capita": null,
+   "care_usd_total": 9060852414,
+   "murders": null,
+   "murder_rate_per100k": null
+  },
+  "2001": {
+   "city": "NYC",
+   "year": 2001,
+   "facility_discharges": null,
+   "facility_admitted": 1,
+   "flags": [
+    "dataset backfill sparse pre-2013 (admissions coverage starts ~2013)"
+   ],
+   "nypd_arrests_8h9b": null,
+   "population": 7499958,
+   "pop_source": "triple_slider_v6d.json (care_arc bank: books-grain care/cage + pop)",
+   "discharges_per_arrest": null,
+   "facility_admitted_per_capita": 1.3333408000418135e-07,
+   "care_usd_total": 8186859083,
+   "murders": 649,
+   "murder_rate_per100k": 8.65338179227137
+  },
+  "2003": {
+   "city": "NYC",
+   "year": 2003,
+   "facility_discharges": null,
+   "facility_admitted": 2,
+   "flags": [
+    "dataset backfill sparse pre-2013 (admissions coverage starts ~2013)"
+   ],
+   "nypd_arrests_8h9b": null,
+   "population": null,
+   "pop_source": null,
+   "discharges_per_arrest": null,
+   "facility_admitted_per_capita": null,
+   "care_usd_total": 9136231604,
+   "murders": null,
+   "murder_rate_per100k": null
+  },
+  "2006": {
+   "city": "NYC",
+   "year": 2006,
+   "facility_discharges": null,
+   "facility_admitted": 1,
+   "flags": [
+    "dataset backfill sparse pre-2013 (admissions coverage starts ~2013)"
+   ],
+   "nypd_arrests_8h9b": null,
+   "population": null,
+   "pop_source": null,
+   "discharges_per_arrest": null,
+   "facility_admitted_per_capita": null,
+   "care_usd_total": 10385522352,
+   "murders": null,
+   "murder_rate_per100k": null
+  },
+  "2007": {
+   "city": "NYC",
+   "year": 2007,
+   "facility_discharges": null,
+   "facility_admitted": 5,
+   "flags": [
+    "dataset backfill sparse pre-2013 (admissions coverage starts ~2013)"
+   ],
+   "nypd_arrests_8h9b": null,
+   "population": null,
+   "pop_source": null,
+   "discharges_per_arrest": null,
+   "facility_admitted_per_capita": null,
+   "care_usd_total": 11066241802,
+   "murders": null,
+   "murder_rate_per100k": null
+  },
+  "2008": {
+   "city": "NYC",
+   "year": 2008,
+   "facility_discharges": null,
+   "facility_admitted": 12,
+   "flags": [
+    "dataset backfill sparse pre-2013 (admissions coverage starts ~2013)"
+   ],
+   "nypd_arrests_8h9b": null,
+   "population": null,
+   "pop_source": null,
+   "discharges_per_arrest": null,
+   "facility_admitted_per_capita": null,
+   "care_usd_total": 12484787390,
+   "murders": null,
+   "murder_rate_per100k": null
+  },
+  "2009": {
+   "city": "NYC",
+   "year": 2009,
+   "facility_discharges": null,
+   "facility_admitted": 26,
+   "flags": [
+    "dataset backfill sparse pre-2013 (admissions coverage starts ~2013)"
+   ],
+   "nypd_arrests_8h9b": null,
+   "population": null,
+   "pop_source": null,
+   "discharges_per_arrest": null,
+   "facility_admitted_per_capita": null,
+   "care_usd_total": 12438336711,
+   "murders": null,
+   "murder_rate_per100k": null
+  },
+  "2010": {
+   "city": "NYC",
+   "year": 2010,
+   "facility_discharges": null,
+   "facility_admitted": 74,
+   "flags": [
+    "dataset backfill sparse pre-2013 (admissions coverage starts ~2013)"
+   ],
+   "nypd_arrests_8h9b": null,
+   "population": null,
+   "pop_source": null,
+   "discharges_per_arrest": null,
+   "facility_admitted_per_capita": null,
+   "care_usd_total": 12565355272,
+   "murders": null,
+   "murder_rate_per100k": null
+  },
+  "2011": {
+   "city": "NYC",
+   "year": 2011,
+   "facility_discharges": null,
+   "facility_admitted": 283,
+   "flags": [
+    "dataset backfill sparse pre-2013 (admissions coverage starts ~2013)"
+   ],
+   "nypd_arrests_8h9b": null,
+   "population": null,
+   "pop_source": null,
+   "discharges_per_arrest": null,
+   "facility_admitted_per_capita": null,
+   "care_usd_total": 12112664612,
+   "murders": null,
+   "murder_rate_per100k": null
+  },
+  "2012": {
+   "city": "NYC",
+   "year": 2012,
+   "facility_discharges": null,
+   "facility_admitted": 1050,
+   "flags": [],
+   "nypd_arrests_8h9b": null,
+   "population": null,
+   "pop_source": null,
+   "discharges_per_arrest": null,
+   "facility_admitted_per_capita": null,
+   "care_usd_total": 13293749418,
+   "murders": null,
+   "murder_rate_per100k": null
+  },
+  "2013": {
+   "city": "NYC",
+   "year": 2013,
+   "facility_discharges": null,
+   "facility_admitted": 9266,
+   "flags": [],
+   "nypd_arrests_8h9b": null,
+   "population": null,
+   "pop_source": null,
+   "discharges_per_arrest": null,
+   "facility_admitted_per_capita": null,
+   "care_usd_total": 13580886970,
+   "murders": null,
+   "murder_rate_per100k": null
+  },
+  "2014": {
+   "city": "NYC",
+   "year": 2014,
+   "facility_discharges": 70044,
+   "facility_admitted": 68578,
+   "flags": [],
+   "nypd_arrests_8h9b": null,
+   "population": null,
+   "pop_source": null,
+   "discharges_per_arrest": null,
+   "facility_admitted_per_capita": null,
+   "care_usd_total": 13553231749,
+   "murders": null,
+   "murder_rate_per100k": null
+  },
+  "2015": {
+   "city": "NYC",
+   "year": 2015,
+   "facility_discharges": 61585,
+   "facility_admitted": 61479,
+   "flags": [],
+   "nypd_arrests_8h9b": 339470,
+   "population": null,
+   "pop_source": null,
+   "discharges_per_arrest": 0.18141514714113177,
+   "facility_admitted_per_capita": null,
+   "care_usd_total": 14268497017,
+   "murders": null,
+   "murder_rate_per100k": null
+  },
+  "2016": {
+   "city": "NYC",
+   "year": 2016,
+   "facility_discharges": 58700,
+   "facility_admitted": 58503,
+   "flags": [],
+   "nypd_arrests_8h9b": 314864,
+   "population": null,
+   "pop_source": null,
+   "discharges_per_arrest": 0.18642969663092637,
+   "facility_admitted_per_capita": null,
+   "care_usd_total": 14293238630,
+   "murders": null,
+   "murder_rate_per100k": null
+  },
+  "2017": {
+   "city": "NYC",
+   "year": 2017,
+   "facility_discharges": 54402,
+   "facility_admitted": 54055,
+   "flags": [],
+   "nypd_arrests_8h9b": 286225,
+   "population": null,
+   "pop_source": null,
+   "discharges_per_arrest": 0.19006725478207703,
+   "facility_admitted_per_capita": null,
+   "care_usd_total": 15315570288,
+   "murders": null,
+   "murder_rate_per100k": null
+  },
+  "2018": {
+   "city": "NYC",
+   "year": 2018,
+   "facility_discharges": 43250,
+   "facility_admitted": 42268,
+   "flags": [],
+   "nypd_arrests_8h9b": 246773,
+   "population": null,
+   "pop_source": null,
+   "discharges_per_arrest": 0.17526228558229628,
+   "facility_admitted_per_capita": null,
+   "care_usd_total": 16083451082,
+   "murders": null,
+   "murder_rate_per100k": null
+  },
+  "2019": {
+   "city": "NYC",
+   "year": 2019,
+   "facility_discharges": 35768,
+   "facility_admitted": 33767,
+   "flags": [],
+   "nypd_arrests_8h9b": 214617,
+   "population": 8336817,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "discharges_per_arrest": 0.16665967747196167,
+   "facility_admitted_per_capita": 0.004050346793026643,
+   "care_usd_total": null,
+   "murders": 319,
+   "murder_rate_per100k": 3.8264004115719463
+  },
+  "2020": {
+   "city": "NYC",
+   "year": 2020,
+   "facility_discharges": 16161,
+   "facility_admitted": 15373,
+   "flags": [],
+   "nypd_arrests_8h9b": 140413,
+   "population": 8751188,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "discharges_per_arrest": 0.1150961805530827,
+   "facility_admitted_per_capita": 0.0017566757793341886,
+   "care_usd_total": 34067729000,
+   "murders": 468,
+   "murder_rate_per100k": 5.347845343969299
+  },
+  "2021": {
+   "city": "NYC",
+   "year": 2021,
+   "facility_discharges": 15799,
+   "facility_admitted": 16200,
+   "flags": [],
+   "nypd_arrests_8h9b": 155507,
+   "population": 8447958,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "discharges_per_arrest": 0.10159671268817481,
+   "facility_admitted_per_capita": 0.0019176231700015554,
+   "care_usd_total": 33113644000,
+   "murders": 488,
+   "murder_rate_per100k": 5.776543870128142
+  },
+  "2022": {
+   "city": "NYC",
+   "year": 2022,
+   "facility_discharges": 19300,
+   "facility_admitted": 19672,
+   "flags": [],
+   "nypd_arrests_8h9b": 189774,
+   "population": 8362665,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "discharges_per_arrest": 0.10169991674307334,
+   "facility_admitted_per_capita": 0.002352360162699331,
+   "care_usd_total": 36416427000,
+   "murders": 438,
+   "murder_rate_per100k": 5.237564819348856
+  },
+  "2023": {
+   "city": "NYC",
+   "year": 2023,
+   "facility_discharges": 21827,
+   "facility_admitted": 21974,
+   "flags": [],
+   "nypd_arrests_8h9b": 226872,
+   "population": 8433834,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "discharges_per_arrest": 0.09620843471208435,
+   "facility_admitted_per_capita": 0.0026054579684636906,
+   "care_usd_total": 39026744000,
+   "murders": 404,
+   "murder_rate_per100k": 4.790229449619236
+  },
+  "2024": {
+   "city": "NYC",
+   "year": 2024,
+   "facility_discharges": 23094,
+   "facility_admitted": 23197,
+   "flags": [],
+   "nypd_arrests_8h9b": 260503,
+   "population": 8596825,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "discharges_per_arrest": 0.08865157023143687,
+   "facility_admitted_per_capita": 0.002698321764139668,
+   "care_usd_total": 42783055000,
+   "murders": 357,
+   "murder_rate_per100k": 4.152695908082344
+  },
+  "2025": {
+   "city": "NYC",
+   "year": 2025,
+   "facility_discharges": 23909,
+   "facility_admitted": 22974,
+   "flags": [],
+   "nypd_arrests_8h9b": null,
+   "population": 8584629,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+   "discharges_per_arrest": null,
+   "facility_admitted_per_capita": 0.0026761785512221903,
+   "care_usd_total": 47116868000,
+   "murders": null,
+   "murder_rate_per100k": null
+  },
+  "2026": {
+   "city": "NYC",
+   "year": 2026,
+   "facility_discharges": 19547,
+   "facility_admitted": 14612,
+   "flags": [
+    "partial-year (through pull date)"
+   ],
+   "nypd_arrests_8h9b": null,
+   "population": null,
+   "pop_source": null,
+   "discharges_per_arrest": null,
+   "facility_admitted_per_capita": null,
+   "care_usd_total": null,
+   "murders": null,
+   "murder_rate_per100k": null
+  }
+ },
+ "testA_care2bookings_rate": {
+  "pooled": {
+   "0": {
+    "r": 0.1366,
+    "t": 0.73,
+    "n": 30
+   },
+   "1": {
+    "r": 0.2692,
+    "t": 1.37,
+    "n": 26
+   },
+   "2": {
+    "r": 0.2624,
+    "t": 1.12,
+    "n": 19
+   },
+   "3": {
+    "r": -0.8616,
+    "t": -5.09,
+    "n": 11
+   },
+   "4": {
+    "r": -0.8669,
+    "t": -3.89,
+    "n": 7
+   }
+  },
+  "per_city": {
+   "NYC": {
+    "0": {
+     "r": 0.9906,
+     "t": 12.52,
+     "n": 5
+    },
+    "1": {
+     "r": 0.9503,
+     "t": 4.32,
+     "n": 4
+    },
+    "2": {
+     "r": 0.8613,
+     "t": NaN,
+     "n": 3
+    }
+   },
+   "Cincinnati": {
+    "0": {
+     "r": 0.4988,
+     "t": 1.63,
+     "n": 10
+    },
+    "1": {
+     "r": 0.597,
+     "t": 2.1,
+     "n": 10
+    },
+    "2": {
+     "r": 0.2095,
+     "t": 0.57,
+     "n": 9
+    },
+    "3": {
+     "r": -0.8789,
+     "t": -4.51,
+     "n": 8
+    },
+    "4": {
+     "r": -0.8669,
+     "t": -3.89,
+     "n": 7
+    }
+   },
+   "Detroit": {
+    "0": {
+     "r": -0.5711,
+     "t": -1.2,
+     "n": 5
+    },
+    "1": {
+     "r": -0.4343,
+     "t": -0.68,
+     "n": 4
+    },
+    "2": {
+     "r": 0.7618,
+     "t": NaN,
+     "n": 3
+    }
+   },
+   "Memphis": {
+    "0": {
+     "r": -0.6236,
+     "t": -1.13,
+     "n": 4
+    },
+    "1": {
+     "r": 0.7232,
+     "t": NaN,
+     "n": 3
+    }
+   },
+   "St. Louis": {
+    "0": {
+     "r": -0.5203,
+     "t": -1.22,
+     "n": 6
+    },
+    "1": {
+     "r": -0.3133,
+     "t": -0.57,
+     "n": 5
+    },
+    "2": {
+     "r": 0.9124,
+     "t": 3.15,
+     "n": 4
+    },
+    "3": {
+     "r": 0.2112,
+     "t": NaN,
+     "n": 3
+    }
+   }
+  }
+ },
+ "testA_care2bookings_raw": {
+  "pooled": {
+   "0": {
+    "r": -0.6593,
+    "t": -4.96,
+    "n": 34
+   },
+   "1": {
+    "r": -0.611,
+    "t": -4.16,
+    "n": 31
+   },
+   "2": {
+    "r": -0.3044,
+    "t": -1.57,
+    "n": 26
+   },
+   "3": {
+    "r": -0.0923,
+    "t": -0.41,
+    "n": 22
+   },
+   "4": {
+    "r": -0.0203,
+    "t": -0.08,
+    "n": 19
+   }
+  },
+  "per_city": {
+   "NYC": {
+    "0": {
+     "r": -0.6612,
+     "t": -2.33,
+     "n": 9
+    },
+    "1": {
+     "r": -0.6123,
+     "t": -2.05,
+     "n": 9
+    },
+    "2": {
+     "r": -0.3048,
+     "t": -0.85,
+     "n": 9
+    },
+    "3": {
+     "r": -0.0925,
+     "t": -0.25,
+     "n": 9
+    },
+    "4": {
+     "r": -0.0204,
+     "t": -0.05,
+     "n": 9
+    }
+   },
+   "Cincinnati": {
+    "0": {
+     "r": 0.509,
+     "t": 1.67,
+     "n": 10
+    },
+    "1": {
+     "r": 0.5768,
+     "t": 2.0,
+     "n": 10
+    },
+    "2": {
+     "r": 0.6541,
+     "t": 2.45,
+     "n": 10
+    },
+    "3": {
+     "r": 0.6537,
+     "t": 2.44,
+     "n": 10
+    },
+    "4": {
+     "r": 0.1578,
+     "t": 0.45,
+     "n": 10
+    }
+   },
+   "Detroit": {
+    "0": {
+     "r": -0.5328,
+     "t": -1.09,
+     "n": 5
+    },
+    "1": {
+     "r": -0.3684,
+     "t": -0.56,
+     "n": 4
+    },
+    "2": {
+     "r": 0.8828,
+     "t": NaN,
+     "n": 3
+    }
+   },
+   "Memphis": {
+    "0": {
+     "r": -0.618,
+     "t": -1.11,
+     "n": 4
+    },
+    "1": {
+     "r": 0.7522,
+     "t": NaN,
+     "n": 3
+    }
+   },
+   "St. Louis": {
+    "0": {
+     "r": -0.5336,
+     "t": -1.26,
+     "n": 6
+    },
+    "1": {
+     "r": -0.3601,
+     "t": -0.67,
+     "n": 5
+    },
+    "2": {
+     "r": 0.2942,
+     "t": 0.44,
+     "n": 4
+    },
+    "3": {
+     "r": -0.5239,
+     "t": NaN,
+     "n": 3
+    }
+   }
+  }
+ },
+ "testB_care2murders_rate": {
+  "pooled": {
+   "0": {
+    "r": -0.1557,
+    "t": -1.0,
+    "n": 42
+   },
+   "1": {
+    "r": -0.1943,
+    "t": -1.16,
+    "n": 36
+   },
+   "2": {
+    "r": -0.2133,
+    "t": -1.16,
+    "n": 30
+   },
+   "3": {
+    "r": -0.1951,
+    "t": -0.93,
+    "n": 24
+   },
+   "4": {
+    "r": -0.4166,
+    "t": -1.65,
+    "n": 15
+   }
+  },
+  "per_city": {
+   "NYC": {
+    "0": {
+     "r": -0.9948,
+     "t": -25.83,
+     "n": 9
+    },
+    "1": {
+     "r": -0.9941,
+     "t": -20.41,
+     "n": 7
+    },
+    "2": {
+     "r": -0.9957,
+     "t": -18.62,
+     "n": 5
+    },
+    "3": {
+     "r": -0.9924,
+     "t": NaN,
+     "n": 3
+    }
+   },
+   "Cincinnati": {
+    "0": {
+     "r": -0.3723,
+     "t": -1.33,
+     "n": 13
+    },
+    "1": {
+     "r": -0.3506,
+     "t": -1.18,
+     "n": 12
+    },
+    "2": {
+     "r": -0.2259,
+     "t": -0.7,
+     "n": 11
+    },
+    "3": {
+     "r": -0.2157,
+     "t": -0.62,
+     "n": 10
+    },
+    "4": {
+     "r": -0.2944,
+     "t": -0.81,
+     "n": 9
+    }
+   },
+   "Detroit": {
+    "0": {
+     "r": -0.4009,
+     "t": -0.98,
+     "n": 7
+    },
+    "1": {
+     "r": -0.8222,
+     "t": -2.89,
+     "n": 6
+    },
+    "2": {
+     "r": -0.878,
+     "t": -3.18,
+     "n": 5
+    },
+    "3": {
+     "r": -0.8189,
+     "t": -2.02,
+     "n": 4
+    },
+    "4": {
+     "r": -0.9015,
+     "t": NaN,
+     "n": 3
+    }
+   },
+   "Memphis": {
+    "0": {
+     "r": -0.573,
+     "t": -1.4,
+     "n": 6
+    },
+    "1": {
+     "r": -0.8418,
+     "t": -2.7,
+     "n": 5
+    },
+    "2": {
+     "r": -0.5303,
+     "t": -0.88,
+     "n": 4
+    },
+    "3": {
+     "r": 0.1953,
+     "t": NaN,
+     "n": 3
+    }
+   },
+   "St. Louis": {
+    "0": {
+     "r": -0.7243,
+     "t": -2.35,
+     "n": 7
+    },
+    "1": {
+     "r": -0.8133,
+     "t": -2.8,
+     "n": 6
+    },
+    "2": {
+     "r": -0.7472,
+     "t": -1.95,
+     "n": 5
+    },
+    "3": {
+     "r": -0.5176,
+     "t": -0.86,
+     "n": 4
+    },
+    "4": {
+     "r": -0.2769,
+     "t": NaN,
+     "n": 3
+    }
+   }
+  }
+ },
+ "testB_care2murders_raw": {
+  "pooled": {
+   "0": {
+    "r": -0.7636,
+    "t": -7.76,
+    "n": 45
+   },
+   "1": {
+    "r": -0.6489,
+    "t": -5.19,
+    "n": 39
+   },
+   "2": {
+    "r": -0.6783,
+    "t": -5.38,
+    "n": 36
+   },
+   "3": {
+    "r": -0.7094,
+    "t": -5.6,
+    "n": 33
+   },
+   "4": {
+    "r": -0.7122,
+    "t": -5.17,
+    "n": 28
+   }
+  },
+  "per_city": {
+   "NYC": {
+    "0": {
+     "r": -0.9879,
+     "t": -16.84,
+     "n": 9
+    },
+    "1": {
+     "r": -0.7696,
+     "t": -3.19,
+     "n": 9
+    },
+    "2": {
+     "r": -0.7698,
+     "t": -3.19,
+     "n": 9
+    },
+    "3": {
+     "r": -0.748,
+     "t": -2.98,
+     "n": 9
+    },
+    "4": {
+     "r": -0.725,
+     "t": -2.78,
+     "n": 9
+    }
+   },
+   "Cincinnati": {
+    "0": {
+     "r": -0.2254,
+     "t": -0.77,
+     "n": 13
+    },
+    "1": {
+     "r": -0.043,
+     "t": -0.14,
+     "n": 13
+    },
+    "2": {
+     "r": 0.0047,
+     "t": 0.02,
+     "n": 13
+    },
+    "3": {
+     "r": 0.1992,
+     "t": 0.67,
+     "n": 13
+    },
+    "4": {
+     "r": 0.0146,
+     "t": 0.05,
+     "n": 13
+    }
+   },
+   "Detroit": {
+    "0": {
+     "r": -0.4085,
+     "t": -1.0,
+     "n": 7
+    },
+    "1": {
+     "r": -0.823,
+     "t": -2.9,
+     "n": 6
+    },
+    "2": {
+     "r": -0.8797,
+     "t": -3.2,
+     "n": 5
+    },
+    "3": {
+     "r": -0.8243,
+     "t": -2.06,
+     "n": 4
+    },
+    "4": {
+     "r": -0.8943,
+     "t": NaN,
+     "n": 3
+    }
+   },
+   "Memphis": {
+    "0": {
+     "r": -0.5748,
+     "t": -1.41,
+     "n": 6
+    },
+    "1": {
+     "r": -0.8253,
+     "t": -2.53,
+     "n": 5
+    },
+    "2": {
+     "r": -0.4978,
+     "t": -0.81,
+     "n": 4
+    },
+    "3": {
+     "r": 0.2714,
+     "t": NaN,
+     "n": 3
+    }
+   },
+   "St. Louis": {
+    "0": {
+     "r": -0.7482,
+     "t": -2.52,
+     "n": 7
+    },
+    "1": {
+     "r": -0.7874,
+     "t": -2.55,
+     "n": 6
+    },
+    "2": {
+     "r": -0.7124,
+     "t": -1.76,
+     "n": 5
+    },
+    "3": {
+     "r": -0.5048,
+     "t": -0.83,
+     "n": 4
+    },
+    "4": {
+     "r": 0.5037,
+     "t": NaN,
+     "n": 3
+    }
+   },
+   "Denver": {
+    "0": {
+     "r": -0.9964,
+     "t": NaN,
+     "n": 3
+    }
+   }
+  }
+ },
+ "testC_bookings2murders_rate": {
+  "pooled": {
+   "0": {
+    "r": -0.2671,
+    "t": -1.92,
+    "n": 50
+   },
+   "1": {
+    "r": 0.3597,
+    "t": 2.31,
+    "n": 38
+   },
+   "2": {
+    "r": 0.1521,
+    "t": 0.87,
+    "n": 34
+   },
+   "3": {
+    "r": 0.6345,
+    "t": 4.02,
+    "n": 26
+   },
+   "4": {
+    "r": 0.2805,
+    "t": 1.05,
+    "n": 15
+   }
+  },
+  "per_city": {
+   "Boston": {
+    "0": {
+     "r": -0.1878,
+     "t": -0.33,
+     "n": 5
+    },
+    "1": {
+     "r": 0.9016,
+     "t": NaN,
+     "n": 3
+    },
+    "2": {
+     "r": 0.0104,
+     "t": NaN,
+     "n": 3
+    }
+   },
+   "NYC": {
+    "0": {
+     "r": -0.7943,
+     "t": -2.61,
+     "n": 6
+    },
+    "1": {
+     "r": -0.7354,
+     "t": -1.88,
+     "n": 5
+    },
+    "2": {
+     "r": 0.1792,
+     "t": 0.26,
+     "n": 4
+    },
+    "3": {
+     "r": 0.6523,
+     "t": NaN,
+     "n": 3
+    }
+   },
+   "St. Louis": {
+    "0": {
+     "r": -0.0844,
+     "t": -0.22,
+     "n": 9
+    },
+    "1": {
+     "r": 0.4464,
+     "t": 1.12,
+     "n": 7
+    },
+    "2": {
+     "r": 0.5664,
+     "t": 1.54,
+     "n": 7
+    },
+    "3": {
+     "r": 0.6824,
+     "t": 1.87,
+     "n": 6
+    },
+    "4": {
+     "r": 0.6448,
+     "t": 1.46,
+     "n": 5
+    }
+   },
+   "New Orleans": {
+    "0": {
+     "r": -0.8358,
+     "t": -2.15,
+     "n": 4
+    },
+    "1": {
+     "r": 0.5643,
+     "t": NaN,
+     "n": 3
+    },
+    "2": {
+     "r": -0.4237,
+     "t": -0.66,
+     "n": 4
+    },
+    "3": {
+     "r": 0.9022,
+     "t": NaN,
+     "n": 3
+    }
+   },
+   "Cincinnati": {
+    "0": {
+     "r": 0.301,
+     "t": 0.89,
+     "n": 10
+    },
+    "1": {
+     "r": 0.3086,
+     "t": 0.86,
+     "n": 9
+    },
+    "2": {
+     "r": 0.5103,
+     "t": 1.45,
+     "n": 8
+    },
+    "3": {
+     "r": 0.7276,
+     "t": 2.37,
+     "n": 7
+    },
+    "4": {
+     "r": -0.1269,
+     "t": -0.26,
+     "n": 6
+    }
+   },
+   "Memphis": {
+    "0": {
+     "r": 0.108,
+     "t": 0.19,
+     "n": 5
+    },
+    "1": {
+     "r": 0.7263,
+     "t": 1.83,
+     "n": 5
+    },
+    "2": {
+     "r": 0.2372,
+     "t": 0.35,
+     "n": 4
+    },
+    "3": {
+     "r": 0.356,
+     "t": NaN,
+     "n": 3
+    }
+   },
+   "Houston": {
+    "0": {
+     "r": -0.9755,
+     "t": NaN,
+     "n": 3
+    }
+   },
+   "Detroit": {
+    "0": {
+     "r": 0.5137,
+     "t": 1.47,
+     "n": 8
+    },
+    "1": {
+     "r": 0.4812,
+     "t": 1.1,
+     "n": 6
+    },
+    "2": {
+     "r": 0.5169,
+     "t": 0.85,
+     "n": 4
+    },
+    "3": {
+     "r": -0.6263,
+     "t": -1.14,
+     "n": 4
+    },
+    "4": {
+     "r": -0.0635,
+     "t": -0.09,
+     "n": 4
+    }
+   }
+  }
+ },
+ "testC_bookings2murders_raw": {
+  "pooled": {
+   "0": {
+    "r": -0.4564,
+    "t": -3.59,
+    "n": 51
+   },
+   "1": {
+    "r": -0.395,
+    "t": -2.95,
+    "n": 49
+   },
+   "2": {
+    "r": -0.173,
+    "t": -1.17,
+    "n": 46
+   },
+   "3": {
+    "r": 0.0019,
+    "t": 0.01,
+    "n": 43
+   },
+   "4": {
+    "r": 0.1144,
+    "t": 0.72,
+    "n": 41
+   }
+  },
+  "per_city": {
+   "Boston": {
+    "0": {
+     "r": -0.123,
+     "t": -0.21,
+     "n": 5
+    },
+    "1": {
+     "r": 0.4599,
+     "t": 0.9,
+     "n": 5
+    },
+    "2": {
+     "r": 0.4628,
+     "t": 0.9,
+     "n": 5
+    },
+    "3": {
+     "r": 0.7772,
+     "t": 2.14,
+     "n": 5
+    },
+    "4": {
+     "r": 0.692,
+     "t": 1.66,
+     "n": 5
+    }
+   },
+   "NYC": {
+    "0": {
+     "r": -0.8054,
+     "t": -2.72,
+     "n": 6
+    },
+    "1": {
+     "r": -0.781,
+     "t": -2.5,
+     "n": 6
+    },
+    "2": {
+     "r": -0.2731,
+     "t": -0.57,
+     "n": 6
+    },
+    "3": {
+     "r": 0.0418,
+     "t": 0.08,
+     "n": 6
+    },
+    "4": {
+     "r": 0.1799,
+     "t": 0.37,
+     "n": 6
+    }
+   },
+   "St. Louis": {
+    "0": {
+     "r": 0.1004,
+     "t": 0.29,
+     "n": 10
+    },
+    "1": {
+     "r": 0.4501,
+     "t": 1.33,
+     "n": 9
+    },
+    "2": {
+     "r": 0.5601,
+     "t": 1.66,
+     "n": 8
+    },
+    "3": {
+     "r": 0.6653,
+     "t": 1.99,
+     "n": 7
+    },
+    "4": {
+     "r": 0.7187,
+     "t": 2.07,
+     "n": 6
+    }
+   },
+   "New Orleans": {
+    "0": {
+     "r": -0.7994,
+     "t": -1.88,
+     "n": 4
+    },
+    "1": {
+     "r": -0.4692,
+     "t": -0.92,
+     "n": 5
+    },
+    "2": {
+     "r": -0.3647,
+     "t": -0.68,
+     "n": 5
+    },
+    "3": {
+     "r": 0.5199,
+     "t": 0.86,
+     "n": 4
+    },
+    "4": {
+     "r": 0.962,
+     "t": 4.98,
+     "n": 4
+    }
+   },
+   "Cincinnati": {
+    "0": {
+     "r": 0.3449,
+     "t": 1.04,
+     "n": 10
+    },
+    "1": {
+     "r": 0.3794,
+     "t": 1.08,
+     "n": 9
+    },
+    "2": {
+     "r": 0.5715,
+     "t": 1.71,
+     "n": 8
+    },
+    "3": {
+     "r": 0.7549,
+     "t": 2.57,
+     "n": 7
+    },
+    "4": {
+     "r": -0.0989,
+     "t": -0.2,
+     "n": 6
+    }
+   },
+   "Memphis": {
+    "0": {
+     "r": 0.1792,
+     "t": 0.32,
+     "n": 5
+    },
+    "1": {
+     "r": 0.73,
+     "t": 1.85,
+     "n": 5
+    },
+    "2": {
+     "r": 0.3879,
+     "t": 0.73,
+     "n": 5
+    },
+    "3": {
+     "r": 0.5755,
+     "t": 1.22,
+     "n": 5
+    },
+    "4": {
+     "r": 0.6994,
+     "t": 1.69,
+     "n": 5
+    }
+   },
+   "Houston": {
+    "0": {
+     "r": -0.9722,
+     "t": NaN,
+     "n": 3
+    },
+    "1": {
+     "r": -0.8527,
+     "t": NaN,
+     "n": 3
+    },
+    "2": {
+     "r": -0.7608,
+     "t": NaN,
+     "n": 3
+    },
+    "3": {
+     "r": -0.7193,
+     "t": NaN,
+     "n": 3
+    },
+    "4": {
+     "r": -0.4917,
+     "t": NaN,
+     "n": 3
+    }
+   },
+   "Detroit": {
+    "0": {
+     "r": 0.5389,
+     "t": 1.57,
+     "n": 8
+    },
+    "1": {
+     "r": 0.5418,
+     "t": 1.44,
+     "n": 7
+    },
+    "2": {
+     "r": 0.1986,
+     "t": 0.41,
+     "n": 6
+    },
+    "3": {
+     "r": -0.6665,
+     "t": -1.79,
+     "n": 6
+    },
+    "4": {
+     "r": -0.3404,
+     "t": -0.72,
+     "n": 6
+    }
+   }
+  }
+ },
+ "testD_nyc_care2admit": {
+  "pooled": {
+   "0": {
+    "r": 0.9838,
+    "t": 12.26,
+    "n": 7
+   },
+   "1": {
+    "r": 0.8151,
+    "t": 2.44,
+    "n": 5
+   },
+   "2": {
+    "r": 0.7211,
+    "t": 1.47,
+    "n": 4
+   },
+   "3": {
+    "r": 0.3382,
+    "t": NaN,
+    "n": 3
+   },
+   "4": null
+  },
+  "per_city": {
+   "NYC": {
+    "0": {
+     "r": 0.9838,
+     "t": 12.26,
+     "n": 7
+    },
+    "1": {
+     "r": 0.8151,
+     "t": 2.44,
+     "n": 5
+    },
+    "2": {
+     "r": 0.7211,
+     "t": 1.47,
+     "n": 4
+    },
+    "3": {
+     "r": 0.3382,
+     "t": NaN,
+     "n": 3
+    }
+   }
+  }
+ },
+ "nyc_xcheck": [
+  {
+   "year": 2015,
+   "discharges": 61585,
+   "nypd_arrests": 339470,
+   "ratio": 0.1814
+  },
+  {
+   "year": 2016,
+   "discharges": 58700,
+   "nypd_arrests": 314864,
+   "ratio": 0.1864
+  },
+  {
+   "year": 2017,
+   "discharges": 54402,
+   "nypd_arrests": 286225,
+   "ratio": 0.1901
+  },
+  {
+   "year": 2018,
+   "discharges": 43250,
+   "nypd_arrests": 246773,
+   "ratio": 0.1753
+  },
+  {
+   "year": 2019,
+   "discharges": 35768,
+   "nypd_arrests": 214617,
+   "ratio": 0.1667
+  },
+  {
+   "year": 2020,
+   "discharges": 16161,
+   "nypd_arrests": 140413,
+   "ratio": 0.1151
+  },
+  {
+   "year": 2021,
+   "discharges": 15799,
+   "nypd_arrests": 155507,
+   "ratio": 0.1016
+  },
+  {
+   "year": 2022,
+   "discharges": 19300,
+   "nypd_arrests": 189774,
+   "ratio": 0.1017
+  },
+  {
+   "year": 2023,
+   "discharges": 21827,
+   "nypd_arrests": 226872,
+   "ratio": 0.0962
+  },
+  {
+   "year": 2024,
+   "discharges": 23094,
+   "nypd_arrests": 260503,
+   "ratio": 0.0887
+  }
+ ],
+ "per_city_A": {
+  "Cincinnati": {
+   "lags": {
+    "0": {
+     "r": 0.4988,
+     "t": 1.63,
+     "n": 10
+    },
+    "1": {
+     "r": 0.597,
+     "t": 2.1,
+     "n": 10
+    },
+    "2": {
+     "r": 0.2095,
+     "t": 0.57,
+     "n": 9
+    },
+    "3": {
+     "r": -0.8789,
+     "t": -4.51,
+     "n": 8
+    }
+   },
+   "n_available": {
+    "0": 10,
+    "1": 10,
+    "2": 9,
+    "3": 8
+   },
+   "y_years": [
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026,
+    2027
+   ]
+  },
+  "Denver": {
+   "lags": {},
+   "n_available": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0
+   },
+   "y_years": [
+    2021,
+    2022,
+    2023
+   ]
+  },
+  "Detroit": {
+   "lags": {
+    "0": {
+     "r": -0.5711,
+     "t": -1.2,
+     "n": 5
+    },
+    "1": {
+     "r": -0.4343,
+     "t": -0.68,
+     "n": 4
+    },
+    "2": {
+     "r": 0.7618,
+     "t": NaN,
+     "n": 3
+    }
+   },
+   "n_available": {
+    "0": 5,
+    "1": 4,
+    "2": 3,
+    "3": 2
+   },
+   "y_years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026,
+    2027,
+    2028
+   ]
+  },
+  "Memphis": {
+   "lags": {
+    "0": {
+     "r": -0.6236,
+     "t": -1.13,
+     "n": 4
+    },
+    "1": {
+     "r": 0.7232,
+     "t": NaN,
+     "n": 3
+    }
+   },
+   "n_available": {
+    "0": 4,
+    "1": 3,
+    "2": 2,
+    "3": 1
+   },
+   "y_years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ]
+  },
+  "NYC": {
+   "lags": {
+    "0": {
+     "r": 0.9906,
+     "t": 12.52,
+     "n": 5
+    },
+    "1": {
+     "r": 0.9503,
+     "t": 4.32,
+     "n": 4
+    },
+    "2": {
+     "r": 0.8613,
+     "t": NaN,
+     "n": 3
+    }
+   },
+   "n_available": {
+    "0": 5,
+    "1": 4,
+    "2": 3,
+    "3": 2
+   },
+   "y_years": [
+    1980,
+    1981,
+    1982,
+    1983,
+    1984,
+    1985,
+    1986,
+    1987,
+    1988,
+    1989,
+    1990,
+    1991,
+    1992,
+    1993,
+    1994,
+    1995,
+    1996,
+    1997,
+    1998,
+    1999,
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  "St. Louis": {
+   "lags": {
+    "0": {
+     "r": -0.5203,
+     "t": -1.22,
+     "n": 6
+    },
+    "1": {
+     "r": -0.3133,
+     "t": -0.57,
+     "n": 5
+    },
+    "2": {
+     "r": 0.9124,
+     "t": 3.15,
+     "n": 4
+    },
+    "3": {
+     "r": 0.2112,
+     "t": NaN,
+     "n": 3
+    }
+   },
+   "n_available": {
+    "0": 6,
+    "1": 5,
+    "2": 4,
+    "3": 3
+   },
+   "y_years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ]
+  }
+ },
+ "per_city_B": {
+  "Cincinnati": {
+   "lags": {
+    "0": {
+     "r": -0.3723,
+     "t": -1.33,
+     "n": 13
+    },
+    "1": {
+     "r": -0.3506,
+     "t": -1.18,
+     "n": 12
+    },
+    "2": {
+     "r": -0.2259,
+     "t": -0.7,
+     "n": 11
+    },
+    "3": {
+     "r": -0.2157,
+     "t": -0.62,
+     "n": 10
+    }
+   },
+   "n_available": {
+    "0": 13,
+    "1": 12,
+    "2": 11,
+    "3": 10
+   },
+   "y_years": [
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026,
+    2027
+   ]
+  },
+  "Denver": {
+   "lags": {},
+   "n_available": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0
+   },
+   "y_years": [
+    2021,
+    2022,
+    2023
+   ]
+  },
+  "Detroit": {
+   "lags": {
+    "0": {
+     "r": -0.4009,
+     "t": -0.98,
+     "n": 7
+    },
+    "1": {
+     "r": -0.8222,
+     "t": -2.89,
+     "n": 6
+    },
+    "2": {
+     "r": -0.878,
+     "t": -3.18,
+     "n": 5
+    },
+    "3": {
+     "r": -0.8189,
+     "t": -2.02,
+     "n": 4
+    }
+   },
+   "n_available": {
+    "0": 7,
+    "1": 6,
+    "2": 5,
+    "3": 4
+   },
+   "y_years": [
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026,
+    2027,
+    2028
+   ]
+  },
+  "Memphis": {
+   "lags": {
+    "0": {
+     "r": -0.573,
+     "t": -1.4,
+     "n": 6
+    },
+    "1": {
+     "r": -0.8418,
+     "t": -2.7,
+     "n": 5
+    },
+    "2": {
+     "r": -0.5303,
+     "t": -0.88,
+     "n": 4
+    },
+    "3": {
+     "r": 0.1953,
+     "t": NaN,
+     "n": 3
+    }
+   },
+   "n_available": {
+    "0": 6,
+    "1": 5,
+    "2": 4,
+    "3": 3
+   },
+   "y_years": [
+    2021,
+    2022,
+    2023,
+    2024,
+    2025,
+    2026
+   ]
+  },
+  "NYC": {
+   "lags": {
+    "0": {
+     "r": -0.9948,
+     "t": -25.83,
+     "n": 9
+    },
+    "1": {
+     "r": -0.9941,
+     "t": -20.41,
+     "n": 7
+    },
+    "2": {
+     "r": -0.9957,
+     "t": -18.62,
+     "n": 5
+    },
+    "3": {
+     "r": -0.9924,
+     "t": NaN,
+     "n": 3
+    }
+   },
+   "n_available": {
+    "0": 9,
+    "1": 7,
+    "2": 5,
+    "3": 3
+   },
+   "y_years": [
+    1980,
+    1981,
+    1982,
+    1983,
+    1984,
+    1985,
+    1986,
+    1987,
+    1988,
+    1989,
+    1990,
+    1991,
+    1992,
+    1993,
+    1994,
+    1995,
+    1996,
+    1997,
+    1998,
+    1999,
+    2000,
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ]
+  },
+  "St. Louis": {
+   "lags": {
+    "0": {
+     "r": -0.7243,
+     "t": -2.35,
+     "n": 7
+    },
+    "1": {
+     "r": -0.8133,
+     "t": -2.8,
+     "n": 6
+    },
+    "2": {
+     "r": -0.7472,
+     "t": -1.95,
+     "n": 5
+    },
+    "3": {
+     "r": -0.5176,
+     "t": -0.86,
+     "n": 4
+    }
+   },
+   "n_available": {
+    "0": 7,
+    "1": 6,
+    "2": 5,
+    "3": 4
+   },
+   "y_years": [
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+   ]
+  }
+ },
+ "per_city_C": {
+  "Boston": {
+   "lags": {
+    "0": {
+     "r": -0.1878,
+     "t": -0.33,
+     "n": 5
+    },
+    "1": {
+     "r": 0.9016,
+     "t": NaN,
+     "n": 3
+    },
+    "2": {
+     "r": 0.0104,
+     "t": NaN,
+     "n": 3
+    }
+   },
+   "n_available": {
+    "0": 5,
+    "1": 3,
+    "2": 3,
+    "3": 2
+   },
+   "y_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ]
+  },
+  "Cincinnati": {
+   "lags": {
+    "0": {
+     "r": 0.301,
+     "t": 0.89,
+     "n": 10
+    },
+    "1": {
+     "r": 0.3086,
+     "t": 0.86,
+     "n": 9
+    },
+    "2": {
+     "r": 0.5103,
+     "t": 1.45,
+     "n": 8
+    },
+    "3": {
+     "r": 0.7276,
+     "t": 2.37,
+     "n": 7
+    }
+   },
+   "n_available": {
+    "0": 10,
+    "1": 9,
+    "2": 8,
+    "3": 7
+   },
+   "y_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ]
+  },
+  "Detroit": {
+   "lags": {
+    "0": {
+     "r": 0.5137,
+     "t": 1.47,
+     "n": 8
+    },
+    "1": {
+     "r": 0.4812,
+     "t": 1.1,
+     "n": 6
+    },
+    "2": {
+     "r": 0.5169,
+     "t": 0.85,
+     "n": 4
+    },
+    "3": {
+     "r": -0.6263,
+     "t": -1.14,
+     "n": 4
+    }
+   },
+   "n_available": {
+    "0": 8,
+    "1": 6,
+    "2": 4,
+    "3": 4
+   },
+   "y_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ]
+  },
+  "Houston": {
+   "lags": {
+    "0": {
+     "r": -0.9755,
+     "t": NaN,
+     "n": 3
+    }
+   },
+   "n_available": {
+    "0": 3,
+    "1": 0,
+    "2": 1,
+    "3": 1
+   },
+   "y_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ]
+  },
+  "Memphis": {
+   "lags": {
+    "0": {
+     "r": 0.108,
+     "t": 0.19,
+     "n": 5
+    },
+    "1": {
+     "r": 0.7263,
+     "t": 1.83,
+     "n": 5
+    },
+    "2": {
+     "r": 0.2372,
+     "t": 0.35,
+     "n": 4
+    },
+    "3": {
+     "r": 0.356,
+     "t": NaN,
+     "n": 3
+    }
+   },
+   "n_available": {
+    "0": 5,
+    "1": 5,
+    "2": 4,
+    "3": 3
+   },
+   "y_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ]
+  },
+  "NYC": {
+   "lags": {
+    "0": {
+     "r": -0.7943,
+     "t": -2.61,
+     "n": 6
+    },
+    "1": {
+     "r": -0.7354,
+     "t": -1.88,
+     "n": 5
+    },
+    "2": {
+     "r": 0.1792,
+     "t": 0.26,
+     "n": 4
+    },
+    "3": {
+     "r": 0.6523,
+     "t": NaN,
+     "n": 3
+    }
+   },
+   "n_available": {
+    "0": 6,
+    "1": 5,
+    "2": 4,
+    "3": 3
+   },
+   "y_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ]
+  },
+  "New Orleans": {
+   "lags": {
+    "0": {
+     "r": -0.8358,
+     "t": -2.15,
+     "n": 4
+    },
+    "1": {
+     "r": 0.5643,
+     "t": NaN,
+     "n": 3
+    },
+    "2": {
+     "r": -0.4237,
+     "t": -0.66,
+     "n": 4
+    },
+    "3": {
+     "r": 0.9022,
+     "t": NaN,
+     "n": 3
+    }
+   },
+   "n_available": {
+    "0": 4,
+    "1": 3,
+    "2": 4,
+    "3": 3
+   },
+   "y_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ]
+  },
+  "Okc": {
+   "lags": {},
+   "n_available": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0
+   },
+   "y_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ]
+  },
+  "St. Louis": {
+   "lags": {
+    "0": {
+     "r": -0.0844,
+     "t": -0.22,
+     "n": 9
+    },
+    "1": {
+     "r": 0.4464,
+     "t": 1.12,
+     "n": 7
+    },
+    "2": {
+     "r": 0.5664,
+     "t": 1.54,
+     "n": 7
+    },
+    "3": {
+     "r": 0.6824,
+     "t": 1.87,
+     "n": 6
+    }
+   },
+   "n_available": {
+    "0": 9,
+    "1": 7,
+    "2": 7,
+    "3": 6
+   },
+   "y_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ]
+  }
+ },
+ "per_city_C_raw": {
+  "Boston": {
+   "lags": {
+    "0": {
+     "r": -0.123,
+     "t": -0.21,
+     "n": 5
+    },
+    "1": {
+     "r": 0.4599,
+     "t": 0.9,
+     "n": 5
+    },
+    "2": {
+     "r": 0.4628,
+     "t": 0.9,
+     "n": 5
+    },
+    "3": {
+     "r": 0.7772,
+     "t": 2.14,
+     "n": 5
+    }
+   },
+   "n_available": {
+    "0": 5,
+    "1": 5,
+    "2": 5,
+    "3": 5
+   },
+   "y_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ]
+  },
+  "Cincinnati": {
+   "lags": {
+    "0": {
+     "r": 0.3449,
+     "t": 1.04,
+     "n": 10
+    },
+    "1": {
+     "r": 0.3794,
+     "t": 1.08,
+     "n": 9
+    },
+    "2": {
+     "r": 0.5715,
+     "t": 1.71,
+     "n": 8
+    },
+    "3": {
+     "r": 0.7549,
+     "t": 2.57,
+     "n": 7
+    }
+   },
+   "n_available": {
+    "0": 10,
+    "1": 9,
+    "2": 8,
+    "3": 7
+   },
+   "y_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ]
+  },
+  "Detroit": {
+   "lags": {
+    "0": {
+     "r": 0.5389,
+     "t": 1.57,
+     "n": 8
+    },
+    "1": {
+     "r": 0.5418,
+     "t": 1.44,
+     "n": 7
+    },
+    "2": {
+     "r": 0.1986,
+     "t": 0.41,
+     "n": 6
+    },
+    "3": {
+     "r": -0.6665,
+     "t": -1.79,
+     "n": 6
+    }
+   },
+   "n_available": {
+    "0": 8,
+    "1": 7,
+    "2": 6,
+    "3": 6
+   },
+   "y_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ]
+  },
+  "Houston": {
+   "lags": {
+    "0": {
+     "r": -0.9722,
+     "t": NaN,
+     "n": 3
+    },
+    "1": {
+     "r": -0.8527,
+     "t": NaN,
+     "n": 3
+    },
+    "2": {
+     "r": -0.7608,
+     "t": NaN,
+     "n": 3
+    },
+    "3": {
+     "r": -0.7193,
+     "t": NaN,
+     "n": 3
+    }
+   },
+   "n_available": {
+    "0": 3,
+    "1": 3,
+    "2": 3,
+    "3": 3
+   },
+   "y_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ]
+  },
+  "Memphis": {
+   "lags": {
+    "0": {
+     "r": 0.1792,
+     "t": 0.32,
+     "n": 5
+    },
+    "1": {
+     "r": 0.73,
+     "t": 1.85,
+     "n": 5
+    },
+    "2": {
+     "r": 0.3879,
+     "t": 0.73,
+     "n": 5
+    },
+    "3": {
+     "r": 0.5755,
+     "t": 1.22,
+     "n": 5
+    }
+   },
+   "n_available": {
+    "0": 5,
+    "1": 5,
+    "2": 5,
+    "3": 5
+   },
+   "y_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ]
+  },
+  "NYC": {
+   "lags": {
+    "0": {
+     "r": -0.8054,
+     "t": -2.72,
+     "n": 6
+    },
+    "1": {
+     "r": -0.781,
+     "t": -2.5,
+     "n": 6
+    },
+    "2": {
+     "r": -0.2731,
+     "t": -0.57,
+     "n": 6
+    },
+    "3": {
+     "r": 0.0418,
+     "t": 0.08,
+     "n": 6
+    }
+   },
+   "n_available": {
+    "0": 6,
+    "1": 6,
+    "2": 6,
+    "3": 6
+   },
+   "y_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ]
+  },
+  "New Orleans": {
+   "lags": {
+    "0": {
+     "r": -0.7994,
+     "t": -1.88,
+     "n": 4
+    },
+    "1": {
+     "r": -0.4692,
+     "t": -0.92,
+     "n": 5
+    },
+    "2": {
+     "r": -0.3647,
+     "t": -0.68,
+     "n": 5
+    },
+    "3": {
+     "r": 0.5199,
+     "t": 0.86,
+     "n": 4
+    }
+   },
+   "n_available": {
+    "0": 4,
+    "1": 5,
+    "2": 5,
+    "3": 4
+   },
+   "y_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ]
+  },
+  "Okc": {
+   "lags": {},
+   "n_available": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0
+   },
+   "y_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ]
+  },
+  "St. Louis": {
+   "lags": {
+    "0": {
+     "r": 0.1004,
+     "t": 0.29,
+     "n": 10
+    },
+    "1": {
+     "r": 0.4501,
+     "t": 1.33,
+     "n": 9
+    },
+    "2": {
+     "r": 0.5601,
+     "t": 1.66,
+     "n": 8
+    },
+    "3": {
+     "r": 0.6653,
+     "t": 1.99,
+     "n": 7
+    }
+   },
+   "n_available": {
+    "0": 10,
+    "1": 9,
+    "2": 8,
+    "3": 7
+   },
+   "y_years": [
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+   ]
+  }
+ }
+}

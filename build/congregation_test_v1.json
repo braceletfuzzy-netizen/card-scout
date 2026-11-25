@@ -1,0 +1,40 @@
+{
+ "_record": "congregation_test_v1",
+ "reproducibility_header": "THE CONGREGATION-TEST v1 — the founder's thesis ('resources must CONGREGATE at the point of service to show the effect') tested against the cross-grain-artifact alternative. Built 2026-11-23 from city_component_annual_v1.jsonl (2,509 rows, basis-tagged, unit-fixed) + murders_all_v1.json + populations series. Within-city demeaned component test at annual grain (2015-2024 city arcs): the design the OH-88 county-grain null demanded. Panel = 28 city-years (Cincinnati 8 / Detroit 7 / St. Louis 7 / Memphis 6); the NYC 46-year component arc and Denver await murder-window overlap. Components: parks/libraries/health/housing/human_services per-city-lane; care_per_cap = sum of usable components / PEP population.",
+ "built": "2026-11-23",
+ "input_artifacts": ["city_component_annual_v1.jsonl", "murders_all_v1.json", "population_series_v1.jsonl", "populations_wide_v1.jsonl", "populations_cities_v2.jsonl"],
+ "results": {
+  "within_city_demeaned_care_per_capita_vs_rate": {
+   "Cincinnati": {"r": -0.794, "n": 8},
+   "St. Louis": {"r": -0.724, "n": 7},
+   "Memphis": {"r": -0.602, "n": 6},
+   "Detroit": {"r": -0.396, "n": 7},
+   "POOLED": {"r": -0.509, "n": 28}
+  },
+  "lag_arc": {
+   "care_t-1_vs_rate_t": {"r": -0.572, "n": 24},
+   "care_t-2_vs_rate_t": {"r": -0.628, "n": 20},
+   "verdict": "STRENGTHENS WITH LAG — the proactive signature the county-grain could not find"
+  },
+  "per_component_pooled": {
+   "health": {"r": -0.585, "n": 22},
+   "libraries": {"r": -0.527, "n": 13},
+   "parks": {"r": -0.453, "n": 27},
+   "human_services": {"r": -0.414, "n": 13},
+   "housing": {"r": 0.146, "n": 21}
+  },
+  "within_city_per_component_highlights": {
+   "libraries @ Memphis": -0.9,
+   "libraries @ Detroit": -0.734,
+   "parks @ Memphis": -0.812,
+   "parks @ Cincinnati": -0.802,
+   "parks @ St. Louis": -0.745,
+   "health @ Cincinnati": -0.809,
+   "human_services @ St. Louis": -0.69,
+   "housing @ Detroit": 0.209
+  }
+ },
+ "verdict": "THE CONGREGATION-THESIS REPLICATED: the component-mix signal held at annual grain with the lag-arc strengthening (county-grain null = wrong conductor, not wrong signal). Direction-class only: n=28 pooled, 6-8 per city; Denver/NYC await murder-window overlap; housing flips in Detroit; no p-values claimed.",
+ "laws": ["reproducibility-header", "split-if-accounted-only", "honest-nulls", "no-fabrication", "mixed-grain-law (three OH conventions documented)"],
+ "panel_file": "_congregation_panel_v2.json"
+}

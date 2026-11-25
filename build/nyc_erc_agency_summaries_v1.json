@@ -1,0 +1,1571 @@
+{
+ "MAYORALTY": [
+  {
+   "pdf_page": 14,
+   "name": "MAYORALTY",
+   "code": "002",
+   "total_candidates": [
+    43106947
+   ]
+  },
+  {
+   "pdf_page": 15,
+   "name": "MAYORALTY",
+   "code": "002",
+   "total_candidates": [
+    540403
+   ]
+  },
+  {
+   "pdf_page": 16,
+   "name": "MAYORALTY",
+   "code": "002"
+  }
+ ],
+ "BOARD OF ELECTIONS": [
+  {
+   "pdf_page": 23,
+   "name": "BOARD OF ELECTIONS",
+   "code": "003",
+   "total_candidates": [
+    68751623
+   ]
+  }
+ ],
+ "CAMPAIGN FINANCE BOARD": [
+  {
+   "pdf_page": 25,
+   "name": "CAMPAIGN FINANCE BOARD",
+   "code": "004",
+   "total_candidates": [
+    26638948
+   ]
+  }
+ ],
+ "OFFICE OF THE ACTUARY": [
+  {
+   "pdf_page": 27,
+   "name": "OFFICE OF THE ACTUARY",
+   "code": "008",
+   "total_candidates": [
+    5436287
+   ]
+  }
+ ],
+ "BOROUGH PRESIDENT - MANHATTAN": [
+  {
+   "pdf_page": 29,
+   "name": "BOROUGH PRESIDENT - MANHATTAN",
+   "code": "010",
+   "total_candidates": [
+    4915507
+   ]
+  }
+ ],
+ "BOROUGH PRESIDENT BRONX": [
+  {
+   "pdf_page": 31,
+   "name": "BOROUGH PRESIDENT BRONX",
+   "code": "011",
+   "total_candidates": [
+    5653487
+   ]
+  }
+ ],
+ "BOROUGH PRESIDENT - BROOKLYN": [
+  {
+   "pdf_page": 33,
+   "name": "BOROUGH PRESIDENT - BROOKLYN",
+   "code": "012",
+   "total_candidates": [
+    6269299
+   ]
+  }
+ ],
+ "BOROUGH PRESIDENT - QUEENS": [
+  {
+   "pdf_page": 35,
+   "name": "BOROUGH PRESIDENT - QUEENS",
+   "code": "013",
+   "total_candidates": [
+    4914471
+   ]
+  }
+ ],
+ "BOROUGH PRESIDENT STATEN ISLAND": [
+  {
+   "pdf_page": 37,
+   "name": "BOROUGH PRESIDENT STATEN ISLAND",
+   "code": "014",
+   "total_candidates": [
+    4157676
+   ]
+  }
+ ],
+ "OFFICE OF THE COMPTROLLER": [
+  {
+   "pdf_page": 39,
+   "name": "OFFICE OF THE COMPTROLLER",
+   "code": "015",
+   "total_candidates": [
+    85929642
+   ]
+  }
+ ],
+ "DEPARTMENT OF EMERGENCY MANAGEMENT": [
+  {
+   "pdf_page": 43,
+   "name": "DEPARTMENT OF EMERGENCY MANAGEMENT",
+   "code": "017",
+   "total_candidates": [
+    29553032
+   ]
+  }
+ ],
+ "OFFICE OF ADMINISTRATIVE TAX APPEALS": [
+  {
+   "pdf_page": 46,
+   "name": "OFFICE OF ADMINISTRATIVE TAX APPEALS",
+   "code": "021",
+   "total_candidates": [
+    5762426
+   ]
+  }
+ ],
+ "LAW DEPARTMENT": [
+  {
+   "pdf_page": 48,
+   "name": "LAW DEPARTMENT",
+   "code": "025",
+   "total_candidates": [
+    160859140
+   ]
+  }
+ ],
+ "DEPARTMENT OF CITY PLANNING": [
+  {
+   "pdf_page": 50,
+   "name": "DEPARTMENT OF CITY PLANNING",
+   "code": "030",
+   "total_candidates": [
+    34158036
+   ]
+  }
+ ],
+ "DEPARTMENT OF INVESTIGATION": [
+  {
+   "pdf_page": 54,
+   "name": "DEPARTMENT OF INVESTIGATION",
+   "code": "032",
+   "total_candidates": [
+    28735037
+   ]
+  }
+ ],
+ "NEW YORK RESEARCH LIBRARIES": [
+  {
+   "pdf_page": 57,
+   "name": "NEW YORK RESEARCH LIBRARIES",
+   "code": "035",
+   "total_candidates": [
+    34995110
+   ]
+  }
+ ],
+ "NEW YORK PUBLIC LIBRARY": [
+  {
+   "pdf_page": 59,
+   "name": "NEW YORK PUBLIC LIBRARY",
+   "code": "037",
+   "total_candidates": [
+    178172467
+   ]
+  }
+ ],
+ "BROOKLYN PUBLIC LIBRARY": [
+  {
+   "pdf_page": 62,
+   "name": "BROOKLYN PUBLIC LIBRARY",
+   "code": "038",
+   "total_candidates": [
+    135507987
+   ]
+  }
+ ],
+ "QUEENS BOROUGH PUBLIC LIBRARY": [
+  {
+   "pdf_page": 64,
+   "name": "QUEENS BOROUGH PUBLIC LIBRARY",
+   "code": "039",
+   "total_candidates": [
+    140195202
+   ]
+  }
+ ],
+ "DEPARTMENT OF EDUCATION": [
+  {
+   "pdf_page": 66,
+   "name": "DEPARTMENT OF EDUCATION",
+   "code": "040"
+  },
+  {
+   "pdf_page": 67,
+   "name": "DEPARTMENT OF EDUCATION",
+   "code": "040",
+   "total_candidates": [
+    19467478103
+   ]
+  },
+  {
+   "pdf_page": 68,
+   "name": "DEPARTMENT OF EDUCATION",
+   "code": "040",
+   "total_candidates": [
+    13214617081
+   ]
+  }
+ ],
+ "CITY UNIVERSITY OF NEW YORK": [
+  {
+   "pdf_page": 91,
+   "name": "CITY UNIVERSITY OF NEW YORK",
+   "code": "042",
+   "total_candidates": [
+    908724519
+   ]
+  }
+ ],
+ "CIVILIAN COMPLAINT REVIEW BOARD": [
+  {
+   "pdf_page": 95,
+   "name": "CIVILIAN COMPLAINT REVIEW BOARD",
+   "code": "054",
+   "total_candidates": [
+    22607861
+   ]
+  }
+ ],
+ "POLICE DEPARTMENT": [
+  {
+   "pdf_page": 97,
+   "name": "POLICE DEPARTMENT",
+   "code": "056"
+  },
+  {
+   "pdf_page": 98,
+   "name": "POLICE DEPARTMENT",
+   "code": "056",
+   "total_candidates": [
+    5386685266
+   ]
+  },
+  {
+   "pdf_page": 99,
+   "name": "POLICE DEPARTMENT",
+   "code": "056",
+   "total_candidates": [
+    446246459
+   ]
+  }
+ ],
+ "FIRE DEPARTMENT": [
+  {
+   "pdf_page": 111,
+   "name": "FIRE DEPARTMENT",
+   "code": "057",
+   "total_candidates": [
+    2311617618
+   ]
+  },
+  {
+   "pdf_page": 112,
+   "name": "FIRE DEPARTMENT",
+   "code": "057"
+  }
+ ],
+ "DEPARTMENT OF VETERANS' SERVICES": [
+  {
+   "pdf_page": 117,
+   "name": "DEPARTMENT OF VETERANS' SERVICES",
+   "code": "063",
+   "total_candidates": [
+    4104784
+   ]
+  }
+ ],
+ "ADMIN FOR CHILDREN'S SERVICES": [
+  {
+   "pdf_page": 119,
+   "name": "ADMIN FOR CHILDREN'S SERVICES",
+   "code": "068",
+   "total_candidates": [
+    577856707
+   ]
+  },
+  {
+   "pdf_page": 120,
+   "name": "ADMIN FOR CHILDREN'S SERVICES",
+   "code": "068",
+   "total_candidates": [
+    2787188687
+   ]
+  }
+ ],
+ "DEPARTMENT OF SOCIAL SERVICES": [
+  {
+   "pdf_page": 126,
+   "name": "DEPARTMENT OF SOCIAL SERVICES",
+   "code": "069",
+   "total_candidates": [
+    916305134
+   ]
+  },
+  {
+   "pdf_page": 127,
+   "name": "DEPARTMENT OF SOCIAL SERVICES",
+   "code": "069",
+   "total_candidates": [
+    10894852518
+   ]
+  }
+ ],
+ "DEPARTMENT OF HOMELESS SERVICES": [
+  {
+   "pdf_page": 137,
+   "name": "DEPARTMENT OF HOMELESS SERVICES",
+   "code": "071",
+   "total_candidates": [
+    174362325
+   ]
+  }
+ ],
+ "DEPARTMENT OF CORRECTION": [
+  {
+   "pdf_page": 143,
+   "name": "DEPARTMENT OF CORRECTION",
+   "code": "072",
+   "total_candidates": [
+    881931386
+   ]
+  },
+  {
+   "pdf_page": 144,
+   "name": "DEPARTMENT OF CORRECTION",
+   "code": "072"
+  }
+ ],
+ "BOARD OF CORRECTION": [
+  {
+   "pdf_page": 150,
+   "name": "BOARD OF CORRECTION",
+   "code": "073",
+   "total_candidates": [
+    3578524
+   ]
+  }
+ ],
+ "PENSION CONTRIBUTIONS": [
+  {
+   "pdf_page": 152,
+   "name": "PENSION CONTRIBUTIONS",
+   "code": "095",
+   "total_candidates": [
+    10347074734
+   ]
+  }
+ ],
+ "MISCELLANEOUS": [
+  {
+   "pdf_page": 154,
+   "name": "MISCELLANEOUS",
+   "code": "098",
+   "total_candidates": [
+    9969639734
+   ]
+  }
+ ],
+ "DEBT SERVICE": [
+  {
+   "pdf_page": 157,
+   "name": "DEBT SERVICE",
+   "code": "099",
+   "total_candidates": [
+    3672112107
+   ]
+  }
+ ],
+ "Prior to 1980, the City appropriated debt service due and payable to holders of City obligations for the 12-month": [
+  {
+   "pdf_page": 158,
+   "name": "Prior to 1980, the City appropriated debt service due and payable to holders of City obligations for the 12-month",
+   "code": null
+  }
+ ],
+ "PUBLIC ADVOCATE": [
+  {
+   "pdf_page": 162,
+   "name": "PUBLIC ADVOCATE",
+   "code": "101",
+   "total_candidates": [
+    4962332
+   ]
+  }
+ ],
+ "CITY COUNCIL": [
+  {
+   "pdf_page": 164,
+   "name": "CITY COUNCIL",
+   "code": "102"
+  },
+  {
+   "pdf_page": 165,
+   "name": "CITY COUNCIL",
+   "code": "102"
+  },
+  {
+   "pdf_page": 166,
+   "name": "CITY COUNCIL",
+   "code": "102"
+  },
+  {
+   "pdf_page": 167,
+   "name": "CITY COUNCIL",
+   "code": "102",
+   "total_candidates": [
+    84117669
+   ]
+  },
+  {
+   "pdf_page": 168,
+   "name": "CITY COUNCIL",
+   "code": "102"
+  },
+  {
+   "pdf_page": 169,
+   "name": "CITY COUNCIL",
+   "code": "102",
+   "total_candidates": [
+    24300034
+   ]
+  }
+ ],
+ "CITY CLERK": [
+  {
+   "pdf_page": 177,
+   "name": "CITY CLERK",
+   "code": "103",
+   "total_candidates": [
+    5658208
+   ]
+  }
+ ],
+ "DEPARTMENT FOR THE AGING": [
+  {
+   "pdf_page": 179,
+   "name": "DEPARTMENT FOR THE AGING",
+   "code": "125",
+   "total_candidates": [
+    32141107
+   ]
+  }
+ ],
+ "DEPARTMENT OF CULTURAL AFFAIRS": [
+  {
+   "pdf_page": 184,
+   "name": "DEPARTMENT OF CULTURAL AFFAIRS",
+   "code": "126",
+   "total_candidates": [
+    6472180
+   ]
+  },
+  {
+   "pdf_page": 185,
+   "name": "DEPARTMENT OF CULTURAL AFFAIRS",
+   "code": "126",
+   "total_candidates": [
+    247393798
+   ]
+  },
+  {
+   "pdf_page": 186,
+   "name": "DEPARTMENT OF CULTURAL AFFAIRS",
+   "code": "126"
+  }
+ ],
+ "FINANCIAL INFORMATION SERVICE AGENCY": [
+  {
+   "pdf_page": 193,
+   "name": "FINANCIAL INFORMATION SERVICE AGENCY",
+   "code": "127",
+   "total_candidates": [
+    50848592
+   ]
+  }
+ ],
+ "OFFICE OF CRIMINAL JUSTICE": [
+  {
+   "pdf_page": 195,
+   "name": "OFFICE OF CRIMINAL JUSTICE",
+   "code": "128",
+   "total_candidates": [
+    9358982
+   ]
+  }
+ ],
+ "OFFICE OF PAYROLL ADMINISTRATION": [
+  {
+   "pdf_page": 199,
+   "name": "OFFICE OF PAYROLL ADMINISTRATION",
+   "code": "131",
+   "total_candidates": [
+    14053083
+   ]
+  }
+ ],
+ "INDEPENDENT BUDGET OFFICE": [
+  {
+   "pdf_page": 201,
+   "name": "INDEPENDENT BUDGET OFFICE",
+   "code": "132",
+   "total_candidates": [
+    6021737
+   ]
+  }
+ ],
+ "EQUAL EMPLOYMENT PRACTICES COMMISSION": [
+  {
+   "pdf_page": 203,
+   "name": "EQUAL EMPLOYMENT PRACTICES COMMISSION",
+   "code": "133",
+   "total_candidates": [
+    1483241
+   ]
+  }
+ ],
+ "CIVIL SERVICE COMMISSION": [
+  {
+   "pdf_page": 205,
+   "name": "CIVIL SERVICE COMMISSION",
+   "code": "134",
+   "total_candidates": [
+    1085611
+   ]
+  }
+ ],
+ "LANDMARKS PRESERVATION COMM.": [
+  {
+   "pdf_page": 207,
+   "name": "LANDMARKS PRESERVATION COMM.",
+   "code": "136",
+   "total_candidates": [
+    7080646
+   ]
+  }
+ ],
+ "NYC TAXI AND LIMOUSINE COMM": [
+  {
+   "pdf_page": 209,
+   "name": "NYC TAXI AND LIMOUSINE COMM",
+   "code": "156",
+   "total_candidates": [
+    45446067
+   ]
+  }
+ ],
+ "OFFICE OF RACIAL EQUITY": [
+  {
+   "pdf_page": 211,
+   "name": "OFFICE OF RACIAL EQUITY",
+   "code": "213",
+   "total_candidates": [
+    4598699
+   ]
+  }
+ ],
+ "COMMISSION ON RACIAL EQUITY": [
+  {
+   "pdf_page": 213,
+   "name": "COMMISSION ON RACIAL EQUITY",
+   "code": "215",
+   "total_candidates": [
+    1329093
+   ]
+  }
+ ],
+ "COMMISSION ON HUMAN RIGHTS": [
+  {
+   "pdf_page": 215,
+   "name": "COMMISSION ON HUMAN RIGHTS",
+   "code": "226",
+   "total_candidates": [
+    12180004
+   ]
+  }
+ ],
+ "DEPARTMENT OF YOUTH & COMMUNITY DEV": [
+  {
+   "pdf_page": 217,
+   "name": "DEPARTMENT OF YOUTH & COMMUNITY DEV",
+   "code": "260",
+   "total_candidates": [
+    55507588
+   ]
+  }
+ ],
+ "CONFLICTS OF INTEREST BOARD": [
+  {
+   "pdf_page": 222,
+   "name": "CONFLICTS OF INTEREST BOARD",
+   "code": "312",
+   "total_candidates": [
+    2538107
+   ]
+  }
+ ],
+ "OFFICE OF COLLECTIVE BARGAINING": [
+  {
+   "pdf_page": 224,
+   "name": "OFFICE OF COLLECTIVE BARGAINING",
+   "code": "313",
+   "total_candidates": [
+    2471071
+   ]
+  }
+ ],
+ "MANHATTAN COMMUNITY BOARD #1": [
+  {
+   "pdf_page": 226,
+   "name": "MANHATTAN COMMUNITY BOARD #1",
+   "code": "341",
+   "total_candidates": [
+    267484
+   ]
+  }
+ ],
+ "MANHATTAN COMMUNITY BOARD #2": [
+  {
+   "pdf_page": 228,
+   "name": "MANHATTAN COMMUNITY BOARD #2",
+   "code": "342",
+   "total_candidates": [
+    273640
+   ]
+  }
+ ],
+ "MANHATTAN COMMUNITY BOARD #3": [
+  {
+   "pdf_page": 230,
+   "name": "MANHATTAN COMMUNITY BOARD #3",
+   "code": "343",
+   "total_candidates": [
+    287014
+   ]
+  }
+ ],
+ "MANHATTAN COMMUNITY BOARD #4": [
+  {
+   "pdf_page": 232,
+   "name": "MANHATTAN COMMUNITY BOARD #4",
+   "code": "344",
+   "total_candidates": [
+    276658
+   ]
+  }
+ ],
+ "MANHATTAN COMMUNITY BOARD #5": [
+  {
+   "pdf_page": 234,
+   "name": "MANHATTAN COMMUNITY BOARD #5",
+   "code": "345",
+   "total_candidates": [
+    273182
+   ]
+  }
+ ],
+ "MANHATTAN COMMUNITY BOARD #6": [
+  {
+   "pdf_page": 236,
+   "name": "MANHATTAN COMMUNITY BOARD #6",
+   "code": "346",
+   "total_candidates": [
+    271312
+   ]
+  }
+ ],
+ "MANHATTAN COMMUNITY BOARD #7": [
+  {
+   "pdf_page": 238,
+   "name": "MANHATTAN COMMUNITY BOARD #7",
+   "code": "347",
+   "total_candidates": [
+    277318
+   ]
+  }
+ ],
+ "MANHATTAN COMMUNITY BOARD #8": [
+  {
+   "pdf_page": 240,
+   "name": "MANHATTAN COMMUNITY BOARD #8",
+   "code": "348",
+   "total_candidates": [
+    276318
+   ]
+  }
+ ],
+ "MANHATTAN COMMUNITY BOARD #9": [
+  {
+   "pdf_page": 242,
+   "name": "MANHATTAN COMMUNITY BOARD #9",
+   "code": "349",
+   "total_candidates": [
+    246630
+   ]
+  }
+ ],
+ "MANHATTAN COMMUNITY BOARD #10": [
+  {
+   "pdf_page": 244,
+   "name": "MANHATTAN COMMUNITY BOARD #10",
+   "code": "350",
+   "total_candidates": [
+    245570
+   ]
+  }
+ ],
+ "MANHATTAN COMMUNITY BOARD #11": [
+  {
+   "pdf_page": 246,
+   "name": "MANHATTAN COMMUNITY BOARD #11",
+   "code": "351",
+   "total_candidates": [
+    270236
+   ]
+  }
+ ],
+ "MANHATTAN COMMUNITY BOARD #12": [
+  {
+   "pdf_page": 248,
+   "name": "MANHATTAN COMMUNITY BOARD #12",
+   "code": "352",
+   "total_candidates": [
+    261997
+   ]
+  }
+ ],
+ "BRONX COMMUNITY BOARD #1": [
+  {
+   "pdf_page": 250,
+   "name": "BRONX COMMUNITY BOARD #1",
+   "code": "381",
+   "total_candidates": [
+    262701
+   ]
+  }
+ ],
+ "BRONX COMMUNITY BOARD #2": [
+  {
+   "pdf_page": 252,
+   "name": "BRONX COMMUNITY BOARD #2",
+   "code": "382",
+   "total_candidates": [
+    248659
+   ]
+  }
+ ],
+ "BRONX COMMUNITY BOARD #3": [
+  {
+   "pdf_page": 254,
+   "name": "BRONX COMMUNITY BOARD #3",
+   "code": "383",
+   "total_candidates": [
+    258682
+   ]
+  }
+ ],
+ "BRONX COMMUNITY BOARD #4": [
+  {
+   "pdf_page": 256,
+   "name": "BRONX COMMUNITY BOARD #4",
+   "code": "384",
+   "total_candidates": [
+    274727
+   ]
+  }
+ ],
+ "BRONX COMMUNITY BOARD #5": [
+  {
+   "pdf_page": 258,
+   "name": "BRONX COMMUNITY BOARD #5",
+   "code": "385",
+   "total_candidates": [
+    265124
+   ]
+  }
+ ],
+ "BRONX COMMUNITY BOARD #6": [
+  {
+   "pdf_page": 260,
+   "name": "BRONX COMMUNITY BOARD #6",
+   "code": "386",
+   "total_candidates": [
+    269370
+   ]
+  }
+ ],
+ "BRONX COMMUNITY BOARD #7": [
+  {
+   "pdf_page": 262,
+   "name": "BRONX COMMUNITY BOARD #7",
+   "code": "387",
+   "total_candidates": [
+    256788
+   ]
+  }
+ ],
+ "BRONX COMMUNITY BOARD #8": [
+  {
+   "pdf_page": 264,
+   "name": "BRONX COMMUNITY BOARD #8",
+   "code": "388",
+   "total_candidates": [
+    275232
+   ]
+  }
+ ],
+ "BRONX COMMUNITY BOARD #9": [
+  {
+   "pdf_page": 266,
+   "name": "BRONX COMMUNITY BOARD #9",
+   "code": "389",
+   "total_candidates": [
+    286429
+   ]
+  }
+ ],
+ "BRONX COMMUNITY BOARD #10": [
+  {
+   "pdf_page": 268,
+   "name": "BRONX COMMUNITY BOARD #10",
+   "code": "390",
+   "total_candidates": [
+    261238
+   ]
+  }
+ ],
+ "BRONX COMMUNITY BOARD #11": [
+  {
+   "pdf_page": 270,
+   "name": "BRONX COMMUNITY BOARD #11",
+   "code": "391",
+   "total_candidates": [
+    280951
+   ]
+  }
+ ],
+ "BRONX COMMUNITY BOARD #12": [
+  {
+   "pdf_page": 272,
+   "name": "BRONX COMMUNITY BOARD #12",
+   "code": "392",
+   "total_candidates": [
+    268605
+   ]
+  }
+ ],
+ "QUEENS COMMUNITY BOARD #1": [
+  {
+   "pdf_page": 274,
+   "name": "QUEENS COMMUNITY BOARD #1",
+   "code": "431",
+   "total_candidates": [
+    238557
+   ]
+  }
+ ],
+ "QUEENS COMMUNITY BOARD #2": [
+  {
+   "pdf_page": 276,
+   "name": "QUEENS COMMUNITY BOARD #2",
+   "code": "432",
+   "total_candidates": [
+    268879
+   ]
+  }
+ ],
+ "QUEENS COMMUNITY BOARD #3": [
+  {
+   "pdf_page": 278,
+   "name": "QUEENS COMMUNITY BOARD #3",
+   "code": "433",
+   "total_candidates": [
+    264468
+   ]
+  }
+ ],
+ "QUEENS COMMUNITY BOARD #4": [
+  {
+   "pdf_page": 280,
+   "name": "QUEENS COMMUNITY BOARD #4",
+   "code": "434",
+   "total_candidates": [
+    277214
+   ]
+  }
+ ],
+ "QUEENS COMMUNITY BOARD #5": [
+  {
+   "pdf_page": 282,
+   "name": "QUEENS COMMUNITY BOARD #5",
+   "code": "435",
+   "total_candidates": [
+    272705
+   ]
+  }
+ ],
+ "QUEENS COMMUNITY BOARD #6": [
+  {
+   "pdf_page": 284,
+   "name": "QUEENS COMMUNITY BOARD #6",
+   "code": "436",
+   "total_candidates": [
+    281479
+   ]
+  }
+ ],
+ "QUEENS COMMUNITY BOARD #7": [
+  {
+   "pdf_page": 286,
+   "name": "QUEENS COMMUNITY BOARD #7",
+   "code": "437",
+   "total_candidates": [
+    277380
+   ]
+  }
+ ],
+ "QUEENS COMMUNITY BOARD #8": [
+  {
+   "pdf_page": 288,
+   "name": "QUEENS COMMUNITY BOARD #8",
+   "code": "438",
+   "total_candidates": [
+    272094
+   ]
+  }
+ ],
+ "QUEENS COMMUNITY BOARD #9": [
+  {
+   "pdf_page": 290,
+   "name": "QUEENS COMMUNITY BOARD #9",
+   "code": "439",
+   "total_candidates": [
+    251062
+   ]
+  }
+ ],
+ "QUEENS COMMUNITY BOARD #10": [
+  {
+   "pdf_page": 292,
+   "name": "QUEENS COMMUNITY BOARD #10",
+   "code": "440",
+   "total_candidates": [
+    256475
+   ]
+  }
+ ],
+ "QUEENS COMMUNITY BOARD #11": [
+  {
+   "pdf_page": 294,
+   "name": "QUEENS COMMUNITY BOARD #11",
+   "code": "441",
+   "total_candidates": [
+    269338
+   ]
+  }
+ ],
+ "QUEENS COMMUNITY BOARD #12": [
+  {
+   "pdf_page": 296,
+   "name": "QUEENS COMMUNITY BOARD #12",
+   "code": "442",
+   "total_candidates": [
+    266741
+   ]
+  }
+ ],
+ "QUEENS COMMUNITY BOARD #13": [
+  {
+   "pdf_page": 298,
+   "name": "QUEENS COMMUNITY BOARD #13",
+   "code": "443",
+   "total_candidates": [
+    250749
+   ]
+  }
+ ],
+ "QUEENS COMMUNITY BOARD #14": [
+  {
+   "pdf_page": 300,
+   "name": "QUEENS COMMUNITY BOARD #14",
+   "code": "444",
+   "total_candidates": [
+    246113
+   ]
+  }
+ ],
+ "BROOKLYN COMMUNITY BOARD #1": [
+  {
+   "pdf_page": 302,
+   "name": "BROOKLYN COMMUNITY BOARD #1",
+   "code": "471",
+   "total_candidates": [
+    266186
+   ]
+  }
+ ],
+ "BROOKLYN COMMUNITY BOARD #2": [
+  {
+   "pdf_page": 304,
+   "name": "BROOKLYN COMMUNITY BOARD #2",
+   "code": "472",
+   "total_candidates": [
+    268514
+   ]
+  }
+ ],
+ "BROOKLYN COMMUNITY BOARD #3": [
+  {
+   "pdf_page": 306,
+   "name": "BROOKLYN COMMUNITY BOARD #3",
+   "code": "473",
+   "total_candidates": [
+    224080
+   ]
+  }
+ ],
+ "BROOKLYN COMMUNITY BOARD #4": [
+  {
+   "pdf_page": 308,
+   "name": "BROOKLYN COMMUNITY BOARD #4",
+   "code": "474",
+   "total_candidates": [
+    251705
+   ]
+  }
+ ],
+ "BROOKLYN COMMUNITY BOARD #5": [
+  {
+   "pdf_page": 310,
+   "name": "BROOKLYN COMMUNITY BOARD #5",
+   "code": "475",
+   "total_candidates": [
+    268961
+   ]
+  }
+ ],
+ "BROOKLYN COMMUNITY BOARD #6": [
+  {
+   "pdf_page": 312,
+   "name": "BROOKLYN COMMUNITY BOARD #6",
+   "code": "476",
+   "total_candidates": [
+    270618
+   ]
+  }
+ ],
+ "BROOKLYN COMMUNITY BOARD #7": [
+  {
+   "pdf_page": 314,
+   "name": "BROOKLYN COMMUNITY BOARD #7",
+   "code": "477",
+   "total_candidates": [
+    270662
+   ]
+  }
+ ],
+ "BROOKLYN COMMUNITY BOARD #8": [
+  {
+   "pdf_page": 316,
+   "name": "BROOKLYN COMMUNITY BOARD #8",
+   "code": "478",
+   "total_candidates": [
+    263652
+   ]
+  }
+ ],
+ "BROOKLYN COMMUNITY BOARD #9": [
+  {
+   "pdf_page": 318,
+   "name": "BROOKLYN COMMUNITY BOARD #9",
+   "code": "479",
+   "total_candidates": [
+    251212
+   ]
+  }
+ ],
+ "BROOKLYN COMMUNITY BOARD #10": [
+  {
+   "pdf_page": 320,
+   "name": "BROOKLYN COMMUNITY BOARD #10",
+   "code": "480",
+   "total_candidates": [
+    270947
+   ]
+  }
+ ],
+ "BROOKLYN COMMUNITY BOARD #11": [
+  {
+   "pdf_page": 322,
+   "name": "BROOKLYN COMMUNITY BOARD #11",
+   "code": "481",
+   "total_candidates": [
+    243338
+   ]
+  }
+ ],
+ "BROOKLYN COMMUNITY BOARD #12": [
+  {
+   "pdf_page": 324,
+   "name": "BROOKLYN COMMUNITY BOARD #12",
+   "code": "482",
+   "total_candidates": [
+    257581
+   ]
+  }
+ ],
+ "BROOKLYN COMMUNITY BOARD #13": [
+  {
+   "pdf_page": 326,
+   "name": "BROOKLYN COMMUNITY BOARD #13",
+   "code": "483",
+   "total_candidates": [
+    267973
+   ]
+  }
+ ],
+ "BROOKLYN COMMUNITY BOARD #14": [
+  {
+   "pdf_page": 328,
+   "name": "BROOKLYN COMMUNITY BOARD #14",
+   "code": "484",
+   "total_candidates": [
+    271750
+   ]
+  }
+ ],
+ "BROOKLYN COMMUNITY BOARD #15": [
+  {
+   "pdf_page": 330,
+   "name": "BROOKLYN COMMUNITY BOARD #15",
+   "code": "485",
+   "total_candidates": [
+    230263
+   ]
+  }
+ ],
+ "BROOKLYN COMMUNITY BOARD #16": [
+  {
+   "pdf_page": 332,
+   "name": "BROOKLYN COMMUNITY BOARD #16",
+   "code": "486",
+   "total_candidates": [
+    239108
+   ]
+  }
+ ],
+ "BROOKLYN COMMUNITY BOARD #17": [
+  {
+   "pdf_page": 334,
+   "name": "BROOKLYN COMMUNITY BOARD #17",
+   "code": "487",
+   "total_candidates": [
+    271199
+   ]
+  }
+ ],
+ "BROOKLYN COMMUNITY BOARD #18": [
+  {
+   "pdf_page": 336,
+   "name": "BROOKLYN COMMUNITY BOARD #18",
+   "code": "488",
+   "total_candidates": [
+    245119
+   ]
+  }
+ ],
+ "STATEN ISLAND COMMUNITY BOARD #1": [
+  {
+   "pdf_page": 338,
+   "name": "STATEN ISLAND COMMUNITY BOARD #1",
+   "code": "491",
+   "total_candidates": [
+    277235
+   ]
+  }
+ ],
+ "STATEN ISLAND COMMUNITY BOARD #2": [
+  {
+   "pdf_page": 340,
+   "name": "STATEN ISLAND COMMUNITY BOARD #2",
+   "code": "492",
+   "total_candidates": [
+    264305
+   ]
+  }
+ ],
+ "STATEN ISLAND COMMUNITY BOARD #3": [
+  {
+   "pdf_page": 342,
+   "name": "STATEN ISLAND COMMUNITY BOARD #3",
+   "code": "493",
+   "total_candidates": [
+    279603
+   ]
+  }
+ ],
+ "DEPARTMENT OF PROBATION": [
+  {
+   "pdf_page": 344,
+   "name": "DEPARTMENT OF PROBATION",
+   "code": "781",
+   "total_candidates": [
+    72649567
+   ]
+  }
+ ],
+ "DEPARTMENT OF SMALL BUSINESS SERVICES": [
+  {
+   "pdf_page": 347,
+   "name": "DEPARTMENT OF SMALL BUSINESS SERVICES",
+   "code": "801",
+   "total_candidates": [
+    36190760
+   ]
+  }
+ ],
+ "HOUSING PRESERVATION AND DEVELOPMENT": [
+  {
+   "pdf_page": 352,
+   "name": "HOUSING PRESERVATION AND DEVELOPMENT",
+   "code": "806",
+   "total_candidates": [
+    232452337
+   ]
+  },
+  {
+   "pdf_page": 353,
+   "name": "HOUSING PRESERVATION AND DEVELOPMENT",
+   "code": "806",
+   "total_candidates": [
+    1760669004
+   ]
+  }
+ ],
+ "DEPARTMENT OF BUILDINGS": [
+  {
+   "pdf_page": 361,
+   "name": "DEPARTMENT OF BUILDINGS",
+   "code": "810",
+   "total_candidates": [
+    157297473
+   ]
+  }
+ ],
+ "DEPARTMENT OF HEALTH AND MENTAL HYGIENE": [
+  {
+   "pdf_page": 364,
+   "name": "DEPARTMENT OF HEALTH AND MENTAL HYGIENE",
+   "code": "816",
+   "total_candidates": [
+    606656900
+   ]
+  },
+  {
+   "pdf_page": 365,
+   "name": "DEPARTMENT OF HEALTH AND MENTAL HYGIENE",
+   "code": "816",
+   "total_candidates": [
+    1625470702
+   ]
+  }
+ ],
+ "HEALTH AND HOSPITALS CORP": [
+  {
+   "pdf_page": 379,
+   "name": "HEALTH AND HOSPITALS CORP",
+   "code": "819",
+   "total_candidates": [
+    3155936837
+   ]
+  }
+ ],
+ "OFFICE OF ADMIN TRIALS & HEARINGS": [
+  {
+   "pdf_page": 384,
+   "name": "OFFICE OF ADMIN TRIALS & HEARINGS",
+   "code": "820",
+   "total_candidates": [
+    55788386
+   ]
+  }
+ ],
+ "DEPARTMENT OF ENVIRONMENTAL PROTECT.": [
+  {
+   "pdf_page": 387,
+   "name": "DEPARTMENT OF ENVIRONMENTAL PROTECT.",
+   "code": "826",
+   "total_candidates": [
+    698642138
+   ]
+  }
+ ],
+ "DEPARTMENT OF SANITATION": [
+  {
+   "pdf_page": 393,
+   "name": "DEPARTMENT OF SANITATION",
+   "code": "827",
+   "total_candidates": [
+    1177822327
+   ]
+  },
+  {
+   "pdf_page": 394,
+   "name": "DEPARTMENT OF SANITATION",
+   "code": "827",
+   "total_candidates": [
+    769628267
+   ]
+  }
+ ],
+ "BUSINESS INTEGRITY COMMISSION": [
+  {
+   "pdf_page": 402,
+   "name": "BUSINESS INTEGRITY COMMISSION",
+   "code": "829",
+   "total_candidates": [
+    6407393
+   ]
+  }
+ ],
+ "DEPARTMENT OF FINANCE": [
+  {
+   "pdf_page": 404,
+   "name": "DEPARTMENT OF FINANCE",
+   "code": "836",
+   "total_candidates": [
+    191114815
+   ]
+  },
+  {
+   "pdf_page": 405,
+   "name": "DEPARTMENT OF FINANCE",
+   "code": "836",
+   "total_candidates": [
+    156834587
+   ]
+  }
+ ],
+ "DEPARTMENT OF TRANSPORTATION": [
+  {
+   "pdf_page": 413,
+   "name": "DEPARTMENT OF TRANSPORTATION",
+   "code": "841",
+   "total_candidates": [
+    641653197
+   ]
+  },
+  {
+   "pdf_page": 414,
+   "name": "DEPARTMENT OF TRANSPORTATION",
+   "code": "841",
+   "total_candidates": [
+    1446545246
+   ]
+  }
+ ],
+ "DEPARTMENT OF PARKS AND RECREATION": [
+  {
+   "pdf_page": 421,
+   "name": "DEPARTMENT OF PARKS AND RECREATION",
+   "code": "846",
+   "total_candidates": [
+    465544829
+   ]
+  }
+ ],
+ "DEPARTMENT OF DESIGN & CONSTRUCTION": [
+  {
+   "pdf_page": 427,
+   "name": "DEPARTMENT OF DESIGN & CONSTRUCTION",
+   "code": "850",
+   "total_candidates": [
+    125641037
+   ]
+  }
+ ],
+ "DEPARTMENT OF CITYWIDE ADMIN SERVICE": [
+  {
+   "pdf_page": 431,
+   "name": "DEPARTMENT OF CITYWIDE ADMIN SERVICE",
+   "code": "856",
+   "total_candidates": [
+    233257019
+   ]
+  },
+  {
+   "pdf_page": 432,
+   "name": "DEPARTMENT OF CITYWIDE ADMIN SERVICE",
+   "code": "856",
+   "total_candidates": [
+    1860061679
+   ]
+  }
+ ],
+ "DEPARTMENT OF INFO TECH & TELECOMM": [
+  {
+   "pdf_page": 442,
+   "name": "DEPARTMENT OF INFO TECH & TELECOMM",
+   "code": "858",
+   "total_candidates": [
+    171240955
+   ]
+  },
+  {
+   "pdf_page": 443,
+   "name": "DEPARTMENT OF INFO TECH & TELECOMM",
+   "code": "858",
+   "total_candidates": [
+    641710595
+   ]
+  }
+ ],
+ "DEPARTMENT OF RECORDS & INFORMATION SVS": [
+  {
+   "pdf_page": 449,
+   "name": "DEPARTMENT OF RECORDS & INFORMATION SVS",
+   "code": "860",
+   "total_candidates": [
+    4497932
+   ]
+  }
+ ],
+ "DEPT OF CONSUMER & WORKER PROTECTION": [
+  {
+   "pdf_page": 451,
+   "name": "DEPT OF CONSUMER & WORKER PROTECTION",
+   "code": "866",
+   "total_candidates": [
+    32552475
+   ]
+  }
+ ],
+ "DISTRICT ATTORNEY NEW YORK COUNTY": [
+  {
+   "pdf_page": 454,
+   "name": "DISTRICT ATTORNEY NEW YORK COUNTY",
+   "code": "901",
+   "total_candidates": [
+    156455652
+   ]
+  }
+ ],
+ "DISTRICT ATTORNEY BRONX COUNTY": [
+  {
+   "pdf_page": 456,
+   "name": "DISTRICT ATTORNEY BRONX COUNTY",
+   "code": "902",
+   "total_candidates": [
+    110341160
+   ]
+  }
+ ],
+ "DISTRICT ATTORNEY KINGS COUNTY": [
+  {
+   "pdf_page": 458,
+   "name": "DISTRICT ATTORNEY KINGS COUNTY",
+   "code": "903",
+   "total_candidates": [
+    115531501
+   ]
+  }
+ ],
+ "DISTRICT ATTORNEY QUEENS COUNTY": [
+  {
+   "pdf_page": 460,
+   "name": "DISTRICT ATTORNEY QUEENS COUNTY",
+   "code": "904",
+   "total_candidates": [
+    88878478
+   ]
+  }
+ ],
+ "DISTRICT ATTORNEY RICHMOND COUNTY": [
+  {
+   "pdf_page": 462,
+   "name": "DISTRICT ATTORNEY RICHMOND COUNTY",
+   "code": "905",
+   "total_candidates": [
+    20850746
+   ]
+  }
+ ],
+ "OFFICE OF PROSECUTION SPEC NARCO": [
+  {
+   "pdf_page": 464,
+   "name": "OFFICE OF PROSECUTION SPEC NARCO",
+   "code": "906",
+   "total_candidates": [
+    28724129
+   ]
+  }
+ ],
+ "PUBLIC ADMINISTRATOR-NEW YORK COUNTY": [
+  {
+   "pdf_page": 466,
+   "name": "PUBLIC ADMINISTRATOR-NEW YORK COUNTY",
+   "code": "941",
+   "total_candidates": [
+    998841
+   ]
+  }
+ ],
+ "PUBLIC ADMINISTRATOR-BRONX COUNTY": [
+  {
+   "pdf_page": 468,
+   "name": "PUBLIC ADMINISTRATOR-BRONX COUNTY",
+   "code": "942",
+   "total_candidates": [
+    815430
+   ]
+  }
+ ],
+ "PUBLIC ADMINISTRATOR-KINGS COUNTY": [
+  {
+   "pdf_page": 470,
+   "name": "PUBLIC ADMINISTRATOR-KINGS COUNTY",
+   "code": "943",
+   "total_candidates": [
+    1071110
+   ]
+  }
+ ],
+ "PUBLIC ADMINISTRATOR- QUEENS COUNTY": [
+  {
+   "pdf_page": 472,
+   "name": "PUBLIC ADMINISTRATOR- QUEENS COUNTY",
+   "code": "944",
+   "total_candidates": [
+    670001
+   ]
+  }
+ ],
+ "PUBLIC ADMINISTRATOR-RICHMOND COUNTY": [
+  {
+   "pdf_page": 474,
+   "name": "PUBLIC ADMINISTRATOR-RICHMOND COUNTY",
+   "code": "945",
+   "total_candidates": [
+    609971
+   ]
+  }
+ ]
+}

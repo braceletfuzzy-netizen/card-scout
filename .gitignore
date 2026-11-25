@@ -1,0 +1,6 @@
+# PolyScout standalone - lean history law
+build/**/
+!build/*.json
+!build/*.jsonl
+!build/*.py
+!build/*.md

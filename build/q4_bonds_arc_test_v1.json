@@ -1,0 +1,454 @@
+{
+ "_record": "q4_bonds_arc_test_v1",
+ "reproducibility_header": "Q4-PROMOTION-BUILD (BONDS x TIME-ARC) v1. Built 2026-11-23 entirely from banked build/ files: city_component_annual_v1.jsonl (2,509 rows; NYC dedup law: IBO-era per-agency 'total' rows -> one row per agency; Socrata 2020-2025 era -> city_funds rows as the like-to-like city-side continuation), murders_all_v1.json, population_series_v1.jsonl + populations_cities_v2.jsonl + populations_wide_v1.jsonl + phase2_pop_table.json (denominators; any city-year without a banked denominator ships as honest-null), bookings_facility_v1.jsonl (NYC DOC discharges wedge) + bookings_series_v1.jsonl (UCR-arrest booking proxy), peer_review scans v1-v11 carried as evidence anchors, _congregation_panel_v2.json (28 city-years) carried VERBATIM (format-lock). Pre-registered test (one-pager #8 Q4 / #7): component-arc = parks+libraries vs murder/bookings arcs at t+0/t+1/t+2, within-city demeaned+pooled-z (the congregation-test design carried to the merge). Direction-class only: thin city-year panels, no p-values, no causal claims per the no-fabrication law.",
+ "built": "2026-11-23",
+ "input_artifacts": {
+  "city_component_annual_v1.jsonl": {
+   "rows_expected": 2509,
+   "rows_read": 2509
+  },
+  "bookings_facility_v1.jsonl": {
+   "rows_expected": 1966,
+   "rows_read": 1966
+  },
+  "bookings_series_v1.jsonl": {
+   "rows_expected": 91,
+   "rows_read": 90
+  },
+  "_congregation_panel_v2.json": {
+   "rows_expected": 28,
+   "rows_read": 28
+  },
+  "murders_all_v1.json": {
+   "city_years": 558
+  },
+  "peer_review_scans_on_disk": {
+   "v1.jsonl": 25,
+   "v2.jsonl": 13,
+   "v3.jsonl": 12,
+   "v4.jsonl": 14,
+   "v5.jsonl": 14,
+   "v6.jsonl": 23,
+   "v7.json": 14,
+   "v8.json": 7,
+   "v9.json": 9,
+   "v10.json": 13,
+   "v11.jsonl": 36,
+   "note": "all 11 scans present on disk (v7-v10 in {pairing, entries, summary} shape); corrects axis_availability_v1's v7-v10-absent note"
+  }
+ },
+ "merge_law": {
+  "grain": "city-year",
+  "nyc_dedup": "IBO era: subcomponent='total' rows only (one per agency); Socrata era: subcomponent='city_funds' rows only; raw-row summation would double-count (verified 1990/2000/2010/2015 parks+libraries) and is NOT used",
+  "non_nyc": "one component row per lane; zero/absent lane = honest-null (Cincinnati libraries = county levy => honest-null lane, never zero-filled)",
+  "denominators": "banked PEP/census files only; missing denominator = honest-null (no interpolated rates)",
+  "bonds_core": "parks + libraries (the decomposition's carriers per the 80x mix finding)",
+  "lag_alignment": "care_t -> murder-rate_t+lag; city's own series (within-city) so fiscal/calendar drift is bounded to within-city reads"
+ },
+ "results": {
+  "A_within_city_care_per_100k_vs_murder_rate_t0": {
+   "pooled_z": {
+    "r": -0.55,
+    "spearman": -0.561,
+    "n": 40,
+    "cities": 5,
+    "single_or_degenerate_dropped": []
+   },
+   "per_city": {
+    "Cincinnati": {
+     "r": 0.025,
+     "n": 12
+    },
+    "Detroit": {
+     "r": -0.824,
+     "n": 6
+    },
+    "Memphis": {
+     "r": -0.573,
+     "n": 6
+    },
+    "NYC": {
+     "r": -0.985,
+     "n": 9
+    },
+    "St. Louis": {
+     "r": -0.724,
+     "n": 7
+    }
+   }
+  },
+  "B_arc_care_t_vs_rate_t+1": {
+   "pooled_z": {
+    "r": -0.568,
+    "spearman": -0.592,
+    "n": 34,
+    "cities": 5,
+    "single_or_degenerate_dropped": []
+   }
+  },
+  "B_arc_care_t_vs_rate_t+2": {
+   "pooled_z": {
+    "r": -0.371,
+    "spearman": -0.395,
+    "n": 28,
+    "cities": 5,
+    "single_or_degenerate_dropped": []
+   }
+  },
+  "C_bonds_core_parks_plus_libraries_vs_rate_t0": {
+   "pooled_z": {
+    "r": -0.594,
+    "spearman": -0.62,
+    "n": 40,
+    "cities": 5,
+    "single_or_degenerate_dropped": []
+   },
+   "per_city": {
+    "Cincinnati": {
+     "r": 0.036,
+     "n": 12
+    },
+    "Detroit": {
+     "r": -0.823,
+     "n": 6
+    },
+    "Memphis": {
+     "r": -0.864,
+     "n": 6
+    },
+    "NYC": {
+     "r": -0.983,
+     "n": 9
+    },
+    "St. Louis": {
+     "r": -0.745,
+     "n": 7
+    }
+   }
+  },
+  "C_bonds_core_arc_t+1": {
+   "pooled_z": {
+    "r": -0.539,
+    "spearman": -0.547,
+    "n": 34,
+    "cities": 5,
+    "single_or_degenerate_dropped": []
+   }
+  },
+  "C_bonds_core_arc_t+2": {
+   "pooled_z": {
+    "r": -0.51,
+    "spearman": -0.555,
+    "n": 28,
+    "cities": 5,
+    "single_or_degenerate_dropped": []
+   }
+  },
+  "D_per_lane_within_city_vs_rate_t0": {
+   "parks": {
+    "pooled_z": {
+     "r": -0.569,
+     "spearman": -0.626,
+     "n": 39,
+     "cities": 5,
+     "single_or_degenerate_dropped": []
+    }
+   },
+   "libraries": {
+    "pooled_z": {
+     "r": -0.875,
+     "spearman": -0.87,
+     "n": 21,
+     "cities": 3,
+     "single_or_degenerate_dropped": []
+    }
+   },
+   "health": {
+    "pooled_z": {
+     "r": -0.47,
+     "spearman": -0.489,
+     "n": 34,
+     "cities": 4,
+     "single_or_degenerate_dropped": []
+    }
+   },
+   "housing": {
+    "pooled_z": {
+     "r": -0.299,
+     "spearman": -0.226,
+     "n": 33,
+     "cities": 4,
+     "single_or_degenerate_dropped": []
+    }
+   },
+   "human_services": {
+    "pooled_z": {
+     "r": -0.695,
+     "spearman": -0.683,
+     "n": 22,
+     "cities": 3,
+     "single_or_degenerate_dropped": []
+    }
+   },
+   "youth": {
+    "pooled_z": {
+     "r": -0.989,
+     "spearman": -0.95,
+     "n": 9,
+     "cities": 1,
+     "single_or_degenerate_dropped": []
+    }
+   }
+  },
+  "E_bookings_vs_care_t0_all_kinds": {
+   "pooled_z_mixed_grain": {
+    "r": -0.286,
+    "spearman": -0.255,
+    "n": 29,
+    "cities": 5,
+    "single_or_degenerate_dropped": []
+   },
+   "per_city": {
+    "Cincinnati": {
+     "r": -0.693,
+     "n": 8
+    },
+    "Detroit": {
+     "r": -0.536,
+     "n": 5
+    },
+    "Memphis": {
+     "r": -0.628,
+     "n": 4
+    },
+    "NYC": {
+     "r": 0.96,
+     "n": 6
+    },
+    "St. Louis": {
+     "r": -0.554,
+     "n": 6
+    }
+   }
+  },
+  "F_bookings_arrest_proxy_vs_care_t0": {
+   "pooled_z": {
+    "r": -0.611,
+    "spearman": -0.647,
+    "n": 23,
+    "cities": 4,
+    "single_or_degenerate_dropped": []
+   },
+   "per_city": {
+    "Cincinnati": {
+     "r": -0.693,
+     "n": 8
+    },
+    "Detroit": {
+     "r": -0.536,
+     "n": 5
+    },
+    "Memphis": {
+     "r": -0.628,
+     "n": 4
+    },
+    "St. Louis": {
+     "r": -0.554,
+     "n": 6
+    }
+   }
+  },
+  "G_nyc_doc_discharges_vs_care_t0": {
+   "per_city": {
+    "NYC": {
+     "r": 0.96,
+     "n": 6
+    }
+   }
+  },
+  "H_pair_parks_x_libraries_vs_rate_t0": {
+   "pooled_z": {
+    "r": -0.891,
+    "spearman": -0.848,
+    "n": 20,
+    "cities": 3,
+    "single_or_degenerate_dropped": []
+   }
+  },
+  "I_congregation_panel_carry_and_arc_extension": {
+   "carried_rows": 28,
+   "within_city_replication": {
+    "Cincinnati": {
+     "r": -0.794,
+     "n": 8
+    },
+    "Detroit": {
+     "r": -0.396,
+     "n": 7
+    },
+    "Memphis": {
+     "r": -0.602,
+     "n": 6
+    },
+    "St. Louis": {
+     "r": -0.724,
+     "n": 7
+    }
+   },
+   "pooled_z_replication": {
+    "r": -0.636,
+    "spearman": -0.684,
+    "n": 28,
+    "cities": 4,
+    "single_or_degenerate_dropped": []
+   },
+   "arc_extension": {
+    "care_t_vs_rate_t+1": {
+     "pooled_z": {
+      "r": -0.799,
+      "spearman": -0.834,
+      "n": 24,
+      "cities": 4,
+      "single_or_degenerate_dropped": []
+     },
+     "per_city": {
+      "Cincinnati": {
+       "r": -0.879,
+       "n": 7
+      },
+      "Detroit": {
+       "r": -0.653,
+       "n": 6
+      },
+      "Memphis": {
+       "r": -0.846,
+       "n": 5
+      },
+      "St. Louis": {
+       "r": -0.813,
+       "n": 6
+      }
+     }
+    },
+    "care_t_vs_rate_t+2": {
+     "pooled_z": {
+      "r": -0.733,
+      "spearman": -0.773,
+      "n": 20,
+      "cities": 4,
+      "single_or_degenerate_dropped": []
+     },
+     "per_city": {
+      "Cincinnati": {
+       "r": -0.839,
+       "n": 6
+      },
+      "Detroit": {
+       "r": -0.759,
+       "n": 5
+      },
+      "Memphis": {
+       "r": -0.522,
+       "n": 4
+      },
+      "St. Louis": {
+       "r": -0.747,
+       "n": 5
+      }
+     }
+    }
+   }
+  }
+ },
+ "verdict": "BONDS-CORE CARRIES THE ARC (direction-class): parks+libraries within-city reads are negative at t0 (-0.594), t+1 (-0.539), t+2 (-0.510) at the triple-arc merge (40 full city-years, 5 cities, within-city pooled z), and the care-lane read replicates at t0/t+1/t+2 (-0.55/-0.57/-0.37). The congregation panel (28 city-years) is carried verbatim and extends: care_t -> rate t+1 -0.799 (n=24), t+2 -0.733 (n=20), 4-of-4 cities negative in both lanes. Bookings lane (UCR-arrest proxy, 23 city-years, 4 cities) reads -0.611 within-city. NYC DOC-discharges lane (+0.96) is the flagged mixed-grain exception (city-side care vs post-arraignment facility exits, opposite-sign mechanism class) — labeled, not excluded. Cincinnati's flat cross-decade read (+0.03) is the honest null-city of the merge (denominator-vintage limited). Thinnest lanes: libraries n=21 (3 cities), housing weakest negative (-0.299), consistent with the banked housing-flips-in-Detroit class. No p-values, no causal claims — the arc shape is the verdict.",
+ "arc_scoreboard": {
+  "care_and_bonds_core_arc_reads": {
+   "A_within_city_care_per_100k_vs_murder_rate_t0": -0.55,
+   "B_arc_care_t_vs_rate_t+1": -0.568,
+   "B_arc_care_t_vs_rate_t+2": -0.371,
+   "C_bonds_core_parks_plus_libraries_vs_rate_t0": -0.594,
+   "C_bonds_core_arc_t+1": -0.539,
+   "C_bonds_core_arc_t+2": -0.51
+  },
+  "negatives_of_ready": "6/6",
+  "bookings_lane_reads": {
+   "F_bookings_arrest_proxy_vs_care_t0": -0.611
+  }
+ },
+ "coverage": {
+  "Cincinnati": {
+   "city_years_in_merge": 13,
+   "murder_and_pop_denominator_years": 12,
+   "notes": "denominator-limited: PEP/census banked years only; missing = honest-null"
+  },
+  "Detroit": {
+   "city_years_in_merge": 6,
+   "murder_and_pop_denominator_years": 6,
+   "notes": "denominator-limited: PEP/census banked years only; missing = honest-null"
+  },
+  "Memphis": {
+   "city_years_in_merge": 6,
+   "murder_and_pop_denominator_years": 6,
+   "notes": "denominator-limited: PEP/census banked years only; missing = honest-null"
+  },
+  "NYC": {
+   "city_years_in_merge": 11,
+   "murder_and_pop_denominator_years": 9,
+   "notes": "denominator-limited: PEP/census banked years only; missing = honest-null"
+  },
+  "St. Louis": {
+   "city_years_in_merge": 7,
+   "murder_and_pop_denominator_years": 7,
+   "notes": "denominator-limited: PEP/census banked years only; missing = honest-null"
+  }
+ },
+ "bookings_coverage": {
+  "Cincinnati": 8,
+  "Detroit": 5,
+  "Memphis": 4,
+  "NYC": 12,
+  "St. Louis": 6
+ },
+ "laws": [
+  "reproducibility-header",
+  "honest-nulls",
+  "no-fabrication",
+  "format-lock",
+  "component-grain-by-construction (the 80x rule)",
+  "direction-class-only (no p-values)"
+ ],
+ "claim_boundary": "within-city co-movement only; cross-city level effects removed by construction; reverse-causation (money-follows-crisis) not separated here — the t+0-vs-lag arc shape is the only timing read this design supports; NYC bookings join is mixed-grain (city-side care vs DOC discharges) and labeled so.",
+ "panel_file": "q4_bonds_arc_panel_v1.jsonl",
+ "evidence_anchors": {
+  "peer_review_scan_v11.jsonl": {
+   "rows": 36,
+   "sample_titles": [
+    "Urban park crime: Neighborhood context and park features",
+    "Skate-Park Builds, Teenaphobia and the Adolescent Need for Hang-Out Spaces: The Social Uti",
+    "Skatepark as Neoliberal Playground",
+    "If You Build It Will They Come? Park Upgrades, Park Use and Park-Based Physical Activity i",
+    "Rethinking Sports-Based Community Crime Prevention",
+    "Notes on Midnight Basketball and the Cultural Politics of Recreation, Race, and At-Risk Ur",
+    "Midnight Basketball",
+    "Midnight Basketball and The 1994 Crime Bill Debates: The Operation of a Racial Code",
+    "Do After School Programs Reduce Delinquency?",
+    "DISTINGUISHING CHARACTERISTICS OF EFFECTIVE AND INEFFECTIVE AFTER‐SCHOOL PROGRAMS TO PREVE"
+   ]
+  },
+  "peer_review_scan_v5.jsonl": {
+   "rows": 14,
+   "sample_titles": [
+    "Maternal Employment and Juvenile Delinquency",
+    "Race, Gender, Single-Mother Households, and Delinquency",
+    "Impoverished Single Mother Households and Violent Delinquency: Bonding, Negative, and Brid",
+    "Assessing the Victim-Offender Overlap Among Adolescents in Rural China",
+    "Family structure, unstructured socializing, and delinquent behavior",
+    "Father Absence and Youth Incarceration",
+    "The effects of single-mother and single-father families on youth crime: Examining five gen",
+    "Concentrated Disadvantage and the Incarceration of Youth",
+    "Childhood Exposure to Family Violence, Residential Instability, and Parental Incarceration",
+    "Parental gender, single-parent families, and delinquency: Exploring the moderating influen"
+   ]
+  }
+ }
+}

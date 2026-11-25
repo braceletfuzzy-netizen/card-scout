@@ -1,0 +1,55 @@
+[
+ {
+  "year": "2019",
+  "edu_total_usd": 1126680000,
+  "basis": "city-run",
+  "source_refs": [
+   "City of Boston FY22 Adopted Budget Full Budget Document (boston.gov/sites/default/files/file/2022/01/FY22 Adopted Budget Full Budget Document.pdf), BUDGET SUMMARY table \"Boston School Department\" FY19 Actual $1,126.68M"
+  ],
+  "data_quality": "Certain-as-published (official budget book table, read from pdftotext layout)",
+  "notes": "BPS School Department appropriation line, inside City GF (city-run-schools exception). FY19 column = Actual.",
+  "honest_gaps": [
+   "BUDGET SUMMARY table unit = $M, rounded to 2dp; total = BPS line only (excludes Charter School Tuition paid BY the city, $177.28M FY19 context)",
+   "Actual vs adopted basis: FY19 Column = Actual (the book does not restate FY19 adopted separately)"
+  ]
+ },
+ {
+  "year": "2020",
+  "edu_total_usd": 1178560000,
+  "basis": "city-run",
+  "source_refs": [
+   "City of Boston FY22 Adopted Budget Full Budget Document, BUDGET SUMMARY table \"Boston School Department\" FY20 Actual $1,178.56M"
+  ],
+  "data_quality": "Certain-as-published (official budget book table)",
+  "notes": "BPS School Department appropriation line, inside City GF. FY20 column = Actual.",
+  "honest_gaps": [
+   "FY20 Actual (not adopted); excludes Charter School Tuition line ($177.98M FY20) paid BY the city for out-district charters - context only"
+  ]
+ },
+ {
+  "year": "2021",
+  "edu_total_usd": 1260490000,
+  "basis": "city-run",
+  "source_refs": [
+   "City of Boston FY22 Adopted Budget Full Budget Document, BUDGET SUMMARY table \"Boston School Department\" FY21 Adopted $1,260.49M; cross-checked FY23 book FY21 Actual $1,260.5M - consistent"
+  ],
+  "data_quality": "Certain-as-published (official budget book table, cross-checked across two books)",
+  "notes": "BPS School Department appropriation line, inside City GF. FY21 column = Adopted (FY22 book) = Actual (FY23 book); consistent at $1,260.5M.",
+  "honest_gaps": [
+   "Excludes Charter School Tuition line ($186.23M FY21) paid BY the city for out-district charters - context only"
+  ]
+ },
+ {
+  "year": "2022",
+  "edu_total_usd": 1294720000,
+  "basis": "city-run",
+  "source_refs": [
+   "City of Boston FY22 Adopted Budget Full Budget Document, BUDGET SUMMARY table \"Boston School Department\" FY22 Budget $1,294.72M; cross-checked FY23 book FY22 Actual $1,294.7M - consistent"
+  ],
+  "data_quality": "Certain-as-published (official budget book table, cross-checked across two books)",
+  "notes": "BPS School Department appropriation line, inside City GF. FY22 column = adopted (as published in FY22 book). FY22-23 book later reports the same as Actual $1,294.7M.",
+  "honest_gaps": [
+   "Excludes Charter School Tuition line ($203.7M FY22) paid BY the city for out-district charters - context only"
+  ]
+ }
+]

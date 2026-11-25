@@ -1,0 +1,51 @@
+{
+ "note": "the budgets = the null-until-fetched (the the pop-rows = the banked); the band-assignments = the provisional-until-the-budget-rows-land",
+ "cities": {
+  "NYC": {
+   "pop": 8800000,
+   "budget": 11507000000,
+   "band": "BAND-D"
+  },
+  "LA": {
+   "pop": 3800000,
+   "band": "BAND-C-or-D"
+  },
+  "Chicago": {
+   "pop": 2600000,
+   "band": "BAND-C"
+  },
+  "Houston": {
+   "pop": 2400000,
+   "band": "BAND-C"
+  },
+  "Phoenix": {
+   "pop": 1600000,
+   "band": "BAND-B-C"
+  },
+  "Philadelphia": {
+   "pop": 1600000,
+   "band": "BAND-B-C"
+  },
+  "San Antonio": {
+   "pop": 1500000,
+   "band": "BAND-B-C"
+  },
+  "Jacksonville": {
+   "pop": 1000000,
+   "band": "BAND-B"
+  },
+  "Fort Worth": {
+   "pop": 1000000,
+   "band": "BAND-B"
+  },
+  "Austin": {
+   "pop": 1000000,
+   "band": "BAND-B"
+  },
+  "Memphis": {
+   "pop": 610000,
+   "budget": 1740000000,
+   "band": "BAND-A"
+  }
+ }
+}

@@ -1,0 +1,70 @@
+{
+  "city": "NYC",
+  "fiscal_year": 2026,
+  "budget_document": {
+    "title": "City of New York Executive Budget Fiscal Year 2026 / Financial Plan Summary (sum5-25.pdf)",
+    "url": "https://www.nyc.gov/assets/omb/downloads/pdf/exec25/sum5-25.pdf",
+    "note": "Executive Budget summary table used as the operating-budget source of record for FY2026; Adopted Budget $115.1B headline confirmed (p.3).",
+    "retrieved": "2026-11-20"
+  },
+  "budget_total_all_funds_usd": 115065000000,
+  "budget_total_city_funds_usd": 87225000000,
+  "buckets_all_funds": {
+    "mandatory_debt_pensions": {
+      "components": {
+        "pensions_usd": 10470000000,
+        "fringe_benefits_usd": 14784000000,
+        "debt_service_usd": 8741000000
+      },
+      "subtotal_usd": 33995000000,
+      "share": 0.2954,
+      "notes": "Pensions+fringe sit inside Personal Service lines (10,034+13,958 p.5); fringe overlap with labor makes the split conservative — verifier flag."
+    },
+    "budget_reserves": {
+      "general_reserve_usd": 1200000000,
+      "capital_stabilization_reserve_usd": 250000000,
+      "subtotal_usd": 1450000000,
+      "share": 0.0126,
+      "notes": "Table rows 'Capital Stabilization Reserve' + 'General Reserve', p.5."
+    },
+    "capital_strategy": {
+      "usd": 173400000000,
+      "share": null,
+      "notes": "2026-2035 TEN-YEAR capital strategy total (p.5) — multi-year, NOT an FY26 operating bucket; recorded separately, excluded from operating shares."
+    }
+  },
+  "buckets_operating_city_funds": {
+    "personal_service_subtotal_usd": 59657000000,
+    "other_than_personal_service_subtotal_usd": 50051000000,
+    "share_ps": 0.6852,
+    "share_otps": 0.5746,
+    "notes": "City-funds expenditure table (p.5): PS 59,657 / OTPS 50,051 of 87,225 city funds. Shares sum >1 because the two are not exhaustive (debt service sits between). Verifier flag on bucket-boundary."
+  },
+  "service_out": {
+    "note": "Tier-1 countable service-outs pulled from the same document; Tier-2 outcome counts NOT in this document = null by honest-nulls law.",
+    "after_school_universal": {"value": "program_total_755M_target", "students_total": "184000", "students_year_added": ">20000 K-5 fall 2027", "source": "p.4 lines 285-286"},
+    "school_nurses_funding_usd": 298000000,
+    "fair_fares_transit_subsidy_usd": 20000000,
+    "library_support_usd": 15700000,
+    "summer_youth_seats_supported": "7000",
+    "cultural_baselined_annual_usd": 45000000,
+    "big_apple_connect_households": ">150,000 across 220 developments",
+    "food_pantries_supported": ">700",
+    "capex_highlights": {
+      "libraries_citywide_usd": 169100000,
+      "future_of_fifth_usd": 250000000,
+      "brooklyn_marine_terminal_usd": 109300000
+    }
+  },
+  "derived": {
+    "per_capita_budget_all_funds_usd": null,
+    "notes": "pop-denominator pending next pass; rows kept honest-null until the source is pulled."
+  },
+  "falsifier_context": "Founder-intuition row [FOUNDER-INTUITION]: 'Mamdani is doing awesome' — NOT scoreable with FY2026 (Adams-era adopted budget); the Mamdani-testable years are FY2027 (his Executive Budget lands spring 2027) and FY2028 (his first adopted). Honest-label: THIS table = FY2026 prior-administration baseline for the NYC-vs-Memphis comparative; Mamdani rows = deferred to the FY2027-exec cycle.",
+  "retrieved": "2026-11-20",
+  "honest_nulls": [
+    "bucket-graded split (public-safety/infrastructure/etc per-bucket $) not present in the Executive summary — the Adopted-Budget volume (Agency-level) is the next pull",
+    "service-out Tier-2 outcome counts (helped not served) absent from this doc",
+    "Memphis-side rows pending in the same build-window"
+  ]
+}

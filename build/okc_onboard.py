@@ -1,0 +1,28 @@
+import json
+
+# POLYSCOUT — THE OKC-ONBOARD v1 (the founder: "add-okc-to-the-list"!)
+okc = {
+    'built': '2026-11-22',
+    'city': 'Oklahoma City',
+    'band': 'B',
+    'budget_fy27': 'the pending-extract (the the FY27-book = the 29.5MB = the the browser-fetched!)',
+    'budget_history': 'the ~$2-3B-class (the the 2026-adopted = the June-2025 [the the news-lane]; the the exact = the pending-the-extract!)',
+    'pop': 700000,
+    'role': 'THE MANUFACTURED-TURNAROUND-LAB (the MAPS-tax = the 1993 = the the citizen-voted-projects = the Bricktown/arena/river = the the clearest-policy-to-outcome-chain-in-urban-America!)',
+    'the_payload_rank': 'T1 (the the backwards-look-lane!)',
+    'documents_found [Certain]': [
+        'FY2027 Budget Book (29.5MB) = the browser-context-fetched = THE PDF-STREAM-CONFIRMED (%PDF-1.7-magic!) = the 614-chunks-held-in-the-DOM = the the pull-queue!',
+        'FY2026 (89MB) / FY2025 (83MB) / FY2024 (69MB) / FY2023 (66MB) / FY2022 (94MB) = THE SIX-YEAR-BUDGET-BOOK-SERIES = the backwards-look-live!',
+        'the Budget-Transfer-Reports (the quarterly!) + the Performance-Data-page (the the yield-side = the the found!) + the the 2026-2027-Budget-Feedback = the the process-live!'
+    ],
+    'the_curl-403-workaround [Certain]': 'the requests = the blocked (the the 403-even-with-the-UA+referer); THE BROWSER-CONTEXT-FETCH = the worked (the the session-fetch = the the credentials-include = the the 200!) = the the new-extraction-class (the the curl-blocked-city-PDFs = the the browser-fetched = the the chunk-pulled!)',
+    'the_pull_queue': 'the 614-chunks-held = the the ~85-windows-of-the-480k-b64 = the the ~30-min-serial-class = the the substrate-run-pending (the the sub-agent-drives-the-pulls!)',
+    'statline_v0': {
+        'mayor': 'David Holt (R, the re-elected-2022 = the the the MAPS-4-architect!)',
+        'fame_v0': 0.18, 'band': 'the PRE-FAME-class',
+        'the_honest_note': 'the Holt = the the low-fame-mayor = the BUT-the OKC = the the HIGHEST-policy-manufacturability-case = THE STUDY-VALUE-INDEPENDENT-OF-FAME (the the the gauge-scores-the-story-not-the-spotlight!)'
+    }
+}
+import json as j
+j.dump(okc, open('C:/Users/J/Documents/LLM/cardscout-2.0/For You/PolyScout/build/okc_onboard_v1.json', 'w', encoding='utf-8'), indent=1)
+print('WROTE okc_onboard_v1.json')

@@ -1,0 +1,171 @@
+{
+ "homicide": {
+  "status": 200,
+  "n_hits": 6,
+  "hits": [
+   {
+    "id": "4a0789c91e7b40d69a19cd1ee3f7ace7",
+    "name": null,
+    "type": "Feature Service",
+    "updated": 1755176991000,
+    "snippet": "The Louisville Metro Police Department (LMPD) began operations on January 6, 2003, as part of the creation of the consol"
+   },
+   {
+    "id": "44b6c06b060147448046f956a311da69",
+    "name": null,
+    "type": "Feature Service",
+    "updated": 1791401494000,
+    "snippet": "Gun Violence within Jefferson County - this data is used to make the public aware of what is going on in their communiti"
+   },
+   {
+    "id": "c31f9eaebdf3451a868815ac7f0175f8",
+    "name": null,
+    "type": "Feature Service",
+    "updated": 1773076078000,
+    "snippet": "The data was generated from the Community mobilization project that is funded with the American Rescue Plan funds."
+   },
+   {
+    "id": "7abaa5c6b3844aa991b8b4d49ffe19f4",
+    "name": null,
+    "type": "Feature Service",
+    "updated": 1787499060000,
+    "snippet": "Data is subset of the Incident data provided by the open data portal and it is updated weekly. This data specifically id"
+   },
+   {
+    "id": "d84b22677a034e1796690e3b46e40647",
+    "name": "ARP_0035_CCRGV",
+    "type": "Feature Service",
+    "updated": 1773236388000,
+    "snippet": "The data was generated from the Coordinated Crisis Response to Gun Violence that was funded with the American Resue Plan"
+   },
+   {
+    "id": "2225de04ba43422eb0e0a48fa05f6ce5",
+    "name": null,
+    "type": "Feature Service",
+    "updated": 1791472453000,
+    "snippet": "Gun violence incidents within Jefferson County. This dataset is provided to help inform the public about gun violence ac"
+   }
+  ]
+ },
+ "murder": {
+  "status": 200,
+  "n_hits": 1,
+  "hits": [
+   {
+    "id": "7abaa5c6b3844aa991b8b4d49ffe19f4",
+    "name": null,
+    "type": "Feature Service",
+    "updated": 1787499060000,
+    "snippet": "Data is subset of the Incident data provided by the open data portal and it is updated weekly. This data specifically id"
+   }
+  ]
+ },
+ "operating budget": {
+  "err": "URL can't contain control characters. '/api/search/v1/collections/dataset/items?q=operating budget&limit=12' (found at least ' ')"
+ },
+ "crime": {
+  "status": 200,
+  "n_hits": 12,
+  "hits": [
+   {
+    "id": "fc45166a9c794b4090dfca6551f1f07a",
+    "name": null,
+    "type": "Feature Service",
+    "updated": 1755176965000,
+    "snippet": "The Louisville Metro Police Department (LMPD) began operations on January 6, 2003, as part of the creation of the consol"
+   },
+   {
+    "id": "ff44f0d997e34f9facd2e799b8cf1e47",
+    "name": null,
+    "type": "Feature Service",
+    "updated": 1755176875000,
+    "snippet": "The Louisville Metro Police Department (LMPD) began operations on January 6, 2003, as part of the creation of the consol"
+   },
+   {
+    "id": "497405bfa80047ee95690107ca4ae003",
+    "name": null,
+    "type": "Feature Service",
+    "updated": 1755176866000,
+    "snippet": "The Louisville Metro Police Department (LMPD) began operations on January 6, 2003, as part of the creation of the consol"
+   },
+   {
+    "id": "93ab46d94713479ab621abb409b72863",
+    "name": null,
+    "type": "Feature Service",
+    "updated": 1755176803000,
+    "snippet": "The Louisville Metro Police Department (LMPD) began operations on January 6, 2003, as part of the creation of the consol"
+   },
+   {
+    "id": "2ae5ed2569b34dca887e3aa78bd393e6",
+    "name": null,
+    "type": "Feature Service",
+    "updated": 1755176784000,
+    "snippet": "The Louisville Metro Police Department (LMPD) began operations on January 6, 2003, as part of the creation of the consol"
+   },
+   {
+    "id": "43cf1d2647aa4b1c9b98579b83da4ec5",
+    "name": null,
+    "type": "Feature Service",
+    "updated": 1755176756000,
+    "snippet": "The Louisville Metro Police Department (LMPD) began operations on January 6, 2003, as part of the creation of the consol"
+   },
+   {
+    "id": "bc88775238fc4b1db84beff34ef43c77",
+    "name": null,
+    "type": "Feature Service",
+    "updated": 1755177059000,
+    "snippet": "The Louisville Metro Police Department (LMPD) began operations on January 6, 2003, as part of the creation of the consol"
+   },
+   {
+    "id": "c81f6d52077a4567a2562699ad70b192",
+    "name": null,
+    "type": "Feature Service",
+    "updated": 1755176955000,
+    "snippet": "The Louisville Metro Police Department (LMPD) began operations on January 6, 2003, as part of the creation of the consol"
+   },
+   {
+    "id": "68a6bffe2f4849a2bb43e716de0b3109",
+    "name": null,
+    "type": "Feature Service",
+    "updated": 1755176939000,
+    "snippet": "The Louisville Metro Police Department (LMPD) began operations on January 6, 2003, as part of the creation of the consol"
+   },
+   {
+    "id": "8111a02239a542008935dd811d86d6b7",
+    "name": null,
+    "type": "Feature Service",
+    "updated": 1755176922000,
+    "snippet": "The Louisville Metro Police Department (LMPD) began operations on January 6, 2003, as part of the creation of the consol"
+   },
+   {
+    "id": "459df206b0a04283831bf1ad7436b262",
+    "name": null,
+    "type": "Feature Service",
+    "updated": 1755176837000,
+    "snippet": "The Louisville Metro Police Department (LMPD) began operations on January 6, 2003, as part of the creation of the consol"
+   },
+   {
+    "id": "a4a4077910084800ad99f92738f03dac",
+    "name": null,
+    "type": "Feature Service",
+    "updated": 1755176769000,
+    "snippet": "The Louisville Metro Police Department (LMPD) began operations on January 6, 2003, as part of the creation of the consol"
+   }
+  ]
+ },
+ "cde_variants": [
+  {
+   "url": "https://cde.ucr.cjis.gov/LATEST/summarized/agency/KY0500300/HOM?from=01-2024&to=12-2025",
+   "status": 200,
+   "body": "{\"offenses\":{\"rates\":{\"United States Offenses\":{\"01-2024\":0.41,\"01-2025\":0.35,\"02-2024\":0.38,\"02-2025\":0.31,\"03-2024\":0.41,\"03-2025\":0.34,\"04-2024\":0.41,\"04-2025\":0.36,\"05-2024\":0.46,\"05-2025\":0.37,\"06-2024\":0.46,\"06-2025\":0.39,\"07-2024\":0.47,\"07-2025\":0.39,\"08-2024\":0.44,\"08-2025\":0.35,\"09-2024\":0.41,\"09-2025\":0.36,\"10-2024\":0.43,\"10-2025\":0.33,\"11-2024\":0.38,\"11-2025\":0.32,\"12-2024\":0.56,\"12-2025\":0.48},\"United States Clearances\":{\"01-2024\":0.25,\"01-2025\":0.25,\"02-2024\":0.25,\"02-2025\":0.24,\"03-2024\":0.28,\"03-2025\":0.23,\"04-2024\":0.27,\"04-2025\":0.25,\"05-2024\":0.27,\"05-2025\":0.24,\"06-2024\":0.2"
+  },
+  {
+   "url": "https://cde.ucr.cjis.gov/summarized/agency/KY0500300/HOM?from=01-2024&to=12-2025",
+   "err": "HTTP Error 403: Forbidden"
+  },
+  {
+   "url": "https://cde-api.ucr.cjis.gov/LATEST/summarized/agency/KY0500300/HOM?from=01-2024&to=12-2025",
+   "err": "<urlopen error [Errno 11001] getaddrinfo failed>"
+  }
+ ]
+}

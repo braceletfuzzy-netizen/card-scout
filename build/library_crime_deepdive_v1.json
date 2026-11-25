@@ -1,0 +1,249 @@
+{
+ "_record": "library_crime_deepdive_v1",
+ "built": "2026-11-24",
+ "built_by": "KNOCKOUT-RESUME lane-7 subagent (the library-crime pair; the BONDS-carrier half the literature leaves near-empty)",
+ "laws": [
+  "direction-class only, no causal claims",
+  "honest-null convention",
+  "correlations scale-invariant: rate convention per-100k (murders/pop*100000) \u2014 matches wide_panel_pairs_v3 convention"
+ ],
+ "input_artifacts": {
+  "city_component_annual_v1.jsonl": "2,509 rows; libraries lane = 63 city-years across NYC (1980-2018+2020-25), Detroit (2020-28), Memphis (2021-26), Denver (2021-23); Cincinnati+StL = county-levy honest-nulls (never zero-filled)",
+  "murders_all_v1": "558 city-years",
+  "denominators": "phase2_pop_table + population_series_v1 + pops_cities_v2 + pops_wide (banked only, no interpolation)"
+ },
+ "library_vs_murder_arcs_within_city": {
+  "libraries_t0_vs_rate_t0": {
+   "Detroit": {
+    "r": -0.837,
+    "n": 6
+   },
+   "Memphis": {
+    "r": -0.887,
+    "n": 6
+   },
+   "NYC": {
+    "r": -0.742,
+    "n": 6
+   },
+   "pooled_z_r": -0.822,
+   "pooled_n": 18
+  },
+  "libraries_t_vs_rate_t+1": {
+   "Detroit": {
+    "r": -0.879,
+    "n": 5
+   },
+   "Memphis": {
+    "r": -0.731,
+    "n": 5
+   },
+   "NYC": {
+    "r": -0.942,
+    "n": 4
+   },
+   "pooled_z_r": -0.805,
+   "pooled_n": 10
+  },
+  "libraries_t_vs_rate_t+2": {
+   "Detroit": {
+    "r": -0.607,
+    "n": 4
+   },
+   "Memphis": {
+    "r": -0.913,
+    "n": 4
+   },
+   "pooled_z_r": null,
+   "pooled_n": 0,
+   "note": "pooled z needs n>=8; t+2 ships per-city only (thin-flag)"
+  }
+ },
+ "library_head_to_head_same_rows": {
+  "question": "inside the SAME city-years, does the library margin price better than the parks margin?",
+  "result": {
+   "Detroit": {
+    "lib": -0.837,
+    "park": -0.81,
+    "n": 6
+   },
+   "Memphis": {
+    "lib": -0.887,
+    "park": -0.776,
+    "n": 6
+   },
+   "NYC": {
+    "lib": -0.742,
+    "park": -0.996,
+    "n": 6
+   }
+  },
+  "read": "libraries >= parks in Detroit+Memphis; parks > libraries in NYC (NYC parks arc runs through the 2020 collapse = the pandemic-driver) \u2014 the carrier mix is CITY-SPECIFIC, not a universal library-effect"
+ },
+ "library_vs_bookings_intake": {
+  "per_city": {
+   "Detroit": {
+    "r": -0.451,
+    "n": 5
+   },
+   "Memphis": {
+    "r": -0.47,
+    "n": 4
+   },
+   "NYC": {
+    "r": 0.867,
+    "n": 5
+   }
+  },
+  "pooled_z_r": 0.208,
+  "pooled_n": 10
+ },
+ "verdict": "THE LIBRARY HALF OF THE PAIR IS NO LONGER NEAR-EMPTY: within-city library$-per-100k vs murder-rate reads -0.74 to -0.89 in all three cities with the lane, t+1 arcs NEGATIVE in 3/3 and pooled-z -0.805 (n=10, thin-flag) \u2014 the library lane replicates the parks lane's negative direction-class INSIDE the same rows, with the stronger read in 2 of 3 cities. The bookings-intake side does NOT carry the negative pooled (mixed-grain +0.208, NYC +0.867 = the flagged NYC mixed-grain exception class from q4) \u2014 the murder margin, not the intake margin, is where the library read lives. No p-values, no causal claims.",
+ "arcs_rows": [
+  {
+   "city": "Detroit",
+   "year": 2020,
+   "libraries_usd": 33522999.0,
+   "libraries_per100k": 5250940.1,
+   "murder_rate_100k": 50.28045844500242
+  },
+  {
+   "city": "Detroit",
+   "year": 2021,
+   "libraries_usd": 35466670.0,
+   "libraries_per100k": 5584897.8,
+   "murder_rate_100k": 48.18548577583356
+  },
+  {
+   "city": "Detroit",
+   "year": 2022,
+   "libraries_usd": 27835308.0,
+   "libraries_per100k": 4355316.7,
+   "murder_rate_100k": 48.34840896182353
+  },
+  {
+   "city": "Detroit",
+   "year": 2023,
+   "libraries_usd": 65457126.0,
+   "libraries_per100k": 10268557.6,
+   "murder_rate_100k": 39.21863920734424
+  },
+  {
+   "city": "Detroit",
+   "year": 2024,
+   "libraries_usd": 98574695.0,
+   "libraries_per100k": 15186481.9,
+   "murder_rate_100k": 31.274312696908773
+  },
+  {
+   "city": "Detroit",
+   "year": 2025,
+   "libraries_usd": 68159398.0,
+   "libraries_per100k": 10500681.4,
+   "murder_rate_100k": 25.42000785709334
+  },
+  {
+   "city": "Memphis",
+   "year": 2021,
+   "libraries_usd": 21206316.0,
+   "libraries_per100k": 3349578.6,
+   "murder_rate_100k": 54.493416563471406
+  },
+  {
+   "city": "Memphis",
+   "year": 2022,
+   "libraries_usd": 22919401.0,
+   "libraries_per100k": 3620163.7,
+   "murder_rate_100k": 48.01738734868205
+  },
+  {
+   "city": "Memphis",
+   "year": 2023,
+   "libraries_usd": 22872537.0,
+   "libraries_per100k": 3715281.6,
+   "murder_rate_100k": 55.87735570160193
+  },
+  {
+   "city": "Memphis",
+   "year": 2024,
+   "libraries_usd": 22504072.0,
+   "libraries_per100k": 3663833.6,
+   "murder_rate_100k": 40.376280888668916
+  },
+  {
+   "city": "Memphis",
+   "year": 2025,
+   "libraries_usd": 24977210.0,
+   "libraries_per100k": 4096995.5,
+   "murder_rate_100k": 30.181400056098038
+  },
+  {
+   "city": "Memphis",
+   "year": 2026,
+   "libraries_usd": 26144616.0,
+   "libraries_per100k": 4209703.5,
+   "murder_rate_100k": 23.669363149216817
+  },
+  {
+   "city": "NYC",
+   "year": 2001,
+   "libraries_usd": 382775490,
+   "libraries_per100k": 4779734.7,
+   "murder_rate_100k": 8.104092004545285
+  },
+  {
+   "city": "NYC",
+   "year": 2002,
+   "libraries_usd": 123808070,
+   "libraries_per100k": 1545996.9,
+   "murder_rate_100k": null
+  },
+  {
+   "city": "NYC",
+   "year": 2020,
+   "libraries_usd": 426243000,
+   "libraries_per100k": 4870687.3,
+   "murder_rate_100k": 5.347845343969299
+  },
+  {
+   "city": "NYC",
+   "year": 2021,
+   "libraries_usd": 423434000,
+   "libraries_per100k": 5012264.5,
+   "murder_rate_100k": 5.776543870128142
+  },
+  {
+   "city": "NYC",
+   "year": 2022,
+   "libraries_usd": 423498000,
+   "libraries_per100k": 5064151.2,
+   "murder_rate_100k": 5.237564819348856
+  },
+  {
+   "city": "NYC",
+   "year": 2023,
+   "libraries_usd": 465746000,
+   "libraries_per100k": 5522352.0,
+   "murder_rate_100k": 4.790229449619236
+  },
+  {
+   "city": "NYC",
+   "year": 2024,
+   "libraries_usd": 457509000,
+   "libraries_per100k": 5321836.8,
+   "murder_rate_100k": 4.152695908082344
+  },
+  {
+   "city": "NYC",
+   "year": 2025,
+   "libraries_usd": 498400000,
+   "libraries_per100k": 5805725.6,
+   "murder_rate_100k": null
+  }
+ ],
+ "honest_nulls": [
+  "Cincinnati + St. Louis library lanes = county-levy/different-entity (banked honest-nulls carried \u2014 no attempt to zero-fill)",
+  "library x bookings pooled n=10 (below the n>=8 pooled threshold except NYC-dominance) \u2014 shipped per-city, thin-flagged",
+  "Denver library (2021-23) carries no same-window murder-rate join (denominator-banked years only) \u2014 honest-null row"
+ ]
+}

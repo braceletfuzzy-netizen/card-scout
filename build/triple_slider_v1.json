@@ -1,0 +1,352 @@
+[
+ {
+  "city": "Boston",
+  "year": "2024",
+  "crime_plus": null,
+  "care_plus_norm": null,
+  "care_raw": null,
+  "edu_plus": 100.0,
+  "edu_basis": "city-run",
+  "edu_per_capita": 2148.4
+ },
+ {
+  "city": "Boston",
+  "year": "2025",
+  "crime_plus": null,
+  "care_plus_norm": null,
+  "care_raw": null,
+  "edu_plus": 100.0,
+  "edu_basis": "city-run",
+  "edu_per_capita": 2330.4
+ },
+ {
+  "city": "Boston",
+  "year": "2026",
+  "crime_plus": null,
+  "care_plus_norm": null,
+  "care_raw": null,
+  "edu_plus": 114.7,
+  "edu_basis": "city-run",
+  "edu_per_capita": 2469.8
+ },
+ {
+  "city": "Boston",
+  "year": "2027",
+  "crime_plus": null,
+  "care_plus_norm": null,
+  "care_raw": null,
+  "edu_plus": 100.0,
+  "edu_basis": "city-run",
+  "edu_per_capita": 2565.6
+ },
+ {
+  "city": "Cincinnati",
+  "year": "2014",
+  "crime_plus": null,
+  "care_plus_norm": null,
+  "care_raw": 0.701,
+  "edu_plus": null,
+  "edu_basis": null,
+  "edu_per_capita": null
+ },
+ {
+  "city": "Cincinnati",
+  "year": "2018",
+  "crime_plus": null,
+  "care_plus_norm": null,
+  "care_raw": 0.698,
+  "edu_plus": null,
+  "edu_basis": null,
+  "edu_per_capita": null
+ },
+ {
+  "city": "Cincinnati",
+  "year": "2020",
+  "crime_plus": 59.2,
+  "care_plus_norm": 100.0,
+  "care_raw": 0.755,
+  "edu_plus": null,
+  "edu_basis": null,
+  "edu_per_capita": null
+ },
+ {
+  "city": "Cincinnati",
+  "year": "2024",
+  "crime_plus": 69.0,
+  "care_plus_norm": 139.2,
+  "care_raw": 0.717,
+  "edu_plus": null,
+  "edu_basis": null,
+  "edu_per_capita": null
+ },
+ {
+  "city": "Cincinnati",
+  "year": "2026",
+  "crime_plus": null,
+  "care_plus_norm": null,
+  "care_raw": null,
+  "edu_plus": 143.4,
+  "edu_basis": "district",
+  "edu_per_capita": 3086.8
+ },
+ {
+  "city": "Detroit",
+  "year": "2013",
+  "crime_plus": null,
+  "care_plus_norm": null,
+  "care_raw": 0.428,
+  "edu_plus": null,
+  "edu_basis": null,
+  "edu_per_capita": null
+ },
+ {
+  "city": "Detroit",
+  "year": "2015",
+  "crime_plus": null,
+  "care_plus_norm": null,
+  "care_raw": 0.528,
+  "edu_plus": null,
+  "edu_basis": null,
+  "edu_per_capita": null
+ },
+ {
+  "city": "Detroit",
+  "year": "2016",
+  "crime_plus": null,
+  "care_plus_norm": null,
+  "care_raw": 0.56,
+  "edu_plus": null,
+  "edu_basis": null,
+  "edu_per_capita": null
+ },
+ {
+  "city": "Detroit",
+  "year": "2022",
+  "crime_plus": 100.7,
+  "care_plus_norm": 100.0,
+  "care_raw": 0.344,
+  "edu_plus": null,
+  "edu_basis": null,
+  "edu_per_capita": null
+ },
+ {
+  "city": "Detroit",
+  "year": "2024",
+  "crime_plus": 91.6,
+  "care_plus_norm": 71.3,
+  "care_raw": 0.367,
+  "edu_plus": null,
+  "edu_basis": null,
+  "edu_per_capita": null
+ },
+ {
+  "city": "Detroit",
+  "year": "2026",
+  "crime_plus": null,
+  "care_plus_norm": null,
+  "care_raw": null,
+  "edu_plus": 100.0,
+  "edu_basis": "external-district",
+  "edu_per_capita": 2153.0
+ },
+ {
+  "city": "Houston",
+  "year": "2004",
+  "crime_plus": null,
+  "care_plus_norm": null,
+  "care_raw": 0.27,
+  "edu_plus": null,
+  "edu_basis": null,
+  "edu_per_capita": null
+ },
+ {
+  "city": "Houston",
+  "year": "2005",
+  "crime_plus": null,
+  "care_plus_norm": null,
+  "care_raw": 0.243,
+  "edu_plus": null,
+  "edu_basis": null,
+  "edu_per_capita": null
+ },
+ {
+  "city": "Houston",
+  "year": "2011",
+  "crime_plus": null,
+  "care_plus_norm": null,
+  "care_raw": 0.311,
+  "edu_plus": null,
+  "edu_basis": null,
+  "edu_per_capita": null
+ },
+ {
+  "city": "Houston",
+  "year": "2019",
+  "crime_plus": null,
+  "care_plus_norm": null,
+  "care_raw": 0.318,
+  "edu_plus": null,
+  "edu_basis": null,
+  "edu_per_capita": null
+ },
+ {
+  "city": "Houston",
+  "year": "2022",
+  "crime_plus": 39.3,
+  "care_plus_norm": 54.4,
+  "care_raw": 0.187,
+  "edu_plus": null,
+  "edu_basis": null,
+  "edu_per_capita": null
+ },
+ {
+  "city": "Houston",
+  "year": "2025",
+  "crime_plus": 39.8,
+  "care_plus_norm": null,
+  "care_raw": null,
+  "edu_plus": 37.9,
+  "edu_basis": "external-district",
+  "edu_per_capita": 884.3
+ },
+ {
+  "city": "Houston",
+  "year": "2026",
+  "crime_plus": null,
+  "care_plus_norm": null,
+  "care_raw": null,
+  "edu_plus": 41.1,
+  "edu_basis": "external-district",
+  "edu_per_capita": 884.3
+ },
+ {
+  "city": "Memphis",
+  "year": "2020",
+  "crime_plus": 100.0,
+  "care_plus_norm": 60.7,
+  "care_raw": 0.458,
+  "edu_plus": null,
+  "edu_basis": null,
+  "edu_per_capita": null
+ },
+ {
+  "city": "Memphis",
+  "year": "2021",
+  "crime_plus": null,
+  "care_plus_norm": null,
+  "care_raw": 0.479,
+  "edu_plus": null,
+  "edu_basis": null,
+  "edu_per_capita": null
+ },
+ {
+  "city": "Memphis",
+  "year": "2022",
+  "crime_plus": 100.0,
+  "care_plus_norm": 141.3,
+  "care_raw": 0.486,
+  "edu_plus": null,
+  "edu_basis": null,
+  "edu_per_capita": null
+ },
+ {
+  "city": "Memphis",
+  "year": "2023",
+  "crime_plus": null,
+  "care_plus_norm": null,
+  "care_raw": 0.399,
+  "edu_plus": 100.0,
+  "edu_basis": "district",
+  "edu_per_capita": 3388.8
+ },
+ {
+  "city": "Memphis",
+  "year": "2024",
+  "crime_plus": 115.2,
+  "care_plus_norm": 100.0,
+  "care_raw": 0.515,
+  "edu_plus": 128.5,
+  "edu_basis": "district",
+  "edu_per_capita": 2761.5
+ },
+ {
+  "city": "Memphis",
+  "year": "2025",
+  "crime_plus": 100.0,
+  "care_plus_norm": null,
+  "care_raw": 0.458,
+  "edu_plus": 127.8,
+  "edu_basis": "district",
+  "edu_per_capita": 2978.2
+ },
+ {
+  "city": "Memphis",
+  "year": "2027",
+  "crime_plus": null,
+  "care_plus_norm": null,
+  "care_raw": null,
+  "edu_plus": 105.4,
+  "edu_basis": "district",
+  "edu_per_capita": 2704.7
+ },
+ {
+  "city": "New Orleans",
+  "year": "2024",
+  "crime_plus": 100.0,
+  "care_plus_norm": null,
+  "care_raw": null,
+  "edu_plus": null,
+  "edu_basis": null,
+  "edu_per_capita": null
+ },
+ {
+  "city": "New Orleans",
+  "year": "2026",
+  "crime_plus": null,
+  "care_plus_norm": null,
+  "care_raw": null,
+  "edu_plus": 80.2,
+  "edu_basis": "district (AOR, all-charter-class)",
+  "edu_per_capita": 1726.6
+ },
+ {
+  "city": "New Orleans",
+  "year": "2027",
+  "crime_plus": null,
+  "care_plus_norm": null,
+  "care_raw": null,
+  "edu_plus": 64.3,
+  "edu_basis": "district (AOR, all-charter-class)",
+  "edu_per_capita": 1650.4
+ },
+ {
+  "city": "St. Louis",
+  "year": "2023",
+  "crime_plus": null,
+  "care_plus_norm": null,
+  "care_raw": null,
+  "edu_plus": 71.2,
+  "edu_basis": "district",
+  "edu_per_capita": 2411.4
+ },
+ {
+  "city": "St. Louis",
+  "year": "2024",
+  "crime_plus": 157.1,
+  "care_plus_norm": null,
+  "care_raw": null,
+  "edu_plus": 81.8,
+  "edu_basis": "district",
+  "edu_per_capita": 1758.2
+ },
+ {
+  "city": "St. Louis",
+  "year": "2025",
+  "crime_plus": null,
+  "care_plus_norm": null,
+  "care_raw": null,
+  "edu_plus": 68.3,
+  "edu_basis": "district",
+  "edu_per_capita": 1591.6
+ }
+]

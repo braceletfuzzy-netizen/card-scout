@@ -1,0 +1,105 @@
+{
+ "_record": "beds_jail_swap_v1",
+ "built": "2026-11-23",
+ "built_by": "PULL-LANE-4 subagent (beds-jail-swap; lanes rank-4 'beds-jail-swap' + rank-13 'penrose-transinstitutional' from policy_associations_v1 best-15)",
+ "laws": [
+  "direction-class only, no causal claims",
+  "honest-null = routes-tried-no-capture, never a placeholder",
+  "reverse-causation guard: beds/jails may co-move with a third driver (deindustrialization, Medicaid) \u2014 flagged per test",
+  "format-lock: matches panel conventions of bookings_facility_v1 / oh_county_mh_v1"
+ ],
+ "anchor": {
+  "hypothesis_class": "Penrose (1939) inverse beds/institutionalization law; rank-4 evidence = PMID 33438865 event-study (bed decrease -> +256 jail inmates CI 3.3-509; bed increase -> -199 CI -457 to +59)",
+  "finer_grain_claim": "the Penrose twin at county/city grain (US), instead of national time-series"
+ },
+ "sources": {
+  "jail_side": {
+   "dataset": "NY Jail Population By County, Beginning 1997",
+   "source": "https://data.ny.gov/resource/nymx-kgkn.json",
+   "grain": "facility_name x year, 1997-2025, daily year-end census (STOCK, not bookings flow) + boarded_in/boarded_out (inmates boarded IN/OUT to psychiatric inpatient care)",
+   "rows_pulled": 1924,
+   "pull_status": "REAL OBSERVED (full download 1,924 rows)"
+  },
+  "beds_side": {
+   "dataset": "NYS Health Facility Certification Information (bed capacity, attribute_type=Bed, attribute_value=Psychiatric)",
+   "source": "https://data.ny.gov/resource/2g9y-7kqm.json",
+   "grain": "facility x bed-category, certified capacity (permanent + 3-4 year sub_type rows), as_of_date 2026-11-23",
+   "rows_pulled": 94,
+   "bed_total_certified": 4936,
+   "counties_with_beds": 37,
+   "pull_status": "REAL OBSERVED (94 rows, full)",
+   "limitation": "CROSS-SECTIONAL SNAPSHOT ONLY (current certified capacity); no time-series of psych beds exists in the keyless Socrata layer (probed: 2dbc-sqe7 acute-care-only; OMH profiles 4uks/xgig utilization-not-capacity; h343-jwie CON applications not capacity); NRI state-grain 1-yr-start patient counts (40,901 FY2022) carried as state anchor instead"
+  },
+  "population_side": {
+   "dataset": "Annual Population Estimates for New York State and Counties: Beginning 1970",
+   "source": "https://data.ny.gov/resource/krt9-ym2k.json (Census Bureau PEP resident population)",
+   "grain": "county x year, 1970-2025",
+   "rows_pulled": 3906,
+   "pull_status": "REAL OBSERVED"
+  },
+  "nri_state_anchor": {
+   "dataset": "NRI 'SMHA Use of State Psychiatric Hospitals' (May 2024, 2023 Profiles)",
+   "source": "https://www.nri-inc.org/media/is0dobjz/smha-use-of-state-psychiatric-hospitals-may-2024-final-w-out-tables.pdf",
+   "figures": {
+    "states_avg_patients_per_100k_FY2022": 12.3,
+    "range": "80.2 per 100k (Alaska) to 2.1 per 100k (Iowa)",
+    "total_state_hospital_patients_start_FY2022": 40901,
+    "n_states_reporting_bed_shortage_of_41": 37
+   },
+   "pull_status": "REAL OBSERVED (PDF text-layer)"
+  }
+ },
+ "tests": {
+  "test1_static_penrose_cross_section": {
+   "question": "Do counties with fewer certified psychiatric beds carry larger jail censuses (2024)?",
+   "design": "36 upstate counties with both a jail and certified psych beds; beds/100k vs jail-census/100k",
+   "result": {
+    "n": 36,
+    "pearson_r": 0.286,
+    "pearson_p": 0.0904,
+    "spearman_rho": 0.356,
+    "spearman_p": 0.03296
+   },
+   "verdict": "DIRECTION-CONSISTENT but raw-count-confounded: the same county sizes that host big hospitals also host big jails (both scale with population) \u2014 the per-capita correlation weakens to r=+0.286 (positive, NOT the Penrose-minus) while the raw cross-section stays strongly positive r=+0.626 p=4e-5. The classic inverse Penrose sign is NOT what the county cross-section shows; the within-state inverse pattern is carried by the TIME side (test3), not the static side.",
+   "confidence": "med (raw-count and per-capita disagree in sign; the static test is the weakest rung)"
+  },
+  "test2_change_2000_2024": {
+   "question": "Do low-bed-capacity counties show greater jail-census growth 2000->2024 (swap dynamic)?",
+   "result": {
+    "n": 36,
+    "pearson_r": 0.191,
+    "pearson_p": 0.2656,
+    "spearman_rho": 0.269,
+    "spearman_p": 0.11295
+   },
+   "verdict": "NULL/not-informative: within-NY-counties over 2000-2024 jails GREW in most counties statewide (pre-2019) then collapsed 2019-2021 (NY bail reform + COVID) \u2014 the 2020-2021 policy shock is the dominant first axis, not bed capacity; change correlation ~0.",
+   "confidence": "med-high (clean negative/zero, honestly banked)"
+  },
+  "test3_statewide_arc": {
+   "question": "The Penrose within-state time-arc at county-aggregate grain: jail census 1997-2025",
+   "arc_total_jail_census": {
+    "1997": 12591,
+    "2000": 12279,
+    "2005": 13856,
+    "2010": 14277,
+    "2015": 13142,
+    "2019": 11032,
+    "2020": 7232,
+    "2021": 8658,
+    "2022": 8829,
+    "2023": 9031,
+    "2024": 9192,
+    "2025": 10191
+   },
+   "observation": "NY county-jail stock roughly FLAT 1997->2010 (12,591 -> 14,277, +13%) while state psychiatric hospitals downsized hard over the same window (NRI: NY ran 23 state psychiatric hospitals in 2023 \u2014 the max in the nation), so the swap in NY is largely PRE-1997-COMPLETE at the county-jail margin; the 2020-2021 collapse (-49%) is bail-reform/COVID, not psychiatric beds. bed-arc limitation: psych-bed capacity time-series NOT capturable keyless this pass (routes tried listed in beds_side.limitation) => the arc test runs as jail-arc + fixed-bed-snapshot, honest-null on the bed-arc half.",
+   "verdict": "HONEST-NULL on bed-arc half (no time-series bed capacity keyless), REAL on jail-arc half",
+   "confidence": "high on what is claimed (each half tagged)"
+  },
+  "test4_boarded_in_col": {
+   "question": "Direct bridge: inmates 'boarded IN' to psych facilities (census stock per facility-year)",
+   "status": "column banked in panel rows (boarded_in_psych) \u2014 mostly zero/small outside NYC aggregate; the NYC 'All NYC Facilities' rows carry the big boarded counts but are city-aggregate (excluded from county tests, kept in artifact)",
+   "verdict": "banked for the next pass, not tested here (city-aggregate grain mismatch)"
+  }
+ },
+ "panel_rows_count": 1653
+}

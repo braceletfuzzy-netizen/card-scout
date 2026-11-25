@@ -1,0 +1,284 @@
+{
+ "_record": "peer_review_scan_v19_synth — BOB-SCAN-20 THE LITERATURE PRISM FOR THE OUTPUT VECTOR (fiscal / econ-growth / infra / housing-edu / the two-tier prism itself)",
+ "built": "2026-11-25",
+ "founder_steering": "framed for COMPARISON, not conclusion: per-family published magnitudes + methods + gaps, one lane tag each, for parent-side cross-examination against our instruments",
+ "parent_artifacts": [
+  "peer_review_scan_v19_raw.jsonl (136 live probe rows: 51 queries x keyless Crossref + PubMed eutils + EuropePMC, incl. 21 targeted round-2 booster queries)",
+  "peer_review_scan_v19_corpus.json (deduped corpus)",
+  "peer_review_scan_v19_dedupe.py / peer_review_scan_v19_boosters.py / peer_review_scan_v19_abstracts.py"
+ ],
+ "laws_held": [
+  "zero-fabricated cites: every row resolved against the live v19 probe corpus before shipping",
+  "magnitude ships ONLY when the live corpus abstract states it, per row; else not_stated_in_corpus",
+  "honest-nulls named and banked as routes, like the skate-park lane",
+  "no editorializing in scan rows; the read lives here only",
+  "direction-class only; no causal claims beyond each study's own design"
+ ],
+ "corpus_stats": {
+  "live_probe_rows": 136,
+  "unique_queries": 53,
+  "deduped_records": 428,
+  "records_with_abstract_gt_100": 268,
+  "abstract_share_pct": 62.6,
+  "year_span": [
+   1980,
+   2027
+  ],
+  "median_cites": 0,
+  "max_cites": 1067,
+  "route_distribution": {
+   "crossref": 30,
+   "pm_search": 30,
+   "europepmc_search": 30,
+   "crossref_r2": 23,
+   "europepmc_search_r2": 23
+  },
+  "band_distribution": {
+   "fiscal_efficiency_band": 82,
+   "econ_growth_efficiency_band": 66,
+   "infra_efficiency_band": 91,
+   "housing_edu_efficiency_band": 85,
+   "prism_two_tier_band": 104
+  },
+  "zero_hit_routes": 17,
+  "api_error_routes": 16
+ },
+ "per_band_stats": {
+  "fiscal_efficiency": {
+   "rows": 11,
+   "stated_magnitude_rows": 3,
+   "citation_span": [
+    9,
+    102
+   ],
+   "median_cites": 19,
+   "top_anchor": {
+    "title": "State Rainy Day Funds and Fiscal Crises: Rainy Day Funds and the 1990–1991 Recession Revisited",
+    "cites": 102,
+    "venue": "Public Budgeting &amp; Finance",
+    "dose": "48-state panel over the 1990-91 recession: presence of structural factors + large balances in other funds entering recession alleviates fiscal stress in recession (direction; no single coefficient in abstract)"
+   },
+   "honest_nulls": [
+    "HONEST-NULL: fiscal outcome-per-dollar dose (any published magnitude mapping reserve/pension/debt rates -> distress probability in dollars or pp)"
+   ]
+  },
+  "econ_growth_efficiency": {
+   "rows": 8,
+   "stated_magnitude_rows": 6,
+   "citation_span": [
+    2,
+    147
+   ],
+   "median_cites": 15,
+   "top_anchor": {
+    "title": "The Effect of State Tax Incentives on Economic Growth and Firm Location Decisions: An Overview of the Literature",
+    "cites": 147,
+    "venue": "Economic Development Quarterly",
+    "dose": "review verdict: tax studies yield CONFLICTING results on whether taxes matter; few test whether incentives are economically justified (no pooled magnitude; the contested-literature clause)"
+   },
+   "honest_nulls": []
+  },
+  "infra_efficiency": {
+   "rows": 8,
+   "stated_magnitude_rows": 3,
+   "citation_span": [
+    2,
+    118
+   ],
+   "median_cites": 14,
+   "top_anchor": {
+    "title": "Preventive and corrective maintenance – cost comparison and cost–benefit analysis",
+    "cites": 118,
+    "venue": "Structure and Infrastructure Engineering",
+    "dose": "not_stated_in_corpus (cost comparison + cost-benefit analysis of preventive vs corrective maintenance; highest-cited record in the band, 118c)"
+   },
+   "honest_nulls": [
+    "HONEST-NULL: the road-maintenance deferment multiplier (the 4-7x class)"
+   ]
+  },
+  "housing_edu_efficiency": {
+   "rows": 10,
+   "stated_magnitude_rows": 4,
+   "citation_span": [
+    3,
+    583
+   ],
+   "median_cites": 34,
+   "top_anchor": {
+    "title": "The Effects of School Spending on Educational and Economic Outcomes: Evidence from School Finance Reforms *",
+    "cites": 583,
+    "venue": "The Quarterly Journal of Economics",
+    "dose": "THE DOSE: +10% per-pupil spending each year for all 12 school years -> +0.31 completed years of education, ~7% higher adult wages, -3.2pp annual adult poverty; larger for low-income children (event-study + IV, cohorts 1955-1985)"
+   },
+   "honest_nulls": [
+    "HONEST-NULL: zoning-reform -> permit-elasticity dose (the Glaeser/Lens class)"
+   ]
+  },
+  "prism_two_tier": {
+   "rows": 10,
+   "stated_magnitude_rows": 5,
+   "citation_span": [
+    3,
+    1067
+   ],
+   "median_cites": 32,
+   "top_anchor": {
+    "title": "Evaluating Program and Managerial Efficiency: An Application of Data Envelopment Analysis to Program Follow Through",
+    "cites": 1067,
+    "venue": "Management Science",
+    "dose": "THE CANONICAL METHOD: DEA measures relative efficiency of Decision Making Units with multiple inputs/outputs via mathematical programming, no a-priori weights required; demonstrated on Program Follow Through (education experiment)"
+   },
+   "honest_nulls": []
+  }
+ },
+ "family_frames_for_cross_examination": {
+  "fiscal_efficiency": {
+   "tag": "NOVEL-OURS",
+   "tag_note": "no published counterpart for a fitted outcome-per-dollar (or pp-per-rate) fiscal dose in the live corpus; the constructs our fiscal v2 fit uses (reserves, funded ratio, debt/capita) are print-validated as determinants/stabilizers but never assembled into a dose",
+   "published_magnitudes": [
+    "rainy-day stabilization: direction both-directions (Knight 2002 48-state; 2019 Public Finance Review FY1998-2014) — no coefficient in any recovered abstract",
+    "pension funding determinants: fiscal autonomy + property-tax reliance, city-as-sponsor 2003-2012 (no coefficient)",
+    "credit ratings: municipal-bond yields panel (1991 NTJ, 59c, no abstract returned)",
+    "optimal reserve size: chapter-level, no abstract-stated percent-of-revenue number"
+   ],
+   "methods": "panel regressions, stabilization-fund rule variables, event-type recession windows",
+   "gaps": "the GAO/NASBO empirical class is institutional not peer-reviewed-dose; NO abstract-stated pp-per-funding-rate or reserve-percent magnitude anywhere in the corpus → the calibration surface is direction-only",
+   "comparison_hook": "our banked fiscal reads (STL pension 79.45% funded, NYC debt 12,134/cap, CAFR reserve arcs) live in the determinants tier; the fit that rates fiscal outcomes on them has no published bracket to land inside"
+  },
+  "econ_growth_efficiency": {
+   "tag": "VALIDATES-OURS",
+   "tag_note": "the Bartik-class published range (null-to-small, contested) brackets our economy read (walk-forward 0.50 coin + LOCO 0.56 → gate-shut): incentives/enterprise zones are a zero-to-marginal lever in print, consistent with our no-signal economy fit",
+   "published_magnitudes": [
+    "Hanson 2008 (93c): CA+FL enterprise zones → NO evidence of resident-employment effects (the canonical place-based null)",
+    "film-incentive DiD: filming volume +6.3% to +55.4%; employment/wages/establishments → no meaningful effect",
+    "MEGA simulation: net cost per job 'modest', job creation considerably larger per dollar than general tax cuts (assumption-dependent)",
+    "Maryland JCTC: concentration only in some sectors (transport/comms/services), none in manufacturing/FIRE",
+    "Fisher 2001 review (147c): the tax-effect literature yields CONFLICTING results — the contested clause"
+   ],
+   "methods": "individual employment models + neighborhood propensity matching; panel DiD; zip-code FE growth models; simulation",
+   "gaps": "no live-probe abstract states firm-formation elasticities vs local spend (BFS-class) — the firm-formation strand is the gap",
+   "comparison_hook": "boarded Board-3 oligopsony/wage strata remain the crime-side counterpart; the published incentive magnitudes are small enough that local economy-output variance is dominated by non-incentive forces — matching our weak economy signal"
+  },
+  "infra_efficiency": {
+   "tag": "NOVEL-OURS",
+   "tag_note": "no published condition-vs-spend elasticity or dose anywhere in the live corpus; the preventive-vs-corrective direction IS print-validated (maintenance-first confirmed), but any per-dollar dose our infra fit would produce has no published bracket — the 4-7x multiplier did not surface in peer-reviewed abstracts (practitioner/gray-lit class, banked as the gap)",
+   "published_magnitudes": [
+    "preventive maintenance holds better pavement quality at LOWER total cost (1998 ASTM; direction only)",
+    "deferred maintenance: named as accumulated pressure; simulation-based impacts (no multiplier stated)",
+    "preventive-vs-corrective cost-benefit comparison exists (2015, 118c) but abstract carries no multiplier",
+    "bridge LCCA class exists at low citation mass (2c chapter) — the bridge-elasticity lane is thin in peer-review"
+   ],
+   "methods": "life-cycle cost analysis, pavement-performance simulation, condition-index prioritization",
+   "gaps": "FHWA analytic pieces returned nothing peer-reviewed-dose; SDWA/water-utility capital-efficiency lane empty at abstract level (our v19 outlane SDWA honest-null mirrors this)",
+   "comparison_hook": "our banked FHWA NBI cross-sections (NYC 9.4% poor bridges vs CIN 2.3%) sit in a literature with direction but no dose — infrastructure condition-vs-spend fit will be bracket-free, first-mover read"
+  },
+  "housing_edu_efficiency": {
+   "tag": "VALIDATES-OURS",
+   "tag_note": "the EXACT banked anchor is live: Jackson Johnson-Mikolajczyk-Altamirano QJE 2015 (583c) states the dose our lane carried — +10%/year for 12 years → +0.31 completed years of education, ~7% higher wages, -3.2pp adult poverty, concentrated low-income; Lafortune-Rothstein-Schazenbach AEJ 2018 (229c) confirms the achievement leg",
+   "published_magnitudes": [
+    "Jackson 2015 QJE: THE DOSE (10% x 12yrs → +0.31yrs / +7% wages / -3.2pp poverty)",
+    "Lafortune et al. 2018 AEJ: post-1990 adequacy reforms → sustained spending gains in low-income districts; 'large' implied resource → achievement effect, phasing in",
+    "zoning: density-zoning index → income segregation (2SLS-causal-sign), 50 metros; 95-city replication shows rich-not-poor segregation; NO permit elasticity stated",
+    "vouchers: long-run and family-wellbeing evaluations present (119c/34c) but abstract doses not returned"
+   ],
+   "methods": "event study + IV (court-mandated reform timing); NAEP event-study; OLS/2SLS metro panels",
+   "gaps": "zoning-reform → permit elasticity dose = honest-null (banked); voucher-vs-supply-side head-to-head magnitude not surfaced at abstract level",
+   "comparison_hook": "the Jackson dose-shape (linear-in-years-of-exposure, concentrated low-income) is available for direct cross-examination against our housing/schools refit coefficients"
+  },
+  "prism_two_tier": {
+   "tag": "NOVEL-OURS",
+   "tag_note": "the two-tier decomposition (operational overhead-rate vs community outcome-yield as TWO DISTINCT MEASURED QUANTITIES, multiplied) does not exist as an assembly in the live corpus — the founder's synthesis moat is real at the seam",
+   "published_magnitudes": [
+    "DEA method: Charnes-Cooper-Rhodes 1981 Management Science (1,067c) — the canonical measurement instrument for exactly the founder's 2x2, but measured at the DMU level as a SINGLE efficiency score, not as two decomposed tiers",
+    "municipal DEA applications: waste/street-cleaning (90c, 50c), transit agencies (32c), Macedonian municipalities (20c), Croatian counties (3c), Chinese provinces super-efficiency (17c), Serbian procurement in HOURS (3c) — efficiency-score class, no outcome-per-delivered-dollar dose",
+    "efficiency frontier for public expenditure (Belgian case, 71c SSRN): single-tier frontier gauging",
+    "outcome-yield tier: lives ENTIRELY in separate literatures (Jackson QJE dose, Lafortune AEJ) never joined to the DEA overhead side in any corpus record"
+   ],
+   "methods": "DEA-VRS/CRS, super-efficiency DEA, Malmquist indices, Tobit second-stage, SFA robustness — the calibration class for our residual instrument",
+   "novelty_check_for_the_two_tier_frame": {
+    "operational_tier_in_print": "YES — deeply precented: the DEA municipal-service corpus (~104 band records) measures cost-efficiency of delivery; fiscal-slack/procurement-hours variants exist",
+    "community_tier_in_print": "YES — separately precented: outcome-dose literature (Jackson/Lafortune class) measures outcome-per-input",
+    "the_joint_decomposition_in_print": "NO — zero corpus records measure overhead-rate and outcome-yield as distinct quantities and combine them (our multiplication law: outcome/dollar-in = [outcome/delivered] x [delivered/budgeted]); closest single-tier analogs (DEA scores, efficiency frontiers) collapse both into one number",
+    "moat_estimate": "both tiers ≈ fully precented separately; the seam (two-tier assembly + the 2x2 administration scorecard) ≈ novel under 40 prism-band live probes; risk = non-keyless or book-length framings not probed",
+    "calibration_for_residual_instrument": "DEA scores are the calibration reference class for residual-based efficiency scoring; our fitted-residual instrument maps to DEA's input-oriented efficiency with the residual substituting for the frontier — the second-stage determinants (Tobit regressors: fragmentation, population density, own revenues) are checkable against our admin-boundary reads (Memphis +6.30 → -9.45)"
+   },
+   "gaps": "no citizen-outcomes-per-administrative-cost studies recovered as abstracts; IMF expenditure-efficiency framework surfaced only as fragmentary EuropePMC health-system rows, not the macro fiscal framework — the OECD/IMF macro-efficiency lane needs a targeted non-keyless fetch to fully clear",
+   "comparison_hook": "parent cross-exam: DEA efficiency-score distributions (e.g., Macedonian 'low efficiency, significant variation') vs our within-FE residual ranks (CIN 1 / MEM 2 / STL 3 / DET 4)"
+  }
+ },
+ "countable_routes_bank": {
+  "total_routes_live": 53,
+  "route_distribution": {
+   "crossref": 30,
+   "pm_search": 30,
+   "europepmc_search": 30,
+   "crossref_r2": 23,
+   "europepmc_search_r2": 23
+  },
+  "per_lane_countable_routes": {
+   "fiscal_efficiency": [
+    "rainy-day 48-state recession panel (direction)",
+    "RDF-usage stabilization panel FY98-14 (direction)",
+    "city pension-funding determinants 2003-12",
+    "muni-bond yields-ratings panel",
+    "reserve-optimal-size chapter class"
+   ],
+   "econ_growth_efficiency": [
+    "CA/FL enterprise-zone matching null",
+    "film-incentive DiD (volume vs employment split)",
+    "MEGA cost-per-job simulation",
+    "PFA zip-FE sector split",
+    "reservation-wage net-benefit model"
+   ],
+   "infra_efficiency": [
+    "preventive-vs-corrective cost-benefit (direction)",
+    "deferred-maintenance simulation",
+    "rail/bridge LCCA framework class",
+    "neighborhood participatory condition assessment"
+   ],
+   "housing_edu_efficiency": [
+    "Jackson QJE dose (live, 583c)",
+    "Lafortune AEJ achievement event-study",
+    "density-zoning 2SLS segregation",
+    "95-city regulation-segregation replication",
+    "voucher long-run evaluations (no abstract dose)"
+   ],
+   "prism_two_tier": [
+    "CCR 1981 DEA method",
+    "municipal DEA-VRS/SFA scores (Macedonia, Croatia, transit, waste, procurement-hours)",
+    "super-efficiency+Malmquist+Tobit second stage",
+    "public-expenditure efficiency frontier (SSRN single-tier)"
+   ]
+  },
+  "honest_gaps_banked": [
+   "4-7x deferment multiplier: NOT in peer-review abstracts (gray-lit class) — infra lane gap",
+   "zoning-reform → permit elasticity dose: NOT stated — housing lane gap",
+   "fiscal outcome-per-dollar dose: NOT stated — fiscal lane gap (determinants only)",
+   "firm-formation elasticities vs local spend: NOT surfaced — economy lane gap",
+   "IMF/OECD macro expenditure-efficiency framework: only fragmentary, needs non-keyless fetch — prism lane partial gap",
+   "bridge-condition funding elasticity: chapter-class only, no dose"
+  ]
+ },
+ "lane_tag_summary": {
+  "VALIDATES-OURS": [
+   "econ_growth_efficiency",
+   "housing_edu_efficiency"
+  ],
+  "CONTRADICTS": [],
+  "NOVEL-OURS": [
+   "fiscal_efficiency",
+   "infra_efficiency",
+   "prism_two_tier"
+  ],
+  "VOID-LANE": [],
+  "counts": {
+   "VALIDATES-OURS": 2,
+   "CONTRADICTS": 0,
+   "NOVEL-OURS": 3,
+   "VOID-LANE": 0
+  },
+  "note": "VOID-LANE kept empty because every family printed SOMETHING; the empty sub-lanes are named as honest gaps inside each frame (deferment multiplier, permit elasticity, fiscal dose, firm-formation elasticity, IMF macro framework)"
+ },
+ "jsonl_rows": 47,
+ "missing_rows_failed_resolution": []
+}

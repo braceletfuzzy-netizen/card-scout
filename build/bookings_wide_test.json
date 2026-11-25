@@ -1,0 +1,212 @@
+{
+ "test": "bookings_wide_test v1 \u2014 reactive channel (crime -> bookings-proxy arrests), within-city demeaned",
+ "conventions": "non-reporting banked as null (fraud-guard); months_present==12 only; ORIs per ori_primary + _ori_wide_b",
+ "wide": {
+  "n_cities": 28,
+  "pairs": 83,
+  "lag_arc_same_year_first": {
+   "lag_0": [
+    0.0841,
+    0.76,
+    83
+   ],
+   "lag_1": [
+    0.2048,
+    1.52,
+    55
+   ],
+   "lag_2": [
+    -0.1158,
+    -0.58,
+    27
+   ]
+  },
+  "per_city_same_year": {
+   "Austin": {
+    "r": 0.1899,
+    "t": 0.19,
+    "n": 3
+   },
+   "Charlotte": {
+    "r": -0.9548,
+    "t": -3.21,
+    "n": 3
+   },
+   "Columbus": {
+    "r": -0.9922,
+    "t": -7.96,
+    "n": 3
+   },
+   "Dallas": {
+    "r": 0.9872,
+    "t": 6.18,
+    "n": 3
+   },
+   "Denver": {
+    "r": -0.6269,
+    "t": -0.8,
+    "n": 3
+   },
+   "Fort Worth": {
+    "r": -0.9183,
+    "t": -2.32,
+    "n": 3
+   },
+   "Indianapolis": {
+    "r": -0.9802,
+    "t": -4.95,
+    "n": 3
+   },
+   "Nashville": {
+    "r": -0.1933,
+    "t": -0.2,
+    "n": 3
+   },
+   "Philadelphia": {
+    "r": 0.6402,
+    "t": 0.83,
+    "n": 3
+   },
+   "Phoenix": {
+    "r": 0.1338,
+    "t": 0.13,
+    "n": 3
+   },
+   "San Antonio": {
+    "r": -0.7755,
+    "t": -1.23,
+    "n": 3
+   },
+   "San Diego": {
+    "r": 0.3464,
+    "t": 0.37,
+    "n": 3
+   },
+   "San Francisco": {
+    "r": 0.5919,
+    "t": 0.73,
+    "n": 3
+   },
+   "Seattle": {
+    "r": -0.9463,
+    "t": -2.93,
+    "n": 3
+   },
+   "Baltimore": {
+    "r": 0.4145,
+    "t": 0.46,
+    "n": 3
+   },
+   "Milwaukee": {
+    "r": 0.3846,
+    "t": 0.42,
+    "n": 3
+   },
+   "Portland": {
+    "r": -0.4361,
+    "t": -0.48,
+    "n": 3
+   },
+   "Kansas City": {
+    "r": -0.8504,
+    "t": -1.62,
+    "n": 3
+   },
+   "Albuquerque": {
+    "r": 0.9918,
+    "t": 7.76,
+    "n": 3
+   },
+   "Tucson": {
+    "r": 0.4065,
+    "t": 0.44,
+    "n": 3
+   },
+   "Fresno": {
+    "r": -0.7743,
+    "t": -1.22,
+    "n": 3
+   },
+   "Sacramento": {
+    "r": -0.9208,
+    "t": -2.36,
+    "n": 3
+   },
+   "Long Beach": {
+    "r": -0.0722,
+    "t": -0.07,
+    "n": 3
+   },
+   "Omaha": {
+    "r": 0.1682,
+    "t": 0.17,
+    "n": 3
+   },
+   "Virginia Beach": {
+    "r": 0.9663,
+    "t": 3.75,
+    "n": 3
+   },
+   "Tulsa": {
+    "r": 0.6969,
+    "t": 0.97,
+    "n": 3
+   },
+   "Wichita": {
+    "r": -0.0019,
+    "t": -0.0,
+    "n": 3
+   }
+  },
+  "signs": {
+   "pos": 13,
+   "neg": 14,
+   "n": 27
+  }
+ },
+ "care_secondary": {
+  "pooled": [
+   0.336,
+   2.6,
+   55
+  ],
+  "within_city_care_delta_arrests_delta_2012_2014": [
+   -0.2129,
+   -1.09,
+   27
+  ]
+ },
+ "deep9_2015_2024_arc": {
+  "murder_t_arrests_t+0": [
+   0.1572,
+   0.89,
+   33
+  ],
+  "murder_t_arrests_t+1": [
+   -0.0546,
+   -0.26,
+   24
+  ],
+  "murder_t_arrests_t+2": [
+   -0.3687,
+   -1.77,
+   22
+  ],
+  "murder_t_arrests_t+3": [
+   -0.4721,
+   -2.07,
+   17
+  ]
+ },
+ "honest_gaps": {
+  "Jacksonville": "CDE SRS arrests: zero months reported 2011-2019 (JSO no SRS submission) \u2014 excluded, honest-null",
+  "Raleigh": "2015-2017 zero months in CDE; 2014 5/12, 2018 3/12 partial (excluded) \u2014 honest-null",
+  "Fresno": "2019=10/12 months only (partial, flagged)",
+  "care_2017": "individual-unit file does not exist (2015 last) \u2014 care vintage 2012/2014 only"
+ },
+ "files": [
+  "_bridge/_wide_arrests.jsonl",
+  "bookings_wide_test.json",
+  "bookings_facility_v1.jsonl"
+ ]
+}

@@ -1,0 +1,5592 @@
+{
+ "_record": "occupation_mix_v1",
+ "built": "2026-11-24",
+ "built_by": "NEXT-1 subagent (the OCCUPATION-MIX PULL; parent board item #1: which occupations make Houston p90 $128,040 and Memphis p90 $100,640)",
+ "task_ref": "parent: board Model-lane item #1 (employer-structure deep-dive); extends banked wage_stratified_v1 (p10/p25/median/p75/p90 anchors) to the OCCUPATION grain",
+ "route": "keyless OEWS time-series DB download.bls.gov/pub/time.series/oe/ : oe.series (6,023,971 series) filtered to 10 metro area codes + oe.data.1.AllData 2025 vintage; occupation reference oe.occupation (1,105 rows); industry=000000 (all industries); place-of-work metro grain",
+ "datatype_codes": {
+  "01": "employment",
+  "04": "annual mean wage",
+  "11": "annual p10",
+  "12": "annual p25",
+  "13": "annual median",
+  "14": "annual p75",
+  "15": "annual p90",
+  "16": "emp per 1000 jobs",
+  "17": "location quotient"
+ },
+ "band_definition": "specialized band = detailed (6-digit) occupations whose metro annual MEAN wage >= (2/3) x metro-p90 (mean-anchored band); employment-weighted",
+ "verify_against_banked": [
+  {
+   "metro": "Boston",
+   "field": "p90",
+   "banked": 168090.0,
+   "pulled": 168090.0,
+   "match": true
+  },
+  {
+   "metro": "Boston",
+   "field": "p10",
+   "banked": 36760.0,
+   "pulled": 36760.0,
+   "match": true
+  },
+  {
+   "metro": "Boston",
+   "field": "p25",
+   "banked": 45850.0,
+   "pulled": 45850.0,
+   "match": true
+  },
+  {
+   "metro": "Boston",
+   "field": "median",
+   "banked": 66620.0,
+   "pulled": 66620.0,
+   "match": true
+  },
+  {
+   "metro": "Boston",
+   "field": "p75",
+   "banked": 106230.0,
+   "pulled": 106230.0,
+   "match": true
+  },
+  {
+   "metro": "Boston",
+   "field": "mean",
+   "banked": 89620.0,
+   "pulled": 89620.0,
+   "match": true
+  },
+  {
+   "metro": "Boston",
+   "field": "employment",
+   "banked": 2703890.0,
+   "pulled": 2703890.0,
+   "match": true
+  },
+  {
+   "metro": "Cincinnati",
+   "field": "p90",
+   "banked": 119580.0,
+   "pulled": 119580.0,
+   "match": true
+  },
+  {
+   "metro": "Cincinnati",
+   "field": "p10",
+   "banked": 29780.0,
+   "pulled": 29780.0,
+   "match": true
+  },
+  {
+   "metro": "Cincinnati",
+   "field": "p25",
+   "banked": 37300.0,
+   "pulled": 37300.0,
+   "match": true
+  },
+  {
+   "metro": "Cincinnati",
+   "field": "median",
+   "banked": 50170.0,
+   "pulled": 50170.0,
+   "match": true
+  },
+  {
+   "metro": "Cincinnati",
+   "field": "p75",
+   "banked": 79310.0,
+   "pulled": 79310.0,
+   "match": true
+  },
+  {
+   "metro": "Cincinnati",
+   "field": "mean",
+   "banked": 67370.0,
+   "pulled": 67370.0,
+   "match": true
+  },
+  {
+   "metro": "Cincinnati",
+   "field": "employment",
+   "banked": 1101030.0,
+   "pulled": 1101030.0,
+   "match": true
+  },
+  {
+   "metro": "Detroit",
+   "field": "p90",
+   "banked": 127470.0,
+   "pulled": 127470.0,
+   "match": true
+  },
+  {
+   "metro": "Detroit",
+   "field": "p10",
+   "banked": 30990.0,
+   "pulled": 30990.0,
+   "match": true
+  },
+  {
+   "metro": "Detroit",
+   "field": "p25",
+   "banked": 37880.0,
+   "pulled": 37880.0,
+   "match": true
+  },
+  {
+   "metro": "Detroit",
+   "field": "median",
+   "banked": 52080.0,
+   "pulled": 52080.0,
+   "match": true
+  },
+  {
+   "metro": "Detroit",
+   "field": "p75",
+   "banked": 81700.0,
+   "pulled": 81700.0,
+   "match": true
+  },
+  {
+   "metro": "Detroit",
+   "field": "mean",
+   "banked": 69210.0,
+   "pulled": 69210.0,
+   "match": true
+  },
+  {
+   "metro": "Detroit",
+   "field": "employment",
+   "banked": 1904530.0,
+   "pulled": 1904530.0,
+   "match": true
+  },
+  {
+   "metro": "Houston",
+   "field": "p90",
+   "banked": 128040.0,
+   "pulled": 128040.0,
+   "match": true
+  },
+  {
+   "metro": "Houston",
+   "field": "p10",
+   "banked": 27380.0,
+   "pulled": 27380.0,
+   "match": true
+  },
+  {
+   "metro": "Houston",
+   "field": "p25",
+   "banked": 35640.0,
+   "pulled": 35640.0,
+   "match": true
+  },
+  {
+   "metro": "Houston",
+   "field": "median",
+   "banked": 49410.0,
+   "pulled": 49410.0,
+   "match": true
+  },
+  {
+   "metro": "Houston",
+   "field": "p75",
+   "banked": 79260.0,
+   "pulled": 79260.0,
+   "match": true
+  },
+  {
+   "metro": "Houston",
+   "field": "mean",
+   "banked": 67610.0,
+   "pulled": 67610.0,
+   "match": true
+  },
+  {
+   "metro": "Houston",
+   "field": "employment",
+   "banked": 3289720.0,
+   "pulled": 3289720.0,
+   "match": true
+  },
+  {
+   "metro": "Memphis",
+   "field": "p90",
+   "banked": 100640.0,
+   "pulled": 100640.0,
+   "match": true
+  },
+  {
+   "metro": "Memphis",
+   "field": "p10",
+   "banked": 28880.0,
+   "pulled": 28880.0,
+   "match": true
+  },
+  {
+   "metro": "Memphis",
+   "field": "p25",
+   "banked": 36020.0,
+   "pulled": 36020.0,
+   "match": true
+  },
+  {
+   "metro": "Memphis",
+   "field": "median",
+   "banked": 46890.0,
+   "pulled": 46890.0,
+   "match": true
+  },
+  {
+   "metro": "Memphis",
+   "field": "p75",
+   "banked": 70400.0,
+   "pulled": 70400.0,
+   "match": true
+  },
+  {
+   "metro": "Memphis",
+   "field": "mean",
+   "banked": 60240.0,
+   "pulled": 60240.0,
+   "match": true
+  },
+  {
+   "metro": "Memphis",
+   "field": "employment",
+   "banked": 611670.0,
+   "pulled": 611670.0,
+   "match": true
+  },
+  {
+   "metro": "New Orleans",
+   "field": "p90",
+   "banked": 106950.0,
+   "pulled": 106950.0,
+   "match": true
+  },
+  {
+   "metro": "New Orleans",
+   "field": "p10",
+   "banked": 23690.0,
+   "pulled": 23690.0,
+   "match": true
+  },
+  {
+   "metro": "New Orleans",
+   "field": "p25",
+   "banked": 31690.0,
+   "pulled": 31690.0,
+   "match": true
+  },
+  {
+   "metro": "New Orleans",
+   "field": "median",
+   "banked": 47290.0,
+   "pulled": 47290.0,
+   "match": true
+  },
+  {
+   "metro": "New Orleans",
+   "field": "p75",
+   "banked": 74860.0,
+   "pulled": 74860.0,
+   "match": true
+  },
+  {
+   "metro": "New Orleans",
+   "field": "mean",
+   "banked": 61050.0,
+   "pulled": 61050.0,
+   "match": true
+  },
+  {
+   "metro": "New Orleans",
+   "field": "employment",
+   "banked": 445550.0,
+   "pulled": 445550.0,
+   "match": true
+  },
+  {
+   "metro": "New York",
+   "field": "p90",
+   "banked": 166080.0,
+   "pulled": 166080.0,
+   "match": true
+  },
+  {
+   "metro": "New York",
+   "field": "p10",
+   "banked": 36130.0,
+   "pulled": 36130.0,
+   "match": true
+  },
+  {
+   "metro": "New York",
+   "field": "p25",
+   "banked": 42560.0,
+   "pulled": 42560.0,
+   "match": true
+  },
+  {
+   "metro": "New York",
+   "field": "median",
+   "banked": 61430.0,
+   "pulled": 61430.0,
+   "match": true
+  },
+  {
+   "metro": "New York",
+   "field": "p75",
+   "banked": 103500.0,
+   "pulled": 103500.0,
+   "match": true
+  },
+  {
+   "metro": "New York",
+   "field": "mean",
+   "banked": 86310.0,
+   "pulled": 86310.0,
+   "match": true
+  },
+  {
+   "metro": "New York",
+   "field": "employment",
+   "banked": 9492000.0,
+   "pulled": 9492000.0,
+   "match": true
+  },
+  {
+   "metro": "Oklahoma City",
+   "field": "p90",
+   "banked": 104460.0,
+   "pulled": 104460.0,
+   "match": true
+  },
+  {
+   "metro": "Oklahoma City",
+   "field": "p10",
+   "banked": 26830.0,
+   "pulled": 26830.0,
+   "match": true
+  },
+  {
+   "metro": "Oklahoma City",
+   "field": "p25",
+   "banked": 34600.0,
+   "pulled": 34600.0,
+   "match": true
+  },
+  {
+   "metro": "Oklahoma City",
+   "field": "median",
+   "banked": 47230.0,
+   "pulled": 47230.0,
+   "match": true
+  },
+  {
+   "metro": "Oklahoma City",
+   "field": "p75",
+   "banked": 73500.0,
+   "pulled": 73500.0,
+   "match": true
+  },
+  {
+   "metro": "Oklahoma City",
+   "field": "mean",
+   "banked": 60330.0,
+   "pulled": 60330.0,
+   "match": true
+  },
+  {
+   "metro": "Oklahoma City",
+   "field": "employment",
+   "banked": 677680.0,
+   "pulled": 677680.0,
+   "match": true
+  },
+  {
+   "metro": "Pittsburgh",
+   "field": "p90",
+   "banked": 115400.0,
+   "pulled": 115400.0,
+   "match": true
+  },
+  {
+   "metro": "Pittsburgh",
+   "field": "p10",
+   "banked": 28500.0,
+   "pulled": 28500.0,
+   "match": true
+  },
+  {
+   "metro": "Pittsburgh",
+   "field": "p25",
+   "banked": 36630.0,
+   "pulled": 36630.0,
+   "match": true
+  },
+  {
+   "metro": "Pittsburgh",
+   "field": "median",
+   "banked": 49650.0,
+   "pulled": 49650.0,
+   "match": true
+  },
+  {
+   "metro": "Pittsburgh",
+   "field": "p75",
+   "banked": 77830.0,
+   "pulled": 77830.0,
+   "match": true
+  },
+  {
+   "metro": "Pittsburgh",
+   "field": "mean",
+   "banked": 65230.0,
+   "pulled": 65230.0,
+   "match": true
+  },
+  {
+   "metro": "Pittsburgh",
+   "field": "employment",
+   "banked": 1114490.0,
+   "pulled": 1114490.0,
+   "match": true
+  },
+  {
+   "metro": "St. Louis",
+   "field": "p90",
+   "banked": 115090.0,
+   "pulled": 115090.0,
+   "match": true
+  },
+  {
+   "metro": "St. Louis",
+   "field": "p10",
+   "banked": 31200.0,
+   "pulled": 31200.0,
+   "match": true
+  },
+  {
+   "metro": "St. Louis",
+   "field": "p25",
+   "banked": 37050.0,
+   "pulled": 37050.0,
+   "match": true
+  },
+  {
+   "metro": "St. Louis",
+   "field": "median",
+   "banked": 49990.0,
+   "pulled": 49990.0,
+   "match": true
+  },
+  {
+   "metro": "St. Louis",
+   "field": "p75",
+   "banked": 78730.0,
+   "pulled": 78730.0,
+   "match": true
+  },
+  {
+   "metro": "St. Louis",
+   "field": "mean",
+   "banked": 66330.0,
+   "pulled": 66330.0,
+   "match": true
+  },
+  {
+   "metro": "St. Louis",
+   "field": "employment",
+   "banked": 1341320.0,
+   "pulled": 1341320.0,
+   "match": true
+  }
+ ],
+ "national_all_occupations_2025": {
+  "01": 155495730.0,
+  "04": 69770.0,
+  "11": 31200.0,
+  "12": 37590.0,
+  "13": 50980.0,
+  "14": 80520.0,
+  "15": 128560.0,
+  "16": null
+ },
+ "national_specialized_band": {
+  "p90": 128560.0,
+  "threshold_mean_wage": 85706.66666666666,
+  "occupations_n": 313,
+  "employment": 95904250.0,
+  "employment_share_pct": 61.7,
+  "weighted_mean_wage": 124751.0,
+  "top12_by_employment": [
+   {
+    "occ": "131000",
+    "name": "Business Operations Specialists",
+    "employment": 7485920.0,
+    "mean_wage": 92830.0
+   },
+   {
+    "occ": "291000",
+    "name": "Healthcare Diagnosing or Treating Practitioners",
+    "employment": 6534980.0,
+    "mean_wage": 132000.0
+   },
+   {
+    "occ": "151200",
+    "name": "Computer Occupations",
+    "employment": 4827720.0,
+    "mean_wage": 120100.0
+   },
+   {
+    "occ": "111000",
+    "name": "Top Executives",
+    "employment": 3720520.0,
+    "mean_wage": 142120.0
+   },
+   {
+    "occ": "111021",
+    "name": "General and Operations Managers",
+    "employment": 3503020.0,
+    "mean_wage": 134940.0
+   },
+   {
+    "occ": "119000",
+    "name": "Other Management Occupations",
+    "employment": 3468900.0,
+    "mean_wage": 124950.0
+   },
+   {
+    "occ": "291141",
+    "name": "Registered Nurses",
+    "employment": 3379720.0,
+    "mean_wage": 101420.0
+   },
+   {
+    "occ": "132000",
+    "name": "Financial Specialists",
+    "employment": 3051310.0,
+    "mean_wage": 101120.0
+   },
+   {
+    "occ": "113000",
+    "name": "Operations Specialties Managers",
+    "employment": 2775810.0,
+    "mean_wage": 165330.0
+   },
+   {
+    "occ": "413000",
+    "name": "Sales Representatives, Services",
+    "employment": 2371490.0,
+    "mean_wage": 87040.0
+   },
+   {
+    "occ": "151250",
+    "name": "Software and Web Developers, Programmers, and Testers",
+    "employment": 2150380.0,
+    "mean_wage": 139850.0
+   },
+   {
+    "occ": "172000",
+    "name": "Engineers",
+    "employment": 1800740.0,
+    "mean_wage": 119640.0
+   }
+  ]
+ },
+ "metros": {
+  "New York": {
+   "all_occupations_2025": {
+    "01": 9492000.0,
+    "02": 0.0,
+    "03": 41.5,
+    "04": 86310.0,
+    "05": 0.2,
+    "06": 17.37,
+    "07": 20.46,
+    "08": 29.53,
+    "09": 49.76,
+    "10": 79.84,
+    "11": 36130.0,
+    "12": 42560.0,
+    "13": 61430.0,
+    "14": 103500.0,
+    "15": 166080.0,
+    "16": 1000.0,
+    "17": 1.0
+   },
+   "specialized_band": {
+    "threshold_mean_wage": 110720.0,
+    "occupations_n": 176,
+    "employment": 2228640.0,
+    "employment_share_pct": 23.479140328697852,
+    "weighted_mean_wage": 166496.60685440447
+   },
+   "band_composition_by_group": [
+    {
+     "group": "Management",
+     "employment": 673930,
+     "band_share_pct": 30.2,
+     "occupations_n": 27,
+     "weighted_mean_wage": 202396.0
+    },
+    {
+     "group": "Business/Financial",
+     "employment": 398480,
+     "band_share_pct": 17.9,
+     "occupations_n": 13,
+     "weighted_mean_wage": 136904.0
+    },
+    {
+     "group": "Healthcare Practitioners",
+     "employment": 369240,
+     "band_share_pct": 16.6,
+     "occupations_n": 35,
+     "weighted_mean_wage": 157290.0
+    },
+    {
+     "group": "Computer/Math",
+     "employment": 281770,
+     "band_share_pct": 12.6,
+     "occupations_n": 17,
+     "weighted_mean_wage": 148825.0
+    },
+    {
+     "group": "Sales",
+     "employment": 110520,
+     "band_share_pct": 5.0,
+     "occupations_n": 6,
+     "weighted_mean_wage": 155729.0
+    },
+    {
+     "group": "Legal",
+     "employment": 97120,
+     "band_share_pct": 4.4,
+     "occupations_n": 3,
+     "weighted_mean_wage": 223113.0
+    },
+    {
+     "group": "Arts/Media",
+     "employment": 69180,
+     "band_share_pct": 3.1,
+     "occupations_n": 10,
+     "weighted_mean_wage": 144378.0
+    },
+    {
+     "group": "Architecture/Engineering",
+     "employment": 63370,
+     "band_share_pct": 2.8,
+     "occupations_n": 15,
+     "weighted_mean_wage": 123988.0
+    },
+    {
+     "group": "Education/Library",
+     "employment": 57720,
+     "band_share_pct": 2.6,
+     "occupations_n": 20,
+     "weighted_mean_wage": 134114.0
+    },
+    {
+     "group": "Science",
+     "employment": 35430,
+     "band_share_pct": 1.6,
+     "occupations_n": 14,
+     "weighted_mean_wage": 126624.0
+    },
+    {
+     "group": "Transportation/Material Moving",
+     "employment": 33480,
+     "band_share_pct": 1.5,
+     "occupations_n": 6,
+     "weighted_mean_wage": 179654.0
+    },
+    {
+     "group": "Protective Service",
+     "employment": 28150,
+     "band_share_pct": 1.3,
+     "occupations_n": 4,
+     "weighted_mean_wage": 133173.0
+    },
+    {
+     "group": "Install/Maintain/Repair",
+     "employment": 5110,
+     "band_share_pct": 0.2,
+     "occupations_n": 1,
+     "weighted_mean_wage": 138480.0
+    },
+    {
+     "group": "Construction/Extraction",
+     "employment": 3270,
+     "band_share_pct": 0.1,
+     "occupations_n": 1,
+     "weighted_mean_wage": 134710.0
+    },
+    {
+     "group": "Production",
+     "employment": 1690,
+     "band_share_pct": 0.1,
+     "occupations_n": 3,
+     "weighted_mean_wage": 123547.0
+    },
+    {
+     "group": "Personal Care",
+     "employment": 180,
+     "band_share_pct": 0.0,
+     "occupations_n": 1,
+     "weighted_mean_wage": 118920.0
+    }
+   ],
+   "band_mass_top12_by_employment": [
+    {
+     "occ": "291141",
+     "name": "Registered Nurses",
+     "employment": 197740.0,
+     "mean_wage": 119600.0,
+     "band_share_pct": 8.9
+    },
+    {
+     "occ": "111021",
+     "name": "General and Operations Managers",
+     "employment": 177850.0,
+     "mean_wage": 189200.0,
+     "band_share_pct": 8.0
+    },
+    {
+     "occ": "151252",
+     "name": "Software Developers",
+     "employment": 121000.0,
+     "mean_wage": 165870.0,
+     "band_share_pct": 5.4
+    },
+    {
+     "occ": "132011",
+     "name": "Accountants and Auditors",
+     "employment": 111930.0,
+     "mean_wage": 119280.0,
+     "band_share_pct": 5.0
+    },
+    {
+     "occ": "231011",
+     "name": "Lawyers",
+     "employment": 94610.0,
+     "mean_wage": 224840.0,
+     "band_share_pct": 4.2
+    },
+    {
+     "occ": "113031",
+     "name": "Financial Managers",
+     "employment": 89960.0,
+     "mean_wage": 250570.0,
+     "band_share_pct": 4.0
+    },
+    {
+     "occ": "131082",
+     "name": "Project Management Specialists",
+     "employment": 68910.0,
+     "mean_wage": 131730.0,
+     "band_share_pct": 3.1
+    },
+    {
+     "occ": "131111",
+     "name": "Management Analysts",
+     "employment": 67630.0,
+     "mean_wage": 133590.0,
+     "band_share_pct": 3.0
+    },
+    {
+     "occ": "113021",
+     "name": "Computer and Information Systems Managers",
+     "employment": 62430.0,
+     "mean_wage": 224990.0,
+     "band_share_pct": 2.8
+    },
+    {
+     "occ": "413031",
+     "name": "Securities, Commodities, and Financial Services Sales Agents",
+     "employment": 59450.0,
+     "mean_wage": 182580.0,
+     "band_share_pct": 2.7
+    },
+    {
+     "occ": "112021",
+     "name": "Marketing Managers",
+     "employment": 54730.0,
+     "mean_wage": 207770.0,
+     "band_share_pct": 2.5
+    },
+    {
+     "occ": "132051",
+     "name": "Financial and Investment Analysts",
+     "employment": 53870.0,
+     "mean_wage": 148350.0,
+     "band_share_pct": 2.4
+    }
+   ],
+   "top10_by_mean_wage": [
+    {
+     "occ": "291212",
+     "name": "Cardiologists",
+     "emp": 2050.0,
+     "mean_wage": 420460.0
+    },
+    {
+     "occ": "111011",
+     "name": "Chief Executives",
+     "emp": 7180.0,
+     "mean_wage": 392410.0
+    },
+    {
+     "occ": "291243",
+     "name": "Pediatric Surgeons",
+     "emp": 110.0,
+     "mean_wage": 388320.0
+    },
+    {
+     "occ": "291224",
+     "name": "Radiologists",
+     "emp": 1950.0,
+     "mean_wage": 365850.0
+    },
+    {
+     "occ": "291249",
+     "name": "Surgeons, All Other",
+     "emp": 4290.0,
+     "mean_wage": 364870.0
+    },
+    {
+     "occ": "291211",
+     "name": "Anesthesiologists",
+     "emp": 7080.0,
+     "mean_wage": 354810.0
+    },
+    {
+     "occ": "291242",
+     "name": "Orthopedic Surgeons, Except Pediatric",
+     "emp": 1520.0,
+     "mean_wage": 347610.0
+    },
+    {
+     "occ": "291213",
+     "name": "Dermatologists",
+     "emp": 2040.0,
+     "mean_wage": 323720.0
+    },
+    {
+     "occ": "291222",
+     "name": "Physicians, Pathologists",
+     "emp": 1140.0,
+     "mean_wage": 310550.0
+    },
+    {
+     "occ": "532011",
+     "name": "Airline Pilots, Copilots, and Flight Engineers",
+     "emp": 10030.0,
+     "mean_wage": 297880.0
+    }
+   ],
+   "major_group_employment_shares": {
+    "all_occupations_employment": 9492000.0,
+    "major_groups": {
+     "11": {
+      "name": "Management",
+      "employment": 713690.0,
+      "share_pct": 7.52
+     },
+     "13": {
+      "name": "Business/Financial",
+      "employment": 725700.0,
+      "share_pct": 7.65
+     },
+     "15": {
+      "name": "Computer/Math",
+      "employment": 328950.0,
+      "share_pct": 3.47
+     },
+     "17": {
+      "name": "Architecture/Engineering",
+      "employment": 85360.0,
+      "share_pct": 0.9
+     },
+     "19": {
+      "name": "Science",
+      "employment": 79800.0,
+      "share_pct": 0.84
+     },
+     "21": {
+      "name": "Community/Social Service",
+      "employment": 181890.0,
+      "share_pct": 1.92
+     },
+     "23": {
+      "name": "Legal",
+      "employment": 135520.0,
+      "share_pct": 1.43
+     },
+     "25": {
+      "name": "Education/Library",
+      "employment": 659680.0,
+      "share_pct": 6.95
+     },
+     "27": {
+      "name": "Arts/Media",
+      "employment": 192960.0,
+      "share_pct": 2.03
+     },
+     "29": {
+      "name": "Healthcare Practitioners",
+      "employment": 603870.0,
+      "share_pct": 6.36
+     },
+     "31": {
+      "name": "Healthcare Support",
+      "employment": 843730.0,
+      "share_pct": 8.89
+     },
+     "33": {
+      "name": "Protective Service",
+      "employment": 321560.0,
+      "share_pct": 3.39
+     },
+     "35": {
+      "name": "Food Prep",
+      "employment": 697700.0,
+      "share_pct": 7.35
+     },
+     "37": {
+      "name": "Buildings/Grounds",
+      "employment": 300120.0,
+      "share_pct": 3.16
+     },
+     "39": {
+      "name": "Personal Care",
+      "employment": 230370.0,
+      "share_pct": 2.43
+     },
+     "41": {
+      "name": "Sales",
+      "employment": 751110.0,
+      "share_pct": 7.91
+     },
+     "43": {
+      "name": "Office/Admin",
+      "employment": 1109360.0,
+      "share_pct": 11.69
+     },
+     "45": {
+      "name": "Farming",
+      "employment": 3370.0,
+      "share_pct": 0.04
+     },
+     "47": {
+      "name": "Construction/Extraction",
+      "employment": 285220.0,
+      "share_pct": 3.0
+     },
+     "49": {
+      "name": "Install/Maintain/Repair",
+      "employment": 293830.0,
+      "share_pct": 3.1
+     },
+     "51": {
+      "name": "Production",
+      "employment": 249060.0,
+      "share_pct": 2.62
+     },
+     "53": {
+      "name": "Transport/Material Moving",
+      "employment": 699160.0,
+      "share_pct": 7.37
+     }
+    }
+   },
+   "major_group_p90": {
+    "11": {
+     "name": "Management",
+     "p90": 337760.0
+    },
+    "13": {
+     "name": "Business/Financial",
+     "p90": 182010.0
+    },
+    "15": {
+     "name": "Computer/Math",
+     "p90": 214740.0
+    },
+    "17": {
+     "name": "Architecture/Engineering",
+     "p90": 170460.0
+    },
+    "19": {
+     "name": "Science",
+     "p90": 161430.0
+    },
+    "21": {
+     "name": "Community/Social Service",
+     "p90": 104400.0
+    },
+    "23": {
+     "name": "Legal",
+     "p90": 380980.0
+    },
+    "25": {
+     "name": "Education/Library",
+     "p90": 135690.0
+    },
+    "27": {
+     "name": "Arts/Media",
+     "p90": 174940.0
+    },
+    "29": {
+     "name": "Healthcare Practitioners",
+     "p90": 197890.0
+    },
+    "31": {
+     "name": "Healthcare Support",
+     "p90": 52440.0
+    },
+    "33": {
+     "name": "Protective Service",
+     "p90": 119390.0
+    },
+    "35": {
+     "name": "Food Prep",
+     "p90": 67080.0
+    },
+    "37": {
+     "name": "Buildings/Grounds",
+     "p90": 64270.0
+    },
+    "39": {
+     "name": "Personal Care",
+     "p90": 69430.0
+    },
+    "41": {
+     "name": "Sales",
+     "p90": 158940.0
+    },
+    "43": {
+     "name": "Office/Admin",
+     "p90": 87360.0
+    },
+    "45": {
+     "name": "Farming",
+     "p90": 71260.0
+    },
+    "47": {
+     "name": "Construction/Extraction",
+     "p90": 130420.0
+    },
+    "49": {
+     "name": "Install/Maintain/Repair",
+     "p90": 107020.0
+    },
+    "51": {
+     "name": "Production",
+     "p90": 82990.0
+    },
+    "53": {
+     "name": "Transport/Material Moving",
+     "p90": 84700.0
+    }
+   },
+   "lq_top_specialized": []
+  },
+  "Boston": {
+   "all_occupations_2025": {
+    "01": 2703890.0,
+    "02": 0.0,
+    "03": 43.09,
+    "04": 89620.0,
+    "05": 0.3,
+    "06": 17.67,
+    "07": 22.04,
+    "08": 32.03,
+    "09": 51.07,
+    "10": 80.81,
+    "11": 36760.0,
+    "12": 45850.0,
+    "13": 66620.0,
+    "14": 106230.0,
+    "15": 168090.0,
+    "16": 1000.0,
+    "17": 1.0
+   },
+   "specialized_band": {
+    "threshold_mean_wage": 112060.0,
+    "occupations_n": 143,
+    "employment": 689360.0,
+    "employment_share_pct": 25.49511999378673,
+    "weighted_mean_wage": 156500.18147267032
+   },
+   "band_composition_by_group": [
+    {
+     "group": "Management",
+     "employment": 233860,
+     "band_share_pct": 33.9,
+     "occupations_n": 25,
+     "weighted_mean_wage": 182489.0
+    },
+    {
+     "group": "Computer/Math",
+     "employment": 108760,
+     "band_share_pct": 15.8,
+     "occupations_n": 15,
+     "weighted_mean_wage": 144912.0
+    },
+    {
+     "group": "Healthcare Practitioners",
+     "employment": 101300,
+     "band_share_pct": 14.7,
+     "occupations_n": 23,
+     "weighted_mean_wage": 148067.0
+    },
+    {
+     "group": "Business/Financial",
+     "employment": 67020,
+     "band_share_pct": 9.7,
+     "occupations_n": 8,
+     "weighted_mean_wage": 134443.0
+    },
+    {
+     "group": "Architecture/Engineering",
+     "employment": 51720,
+     "band_share_pct": 7.5,
+     "occupations_n": 15,
+     "weighted_mean_wage": 129727.0
+    },
+    {
+     "group": "Science",
+     "employment": 44640,
+     "band_share_pct": 6.5,
+     "occupations_n": 18,
+     "weighted_mean_wage": 133023.0
+    },
+    {
+     "group": "Sales",
+     "employment": 27410,
+     "band_share_pct": 4.0,
+     "occupations_n": 4,
+     "weighted_mean_wage": 127166.0
+    },
+    {
+     "group": "Education/Library",
+     "employment": 23150,
+     "band_share_pct": 3.4,
+     "occupations_n": 20,
+     "weighted_mean_wage": 153147.0
+    },
+    {
+     "group": "Legal",
+     "employment": 21130,
+     "band_share_pct": 3.1,
+     "occupations_n": 4,
+     "weighted_mean_wage": 212762.0
+    },
+    {
+     "group": "Protective Service",
+     "employment": 4830,
+     "band_share_pct": 0.7,
+     "occupations_n": 2,
+     "weighted_mean_wage": 118143.0
+    },
+    {
+     "group": "Arts/Media",
+     "employment": 3800,
+     "band_share_pct": 0.6,
+     "occupations_n": 4,
+     "weighted_mean_wage": 129353.0
+    },
+    {
+     "group": "Construction/Extraction",
+     "employment": 1400,
+     "band_share_pct": 0.2,
+     "occupations_n": 2,
+     "weighted_mean_wage": 113254.0
+    },
+    {
+     "group": "Transportation/Material Moving",
+     "employment": 190,
+     "band_share_pct": 0.0,
+     "occupations_n": 2,
+     "weighted_mean_wage": 133092.0
+    },
+    {
+     "group": "Production",
+     "employment": 150,
+     "band_share_pct": 0.0,
+     "occupations_n": 1,
+     "weighted_mean_wage": 117020.0
+    }
+   ],
+   "band_mass_top12_by_employment": [
+    {
+     "occ": "111021",
+     "name": "General and Operations Managers",
+     "employment": 70950.0,
+     "mean_wage": 163800.0,
+     "band_share_pct": 10.3
+    },
+    {
+     "occ": "291141",
+     "name": "Registered Nurses",
+     "employment": 64240.0,
+     "mean_wage": 121820.0,
+     "band_share_pct": 9.3
+    },
+    {
+     "occ": "151252",
+     "name": "Software Developers",
+     "employment": 42310.0,
+     "mean_wage": 162440.0,
+     "band_share_pct": 6.1
+    },
+    {
+     "occ": "131111",
+     "name": "Management Analysts",
+     "employment": 26450.0,
+     "mean_wage": 149600.0,
+     "band_share_pct": 3.8
+    },
+    {
+     "occ": "113031",
+     "name": "Financial Managers",
+     "employment": 21650.0,
+     "mean_wage": 221800.0,
+     "band_share_pct": 3.1
+    },
+    {
+     "occ": "113021",
+     "name": "Computer and Information Systems Managers",
+     "employment": 20530.0,
+     "mean_wage": 220300.0,
+     "band_share_pct": 3.0
+    },
+    {
+     "occ": "231011",
+     "name": "Lawyers",
+     "employment": 20080.0,
+     "mean_wage": 215680.0,
+     "band_share_pct": 2.9
+    },
+    {
+     "occ": "131082",
+     "name": "Project Management Specialists",
+     "employment": 18840.0,
+     "mean_wage": 121710.0,
+     "band_share_pct": 2.7
+    },
+    {
+     "occ": "151211",
+     "name": "Computer Systems Analysts",
+     "employment": 17470.0,
+     "mean_wage": 131730.0,
+     "band_share_pct": 2.5
+    },
+    {
+     "occ": "191042",
+     "name": "Medical Scientists, Except Epidemiologists",
+     "employment": 16060.0,
+     "mean_wage": 133740.0,
+     "band_share_pct": 2.3
+    },
+    {
+     "occ": "191021",
+     "name": "Biochemists and Biophysicists",
+     "employment": 13370.0,
+     "mean_wage": 139110.0,
+     "band_share_pct": 1.9
+    },
+    {
+     "occ": "132051",
+     "name": "Financial and Investment Analysts",
+     "employment": 13010.0,
+     "mean_wage": 131310.0,
+     "band_share_pct": 1.9
+    }
+   ],
+   "top10_by_mean_wage": [
+    {
+     "occ": "291214",
+     "name": "Emergency Medicine Physicians",
+     "emp": 620.0,
+     "mean_wage": 367120.0
+    },
+    {
+     "occ": "291249",
+     "name": "Surgeons, All Other",
+     "emp": 520.0,
+     "mean_wage": 313610.0
+    },
+    {
+     "occ": "291241",
+     "name": "Ophthalmologists, Except Pediatric",
+     "emp": 330.0,
+     "mean_wage": 295020.0
+    },
+    {
+     "occ": "291222",
+     "name": "Physicians, Pathologists",
+     "emp": 240.0,
+     "mean_wage": 279640.0
+    },
+    {
+     "occ": "291218",
+     "name": "Obstetricians and Gynecologists",
+     "emp": 500.0,
+     "mean_wage": 275860.0
+    },
+    {
+     "occ": "291215",
+     "name": "Family Medicine Physicians",
+     "emp": 2950.0,
+     "mean_wage": 264900.0
+    },
+    {
+     "occ": "119121",
+     "name": "Natural Sciences Managers",
+     "emp": 9570.0,
+     "mean_wage": 260090.0
+    },
+    {
+     "occ": "291229",
+     "name": "Physicians, All Other",
+     "emp": 6350.0,
+     "mean_wage": 245340.0
+    },
+    {
+     "occ": "291221",
+     "name": "Pediatricians, General",
+     "emp": 1860.0,
+     "mean_wage": 235680.0
+    },
+    {
+     "occ": "291216",
+     "name": "General Internal Medicine Physicians",
+     "emp": 1220.0,
+     "mean_wage": 233800.0
+    }
+   ],
+   "major_group_employment_shares": {
+    "all_occupations_employment": 2703890.0,
+    "major_groups": {
+     "11": {
+      "name": "Management",
+      "employment": 254700.0,
+      "share_pct": 9.42
+     },
+     "13": {
+      "name": "Business/Financial",
+      "employment": 242960.0,
+      "share_pct": 8.99
+     },
+     "15": {
+      "name": "Computer/Math",
+      "employment": 128180.0,
+      "share_pct": 4.74
+     },
+     "17": {
+      "name": "Architecture/Engineering",
+      "employment": 65560.0,
+      "share_pct": 2.42
+     },
+     "19": {
+      "name": "Science",
+      "employment": 66650.0,
+      "share_pct": 2.46
+     },
+     "21": {
+      "name": "Community/Social Service",
+      "employment": 52790.0,
+      "share_pct": 1.95
+     },
+     "23": {
+      "name": "Legal",
+      "employment": 29540.0,
+      "share_pct": 1.09
+     },
+     "25": {
+      "name": "Education/Library",
+      "employment": 180160.0,
+      "share_pct": 6.66
+     },
+     "27": {
+      "name": "Arts/Media",
+      "employment": 38240.0,
+      "share_pct": 1.41
+     },
+     "29": {
+      "name": "Healthcare Practitioners",
+      "employment": 184840.0,
+      "share_pct": 6.84
+     },
+     "31": {
+      "name": "Healthcare Support",
+      "employment": 130530.0,
+      "share_pct": 4.83
+     },
+     "33": {
+      "name": "Protective Service",
+      "employment": 60420.0,
+      "share_pct": 2.23
+     },
+     "35": {
+      "name": "Food Prep",
+      "employment": 216600.0,
+      "share_pct": 8.01
+     },
+     "37": {
+      "name": "Buildings/Grounds",
+      "employment": 76370.0,
+      "share_pct": 2.82
+     },
+     "39": {
+      "name": "Personal Care",
+      "employment": 66020.0,
+      "share_pct": 2.44
+     },
+     "41": {
+      "name": "Sales",
+      "employment": 214430.0,
+      "share_pct": 7.93
+     },
+     "43": {
+      "name": "Office/Admin",
+      "employment": 265830.0,
+      "share_pct": 9.83
+     },
+     "45": {
+      "name": "Farming",
+      "employment": 1640.0,
+      "share_pct": 0.06
+     },
+     "47": {
+      "name": "Construction/Extraction",
+      "employment": 93170.0,
+      "share_pct": 3.45
+     },
+     "49": {
+      "name": "Install/Maintain/Repair",
+      "employment": 76150.0,
+      "share_pct": 2.82
+     },
+     "51": {
+      "name": "Production",
+      "employment": 95730.0,
+      "share_pct": 3.54
+     },
+     "53": {
+      "name": "Transport/Material Moving",
+      "employment": 163380.0,
+      "share_pct": 6.04
+     }
+    }
+   },
+   "major_group_p90": {
+    "11": {
+     "name": "Management",
+     "p90": 319250.0
+    },
+    "13": {
+     "name": "Business/Financial",
+     "p90": 169100.0
+    },
+    "15": {
+     "name": "Computer/Math",
+     "p90": 207570.0
+    },
+    "17": {
+     "name": "Architecture/Engineering",
+     "p90": 172270.0
+    },
+    "19": {
+     "name": "Science",
+     "p90": 179190.0
+    },
+    "21": {
+     "name": "Community/Social Service",
+     "p90": 105260.0
+    },
+    "23": {
+     "name": "Legal",
+     "p90": 362850.0
+    },
+    "25": {
+     "name": "Education/Library",
+     "p90": 128730.0
+    },
+    "27": {
+     "name": "Arts/Media",
+     "p90": 138720.0
+    },
+    "29": {
+     "name": "Healthcare Practitioners",
+     "p90": 198070.0
+    },
+    "31": {
+     "name": "Healthcare Support",
+     "p90": 60240.0
+    },
+    "33": {
+     "name": "Protective Service",
+     "p90": 107790.0
+    },
+    "35": {
+     "name": "Food Prep",
+     "p90": 58520.0
+    },
+    "37": {
+     "name": "Buildings/Grounds",
+     "p90": 62330.0
+    },
+    "39": {
+     "name": "Personal Care",
+     "p90": 74920.0
+    },
+    "41": {
+     "name": "Sales",
+     "p90": 128930.0
+    },
+    "43": {
+     "name": "Office/Admin",
+     "p90": 82370.0
+    },
+    "45": {
+     "name": "Farming",
+     "p90": 62730.0
+    },
+    "47": {
+     "name": "Construction/Extraction",
+     "p90": 127590.0
+    },
+    "49": {
+     "name": "Install/Maintain/Repair",
+     "p90": 104840.0
+    },
+    "51": {
+     "name": "Production",
+     "p90": 83040.0
+    },
+    "53": {
+     "name": "Transport/Material Moving",
+     "p90": 75470.0
+    }
+   },
+   "lq_top_specialized": []
+  },
+  "Memphis": {
+   "all_occupations_2025": {
+    "01": 611670.0,
+    "02": 0.0,
+    "03": 28.96,
+    "04": 60240.0,
+    "05": 0.4,
+    "06": 13.89,
+    "07": 17.32,
+    "08": 22.54,
+    "09": 33.84,
+    "10": 48.38,
+    "11": 28880.0,
+    "12": 36020.0,
+    "13": 46890.0,
+    "14": 70400.0,
+    "15": 100640.0,
+    "16": 1000.0,
+    "17": 1.0
+   },
+   "specialized_band": {
+    "threshold_mean_wage": 67093.33333333333,
+    "occupations_n": 200,
+    "employment": 151210.0,
+    "employment_share_pct": 24.720846207922573,
+    "weighted_mean_wage": 102341.92778255406
+   },
+   "band_composition_by_group": [
+    {
+     "group": "Management",
+     "employment": 34090,
+     "band_share_pct": 22.5,
+     "occupations_n": 33,
+     "weighted_mean_wage": 136076.0
+    },
+    {
+     "group": "Business/Financial",
+     "employment": 27540,
+     "band_share_pct": 18.2,
+     "occupations_n": 24,
+     "weighted_mean_wage": 85157.0
+    },
+    {
+     "group": "Healthcare Practitioners",
+     "employment": 25390,
+     "band_share_pct": 16.8,
+     "occupations_n": 30,
+     "weighted_mean_wage": 113384.0
+    },
+    {
+     "group": "Sales",
+     "employment": 10060,
+     "band_share_pct": 6.7,
+     "occupations_n": 6,
+     "weighted_mean_wage": 82664.0
+    },
+    {
+     "group": "Computer/Math",
+     "employment": 9920,
+     "band_share_pct": 6.6,
+     "occupations_n": 16,
+     "weighted_mean_wage": 103044.0
+    },
+    {
+     "group": "Office/Admin",
+     "employment": 9580,
+     "band_share_pct": 6.3,
+     "occupations_n": 2,
+     "weighted_mean_wage": 73875.0
+    },
+    {
+     "group": "Transportation/Material Moving",
+     "employment": 5740,
+     "band_share_pct": 3.8,
+     "occupations_n": 3,
+     "weighted_mean_wage": 71465.0
+    },
+    {
+     "group": "Install/Maintain/Repair",
+     "employment": 5320,
+     "band_share_pct": 3.5,
+     "occupations_n": 5,
+     "weighted_mean_wage": 91545.0
+    },
+    {
+     "group": "Architecture/Engineering",
+     "employment": 4880,
+     "band_share_pct": 3.2,
+     "occupations_n": 19,
+     "weighted_mean_wage": 98666.0
+    },
+    {
+     "group": "Education/Library",
+     "employment": 4600,
+     "band_share_pct": 3.0,
+     "occupations_n": 21,
+     "weighted_mean_wage": 96725.0
+    },
+    {
+     "group": "Production",
+     "employment": 3360,
+     "band_share_pct": 2.2,
+     "occupations_n": 6,
+     "weighted_mean_wage": 74985.0
+    },
+    {
+     "group": "Construction/Extraction",
+     "employment": 2500,
+     "band_share_pct": 1.7,
+     "occupations_n": 1,
+     "weighted_mean_wage": 77690.0
+    },
+    {
+     "group": "Protective Service",
+     "employment": 2420,
+     "band_share_pct": 1.6,
+     "occupations_n": 7,
+     "weighted_mean_wage": 79915.0
+    },
+    {
+     "group": "Legal",
+     "employment": 1780,
+     "band_share_pct": 1.2,
+     "occupations_n": 3,
+     "weighted_mean_wage": 156726.0
+    },
+    {
+     "group": "Science",
+     "employment": 1590,
+     "band_share_pct": 1.1,
+     "occupations_n": 13,
+     "weighted_mean_wage": 85522.0
+    },
+    {
+     "group": "Arts/Media",
+     "employment": 1330,
+     "band_share_pct": 0.9,
+     "occupations_n": 7,
+     "weighted_mean_wage": 72964.0
+    },
+    {
+     "group": "Food Prep",
+     "employment": 540,
+     "band_share_pct": 0.4,
+     "occupations_n": 1,
+     "weighted_mean_wage": 68660.0
+    },
+    {
+     "group": "Community/Social Service",
+     "employment": 420,
+     "band_share_pct": 0.3,
+     "occupations_n": 2,
+     "weighted_mean_wage": 67269.0
+    },
+    {
+     "group": "Healthcare Support",
+     "employment": 150,
+     "band_share_pct": 0.1,
+     "occupations_n": 1,
+     "weighted_mean_wage": 67710.0
+    }
+   ],
+   "band_mass_top12_by_employment": [
+    {
+     "occ": "291141",
+     "name": "Registered Nurses",
+     "employment": 13760.0,
+     "mean_wage": 87370.0,
+     "band_share_pct": 9.1
+    },
+    {
+     "occ": "111021",
+     "name": "General and Operations Managers",
+     "employment": 9730.0,
+     "mean_wage": 132440.0,
+     "band_share_pct": 6.4
+    },
+    {
+     "occ": "431011",
+     "name": "First-Line Supervisors of Office and Administrative Support Workers",
+     "employment": 8710.0,
+     "mean_wage": 74400.0,
+     "band_share_pct": 5.8
+    },
+    {
+     "occ": "531047",
+     "name": "First-Line Supervisors of Transportation and Material Moving Workers, Except Aircraft Cargo Handling",
+     "employment": 5470.0,
+     "mean_wage": 68620.0,
+     "band_share_pct": 3.6
+    },
+    {
+     "occ": "132011",
+     "name": "Accountants and Auditors",
+     "employment": 4390.0,
+     "mean_wage": 82520.0,
+     "band_share_pct": 2.9
+    },
+    {
+     "occ": "414012",
+     "name": "Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products",
+     "employment": 4290.0,
+     "mean_wage": 73850.0,
+     "band_share_pct": 2.8
+    },
+    {
+     "occ": "131071",
+     "name": "Human Resources Specialists",
+     "employment": 3650.0,
+     "mean_wage": 74330.0,
+     "band_share_pct": 2.4
+    },
+    {
+     "occ": "131082",
+     "name": "Project Management Specialists",
+     "employment": 2960.0,
+     "mean_wage": 91760.0,
+     "band_share_pct": 2.0
+    },
+    {
+     "occ": "511011",
+     "name": "First-Line Supervisors of Production and Operating Workers",
+     "employment": 2910.0,
+     "mean_wage": 73180.0,
+     "band_share_pct": 1.9
+    },
+    {
+     "occ": "113031",
+     "name": "Financial Managers",
+     "employment": 2750.0,
+     "mean_wage": 169130.0,
+     "band_share_pct": 1.8
+    },
+    {
+     "occ": "119199",
+     "name": "Managers, All Other",
+     "employment": 2620.0,
+     "mean_wage": 125460.0,
+     "band_share_pct": 1.7
+    },
+    {
+     "occ": "491011",
+     "name": "First-Line Supervisors of Mechanics, Installers, and Repairers",
+     "employment": 2600.0,
+     "mean_wage": 80490.0,
+     "band_share_pct": 1.7
+    }
+   ],
+   "top10_by_mean_wage": [
+    {
+     "occ": "291217",
+     "name": "Neurologists",
+     "emp": 30.0,
+     "mean_wage": 439130.0
+    },
+    {
+     "occ": "291229",
+     "name": "Physicians, All Other",
+     "emp": 950.0,
+     "mean_wage": 379900.0
+    },
+    {
+     "occ": "291242",
+     "name": "Orthopedic Surgeons, Except Pediatric",
+     "emp": 60.0,
+     "mean_wage": 370050.0
+    },
+    {
+     "occ": "291215",
+     "name": "Family Medicine Physicians",
+     "emp": 360.0,
+     "mean_wage": 344940.0
+    },
+    {
+     "occ": "111011",
+     "name": "Chief Executives",
+     "emp": 680.0,
+     "mean_wage": 254350.0
+    },
+    {
+     "occ": "291221",
+     "name": "Pediatricians, General",
+     "emp": 120.0,
+     "mean_wage": 232680.0
+    },
+    {
+     "occ": "291151",
+     "name": "Nurse Anesthetists",
+     "emp": 200.0,
+     "mean_wage": 228640.0
+    },
+    {
+     "occ": "291216",
+     "name": "General Internal Medicine Physicians",
+     "emp": 340.0,
+     "mean_wage": 227630.0
+    },
+    {
+     "occ": "291021",
+     "name": "Dentists, General",
+     "emp": 280.0,
+     "mean_wage": 208090.0
+    },
+    {
+     "occ": "132052",
+     "name": "Personal Financial Advisors",
+     "emp": 790.0,
+     "mean_wage": 184300.0
+    }
+   ],
+   "major_group_employment_shares": {
+    "all_occupations_employment": 611670.0,
+    "major_groups": {
+     "11": {
+      "name": "Management",
+      "employment": 34980.0,
+      "share_pct": 5.72
+     },
+     "13": {
+      "name": "Business/Financial",
+      "employment": 33050.0,
+      "share_pct": 5.4
+     },
+     "15": {
+      "name": "Computer/Math",
+      "employment": 11710.0,
+      "share_pct": 1.91
+     },
+     "17": {
+      "name": "Architecture/Engineering",
+      "employment": 6050.0,
+      "share_pct": 0.99
+     },
+     "19": {
+      "name": "Science",
+      "employment": 4500.0,
+      "share_pct": 0.74
+     },
+     "21": {
+      "name": "Community/Social Service",
+      "employment": 8780.0,
+      "share_pct": 1.44
+     },
+     "23": {
+      "name": "Legal",
+      "employment": 3120.0,
+      "share_pct": 0.51
+     },
+     "25": {
+      "name": "Education/Library",
+      "employment": 29740.0,
+      "share_pct": 4.86
+     },
+     "27": {
+      "name": "Arts/Media",
+      "employment": 6010.0,
+      "share_pct": 0.98
+     },
+     "29": {
+      "name": "Healthcare Practitioners",
+      "employment": 38160.0,
+      "share_pct": 6.24
+     },
+     "31": {
+      "name": "Healthcare Support",
+      "employment": 20300.0,
+      "share_pct": 3.32
+     },
+     "33": {
+      "name": "Protective Service",
+      "employment": 19730.0,
+      "share_pct": 3.23
+     },
+     "35": {
+      "name": "Food Prep",
+      "employment": 50220.0,
+      "share_pct": 8.21
+     },
+     "37": {
+      "name": "Buildings/Grounds",
+      "employment": 17350.0,
+      "share_pct": 2.84
+     },
+     "39": {
+      "name": "Personal Care",
+      "employment": 11660.0,
+      "share_pct": 1.91
+     },
+     "41": {
+      "name": "Sales",
+      "employment": 50520.0,
+      "share_pct": 8.26
+     },
+     "43": {
+      "name": "Office/Admin",
+      "employment": 83140.0,
+      "share_pct": 13.59
+     },
+     "45": {
+      "name": "Farming",
+      "employment": 680.0,
+      "share_pct": 0.11
+     },
+     "47": {
+      "name": "Construction/Extraction",
+      "employment": 19070.0,
+      "share_pct": 3.12
+     },
+     "49": {
+      "name": "Install/Maintain/Repair",
+      "employment": 25720.0,
+      "share_pct": 4.2
+     },
+     "51": {
+      "name": "Production",
+      "employment": 32550.0,
+      "share_pct": 5.32
+     },
+     "53": {
+      "name": "Transport/Material Moving",
+      "employment": 104600.0,
+      "share_pct": 17.1
+     }
+    }
+   },
+   "major_group_p90": {
+    "11": {
+     "name": "Management",
+     "p90": 221900.0
+    },
+    "13": {
+     "name": "Business/Financial",
+     "p90": 133470.0
+    },
+    "15": {
+     "name": "Computer/Math",
+     "p90": 149860.0
+    },
+    "17": {
+     "name": "Architecture/Engineering",
+     "p90": 135120.0
+    },
+    "19": {
+     "name": "Science",
+     "p90": 137330.0
+    },
+    "21": {
+     "name": "Community/Social Service",
+     "p90": 83640.0
+    },
+    "23": {
+     "name": "Legal",
+     "p90": 219110.0
+    },
+    "25": {
+     "name": "Education/Library",
+     "p90": 80210.0
+    },
+    "27": {
+     "name": "Arts/Media",
+     "p90": 94240.0
+    },
+    "29": {
+     "name": "Healthcare Practitioners",
+     "p90": 143020.0
+    },
+    "31": {
+     "name": "Healthcare Support",
+     "p90": 48220.0
+    },
+    "33": {
+     "name": "Protective Service",
+     "p90": 79050.0
+    },
+    "35": {
+     "name": "Food Prep",
+     "p90": 45760.0
+    },
+    "37": {
+     "name": "Buildings/Grounds",
+     "p90": 47050.0
+    },
+    "39": {
+     "name": "Personal Care",
+     "p90": 53060.0
+    },
+    "41": {
+     "name": "Sales",
+     "p90": 82020.0
+    },
+    "43": {
+     "name": "Office/Admin",
+     "p90": 73670.0
+    },
+    "45": {
+     "name": "Farming",
+     "p90": 53540.0
+    },
+    "47": {
+     "name": "Construction/Extraction",
+     "p90": 80770.0
+    },
+    "49": {
+     "name": "Install/Maintain/Repair",
+     "p90": 93270.0
+    },
+    "51": {
+     "name": "Production",
+     "p90": 70660.0
+    },
+    "53": {
+     "name": "Transport/Material Moving",
+     "p90": 76690.0
+    }
+   },
+   "lq_top_specialized": []
+  },
+  "Houston": {
+   "all_occupations_2025": {
+    "01": 3289720.0,
+    "02": 0.0,
+    "03": 32.51,
+    "04": 67610.0,
+    "05": 0.4,
+    "06": 13.17,
+    "07": 17.14,
+    "08": 23.76,
+    "09": 38.11,
+    "10": 61.56,
+    "11": 27380.0,
+    "12": 35640.0,
+    "13": 49410.0,
+    "14": 79260.0,
+    "15": 128040.0,
+    "16": 1000.0,
+    "17": 1.0
+   },
+   "specialized_band": {
+    "threshold_mean_wage": 85360.0,
+    "occupations_n": 190,
+    "employment": 751340.0,
+    "employment_share_pct": 22.839025813747067,
+    "weighted_mean_wage": 128241.95530651901
+   },
+   "band_composition_by_group": [
+    {
+     "group": "Management",
+     "employment": 265850,
+     "band_share_pct": 35.4,
+     "occupations_n": 29,
+     "weighted_mean_wage": 146948.0
+    },
+    {
+     "group": "Business/Financial",
+     "employment": 121890,
+     "band_share_pct": 16.2,
+     "occupations_n": 14,
+     "weighted_mean_wage": 101463.0
+    },
+    {
+     "group": "Healthcare Practitioners",
+     "employment": 118100,
+     "band_share_pct": 15.7,
+     "occupations_n": 38,
+     "weighted_mean_wage": 125691.0
+    },
+    {
+     "group": "Computer/Math",
+     "employment": 68800,
+     "band_share_pct": 9.2,
+     "occupations_n": 17,
+     "weighted_mean_wage": 119519.0
+    },
+    {
+     "group": "Architecture/Engineering",
+     "employment": 57730,
+     "band_share_pct": 7.7,
+     "occupations_n": 19,
+     "weighted_mean_wage": 127760.0
+    },
+    {
+     "group": "Sales",
+     "employment": 25200,
+     "band_share_pct": 3.4,
+     "occupations_n": 4,
+     "weighted_mean_wage": 105257.0
+    },
+    {
+     "group": "Science",
+     "employment": 23080,
+     "band_share_pct": 3.1,
+     "occupations_n": 19,
+     "weighted_mean_wage": 105645.0
+    },
+    {
+     "group": "Install/Maintain/Repair",
+     "employment": 22910,
+     "band_share_pct": 3.0,
+     "occupations_n": 5,
+     "weighted_mean_wage": 86727.0
+    },
+    {
+     "group": "Legal",
+     "employment": 17710,
+     "band_share_pct": 2.4,
+     "occupations_n": 3,
+     "weighted_mean_wage": 189784.0
+    },
+    {
+     "group": "Education/Library",
+     "employment": 11700,
+     "band_share_pct": 1.6,
+     "occupations_n": 24,
+     "weighted_mean_wage": 103881.0
+    },
+    {
+     "group": "Transportation/Material Moving",
+     "employment": 8500,
+     "band_share_pct": 1.1,
+     "occupations_n": 5,
+     "weighted_mean_wage": 208159.0
+    },
+    {
+     "group": "Protective Service",
+     "employment": 3190,
+     "band_share_pct": 0.4,
+     "occupations_n": 2,
+     "weighted_mean_wage": 108317.0
+    },
+    {
+     "group": "Construction/Extraction",
+     "employment": 2640,
+     "band_share_pct": 0.4,
+     "occupations_n": 2,
+     "weighted_mean_wage": 89840.0
+    },
+    {
+     "group": "Arts/Media",
+     "employment": 2020,
+     "band_share_pct": 0.3,
+     "occupations_n": 6,
+     "weighted_mean_wage": 135935.0
+    },
+    {
+     "group": "Production",
+     "employment": 1950,
+     "band_share_pct": 0.3,
+     "occupations_n": 2,
+     "weighted_mean_wage": 97634.0
+    },
+    {
+     "group": "Community/Social Service",
+     "employment": 70,
+     "band_share_pct": 0.0,
+     "occupations_n": 1,
+     "weighted_mean_wage": 85850.0
+    }
+   ],
+   "band_mass_top12_by_employment": [
+    {
+     "occ": "111021",
+     "name": "General and Operations Managers",
+     "employment": 97320.0,
+     "mean_wage": 146320.0,
+     "band_share_pct": 13.0
+    },
+    {
+     "occ": "291141",
+     "name": "Registered Nurses",
+     "employment": 65910.0,
+     "mean_wage": 100290.0,
+     "band_share_pct": 8.8
+    },
+    {
+     "occ": "131082",
+     "name": "Project Management Specialists",
+     "employment": 35550.0,
+     "mean_wage": 107190.0,
+     "band_share_pct": 4.7
+    },
+    {
+     "occ": "132011",
+     "name": "Accountants and Auditors",
+     "employment": 28400.0,
+     "mean_wage": 95640.0,
+     "band_share_pct": 3.8
+    },
+    {
+     "occ": "131199",
+     "name": "Business Operations Specialists, All Other",
+     "employment": 24360.0,
+     "mean_wage": 92150.0,
+     "band_share_pct": 3.2
+    },
+    {
+     "occ": "151252",
+     "name": "Software Developers",
+     "employment": 22940.0,
+     "mean_wage": 133130.0,
+     "band_share_pct": 3.1
+    },
+    {
+     "occ": "491011",
+     "name": "First-Line Supervisors of Mechanics, Installers, and Repairers",
+     "employment": 19390.0,
+     "mean_wage": 85440.0,
+     "band_share_pct": 2.6
+    },
+    {
+     "occ": "113031",
+     "name": "Financial Managers",
+     "employment": 18570.0,
+     "mean_wage": 186560.0,
+     "band_share_pct": 2.5
+    },
+    {
+     "occ": "231011",
+     "name": "Lawyers",
+     "employment": 16810.0,
+     "mean_wage": 193390.0,
+     "band_share_pct": 2.2
+    },
+    {
+     "occ": "119021",
+     "name": "Construction Managers",
+     "employment": 16500.0,
+     "mean_wage": 117600.0,
+     "band_share_pct": 2.2
+    },
+    {
+     "occ": "112022",
+     "name": "Sales Managers",
+     "employment": 16430.0,
+     "mean_wage": 153840.0,
+     "band_share_pct": 2.2
+    },
+    {
+     "occ": "119199",
+     "name": "Managers, All Other",
+     "employment": 14930.0,
+     "mean_wage": 154300.0,
+     "band_share_pct": 2.0
+    }
+   ],
+   "top10_by_mean_wage": [
+    {
+     "occ": "111011",
+     "name": "Chief Executives",
+     "emp": 1920.0,
+     "mean_wage": 340640.0
+    },
+    {
+     "occ": "291212",
+     "name": "Cardiologists",
+     "emp": 460.0,
+     "mean_wage": 324160.0
+    },
+    {
+     "occ": "291241",
+     "name": "Ophthalmologists, Except Pediatric",
+     "emp": 180.0,
+     "mean_wage": 315750.0
+    },
+    {
+     "occ": "532011",
+     "name": "Airline Pilots, Copilots, and Flight Engineers",
+     "emp": 4160.0,
+     "mean_wage": 300150.0
+    },
+    {
+     "occ": "291229",
+     "name": "Physicians, All Other",
+     "emp": 7010.0,
+     "mean_wage": 274630.0
+    },
+    {
+     "occ": "291217",
+     "name": "Neurologists",
+     "emp": 120.0,
+     "mean_wage": 268540.0
+    },
+    {
+     "occ": "291242",
+     "name": "Orthopedic Surgeons, Except Pediatric",
+     "emp": 150.0,
+     "mean_wage": 264960.0
+    },
+    {
+     "occ": "291216",
+     "name": "General Internal Medicine Physicians",
+     "emp": 1030.0,
+     "mean_wage": 263180.0
+    },
+    {
+     "occ": "291151",
+     "name": "Nurse Anesthetists",
+     "emp": 680.0,
+     "mean_wage": 257570.0
+    },
+    {
+     "occ": "291213",
+     "name": "Dermatologists",
+     "emp": 370.0,
+     "mean_wage": 257080.0
+    }
+   ],
+   "major_group_employment_shares": {
+    "all_occupations_employment": 3289720.0,
+    "major_groups": {
+     "11": {
+      "name": "Management",
+      "employment": 277940.0,
+      "share_pct": 8.45
+     },
+     "13": {
+      "name": "Business/Financial",
+      "employment": 203140.0,
+      "share_pct": 6.17
+     },
+     "15": {
+      "name": "Computer/Math",
+      "employment": 83670.0,
+      "share_pct": 2.54
+     },
+     "17": {
+      "name": "Architecture/Engineering",
+      "employment": 79000.0,
+      "share_pct": 2.4
+     },
+     "19": {
+      "name": "Science",
+      "employment": 35700.0,
+      "share_pct": 1.09
+     },
+     "21": {
+      "name": "Community/Social Service",
+      "employment": 31050.0,
+      "share_pct": 0.94
+     },
+     "23": {
+      "name": "Legal",
+      "employment": 28320.0,
+      "share_pct": 0.86
+     },
+     "25": {
+      "name": "Education/Library",
+      "employment": 198030.0,
+      "share_pct": 6.02
+     },
+     "27": {
+      "name": "Arts/Media",
+      "employment": 30690.0,
+      "share_pct": 0.93
+     },
+     "29": {
+      "name": "Healthcare Practitioners",
+      "employment": 188810.0,
+      "share_pct": 5.74
+     },
+     "31": {
+      "name": "Healthcare Support",
+      "employment": 129270.0,
+      "share_pct": 3.93
+     },
+     "33": {
+      "name": "Protective Service",
+      "employment": 74810.0,
+      "share_pct": 2.27
+     },
+     "35": {
+      "name": "Food Prep",
+      "employment": 307980.0,
+      "share_pct": 9.36
+     },
+     "37": {
+      "name": "Buildings/Grounds",
+      "employment": 88660.0,
+      "share_pct": 2.7
+     },
+     "39": {
+      "name": "Personal Care",
+      "employment": 50040.0,
+      "share_pct": 1.52
+     },
+     "41": {
+      "name": "Sales",
+      "employment": 270110.0,
+      "share_pct": 8.21
+     },
+     "43": {
+      "name": "Office/Admin",
+      "employment": 379010.0,
+      "share_pct": 11.52
+     },
+     "45": {
+      "name": "Farming",
+      "employment": 1880.0,
+      "share_pct": 0.06
+     },
+     "47": {
+      "name": "Construction/Extraction",
+      "employment": 181540.0,
+      "share_pct": 5.52
+     },
+     "49": {
+      "name": "Install/Maintain/Repair",
+      "employment": 158070.0,
+      "share_pct": 4.8
+     },
+     "51": {
+      "name": "Production",
+      "employment": 177980.0,
+      "share_pct": 5.41
+     },
+     "53": {
+      "name": "Transport/Material Moving",
+      "employment": 314010.0,
+      "share_pct": 9.55
+     }
+    }
+   },
+   "major_group_p90": {
+    "11": {
+     "name": "Management",
+     "p90": 242810.0
+    },
+    "13": {
+     "name": "Business/Financial",
+     "p90": 146590.0
+    },
+    "15": {
+     "name": "Computer/Math",
+     "p90": 168840.0
+    },
+    "17": {
+     "name": "Architecture/Engineering",
+     "p90": 179520.0
+    },
+    "19": {
+     "name": "Science",
+     "p90": 158000.0
+    },
+    "21": {
+     "name": "Community/Social Service",
+     "p90": 95010.0
+    },
+    "23": {
+     "name": "Legal",
+     "p90": 339600.0
+    },
+    "25": {
+     "name": "Education/Library",
+     "p90": 96090.0
+    },
+    "27": {
+     "name": "Arts/Media",
+     "p90": 106960.0
+    },
+    "29": {
+     "name": "Healthcare Practitioners",
+     "p90": 155250.0
+    },
+    "31": {
+     "name": "Healthcare Support",
+     "p90": 49100.0
+    },
+    "33": {
+     "name": "Protective Service",
+     "p90": 90980.0
+    },
+    "35": {
+     "name": "Food Prep",
+     "p90": 43590.0
+    },
+    "37": {
+     "name": "Buildings/Grounds",
+     "p90": 46440.0
+    },
+    "39": {
+     "name": "Personal Care",
+     "p90": 58660.0
+    },
+    "41": {
+     "name": "Sales",
+     "p90": 99410.0
+    },
+    "43": {
+     "name": "Office/Admin",
+     "p90": 75070.0
+    },
+    "45": {
+     "name": "Farming",
+     "p90": 61140.0
+    },
+    "47": {
+     "name": "Construction/Extraction",
+     "p90": 80660.0
+    },
+    "49": {
+     "name": "Install/Maintain/Repair",
+     "p90": 98900.0
+    },
+    "51": {
+     "name": "Production",
+     "p90": 84780.0
+    },
+    "53": {
+     "name": "Transport/Material Moving",
+     "p90": 75490.0
+    }
+   },
+   "lq_top_specialized": []
+  },
+  "Detroit": {
+   "all_occupations_2025": {
+    "01": 1904530.0,
+    "02": 0.0,
+    "03": 33.27,
+    "04": 69210.0,
+    "05": 0.4,
+    "06": 14.9,
+    "07": 18.21,
+    "08": 25.04,
+    "09": 39.28,
+    "10": 61.28,
+    "11": 30990.0,
+    "12": 37880.0,
+    "13": 52080.0,
+    "14": 81700.0,
+    "15": 127470.0,
+    "16": 1000.0,
+    "17": 1.0
+   },
+   "specialized_band": {
+    "threshold_mean_wage": 84980.0,
+    "occupations_n": 185,
+    "employment": 501900.0,
+    "employment_share_pct": 26.352958472694052,
+    "weighted_mean_wage": 118071.38772663877
+   },
+   "band_composition_by_group": [
+    {
+     "group": "Management",
+     "employment": 125290,
+     "band_share_pct": 25.0,
+     "occupations_n": 30,
+     "weighted_mean_wage": 146325.0
+    },
+    {
+     "group": "Business/Financial",
+     "employment": 89080,
+     "band_share_pct": 17.7,
+     "occupations_n": 17,
+     "weighted_mean_wage": 96560.0
+    },
+    {
+     "group": "Healthcare Practitioners",
+     "employment": 83940,
+     "band_share_pct": 16.7,
+     "occupations_n": 30,
+     "weighted_mean_wage": 118581.0
+    },
+    {
+     "group": "Architecture/Engineering",
+     "employment": 62270,
+     "band_share_pct": 12.4,
+     "occupations_n": 15,
+     "weighted_mean_wage": 113980.0
+    },
+    {
+     "group": "Computer/Math",
+     "employment": 53100,
+     "band_share_pct": 10.6,
+     "occupations_n": 16,
+     "weighted_mean_wage": 118181.0
+    },
+    {
+     "group": "Sales",
+     "employment": 42530,
+     "band_share_pct": 8.5,
+     "occupations_n": 8,
+     "weighted_mean_wage": 93829.0
+    },
+    {
+     "group": "Legal",
+     "employment": 11110,
+     "band_share_pct": 2.2,
+     "occupations_n": 5,
+     "weighted_mean_wage": 147819.0
+    },
+    {
+     "group": "Education/Library",
+     "employment": 8070,
+     "band_share_pct": 1.6,
+     "occupations_n": 25,
+     "weighted_mean_wage": 101830.0
+    },
+    {
+     "group": "Construction/Extraction",
+     "employment": 6880,
+     "band_share_pct": 1.4,
+     "occupations_n": 2,
+     "weighted_mean_wage": 87142.0
+    },
+    {
+     "group": "Science",
+     "employment": 6690,
+     "band_share_pct": 1.3,
+     "occupations_n": 16,
+     "weighted_mean_wage": 96382.0
+    },
+    {
+     "group": "Arts/Media",
+     "employment": 4750,
+     "band_share_pct": 0.9,
+     "occupations_n": 7,
+     "weighted_mean_wage": 97540.0
+    },
+    {
+     "group": "Protective Service",
+     "employment": 4190,
+     "band_share_pct": 0.8,
+     "occupations_n": 5,
+     "weighted_mean_wage": 100225.0
+    },
+    {
+     "group": "Install/Maintain/Repair",
+     "employment": 2500,
+     "band_share_pct": 0.5,
+     "occupations_n": 3,
+     "weighted_mean_wage": 93998.0
+    },
+    {
+     "group": "Production",
+     "employment": 910,
+     "band_share_pct": 0.2,
+     "occupations_n": 4,
+     "weighted_mean_wage": 107610.0
+    },
+    {
+     "group": "Transportation/Material Moving",
+     "employment": 590,
+     "band_share_pct": 0.1,
+     "occupations_n": 2,
+     "weighted_mean_wage": 141781.0
+    }
+   ],
+   "band_mass_top12_by_employment": [
+    {
+     "occ": "291141",
+     "name": "Registered Nurses",
+     "employment": 44310.0,
+     "mean_wage": 95460.0,
+     "band_share_pct": 8.8
+    },
+    {
+     "occ": "111021",
+     "name": "General and Operations Managers",
+     "employment": 37250.0,
+     "mean_wage": 133060.0,
+     "band_share_pct": 7.4
+    },
+    {
+     "occ": "151252",
+     "name": "Software Developers",
+     "employment": 24870.0,
+     "mean_wage": 128200.0,
+     "band_share_pct": 5.0
+    },
+    {
+     "occ": "172141",
+     "name": "Mechanical Engineers",
+     "employment": 22500.0,
+     "mean_wage": 116620.0,
+     "band_share_pct": 4.5
+    },
+    {
+     "occ": "132011",
+     "name": "Accountants and Auditors",
+     "employment": 19390.0,
+     "mean_wage": 91310.0,
+     "band_share_pct": 3.9
+    },
+    {
+     "occ": "172112",
+     "name": "Industrial Engineers",
+     "employment": 17350.0,
+     "mean_wage": 110360.0,
+     "band_share_pct": 3.5
+    },
+    {
+     "occ": "414012",
+     "name": "Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products",
+     "employment": 17190.0,
+     "mean_wage": 87110.0,
+     "band_share_pct": 3.4
+    },
+    {
+     "occ": "131082",
+     "name": "Project Management Specialists",
+     "employment": 13230.0,
+     "mean_wage": 110480.0,
+     "band_share_pct": 2.6
+    },
+    {
+     "occ": "413091",
+     "name": "Sales Representatives of Services, Except Advertising, Insurance, Financial Services, and Travel",
+     "employment": 13130.0,
+     "mean_wage": 86800.0,
+     "band_share_pct": 2.6
+    },
+    {
+     "occ": "113031",
+     "name": "Financial Managers",
+     "employment": 11670.0,
+     "mean_wage": 168730.0,
+     "band_share_pct": 2.3
+    },
+    {
+     "occ": "231011",
+     "name": "Lawyers",
+     "employment": 10110.0,
+     "mean_wage": 152950.0,
+     "band_share_pct": 2.0
+    },
+    {
+     "occ": "119041",
+     "name": "Architectural and Engineering Managers",
+     "employment": 9260.0,
+     "mean_wage": 173100.0,
+     "band_share_pct": 1.8
+    }
+   ],
+   "top10_by_mean_wage": [
+    {
+     "occ": "291249",
+     "name": "Surgeons, All Other",
+     "emp": 160.0,
+     "mean_wage": 519270.0
+    },
+    {
+     "occ": "291214",
+     "name": "Emergency Medicine Physicians",
+     "emp": 520.0,
+     "mean_wage": 381710.0
+    },
+    {
+     "occ": "111011",
+     "name": "Chief Executives",
+     "emp": 2070.0,
+     "mean_wage": 336360.0
+    },
+    {
+     "occ": "291223",
+     "name": "Psychiatrists",
+     "emp": 160.0,
+     "mean_wage": 318030.0
+    },
+    {
+     "occ": "291212",
+     "name": "Cardiologists",
+     "emp": 190.0,
+     "mean_wage": 316780.0
+    },
+    {
+     "occ": "291218",
+     "name": "Obstetricians and Gynecologists",
+     "emp": 550.0,
+     "mean_wage": 259380.0
+    },
+    {
+     "occ": "291151",
+     "name": "Nurse Anesthetists",
+     "emp": 1170.0,
+     "mean_wage": 255930.0
+    },
+    {
+     "occ": "291221",
+     "name": "Pediatricians, General",
+     "emp": 730.0,
+     "mean_wage": 210140.0
+    },
+    {
+     "occ": "291215",
+     "name": "Family Medicine Physicians",
+     "emp": 1940.0,
+     "mean_wage": 209000.0
+    },
+    {
+     "occ": "291021",
+     "name": "Dentists, General",
+     "emp": 1700.0,
+     "mean_wage": 187110.0
+    }
+   ],
+   "major_group_employment_shares": {
+    "all_occupations_employment": 1904530.0,
+    "major_groups": {
+     "11": {
+      "name": "Management",
+      "employment": 135860.0,
+      "share_pct": 7.13
+     },
+     "13": {
+      "name": "Business/Financial",
+      "employment": 127330.0,
+      "share_pct": 6.69
+     },
+     "15": {
+      "name": "Computer/Math",
+      "employment": 63520.0,
+      "share_pct": 3.34
+     },
+     "17": {
+      "name": "Architecture/Engineering",
+      "employment": 75860.0,
+      "share_pct": 3.98
+     },
+     "19": {
+      "name": "Science",
+      "employment": 10620.0,
+      "share_pct": 0.56
+     },
+     "21": {
+      "name": "Community/Social Service",
+      "employment": 27740.0,
+      "share_pct": 1.46
+     },
+     "23": {
+      "name": "Legal",
+      "employment": 16930.0,
+      "share_pct": 0.89
+     },
+     "25": {
+      "name": "Education/Library",
+      "employment": 84910.0,
+      "share_pct": 4.46
+     },
+     "27": {
+      "name": "Arts/Media",
+      "employment": 22340.0,
+      "share_pct": 1.17
+     },
+     "29": {
+      "name": "Healthcare Practitioners",
+      "employment": 126920.0,
+      "share_pct": 6.66
+     },
+     "31": {
+      "name": "Healthcare Support",
+      "employment": 93940.0,
+      "share_pct": 4.93
+     },
+     "33": {
+      "name": "Protective Service",
+      "employment": 36520.0,
+      "share_pct": 1.92
+     },
+     "35": {
+      "name": "Food Prep",
+      "employment": 153140.0,
+      "share_pct": 8.04
+     },
+     "37": {
+      "name": "Buildings/Grounds",
+      "employment": 51170.0,
+      "share_pct": 2.69
+     },
+     "39": {
+      "name": "Personal Care",
+      "employment": 35580.0,
+      "share_pct": 1.87
+     },
+     "41": {
+      "name": "Sales",
+      "employment": 158280.0,
+      "share_pct": 8.31
+     },
+     "43": {
+      "name": "Office/Admin",
+      "employment": 208230.0,
+      "share_pct": 10.93
+     },
+     "45": {
+      "name": "Farming",
+      "employment": 1730.0,
+      "share_pct": 0.09
+     },
+     "47": {
+      "name": "Construction/Extraction",
+      "employment": 66210.0,
+      "share_pct": 3.48
+     },
+     "49": {
+      "name": "Install/Maintain/Repair",
+      "employment": 74840.0,
+      "share_pct": 3.93
+     },
+     "51": {
+      "name": "Production",
+      "employment": 167920.0,
+      "share_pct": 8.82
+     },
+     "53": {
+      "name": "Transport/Material Moving",
+      "employment": 164950.0,
+      "share_pct": 8.66
+     }
+    }
+   },
+   "major_group_p90": {
+    "11": {
+     "name": "Management",
+     "p90": 223560.0
+    },
+    "13": {
+     "name": "Business/Financial",
+     "p90": 136300.0
+    },
+    "15": {
+     "name": "Computer/Math",
+     "p90": 165060.0
+    },
+    "17": {
+     "name": "Architecture/Engineering",
+     "p90": 157380.0
+    },
+    "19": {
+     "name": "Science",
+     "p90": 134160.0
+    },
+    "21": {
+     "name": "Community/Social Service",
+     "p90": 84590.0
+    },
+    "23": {
+     "name": "Legal",
+     "p90": 212510.0
+    },
+    "25": {
+     "name": "Education/Library",
+     "p90": 100820.0
+    },
+    "27": {
+     "name": "Arts/Media",
+     "p90": 116960.0
+    },
+    "29": {
+     "name": "Healthcare Practitioners",
+     "p90": 156520.0
+    },
+    "31": {
+     "name": "Healthcare Support",
+     "p90": 49400.0
+    },
+    "33": {
+     "name": "Protective Service",
+     "p90": 91240.0
+    },
+    "35": {
+     "name": "Food Prep",
+     "p90": 52590.0
+    },
+    "37": {
+     "name": "Buildings/Grounds",
+     "p90": 50060.0
+    },
+    "39": {
+     "name": "Personal Care",
+     "p90": 60630.0
+    },
+    "41": {
+     "name": "Sales",
+     "p90": 102580.0
+    },
+    "43": {
+     "name": "Office/Admin",
+     "p90": 74090.0
+    },
+    "45": {
+     "name": "Farming",
+     "p90": 55450.0
+    },
+    "47": {
+     "name": "Construction/Extraction",
+     "p90": 99650.0
+    },
+    "49": {
+     "name": "Install/Maintain/Repair",
+     "p90": 93750.0
+    },
+    "51": {
+     "name": "Production",
+     "p90": 78890.0
+    },
+    "53": {
+     "name": "Transport/Material Moving",
+     "p90": 69970.0
+    }
+   },
+   "lq_top_specialized": []
+  },
+  "Pittsburgh": {
+   "all_occupations_2025": {
+    "01": 1114490.0,
+    "02": 0.0,
+    "03": 31.36,
+    "04": 65230.0,
+    "05": 0.4,
+    "06": 13.7,
+    "07": 17.61,
+    "08": 23.87,
+    "09": 37.42,
+    "10": 55.48,
+    "11": 28500.0,
+    "12": 36630.0,
+    "13": 49650.0,
+    "14": 77830.0,
+    "15": 115400.0,
+    "16": 1000.0,
+    "17": 1.0
+   },
+   "specialized_band": {
+    "threshold_mean_wage": 76933.33333333333,
+    "occupations_n": 182,
+    "employment": 290830.0,
+    "employment_share_pct": 26.09534405871744,
+    "weighted_mean_wage": 111827.65739435409
+   },
+   "band_composition_by_group": [
+    {
+     "group": "Management",
+     "employment": 81150,
+     "band_share_pct": 27.9,
+     "occupations_n": 28,
+     "weighted_mean_wage": 130755.0
+    },
+    {
+     "group": "Healthcare Practitioners",
+     "employment": 54570,
+     "band_share_pct": 18.8,
+     "occupations_n": 24,
+     "weighted_mean_wage": 121800.0
+    },
+    {
+     "group": "Business/Financial",
+     "employment": 45620,
+     "band_share_pct": 15.7,
+     "occupations_n": 17,
+     "weighted_mean_wage": 92855.0
+    },
+    {
+     "group": "Computer/Math",
+     "employment": 29360,
+     "band_share_pct": 10.1,
+     "occupations_n": 18,
+     "weighted_mean_wage": 109796.0
+    },
+    {
+     "group": "Education/Library",
+     "employment": 26920,
+     "band_share_pct": 9.3,
+     "occupations_n": 27,
+     "weighted_mean_wage": 88489.0
+    },
+    {
+     "group": "Architecture/Engineering",
+     "employment": 15400,
+     "band_share_pct": 5.3,
+     "occupations_n": 18,
+     "weighted_mean_wage": 104659.0
+    },
+    {
+     "group": "Protective Service",
+     "employment": 7120,
+     "band_share_pct": 2.4,
+     "occupations_n": 5,
+     "weighted_mean_wage": 88692.0
+    },
+    {
+     "group": "Construction/Extraction",
+     "employment": 6610,
+     "band_share_pct": 2.3,
+     "occupations_n": 4,
+     "weighted_mean_wage": 89135.0
+    },
+    {
+     "group": "Install/Maintain/Repair",
+     "employment": 6290,
+     "band_share_pct": 2.2,
+     "occupations_n": 7,
+     "weighted_mean_wage": 85128.0
+    },
+    {
+     "group": "Legal",
+     "employment": 5840,
+     "band_share_pct": 2.0,
+     "occupations_n": 3,
+     "weighted_mean_wage": 157250.0
+    },
+    {
+     "group": "Sales",
+     "employment": 5480,
+     "band_share_pct": 1.9,
+     "occupations_n": 4,
+     "weighted_mean_wage": 93543.0
+    },
+    {
+     "group": "Science",
+     "employment": 4320,
+     "band_share_pct": 1.5,
+     "occupations_n": 15,
+     "weighted_mean_wage": 98738.0
+    },
+    {
+     "group": "Production",
+     "employment": 1050,
+     "band_share_pct": 0.4,
+     "occupations_n": 4,
+     "weighted_mean_wage": 86543.0
+    },
+    {
+     "group": "Arts/Media",
+     "employment": 520,
+     "band_share_pct": 0.2,
+     "occupations_n": 4,
+     "weighted_mean_wage": 85509.0
+    },
+    {
+     "group": "Transportation/Material Moving",
+     "employment": 310,
+     "band_share_pct": 0.1,
+     "occupations_n": 3,
+     "weighted_mean_wage": 127581.0
+    },
+    {
+     "group": "Community/Social Service",
+     "employment": 270,
+     "band_share_pct": 0.1,
+     "occupations_n": 1,
+     "weighted_mean_wage": 86690.0
+    }
+   ],
+   "band_mass_top12_by_employment": [
+    {
+     "occ": "111021",
+     "name": "General and Operations Managers",
+     "employment": 31020.0,
+     "mean_wage": 122110.0,
+     "band_share_pct": 10.7
+    },
+    {
+     "occ": "291141",
+     "name": "Registered Nurses",
+     "employment": 29360.0,
+     "mean_wage": 88880.0,
+     "band_share_pct": 10.1
+    },
+    {
+     "occ": "132011",
+     "name": "Accountants and Auditors",
+     "employment": 10430.0,
+     "mean_wage": 83100.0,
+     "band_share_pct": 3.6
+    },
+    {
+     "occ": "151252",
+     "name": "Software Developers",
+     "employment": 10320.0,
+     "mean_wage": 126430.0,
+     "band_share_pct": 3.5
+    },
+    {
+     "occ": "252031",
+     "name": "Secondary School Teachers, Except Special and Career/Technical Education",
+     "employment": 9600.0,
+     "mean_wage": 79730.0,
+     "band_share_pct": 3.3
+    },
+    {
+     "occ": "131082",
+     "name": "Project Management Specialists",
+     "employment": 7280.0,
+     "mean_wage": 103220.0,
+     "band_share_pct": 2.5
+    },
+    {
+     "occ": "113031",
+     "name": "Financial Managers",
+     "employment": 6460.0,
+     "mean_wage": 155860.0,
+     "band_share_pct": 2.2
+    },
+    {
+     "occ": "291229",
+     "name": "Physicians, All Other",
+     "employment": 6260.0,
+     "mean_wage": 229960.0,
+     "band_share_pct": 2.2
+    },
+    {
+     "occ": "471011",
+     "name": "First-Line Supervisors of Construction Trades and Extraction Workers",
+     "employment": 6000.0,
+     "mean_wage": 89250.0,
+     "band_share_pct": 2.1
+    },
+    {
+     "occ": "119111",
+     "name": "Medical and Health Services Managers",
+     "employment": 5990.0,
+     "mean_wage": 113030.0,
+     "band_share_pct": 2.1
+    },
+    {
+     "occ": "131111",
+     "name": "Management Analysts",
+     "employment": 5910.0,
+     "mean_wage": 97160.0,
+     "band_share_pct": 2.0
+    },
+    {
+     "occ": "231011",
+     "name": "Lawyers",
+     "employment": 5550.0,
+     "mean_wage": 159760.0,
+     "band_share_pct": 1.9
+    }
+   ],
+   "top10_by_mean_wage": [
+    {
+     "occ": "291216",
+     "name": "General Internal Medicine Physicians",
+     "emp": 150.0,
+     "mean_wage": 293820.0
+    },
+    {
+     "occ": "291215",
+     "name": "Family Medicine Physicians",
+     "emp": 1730.0,
+     "mean_wage": 281280.0
+    },
+    {
+     "occ": "111011",
+     "name": "Chief Executives",
+     "emp": 1660.0,
+     "mean_wage": 278690.0
+    },
+    {
+     "occ": "291229",
+     "name": "Physicians, All Other",
+     "emp": 6260.0,
+     "mean_wage": 229960.0
+    },
+    {
+     "occ": "291221",
+     "name": "Pediatricians, General",
+     "emp": 340.0,
+     "mean_wage": 228540.0
+    },
+    {
+     "occ": "291151",
+     "name": "Nurse Anesthetists",
+     "emp": 500.0,
+     "mean_wage": 221740.0
+    },
+    {
+     "occ": "192012",
+     "name": "Physicists",
+     "emp": 80.0,
+     "mean_wage": 211220.0
+    },
+    {
+     "occ": "291081",
+     "name": "Podiatrists",
+     "emp": 60.0,
+     "mean_wage": 194960.0
+    },
+    {
+     "occ": "291021",
+     "name": "Dentists, General",
+     "emp": 1050.0,
+     "mean_wage": 165420.0
+    },
+    {
+     "occ": "119041",
+     "name": "Architectural and Engineering Managers",
+     "emp": 2060.0,
+     "mean_wage": 164700.0
+    }
+   ],
+   "major_group_employment_shares": {
+    "all_occupations_employment": 1114490.0,
+    "major_groups": {
+     "11": {
+      "name": "Management",
+      "employment": 86180.0,
+      "share_pct": 7.73
+     },
+     "13": {
+      "name": "Business/Financial",
+      "employment": 67590.0,
+      "share_pct": 6.06
+     },
+     "15": {
+      "name": "Computer/Math",
+      "employment": 34640.0,
+      "share_pct": 3.11
+     },
+     "17": {
+      "name": "Architecture/Engineering",
+      "employment": 20220.0,
+      "share_pct": 1.81
+     },
+     "19": {
+      "name": "Science",
+      "employment": 9910.0,
+      "share_pct": 0.89
+     },
+     "21": {
+      "name": "Community/Social Service",
+      "employment": 23780.0,
+      "share_pct": 2.13
+     },
+     "23": {
+      "name": "Legal",
+      "employment": 9470.0,
+      "share_pct": 0.85
+     },
+     "25": {
+      "name": "Education/Library",
+      "employment": 64260.0,
+      "share_pct": 5.77
+     },
+     "27": {
+      "name": "Arts/Media",
+      "employment": 11190.0,
+      "share_pct": 1.0
+     },
+     "29": {
+      "name": "Healthcare Practitioners",
+      "employment": 89040.0,
+      "share_pct": 7.99
+     },
+     "31": {
+      "name": "Healthcare Support",
+      "employment": 63090.0,
+      "share_pct": 5.66
+     },
+     "33": {
+      "name": "Protective Service",
+      "employment": 25190.0,
+      "share_pct": 2.26
+     },
+     "35": {
+      "name": "Food Prep",
+      "employment": 101240.0,
+      "share_pct": 9.08
+     },
+     "37": {
+      "name": "Buildings/Grounds",
+      "employment": 30240.0,
+      "share_pct": 2.71
+     },
+     "39": {
+      "name": "Personal Care",
+      "employment": 27220.0,
+      "share_pct": 2.44
+     },
+     "41": {
+      "name": "Sales",
+      "employment": 89480.0,
+      "share_pct": 8.03
+     },
+     "43": {
+      "name": "Office/Admin",
+      "employment": 121440.0,
+      "share_pct": 10.9
+     },
+     "45": {
+      "name": "Farming",
+      "employment": 900.0,
+      "share_pct": 0.08
+     },
+     "47": {
+      "name": "Construction/Extraction",
+      "employment": 49450.0,
+      "share_pct": 4.44
+     },
+     "49": {
+      "name": "Install/Maintain/Repair",
+      "employment": 41820.0,
+      "share_pct": 3.75
+     },
+     "51": {
+      "name": "Production",
+      "employment": 56870.0,
+      "share_pct": 5.1
+     },
+     "53": {
+      "name": "Transport/Material Moving",
+      "employment": 91270.0,
+      "share_pct": 8.19
+     }
+    }
+   },
+   "major_group_p90": {
+    "11": {
+     "name": "Management",
+     "p90": 212080.0
+    },
+    "13": {
+     "name": "Business/Financial",
+     "p90": 131870.0
+    },
+    "15": {
+     "name": "Computer/Math",
+     "p90": 160700.0
+    },
+    "17": {
+     "name": "Architecture/Engineering",
+     "p90": 145590.0
+    },
+    "19": {
+     "name": "Science",
+     "p90": 164690.0
+    },
+    "21": {
+     "name": "Community/Social Service",
+     "p90": 83350.0
+    },
+    "23": {
+     "name": "Legal",
+     "p90": 224300.0
+    },
+    "25": {
+     "name": "Education/Library",
+     "p90": 107910.0
+    },
+    "27": {
+     "name": "Arts/Media",
+     "p90": 106890.0
+    },
+    "29": {
+     "name": "Healthcare Practitioners",
+     "p90": 160250.0
+    },
+    "31": {
+     "name": "Healthcare Support",
+     "p90": 47180.0
+    },
+    "33": {
+     "name": "Protective Service",
+     "p90": 97960.0
+    },
+    "35": {
+     "name": "Food Prep",
+     "p90": 47980.0
+    },
+    "37": {
+     "name": "Buildings/Grounds",
+     "p90": 50040.0
+    },
+    "39": {
+     "name": "Personal Care",
+     "p90": 58110.0
+    },
+    "41": {
+     "name": "Sales",
+     "p90": 82930.0
+    },
+    "43": {
+     "name": "Office/Admin",
+     "p90": 70680.0
+    },
+    "45": {
+     "name": "Farming",
+     "p90": 56220.0
+    },
+    "47": {
+     "name": "Construction/Extraction",
+     "p90": 98990.0
+    },
+    "49": {
+     "name": "Install/Maintain/Repair",
+     "p90": 90090.0
+    },
+    "51": {
+     "name": "Production",
+     "p90": 77360.0
+    },
+    "53": {
+     "name": "Transport/Material Moving",
+     "p90": 65010.0
+    }
+   },
+   "lq_top_specialized": []
+  },
+  "Cincinnati": {
+   "all_occupations_2025": {
+    "01": 1101030.0,
+    "02": 0.0,
+    "03": 32.39,
+    "04": 67370.0,
+    "05": 0.4,
+    "06": 14.32,
+    "07": 17.93,
+    "08": 24.12,
+    "09": 38.13,
+    "10": 57.49,
+    "11": 29780.0,
+    "12": 37300.0,
+    "13": 50170.0,
+    "14": 79310.0,
+    "15": 119580.0,
+    "16": 1000.0,
+    "17": 1.0
+   },
+   "specialized_band": {
+    "threshold_mean_wage": 79720.0,
+    "occupations_n": 174,
+    "employment": 284850.0,
+    "employment_share_pct": 25.871229666766574,
+    "weighted_mean_wage": 118020.42443391259
+   },
+   "band_composition_by_group": [
+    {
+     "group": "Management",
+     "employment": 77330,
+     "band_share_pct": 27.1,
+     "occupations_n": 29,
+     "weighted_mean_wage": 139359.0
+    },
+    {
+     "group": "Business/Financial",
+     "employment": 56310,
+     "band_share_pct": 19.8,
+     "occupations_n": 20,
+     "weighted_mean_wage": 92144.0
+    },
+    {
+     "group": "Healthcare Practitioners",
+     "employment": 53220,
+     "band_share_pct": 18.7,
+     "occupations_n": 38,
+     "weighted_mean_wage": 125559.0
+    },
+    {
+     "group": "Computer/Math",
+     "employment": 26120,
+     "band_share_pct": 9.2,
+     "occupations_n": 17,
+     "weighted_mean_wage": 115135.0
+    },
+    {
+     "group": "Sales",
+     "employment": 21820,
+     "band_share_pct": 7.7,
+     "occupations_n": 6,
+     "weighted_mean_wage": 90375.0
+    },
+    {
+     "group": "Architecture/Engineering",
+     "employment": 17210,
+     "band_share_pct": 6.0,
+     "occupations_n": 14,
+     "weighted_mean_wage": 112281.0
+    },
+    {
+     "group": "Install/Maintain/Repair",
+     "employment": 7230,
+     "band_share_pct": 2.5,
+     "occupations_n": 6,
+     "weighted_mean_wage": 90804.0
+    },
+    {
+     "group": "Science",
+     "employment": 6530,
+     "band_share_pct": 2.3,
+     "occupations_n": 16,
+     "weighted_mean_wage": 102702.0
+    },
+    {
+     "group": "Construction/Extraction",
+     "employment": 4730,
+     "band_share_pct": 1.7,
+     "occupations_n": 1,
+     "weighted_mean_wage": 81870.0
+    },
+    {
+     "group": "Legal",
+     "employment": 4260,
+     "band_share_pct": 1.5,
+     "occupations_n": 4,
+     "weighted_mean_wage": 150518.0
+    },
+    {
+     "group": "Transportation/Material Moving",
+     "employment": 3990,
+     "band_share_pct": 1.4,
+     "occupations_n": 6,
+     "weighted_mean_wage": 282835.0
+    },
+    {
+     "group": "Education/Library",
+     "employment": 2860,
+     "band_share_pct": 1.0,
+     "occupations_n": 9,
+     "weighted_mean_wage": 92285.0
+    },
+    {
+     "group": "Protective Service",
+     "employment": 1940,
+     "band_share_pct": 0.7,
+     "occupations_n": 3,
+     "weighted_mean_wage": 96259.0
+    },
+    {
+     "group": "Arts/Media",
+     "employment": 1040,
+     "band_share_pct": 0.4,
+     "occupations_n": 3,
+     "weighted_mean_wage": 94042.0
+    },
+    {
+     "group": "Production",
+     "employment": 260,
+     "band_share_pct": 0.1,
+     "occupations_n": 2,
+     "weighted_mean_wage": 101119.0
+    }
+   ],
+   "band_mass_top12_by_employment": [
+    {
+     "occ": "111021",
+     "name": "General and Operations Managers",
+     "employment": 29330.0,
+     "mean_wage": 124780.0,
+     "band_share_pct": 10.3
+    },
+    {
+     "occ": "291141",
+     "name": "Registered Nurses",
+     "employment": 28520.0,
+     "mean_wage": 89940.0,
+     "band_share_pct": 10.0
+    },
+    {
+     "occ": "414012",
+     "name": "Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products",
+     "employment": 12360.0,
+     "mean_wage": 86800.0,
+     "band_share_pct": 4.3
+    },
+    {
+     "occ": "132011",
+     "name": "Accountants and Auditors",
+     "employment": 10050.0,
+     "mean_wage": 90330.0,
+     "band_share_pct": 3.5
+    },
+    {
+     "occ": "151252",
+     "name": "Software Developers",
+     "employment": 9900.0,
+     "mean_wage": 122700.0,
+     "band_share_pct": 3.5
+    },
+    {
+     "occ": "131082",
+     "name": "Project Management Specialists",
+     "employment": 7080.0,
+     "mean_wage": 100940.0,
+     "band_share_pct": 2.5
+    },
+    {
+     "occ": "131161",
+     "name": "Market Research Analysts and Marketing Specialists",
+     "employment": 7080.0,
+     "mean_wage": 84620.0,
+     "band_share_pct": 2.5
+    },
+    {
+     "occ": "113031",
+     "name": "Financial Managers",
+     "employment": 6340.0,
+     "mean_wage": 169840.0,
+     "band_share_pct": 2.2
+    },
+    {
+     "occ": "172112",
+     "name": "Industrial Engineers",
+     "employment": 5430.0,
+     "mean_wage": 112780.0,
+     "band_share_pct": 1.9
+    },
+    {
+     "occ": "112022",
+     "name": "Sales Managers",
+     "employment": 5180.0,
+     "mean_wage": 158280.0,
+     "band_share_pct": 1.8
+    },
+    {
+     "occ": "131199",
+     "name": "Business Operations Specialists, All Other",
+     "employment": 5140.0,
+     "mean_wage": 84490.0,
+     "band_share_pct": 1.8
+    },
+    {
+     "occ": "471011",
+     "name": "First-Line Supervisors of Construction Trades and Extraction Workers",
+     "employment": 4730.0,
+     "mean_wage": 81870.0,
+     "band_share_pct": 1.7
+    }
+   ],
+   "top10_by_mean_wage": [
+    {
+     "occ": "291212",
+     "name": "Cardiologists",
+     "emp": 210.0,
+     "mean_wage": 501860.0
+    },
+    {
+     "occ": "291249",
+     "name": "Surgeons, All Other",
+     "emp": 150.0,
+     "mean_wage": 435810.0
+    },
+    {
+     "occ": "291211",
+     "name": "Anesthesiologists",
+     "emp": 320.0,
+     "mean_wage": 367430.0
+    },
+    {
+     "occ": "291224",
+     "name": "Radiologists",
+     "emp": 290.0,
+     "mean_wage": 340150.0
+    },
+    {
+     "occ": "291229",
+     "name": "Physicians, All Other",
+     "emp": 3180.0,
+     "mean_wage": 337480.0
+    },
+    {
+     "occ": "291214",
+     "name": "Emergency Medicine Physicians",
+     "emp": 240.0,
+     "mean_wage": 330260.0
+    },
+    {
+     "occ": "532011",
+     "name": "Airline Pilots, Copilots, and Flight Engineers",
+     "emp": 3330.0,
+     "mean_wage": 315590.0
+    },
+    {
+     "occ": "111011",
+     "name": "Chief Executives",
+     "emp": 980.0,
+     "mean_wage": 281410.0
+    },
+    {
+     "occ": "291222",
+     "name": "Physicians, Pathologists",
+     "emp": 190.0,
+     "mean_wage": 276540.0
+    },
+    {
+     "occ": "291223",
+     "name": "Psychiatrists",
+     "emp": 150.0,
+     "mean_wage": 272280.0
+    }
+   ],
+   "major_group_employment_shares": {
+    "all_occupations_employment": 1101030.0,
+    "major_groups": {
+     "11": {
+      "name": "Management",
+      "employment": 83560.0,
+      "share_pct": 7.59
+     },
+     "13": {
+      "name": "Business/Financial",
+      "employment": 73140.0,
+      "share_pct": 6.64
+     },
+     "15": {
+      "name": "Computer/Math",
+      "employment": 32340.0,
+      "share_pct": 2.94
+     },
+     "17": {
+      "name": "Architecture/Engineering",
+      "employment": 23290.0,
+      "share_pct": 2.12
+     },
+     "19": {
+      "name": "Science",
+      "employment": 9620.0,
+      "share_pct": 0.87
+     },
+     "21": {
+      "name": "Community/Social Service",
+      "employment": 16160.0,
+      "share_pct": 1.47
+     },
+     "23": {
+      "name": "Legal",
+      "employment": 6240.0,
+      "share_pct": 0.57
+     },
+     "25": {
+      "name": "Education/Library",
+      "employment": 58690.0,
+      "share_pct": 5.33
+     },
+     "27": {
+      "name": "Arts/Media",
+      "employment": 12820.0,
+      "share_pct": 1.16
+     },
+     "29": {
+      "name": "Healthcare Practitioners",
+      "employment": 78460.0,
+      "share_pct": 7.13
+     },
+     "31": {
+      "name": "Healthcare Support",
+      "employment": 42410.0,
+      "share_pct": 3.85
+     },
+     "33": {
+      "name": "Protective Service",
+      "employment": 23030.0,
+      "share_pct": 2.09
+     },
+     "35": {
+      "name": "Food Prep",
+      "employment": 105450.0,
+      "share_pct": 9.58
+     },
+     "37": {
+      "name": "Buildings/Grounds",
+      "employment": 29410.0,
+      "share_pct": 2.67
+     },
+     "39": {
+      "name": "Personal Care",
+      "employment": 21770.0,
+      "share_pct": 1.98
+     },
+     "41": {
+      "name": "Sales",
+      "employment": 93240.0,
+      "share_pct": 8.47
+     },
+     "43": {
+      "name": "Office/Admin",
+      "employment": 125530.0,
+      "share_pct": 11.4
+     },
+     "45": {
+      "name": "Farming",
+      "employment": 570.0,
+      "share_pct": 0.05
+     },
+     "47": {
+      "name": "Construction/Extraction",
+      "employment": 38220.0,
+      "share_pct": 3.47
+     },
+     "49": {
+      "name": "Install/Maintain/Repair",
+      "employment": 44090.0,
+      "share_pct": 4.0
+     },
+     "51": {
+      "name": "Production",
+      "employment": 75240.0,
+      "share_pct": 6.83
+     },
+     "53": {
+      "name": "Transport/Material Moving",
+      "employment": 107750.0,
+      "share_pct": 9.79
+     }
+    }
+   },
+   "major_group_p90": {
+    "11": {
+     "name": "Management",
+     "p90": 220990.0
+    },
+    "13": {
+     "name": "Business/Financial",
+     "p90": 133210.0
+    },
+    "15": {
+     "name": "Computer/Math",
+     "p90": 164820.0
+    },
+    "17": {
+     "name": "Architecture/Engineering",
+     "p90": 162760.0
+    },
+    "19": {
+     "name": "Science",
+     "p90": 157700.0
+    },
+    "21": {
+     "name": "Community/Social Service",
+     "p90": 82880.0
+    },
+    "23": {
+     "name": "Legal",
+     "p90": 218610.0
+    },
+    "25": {
+     "name": "Education/Library",
+     "p90": 99180.0
+    },
+    "27": {
+     "name": "Arts/Media",
+     "p90": 103890.0
+    },
+    "29": {
+     "name": "Healthcare Practitioners",
+     "p90": 158310.0
+    },
+    "31": {
+     "name": "Healthcare Support",
+     "p90": 53020.0
+    },
+    "33": {
+     "name": "Protective Service",
+     "p90": 95910.0
+    },
+    "35": {
+     "name": "Food Prep",
+     "p90": 48810.0
+    },
+    "37": {
+     "name": "Buildings/Grounds",
+     "p90": 49720.0
+    },
+    "39": {
+     "name": "Personal Care",
+     "p90": 57810.0
+    },
+    "41": {
+     "name": "Sales",
+     "p90": 97020.0
+    },
+    "43": {
+     "name": "Office/Admin",
+     "p90": 74000.0
+    },
+    "45": {
+     "name": "Farming",
+     "p90": 64980.0
+    },
+    "47": {
+     "name": "Construction/Extraction",
+     "p90": 95630.0
+    },
+    "49": {
+     "name": "Install/Maintain/Repair",
+     "p90": 95580.0
+    },
+    "51": {
+     "name": "Production",
+     "p90": 75200.0
+    },
+    "53": {
+     "name": "Transport/Material Moving",
+     "p90": 73470.0
+    }
+   },
+   "lq_top_specialized": []
+  },
+  "St. Louis": {
+   "all_occupations_2025": {
+    "01": 1341320.0,
+    "02": 0.0,
+    "03": 31.89,
+    "04": 66330.0,
+    "05": 0.4,
+    "06": 15.0,
+    "07": 17.81,
+    "08": 24.03,
+    "09": 37.85,
+    "10": 55.33,
+    "11": 31200.0,
+    "12": 37050.0,
+    "13": 49990.0,
+    "14": 78730.0,
+    "15": 115090.0,
+    "16": 1000.0,
+    "17": 1.0
+   },
+   "specialized_band": {
+    "threshold_mean_wage": 76726.66666666666,
+    "occupations_n": 198,
+    "employment": 373970.0,
+    "employment_share_pct": 27.880744341395044,
+    "weighted_mean_wage": 109358.20252961467
+   },
+   "band_composition_by_group": [
+    {
+     "group": "Management",
+     "employment": 101050,
+     "band_share_pct": 27.0,
+     "occupations_n": 27,
+     "weighted_mean_wage": 130175.0
+    },
+    {
+     "group": "Business/Financial",
+     "employment": 81900,
+     "band_share_pct": 21.9,
+     "occupations_n": 23,
+     "weighted_mean_wage": 92091.0
+    },
+    {
+     "group": "Healthcare Practitioners",
+     "employment": 63100,
+     "band_share_pct": 16.9,
+     "occupations_n": 32,
+     "weighted_mean_wage": 112887.0
+    },
+    {
+     "group": "Computer/Math",
+     "employment": 37950,
+     "band_share_pct": 10.1,
+     "occupations_n": 17,
+     "weighted_mean_wage": 109571.0
+    },
+    {
+     "group": "Sales",
+     "employment": 24510,
+     "band_share_pct": 6.6,
+     "occupations_n": 8,
+     "weighted_mean_wage": 87899.0
+    },
+    {
+     "group": "Construction/Extraction",
+     "employment": 15950,
+     "band_share_pct": 4.3,
+     "occupations_n": 7,
+     "weighted_mean_wage": 86027.0
+    },
+    {
+     "group": "Architecture/Engineering",
+     "employment": 13310,
+     "band_share_pct": 3.6,
+     "occupations_n": 18,
+     "weighted_mean_wage": 105962.0
+    },
+    {
+     "group": "Install/Maintain/Repair",
+     "employment": 8780,
+     "band_share_pct": 2.3,
+     "occupations_n": 4,
+     "weighted_mean_wage": 84120.0
+    },
+    {
+     "group": "Science",
+     "employment": 7610,
+     "band_share_pct": 2.0,
+     "occupations_n": 18,
+     "weighted_mean_wage": 101687.0
+    },
+    {
+     "group": "Education/Library",
+     "employment": 6750,
+     "band_share_pct": 1.8,
+     "occupations_n": 20,
+     "weighted_mean_wage": 97723.0
+    },
+    {
+     "group": "Legal",
+     "employment": 6180,
+     "band_share_pct": 1.7,
+     "occupations_n": 2,
+     "weighted_mean_wage": 167540.0
+    },
+    {
+     "group": "Protective Service",
+     "employment": 3120,
+     "band_share_pct": 0.8,
+     "occupations_n": 5,
+     "weighted_mean_wage": 97097.0
+    },
+    {
+     "group": "Arts/Media",
+     "employment": 2050,
+     "band_share_pct": 0.5,
+     "occupations_n": 9,
+     "weighted_mean_wage": 147587.0
+    },
+    {
+     "group": "Transportation/Material Moving",
+     "employment": 900,
+     "band_share_pct": 0.2,
+     "occupations_n": 4,
+     "weighted_mean_wage": 110280.0
+    },
+    {
+     "group": "Production",
+     "employment": 580,
+     "band_share_pct": 0.2,
+     "occupations_n": 3,
+     "weighted_mean_wage": 85748.0
+    },
+    {
+     "group": "Community/Social Service",
+     "employment": 230,
+     "band_share_pct": 0.1,
+     "occupations_n": 1,
+     "weighted_mean_wage": 87060.0
+    }
+   ],
+   "band_mass_top12_by_employment": [
+    {
+     "occ": "111021",
+     "name": "General and Operations Managers",
+     "employment": 46410.0,
+     "mean_wage": 114710.0,
+     "band_share_pct": 12.4
+    },
+    {
+     "occ": "291141",
+     "name": "Registered Nurses",
+     "employment": 35200.0,
+     "mean_wage": 88310.0,
+     "band_share_pct": 9.4
+    },
+    {
+     "occ": "132011",
+     "name": "Accountants and Auditors",
+     "employment": 13610.0,
+     "mean_wage": 86560.0,
+     "band_share_pct": 3.6
+    },
+    {
+     "occ": "414012",
+     "name": "Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products",
+     "employment": 10710.0,
+     "mean_wage": 78460.0,
+     "band_share_pct": 2.9
+    },
+    {
+     "occ": "131082",
+     "name": "Project Management Specialists",
+     "employment": 10450.0,
+     "mean_wage": 104000.0,
+     "band_share_pct": 2.8
+    },
+    {
+     "occ": "151252",
+     "name": "Software Developers",
+     "employment": 9820.0,
+     "mean_wage": 126090.0,
+     "band_share_pct": 2.6
+    },
+    {
+     "occ": "131071",
+     "name": "Human Resources Specialists",
+     "employment": 8130.0,
+     "mean_wage": 77170.0,
+     "band_share_pct": 2.2
+    },
+    {
+     "occ": "151299",
+     "name": "Computer Occupations, All Other",
+     "employment": 7330.0,
+     "mean_wage": 113040.0,
+     "band_share_pct": 2.0
+    },
+    {
+     "occ": "131199",
+     "name": "Business Operations Specialists, All Other",
+     "employment": 7320.0,
+     "mean_wage": 100510.0,
+     "band_share_pct": 2.0
+    },
+    {
+     "occ": "113031",
+     "name": "Financial Managers",
+     "employment": 7190.0,
+     "mean_wage": 172850.0,
+     "band_share_pct": 1.9
+    },
+    {
+     "occ": "131161",
+     "name": "Market Research Analysts and Marketing Specialists",
+     "employment": 6980.0,
+     "mean_wage": 80740.0,
+     "band_share_pct": 1.9
+    },
+    {
+     "occ": "471011",
+     "name": "First-Line Supervisors of Construction Trades and Extraction Workers",
+     "employment": 6680.0,
+     "mean_wage": 94760.0,
+     "band_share_pct": 1.8
+    }
+   ],
+   "top10_by_mean_wage": [
+    {
+     "occ": "272021",
+     "name": "Athletes and Sports Competitors",
+     "emp": 320.0,
+     "mean_wage": 435350.0
+    },
+    {
+     "occ": "291224",
+     "name": "Radiologists",
+     "emp": 170.0,
+     "mean_wage": 396830.0
+    },
+    {
+     "occ": "291223",
+     "name": "Psychiatrists",
+     "emp": 100.0,
+     "mean_wage": 357180.0
+    },
+    {
+     "occ": "291214",
+     "name": "Emergency Medicine Physicians",
+     "emp": 120.0,
+     "mean_wage": 314150.0
+    },
+    {
+     "occ": "111011",
+     "name": "Chief Executives",
+     "emp": 1120.0,
+     "mean_wage": 264890.0
+    },
+    {
+     "occ": "291021",
+     "name": "Dentists, General",
+     "emp": 1250.0,
+     "mean_wage": 261250.0
+    },
+    {
+     "occ": "291229",
+     "name": "Physicians, All Other",
+     "emp": 2470.0,
+     "mean_wage": 258350.0
+    },
+    {
+     "occ": "291151",
+     "name": "Nurse Anesthetists",
+     "emp": 650.0,
+     "mean_wage": 255950.0
+    },
+    {
+     "occ": "291221",
+     "name": "Pediatricians, General",
+     "emp": 320.0,
+     "mean_wage": 217360.0
+    },
+    {
+     "occ": "291215",
+     "name": "Family Medicine Physicians",
+     "emp": 1660.0,
+     "mean_wage": 193430.0
+    }
+   ],
+   "major_group_employment_shares": {
+    "all_occupations_employment": 1341320.0,
+    "major_groups": {
+     "11": {
+      "name": "Management",
+      "employment": 106320.0,
+      "share_pct": 7.93
+     },
+     "13": {
+      "name": "Business/Financial",
+      "employment": 89500.0,
+      "share_pct": 6.67
+     },
+     "15": {
+      "name": "Computer/Math",
+      "employment": 44190.0,
+      "share_pct": 3.29
+     },
+     "17": {
+      "name": "Architecture/Engineering",
+      "employment": 18010.0,
+      "share_pct": 1.34
+     },
+     "19": {
+      "name": "Science",
+      "employment": 11650.0,
+      "share_pct": 0.87
+     },
+     "21": {
+      "name": "Community/Social Service",
+      "employment": 20890.0,
+      "share_pct": 1.56
+     },
+     "23": {
+      "name": "Legal",
+      "employment": 11290.0,
+      "share_pct": 0.84
+     },
+     "25": {
+      "name": "Education/Library",
+      "employment": 81130.0,
+      "share_pct": 6.05
+     },
+     "27": {
+      "name": "Arts/Media",
+      "employment": 15260.0,
+      "share_pct": 1.14
+     },
+     "29": {
+      "name": "Healthcare Practitioners",
+      "employment": 94740.0,
+      "share_pct": 7.06
+     },
+     "31": {
+      "name": "Healthcare Support",
+      "employment": 76470.0,
+      "share_pct": 5.7
+     },
+     "33": {
+      "name": "Protective Service",
+      "employment": 28160.0,
+      "share_pct": 2.1
+     },
+     "35": {
+      "name": "Food Prep",
+      "employment": 120730.0,
+      "share_pct": 9.0
+     },
+     "37": {
+      "name": "Buildings/Grounds",
+      "employment": 39650.0,
+      "share_pct": 2.96
+     },
+     "39": {
+      "name": "Personal Care",
+      "employment": 28850.0,
+      "share_pct": 2.15
+     },
+     "41": {
+      "name": "Sales",
+      "employment": 109560.0,
+      "share_pct": 8.17
+     },
+     "43": {
+      "name": "Office/Admin",
+      "employment": 149950.0,
+      "share_pct": 11.18
+     },
+     "45": {
+      "name": "Farming",
+      "employment": 1290.0,
+      "share_pct": 0.1
+     },
+     "47": {
+      "name": "Construction/Extraction",
+      "employment": 54470.0,
+      "share_pct": 4.06
+     },
+     "49": {
+      "name": "Install/Maintain/Repair",
+      "employment": 50320.0,
+      "share_pct": 3.75
+     },
+     "51": {
+      "name": "Production",
+      "employment": 78420.0,
+      "share_pct": 5.85
+     },
+     "53": {
+      "name": "Transport/Material Moving",
+      "employment": 110460.0,
+      "share_pct": 8.24
+     }
+    }
+   },
+   "major_group_p90": {
+    "11": {
+     "name": "Management",
+     "p90": 214770.0
+    },
+    "13": {
+     "name": "Business/Financial",
+     "p90": 136130.0
+    },
+    "15": {
+     "name": "Computer/Math",
+     "p90": 165290.0
+    },
+    "17": {
+     "name": "Architecture/Engineering",
+     "p90": 153920.0
+    },
+    "19": {
+     "name": "Science",
+     "p90": 138980.0
+    },
+    "21": {
+     "name": "Community/Social Service",
+     "p90": 85450.0
+    },
+    "23": {
+     "name": "Legal",
+     "p90": 221100.0
+    },
+    "25": {
+     "name": "Education/Library",
+     "p90": 98840.0
+    },
+    "27": {
+     "name": "Arts/Media",
+     "p90": 104000.0
+    },
+    "29": {
+     "name": "Healthcare Practitioners",
+     "p90": 141810.0
+    },
+    "31": {
+     "name": "Healthcare Support",
+     "p90": 48100.0
+    },
+    "33": {
+     "name": "Protective Service",
+     "p90": 94640.0
+    },
+    "35": {
+     "name": "Food Prep",
+     "p90": 47150.0
+    },
+    "37": {
+     "name": "Buildings/Grounds",
+     "p90": 53610.0
+    },
+    "39": {
+     "name": "Personal Care",
+     "p90": 54990.0
+    },
+    "41": {
+     "name": "Sales",
+     "p90": 88870.0
+    },
+    "43": {
+     "name": "Office/Admin",
+     "p90": 74090.0
+    },
+    "45": {
+     "name": "Farming",
+     "p90": 64020.0
+    },
+    "47": {
+     "name": "Construction/Extraction",
+     "p90": 105220.0
+    },
+    "49": {
+     "name": "Install/Maintain/Repair",
+     "p90": 96380.0
+    },
+    "51": {
+     "name": "Production",
+     "p90": 80080.0
+    },
+    "53": {
+     "name": "Transport/Material Moving",
+     "p90": 68630.0
+    }
+   },
+   "lq_top_specialized": []
+  },
+  "New Orleans": {
+   "all_occupations_2025": {
+    "01": 445550.0,
+    "02": 0.0,
+    "03": 29.35,
+    "04": 61050.0,
+    "05": 0.5,
+    "06": 11.39,
+    "07": 15.24,
+    "08": 22.73,
+    "09": 35.99,
+    "10": 51.42,
+    "11": 23690.0,
+    "12": 31690.0,
+    "13": 47290.0,
+    "14": 74860.0,
+    "15": 106950.0,
+    "16": 1000.0,
+    "17": 1.0
+   },
+   "specialized_band": {
+    "threshold_mean_wage": 71300.0,
+    "occupations_n": 176,
+    "employment": 117300.0,
+    "employment_share_pct": 26.327011558747614,
+    "weighted_mean_wage": 106249.03324808185
+   },
+   "band_composition_by_group": [
+    {
+     "group": "Management",
+     "employment": 27710,
+     "band_share_pct": 23.6,
+     "occupations_n": 29,
+     "weighted_mean_wage": 129354.0
+    },
+    {
+     "group": "Business/Financial",
+     "employment": 23270,
+     "band_share_pct": 19.8,
+     "occupations_n": 24,
+     "weighted_mean_wage": 82910.0
+    },
+    {
+     "group": "Healthcare Practitioners",
+     "employment": 22240,
+     "band_share_pct": 19.0,
+     "occupations_n": 25,
+     "weighted_mean_wage": 116016.0
+    },
+    {
+     "group": "Sales",
+     "employment": 6350,
+     "band_share_pct": 5.4,
+     "occupations_n": 4,
+     "weighted_mean_wage": 84175.0
+    },
+    {
+     "group": "Architecture/Engineering",
+     "employment": 5560,
+     "band_share_pct": 4.7,
+     "occupations_n": 17,
+     "weighted_mean_wage": 111022.0
+    },
+    {
+     "group": "Production",
+     "employment": 5350,
+     "band_share_pct": 4.6,
+     "occupations_n": 5,
+     "weighted_mean_wage": 90045.0
+    },
+    {
+     "group": "Computer/Math",
+     "employment": 4750,
+     "band_share_pct": 4.0,
+     "occupations_n": 11,
+     "weighted_mean_wage": 104471.0
+    },
+    {
+     "group": "Legal",
+     "employment": 4490,
+     "band_share_pct": 3.8,
+     "occupations_n": 4,
+     "weighted_mean_wage": 143257.0
+    },
+    {
+     "group": "Education/Library",
+     "employment": 3630,
+     "band_share_pct": 3.1,
+     "occupations_n": 17,
+     "weighted_mean_wage": 91315.0
+    },
+    {
+     "group": "Install/Maintain/Repair",
+     "employment": 3480,
+     "band_share_pct": 3.0,
+     "occupations_n": 5,
+     "weighted_mean_wage": 83096.0
+    },
+    {
+     "group": "Science",
+     "employment": 2690,
+     "band_share_pct": 2.3,
+     "occupations_n": 16,
+     "weighted_mean_wage": 91117.0
+    },
+    {
+     "group": "Transportation/Material Moving",
+     "employment": 2310,
+     "band_share_pct": 2.0,
+     "occupations_n": 3,
+     "weighted_mean_wage": 122647.0
+    },
+    {
+     "group": "Construction/Extraction",
+     "employment": 2250,
+     "band_share_pct": 1.9,
+     "occupations_n": 2,
+     "weighted_mean_wage": 79361.0
+    },
+    {
+     "group": "Arts/Media",
+     "employment": 1710,
+     "band_share_pct": 1.5,
+     "occupations_n": 9,
+     "weighted_mean_wage": 85754.0
+    },
+    {
+     "group": "Protective Service",
+     "employment": 1270,
+     "band_share_pct": 1.1,
+     "occupations_n": 3,
+     "weighted_mean_wage": 80763.0
+    },
+    {
+     "group": "Community/Social Service",
+     "employment": 240,
+     "band_share_pct": 0.2,
+     "occupations_n": 2,
+     "weighted_mean_wage": 80204.0
+    }
+   ],
+   "band_mass_top12_by_employment": [
+    {
+     "occ": "291141",
+     "name": "Registered Nurses",
+     "employment": 11530.0,
+     "mean_wage": 86630.0,
+     "band_share_pct": 9.8
+    },
+    {
+     "occ": "111021",
+     "name": "General and Operations Managers",
+     "employment": 10670.0,
+     "mean_wage": 135900.0,
+     "band_share_pct": 9.1
+    },
+    {
+     "occ": "131199",
+     "name": "Business Operations Specialists, All Other",
+     "employment": 4590.0,
+     "mean_wage": 76880.0,
+     "band_share_pct": 3.9
+    },
+    {
+     "occ": "414012",
+     "name": "Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products",
+     "employment": 4490.0,
+     "mean_wage": 74950.0,
+     "band_share_pct": 3.8
+    },
+    {
+     "occ": "231011",
+     "name": "Lawyers",
+     "employment": 4330.0,
+     "mean_wage": 144250.0,
+     "band_share_pct": 3.7
+    },
+    {
+     "occ": "132011",
+     "name": "Accountants and Auditors",
+     "employment": 3740.0,
+     "mean_wage": 83540.0,
+     "band_share_pct": 3.2
+    },
+    {
+     "occ": "119199",
+     "name": "Managers, All Other",
+     "employment": 2610.0,
+     "mean_wage": 122870.0,
+     "band_share_pct": 2.2
+    },
+    {
+     "occ": "491011",
+     "name": "First-Line Supervisors of Mechanics, Installers, and Repairers",
+     "employment": 2180.0,
+     "mean_wage": 86290.0,
+     "band_share_pct": 1.9
+    },
+    {
+     "occ": "471011",
+     "name": "First-Line Supervisors of Construction Trades and Extraction Workers",
+     "employment": 2130.0,
+     "mean_wage": 79600.0,
+     "band_share_pct": 1.8
+    },
+    {
+     "occ": "131082",
+     "name": "Project Management Specialists",
+     "employment": 2090.0,
+     "mean_wage": 95660.0,
+     "band_share_pct": 1.8
+    },
+    {
+     "occ": "113031",
+     "name": "Financial Managers",
+     "employment": 1970.0,
+     "mean_wage": 152160.0,
+     "band_share_pct": 1.7
+    },
+    {
+     "occ": "535021",
+     "name": "Captains, Mates, and Pilots of Water Vessels",
+     "employment": 1940.0,
+     "mean_wage": 118450.0,
+     "band_share_pct": 1.7
+    }
+   ],
+   "top10_by_mean_wage": [
+    {
+     "occ": "291215",
+     "name": "Family Medicine Physicians",
+     "emp": 250.0,
+     "mean_wage": 337920.0
+    },
+    {
+     "occ": "291214",
+     "name": "Emergency Medicine Physicians",
+     "emp": 140.0,
+     "mean_wage": 332920.0
+    },
+    {
+     "occ": "291229",
+     "name": "Physicians, All Other",
+     "emp": 1910.0,
+     "mean_wage": 278080.0
+    },
+    {
+     "occ": "291151",
+     "name": "Nurse Anesthetists",
+     "emp": 190.0,
+     "mean_wage": 248660.0
+    },
+    {
+     "occ": "291021",
+     "name": "Dentists, General",
+     "emp": 270.0,
+     "mean_wage": 188460.0
+    },
+    {
+     "occ": "119041",
+     "name": "Architectural and Engineering Managers",
+     "emp": 560.0,
+     "mean_wage": 166660.0
+    },
+    {
+     "occ": "172171",
+     "name": "Petroleum Engineers",
+     "emp": 320.0,
+     "mean_wage": 153850.0
+    },
+    {
+     "occ": "113051",
+     "name": "Industrial Production Managers",
+     "emp": 580.0,
+     "mean_wage": 152970.0
+    },
+    {
+     "occ": "113031",
+     "name": "Financial Managers",
+     "emp": 1970.0,
+     "mean_wage": 152160.0
+    },
+    {
+     "occ": "535031",
+     "name": "Ship Engineers",
+     "emp": 230.0,
+     "mean_wage": 151960.0
+    }
+   ],
+   "major_group_employment_shares": {
+    "all_occupations_employment": 445550.0,
+    "major_groups": {
+     "11": {
+      "name": "Management",
+      "employment": 29350.0,
+      "share_pct": 6.59
+     },
+     "13": {
+      "name": "Business/Financial",
+      "employment": 24740.0,
+      "share_pct": 5.55
+     },
+     "15": {
+      "name": "Computer/Math",
+      "employment": 6930.0,
+      "share_pct": 1.56
+     },
+     "17": {
+      "name": "Architecture/Engineering",
+      "employment": 6940.0,
+      "share_pct": 1.56
+     },
+     "19": {
+      "name": "Science",
+      "employment": 4310.0,
+      "share_pct": 0.97
+     },
+     "21": {
+      "name": "Community/Social Service",
+      "employment": 6240.0,
+      "share_pct": 1.4
+     },
+     "23": {
+      "name": "Legal",
+      "employment": 7220.0,
+      "share_pct": 1.62
+     },
+     "25": {
+      "name": "Education/Library",
+      "employment": 24260.0,
+      "share_pct": 5.44
+     },
+     "27": {
+      "name": "Arts/Media",
+      "employment": 6860.0,
+      "share_pct": 1.54
+     },
+     "29": {
+      "name": "Healthcare Practitioners",
+      "employment": 34610.0,
+      "share_pct": 7.77
+     },
+     "31": {
+      "name": "Healthcare Support",
+      "employment": 17130.0,
+      "share_pct": 3.84
+     },
+     "33": {
+      "name": "Protective Service",
+      "employment": 14480.0,
+      "share_pct": 3.25
+     },
+     "35": {
+      "name": "Food Prep",
+      "employment": 50540.0,
+      "share_pct": 11.34
+     },
+     "37": {
+      "name": "Buildings/Grounds",
+      "employment": 12800.0,
+      "share_pct": 2.87
+     },
+     "39": {
+      "name": "Personal Care",
+      "employment": 10130.0,
+      "share_pct": 2.27
+     },
+     "41": {
+      "name": "Sales",
+      "employment": 38500.0,
+      "share_pct": 8.64
+     },
+     "43": {
+      "name": "Office/Admin",
+      "employment": 51170.0,
+      "share_pct": 11.48
+     },
+     "45": {
+      "name": "Farming",
+      "employment": 350.0,
+      "share_pct": 0.08
+     },
+     "47": {
+      "name": "Construction/Extraction",
+      "employment": 18010.0,
+      "share_pct": 4.04
+     },
+     "49": {
+      "name": "Install/Maintain/Repair",
+      "employment": 19860.0,
+      "share_pct": 4.46
+     },
+     "51": {
+      "name": "Production",
+      "employment": 18960.0,
+      "share_pct": 4.26
+     },
+     "53": {
+      "name": "Transport/Material Moving",
+      "employment": 42140.0,
+      "share_pct": 9.46
+     }
+    }
+   },
+   "major_group_p90": {
+    "11": {
+     "name": "Management",
+     "p90": 215410.0
+    },
+    "13": {
+     "name": "Business/Financial",
+     "p90": 126680.0
+    },
+    "15": {
+     "name": "Computer/Math",
+     "p90": 136990.0
+    },
+    "17": {
+     "name": "Architecture/Engineering",
+     "p90": 166860.0
+    },
+    "19": {
+     "name": "Science",
+     "p90": 133060.0
+    },
+    "21": {
+     "name": "Community/Social Service",
+     "p90": 77940.0
+    },
+    "23": {
+     "name": "Legal",
+     "p90": 214060.0
+    },
+    "25": {
+     "name": "Education/Library",
+     "p90": 103190.0
+    },
+    "27": {
+     "name": "Arts/Media",
+     "p90": 129120.0
+    },
+    "29": {
+     "name": "Healthcare Practitioners",
+     "p90": 146150.0
+    },
+    "31": {
+     "name": "Healthcare Support",
+     "p90": 46010.0
+    },
+    "33": {
+     "name": "Protective Service",
+     "p90": 73510.0
+    },
+    "35": {
+     "name": "Food Prep",
+     "p90": 43680.0
+    },
+    "37": {
+     "name": "Buildings/Grounds",
+     "p90": 46140.0
+    },
+    "39": {
+     "name": "Personal Care",
+     "p90": 59580.0
+    },
+    "41": {
+     "name": "Sales",
+     "p90": 83070.0
+    },
+    "43": {
+     "name": "Office/Admin",
+     "p90": 68970.0
+    },
+    "45": {
+     "name": "Farming",
+     "p90": 69240.0
+    },
+    "47": {
+     "name": "Construction/Extraction",
+     "p90": 81100.0
+    },
+    "49": {
+     "name": "Install/Maintain/Repair",
+     "p90": 95290.0
+    },
+    "51": {
+     "name": "Production",
+     "p90": 106640.0
+    },
+    "53": {
+     "name": "Transport/Material Moving",
+     "p90": 76570.0
+    }
+   },
+   "lq_top_specialized": []
+  },
+  "Oklahoma City": {
+   "all_occupations_2025": {
+    "01": 677680.0,
+    "02": 0.0,
+    "03": 29.0,
+    "04": 60330.0,
+    "05": 0.4,
+    "06": 12.9,
+    "07": 16.64,
+    "08": 22.71,
+    "09": 35.34,
+    "10": 50.22,
+    "11": 26830.0,
+    "12": 34600.0,
+    "13": 47230.0,
+    "14": 73500.0,
+    "15": 104460.0,
+    "16": 1000.0,
+    "17": 1.0
+   },
+   "specialized_band": {
+    "threshold_mean_wage": 69640.0,
+    "occupations_n": 197,
+    "employment": 190020.0,
+    "employment_share_pct": 28.039782788336677,
+    "weighted_mean_wage": 101385.9346384591
+   },
+   "band_composition_by_group": [
+    {
+     "group": "Business/Financial",
+     "employment": 42940,
+     "band_share_pct": 22.6,
+     "occupations_n": 24,
+     "weighted_mean_wage": 84841.0
+    },
+    {
+     "group": "Management",
+     "employment": 41020,
+     "band_share_pct": 21.6,
+     "occupations_n": 31,
+     "weighted_mean_wage": 124831.0
+    },
+    {
+     "group": "Healthcare Practitioners",
+     "employment": 32550,
+     "band_share_pct": 17.1,
+     "occupations_n": 28,
+     "weighted_mean_wage": 112439.0
+    },
+    {
+     "group": "Computer/Math",
+     "employment": 15650,
+     "band_share_pct": 8.2,
+     "occupations_n": 17,
+     "weighted_mean_wage": 103895.0
+    },
+    {
+     "group": "Architecture/Engineering",
+     "employment": 9770,
+     "band_share_pct": 5.1,
+     "occupations_n": 22,
+     "weighted_mean_wage": 110166.0
+    },
+    {
+     "group": "Sales",
+     "employment": 9680,
+     "band_share_pct": 5.1,
+     "occupations_n": 5,
+     "weighted_mean_wage": 82545.0
+    },
+    {
+     "group": "Install/Maintain/Repair",
+     "employment": 7960,
+     "band_share_pct": 4.2,
+     "occupations_n": 5,
+     "weighted_mean_wage": 77008.0
+    },
+    {
+     "group": "Education/Library",
+     "employment": 5690,
+     "band_share_pct": 3.0,
+     "occupations_n": 19,
+     "weighted_mean_wage": 85513.0
+    },
+    {
+     "group": "Protective Service",
+     "employment": 5570,
+     "band_share_pct": 2.9,
+     "occupations_n": 5,
+     "weighted_mean_wage": 83413.0
+    },
+    {
+     "group": "Construction/Extraction",
+     "employment": 4500,
+     "band_share_pct": 2.4,
+     "occupations_n": 2,
+     "weighted_mean_wage": 77863.0
+    },
+    {
+     "group": "Legal",
+     "employment": 4310,
+     "band_share_pct": 2.3,
+     "occupations_n": 1,
+     "weighted_mean_wage": 123050.0
+    },
+    {
+     "group": "Science",
+     "employment": 4240,
+     "band_share_pct": 2.2,
+     "occupations_n": 20,
+     "weighted_mean_wage": 92061.0
+    },
+    {
+     "group": "Production",
+     "employment": 3040,
+     "band_share_pct": 1.6,
+     "occupations_n": 6,
+     "weighted_mean_wage": 75174.0
+    },
+    {
+     "group": "Arts/Media",
+     "employment": 2030,
+     "band_share_pct": 1.1,
+     "occupations_n": 6,
+     "weighted_mean_wage": 76426.0
+    },
+    {
+     "group": "Transportation/Material Moving",
+     "employment": 580,
+     "band_share_pct": 0.3,
+     "occupations_n": 4,
+     "weighted_mean_wage": 140837.0
+    },
+    {
+     "group": "Community/Social Service",
+     "employment": 490,
+     "band_share_pct": 0.3,
+     "occupations_n": 2,
+     "weighted_mean_wage": 81427.0
+    }
+   ],
+   "band_mass_top12_by_employment": [
+    {
+     "occ": "111021",
+     "name": "General and Operations Managers",
+     "employment": 17710.0,
+     "mean_wage": 118230.0,
+     "band_share_pct": 9.3
+    },
+    {
+     "occ": "291141",
+     "name": "Registered Nurses",
+     "employment": 16530.0,
+     "mean_wage": 86080.0,
+     "band_share_pct": 8.7
+    },
+    {
+     "occ": "132011",
+     "name": "Accountants and Auditors",
+     "employment": 6700.0,
+     "mean_wage": 86800.0,
+     "band_share_pct": 3.5
+    },
+    {
+     "occ": "414012",
+     "name": "Sales Representatives, Wholesale and Manufacturing, Except Technical and Scientific Products",
+     "employment": 5700.0,
+     "mean_wage": 77570.0,
+     "band_share_pct": 3.0
+    },
+    {
+     "occ": "131082",
+     "name": "Project Management Specialists",
+     "employment": 5690.0,
+     "mean_wage": 95730.0,
+     "band_share_pct": 3.0
+    },
+    {
+     "occ": "471011",
+     "name": "First-Line Supervisors of Construction Trades and Extraction Workers",
+     "employment": 4460.0,
+     "mean_wage": 77850.0,
+     "band_share_pct": 2.3
+    },
+    {
+     "occ": "231011",
+     "name": "Lawyers",
+     "employment": 4310.0,
+     "mean_wage": 123050.0,
+     "band_share_pct": 2.3
+    },
+    {
+     "occ": "131071",
+     "name": "Human Resources Specialists",
+     "employment": 3900.0,
+     "mean_wage": 70500.0,
+     "band_share_pct": 2.1
+    },
+    {
+     "occ": "151252",
+     "name": "Software Developers",
+     "employment": 3820.0,
+     "mean_wage": 120670.0,
+     "band_share_pct": 2.0
+    },
+    {
+     "occ": "131199",
+     "name": "Business Operations Specialists, All Other",
+     "employment": 3520.0,
+     "mean_wage": 100680.0,
+     "band_share_pct": 1.9
+    },
+    {
+     "occ": "491011",
+     "name": "First-Line Supervisors of Mechanics, Installers, and Repairers",
+     "employment": 3500.0,
+     "mean_wage": 82250.0,
+     "band_share_pct": 1.8
+    },
+    {
+     "occ": "131111",
+     "name": "Management Analysts",
+     "employment": 3350.0,
+     "mean_wage": 99500.0,
+     "band_share_pct": 1.8
+    }
+   ],
+   "top10_by_mean_wage": [
+    {
+     "occ": "291215",
+     "name": "Family Medicine Physicians",
+     "emp": 940.0,
+     "mean_wage": 376600.0
+    },
+    {
+     "occ": "291222",
+     "name": "Physicians, Pathologists",
+     "emp": 60.0,
+     "mean_wage": 314230.0
+    },
+    {
+     "occ": "291212",
+     "name": "Cardiologists",
+     "emp": 60.0,
+     "mean_wage": 297170.0
+    },
+    {
+     "occ": "291223",
+     "name": "Psychiatrists",
+     "emp": 40.0,
+     "mean_wage": 288770.0
+    },
+    {
+     "occ": "291229",
+     "name": "Physicians, All Other",
+     "emp": 1130.0,
+     "mean_wage": 271030.0
+    },
+    {
+     "occ": "291216",
+     "name": "General Internal Medicine Physicians",
+     "emp": 180.0,
+     "mean_wage": 266790.0
+    },
+    {
+     "occ": "291221",
+     "name": "Pediatricians, General",
+     "emp": 140.0,
+     "mean_wage": 244290.0
+    },
+    {
+     "occ": "111011",
+     "name": "Chief Executives",
+     "emp": 970.0,
+     "mean_wage": 218700.0
+    },
+    {
+     "occ": "291021",
+     "name": "Dentists, General",
+     "emp": 290.0,
+     "mean_wage": 205660.0
+    },
+    {
+     "occ": "172171",
+     "name": "Petroleum Engineers",
+     "emp": 700.0,
+     "mean_wage": 177150.0
+    }
+   ],
+   "major_group_employment_shares": {
+    "all_occupations_employment": 677680.0,
+    "major_groups": {
+     "11": {
+      "name": "Management",
+      "employment": 41750.0,
+      "share_pct": 6.16
+     },
+     "13": {
+      "name": "Business/Financial",
+      "employment": 44740.0,
+      "share_pct": 6.6
+     },
+     "15": {
+      "name": "Computer/Math",
+      "employment": 21550.0,
+      "share_pct": 3.18
+     },
+     "17": {
+      "name": "Architecture/Engineering",
+      "employment": 11790.0,
+      "share_pct": 1.74
+     },
+     "19": {
+      "name": "Science",
+      "employment": 5850.0,
+      "share_pct": 0.86
+     },
+     "21": {
+      "name": "Community/Social Service",
+      "employment": 10350.0,
+      "share_pct": 1.53
+     },
+     "23": {
+      "name": "Legal",
+      "employment": 7110.0,
+      "share_pct": 1.05
+     },
+     "25": {
+      "name": "Education/Library",
+      "employment": 38280.0,
+      "share_pct": 5.65
+     },
+     "27": {
+      "name": "Arts/Media",
+      "employment": 7470.0,
+      "share_pct": 1.1
+     },
+     "29": {
+      "name": "Healthcare Practitioners",
+      "employment": 47970.0,
+      "share_pct": 7.08
+     },
+     "31": {
+      "name": "Healthcare Support",
+      "employment": 24130.0,
+      "share_pct": 3.56
+     },
+     "33": {
+      "name": "Protective Service",
+      "employment": 15070.0,
+      "share_pct": 2.22
+     },
+     "35": {
+      "name": "Food Prep",
+      "employment": 69060.0,
+      "share_pct": 10.19
+     },
+     "37": {
+      "name": "Buildings/Grounds",
+      "employment": 19020.0,
+      "share_pct": 2.81
+     },
+     "39": {
+      "name": "Personal Care",
+      "employment": 12030.0,
+      "share_pct": 1.78
+     },
+     "41": {
+      "name": "Sales",
+      "employment": 60630.0,
+      "share_pct": 8.95
+     },
+     "43": {
+      "name": "Office/Admin",
+      "employment": 85890.0,
+      "share_pct": 12.67
+     },
+     "45": {
+      "name": "Farming",
+      "employment": 690.0,
+      "share_pct": 0.1
+     },
+     "47": {
+      "name": "Construction/Extraction",
+      "employment": 32390.0,
+      "share_pct": 4.78
+     },
+     "49": {
+      "name": "Install/Maintain/Repair",
+      "employment": 32560.0,
+      "share_pct": 4.8
+     },
+     "51": {
+      "name": "Production",
+      "employment": 26160.0,
+      "share_pct": 3.86
+     },
+     "53": {
+      "name": "Transport/Material Moving",
+      "employment": 63180.0,
+      "share_pct": 9.32
+     }
+    }
+   },
+   "major_group_p90": {
+    "11": {
+     "name": "Management",
+     "p90": 209530.0
+    },
+    "13": {
+     "name": "Business/Financial",
+     "p90": 128720.0
+    },
+    "15": {
+     "name": "Computer/Math",
+     "p90": 146860.0
+    },
+    "17": {
+     "name": "Architecture/Engineering",
+     "p90": 161780.0
+    },
+    "19": {
+     "name": "Science",
+     "p90": 135380.0
+    },
+    "21": {
+     "name": "Community/Social Service",
+     "p90": 83590.0
+    },
+    "23": {
+     "name": "Legal",
+     "p90": 178720.0
+    },
+    "25": {
+     "name": "Education/Library",
+     "p90": 84550.0
+    },
+    "27": {
+     "name": "Arts/Media",
+     "p90": 103940.0
+    },
+    "29": {
+     "name": "Healthcare Practitioners",
+     "p90": 152370.0
+    },
+    "31": {
+     "name": "Healthcare Support",
+     "p90": 49580.0
+    },
+    "33": {
+     "name": "Protective Service",
+     "p90": 100200.0
+    },
+    "35": {
+     "name": "Food Prep",
+     "p90": 44410.0
+    },
+    "37": {
+     "name": "Buildings/Grounds",
+     "p90": 47360.0
+    },
+    "39": {
+     "name": "Personal Care",
+     "p90": 51440.0
+    },
+    "41": {
+     "name": "Sales",
+     "p90": 82150.0
+    },
+    "43": {
+     "name": "Office/Admin",
+     "p90": 69060.0
+    },
+    "45": {
+     "name": "Farming",
+     "p90": 64990.0
+    },
+    "47": {
+     "name": "Construction/Extraction",
+     "p90": 82570.0
+    },
+    "49": {
+     "name": "Install/Maintain/Repair",
+     "p90": 90530.0
+    },
+    "51": {
+     "name": "Production",
+     "p90": 72800.0
+    },
+    "53": {
+     "name": "Transport/Material Moving",
+     "p90": 65140.0
+    }
+   },
+   "lq_top_specialized": []
+  }
+ },
+ "headline_read": [
+  "WHICH OCCUPATIONS MAKE THE CEILINGS: Houston's $128,040 p90 vs Memphis's $100,640 p90 (both 2025 OEWS, as-published).",
+  "THE BAND ITSELF: the specialized band (~2/3-p90 mean-threshold) holds ~23-28% of jobs in EVERY metro with a similar occupation count (143-200) - the ceiling is not about MORE band jobs, it is about WHAT IS IN THE BAND and WHAT IT PAYS (band weighted-mean x p90 r=+0.98).",
+  "THE CEILING AXES across the 10 metros: Computer/Math band-share r=+0.86, Management band-share r=+0.73 (CM+Mgmt joint axis); Houston 44.6% CM+Mgmt (4th) vs Memphis 29.1% (9th); NYC 42.8, Boston 49.7, OKC 29.8, NOLA 27.6.",
+  "HOUSTON vs MEMPHIS, group deltas: Management +12.9pp (569k band jobs in Houston, wmean $146,948), Architecture/Engineering +4.5pp (57.7k jobs, $127,760 - the oil&gas engineer mass), Computer/Math +2.6pp, Science +2.0pp; Memphis carries the logistics mass in the OPPOSITE direction (Transport band-share +2.7pp over Houston, wmean $71,465 - First-Line Supervisors of Transportation at $68-74k, not pilots), and Office/Admin +6.3pp in ITS band.",
+  "MEMPHIS'S LOWEST-P10-HIGH-P90-TAIL: its ceiling is held by healthcare + a thin management layer: top mass = Registered Nurses 13,760 @ $87,370, Gen&Ops Managers 9,730 @ $132,440, first-line supervisors (office + transportation) ~13,200 @ $68-74k; the only $150k+ wmeans in the band are Legal ($156,726) and healthcare practitioners' mean $113,384.",
+  "THE HOUSTON WAGE-PREMIUM INSIDE SHARED GROUPS: same occupations pay ~10-15% more in Houston's band (Business/Financial wmean $101,463 vs $85,157; HC-Pract $125,691 vs $113,384; Arch/Eng $127,760 vs $98,666; Computer/Math $119,519 vs $103,044) - the p90 gap is BOTH mix (what jobs) AND level (what each pays).",
+  "MASS-SIDE TRUTH: Houston's ceiling rests on 97,320 General & Operations Managers ($146,320) + 65,910 RNs ($100,290) + 35,550 PM Specialists + 28,400 Accountants + 22,940 Software Developers ($133,130); Memphis's equivalent layer is 1/5 the size (13,760 RNs + 9,730 G&OMs).",
+  "NATIONAL frame: national specialized band = 313 occs, 95.9M jobs (61.7% of US employment at the 2/3-p90 mean threshold), wmean $124,751 vs national p90 $128,560."
+ ],
+ "band_share_x_p90_correlations": {
+  "Computer/Math": 0.86,
+  "Management": 0.73,
+  "Legal": 0.61,
+  "Science": 0.58,
+  "Arts/Media": 0.4,
+  "Architecture/Engineering": 0.16,
+  "Education/Library": -0.09,
+  "Sales": -0.21,
+  "Transportation/Material Moving": -0.32,
+  "Office/Admin": -0.36,
+  "Food Prep": -0.36,
+  "Healthcare Support": -0.36,
+  "Protective Service": -0.39,
+  "Production": -0.54,
+  "Healthcare Practitioners": -0.6,
+  "Business/Financial": -0.67,
+  "Construction/Extraction": -0.68,
+  "Community/Social Service": -0.72,
+  "Install/Maintain/Repair": -0.87,
+  "band_weighted_mean_vs_p90": 0.984,
+  "band_share_of_employment_vs_p90": -0.469,
+  "note": "Pearson r across the 10 metro band-shares vs metro p90 (n=10)"
+ }
+}

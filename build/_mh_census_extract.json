@@ -1,0 +1,570 @@
+[
+ {
+  "city": "Boston",
+  "state": "MA",
+  "year": 1992,
+  "entity_id": "222013001",
+  "codes_usd_x1000": {
+   "E32": 41,
+   "E36": 191802,
+   "E68": 1679,
+   "E79": 773
+  },
+  "codes_label": {
+   "E67": "welfare-federal-categorical",
+   "E68": "welfare-cash-other",
+   "E74": "welfare-vendor-medical",
+   "E75": "welfare-vendor-other",
+   "E77": "welfare-institutions",
+   "E79": "welfare-other",
+   "E32": "health-other",
+   "E36": "own-hospitals",
+   "E38": "other-hospitals"
+  }
+ },
+ {
+  "city": "Boston",
+  "state": "MA",
+  "year": 2012,
+  "entity_id": "22201300100000",
+  "codes_usd_x1000": {
+   "E32": 227,
+   "E36": 257409,
+   "E79": 5040
+  },
+  "codes_label": {
+   "E32": "health-other",
+   "E36": "hospitals",
+   "E74": "welfare-vendor-medical",
+   "E75": "welfare-vendor-other",
+   "E77": "welfare-institutions",
+   "E79": "welfare-other"
+  }
+ },
+ {
+  "city": "Boston",
+  "state": "MA",
+  "year": 2014,
+  "entity_id": "22201300100000",
+  "codes_usd_x1000": {
+   "E32": 262,
+   "E36": 232664,
+   "E79": 4548
+  },
+  "codes_label": {
+   "E32": "health-other",
+   "E36": "hospitals",
+   "E74": "welfare-vendor-medical",
+   "E75": "welfare-vendor-other",
+   "E77": "welfare-institutions",
+   "E79": "welfare-other"
+  }
+ },
+ {
+  "city": "New York",
+  "state": "NY",
+  "year": 1992,
+  "entity_id": "330000000",
+  "codes_usd_x1000": {
+   "E32": 1060738,
+   "E36": 3265200,
+   "E74": 12360880,
+   "E77": 8695,
+   "E79": 384397
+  },
+  "codes_label": {
+   "E67": "welfare-federal-categorical",
+   "E68": "welfare-cash-other",
+   "E74": "welfare-vendor-medical",
+   "E75": "welfare-vendor-other",
+   "E77": "welfare-institutions",
+   "E79": "welfare-other",
+   "E32": "health-other",
+   "E36": "own-hospitals",
+   "E38": "other-hospitals"
+  }
+ },
+ {
+  "city": "New York",
+  "state": "NY",
+  "year": 2012,
+  "entity_id": "33000000000000",
+  "codes_usd_x1000": {
+   "E32": 2080467,
+   "E36": 6040039,
+   "E74": 38568705,
+   "E75": 255823,
+   "E77": 85907,
+   "E79": 1090123
+  },
+  "codes_label": {
+   "E32": "health-other",
+   "E36": "hospitals",
+   "E74": "welfare-vendor-medical",
+   "E75": "welfare-vendor-other",
+   "E77": "welfare-institutions",
+   "E79": "welfare-other"
+  }
+ },
+ {
+  "city": "New York",
+  "state": "NY",
+  "year": 2014,
+  "entity_id": "33000000000000",
+  "codes_usd_x1000": {
+   "E32": 2688317,
+   "E36": 4426746,
+   "E74": 44300163,
+   "E77": 92938,
+   "E79": 615729
+  },
+  "codes_label": {
+   "E32": "health-other",
+   "E36": "hospitals",
+   "E74": "welfare-vendor-medical",
+   "E75": "welfare-vendor-other",
+   "E77": "welfare-institutions",
+   "E79": "welfare-other"
+  }
+ },
+ {
+  "city": "New Orleans",
+  "state": "LA",
+  "year": 1992,
+  "entity_id": "192036001",
+  "codes_usd_x1000": {
+   "E32": 13637,
+   "E77": 2024,
+   "E79": 3519
+  },
+  "codes_label": {
+   "E67": "welfare-federal-categorical",
+   "E68": "welfare-cash-other",
+   "E74": "welfare-vendor-medical",
+   "E75": "welfare-vendor-other",
+   "E77": "welfare-institutions",
+   "E79": "welfare-other",
+   "E32": "health-other",
+   "E36": "own-hospitals",
+   "E38": "other-hospitals"
+  }
+ },
+ {
+  "city": "New Orleans",
+  "state": "LA",
+  "year": 2012,
+  "entity_id": "19203600100000",
+  "codes_usd_x1000": {
+   "E32": 10781,
+   "E36": 1498
+  },
+  "codes_label": {
+   "E32": "health-other",
+   "E36": "hospitals",
+   "E74": "welfare-vendor-medical",
+   "E75": "welfare-vendor-other",
+   "E77": "welfare-institutions",
+   "E79": "welfare-other"
+  }
+ },
+ {
+  "city": "New Orleans",
+  "state": "LA",
+  "year": 2014,
+  "entity_id": "19203600100000",
+  "codes_usd_x1000": {
+   "E32": 30553,
+   "E36": 7777,
+   "E77": 1204
+  },
+  "codes_label": {
+   "E32": "health-other",
+   "E36": "hospitals",
+   "E74": "welfare-vendor-medical",
+   "E75": "welfare-vendor-other",
+   "E77": "welfare-institutions",
+   "E79": "welfare-other"
+  }
+ },
+ {
+  "city": "St. Louis",
+  "state": "MO",
+  "year": 1992,
+  "entity_id": "262096001",
+  "codes_usd_x1000": {
+   "E32": 15236,
+   "E38": 15400,
+   "E74": 1435,
+   "E79": 2261
+  },
+  "codes_label": {
+   "E67": "welfare-federal-categorical",
+   "E68": "welfare-cash-other",
+   "E74": "welfare-vendor-medical",
+   "E75": "welfare-vendor-other",
+   "E77": "welfare-institutions",
+   "E79": "welfare-other",
+   "E32": "health-other",
+   "E36": "own-hospitals",
+   "E38": "other-hospitals"
+  }
+ },
+ {
+  "city": "St. Louis",
+  "state": "MO",
+  "year": 2012,
+  "entity_id": "26209600100000",
+  "codes_usd_x1000": {
+   "E32": 39464
+  },
+  "codes_label": {
+   "E32": "health-other",
+   "E36": "hospitals",
+   "E74": "welfare-vendor-medical",
+   "E75": "welfare-vendor-other",
+   "E77": "welfare-institutions",
+   "E79": "welfare-other"
+  }
+ },
+ {
+  "city": "St. Louis",
+  "state": "MO",
+  "year": 2014,
+  "entity_id": "26209600100000",
+  "codes_usd_x1000": {
+   "E32": 49602
+  },
+  "codes_label": {
+   "E32": "health-other",
+   "E36": "hospitals",
+   "E74": "welfare-vendor-medical",
+   "E75": "welfare-vendor-other",
+   "E77": "welfare-institutions",
+   "E79": "welfare-other"
+  }
+ },
+ {
+  "city": "Cincinnati",
+  "state": "OH",
+  "year": 1992,
+  "entity_id": "362031006",
+  "codes_usd_x1000": {
+   "E32": 32157
+  },
+  "codes_label": {
+   "E67": "welfare-federal-categorical",
+   "E68": "welfare-cash-other",
+   "E74": "welfare-vendor-medical",
+   "E75": "welfare-vendor-other",
+   "E77": "welfare-institutions",
+   "E79": "welfare-other",
+   "E32": "health-other",
+   "E36": "own-hospitals",
+   "E38": "other-hospitals"
+  }
+ },
+ {
+  "city": "Cincinnati",
+  "state": "OH",
+  "year": 2012,
+  "entity_id": "36203100600000",
+  "codes_usd_x1000": {
+   "E32": 25475
+  },
+  "codes_label": {
+   "E32": "health-other",
+   "E36": "hospitals",
+   "E74": "welfare-vendor-medical",
+   "E75": "welfare-vendor-other",
+   "E77": "welfare-institutions",
+   "E79": "welfare-other"
+  }
+ },
+ {
+  "city": "Cincinnati",
+  "state": "OH",
+  "year": 2014,
+  "entity_id": "36203100600000",
+  "codes_usd_x1000": {
+   "E32": 43777
+  },
+  "codes_label": {
+   "E32": "health-other",
+   "E36": "hospitals",
+   "E74": "welfare-vendor-medical",
+   "E75": "welfare-vendor-other",
+   "E77": "welfare-institutions",
+   "E79": "welfare-other"
+  }
+ },
+ {
+  "city": "Houston",
+  "state": "TX",
+  "year": 1992,
+  "entity_id": "442101008",
+  "codes_usd_x1000": {
+   "E32": 55633
+  },
+  "codes_label": {
+   "E67": "welfare-federal-categorical",
+   "E68": "welfare-cash-other",
+   "E74": "welfare-vendor-medical",
+   "E75": "welfare-vendor-other",
+   "E77": "welfare-institutions",
+   "E79": "welfare-other",
+   "E32": "health-other",
+   "E36": "own-hospitals",
+   "E38": "other-hospitals"
+  }
+ },
+ {
+  "city": "Houston",
+  "state": "TX",
+  "year": 2012,
+  "entity_id": "44210100800000",
+  "codes_usd_x1000": {
+   "E32": 103166
+  },
+  "codes_label": {
+   "E32": "health-other",
+   "E36": "hospitals",
+   "E74": "welfare-vendor-medical",
+   "E75": "welfare-vendor-other",
+   "E77": "welfare-institutions",
+   "E79": "welfare-other"
+  }
+ },
+ {
+  "city": "Houston",
+  "state": "TX",
+  "year": 2014,
+  "entity_id": "44210100800000",
+  "codes_usd_x1000": {
+   "E32": 122446
+  },
+  "codes_label": {
+   "E32": "health-other",
+   "E36": "hospitals",
+   "E74": "welfare-vendor-medical",
+   "E75": "welfare-vendor-other",
+   "E77": "welfare-institutions",
+   "E79": "welfare-other"
+  }
+ },
+ {
+  "city": "Detroit",
+  "state": "MI",
+  "year": 1992,
+  "entity_id": "232082004",
+  "codes_usd_x1000": {
+   "E32": 95842
+  },
+  "codes_label": {
+   "E67": "welfare-federal-categorical",
+   "E68": "welfare-cash-other",
+   "E74": "welfare-vendor-medical",
+   "E75": "welfare-vendor-other",
+   "E77": "welfare-institutions",
+   "E79": "welfare-other",
+   "E32": "health-other",
+   "E36": "own-hospitals",
+   "E38": "other-hospitals"
+  }
+ },
+ {
+  "city": "Detroit",
+  "state": "MI",
+  "year": 2012,
+  "entity_id": "23208200400000",
+  "codes_usd_x1000": {
+   "E32": 70931,
+   "E75": 151,
+   "E79": 6312
+  },
+  "codes_label": {
+   "E32": "health-other",
+   "E36": "hospitals",
+   "E74": "welfare-vendor-medical",
+   "E75": "welfare-vendor-other",
+   "E77": "welfare-institutions",
+   "E79": "welfare-other"
+  }
+ },
+ {
+  "city": "Detroit",
+  "state": "MI",
+  "year": 2014,
+  "entity_id": "23208200400000",
+  "codes_usd_x1000": {
+   "E32": 46904,
+   "E79": 1534
+  },
+  "codes_label": {
+   "E32": "health-other",
+   "E36": "hospitals",
+   "E74": "welfare-vendor-medical",
+   "E75": "welfare-vendor-other",
+   "E77": "welfare-institutions",
+   "E79": "welfare-other"
+  }
+ },
+ {
+  "city": "Memphis",
+  "state": "TN",
+  "year": 1992,
+  "entity_id": "432079005",
+  "codes_usd_x1000": {
+   "E32": 901
+  },
+  "codes_label": {
+   "E67": "welfare-federal-categorical",
+   "E68": "welfare-cash-other",
+   "E74": "welfare-vendor-medical",
+   "E75": "welfare-vendor-other",
+   "E77": "welfare-institutions",
+   "E79": "welfare-other",
+   "E32": "health-other",
+   "E36": "own-hospitals",
+   "E38": "other-hospitals"
+  }
+ },
+ {
+  "city": "Memphis",
+  "state": "TN",
+  "year": 2012,
+  "entity_id": "43207900500000",
+  "codes_usd_x1000": {},
+  "codes_label": {
+   "E32": "health-other",
+   "E36": "hospitals",
+   "E74": "welfare-vendor-medical",
+   "E75": "welfare-vendor-other",
+   "E77": "welfare-institutions",
+   "E79": "welfare-other"
+  }
+ },
+ {
+  "city": "Memphis",
+  "state": "TN",
+  "year": 2014,
+  "entity_id": "43207900500000",
+  "codes_usd_x1000": {},
+  "codes_label": {
+   "E32": "health-other",
+   "E36": "hospitals",
+   "E74": "welfare-vendor-medical",
+   "E75": "welfare-vendor-other",
+   "E77": "welfare-institutions",
+   "E79": "welfare-other"
+  }
+ },
+ {
+  "city": "Oklahoma City",
+  "state": "OK",
+  "year": 1992,
+  "entity_id": "372055015",
+  "codes_usd_x1000": {
+   "E32": 1125
+  },
+  "codes_label": {
+   "E67": "welfare-federal-categorical",
+   "E68": "welfare-cash-other",
+   "E74": "welfare-vendor-medical",
+   "E75": "welfare-vendor-other",
+   "E77": "welfare-institutions",
+   "E79": "welfare-other",
+   "E32": "health-other",
+   "E36": "own-hospitals",
+   "E38": "other-hospitals"
+  }
+ },
+ {
+  "city": "Oklahoma City",
+  "state": "OK",
+  "year": 2012,
+  "entity_id": "37205501500000",
+  "codes_usd_x1000": {
+   "E32": 7868
+  },
+  "codes_label": {
+   "E32": "health-other",
+   "E36": "hospitals",
+   "E74": "welfare-vendor-medical",
+   "E75": "welfare-vendor-other",
+   "E77": "welfare-institutions",
+   "E79": "welfare-other"
+  }
+ },
+ {
+  "city": "Oklahoma City",
+  "state": "OK",
+  "year": 2014,
+  "entity_id": "37205501500000",
+  "codes_usd_x1000": {
+   "E32": 4816
+  },
+  "codes_label": {
+   "E32": "health-other",
+   "E36": "hospitals",
+   "E74": "welfare-vendor-medical",
+   "E75": "welfare-vendor-other",
+   "E77": "welfare-institutions",
+   "E79": "welfare-other"
+  }
+ },
+ {
+  "city": "Pittsburgh",
+  "state": "PA",
+  "year": 1992,
+  "entity_id": "392002056",
+  "codes_usd_x1000": {
+   "E32": 6990,
+   "E79": 30
+  },
+  "codes_label": {
+   "E67": "welfare-federal-categorical",
+   "E68": "welfare-cash-other",
+   "E74": "welfare-vendor-medical",
+   "E75": "welfare-vendor-other",
+   "E77": "welfare-institutions",
+   "E79": "welfare-other",
+   "E32": "health-other",
+   "E36": "own-hospitals",
+   "E38": "other-hospitals"
+  }
+ },
+ {
+  "city": "Pittsburgh",
+  "state": "PA",
+  "year": 2012,
+  "entity_id": "39200205600000",
+  "codes_usd_x1000": {
+   "E32": 13828
+  },
+  "codes_label": {
+   "E32": "health-other",
+   "E36": "hospitals",
+   "E74": "welfare-vendor-medical",
+   "E75": "welfare-vendor-other",
+   "E77": "welfare-institutions",
+   "E79": "welfare-other"
+  }
+ },
+ {
+  "city": "Pittsburgh",
+  "state": "PA",
+  "year": 2014,
+  "entity_id": "39200205600000",
+  "codes_usd_x1000": {
+   "E32": 11003
+  },
+  "codes_label": {
+   "E32": "health-other",
+   "E36": "hospitals",
+   "E74": "welfare-vendor-medical",
+   "E75": "welfare-vendor-other",
+   "E77": "welfare-institutions",
+   "E79": "welfare-other"
+  }
+ }
+]

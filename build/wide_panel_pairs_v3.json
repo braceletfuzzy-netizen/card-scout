@@ -1,0 +1,398 @@
+[
+ {
+  "city": "Baltimore",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 0.402,
+  "murders": 216,
+  "population": 622895,
+  "rate": 34.68
+ },
+ {
+  "city": "Baltimore",
+  "care_year": 2014,
+  "crime_year": 2014,
+  "care_ratio": 0.398,
+  "murders": 211,
+  "population": 623587,
+  "rate": 33.84
+ },
+ {
+  "city": "Milwaukee",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 0.213,
+  "murders": 93,
+  "population": 598569,
+  "rate": 15.54
+ },
+ {
+  "city": "Milwaukee",
+  "care_year": 2014,
+  "crime_year": 2014,
+  "care_ratio": 0.205,
+  "murders": 86,
+  "population": 600664,
+  "rate": 14.32
+ },
+ {
+  "city": "Portland",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 0.485,
+  "murders": 20,
+  "population": 604264,
+  "rate": 3.31
+ },
+ {
+  "city": "Portland",
+  "care_year": 2014,
+  "crime_year": 2014,
+  "care_ratio": 0.489,
+  "murders": 26,
+  "population": 620510,
+  "rate": 4.19
+ },
+ {
+  "city": "Kansas City",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 0.472,
+  "murders": 105,
+  "population": 464595,
+  "rate": 22.6
+ },
+ {
+  "city": "Kansas City",
+  "care_year": 2014,
+  "crime_year": 2014,
+  "care_ratio": 0.527,
+  "murders": 79,
+  "population": 470629,
+  "rate": 16.79
+ },
+ {
+  "city": "Las Vegas",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 1.217,
+  "murders": 76,
+  "population": 593275,
+  "rate": 12.81
+ },
+ {
+  "city": "Las Vegas",
+  "care_year": 2014,
+  "crime_year": 2014,
+  "care_ratio": 0.83,
+  "murders": 122,
+  "population": 607976,
+  "rate": 20.07
+ },
+ {
+  "city": "Albuquerque",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 0.979,
+  "murders": 41,
+  "population": 555002,
+  "rate": 7.39
+ },
+ {
+  "city": "Albuquerque",
+  "care_year": 2014,
+  "crime_year": 2014,
+  "care_ratio": 0.849,
+  "murders": 30,
+  "population": 557444,
+  "rate": 5.38
+ },
+ {
+  "city": "Tucson",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 0.365,
+  "murders": 42,
+  "population": 531880,
+  "rate": 7.9
+ },
+ {
+  "city": "Tucson",
+  "care_year": 2014,
+  "crime_year": 2014,
+  "care_ratio": 0.323,
+  "murders": 35,
+  "population": 534800,
+  "rate": 6.54
+ },
+ {
+  "city": "Fresno",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 0.159,
+  "murders": 51,
+  "population": 505414,
+  "rate": 10.09
+ },
+ {
+  "city": "Fresno",
+  "care_year": 2014,
+  "crime_year": 2014,
+  "care_ratio": 0.121,
+  "murders": 47,
+  "population": 514100,
+  "rate": 9.14
+ },
+ {
+  "city": "Sacramento",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 0.445,
+  "murders": 34,
+  "population": 474226,
+  "rate": 7.17
+ },
+ {
+  "city": "Sacramento",
+  "care_year": 2014,
+  "crime_year": 2014,
+  "care_ratio": 0.475,
+  "murders": 28,
+  "population": 482762,
+  "rate": 5.8
+ },
+ {
+  "city": "Long Beach",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 0.879,
+  "murders": 32,
+  "population": 466873,
+  "rate": 6.85
+ },
+ {
+  "city": "Long Beach",
+  "care_year": 2014,
+  "crime_year": 2014,
+  "care_ratio": 0.805,
+  "murders": 23,
+  "population": 469109,
+  "rate": 4.9
+ },
+ {
+  "city": "Omaha",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 0.89,
+  "murders": 41,
+  "population": 465261,
+  "rate": 8.81
+ },
+ {
+  "city": "Omaha",
+  "care_year": 2014,
+  "crime_year": 2014,
+  "care_ratio": 0.45,
+  "murders": 32,
+  "population": 470423,
+  "rate": 6.8
+ },
+ {
+  "city": "Raleigh",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 1.098,
+  "murders": 17,
+  "population": 423304,
+  "rate": 4.02
+ },
+ {
+  "city": "Raleigh",
+  "care_year": 2014,
+  "crime_year": 2014,
+  "care_ratio": 0.81,
+  "murders": 8,
+  "population": 439503,
+  "rate": 1.82
+ },
+ {
+  "city": "Virginia Beach",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 1.635,
+  "murders": 21,
+  "population": 445044,
+  "rate": 4.72
+ },
+ {
+  "city": "Virginia Beach",
+  "care_year": 2014,
+  "crime_year": 2014,
+  "care_ratio": 1.658,
+  "murders": 17,
+  "population": 448864,
+  "rate": 3.79
+ },
+ {
+  "city": "Tulsa",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 1.081,
+  "murders": 42,
+  "population": 394643,
+  "rate": 10.64
+ },
+ {
+  "city": "Tulsa",
+  "care_year": 2014,
+  "crime_year": 2014,
+  "care_ratio": 1.28,
+  "murders": 46,
+  "population": 399892,
+  "rate": 11.5
+ },
+ {
+  "city": "Wichita",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 0.464,
+  "murders": 23,
+  "population": 385751,
+  "rate": 5.96
+ },
+ {
+  "city": "Wichita",
+  "care_year": 2014,
+  "crime_year": 2014,
+  "care_ratio": 0.484,
+  "murders": 21,
+  "population": 388416,
+  "rate": 5.41
+ },
+ {
+  "city": "Austin",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 0.846,
+  "murders": 31,
+  "population": 854482,
+  "rate": 3.63
+ },
+ {
+  "city": "Charlotte",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 0.099,
+  "murders": 52,
+  "population": 773264,
+  "rate": 6.72
+ },
+ {
+  "city": "Columbus",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 0.621,
+  "murders": 71,
+  "population": 812740,
+  "rate": 8.74
+ },
+ {
+  "city": "Dallas",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 0.66,
+  "murders": 154,
+  "population": 1242115,
+  "rate": 12.4
+ },
+ {
+  "city": "Denver",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 1.023,
+  "murders": 39,
+  "population": 635163,
+  "rate": 6.14
+ },
+ {
+  "city": "Fort Worth",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 0.488,
+  "murders": 46,
+  "population": 781046,
+  "rate": 5.89
+ },
+ {
+  "city": "Indianapolis",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 1.982,
+  "murders": 97,
+  "population": 835499,
+  "rate": 11.61
+ },
+ {
+  "city": "Nashville",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 0.776,
+  "murders": 63,
+  "population": 625550,
+  "rate": 10.07
+ },
+ {
+  "city": "Philadelphia",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 2.204,
+  "murders": 331,
+  "population": 1551824,
+  "rate": 21.33
+ },
+ {
+  "city": "Phoenix",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 0.45,
+  "murders": 123,
+  "population": 1499274,
+  "rate": 8.2
+ },
+ {
+  "city": "San Antonio",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 1.065,
+  "murders": 89,
+  "population": 1383075,
+  "rate": 6.43
+ },
+ {
+  "city": "San Diego",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 0.995,
+  "murders": 47,
+  "population": 1336776,
+  "rate": 3.52
+ },
+ {
+  "city": "San Francisco",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 2.277,
+  "murders": 69,
+  "population": 828876,
+  "rate": 8.32
+ },
+ {
+  "city": "Seattle",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 1.511,
+  "murders": 25,
+  "population": 635928,
+  "rate": 3.93
+ }
+]

@@ -1,0 +1,21 @@
+import json
+
+# POLYSCOUT — EDU+ v0 (the education = the OWN-metric-line = the design-sketch!)
+edu = {
+    'built': '2026-11-22',
+    'the_founder_question': 'is-education-under-CARE+ or-its-own-line-item?',
+    'the_verdict': 'OWN LINE ITEM = EDU+ (the the three-reasons)!',
+    'the_reasons': {
+        '1-basin-structure': 'the schools = the usually-NOT-the-city-budget (the the independent-districts = the MSCS-$1.9B-in-Memphis = the bigger-than-the-city-operating [Certain-from-our-own-pull!] = the city-ledger-school-dollars = ~zero-for-many!)',
+        '2-the-exceptions': 'Boston-runs-BPS-in-the-GF ($547.9M = THE 1994-95-flip-driver = already-measured!) + OKC-MAPS-for-Kids = SOME-run-schools = the including-raw = the like-to-like-VIOLATED (the Boston-500M-vs-Memphis-0-class!)',
+        '3-size-distortion': 'the education = the often-the-biggest-single-line (the BPS = the ~40%-of-the-Boston-operating!) = the into-CARE+ = the CARE+ = the becomes-tHE-EDUCATION+ = the other-lanes-drowned!'
+    },
+    'the_edu_plus_design_v0': {
+        'formula': 'EDU+ = 100 x (city-education-spend-per-capita / band-median-edu-per-capita)',
+        'the_lanes': 'the city-budget-school-lines-WHERE-they-exist + the district-figures-WHERE-standalone = the BOTH-flags = the fund-source-class-noted-per-city (the city-run-vs-district-run = the the honest-basis!)',
+        'the_family': 'CRIME+ / CARE+ / EDU+ = the the ERA-triple = the the field-normalized = the the instant-readable!'
+    },
+    'the_current_care_keywords (the the unchanged!)': 'park/library/health/human-services/youth/senior = the the CARE+ = the the intact (the education = the stays-out!)'
+}
+json.dump(edu, open('C:/Users/J/Documents/LLM/cardscout-2.0/For You/PolyScout/build/edu_plus_v0.json', 'w', encoding='utf-8'), indent=1)
+print('WROTE edu_plus_v0.json')

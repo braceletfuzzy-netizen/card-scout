@@ -1,0 +1,81 @@
+{
+ "_record": "lane11_capacity_vs_prevalence_v1",
+ "built": "2026-11-24",
+ "built_by": "KNOCKOUT-BATCH-2 LANE-11 subagent (capacity-vs-prevalence competing ecological predictors; the v10 pairing-4 gap: 'NO retrieved study directly pits CAPACITY against PREVALENCE as competing ecological predictors of violent crime/homicide in one design' — this build runs that design on the banked pulls)",
+ "laws": [
+  "direction-class only, no causal claims",
+  "honest-null = routes-tried-no-capture, never a placeholder",
+  "capacities bucketed at the source's own legend breaks (no invented thresholds)",
+  "reverse-causation guard: capacity AND prevalence may both co-move with need (money-follows-crisis class) — flagged per arm",
+  "format-lock: Mann-Whitney U where the anchor designs use it; Spearman for ordinal-bucket ecologies"
+ ],
+ "anchor": {
+  "scan": "peer_review_scan_v10.json (PAIRING-4 novelty-verdict summary)",
+  "gap_claim": "The CAPACITY side is deeply VERIFIED (Penrose canon: Grecco 2019; Wild 2022; Rajkumar 2022; Mundt; Allison 2018) plus one counter-anchor (Salisbury & Thornicroft 2016). The PREVALENCE side is thin/indirect (Li 2026; Taiwan 2026; Korea 2025; Australia 2026). NO study pits capacity against prevalence in one ecological design.",
+  "design_here": "50-state cross-section: NRI Fig-4 state-hospital residents per 100k (4 legend buckets: 2-7.4 / 7.4-10.0 / 10-15.2 / 15.2-29) x CDC Mapping-IOV state rates (fpsi-y8tj TTM + 2024) x CDC BRFSS prevalence (5eh7-pjx8, depressive-disorder %, poor-MH-days, social isolation) — all three on the SAME state grain in one design"
+ },
+ "capacity_side": {
+  "source": "NRI 2025 State Profiles, 'Use of State Psychiatric Hospitals, 2025' (July 2025), Figure 4 (URS 2023, first day of state FY2023 residents per 100k)",
+  "file": "C:/Users/J/nri_smha-use-of-state-psychiatric-hospitals-july-2025-final.pdf (p.4)",
+  "extraction": "vector-choropleth fill-classification (71 paths, 4 legend colors) + 200-dpi raster pixel-verification + vision confirmation of 9 check-states (NY, TX, CA, AK, VT, IA, IL, OH, PA all confirmed); 50 states classified",
+  "bucket_distribution": {"15.2-29": 15, "10-15.2": 13, "2-7.4": 12, "7.4-10.0": 10},
+  "known_extremes_check": "map prose states range 28.8/100k (DC) to 2.0/100k (VT) — DC classifies 15.2-29 and VT 2-7.4 per the vision read, consistent",
+  "bucket_files": ["_lane11_nri_fig4_buckets_v1.json (vector+pixel pass)", "_lane11_nri_fig4_buckets_v2.json (vision-corrected, the file used)"],
+  "pull_status": "REAL OBSERVED (from the NRI PDF already on disk from the lane-4/5 pull session)",
+  "limitation": "BUCKET grain (4 ordinal classes), not exact values — the map publishes classes only; ordinal tests only, no interpolated values"
+ },
+ "prevalence_side": {
+  "source": "CDC BRFSS PLACES-class state totals (Socrata 5eh7-pjx8)",
+  "rows_pulled": 1086,
+  "years": ["2022", "2023", "2024"],
+  "measures": ["depressive_disorder_pct (ever told)", "poor_mh_days (past-30-day mean %)", "social_isolation (often/always lonely %)"],
+  "n_states": {"depression": 54, "mh_days": 54, "isolation": 50},
+  "pull_status": "REAL OBSERVED (keyless Socrata; this is the measure the lane-5 pull marked available-that-pass)"
+ },
+ "outcome_side": {
+  "source": "CDC Mapping-IOV state (Socrata fpsi-y8tj, banked in _lane5_state_raw.json ioV_state)",
+  "intents": ["All_Suicide", "All_Homicide", "FA_Deaths", "FA_Homicide", "FA_Suicide", "Drug_OD"],
+  "periods": ["TTM (July 2025-June 2026)", "2024"]
+ },
+ "tests": {
+  "capacity_arm_only": {
+   "description": "capacity bucket (ordinal 0-3) vs each outcome; Spearman + Mann-Whitney U (top bucket 15.2-29 vs bottom bucket 2-7.4)",
+   "cells": {
+    "All_Suicide": {"spearman": -0.144, "hi_bucket_median": 16.6, "lo_bucket_median": 17.7, "mwu_p": 0.294},
+    "All_Homicide": {"spearman": 0.131, "hi_bucket_median": 4.6, "lo_bucket_median": 4.75, "mwu_p": 0.495},
+    "Drug_OD": {"spearman": -0.053, "hi_bucket_median": 17.4, "lo_bucket_median": 17.35, "mwu_p": 0.807},
+    "FA_Homicide": {"spearman": 0.113, "hi_bucket_median": 3.5, "lo_bucket_median": 3.6, "mwu_p": 0.591}
+   },
+   "verdict": "HONEST-NULL: 8/8 cells (2 periods x 4 intents) non-significant, all |rho| < 0.15; suicide runs in the naive-negative direction but weak (rho -0.13/-0.14, p ~0.3); the Sweden-anchored rank-3 within-county effect (-7.6%/10 beds) does NOT appear as a between-state ecological read",
+   "confidence": "med (bucket grain understates within-bucket variance; the null is on ordinal classes)"
+  },
+  "prevalence_arm": {
+   "description": "prevalence measures vs the SAME outcomes (the competing arm)",
+   "standout_cells": {
+    "poor_mh_days_vs_FA_Deaths": {"spearman": 0.51, "n": 50},
+    "depressive_disorder_vs_FA_Suicide": {"spearman": 0.377, "n": 50},
+    "depressive_disorder_vs_All_Suicide": {"spearman": 0.367, "n": 50},
+    "poor_mh_days_vs_All_Suicide": {"spearman": 0.287, "n": 50}
+   },
+   "verdict": "PREVALENCE BEATS CAPACITY on the suicide/fatality margin (rho 0.29-0.51 vs capacity's -0.14), and the two arms are approximately ORTHOGONAL (collinearity rho 0.031-0.034) — capacity and prevalence are NOT the same axis in the state cross-section",
+   "confidence": "med (ecological, direction-class; the 0.51 read is firearm-deaths x poor-MH-days, plausible same-family inflation — flagged)"
+  },
+  "competing_predictor_headline": {
+   "question": "Which arm explains more outcome variance in the state cross-section: CAPACITY (state-hospital residents/100k buckets) or PREVALENCE (BRFSS MH measures)?",
+   "answer": "PREVALENCE, decisively, on the suicide/fatality margin (best cell 0.51 vs capacity's best 0.14); on homicide both arms read ~0.11-0.14 (both near-null)",
+   "implication_for_grid": "the v10 pairing-4 verdict 'capacity-side verified, prevalence-side thin' now resolves at the state-ecology grain: the two arms are orthogonal axes (rho ~0.03), and the suicide-geography co-clustering Khan 2026 reports is carried by the PREVALENCE arm, not the capacity arm"
+  }
+ },
+ "honest_nulls": [
+  "capacity-vs-homicide: null (8/8 cells n.s.) — the within-county Sweden bed effect does not survive as a between-state ecological",
+  "exact per-state resident/100k values: NOT capturable from the keyless layer this pass (NRI publishes bucket classes only; Figure 4 is a map) — ordinal tests only",
+  "DC/PR and territories: DC carried in the NRI map classification; PR absent from NRI Fig-4 map (excluded, flagged)"
+ ],
+ "input_artifacts": {
+  "nri_pdf_on_disk": "nri_smha-use-of-state-psychiatric-hospitals-july-2025-final.pdf (9 pages, pulled 2026-11-23 lane-5 session)",
+  "brfss_raw": "_lane11_brfss_raw.json (1,086 rows)",
+  "capacity_buckets": "_lane11_nri_fig4_buckets_v2.json (50 states)",
+  "competing_raw": "_lane11_competing_test_raw.json (8 cells) + _lane11_prev_test_raw.json (20 cells)"
+ },
+ "verdict": "THE COMPETING-PREDICTOR DESIGN RETURNS A SPLIT: capacity arm = 8/8 honest-null (no between-state Penrose on the cross-section); prevalence arm = the suicide/fatality carrier (rho up to 0.51); arms orthogonal (rho ~0.03). First on-disk completion of the v10 pairing-4 design gap. Direction-class only."
+}

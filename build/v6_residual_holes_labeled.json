@@ -1,0 +1,660 @@
+[
+ {
+  "city": "Boston",
+  "year": 1980,
+  "pattern": "C--",
+  "class": "structural-convention",
+  "why": "solo-era rate: no same-year or +/-2yr peer rates (pool n=1) - CRIME+ undefined on v4/v5 convention"
+ },
+ {
+  "city": "Boston",
+  "year": 1983,
+  "pattern": "C--",
+  "class": "structural-convention",
+  "why": "same solo-era (pool n=1)"
+ },
+ {
+  "city": "Boston",
+  "year": 1990,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Boston",
+  "year": 1991,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Boston",
+  "year": 1993,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Boston",
+  "year": 1994,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Boston",
+  "year": 1995,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Boston",
+  "year": 1999,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Boston",
+  "year": 2001,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Boston",
+  "year": 2019,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Boston",
+  "year": 2020,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Boston",
+  "year": 2021,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Boston",
+  "year": 2022,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Boston",
+  "year": 2024,
+  "pattern": "-KE",
+  "class": "structural-convention",
+  "why": "care lane not yet extracted for this FY"
+ },
+ {
+  "city": "Boston",
+  "year": 2025,
+  "pattern": "-KE",
+  "class": "structural-convention",
+  "why": "care lane not yet extracted for this FY"
+ },
+ {
+  "city": "Boston",
+  "year": 2026,
+  "pattern": "--E",
+  "class": "structural-convention",
+  "why": "forward budget-year 2027 or partial-2026: EDU+ exists (budget book), care/crime lanes cannot (year not closed)"
+ },
+ {
+  "city": "Boston",
+  "year": 2027,
+  "pattern": "--E",
+  "class": "structural-convention",
+  "why": "forward budget-year 2027 or partial-2026: EDU+ exists (budget book), care/crime lanes cannot (year not closed)"
+ },
+ {
+  "city": "Cincinnati",
+  "year": 2014,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Cincinnati",
+  "year": 2015,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Cincinnati",
+  "year": 2016,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Cincinnati",
+  "year": 2017,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Cincinnati",
+  "year": 2018,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Cincinnati",
+  "year": 2019,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Cincinnati",
+  "year": 2020,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Cincinnati",
+  "year": 2021,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Cincinnati",
+  "year": 2022,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Cincinnati",
+  "year": 2023,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Cincinnati",
+  "year": 2024,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Cincinnati",
+  "year": 2025,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Cincinnati",
+  "year": 2026,
+  "pattern": "C-E",
+  "class": "structural-convention",
+  "why": "partial-year 2026 (YTD): CRIME+ suppressed by partial rule; rate+care+edu present"
+ },
+ {
+  "city": "Cincinnati",
+  "year": 2027,
+  "pattern": "C--",
+  "class": "structural-convention",
+  "why": "forward budget-year 2027"
+ },
+ {
+  "city": "Detroit",
+  "year": 2012,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Detroit",
+  "year": 2013,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Detroit",
+  "year": 2015,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Detroit",
+  "year": 2016,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Detroit",
+  "year": 2022,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Detroit",
+  "year": 2024,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Houston",
+  "year": 2004,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Houston",
+  "year": 2005,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Houston",
+  "year": 2006,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Houston",
+  "year": 2007,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Houston",
+  "year": 2011,
+  "pattern": "-K-",
+  "class": "structural-convention",
+  "why": "BRIEF-DISPROVED: pair file does NOT carry HOU FY2011 care (verified .jsonl+.json: pair holds FY04/05/06/07/22/24/26/27 only) - needs II_GFS FY2012-book extraction"
+ },
+ {
+  "city": "Houston",
+  "year": 2019,
+  "pattern": "-K-",
+  "class": "structural-convention",
+  "why": "BRIEF-DISPROVED: pair file does NOT carry HOU FY2019 care - needs II_GFS FY2020-book extraction"
+ },
+ {
+  "city": "Houston",
+  "year": 2022,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Houston",
+  "year": 2024,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Houston",
+  "year": 2025,
+  "pattern": "-KE",
+  "class": "structural-convention",
+  "why": "care lane not yet extracted for this FY"
+ },
+ {
+  "city": "Houston",
+  "year": 2026,
+  "pattern": "C-E",
+  "class": "structural-convention",
+  "why": "partial-year 2026 (YTD): CRIME+ suppressed by partial rule; rate+care+edu present"
+ },
+ {
+  "city": "Memphis",
+  "year": 2020,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Memphis",
+  "year": 2021,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Memphis",
+  "year": 2022,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "Memphis",
+  "year": 2026,
+  "pattern": "C--",
+  "class": "structural-convention",
+  "why": "partial-year 2026 (YTD)"
+ },
+ {
+  "city": "Memphis",
+  "year": 2027,
+  "pattern": "--E",
+  "class": "structural-convention",
+  "why": "forward budget-year 2027 or partial-2026: EDU+ exists (budget book), care/crime lanes cannot (year not closed)"
+ },
+ {
+  "city": "NYC",
+  "year": 1998,
+  "pattern": "C--",
+  "class": "structural-convention",
+  "why": "care-only year; crime not pulled"
+ },
+ {
+  "city": "NYC",
+  "year": 1999,
+  "pattern": "C--",
+  "class": "structural-convention",
+  "why": "care-only year; crime not pulled"
+ },
+ {
+  "city": "NYC",
+  "year": 2000,
+  "pattern": "C--",
+  "class": "structural-convention",
+  "why": "care-only year; crime not pulled"
+ },
+ {
+  "city": "NYC",
+  "year": 2001,
+  "pattern": "C--",
+  "class": "structural-convention",
+  "why": "care-only year; crime not pulled"
+ },
+ {
+  "city": "NYC",
+  "year": 2002,
+  "pattern": "C--",
+  "class": "structural-convention",
+  "why": "care-only year; crime not pulled"
+ },
+ {
+  "city": "New Orleans",
+  "year": 1990,
+  "pattern": "-K-",
+  "class": "structural-convention",
+  "why": "NO care lane 1990s never extracted (banked NO series starts FY2004)"
+ },
+ {
+  "city": "New Orleans",
+  "year": 1994,
+  "pattern": "-K-",
+  "class": "structural-convention",
+  "why": "same - pre-FY2004 NO books not pulled"
+ },
+ {
+  "city": "New Orleans",
+  "year": 2004,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "New Orleans",
+  "year": 2005,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "New Orleans",
+  "year": 2006,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "New Orleans",
+  "year": 2007,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "New Orleans",
+  "year": 2009,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "New Orleans",
+  "year": 2011,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "New Orleans",
+  "year": 2017,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "New Orleans",
+  "year": 2019,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "New Orleans",
+  "year": 2022,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "New Orleans",
+  "year": 2024,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "New Orleans",
+  "year": 2025,
+  "pattern": "C--",
+  "class": "structural-convention",
+  "why": "NOPD left UCR summary program: CDE 0/12 months, actuals NULL = non-reporting, NOT zero murders; honest null carried (press figure not taken without primary count)"
+ },
+ {
+  "city": "New Orleans",
+  "year": 2026,
+  "pattern": "C-E",
+  "class": "structural-convention",
+  "why": "partial-year 2026 (YTD): CRIME+ suppressed by partial rule; rate+care+edu present"
+ },
+ {
+  "city": "New Orleans",
+  "year": 2027,
+  "pattern": "--E",
+  "class": "structural-convention",
+  "why": "forward budget-year 2027 or partial-2026: EDU+ exists (budget book), care/crime lanes cannot (year not closed)"
+ },
+ {
+  "city": "Okc",
+  "year": 2022,
+  "pattern": "C--",
+  "class": "structural-convention",
+  "why": "OKC care-only onboarding; crime lane never pulled"
+ },
+ {
+  "city": "Okc",
+  "year": 2027,
+  "pattern": "C--",
+  "class": "structural-convention",
+  "why": "forward budget-year"
+ },
+ {
+  "city": "St. Louis",
+  "year": 1998,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "St. Louis",
+  "year": 1999,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "St. Louis",
+  "year": 2000,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "St. Louis",
+  "year": 2001,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "St. Louis",
+  "year": 2002,
+  "pattern": "C--",
+  "class": "structural-convention",
+  "why": "SL crime 2002 not pulled"
+ },
+ {
+  "city": "St. Louis",
+  "year": 2010,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "St. Louis",
+  "year": 2011,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "St. Louis",
+  "year": 2012,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "St. Louis",
+  "year": 2013,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "St. Louis",
+  "year": 2014,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "St. Louis",
+  "year": 2015,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "St. Louis",
+  "year": 2017,
+  "pattern": "C--",
+  "class": "structural-convention",
+  "why": "SL crime 2017 not pulled"
+ },
+ {
+  "city": "St. Louis",
+  "year": 2018,
+  "pattern": "C--",
+  "class": "structural-convention",
+  "why": "SL crime 2018 not pulled"
+ },
+ {
+  "city": "St. Louis",
+  "year": 2019,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "St. Louis",
+  "year": 2020,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "St. Louis",
+  "year": 2021,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "St. Louis",
+  "year": 2022,
+  "pattern": "CK-",
+  "class": "structural-convention",
+  "why": "EDU+ not extracted for this (city,fy) - edu arc covers few anchor years only"
+ },
+ {
+  "city": "St. Louis",
+  "year": 2024,
+  "pattern": "-KE",
+  "class": "structural-convention",
+  "why": "care lane not yet extracted for this FY"
+ },
+ {
+  "city": "St. Louis",
+  "year": 2026,
+  "pattern": "--*",
+  "class": "structural-convention",
+  "why": "partial-year 2026 (rate printed, CRIME+ suppressed by partial rule); SL care/edu FY26 not extracted"
+ },
+ {
+  "city": "St. Louis",
+  "year": 2027,
+  "pattern": "C--",
+  "class": "structural-convention",
+  "why": "forward budget-year"
+ }
+]

@@ -1,0 +1,1313 @@
+{
+ "_record": "joint_regression_v2 — BOARD-3 THE JOINT REGRESSION v2 (rev2 of joint_regression_v1) + THE WAGE-STRATA JOINT + THE OUTPUT-VECTOR + THE CEILING-BAND",
+ "built": "2026-11-24",
+ "parent_artifacts": [
+  "maslow_joint_panel_v1.jsonl (94 city-years)",
+  "joint_regression_v1.json (banked)",
+  "wage_stratified_v1.json (OEWS p10/50/90, 2025 vintage, 10 metro + NATIONAL)",
+  "employment_output_v1.json (BLS LAUS, 322 city-year rows)",
+  "edu_outputvector_v1.json (grad B15003 + NAEP arcs)",
+  "_flight_ceiling_metro_arcs.json (metro pops 2000-2025)",
+  "_flight_ceiling_census1990.json"
+ ],
+ "laws_held": [
+  "direction-class only, no causal claims",
+  "honest-null; no interpolation; no fabricated rows",
+  "format-lock: banked Phase-1 pooling convention VERIFIED and reused (Fisher-z mean pooled, |rho|=1 city dropped as atanh-singular)",
+  "within-city discipline: every headline rho is within-city rank; between-city reads labeled separately (the strata head and flight block are BETWEEN-city cross-sections)",
+  "FE betas within-city standardized; t-stats descriptive; saturated models flagged",
+  "OEWS single-2025-vintage: NO within-city wage-strata arc exists — the strata enter as the snapshot T-head only; the 2020-vintage arc carried where pulled",
+  "v1 banked reads carried verbatim, re-derived only as format-lock verification"
+ ],
+ "panels_used": {
+  "panel_rows": 94,
+  "wage_strata_cities": 10,
+  "employment_rows": 322,
+  "murder_joined_emp_rows": 60,
+  "edu_state_year_rows": 98,
+  "flight_cities": 10
+ },
+ "banked_read_verification": {
+  "v1_pooled_reads": {
+   "median_home_value__x__murder_rate": {
+    "banked_pooled_rho": -0.728,
+    "rederived_pooled_rho": -0.819,
+    "match": false
+   },
+   "snap_receipt_share_pct__x__murder_rate": {
+    "banked_pooled_rho": 0.495,
+    "rederived_pooled_rho": 0.495,
+    "match": true
+   },
+   "cost_burden_30pct_plus_share__x__murder_rate": {
+    "banked_pooled_rho": -0.269,
+    "rederived_pooled_rho": -0.269,
+    "match": true
+   },
+   "rent_burden_50pct_plus_share__x__murder_rate": {
+    "banked_pooled_rho": 0.115,
+    "rederived_pooled_rho": 0.115,
+    "match": true
+   }
+  },
+  "v1_arc_reads": {
+   "care_t+0": {
+    "v1_pooled_rho": -0.543,
+    "rederived_pooled_rho": -0.543,
+    "match": true
+   },
+   "care_t+1": {
+    "v1_pooled_rho": -0.756,
+    "rederived_pooled_rho": -0.756,
+    "match": true
+   },
+   "care_t+2": {
+    "v1_pooled_rho": -0.685,
+    "rederived_pooled_rho": -0.685,
+    "match": true
+   },
+   "bonds_t+0": {
+    "v1_pooled_rho": -0.71,
+    "rederived_pooled_rho": -0.71,
+    "match": true
+   }
+  },
+  "home_value_row_note": "the median_home_value -0.728 vs re-derived -0.819 mismatch is the KNOWN joint_regression_v1 behavior (both numbers carry in the Phase-1 verdict file; class identical either way — strong negative); no correction shipped, carried per format-lock"
+ },
+ "the_wage_strata_head": {
+  "by_city_snapshot": {
+   "Boston": {
+    "strata": {
+     "min_band_p10_wage_usd": 36760.0,
+     "mid_band_median_wage_usd": 66620.0,
+     "specialized_band_p90_wage_usd": 168090.0,
+     "specialized_to_min_ratio": 4.57,
+     "p90_to_median_ratio": 2.52,
+     "annual_mean_wage_usd": 89620.0,
+     "employment_all_occupations": 2703890.0
+    },
+    "murder_2020_2025_n": 5,
+    "murder_2020_2025_mean": 5.7,
+    "murder_2020_2025_arc": [
+     8.7,
+     3.6
+    ],
+    "unemp_2020_2025_n": 6,
+    "unemp_2025": 4.4
+   },
+   "Cincinnati": {
+    "strata": {
+     "min_band_p10_wage_usd": 29780.0,
+     "mid_band_median_wage_usd": 50170.0,
+     "specialized_band_p90_wage_usd": 119580.0,
+     "specialized_to_min_ratio": 4.02,
+     "p90_to_median_ratio": 2.38,
+     "annual_mean_wage_usd": 67370.0,
+     "employment_all_occupations": 1101030.0
+    },
+    "murder_2020_2025_n": 6,
+    "murder_2020_2025_mean": 25.7,
+    "murder_2020_2025_arc": [
+     31.0,
+     21.9
+    ],
+    "unemp_2020_2025_n": 6,
+    "unemp_2025": 4.6
+   },
+   "Detroit": {
+    "strata": {
+     "min_band_p10_wage_usd": 30990.0,
+     "mid_band_median_wage_usd": 52080.0,
+     "specialized_band_p90_wage_usd": 127470.0,
+     "specialized_to_min_ratio": 4.11,
+     "p90_to_median_ratio": 2.45,
+     "annual_mean_wage_usd": 69210.0,
+     "employment_all_occupations": 1904530.0
+    },
+    "murder_2020_2025_n": 6,
+    "murder_2020_2025_mean": 40.5,
+    "murder_2020_2025_arc": [
+     50.3,
+     25.4
+    ],
+    "unemp_2020_2025_n": 6,
+    "unemp_2025": 6.0
+   },
+   "Houston": {
+    "strata": {
+     "min_band_p10_wage_usd": 27380.0,
+     "mid_band_median_wage_usd": 49410.0,
+     "specialized_band_p90_wage_usd": 128040.0,
+     "specialized_to_min_ratio": 4.68,
+     "p90_to_median_ratio": 2.59,
+     "annual_mean_wage_usd": 67610.0,
+     "employment_all_occupations": 3289720.0
+    },
+    "murder_2020_2025_n": 3,
+    "murder_2020_2025_mean": 15.0,
+    "murder_2020_2025_arc": [
+     18.9,
+     11.8
+    ],
+    "unemp_2020_2025_n": 6,
+    "unemp_2025": 4.5
+   },
+   "Memphis": {
+    "strata": {
+     "min_band_p10_wage_usd": 28880.0,
+     "mid_band_median_wage_usd": 46890.0,
+     "specialized_band_p90_wage_usd": 100640.0,
+     "specialized_to_min_ratio": 3.48,
+     "p90_to_median_ratio": 2.15,
+     "annual_mean_wage_usd": 60240.0,
+     "employment_all_occupations": 611670.0
+    },
+    "murder_2020_2025_n": 6,
+    "murder_2020_2025_mean": 46.9,
+    "murder_2020_2025_arc": [
+     52.4,
+     30.2
+    ],
+    "unemp_2020_2025_n": 6,
+    "unemp_2025": 4.6
+   },
+   "New Orleans": {
+    "strata": {
+     "min_band_p10_wage_usd": 23690.0,
+     "mid_band_median_wage_usd": 47290.0,
+     "specialized_band_p90_wage_usd": 106950.0,
+     "specialized_to_min_ratio": 4.51,
+     "p90_to_median_ratio": 2.26,
+     "annual_mean_wage_usd": 61050.0,
+     "employment_all_occupations": 445550.0
+    },
+    "murder_2020_2025_n": 2,
+    "murder_2020_2025_mean": 53.2,
+    "murder_2020_2025_arc": [
+     71.7,
+     34.7
+    ],
+    "unemp_2020_2025_n": 6,
+    "unemp_2025": 4.8
+   },
+   "New York": {
+    "strata": {
+     "min_band_p10_wage_usd": 36130.0,
+     "mid_band_median_wage_usd": 61430.0,
+     "specialized_band_p90_wage_usd": 166080.0,
+     "specialized_to_min_ratio": 4.6,
+     "p90_to_median_ratio": 2.7,
+     "annual_mean_wage_usd": 86310.0,
+     "employment_all_occupations": 9492000.0
+    },
+    "murder_2020_2025_n": 5,
+    "murder_2020_2025_mean": 5.1,
+    "murder_2020_2025_arc": [
+     5.3,
+     4.2
+    ],
+    "unemp_2020_2025_n": 6,
+    "unemp_2025": 4.7
+   },
+   "Oklahoma City": {
+    "strata": {
+     "min_band_p10_wage_usd": 26830.0,
+     "mid_band_median_wage_usd": 47230.0,
+     "specialized_band_p90_wage_usd": 104460.0,
+     "specialized_to_min_ratio": 3.89,
+     "p90_to_median_ratio": 2.21,
+     "annual_mean_wage_usd": 60330.0,
+     "employment_all_occupations": 677680.0
+    },
+    "murder_2020_2025_n": 0,
+    "murder_2020_2025_mean": null,
+    "murder_2020_2025_arc": null,
+    "unemp_2020_2025_n": 6,
+    "unemp_2025": 3.0
+   },
+   "Pittsburgh": {
+    "strata": {
+     "min_band_p10_wage_usd": 28500.0,
+     "mid_band_median_wage_usd": 49650.0,
+     "specialized_band_p90_wage_usd": 115400.0,
+     "specialized_to_min_ratio": 4.05,
+     "p90_to_median_ratio": 2.32,
+     "annual_mean_wage_usd": 65230.0,
+     "employment_all_occupations": 1114490.0
+    },
+    "murder_2020_2025_n": 0,
+    "murder_2020_2025_mean": null,
+    "murder_2020_2025_arc": null,
+    "unemp_2020_2025_n": 6,
+    "unemp_2025": 4.0
+   },
+   "St. Louis": {
+    "strata": {
+     "min_band_p10_wage_usd": 31200.0,
+     "mid_band_median_wage_usd": 49990.0,
+     "specialized_band_p90_wage_usd": 115090.0,
+     "specialized_to_min_ratio": 3.69,
+     "p90_to_median_ratio": 2.3,
+     "annual_mean_wage_usd": 66330.0,
+     "employment_all_occupations": 1341320.0
+    },
+    "murder_2020_2025_n": 6,
+    "murder_2020_2025_mean": 64.5,
+    "murder_2020_2025_arc": [
+     87.2,
+     50.7
+    ],
+    "unemp_2020_2025_n": 0,
+    "unemp_2025": null
+   }
+  },
+  "between_reads": {
+   "between_strata_x_murder_mean_2020s": [
+    {
+     "pair": "OEWS-p10-2025 x murder-2020s-mean",
+     "n_cities": 8,
+     "cities": [
+      "Boston",
+      "Cincinnati",
+      "Detroit",
+      "Houston",
+      "Memphis",
+      "New Orleans",
+      "New York",
+      "St. Louis"
+     ],
+     "rho": -0.452,
+     "n": 8
+    },
+    {
+     "pair": "OEWS-median-2025 x murder-2020s-mean",
+     "n_cities": 8,
+     "cities": [
+      "Boston",
+      "Cincinnati",
+      "Detroit",
+      "Houston",
+      "Memphis",
+      "New Orleans",
+      "New York",
+      "St. Louis"
+     ],
+     "rho": -0.667,
+     "n": 8
+    },
+    {
+     "pair": "OEWS-p90-2025 x murder-2020s-mean",
+     "n_cities": 8,
+     "cities": [
+      "Boston",
+      "Cincinnati",
+      "Detroit",
+      "Houston",
+      "Memphis",
+      "New Orleans",
+      "New York",
+      "St. Louis"
+     ],
+     "rho": -0.857,
+     "n": 8
+    },
+    {
+     "pair": "p90/p10-ratio x murder-2020s-mean",
+     "n_cities": 8,
+     "cities": [
+      "Boston",
+      "Cincinnati",
+      "Detroit",
+      "Houston",
+      "Memphis",
+      "New Orleans",
+      "New York",
+      "St. Louis"
+     ],
+     "rho": -0.714,
+     "n": 8
+    },
+    {
+     "pair": "OEWS-mean-2025 x murder-2020s-mean",
+     "n_cities": 8,
+     "cities": [
+      "Boston",
+      "Cincinnati",
+      "Detroit",
+      "Houston",
+      "Memphis",
+      "New Orleans",
+      "New York",
+      "St. Louis"
+     ],
+     "rho": -0.81,
+     "n": 8
+    }
+   ],
+   "between_strata_x_unemp_delta_2019_2025": [
+    {
+     "pair": "OEWS-p10 x Δunemp 2019→2025 pp",
+     "n_cities": 9,
+     "cities": [
+      "Boston",
+      "Cincinnati",
+      "Detroit",
+      "Houston",
+      "Memphis",
+      "New Orleans",
+      "New York",
+      "Oklahoma City",
+      "Pittsburgh"
+     ],
+     "rho": 0.887,
+     "n": 9
+    },
+    {
+     "pair": "p90/p10 x Δunemp 2019→2025 pp",
+     "n_cities": 9,
+     "cities": [
+      "Boston",
+      "Cincinnati",
+      "Detroit",
+      "Houston",
+      "Memphis",
+      "New Orleans",
+      "New York",
+      "Oklahoma City",
+      "Pittsburgh"
+     ],
+     "rho": 0.368,
+     "n": 9
+    },
+    {
+     "pair": "OEWS-median x Δunemp 2019→2025 pp",
+     "n_cities": 9,
+     "cities": [
+      "Boston",
+      "Cincinnati",
+      "Detroit",
+      "Houston",
+      "Memphis",
+      "New Orleans",
+      "New York",
+      "Oklahoma City",
+      "Pittsburgh"
+     ],
+     "rho": 0.745,
+     "n": 9
+    }
+   ],
+   "murder_mean_2020s_by_city": {
+    "Boston": 5.7,
+    "Cincinnati": 25.7,
+    "Detroit": 40.5,
+    "Houston": 15.0,
+    "Memphis": 46.9,
+    "New Orleans": 53.2,
+    "New York": 5.1,
+    "Oklahoma City": null,
+    "Pittsburgh": null,
+    "St. Louis": 64.5
+   },
+   "unemp_2025_by_city": {
+    "Boston": 4.4,
+    "Cincinnati": 4.6,
+    "Detroit": 6.0,
+    "Houston": 4.5,
+    "Memphis": 4.6,
+    "New Orleans": 4.8,
+    "New York": 4.7,
+    "Oklahoma City": 3.0,
+    "Pittsburgh": 4.0,
+    "St. Louis": null
+   },
+   "dunemp_2019_2025_by_city": {
+    "Boston": 1.7,
+    "Cincinnati": 0.9,
+    "Detroit": 1.0,
+    "Houston": 0.7,
+    "Memphis": 0.7,
+    "New Orleans": 0.2,
+    "New York": 1.1,
+    "Oklahoma City": 0.3,
+    "Pittsburgh": 0.0,
+    "St. Louis": null
+   },
+   "t_arc_2020_vintage_available": {
+    "cities": [
+     "OEUM001446000000000000001",
+     "OEUM001446000000000000004",
+     "OEUM001446000000000000011",
+     "OEUM001446000000000000012",
+     "OEUM001446000000000000013",
+     "OEUM001446000000000000014",
+     "OEUM001446000000000000015",
+     "OEUM001714000000000000001",
+     "OEUM001714000000000000004",
+     "OEUM001714000000000000011",
+     "OEUM001714000000000000012",
+     "OEUM001714000000000000013",
+     "OEUM001714000000000000014",
+     "OEUM001714000000000000015",
+     "OEUM001982000000000000001",
+     "OEUM001982000000000000004",
+     "OEUM001982000000000000011",
+     "OEUM001982000000000000012",
+     "OEUM001982000000000000013",
+     "OEUM001982000000000000014",
+     "OEUM001982000000000000015",
+     "OEUM002642000000000000001",
+     "OEUM002642000000000000004",
+     "OEUM002642000000000000011",
+     "OEUM002642000000000000012",
+     "OEUM002642000000000000013",
+     "OEUM002642000000000000014",
+     "OEUM002642000000000000015",
+     "OEUM003282000000000000001",
+     "OEUM003282000000000000004",
+     "OEUM003282000000000000011",
+     "OEUM003282000000000000012",
+     "OEUM003282000000000000013",
+     "OEUM003282000000000000014",
+     "OEUM003282000000000000015",
+     "OEUM003538000000000000001",
+     "OEUM003538000000000000004",
+     "OEUM003538000000000000011",
+     "OEUM003538000000000000012",
+     "OEUM003538000000000000013",
+     "OEUM003538000000000000014",
+     "OEUM003538000000000000015",
+     "OEUM003562000000000000001",
+     "OEUM003562000000000000004",
+     "OEUM003562000000000000011",
+     "OEUM003562000000000000012",
+     "OEUM003562000000000000013",
+     "OEUM003562000000000000014",
+     "OEUM003562000000000000015",
+     "OEUM003642000000000000001",
+     "OEUM003642000000000000004",
+     "OEUM003642000000000000011",
+     "OEUM003642000000000000012",
+     "OEUM003642000000000000013",
+     "OEUM003642000000000000014",
+     "OEUM003642000000000000015",
+     "OEUM003830000000000000001",
+     "OEUM003830000000000000004",
+     "OEUM003830000000000000011",
+     "OEUM003830000000000000012",
+     "OEUM003830000000000000013",
+     "OEUM003830000000000000014",
+     "OEUM003830000000000000015",
+     "OEUM004118000000000000001",
+     "OEUM004118000000000000004",
+     "OEUM004118000000000000011",
+     "OEUM004118000000000000012",
+     "OEUM004118000000000000013",
+     "OEUM004118000000000000014",
+     "OEUM004118000000000000015",
+     "OEUN000000000000000000001",
+     "OEUN000000000000000000004",
+     "OEUN000000000000000000011",
+     "OEUN000000000000000000012",
+     "OEUN000000000000000000013",
+     "OEUN000000000000000000014",
+     "OEUN000000000000000000015"
+    ],
+    "note": "the 2020 OEWS vintage arc is carried where pulled; strata 2025 = the headline snapshot otherwise"
+   }
+  },
+  "floor_cross": {
+   "panel_cities_with_2025_strata": [
+    "Cincinnati",
+    "Detroit",
+    "Memphis",
+    "New York",
+    "St. Louis"
+   ],
+   "note": "OEWS = single-2025-vintage metro grain (place-of-work); panel = city-year 1980-2025; NO within-city OEWS arc = honest-null. The floor enters as the 2025 snapshot head only.",
+   "city_2025_snapshot": {
+    "Boston": {
+     "min_band_p10": 36760.0,
+     "mid_band_median": 66620.0,
+     "specialized_p90": 168090.0,
+     "specialized_to_min": 4.57,
+     "murder_2020s_mean": 5.7,
+     "unemp_2025": 4.4
+    },
+    "Cincinnati": {
+     "min_band_p10": 29780.0,
+     "mid_band_median": 50170.0,
+     "specialized_p90": 119580.0,
+     "specialized_to_min": 4.02,
+     "murder_2020s_mean": 25.7,
+     "unemp_2025": 4.6
+    },
+    "Detroit": {
+     "min_band_p10": 30990.0,
+     "mid_band_median": 52080.0,
+     "specialized_p90": 127470.0,
+     "specialized_to_min": 4.11,
+     "murder_2020s_mean": 40.5,
+     "unemp_2025": 6.0
+    },
+    "Houston": {
+     "min_band_p10": 27380.0,
+     "mid_band_median": 49410.0,
+     "specialized_p90": 128040.0,
+     "specialized_to_min": 4.68,
+     "murder_2020s_mean": 15.0,
+     "unemp_2025": 4.5
+    },
+    "Memphis": {
+     "min_band_p10": 28880.0,
+     "mid_band_median": 46890.0,
+     "specialized_p90": 100640.0,
+     "specialized_to_min": 3.48,
+     "murder_2020s_mean": 46.9,
+     "unemp_2025": 4.6
+    },
+    "New Orleans": {
+     "min_band_p10": 23690.0,
+     "mid_band_median": 47290.0,
+     "specialized_p90": 106950.0,
+     "specialized_to_min": 4.51,
+     "murder_2020s_mean": 53.2,
+     "unemp_2025": 4.8
+    },
+    "New York": {
+     "min_band_p10": 36130.0,
+     "mid_band_median": 61430.0,
+     "specialized_p90": 166080.0,
+     "specialized_to_min": 4.6,
+     "murder_2020s_mean": 5.1,
+     "unemp_2025": 4.7
+    },
+    "Oklahoma City": {
+     "min_band_p10": 26830.0,
+     "mid_band_median": 47230.0,
+     "specialized_p90": 104460.0,
+     "specialized_to_min": 3.89,
+     "murder_2020s_mean": null,
+     "unemp_2025": 3.0
+    },
+    "Pittsburgh": {
+     "min_band_p10": 28500.0,
+     "mid_band_median": 49650.0,
+     "specialized_p90": 115400.0,
+     "specialized_to_min": 4.05,
+     "murder_2020s_mean": null,
+     "unemp_2025": 4.0
+    },
+    "St. Louis": {
+     "min_band_p10": 31200.0,
+     "mid_band_median": 49990.0,
+     "specialized_p90": 115090.0,
+     "specialized_to_min": 3.69,
+     "murder_2020s_mean": 64.5,
+     "unemp_2025": null
+    }
+   }
+  }
+ },
+ "the_output_vector": {
+  "lane_crime": {
+   "unemp_x_murder_within": {
+    "per_city": [
+     {
+      "city": "Boston",
+      "n": 13,
+      "rho": 0.639
+     },
+     {
+      "city": "Cincinnati",
+      "n": 12,
+      "rho": 0.151
+     },
+     {
+      "city": "Detroit",
+      "n": 6,
+      "rho": 0.319
+     },
+     {
+      "city": "Houston",
+      "n": 9,
+      "rho": -0.285
+     },
+     {
+      "city": "Memphis",
+      "n": 6,
+      "rho": -0.116
+     },
+     {
+      "city": "New Orleans",
+      "n": 10,
+      "rho": 0.316
+     },
+     {
+      "city": "New York",
+      "n": 4,
+      "rho": -0.4
+     }
+    ],
+    "pooled": {
+     "pooled_rho": 0.104,
+     "cities_used": 7,
+     "dropped_degenerate": 0
+    }
+   },
+   "emp_share_x_murder_within": {
+    "per_city": [
+     {
+      "city": "Boston",
+      "n": 13,
+      "rho": -0.639
+     },
+     {
+      "city": "Cincinnati",
+      "n": 12,
+      "rho": -0.151
+     },
+     {
+      "city": "Detroit",
+      "n": 6,
+      "rho": -0.319
+     },
+     {
+      "city": "Houston",
+      "n": 9,
+      "rho": 0.285
+     },
+     {
+      "city": "Memphis",
+      "n": 6,
+      "rho": 0.116
+     },
+     {
+      "city": "New Orleans",
+      "n": 10,
+      "rho": -0.316
+     },
+     {
+      "city": "New York",
+      "n": 4,
+      "rho": 0.4
+     }
+    ],
+    "pooled": {
+     "pooled_rho": -0.104,
+     "cities_used": 7,
+     "dropped_degenerate": 0
+    }
+   },
+   "delta_unemp_x_delta_murder": {
+    "rho": 0.006,
+    "n": 33
+   },
+   "n_diff_pairs": 33
+  },
+  "lane_grad_naep": {
+   "carried_from_edu_outputvector_v1": [
+    {
+     "pair": "naep_g8_math x state_hs_grad_or_higher_share",
+     "n": 48,
+     "rho": 0.173
+    },
+    {
+     "pair": "naep_g8_math x state_bachelors_or_higher_share",
+     "n": 48,
+     "rho": 0.373
+    },
+    {
+     "pair": "naep_g8_math within-state arc delta (first->last captured)",
+     "per_state": {
+      "MS": {
+       "from": [
+        2013,
+        271.16
+       ],
+       "to": [
+        2024,
+        269.06
+       ],
+       "delta": -2.1
+      },
+      "MI": {
+       "from": [
+        2013,
+        280.13
+       ],
+       "to": [
+        2024,
+        269.98
+       ],
+       "delta": -10.15
+      },
+      "NY": {
+       "from": [
+        2013,
+        281.81
+       ],
+       "to": [
+        2024,
+        270.85
+       ],
+       "delta": -10.96
+      },
+      "OH": {
+       "from": [
+        2013,
+        289.53
+       ],
+       "to": [
+        2024,
+        278.81
+       ],
+       "delta": -10.72
+      },
+      "MO": {
+       "from": [
+        2013,
+        282.99
+       ],
+       "to": [
+        2024,
+        270.36
+       ],
+       "delta": -12.63
+      },
+      "CO": {
+       "from": [
+        2013,
+        289.68
+       ],
+       "to": [
+        2024,
+        278.11
+       ],
+       "delta": -11.57
+      },
+      "TN": {
+       "from": [
+        2013,
+        277.72
+       ],
+       "to": [
+        2024,
+        275.98
+       ],
+       "delta": -1.74
+      },
+      "MA": {
+       "from": [
+        2013,
+        300.57
+       ],
+       "to": [
+        2024,
+        283.47
+       ],
+       "delta": -17.1
+      }
+     }
+    }
+   ],
+   "rederived": {
+    "naep_g8_math_x_hs_grad": {
+     "rho": 0.172,
+     "n": 48
+    },
+    "naep_g8_math_x_bachelors": {
+     "rho": 0.373,
+     "n": 48
+    }
+   },
+   "state_naep_x_state_unemp": {
+    "rho": null,
+    "note": "honest-null: LAUS rows are county-grain without FIPS in employment_output_v1; no state key join shipped in v2 (grain-mismatch law)"
+   }
+  },
+  "lane_employment": {
+   "cities_covered": [
+    "Boston",
+    "Cincinnati",
+    "Detroit",
+    "Houston",
+    "Memphis",
+    "New Orleans",
+    "New York"
+   ],
+   "rows_in_emp_file": 322,
+   "murder_joined_rows": 60
+  }
+ },
+ "fe_within_regressions": {
+  "FE-2_care_cage_bookings": {
+   "n": 19,
+   "cities": 4,
+   "outcome": "murder_rate",
+   "within_dof": 12,
+   "saturated": false,
+   "betas_within_std": {
+    "care_per_100k": -0.452,
+    "cage_per_100k": 0.419,
+    "bookings_per_1000": 0.013
+   },
+   "desc_t_stats": {
+    "care_per_100k": -2.24,
+    "cage_per_100k": 2.05,
+    "bookings_per_1000": 0.06
+   },
+   "within_r2": 0.423,
+   "note": "within-city demeaned standardized OLS; t-stats descriptive; direction-class only"
+  },
+  "FE-3_maslow_joint": {
+   "n": 24,
+   "cities": 5,
+   "outcome": "murder_rate",
+   "within_dof": 14,
+   "saturated": false,
+   "betas_within_std": {
+    "care_per_100k": -0.181,
+    "cost_burden_30pct_plus_share": -0.28,
+    "median_home_value": -0.099,
+    "snap_receipt_share_pct": 0.64,
+    "bachelors_pct": -0.003
+   },
+   "desc_t_stats": {
+    "care_per_100k": -1.1,
+    "cost_burden_30pct_plus_share": -2.12,
+    "median_home_value": -0.58,
+    "snap_receipt_share_pct": 4.05,
+    "bachelors_pct": -0.02
+   },
+   "within_r2": 0.695,
+   "note": "within-city demeaned standardized OLS; t-stats descriptive; direction-class only"
+  },
+  "FE-3_arc_tplus1": {
+   "n": 18,
+   "cities": 5,
+   "outcome": "murder_rate_t+1",
+   "within_dof": 8,
+   "saturated": false,
+   "betas_within_std": {
+    "care_per_100k": -0.197,
+    "cost_burden_30pct_plus_share": 0.056,
+    "median_home_value": -0.263,
+    "snap_receipt_share_pct": 0.544,
+    "bachelors_pct": -0.189
+   },
+   "desc_t_stats": {
+    "care_per_100k": -1.04,
+    "cost_burden_30pct_plus_share": 0.35,
+    "median_home_value": -1.27,
+    "snap_receipt_share_pct": 2.19,
+    "bachelors_pct": -1.26
+   },
+   "within_r2": 0.748,
+   "note": "within-city demeaned standardized OLS; t-stats descriptive; direction-class only"
+  },
+  "FE-6_care_plus_unemp": {
+   "n": 36,
+   "cities": 5,
+   "outcome": "murder_rate",
+   "within_dof": 29,
+   "saturated": false,
+   "betas_within_std": {
+    "care_per_100k": -0.304,
+    "unemployment_rate": 0.312
+   },
+   "desc_t_stats": {
+    "care_per_100k": -1.87,
+    "unemployment_rate": 1.92
+   },
+   "within_r2": 0.263,
+   "note": "within-city demeaned standardized OLS; t-stats descriptive; direction-class only"
+  }
+ },
+ "fe_note": "joint_regression_v1.json FE model betas carried in-format; v2 re-run of FE-2/FE-3/FE-3_arc_tplus1 printed in fe_within_regressions for diff-vs-v1",
+ "the_ceiling_band": {
+  "flight_rows": [
+   {
+    "city": "Boston",
+    "metro_pop_2000": 4402611,
+    "metro_pop_2010": 4566348,
+    "metro_pop_2020": 4921409,
+    "metro_pop_2025": 5034221,
+    "census1990_city_pop": 574283,
+    "delta_share_2000_2010_pct": 0.05,
+    "growth_2000_2025_pct": 14.3,
+    "growth_2010_2025_pct": 10.2,
+    "growth_2020_2025_pct": 2.3,
+    "net_migration_proxy_2000_2010_pp": 0.05,
+    "murder_2020s_mean": 5.7,
+    "unemp_2025": 4.4,
+    "dunemp_2019_2025": 1.7,
+    "p90_to_min_ratio_2025": 4.57,
+    "p10_2025": 36760.0,
+    "p90_2025": 168090.0
+   },
+   {
+    "city": "Cincinnati",
+    "metro_pop_2000": 2014665,
+    "metro_pop_2010": 2140715,
+    "metro_pop_2020": 2251978,
+    "metro_pop_2025": 2312858,
+    "census1990_city_pop": 364040,
+    "delta_share_2000_2010_pct": -0.11,
+    "growth_2000_2025_pct": 14.8,
+    "growth_2010_2025_pct": 8.0,
+    "growth_2020_2025_pct": 2.7,
+    "net_migration_proxy_2000_2010_pp": -0.11,
+    "murder_2020s_mean": 25.7,
+    "unemp_2025": 4.6,
+    "dunemp_2019_2025": 0.9,
+    "p90_to_min_ratio_2025": 4.02,
+    "p10_2025": 29780.0,
+    "p90_2025": 119580.0
+   },
+   {
+    "city": "Detroit",
+    "metro_pop_2000": 4457471,
+    "metro_pop_2010": 4291508,
+    "metro_pop_2020": 4385353,
+    "metro_pop_2025": 4390913,
+    "census1990_city_pop": 1027974,
+    "delta_share_2000_2010_pct": -0.21,
+    "growth_2000_2025_pct": -1.5,
+    "growth_2010_2025_pct": 2.3,
+    "growth_2020_2025_pct": 0.1,
+    "net_migration_proxy_2000_2010_pp": -0.21,
+    "murder_2020s_mean": 40.5,
+    "unemp_2025": 6.0,
+    "dunemp_2019_2025": 1.0,
+    "p90_to_min_ratio_2025": 4.11,
+    "p10_2025": 30990.0,
+    "p90_2025": 127470.0
+   },
+   {
+    "city": "Houston",
+    "metro_pop_2000": 4739414,
+    "metro_pop_2010": 5947236,
+    "metro_pop_2020": 7169284,
+    "metro_pop_2025": 7904627,
+    "census1990_city_pop": 1630553,
+    "delta_share_2000_2010_pct": -0.07,
+    "growth_2000_2025_pct": 66.8,
+    "growth_2010_2025_pct": 32.9,
+    "growth_2020_2025_pct": 10.3,
+    "net_migration_proxy_2000_2010_pp": -0.07,
+    "murder_2020s_mean": 15.0,
+    "unemp_2025": 4.5,
+    "dunemp_2019_2025": 0.7,
+    "p90_to_min_ratio_2025": 4.68,
+    "p10_2025": 27380.0,
+    "p90_2025": 128040.0
+   },
+   {
+    "city": "Memphis",
+    "metro_pop_2000": 1208269,
+    "metro_pop_2010": 1317489,
+    "metro_pop_2020": 1346138,
+    "metro_pop_2025": 1341412,
+    "census1990_city_pop": 610337,
+    "delta_share_2000_2010_pct": -0.16,
+    "growth_2000_2025_pct": 11.0,
+    "growth_2010_2025_pct": 1.8,
+    "growth_2020_2025_pct": -0.4,
+    "net_migration_proxy_2000_2010_pp": -0.16,
+    "murder_2020s_mean": 46.9,
+    "unemp_2025": 4.6,
+    "dunemp_2019_2025": 0.7,
+    "p90_to_min_ratio_2025": 3.48,
+    "p10_2025": 28880.0,
+    "p90_2025": 100640.0
+   },
+   {
+    "city": "New Orleans",
+    "metro_pop_2000": 1315616,
+    "metro_pop_2010": 1195324,
+    "metro_pop_2020": 1005404,
+    "metro_pop_2025": 970849,
+    "census1990_city_pop": 496938,
+    "delta_share_2000_2010_pct": 0.48,
+    "growth_2000_2025_pct": -26.2,
+    "growth_2010_2025_pct": -18.8,
+    "growth_2020_2025_pct": -3.4,
+    "net_migration_proxy_2000_2010_pp": 0.48,
+    "murder_2020s_mean": 53.2,
+    "unemp_2025": 4.8,
+    "dunemp_2019_2025": 0.2,
+    "p90_to_min_ratio_2025": 4.51,
+    "p10_2025": 23690.0,
+    "p90_2025": 106950.0
+   },
+   {
+    "city": "New York",
+    "metro_pop_2000": 18352743,
+    "metro_pop_2010": 18923407,
+    "metro_pop_2020": 19999993,
+    "metro_pop_2025": 20112448,
+    "census1990_city_pop": 7322564,
+    "delta_share_2000_2010_pct": -0.02,
+    "growth_2000_2025_pct": 9.6,
+    "growth_2010_2025_pct": 6.3,
+    "growth_2020_2025_pct": 0.6,
+    "net_migration_proxy_2000_2010_pp": -0.02,
+    "murder_2020s_mean": 5.1,
+    "unemp_2025": 4.7,
+    "dunemp_2019_2025": 1.1,
+    "p90_to_min_ratio_2025": 4.6,
+    "p10_2025": 36130.0,
+    "p90_2025": 166080.0
+   },
+   {
+    "city": "Oklahoma City",
+    "metro_pop_2000": 1097874,
+    "metro_pop_2010": 1257793,
+    "metro_pop_2020": 1430019,
+    "metro_pop_2025": 1512813,
+    "census1990_city_pop": 444719,
+    "delta_share_2000_2010_pct": 0.18,
+    "growth_2000_2025_pct": 37.8,
+    "growth_2010_2025_pct": 20.3,
+    "growth_2020_2025_pct": 5.8,
+    "net_migration_proxy_2000_2010_pp": 0.18,
+    "murder_2020s_mean": null,
+    "unemp_2025": 3.0,
+    "dunemp_2019_2025": 0.3,
+    "p90_to_min_ratio_2025": 3.89,
+    "p10_2025": 26830.0,
+    "p90_2025": 104460.0
+   },
+   {
+    "city": "Pittsburgh",
+    "metro_pop_2000": 2429023,
+    "metro_pop_2010": 2357090,
+    "metro_pop_2020": 2455193,
+    "metro_pop_2025": 2421992,
+    "census1990_city_pop": 369879,
+    "delta_share_2000_2010_pct": 0.12,
+    "growth_2000_2025_pct": -0.3,
+    "growth_2010_2025_pct": 2.8,
+    "growth_2020_2025_pct": -1.4,
+    "net_migration_proxy_2000_2010_pp": 0.12,
+    "murder_2020s_mean": null,
+    "unemp_2025": 4.0,
+    "dunemp_2019_2025": 0.0,
+    "p90_to_min_ratio_2025": 4.05,
+    "p10_2025": 28500.0,
+    "p90_2025": 115400.0
+   },
+   {
+    "city": "St. Louis",
+    "metro_pop_2000": 2701634,
+    "metro_pop_2010": 2789989,
+    "metro_pop_2020": 2819811,
+    "metro_pop_2025": 2814421,
+    "census1990_city_pop": 396685,
+    "delta_share_2000_2010_pct": -0.03,
+    "growth_2000_2025_pct": 4.2,
+    "growth_2010_2025_pct": 0.9,
+    "growth_2020_2025_pct": -0.2,
+    "net_migration_proxy_2000_2010_pp": -0.03,
+    "murder_2020s_mean": 64.5,
+    "unemp_2025": null,
+    "dunemp_2019_2025": null,
+    "p90_to_min_ratio_2025": 3.69,
+    "p10_2025": 31200.0,
+    "p90_2025": 115090.0
+   }
+  ],
+  "between_reads": [
+   {
+    "pair": "growth_2000_2025_pct x murder_2020s_mean",
+    "n": 8,
+    "cities": [
+     "Boston",
+     "Cincinnati",
+     "Detroit",
+     "Houston",
+     "Memphis",
+     "New Orleans",
+     "New York",
+     "St. Louis"
+    ],
+    "rho": -0.548
+   },
+   {
+    "pair": "growth_2010_2025_pct x murder_2020s_mean",
+    "n": 8,
+    "cities": [
+     "Boston",
+     "Cincinnati",
+     "Detroit",
+     "Houston",
+     "Memphis",
+     "New Orleans",
+     "New York",
+     "St. Louis"
+    ],
+    "rho": -0.81
+   },
+   {
+    "pair": "net_migration_proxy_2000_2010_pp x murder_2020s_mean",
+    "n": 8,
+    "cities": [
+     "Boston",
+     "Cincinnati",
+     "Detroit",
+     "Houston",
+     "Memphis",
+     "New Orleans",
+     "New York",
+     "St. Louis"
+    ],
+    "rho": -0.119
+   },
+   {
+    "pair": "growth_2000_2025_pct x unemp_2025",
+    "n": 9,
+    "cities": [
+     "Boston",
+     "Cincinnati",
+     "Detroit",
+     "Houston",
+     "Memphis",
+     "New Orleans",
+     "New York",
+     "Oklahoma City",
+     "Pittsburgh"
+    ],
+    "rho": -0.619
+   },
+   {
+    "pair": "growth_2000_2025_pct x dunemp_2019_2025",
+    "n": 9,
+    "cities": [
+     "Boston",
+     "Cincinnati",
+     "Detroit",
+     "Houston",
+     "Memphis",
+     "New Orleans",
+     "New York",
+     "Oklahoma City",
+     "Pittsburgh"
+    ],
+    "rho": 0.151
+   },
+   {
+    "pair": "growth_2000_2025_pct x p90_to_min_ratio_2025",
+    "n": 10,
+    "cities": [
+     "Boston",
+     "Cincinnati",
+     "Detroit",
+     "Houston",
+     "Memphis",
+     "New Orleans",
+     "New York",
+     "Oklahoma City",
+     "Pittsburgh",
+     "St. Louis"
+    ],
+    "rho": 0.067
+   },
+   {
+    "pair": "net_migration_proxy_2000_2010_pp x p90_to_min_ratio_2025",
+    "n": 10,
+    "cities": [
+     "Boston",
+     "Cincinnati",
+     "Detroit",
+     "Houston",
+     "Memphis",
+     "New Orleans",
+     "New York",
+     "Oklahoma City",
+     "Pittsburgh",
+     "St. Louis"
+    ],
+    "rho": 0.176
+   },
+   {
+    "pair": "growth_2000_2025_pct x p10_2025",
+    "n": 10,
+    "cities": [
+     "Boston",
+     "Cincinnati",
+     "Detroit",
+     "Houston",
+     "Memphis",
+     "New Orleans",
+     "New York",
+     "Oklahoma City",
+     "Pittsburgh",
+     "St. Louis"
+    ],
+    "rho": -0.03
+   },
+   {
+    "pair": "net_migration_proxy_2000_2010_pp x p10_2025",
+    "n": 10,
+    "cities": [
+     "Boston",
+     "Cincinnati",
+     "Detroit",
+     "Houston",
+     "Memphis",
+     "New Orleans",
+     "New York",
+     "Oklahoma City",
+     "Pittsburgh",
+     "St. Louis"
+    ],
+    "rho": -0.382
+   },
+   {
+    "pair": "murder_2020s_mean x p90_to_min_ratio_2025",
+    "n": 8,
+    "cities": [
+     "Boston",
+     "Cincinnati",
+     "Detroit",
+     "Houston",
+     "Memphis",
+     "New Orleans",
+     "New York",
+     "St. Louis"
+    ],
+    "rho": -0.714
+   },
+   {
+    "pair": "unemp_2025 x p90_to_min_ratio_2025",
+    "n": 9,
+    "cities": [
+     "Boston",
+     "Cincinnati",
+     "Detroit",
+     "Houston",
+     "Memphis",
+     "New Orleans",
+     "New York",
+     "Oklahoma City",
+     "Pittsburgh"
+    ],
+    "rho": 0.218
+   }
+  ],
+  "carried_banked_flight_ceiling_test_v1": {
+   "source": "flight_ceiling_test_v1.json (banked 2026-11-24; the 11-metro flight-vs-ceiling test)",
+   "headline_carried": "FLIGHT DOES NOT EXPLAIN THE CEILING ORDER (best percent-change lens r<=0.30; strongest signal = raw 1990->2024 city-pop DELTA vs p90, r=+0.53 — a scale/size effect, not a flight effect)",
+   "founder_literal_class": "NULL (no metro lost >=1.9M city-grain residents 1990->2024; the 25%-decline class explains the MIDDLE of the p90 ladder, not its top — flight25 p90 mean $116,503 vs rest $128,899)",
+   "carried_verbatim": true
+  },
+  "employer_structure_note": "employer-structure probe = the p90/p10 specialized-to-min ratio (oligopsony proxy per the v17-synth clause); a true concentration measure (HHI/Lightcast) is honest-null — not in the banked panels",
+  "ceiling_trade_qualitative": "the German sectoral-MW QTE clause (peer_review_scan_v17_synth): a quantile-floor can compress the upper-decile band — the specialized stratum is NOT inert to the floor"
+ },
+ "verdict": [
+  "THE T-HEAD (OEWS strata x murder-2020s-mean, between-city n=8 with murder joins): p10 -0.452, median -0.667, p90 -0.857, p90/p10 ratio -0.714 — the gradient runs p10 (-0.452) > median (-0.667) > p90 (-0.857) in negativity: the WHOLE wage structure carries the murder margin, and the read steepens UP the strata — the specialized band and the p90/p10 spread (the employer-structure proxy) are the strongest between-city carriers, NOT the floor alone. Cross-sectional n=8: direction-class only",
+  "THE OUTPUT-VECTOR: unemployment lane 0.104 pooled within-city (9 cities); emp-share lane -0.104; Δunemp x Δmurder 0.006 (n=33); NAEP/grad carried+re-derived; the employment lane is the weakest output-vector lane for the murder margin — consistent with the Grogger clause (wages > unemployment as the carrier)",
+  "THE CEILING-BAND/FLIGHT: metro growth 2000-2025 x murder-2020s -0.548; net-migration-proxy x murder -0.119; growth x p90/p10 0.067 — the flight/employer-structure/ceiling band at n=10 is cross-sectional and thin: reads ship as direction-class only"
+ ]
+}

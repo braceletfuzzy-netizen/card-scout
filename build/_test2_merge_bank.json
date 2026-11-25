@@ -1,0 +1,3220 @@
+{
+ "_meta": "stage-merge bank: care components + bookings + murders + pops",
+ "care_city_year": {
+  "NYC|2018": {
+   "nyc_libraries": 377875729,
+   "nyc_human_services": 11944234350,
+   "nyc_youth": 620742309,
+   "nyc_housing": 994866318,
+   "nyc_health": 1658535690,
+   "nyc_parks": 487196686
+  },
+  "NYC|2017": {
+   "nyc_libraries": 369871017,
+   "nyc_human_services": 11304377858,
+   "nyc_youth": 549820517,
+   "nyc_housing": 1022280156,
+   "nyc_health": 1595394972,
+   "nyc_parks": 473825768
+  },
+  "NYC|2016": {
+   "nyc_libraries": 359548381,
+   "nyc_human_services": 10735724730,
+   "nyc_youth": 508135145,
+   "nyc_housing": 842163383,
+   "nyc_health": 1425182122,
+   "nyc_parks": 422484869
+  },
+  "NYC|2015": {
+   "nyc_libraries": 322392465,
+   "nyc_human_services": 10902296696,
+   "nyc_youth": 419393769,
+   "nyc_housing": 714764450,
+   "nyc_health": 1470119050,
+   "nyc_parks": 439530587
+  },
+  "NYC|2014": {
+   "nyc_libraries": 238573841,
+   "nyc_human_services": 10503910381,
+   "nyc_youth": 368053995,
+   "nyc_housing": 684836177,
+   "nyc_health": 1394753164,
+   "nyc_parks": 363104191
+  },
+  "NYC|2013": {
+   "nyc_libraries": 298626053,
+   "nyc_human_services": 10456025218,
+   "nyc_youth": 307731199,
+   "nyc_housing": 666395787,
+   "nyc_health": 1480286945,
+   "nyc_parks": 371821768
+  },
+  "NYC|2012": {
+   "nyc_libraries": 199364762,
+   "nyc_human_services": 10215890836,
+   "nyc_youth": 299967237,
+   "nyc_housing": 729148365,
+   "nyc_health": 1528519015,
+   "nyc_parks": 320859203
+  },
+  "NYC|2011": {
+   "nyc_libraries": 295989798,
+   "nyc_human_services": 8869799670,
+   "nyc_youth": 318831578,
+   "nyc_housing": 702321868,
+   "nyc_health": 1582048076,
+   "nyc_parks": 343673622
+  },
+  "NYC|2010": {
+   "nyc_libraries": 210534824,
+   "nyc_human_services": 9265180769,
+   "nyc_youth": 381489604,
+   "nyc_housing": 725869462,
+   "nyc_health": 1655210972,
+   "nyc_parks": 327069641
+  },
+  "NYC|2009": {
+   "nyc_libraries": 366307044,
+   "nyc_human_services": 9032974887,
+   "nyc_youth": 354146456,
+   "nyc_housing": 698065267,
+   "nyc_health": 1661098142,
+   "nyc_parks": 325744915
+  },
+  "NYC|2008": {
+   "nyc_libraries": 266399544,
+   "nyc_human_services": 9392384878,
+   "nyc_youth": 364266692,
+   "nyc_housing": 594745822,
+   "nyc_health": 1550271712,
+   "nyc_parks": 316718742
+  },
+  "NYC|2007": {
+   "nyc_libraries": 330061324,
+   "nyc_human_services": 8089993271,
+   "nyc_youth": 280185916,
+   "nyc_housing": 567367941,
+   "nyc_health": 1513878654,
+   "nyc_parks": 284754696
+  },
+  "NYC|2006": {
+   "nyc_libraries": 261140353,
+   "nyc_human_services": 7582022757,
+   "nyc_youth": 279372849,
+   "nyc_housing": 533212450,
+   "nyc_health": 1467786043,
+   "nyc_parks": 261987900
+  },
+  "NYC|2005": {
+   "nyc_libraries": 362309813,
+   "nyc_human_services": 7863390932,
+   "nyc_youth": 238020929,
+   "nyc_housing": 460517144,
+   "nyc_health": 1432047115,
+   "nyc_parks": 241062679
+  },
+  "NYC|2004": {
+   "nyc_libraries": 241790395,
+   "nyc_human_services": 7203547781,
+   "nyc_youth": 236383213,
+   "nyc_housing": 405087478,
+   "nyc_health": 1441246770,
+   "nyc_parks": 217687184
+  },
+  "NYC|2003": {
+   "nyc_libraries": 337638972,
+   "nyc_human_services": 6673595944,
+   "nyc_youth": 144022476,
+   "nyc_housing": 376369703,
+   "nyc_health": 1414923174,
+   "nyc_parks": 189681335
+  },
+  "NYC|2002": {
+   "nyc_libraries": 123808070,
+   "nyc_human_services": 6431763433,
+   "nyc_youth": 141385066,
+   "nyc_housing": 385323135,
+   "nyc_health": 1049134555,
+   "nyc_parks": 198164665
+  },
+  "NYC|2001": {
+   "nyc_libraries": 382775490,
+   "nyc_human_services": 6158415534,
+   "nyc_youth": 138576790,
+   "nyc_housing": 403148879,
+   "nyc_health": 906946950,
+   "nyc_parks": 196995440
+  },
+  "NYC|2000": {
+   "nyc_libraries": 232520563,
+   "nyc_human_services": 5832854951,
+   "nyc_youth": 122406105,
+   "nyc_housing": 365665357,
+   "nyc_health": 790726502,
+   "nyc_parks": 187603230
+  },
+  "NYC|1999": {
+   "nyc_libraries": 212243339,
+   "nyc_human_services": 5526302525,
+   "nyc_youth": 108441360,
+   "nyc_housing": 371637685,
+   "nyc_health": 491602605,
+   "nyc_parks": 176843069
+  },
+  "NYC|1998": {
+   "nyc_libraries": 202049786,
+   "nyc_human_services": 5593102750,
+   "nyc_youth": 88405773,
+   "nyc_housing": 388919780,
+   "nyc_health": 472029634,
+   "nyc_parks": 166507194
+  },
+  "NYC|1997": {
+   "nyc_libraries": 107576775,
+   "nyc_human_services": 6079554929,
+   "nyc_youth": 86396254,
+   "nyc_housing": 408697159,
+   "nyc_health": 420275407,
+   "nyc_parks": 152434920
+  },
+  "NYC|1996": {
+   "nyc_libraries": 252998729,
+   "nyc_human_services": 7640963295,
+   "nyc_youth": 48453946,
+   "nyc_housing": 407187532,
+   "nyc_health": 419307651,
+   "nyc_parks": 157367408
+  },
+  "NYC|1995": {
+   "nyc_libraries": 167866879,
+   "nyc_human_services": 7827797691,
+   "nyc_youth": 65136824,
+   "nyc_housing": 429119357,
+   "nyc_health": 414601489,
+   "nyc_parks": 156330174
+  },
+  "NYC|1994": {
+   "nyc_libraries": 172571753,
+   "nyc_human_services": 7757918160,
+   "nyc_youth": 67737029,
+   "nyc_housing": 445665391,
+   "nyc_health": 351573249,
+   "nyc_parks": 161261199
+  },
+  "NYC|1993": {
+   "nyc_libraries": 146463384,
+   "nyc_human_services": 7139697647,
+   "nyc_youth": 64446593,
+   "nyc_housing": 374771475,
+   "nyc_health": 314970458,
+   "nyc_parks": 158393808
+  },
+  "NYC|1992": {
+   "nyc_libraries": 129169150,
+   "nyc_human_services": 6883893088,
+   "nyc_youth": 47550927,
+   "nyc_housing": 396992375,
+   "nyc_health": 268394283,
+   "nyc_parks": 143527698
+  },
+  "NYC|1991": {
+   "nyc_libraries": 138760971,
+   "nyc_human_services": 6511863444,
+   "nyc_youth": 40850507,
+   "nyc_housing": 460657466,
+   "nyc_health": 300800132,
+   "nyc_parks": 184305948
+  },
+  "NYC|1990": {
+   "nyc_libraries": 95035421,
+   "nyc_human_services": 5754867591,
+   "nyc_youth": 36956483,
+   "nyc_housing": 471026803,
+   "nyc_health": 291619576,
+   "nyc_parks": 188748881
+  },
+  "NYC|1989": {
+   "nyc_libraries": 185069429,
+   "nyc_human_services": 5177519366,
+   "nyc_youth": 0,
+   "nyc_housing": 463327488,
+   "nyc_health": 230221509,
+   "nyc_parks": 182311442
+  },
+  "NYC|1988": {
+   "nyc_libraries": 132957035,
+   "nyc_human_services": 4838837942,
+   "nyc_youth": 0,
+   "nyc_housing": 435270663,
+   "nyc_health": 194241815,
+   "nyc_parks": 179339027
+  },
+  "NYC|1987": {
+   "nyc_libraries": 119956286,
+   "nyc_human_services": 4750315117,
+   "nyc_youth": 0,
+   "nyc_housing": 388468758,
+   "nyc_health": 177648369,
+   "nyc_parks": 168349865
+  },
+  "NYC|1986": {
+   "nyc_libraries": 114544671,
+   "nyc_human_services": 4791416578,
+   "nyc_youth": 0,
+   "nyc_housing": 371505171,
+   "nyc_health": 153891645,
+   "nyc_parks": 158644149
+  },
+  "NYC|1985": {
+   "nyc_libraries": 63177816,
+   "nyc_human_services": 4440946929,
+   "nyc_youth": 0,
+   "nyc_housing": 361118591,
+   "nyc_health": 132515262,
+   "nyc_parks": 143892076
+  },
+  "NYC|1984": {
+   "nyc_libraries": 87423437,
+   "nyc_human_services": 4081057447,
+   "nyc_youth": 0,
+   "nyc_housing": 313128848,
+   "nyc_health": 118380705,
+   "nyc_parks": 122902953
+  },
+  "NYC|1983": {
+   "nyc_libraries": 118037966,
+   "nyc_human_services": 3714525174,
+   "nyc_youth": 0,
+   "nyc_housing": 286450595,
+   "nyc_health": 104663106,
+   "nyc_parks": 115805665
+  },
+  "NYC|1982": {
+   "nyc_libraries": 71988003,
+   "nyc_human_services": 3491582505,
+   "nyc_youth": 0,
+   "nyc_housing": 277911774,
+   "nyc_health": 98939089,
+   "nyc_parks": 112337862
+  },
+  "NYC|1981": {
+   "nyc_libraries": 62856517,
+   "nyc_human_services": 3265227325,
+   "nyc_youth": 0,
+   "nyc_housing": 264199376,
+   "nyc_health": 100232601,
+   "nyc_parks": 94220719
+  },
+  "NYC|1980": {
+   "nyc_libraries": 57904981,
+   "nyc_human_services": 3125808044,
+   "nyc_youth": 0,
+   "nyc_housing": 238009029,
+   "nyc_health": 99052875,
+   "nyc_parks": 86517040
+  },
+  "NYC|2020": {
+   "nyc_youth": 5097892000,
+   "nyc_libraries": 853427000,
+   "nyc_health": 2836596000,
+   "nyc_human_services": 22912294000,
+   "nyc_housing": 1421357000,
+   "nyc_parks": 946163000
+  },
+  "NYC|2021": {
+   "nyc_youth": 4515571000,
+   "nyc_libraries": 846905000,
+   "nyc_health": 3268295000,
+   "nyc_human_services": 22197873000,
+   "nyc_housing": 1402629000,
+   "nyc_parks": 882371000
+  },
+  "NYC|2022": {
+   "nyc_youth": 5153173000,
+   "nyc_libraries": 847940000,
+   "nyc_health": 3684803000,
+   "nyc_human_services": 24270937000,
+   "nyc_housing": 1475185000,
+   "nyc_parks": 984389000
+  },
+  "NYC|2023": {
+   "nyc_youth": 5888053000,
+   "nyc_libraries": 931937000,
+   "nyc_health": 3531242000,
+   "nyc_human_services": 25905339000,
+   "nyc_housing": 1712353000,
+   "nyc_parks": 1057820000
+  },
+  "NYC|2024": {
+   "nyc_youth": 6533658000,
+   "nyc_libraries": 915746000,
+   "nyc_health": 3408487000,
+   "nyc_human_services": 28057325000,
+   "nyc_housing": 2732109000,
+   "nyc_parks": 1135730000
+  },
+  "NYC|2025": {
+   "nyc_youth": 7949854000,
+   "nyc_libraries": 998556000,
+   "nyc_health": 3778409000,
+   "nyc_human_services": 30410580000,
+   "nyc_housing": 2759500000,
+   "nyc_parks": 1219969000
+  },
+  "NYC|2019": {
+   "nyc_parks": null,
+   "nyc_health": null,
+   "nyc_human_services": null,
+   "nyc_housing": null,
+   "nyc_libraries": null,
+   "nyc_youth": null
+  },
+  "Cincinnati|2004": {
+   "cincinnati_parks": 33375541.0,
+   "cincinnati_health": 33731686.0,
+   "cincinnati_housing": 1653502.0,
+   "cincinnati_libraries": null
+  },
+  "Cincinnati|2005": {
+   "cincinnati_parks": -8200.0,
+   "cincinnati_health": 0.0,
+   "cincinnati_housing": 0.0,
+   "cincinnati_libraries": null
+  },
+  "Cincinnati|2006": {
+   "cincinnati_parks": 33297268.0,
+   "cincinnati_health": 25833283.0,
+   "cincinnati_housing": 1936897.0,
+   "cincinnati_libraries": null
+  },
+  "Cincinnati|2007": {
+   "cincinnati_parks": 35496116.0,
+   "cincinnati_health": 32600345.0,
+   "cincinnati_housing": 1551359.0,
+   "cincinnati_libraries": null
+  },
+  "Cincinnati|2008": {
+   "cincinnati_parks": 35399330.0,
+   "cincinnati_health": 32042589.0,
+   "cincinnati_housing": 1440200.0,
+   "cincinnati_libraries": null
+  },
+  "Cincinnati|2009": {
+   "cincinnati_parks": 35219520.0,
+   "cincinnati_health": 31473060.0,
+   "cincinnati_housing": 3503861.0,
+   "cincinnati_libraries": null
+  },
+  "Cincinnati|2010": {
+   "cincinnati_parks": 34768510.0,
+   "cincinnati_health": 33121680.0,
+   "cincinnati_housing": 1076990.0,
+   "cincinnati_libraries": null
+  },
+  "Cincinnati|2011": {
+   "cincinnati_parks": 34418340.0,
+   "cincinnati_health": 30967800.0,
+   "cincinnati_housing": 1179020.0,
+   "cincinnati_libraries": null
+  },
+  "Cincinnati|2012": {
+   "cincinnati_parks": 43193570.0,
+   "cincinnati_health": 41297210.0,
+   "cincinnati_housing": 1166005.0,
+   "cincinnati_libraries": null
+  },
+  "Cincinnati|2013": {
+   "cincinnati_parks": 21514048.0,
+   "cincinnati_health": 20358175.0,
+   "cincinnati_housing": 590912.0,
+   "cincinnati_libraries": null
+  },
+  "Cincinnati|2014": {
+   "cincinnati_parks": 44561686.68,
+   "cincinnati_health": 41869700.0,
+   "cincinnati_housing": 2553268.0,
+   "cincinnati_libraries": null
+  },
+  "Cincinnati|2015": {
+   "cincinnati_parks": 43316464.0,
+   "cincinnati_health": 41271951.0,
+   "cincinnati_housing": 2931400.0,
+   "cincinnati_libraries": null
+  },
+  "Cincinnati|2016": {
+   "cincinnati_parks": 44100274.0,
+   "cincinnati_health": 47001260.0,
+   "cincinnati_housing": 4280560.0,
+   "cincinnati_libraries": null
+  },
+  "Cincinnati|2017": {
+   "cincinnati_parks": 45601586.83,
+   "cincinnati_health": 49816461.0,
+   "cincinnati_housing": 3728046.17,
+   "cincinnati_libraries": null
+  },
+  "Cincinnati|2018": {
+   "cincinnati_parks": 45986440.0,
+   "cincinnati_health": 60543290.0,
+   "cincinnati_housing": 3408767.0,
+   "cincinnati_libraries": null
+  },
+  "Cincinnati|2019": {
+   "cincinnati_parks": 49151592.0,
+   "cincinnati_health": 53837398.0,
+   "cincinnati_housing": 4351350.0,
+   "cincinnati_libraries": null
+  },
+  "Cincinnati|2020": {
+   "cincinnati_parks": 49738384.0,
+   "cincinnati_health": 55705976.32,
+   "cincinnati_housing": 4261154.04,
+   "cincinnati_libraries": null
+  },
+  "Cincinnati|2021": {
+   "cincinnati_parks": 49285880.0,
+   "cincinnati_health": 54333594.0,
+   "cincinnati_housing": 3441030.0,
+   "cincinnati_libraries": null
+  },
+  "Cincinnati|2022": {
+   "cincinnati_parks": 50164532.0,
+   "cincinnati_health": 64459339.0,
+   "cincinnati_housing": 3377175.0,
+   "cincinnati_libraries": null
+  },
+  "Cincinnati|2023": {
+   "cincinnati_parks": 55432192.38,
+   "cincinnati_health": 64909830.0,
+   "cincinnati_housing": 3626470.0,
+   "cincinnati_libraries": null
+  },
+  "Cincinnati|2024": {
+   "cincinnati_parks": 58577893.88,
+   "cincinnati_health": 68003350.0,
+   "cincinnati_housing": 11104488.0,
+   "cincinnati_libraries": null
+  },
+  "Cincinnati|2025": {
+   "cincinnati_parks": 65040121.56,
+   "cincinnati_health": 71369620.0,
+   "cincinnati_housing": 13171355.0,
+   "cincinnati_libraries": null
+  },
+  "Cincinnati|2026": {
+   "cincinnati_parks": 69488239.0,
+   "cincinnati_health": 78033880.0,
+   "cincinnati_housing": 11238760.0,
+   "cincinnati_libraries": null
+  },
+  "Cincinnati|2027": {
+   "cincinnati_parks": 68191227.0,
+   "cincinnati_health": 71072820.0,
+   "cincinnati_housing": 0.0,
+   "cincinnati_libraries": null
+  },
+  "Detroit|2024": {
+   "detroit_housing": 203241599.0,
+   "detroit_health": 129858370.0,
+   "detroit_parks": 168350980.0,
+   "detroit_libraries": 98574695.0
+  },
+  "Detroit|2020": {
+   "detroit_health": 33769914.0,
+   "detroit_housing": 93080547.0,
+   "detroit_libraries": 33522999.0,
+   "detroit_parks": -244.0
+  },
+  "Detroit|2021": {
+   "detroit_health": 41410471.0,
+   "detroit_housing": 62427194.0,
+   "detroit_libraries": 35466670.0,
+   "detroit_parks": 47193988.0
+  },
+  "Detroit|2022": {
+   "detroit_health": 42757539.0,
+   "detroit_housing": 69936162.0,
+   "detroit_libraries": 27835308.0,
+   "detroit_parks": 48790616.0
+  },
+  "Detroit|2023": {
+   "detroit_health": 94608619.0,
+   "detroit_housing": 172819831.0,
+   "detroit_libraries": 65457126.0,
+   "detroit_parks": 96186413.0
+  },
+  "Detroit|2025": {
+   "detroit_health": 87891672.0,
+   "detroit_housing": 148009352.0,
+   "detroit_libraries": 68159398.0,
+   "detroit_parks": 101243205.0
+  },
+  "Detroit|2026": {
+   "detroit_health": 44235715.0,
+   "detroit_housing": 67600702.0,
+   "detroit_libraries": 40419705.0,
+   "detroit_parks": 47051375.0
+  },
+  "Detroit|2027": {
+   "detroit_health": 45073585.0,
+   "detroit_housing": 68742212.0,
+   "detroit_libraries": 41228098.0,
+   "detroit_parks": 48542722.0
+  },
+  "Detroit|2028": {
+   "detroit_health": 45927992.0,
+   "detroit_housing": 69905519.0,
+   "detroit_libraries": 42052660.0,
+   "detroit_parks": 50041721.0
+  },
+  "Memphis|2021": {
+   "memphis_libraries": 21206316.0,
+   "memphis_parks": 34872835.0,
+   "memphis_housing": 6465421.0,
+   "memphis_human_services": 67895674.0
+  },
+  "Memphis|2022": {
+   "memphis_libraries": 22919401.0,
+   "memphis_parks": 38949776.0,
+   "memphis_housing": 4832737.0,
+   "memphis_human_services": 38304904.0
+  },
+  "Memphis|2023": {
+   "memphis_libraries": 22872537.0,
+   "memphis_parks": 40878283.0,
+   "memphis_housing": 4808050.0,
+   "memphis_human_services": 58526010.0
+  },
+  "Memphis|2024": {
+   "memphis_libraries": 22504072.0,
+   "memphis_parks": 53332046.0,
+   "memphis_housing": 4407394.0,
+   "memphis_human_services": 85419441.0
+  },
+  "Memphis|2025": {
+   "memphis_libraries": 24977210.0,
+   "memphis_parks": 47297960.0,
+   "memphis_housing": 6165685.0,
+   "memphis_human_services": 65726249.0
+  },
+  "Memphis|2026": {
+   "memphis_libraries": 26144616.0,
+   "memphis_parks": 51602943.0,
+   "memphis_housing": 6293120.0,
+   "memphis_human_services": 64653371.0
+  },
+  "St. Louis|2019": {
+   "stlouis_health": 21913981.0,
+   "stlouis_human_services": 18412451.0,
+   "stlouis_parks": 29745663.0
+  },
+  "St. Louis|2020": {
+   "stlouis_health": 22635482.0,
+   "stlouis_human_services": 17893262.0,
+   "stlouis_parks": 27521342.0
+  },
+  "St. Louis|2021": {
+   "stlouis_health": 22560624.0,
+   "stlouis_human_services": 19525922.0,
+   "stlouis_parks": 26907498.0
+  },
+  "St. Louis|2022": {
+   "stlouis_health": 34646545.0,
+   "stlouis_human_services": 32160153.0,
+   "stlouis_parks": 35619835.0
+  },
+  "St. Louis|2023": {
+   "stlouis_health": 30158360.0,
+   "stlouis_human_services": 27590743.0,
+   "stlouis_parks": 31806068.0
+  },
+  "St. Louis|2024": {
+   "stlouis_health": 33205131.0,
+   "stlouis_human_services": 49833073.0,
+   "stlouis_parks": 39014958.0
+  },
+  "St. Louis|2025": {
+   "stlouis_health": 35726433.0,
+   "stlouis_human_services": 37169260.0,
+   "stlouis_parks": 42947650.0
+  },
+  "Denver|2021": {
+   "denver_parks": 92495327,
+   "denver_libraries": 46763483,
+   "denver_health": 83074806,
+   "denver_housing": 23807086,
+   "denver_human_services": 156408570
+  },
+  "Denver|2022": {
+   "denver_parks": 160082210,
+   "denver_libraries": 56528685,
+   "denver_health": 128766126,
+   "denver_housing": 33765977,
+   "denver_human_services": 210233658
+  },
+  "Denver|2023": {
+   "denver_parks": 140619025,
+   "denver_libraries": 60421737,
+   "denver_health": 140998366,
+   "denver_housing": 35905642,
+   "denver_human_services": 227483413
+  }
+ },
+ "care_total": {
+  "NYC|2018": 16083451082,
+  "NYC|2017": 15315570288,
+  "NYC|2016": 14293238630,
+  "NYC|2015": 14268497017,
+  "NYC|2014": 13553231749,
+  "NYC|2013": 13580886970,
+  "NYC|2012": 13293749418,
+  "NYC|2011": 12112664612,
+  "NYC|2010": 12565355272,
+  "NYC|2009": 12438336711,
+  "NYC|2008": 12484787390,
+  "NYC|2007": 11066241802,
+  "NYC|2006": 10385522352,
+  "NYC|2005": 10597348612,
+  "NYC|2004": 9745742821,
+  "NYC|2003": 9136231604,
+  "NYC|2002": 8329578924,
+  "NYC|2001": 8186859083,
+  "NYC|2000": 7531776708,
+  "NYC|1999": 6887070583,
+  "NYC|1998": 6911014917,
+  "NYC|1997": 7254935444,
+  "NYC|1996": 8926278561,
+  "NYC|1995": 9060852414,
+  "NYC|1994": 8956726781,
+  "NYC|1993": 8198743365,
+  "NYC|1992": 7869527521,
+  "NYC|1991": 7637238468,
+  "NYC|1990": 6838254755,
+  "NYC|1989": 6238449234,
+  "NYC|1988": 5780646482,
+  "NYC|1987": 5604738395,
+  "NYC|1986": 5590002214,
+  "NYC|1985": 5141650674,
+  "NYC|1984": 4722893390,
+  "NYC|1983": 4339482506,
+  "NYC|1982": 4052759233,
+  "NYC|1981": 3786736538,
+  "NYC|1980": 3607291969,
+  "NYC|2020": 34067729000,
+  "NYC|2021": 33113644000,
+  "NYC|2022": 36416427000,
+  "NYC|2023": 39026744000,
+  "NYC|2024": 42783055000,
+  "NYC|2025": 47116868000,
+  "NYC|2019": null,
+  "Cincinnati|2004": 68760729.0,
+  "Cincinnati|2005": -8200.0,
+  "Cincinnati|2006": 61067448.0,
+  "Cincinnati|2007": 69647820.0,
+  "Cincinnati|2008": 68882119.0,
+  "Cincinnati|2009": 70196441.0,
+  "Cincinnati|2010": 68967180.0,
+  "Cincinnati|2011": 66565160.0,
+  "Cincinnati|2012": 85656785.0,
+  "Cincinnati|2013": 42463135.0,
+  "Cincinnati|2014": 88984654.68,
+  "Cincinnati|2015": 87519815.0,
+  "Cincinnati|2016": 95382094.0,
+  "Cincinnati|2017": 99146094.0,
+  "Cincinnati|2018": 109938497.0,
+  "Cincinnati|2019": 107340340.0,
+  "Cincinnati|2020": 109705514.36,
+  "Cincinnati|2021": 107060504.0,
+  "Cincinnati|2022": 118001046.0,
+  "Cincinnati|2023": 123968492.38,
+  "Cincinnati|2024": 137685731.88,
+  "Cincinnati|2025": 149581096.56,
+  "Cincinnati|2026": 158760879.0,
+  "Cincinnati|2027": 139264047.0,
+  "Detroit|2024": 600025644.0,
+  "Detroit|2020": 160373216.0,
+  "Detroit|2021": 186498323.0,
+  "Detroit|2022": 189319625.0,
+  "Detroit|2023": 429071989.0,
+  "Detroit|2025": 405303627.0,
+  "Detroit|2026": 199307497.0,
+  "Detroit|2027": 203586617.0,
+  "Detroit|2028": 207927892.0,
+  "Memphis|2021": 130440246.0,
+  "Memphis|2022": 105006818.0,
+  "Memphis|2023": 127084880.0,
+  "Memphis|2024": 165662953.0,
+  "Memphis|2025": 144167104.0,
+  "Memphis|2026": 148694050.0,
+  "St. Louis|2019": 70072095.0,
+  "St. Louis|2020": 68050086.0,
+  "St. Louis|2021": 68994044.0,
+  "St. Louis|2022": 102426533.0,
+  "St. Louis|2023": 89555171.0,
+  "St. Louis|2024": 122053162.0,
+  "St. Louis|2025": 115843343.0,
+  "Denver|2021": 402549272,
+  "Denver|2022": 589376656,
+  "Denver|2023": 605428183
+ },
+ "care_partial": {
+  "NYC|2019": {
+   "null_components": [
+    "nyc_parks",
+    "nyc_health",
+    "nyc_human_services",
+    "nyc_housing",
+    "nyc_libraries",
+    "nyc_youth"
+   ]
+  },
+  "Cincinnati|2004": {
+   "null_components": [
+    "cincinnati_libraries"
+   ]
+  },
+  "Cincinnati|2005": {
+   "null_components": [
+    "cincinnati_libraries"
+   ]
+  },
+  "Cincinnati|2006": {
+   "null_components": [
+    "cincinnati_libraries"
+   ]
+  },
+  "Cincinnati|2007": {
+   "null_components": [
+    "cincinnati_libraries"
+   ]
+  },
+  "Cincinnati|2008": {
+   "null_components": [
+    "cincinnati_libraries"
+   ]
+  },
+  "Cincinnati|2009": {
+   "null_components": [
+    "cincinnati_libraries"
+   ]
+  },
+  "Cincinnati|2010": {
+   "null_components": [
+    "cincinnati_libraries"
+   ]
+  },
+  "Cincinnati|2011": {
+   "null_components": [
+    "cincinnati_libraries"
+   ]
+  },
+  "Cincinnati|2012": {
+   "null_components": [
+    "cincinnati_libraries"
+   ]
+  },
+  "Cincinnati|2013": {
+   "null_components": [
+    "cincinnati_libraries"
+   ]
+  },
+  "Cincinnati|2014": {
+   "null_components": [
+    "cincinnati_libraries"
+   ]
+  },
+  "Cincinnati|2015": {
+   "null_components": [
+    "cincinnati_libraries"
+   ]
+  },
+  "Cincinnati|2016": {
+   "null_components": [
+    "cincinnati_libraries"
+   ]
+  },
+  "Cincinnati|2017": {
+   "null_components": [
+    "cincinnati_libraries"
+   ]
+  },
+  "Cincinnati|2018": {
+   "null_components": [
+    "cincinnati_libraries"
+   ]
+  },
+  "Cincinnati|2019": {
+   "null_components": [
+    "cincinnati_libraries"
+   ]
+  },
+  "Cincinnati|2020": {
+   "null_components": [
+    "cincinnati_libraries"
+   ]
+  },
+  "Cincinnati|2021": {
+   "null_components": [
+    "cincinnati_libraries"
+   ]
+  },
+  "Cincinnati|2022": {
+   "null_components": [
+    "cincinnati_libraries"
+   ]
+  },
+  "Cincinnati|2023": {
+   "null_components": [
+    "cincinnati_libraries"
+   ]
+  },
+  "Cincinnati|2024": {
+   "null_components": [
+    "cincinnati_libraries"
+   ]
+  },
+  "Cincinnati|2025": {
+   "null_components": [
+    "cincinnati_libraries"
+   ]
+  },
+  "Cincinnati|2026": {
+   "null_components": [
+    "cincinnati_libraries"
+   ]
+  },
+  "Cincinnati|2027": {
+   "null_components": [
+    "cincinnati_libraries"
+   ]
+  }
+ },
+ "bookings_series": {
+  "Boston|2015": 16116,
+  "Boston|2016": 13957,
+  "Boston|2017": 13809,
+  "Boston|2018": 11925,
+  "Boston|2019": 9948,
+  "Boston|2020": 4341,
+  "Boston|2021": 4339,
+  "Boston|2022": 4782,
+  "Boston|2023": 5338,
+  "Boston|2024": 5446,
+  "NYC|2015": 339470,
+  "NYC|2016": 314864,
+  "NYC|2017": 286225,
+  "NYC|2018": 246773,
+  "NYC|2019": 214617,
+  "NYC|2020": 140413,
+  "NYC|2021": 155507,
+  "NYC|2022": 189774,
+  "NYC|2023": 226872,
+  "NYC|2024": 260503,
+  "St. Louis|2015": 25308,
+  "St. Louis|2016": 25184,
+  "St. Louis|2017": 23139,
+  "St. Louis|2018": 20722,
+  "St. Louis|2019": 21005,
+  "St. Louis|2020": 13466,
+  "St. Louis|2021": 9378,
+  "St. Louis|2022": 9038,
+  "St. Louis|2023": 9147,
+  "St. Louis|2024": 9260,
+  "New Orleans|2015": 20756,
+  "New Orleans|2016": 24677,
+  "New Orleans|2017": 32155,
+  "New Orleans|2018": 31930,
+  "New Orleans|2019": 27751,
+  "New Orleans|2020": 17686,
+  "New Orleans|2021": 16580,
+  "New Orleans|2022": 13822,
+  "New Orleans|2023": 14694,
+  "New Orleans|2024": null,
+  "Cincinnati|2015": 0,
+  "Cincinnati|2016": 0,
+  "Cincinnati|2017": 7073,
+  "Cincinnati|2018": 7022,
+  "Cincinnati|2019": 7167,
+  "Cincinnati|2020": 6096,
+  "Cincinnati|2021": 5706,
+  "Cincinnati|2022": 6037,
+  "Cincinnati|2023": 5522,
+  "Cincinnati|2024": 5332,
+  "Memphis|2015": 40640,
+  "Memphis|2016": 38979,
+  "Memphis|2017": 30105,
+  "Memphis|2018": 31382,
+  "Memphis|2019": 31292,
+  "Memphis|2020": 23093,
+  "Memphis|2021": 19949,
+  "Memphis|2022": 22563,
+  "Memphis|2023": 14821,
+  "Memphis|2024": 16489,
+  "Houston|2015": 73431,
+  "Houston|2016": 78169,
+  "Houston|2017": 63026,
+  "Houston|2018": 48506,
+  "Houston|2019": 37260,
+  "Houston|2020": 33408,
+  "Houston|2021": 32553,
+  "Houston|2022": 32283,
+  "Houston|2023": 34700,
+  "Houston|2024": 34400,
+  "Detroit|2015": 14409,
+  "Detroit|2016": 13949,
+  "Detroit|2017": 9702,
+  "Detroit|2018": 10681,
+  "Detroit|2019": 11746,
+  "Detroit|2020": 13891,
+  "Detroit|2021": 12916,
+  "Detroit|2022": 10571,
+  "Detroit|2023": 11355,
+  "Detroit|2024": 11047,
+  "Okc|2015": 27562,
+  "Okc|2016": 26744,
+  "Okc|2017": 24141,
+  "Okc|2018": 21061,
+  "Okc|2019": 17661,
+  "Okc|2020": 15264,
+  "Okc|2021": 14024,
+  "Okc|2022": 14739,
+  "Okc|2023": 14687,
+  "Okc|2024": 15108
+ },
+ "bookings_series_meta": {
+  "Boston|2015": {
+   "months_present": 12,
+   "jurisdiction": "Boston PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Boston|2016": {
+   "months_present": 12,
+   "jurisdiction": "Boston PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Boston|2017": {
+   "months_present": 12,
+   "jurisdiction": "Boston PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Boston|2018": {
+   "months_present": 12,
+   "jurisdiction": "Boston PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Boston|2019": {
+   "months_present": 12,
+   "jurisdiction": "Boston PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Boston|2020": {
+   "months_present": 12,
+   "jurisdiction": "Boston PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Boston|2021": {
+   "months_present": 12,
+   "jurisdiction": "Boston PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Boston|2022": {
+   "months_present": 12,
+   "jurisdiction": "Boston PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Boston|2023": {
+   "months_present": 12,
+   "jurisdiction": "Boston PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Boston|2024": {
+   "months_present": 12,
+   "jurisdiction": "Boston PD (city)",
+   "notes": "12/12 months present"
+  },
+  "NYC|2015": {
+   "months_present": 12,
+   "jurisdiction": "NYPD (city); bookings proxy = arrests",
+   "notes": "12/12 months present"
+  },
+  "NYC|2016": {
+   "months_present": 12,
+   "jurisdiction": "NYPD (city); bookings proxy = arrests",
+   "notes": "12/12 months present"
+  },
+  "NYC|2017": {
+   "months_present": 12,
+   "jurisdiction": "NYPD (city); bookings proxy = arrests",
+   "notes": "12/12 months present"
+  },
+  "NYC|2018": {
+   "months_present": 12,
+   "jurisdiction": "NYPD (city); bookings proxy = arrests",
+   "notes": "12/12 months present"
+  },
+  "NYC|2019": {
+   "months_present": 12,
+   "jurisdiction": "NYPD (city); bookings proxy = arrests",
+   "notes": "12/12 months present"
+  },
+  "NYC|2020": {
+   "months_present": 12,
+   "jurisdiction": "NYPD (city); bookings proxy = arrests",
+   "notes": "12/12 months present"
+  },
+  "NYC|2021": {
+   "months_present": 12,
+   "jurisdiction": "NYPD (city); bookings proxy = arrests",
+   "notes": "12/12 months present"
+  },
+  "NYC|2022": {
+   "months_present": 12,
+   "jurisdiction": "NYPD (city); bookings proxy = arrests",
+   "notes": "12/12 months present"
+  },
+  "NYC|2023": {
+   "months_present": 12,
+   "jurisdiction": "NYPD (city); bookings proxy = arrests",
+   "notes": "12/12 months present"
+  },
+  "NYC|2024": {
+   "months_present": 12,
+   "jurisdiction": "NYPD (city); bookings proxy = arrests",
+   "notes": "12/12 months present"
+  },
+  "St. Louis|2015": {
+   "months_present": 12,
+   "jurisdiction": "St. Louis Metro PD (city)",
+   "notes": "12/12 months present"
+  },
+  "St. Louis|2016": {
+   "months_present": 12,
+   "jurisdiction": "St. Louis Metro PD (city)",
+   "notes": "12/12 months present"
+  },
+  "St. Louis|2017": {
+   "months_present": 12,
+   "jurisdiction": "St. Louis Metro PD (city)",
+   "notes": "12/12 months present"
+  },
+  "St. Louis|2018": {
+   "months_present": 12,
+   "jurisdiction": "St. Louis Metro PD (city)",
+   "notes": "12/12 months present"
+  },
+  "St. Louis|2019": {
+   "months_present": 12,
+   "jurisdiction": "St. Louis Metro PD (city)",
+   "notes": "12/12 months present"
+  },
+  "St. Louis|2020": {
+   "months_present": 12,
+   "jurisdiction": "St. Louis Metro PD (city)",
+   "notes": "12/12 months present"
+  },
+  "St. Louis|2021": {
+   "months_present": 12,
+   "jurisdiction": "St. Louis Metro PD (city)",
+   "notes": "12/12 months present"
+  },
+  "St. Louis|2022": {
+   "months_present": 12,
+   "jurisdiction": "St. Louis Metro PD (city)",
+   "notes": "12/12 months present"
+  },
+  "St. Louis|2023": {
+   "months_present": 12,
+   "jurisdiction": "St. Louis Metro PD (city)",
+   "notes": "12/12 months present"
+  },
+  "St. Louis|2024": {
+   "months_present": 12,
+   "jurisdiction": "St. Louis Metro PD (city)",
+   "notes": "12/12 months present"
+  },
+  "New Orleans|2015": {
+   "months_present": 12,
+   "jurisdiction": "New Orleans PD (city)",
+   "notes": "12/12 months present"
+  },
+  "New Orleans|2016": {
+   "months_present": 12,
+   "jurisdiction": "New Orleans PD (city)",
+   "notes": "12/12 months present"
+  },
+  "New Orleans|2017": {
+   "months_present": 12,
+   "jurisdiction": "New Orleans PD (city)",
+   "notes": "12/12 months present"
+  },
+  "New Orleans|2018": {
+   "months_present": 12,
+   "jurisdiction": "New Orleans PD (city)",
+   "notes": "12/12 months present"
+  },
+  "New Orleans|2019": {
+   "months_present": 12,
+   "jurisdiction": "New Orleans PD (city)",
+   "notes": "12/12 months present"
+  },
+  "New Orleans|2020": {
+   "months_present": 12,
+   "jurisdiction": "New Orleans PD (city)",
+   "notes": "12/12 months present"
+  },
+  "New Orleans|2021": {
+   "months_present": 12,
+   "jurisdiction": "New Orleans PD (city)",
+   "notes": "12/12 months present"
+  },
+  "New Orleans|2022": {
+   "months_present": 12,
+   "jurisdiction": "New Orleans PD (city)",
+   "notes": "12/12 months present"
+  },
+  "New Orleans|2023": {
+   "months_present": 12,
+   "jurisdiction": "New Orleans PD (city)",
+   "notes": "12/12 months present"
+  },
+  "New Orleans|2024": {
+   "months_present": 0,
+   "jurisdiction": "New Orleans PD (city)",
+   "notes": "CDE arrest 'all' returned 0/12 months present -> row banked as NULL (non-reporting, not zero)"
+  },
+  "Cincinnati|2015": {
+   "months_present": 12,
+   "jurisdiction": "Cincinnati PD (city)",
+   "notes": "total=0 flagged: artifact-suspect (sub-100 on 12/12 months); kept but flagged"
+  },
+  "Cincinnati|2016": {
+   "months_present": 12,
+   "jurisdiction": "Cincinnati PD (city)",
+   "notes": "total=0 flagged: artifact-suspect (sub-100 on 12/12 months); kept but flagged"
+  },
+  "Cincinnati|2017": {
+   "months_present": 12,
+   "jurisdiction": "Cincinnati PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Cincinnati|2018": {
+   "months_present": 12,
+   "jurisdiction": "Cincinnati PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Cincinnati|2019": {
+   "months_present": 12,
+   "jurisdiction": "Cincinnati PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Cincinnati|2020": {
+   "months_present": 12,
+   "jurisdiction": "Cincinnati PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Cincinnati|2021": {
+   "months_present": 12,
+   "jurisdiction": "Cincinnati PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Cincinnati|2022": {
+   "months_present": 12,
+   "jurisdiction": "Cincinnati PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Cincinnati|2023": {
+   "months_present": 12,
+   "jurisdiction": "Cincinnati PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Cincinnati|2024": {
+   "months_present": 12,
+   "jurisdiction": "Cincinnati PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Memphis|2015": {
+   "months_present": 12,
+   "jurisdiction": "Memphis PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Memphis|2016": {
+   "months_present": 12,
+   "jurisdiction": "Memphis PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Memphis|2017": {
+   "months_present": 12,
+   "jurisdiction": "Memphis PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Memphis|2018": {
+   "months_present": 12,
+   "jurisdiction": "Memphis PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Memphis|2019": {
+   "months_present": 12,
+   "jurisdiction": "Memphis PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Memphis|2020": {
+   "months_present": 12,
+   "jurisdiction": "Memphis PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Memphis|2021": {
+   "months_present": 12,
+   "jurisdiction": "Memphis PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Memphis|2022": {
+   "months_present": 12,
+   "jurisdiction": "Memphis PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Memphis|2023": {
+   "months_present": 12,
+   "jurisdiction": "Memphis PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Memphis|2024": {
+   "months_present": 12,
+   "jurisdiction": "Memphis PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Houston|2015": {
+   "months_present": 12,
+   "jurisdiction": "Houston PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Houston|2016": {
+   "months_present": 12,
+   "jurisdiction": "Houston PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Houston|2017": {
+   "months_present": 12,
+   "jurisdiction": "Houston PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Houston|2018": {
+   "months_present": 12,
+   "jurisdiction": "Houston PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Houston|2019": {
+   "months_present": 12,
+   "jurisdiction": "Houston PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Houston|2020": {
+   "months_present": 12,
+   "jurisdiction": "Houston PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Houston|2021": {
+   "months_present": 12,
+   "jurisdiction": "Houston PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Houston|2022": {
+   "months_present": 12,
+   "jurisdiction": "Houston PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Houston|2023": {
+   "months_present": 12,
+   "jurisdiction": "Houston PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Houston|2024": {
+   "months_present": 12,
+   "jurisdiction": "Houston PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Detroit|2015": {
+   "months_present": 12,
+   "jurisdiction": "Detroit PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Detroit|2016": {
+   "months_present": 12,
+   "jurisdiction": "Detroit PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Detroit|2017": {
+   "months_present": 12,
+   "jurisdiction": "Detroit PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Detroit|2018": {
+   "months_present": 12,
+   "jurisdiction": "Detroit PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Detroit|2019": {
+   "months_present": 12,
+   "jurisdiction": "Detroit PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Detroit|2020": {
+   "months_present": 12,
+   "jurisdiction": "Detroit PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Detroit|2021": {
+   "months_present": 12,
+   "jurisdiction": "Detroit PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Detroit|2022": {
+   "months_present": 12,
+   "jurisdiction": "Detroit PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Detroit|2023": {
+   "months_present": 12,
+   "jurisdiction": "Detroit PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Detroit|2024": {
+   "months_present": 12,
+   "jurisdiction": "Detroit PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Okc|2015": {
+   "months_present": 12,
+   "jurisdiction": "Oklahoma City PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Okc|2016": {
+   "months_present": 12,
+   "jurisdiction": "Oklahoma City PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Okc|2017": {
+   "months_present": 12,
+   "jurisdiction": "Oklahoma City PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Okc|2018": {
+   "months_present": 12,
+   "jurisdiction": "Oklahoma City PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Okc|2019": {
+   "months_present": 12,
+   "jurisdiction": "Oklahoma City PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Okc|2020": {
+   "months_present": 12,
+   "jurisdiction": "Oklahoma City PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Okc|2021": {
+   "months_present": 12,
+   "jurisdiction": "Oklahoma City PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Okc|2022": {
+   "months_present": 12,
+   "jurisdiction": "Oklahoma City PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Okc|2023": {
+   "months_present": 12,
+   "jurisdiction": "Oklahoma City PD (city)",
+   "notes": "12/12 months present"
+  },
+  "Okc|2024": {
+   "months_present": 12,
+   "jurisdiction": "Oklahoma City PD (city)",
+   "notes": "12/12 months present"
+  }
+ },
+ "fac_nyc": {
+  "1990": {
+   "discharges": null,
+   "admitted": 3,
+   "flags": [
+    "dataset backfill sparse pre-2013 (admissions coverage starts ~2013)"
+   ]
+  },
+  "1991": {
+   "discharges": null,
+   "admitted": 4,
+   "flags": [
+    "dataset backfill sparse pre-2013 (admissions coverage starts ~2013)"
+   ]
+  },
+  "1992": {
+   "discharges": null,
+   "admitted": 3,
+   "flags": [
+    "dataset backfill sparse pre-2013 (admissions coverage starts ~2013)"
+   ]
+  },
+  "1994": {
+   "discharges": null,
+   "admitted": 2,
+   "flags": [
+    "dataset backfill sparse pre-2013 (admissions coverage starts ~2013)"
+   ]
+  },
+  "1995": {
+   "discharges": null,
+   "admitted": 2,
+   "flags": [
+    "dataset backfill sparse pre-2013 (admissions coverage starts ~2013)"
+   ]
+  },
+  "2001": {
+   "discharges": null,
+   "admitted": 1,
+   "flags": [
+    "dataset backfill sparse pre-2013 (admissions coverage starts ~2013)"
+   ]
+  },
+  "2003": {
+   "discharges": null,
+   "admitted": 2,
+   "flags": [
+    "dataset backfill sparse pre-2013 (admissions coverage starts ~2013)"
+   ]
+  },
+  "2006": {
+   "discharges": null,
+   "admitted": 1,
+   "flags": [
+    "dataset backfill sparse pre-2013 (admissions coverage starts ~2013)"
+   ]
+  },
+  "2007": {
+   "discharges": null,
+   "admitted": 5,
+   "flags": [
+    "dataset backfill sparse pre-2013 (admissions coverage starts ~2013)"
+   ]
+  },
+  "2008": {
+   "discharges": null,
+   "admitted": 12,
+   "flags": [
+    "dataset backfill sparse pre-2013 (admissions coverage starts ~2013)"
+   ]
+  },
+  "2009": {
+   "discharges": null,
+   "admitted": 26,
+   "flags": [
+    "dataset backfill sparse pre-2013 (admissions coverage starts ~2013)"
+   ]
+  },
+  "2010": {
+   "discharges": null,
+   "admitted": 74,
+   "flags": [
+    "dataset backfill sparse pre-2013 (admissions coverage starts ~2013)"
+   ]
+  },
+  "2011": {
+   "discharges": null,
+   "admitted": 283,
+   "flags": [
+    "dataset backfill sparse pre-2013 (admissions coverage starts ~2013)"
+   ]
+  },
+  "2012": {
+   "discharges": null,
+   "admitted": 1050,
+   "flags": []
+  },
+  "2013": {
+   "discharges": null,
+   "admitted": 9266,
+   "flags": []
+  },
+  "2014": {
+   "discharges": 70044,
+   "admitted": 68578,
+   "flags": []
+  },
+  "2015": {
+   "discharges": 61585,
+   "admitted": 61479,
+   "flags": []
+  },
+  "2016": {
+   "discharges": 58700,
+   "admitted": 58503,
+   "flags": []
+  },
+  "2017": {
+   "discharges": 54402,
+   "admitted": 54055,
+   "flags": []
+  },
+  "2018": {
+   "discharges": 43250,
+   "admitted": 42268,
+   "flags": []
+  },
+  "2019": {
+   "discharges": 35768,
+   "admitted": 33767,
+   "flags": []
+  },
+  "2020": {
+   "discharges": 16161,
+   "admitted": 15373,
+   "flags": []
+  },
+  "2021": {
+   "discharges": 15799,
+   "admitted": 16200,
+   "flags": []
+  },
+  "2022": {
+   "discharges": 19300,
+   "admitted": 19672,
+   "flags": []
+  },
+  "2023": {
+   "discharges": 21827,
+   "admitted": 21974,
+   "flags": []
+  },
+  "2024": {
+   "discharges": 23094,
+   "admitted": 23197,
+   "flags": []
+  },
+  "2025": {
+   "discharges": 23909,
+   "admitted": 22974,
+   "flags": []
+  },
+  "2026": {
+   "discharges": 19547,
+   "admitted": 14612,
+   "flags": [
+    "partial-year (through pull date)"
+   ]
+  }
+ },
+ "murders": {
+  "Albuquerque|2011": 38,
+  "Albuquerque|2012": 41,
+  "Albuquerque|2013": 37,
+  "Albuquerque|2014": 30,
+  "Albuquerque|2015": 43,
+  "Albuquerque|2016": 61,
+  "Albuquerque|2017": 70,
+  "Albuquerque|2018": 69,
+  "Albuquerque|2019": 80,
+  "Albuquerque|2020": 76,
+  "Albuquerque|2021": 125,
+  "Albuquerque|2022": 126,
+  "Albuquerque|2023": 109,
+  "Albuquerque|2024": 106,
+  "Albuquerque|2025": 75,
+  "Austin|2011": 27,
+  "Austin|2012": 31,
+  "Austin|2013": 26,
+  "Austin|2014": 32,
+  "Austin|2015": 23,
+  "Austin|2016": 39,
+  "Austin|2017": 26,
+  "Austin|2018": 32,
+  "Austin|2019": 33,
+  "Austin|2020": 45,
+  "Austin|2021": 81,
+  "Austin|2022": 63,
+  "Austin|2023": 64,
+  "Austin|2024": 66,
+  "Austin|2025": 52,
+  "Baltimore|2011": 197,
+  "Baltimore|2012": 216,
+  "Baltimore|2013": 233,
+  "Baltimore|2014": 211,
+  "Baltimore|2015": 344,
+  "Baltimore|2016": 318,
+  "Baltimore|2017": 342,
+  "Baltimore|2018": 309,
+  "Baltimore|2019": 348,
+  "Baltimore|2020": 330,
+  "Baltimore|2021": 174,
+  "Baltimore|2022": 325,
+  "Baltimore|2023": 247,
+  "Baltimore|2024": 195,
+  "Baltimore|2025": 136,
+  "Boston|1980": 92,
+  "Boston|1983": 211,
+  "Boston|1990": 143,
+  "Boston|1991": 113,
+  "Boston|1993": 98,
+  "Boston|1994": 85,
+  "Boston|1995": 96,
+  "Boston|1999": 31,
+  "Boston|2001": 65,
+  "Boston|2019": 42,
+  "Boston|2020": 58,
+  "Boston|2021": 37,
+  "Boston|2022": 46,
+  "Boston|2024": 25,
+  "Boston|2025": 24,
+  "Boston|2026": 19,
+  "Charlotte|2011": 56,
+  "Charlotte|2012": 52,
+  "Charlotte|2013": 59,
+  "Charlotte|2014": 47,
+  "Charlotte|2015": 61,
+  "Charlotte|2016": 67,
+  "Charlotte|2017": 86,
+  "Charlotte|2018": 59,
+  "Charlotte|2019": 101,
+  "Charlotte|2020": 118,
+  "Charlotte|2021": 96,
+  "Charlotte|2022": 107,
+  "Charlotte|2023": 89,
+  "Charlotte|2024": 107,
+  "Charlotte|2025": 93,
+  "Cincinnati|2014": 63,
+  "Cincinnati|2015": 67,
+  "Cincinnati|2016": 59,
+  "Cincinnati|2017": 72,
+  "Cincinnati|2018": 61,
+  "Cincinnati|2019": 67,
+  "Cincinnati|2020": 96,
+  "Cincinnati|2021": 93,
+  "Cincinnati|2022": 77,
+  "Cincinnati|2023": 71,
+  "Cincinnati|2024": 74,
+  "Cincinnati|2025": 69,
+  "Cincinnati|2026": 45,
+  "Columbus|2011": 87,
+  "Columbus|2012": 71,
+  "Columbus|2013": 78,
+  "Columbus|2014": 85,
+  "Columbus|2015": 83,
+  "Columbus|2016": 104,
+  "Columbus|2017": 145,
+  "Columbus|2018": 110,
+  "Columbus|2019": 90,
+  "Columbus|2020": 179,
+  "Columbus|2021": 212,
+  "Columbus|2022": 136,
+  "Columbus|2023": 147,
+  "Columbus|2024": 118,
+  "Columbus|2025": 85,
+  "Dallas|2011": 133,
+  "Dallas|2012": 154,
+  "Dallas|2013": 143,
+  "Dallas|2014": 116,
+  "Dallas|2015": 136,
+  "Dallas|2016": 171,
+  "Dallas|2017": 167,
+  "Dallas|2018": 153,
+  "Dallas|2019": 200,
+  "Dallas|2020": 247,
+  "Dallas|2021": 210,
+  "Dallas|2022": 212,
+  "Dallas|2023": 244,
+  "Dallas|2024": 181,
+  "Dallas|2025": 140,
+  "Denver|2011": 37,
+  "Denver|2012": 39,
+  "Denver|2013": 41,
+  "Denver|2014": 31,
+  "Denver|2015": 53,
+  "Denver|2016": 56,
+  "Denver|2017": 58,
+  "Denver|2018": 64,
+  "Denver|2019": 66,
+  "Denver|2020": 95,
+  "Denver|2021": 100,
+  "Denver|2022": 90,
+  "Denver|2023": 88,
+  "Denver|2024": 71,
+  "Denver|2025": 44,
+  "Detroit|2012": 386,
+  "Detroit|2013": 316,
+  "Detroit|2015": 295,
+  "Detroit|2016": 303,
+  "Detroit|2019": 281,
+  "Detroit|2020": 321,
+  "Detroit|2021": 306,
+  "Detroit|2022": 309,
+  "Detroit|2023": 250,
+  "Detroit|2024": 203,
+  "Detroit|2025": 165,
+  "Detroit|2026": 123,
+  "Fort Worth|2011": 51,
+  "Fort Worth|2012": 46,
+  "Fort Worth|2013": 49,
+  "Fort Worth|2014": 53,
+  "Fort Worth|2015": 56,
+  "Fort Worth|2016": 65,
+  "Fort Worth|2017": 71,
+  "Fort Worth|2018": 56,
+  "Fort Worth|2019": 69,
+  "Fort Worth|2020": 109,
+  "Fort Worth|2021": 118,
+  "Fort Worth|2022": 101,
+  "Fort Worth|2023": 85,
+  "Fort Worth|2024": 72,
+  "Fort Worth|2025": 78,
+  "Fresno|2011": 35,
+  "Fresno|2012": 51,
+  "Fresno|2013": 40,
+  "Fresno|2014": 47,
+  "Fresno|2015": 39,
+  "Fresno|2016": 39,
+  "Fresno|2017": 56,
+  "Fresno|2018": 32,
+  "Fresno|2019": 35,
+  "Fresno|2020": 77,
+  "Fresno|2021": 73,
+  "Fresno|2022": 62,
+  "Fresno|2023": 38,
+  "Fresno|2024": 32,
+  "Fresno|2025": 24,
+  "Houston|2004": 272,
+  "Houston|2005": 334,
+  "Houston|2006": 377,
+  "Houston|2007": 351,
+  "Houston|2011": 198,
+  "Houston|2019": 275,
+  "Houston|2022": 435,
+  "Houston|2024": 334,
+  "Houston|2025": 272,
+  "Houston|2026": 95,
+  "Indianapolis|2011": 96,
+  "Indianapolis|2012": 97,
+  "Indianapolis|2013": 129,
+  "Indianapolis|2014": 136,
+  "Indianapolis|2015": 148,
+  "Indianapolis|2016": 148,
+  "Indianapolis|2017": 156,
+  "Indianapolis|2018": 162,
+  "Indianapolis|2019": 145,
+  "Indianapolis|2020": 216,
+  "Indianapolis|2021": 246,
+  "Indianapolis|2022": 210,
+  "Indianapolis|2023": 169,
+  "Indianapolis|2024": 172,
+  "Indianapolis|2025": 139,
+  "Jacksonville|2021": 107,
+  "Jacksonville|2022": 132,
+  "Jacksonville|2023": 128,
+  "Jacksonville|2024": 63,
+  "Jacksonville|2025": 79,
+  "Kansas City|2011": 108,
+  "Kansas City|2012": 105,
+  "Kansas City|2013": 99,
+  "Kansas City|2014": 79,
+  "Kansas City|2015": 110,
+  "Kansas City|2016": 131,
+  "Kansas City|2017": 153,
+  "Kansas City|2018": 142,
+  "Kansas City|2019": 152,
+  "Kansas City|2020": 176,
+  "Kansas City|2021": 156,
+  "Kansas City|2022": 167,
+  "Kansas City|2023": 180,
+  "Kansas City|2024": 141,
+  "Kansas City|2025": 134,
+  "Las Vegas|2011": 82,
+  "Las Vegas|2012": 76,
+  "Las Vegas|2013": 97,
+  "Las Vegas|2014": 122,
+  "Las Vegas|2015": 127,
+  "Las Vegas|2016": 158,
+  "Las Vegas|2017": 198,
+  "Las Vegas|2018": 120,
+  "Las Vegas|2019": 85,
+  "Las Vegas|2020": 100,
+  "Las Vegas|2021": 161,
+  "Las Vegas|2022": 148,
+  "Las Vegas|2023": 142,
+  "Las Vegas|2024": 112,
+  "Las Vegas|2025": 94,
+  "Long Beach|2011": 25,
+  "Long Beach|2012": 32,
+  "Long Beach|2013": 34,
+  "Long Beach|2014": 23,
+  "Long Beach|2015": 36,
+  "Long Beach|2016": 33,
+  "Long Beach|2017": 22,
+  "Long Beach|2018": 30,
+  "Long Beach|2019": 34,
+  "Long Beach|2020": 36,
+  "Long Beach|2021": 0,
+  "Long Beach|2022": 37,
+  "Long Beach|2023": 27,
+  "Long Beach|2024": 37,
+  "Long Beach|2025": 28,
+  "Memphis|2020": 332,
+  "Memphis|2021": 345,
+  "Memphis|2022": 304,
+  "Memphis|2023": 344,
+  "Memphis|2024": 248,
+  "Memphis|2025": 184,
+  "Memphis|2026": 147,
+  "Milwaukee|2011": 86,
+  "Milwaukee|2012": 93,
+  "Milwaukee|2013": 104,
+  "Milwaukee|2014": 86,
+  "Milwaukee|2015": 146,
+  "Milwaukee|2016": 141,
+  "Milwaukee|2017": 119,
+  "Milwaukee|2018": 100,
+  "Milwaukee|2019": 97,
+  "Milwaukee|2020": 192,
+  "Milwaukee|2021": 194,
+  "Milwaukee|2022": 214,
+  "Milwaukee|2023": 174,
+  "Milwaukee|2024": 137,
+  "Milwaukee|2025": 143,
+  "NYC|1998": 633,
+  "NYC|1999": 671,
+  "NYC|2000": 667,
+  "NYC|2001": 649,
+  "NYC|2019": 319,
+  "NYC|2020": 468,
+  "NYC|2021": 488,
+  "NYC|2022": 438,
+  "NYC|2023": 404,
+  "NYC|2024": 357,
+  "Nashville|2011": 50,
+  "Nashville|2012": 63,
+  "Nashville|2013": 35,
+  "Nashville|2014": 42,
+  "Nashville|2015": 79,
+  "Nashville|2016": 81,
+  "Nashville|2017": 110,
+  "Nashville|2018": 89,
+  "Nashville|2019": 86,
+  "Nashville|2020": 115,
+  "Nashville|2021": 101,
+  "Nashville|2022": 109,
+  "Nashville|2023": 101,
+  "Nashville|2024": 103,
+  "Nashville|2025": 57,
+  "New Orleans|1990": 304,
+  "New Orleans|1994": 424,
+  "New Orleans|2004": 264,
+  "New Orleans|2005": 134,
+  "New Orleans|2006": 162,
+  "New Orleans|2007": 209,
+  "New Orleans|2009": 174,
+  "New Orleans|2011": 200,
+  "New Orleans|2017": 157,
+  "New Orleans|2019": 121,
+  "New Orleans|2022": 266,
+  "New Orleans|2023": 193,
+  "New Orleans|2024": 124,
+  "New Orleans|2025": 0,
+  "Oklahoma City|2019": 76,
+  "Oklahoma City|2020": 67,
+  "Oklahoma City|2021": 83,
+  "Oklahoma City|2022": 71,
+  "Oklahoma City|2023": 69,
+  "Oklahoma City|2024": 77,
+  "Oklahoma City|2025": 70,
+  "Oklahoma City|2026": 47,
+  "Omaha|2011": 43,
+  "Omaha|2012": 41,
+  "Omaha|2013": 42,
+  "Omaha|2014": 32,
+  "Omaha|2015": 48,
+  "Omaha|2016": 29,
+  "Omaha|2017": 31,
+  "Omaha|2018": 22,
+  "Omaha|2019": 23,
+  "Omaha|2020": 37,
+  "Omaha|2021": 0,
+  "Omaha|2022": 29,
+  "Omaha|2023": 16,
+  "Omaha|2024": 20,
+  "Omaha|2025": 26,
+  "Philadelphia|2011": 324,
+  "Philadelphia|2012": 331,
+  "Philadelphia|2013": 247,
+  "Philadelphia|2014": 248,
+  "Philadelphia|2015": 280,
+  "Philadelphia|2016": 273,
+  "Philadelphia|2017": 316,
+  "Philadelphia|2018": 351,
+  "Philadelphia|2019": 330,
+  "Philadelphia|2020": 494,
+  "Philadelphia|2021": 575,
+  "Philadelphia|2022": 520,
+  "Philadelphia|2023": 412,
+  "Philadelphia|2024": 270,
+  "Philadelphia|2025": 230,
+  "Phoenix|2011": 116,
+  "Phoenix|2012": 123,
+  "Phoenix|2013": 118,
+  "Phoenix|2014": 114,
+  "Phoenix|2015": 112,
+  "Phoenix|2016": 146,
+  "Phoenix|2017": 157,
+  "Phoenix|2018": 133,
+  "Phoenix|2019": 131,
+  "Phoenix|2020": 187,
+  "Phoenix|2022": 217,
+  "Phoenix|2023": 191,
+  "Phoenix|2024": 139,
+  "Phoenix|2025": 127,
+  "Pittsburgh|2019": 30,
+  "Pittsburgh|2020": 48,
+  "Pittsburgh|2021": 0,
+  "Pittsburgh|2022": 66,
+  "Pittsburgh|2023": 51,
+  "Pittsburgh|2024": 39,
+  "Pittsburgh|2025": 31,
+  "Pittsburgh|2026": 6,
+  "Portland|2011": 20,
+  "Portland|2012": 20,
+  "Portland|2013": 14,
+  "Portland|2014": 26,
+  "Portland|2015": 4,
+  "Portland|2016": 16,
+  "Portland|2017": 25,
+  "Portland|2018": 27,
+  "Portland|2019": 30,
+  "Portland|2020": 53,
+  "Portland|2021": 86,
+  "Portland|2022": 95,
+  "Portland|2023": 75,
+  "Portland|2024": 68,
+  "Portland|2025": 50,
+  "Raleigh|2011": 17,
+  "Raleigh|2012": 17,
+  "Raleigh|2013": 12,
+  "Raleigh|2014": 8,
+  "Raleigh|2015": 0,
+  "Raleigh|2016": 0,
+  "Raleigh|2017": 0,
+  "Raleigh|2018": 0,
+  "Raleigh|2019": 28,
+  "Raleigh|2020": 24,
+  "Raleigh|2021": 26,
+  "Raleigh|2022": 45,
+  "Raleigh|2023": 28,
+  "Raleigh|2024": 24,
+  "Raleigh|2025": 25,
+  "Sacramento|2011": 36,
+  "Sacramento|2012": 34,
+  "Sacramento|2013": 34,
+  "Sacramento|2014": 28,
+  "Sacramento|2015": 43,
+  "Sacramento|2016": 41,
+  "Sacramento|2017": 39,
+  "Sacramento|2018": 36,
+  "Sacramento|2019": 34,
+  "Sacramento|2020": 42,
+  "Sacramento|2021": 0,
+  "Sacramento|2022": 54,
+  "Sacramento|2023": 40,
+  "Sacramento|2024": 44,
+  "Sacramento|2025": 42,
+  "San Antonio|2011": 89,
+  "San Antonio|2012": 89,
+  "San Antonio|2013": 72,
+  "San Antonio|2014": 103,
+  "San Antonio|2015": 94,
+  "San Antonio|2016": 149,
+  "San Antonio|2017": 124,
+  "San Antonio|2018": 107,
+  "San Antonio|2019": 105,
+  "San Antonio|2020": 131,
+  "San Antonio|2021": 164,
+  "San Antonio|2022": 233,
+  "San Antonio|2023": 163,
+  "San Antonio|2024": 126,
+  "San Antonio|2025": 106,
+  "San Diego|2011": 38,
+  "San Diego|2012": 47,
+  "San Diego|2013": 39,
+  "San Diego|2014": 32,
+  "San Diego|2015": 37,
+  "San Diego|2016": 50,
+  "San Diego|2017": 35,
+  "San Diego|2018": 35,
+  "San Diego|2019": 50,
+  "San Diego|2020": 56,
+  "San Diego|2021": 66,
+  "San Diego|2022": 53,
+  "San Diego|2023": 43,
+  "San Diego|2024": 37,
+  "San Diego|2025": 25,
+  "San Francisco|2011": 50,
+  "San Francisco|2012": 69,
+  "San Francisco|2013": 48,
+  "San Francisco|2014": 45,
+  "San Francisco|2015": 53,
+  "San Francisco|2016": 57,
+  "San Francisco|2017": 56,
+  "San Francisco|2018": 46,
+  "San Francisco|2019": 40,
+  "San Francisco|2020": 48,
+  "San Francisco|2022": 55,
+  "San Francisco|2023": 52,
+  "San Francisco|2024": 35,
+  "San Francisco|2025": 28,
+  "Seattle|2011": 20,
+  "Seattle|2012": 25,
+  "Seattle|2013": 18,
+  "Seattle|2014": 26,
+  "Seattle|2015": 24,
+  "Seattle|2016": 17,
+  "Seattle|2017": 24,
+  "Seattle|2018": 25,
+  "Seattle|2019": 30,
+  "Seattle|2020": 50,
+  "Seattle|2021": 43,
+  "Seattle|2022": 54,
+  "Seattle|2023": 68,
+  "Seattle|2024": 51,
+  "Seattle|2025": 34,
+  "St. Louis|1998": 113,
+  "St. Louis|1999": 130,
+  "St. Louis|2000": 124,
+  "St. Louis|2001": 148,
+  "St. Louis|2002": 111,
+  "St. Louis|2010": 144,
+  "St. Louis|2011": 113,
+  "St. Louis|2012": 113,
+  "St. Louis|2013": 120,
+  "St. Louis|2014": 159,
+  "St. Louis|2015": 188,
+  "St. Louis|2016": 188,
+  "St. Louis|2017": 205,
+  "St. Louis|2018": 187,
+  "St. Louis|2019": 194,
+  "St. Louis|2020": 263,
+  "St. Louis|2021": 203,
+  "St. Louis|2022": 201,
+  "St. Louis|2023": 158,
+  "St. Louis|2024": 150,
+  "St. Louis|2025": 141,
+  "St. Louis|2026": 90,
+  "Tucson|2011": 51,
+  "Tucson|2012": 42,
+  "Tucson|2013": 47,
+  "Tucson|2014": 35,
+  "Tucson|2015": 31,
+  "Tucson|2016": 30,
+  "Tucson|2017": 46,
+  "Tucson|2018": 47,
+  "Tucson|2019": 40,
+  "Tucson|2020": 57,
+  "Tucson|2021": 0,
+  "Tucson|2022": 43,
+  "Tucson|2023": 42,
+  "Tucson|2024": 47,
+  "Tucson|2025": 41,
+  "Tulsa|2011": 49,
+  "Tulsa|2012": 42,
+  "Tulsa|2013": 60,
+  "Tulsa|2014": 46,
+  "Tulsa|2015": 55,
+  "Tulsa|2016": 72,
+  "Tulsa|2017": 70,
+  "Tulsa|2018": 60,
+  "Tulsa|2019": 55,
+  "Tulsa|2020": 72,
+  "Tulsa|2021": 60,
+  "Tulsa|2022": 59,
+  "Tulsa|2023": 35,
+  "Tulsa|2024": 38,
+  "Tulsa|2025": 26,
+  "Virginia Beach|2011": 15,
+  "Virginia Beach|2012": 21,
+  "Virginia Beach|2013": 17,
+  "Virginia Beach|2014": 17,
+  "Virginia Beach|2015": 19,
+  "Virginia Beach|2016": 21,
+  "Virginia Beach|2017": 14,
+  "Virginia Beach|2018": 16,
+  "Virginia Beach|2019": 30,
+  "Virginia Beach|2020": 17,
+  "Virginia Beach|2021": 14,
+  "Virginia Beach|2022": 22,
+  "Virginia Beach|2023": 23,
+  "Virginia Beach|2024": 15,
+  "Virginia Beach|2025": 15,
+  "Wichita|2011": 25,
+  "Wichita|2012": 23,
+  "Wichita|2013": 15,
+  "Wichita|2014": 21,
+  "Wichita|2015": 27,
+  "Wichita|2016": 31,
+  "Wichita|2017": 35,
+  "Wichita|2018": 35,
+  "Wichita|2019": 35,
+  "Wichita|2020": 54,
+  "Wichita|2021": 47,
+  "Wichita|2022": 31,
+  "Wichita|2023": 39,
+  "Wichita|2024": 33,
+  "Wichita|2025": 36
+ },
+ "pop": {
+  "Albuquerque|2011": {
+   "population": 552066,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Albuquerque|2012": {
+   "population": 555002,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Albuquerque|2013": {
+   "population": 557445,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Albuquerque|2014": {
+   "population": 557444,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Austin|2011": {
+   "population": 828459,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Austin|2012": {
+   "population": 854482,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Austin|2013": {
+   "population": 875003,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Austin|2014": {
+   "population": 901170,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Baltimore|2011": {
+   "population": 620410,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Baltimore|2012": {
+   "population": 622895,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Baltimore|2013": {
+   "population": 622391,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Baltimore|2014": {
+   "population": 623587,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Boston|1990": {
+   "population": 574283,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "Boston|1991": {
+   "population": 575769,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "Boston|1993": {
+   "population": 578740,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "Boston|1994": {
+   "population": 580226,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "Boston|1995": {
+   "population": 581712,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "Boston|1999": {
+   "population": 587655,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "Boston|2001": {
+   "population": 590627,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "Boston|2019": {
+   "population": 692600,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "Boston|2020": {
+   "population": 669665,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "Boston|2021": {
+   "population": 659884,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "Boston|2022": {
+   "population": 661014,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "Boston|2024": {
+   "population": 674311,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "Boston|2025": {
+   "population": 672973,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "Boston|2026": {
+   "population": 672973,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "Charlotte|2011": {
+   "population": 754829,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Charlotte|2012": {
+   "population": 773264,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Charlotte|2013": {
+   "population": 792047,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Charlotte|2014": {
+   "population": 807400,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Cincinnati|2019": {
+   "population": 303940,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Cincinnati|2020": {
+   "population": 309670,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Cincinnati|2021": {
+   "population": 308610,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Cincinnati|2022": {
+   "population": 310113,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Cincinnati|2023": {
+   "population": 312728,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Cincinnati|2024": {
+   "population": 314855,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Cincinnati|2025": {
+   "population": 314367,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Columbus|2011": {
+   "population": 800607,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Columbus|2012": {
+   "population": 812740,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Columbus|2013": {
+   "population": 827797,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Columbus|2014": {
+   "population": 841673,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Dallas|2011": {
+   "population": 1218282,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Dallas|2012": {
+   "population": 1242115,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Dallas|2013": {
+   "population": 1258835,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Dallas|2014": {
+   "population": 1279098,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Denver|2011": {
+   "population": 620530,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Denver|2012": {
+   "population": 635163,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Denver|2013": {
+   "population": 649391,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Denver|2014": {
+   "population": 664582,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Detroit|2019": {
+   "population": 670031,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Detroit|2020": {
+   "population": 638419,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Detroit|2021": {
+   "population": 635046,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Detroit|2022": {
+   "population": 634219,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Detroit|2023": {
+   "population": 637452,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Detroit|2024": {
+   "population": 644035,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Detroit|2025": {
+   "population": 649095,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Fort Worth|2011": {
+   "population": 764142,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Fort Worth|2012": {
+   "population": 781046,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Fort Worth|2013": {
+   "population": 796073,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Fort Worth|2014": {
+   "population": 815057,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Fresno|2011": {
+   "population": 501429,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Fresno|2012": {
+   "population": 505414,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Fresno|2013": {
+   "population": 508880,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Fresno|2014": {
+   "population": 514100,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Indianapolis|2011": {
+   "population": 827664,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Indianapolis|2012": {
+   "population": 835499,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Indianapolis|2013": {
+   "population": 844696,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Indianapolis|2014": {
+   "population": 850164,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Jacksonville|2011": {
+   "population": 829609,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Jacksonville|2012": {
+   "population": 837013,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Jacksonville|2013": {
+   "population": 842735,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Jacksonville|2014": {
+   "population": 852494,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Kansas City|2011": {
+   "population": 462368,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Kansas City|2012": {
+   "population": 464595,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Kansas City|2013": {
+   "population": 467213,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Kansas City|2014": {
+   "population": 470629,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Las Vegas|2011": {
+   "population": 586606,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Las Vegas|2012": {
+   "population": 593275,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Las Vegas|2013": {
+   "population": 599551,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Las Vegas|2014": {
+   "population": 607976,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Long Beach|2011": {
+   "population": 464512,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Long Beach|2012": {
+   "population": 466873,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Long Beach|2013": {
+   "population": 468000,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Long Beach|2014": {
+   "population": 469109,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Memphis|2019": {
+   "population": 651073,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Memphis|2020": {
+   "population": 628282,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Memphis|2021": {
+   "population": 622541,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Memphis|2022": {
+   "population": 618901,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Memphis|2023": {
+   "population": 615634,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Memphis|2024": {
+   "population": 614222,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Memphis|2025": {
+   "population": 609647,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Milwaukee|2011": {
+   "population": 597086,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Milwaukee|2012": {
+   "population": 598569,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Milwaukee|2013": {
+   "population": 599916,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Milwaukee|2014": {
+   "population": 600664,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "NYC|2019": {
+   "population": 8336817,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "NYC|2020": {
+   "population": 8751188,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "NYC|2021": {
+   "population": 8447958,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "NYC|2022": {
+   "population": 8362665,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "NYC|2023": {
+   "population": 8433834,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "NYC|2024": {
+   "population": 8596825,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "NYC|2025": {
+   "population": 8584629,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Nashville|2011": {
+   "population": 612518,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Nashville|2012": {
+   "population": 625550,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Nashville|2013": {
+   "population": 635999,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Nashville|2014": {
+   "population": 645259,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "New Orleans|1990": {
+   "population": 496938,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "New Orleans|1994": {
+   "population": 492032,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "New Orleans|2004": {
+   "population": 454865,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "New Orleans|2005": {
+   "population": 230000,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "New Orleans|2006": {
+   "population": 223000,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "New Orleans|2007": {
+   "population": 273000,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "New Orleans|2009": {
+   "population": 316000,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "New Orleans|2011": {
+   "population": 343829,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "New Orleans|2017": {
+   "population": 391493,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "New Orleans|2019": {
+   "population": 390144,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "New Orleans|2020": {
+   "population": 383361,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "New Orleans|2021": {
+   "population": 377506,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "New Orleans|2022": {
+   "population": 371038,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "New Orleans|2023": {
+   "population": 365782,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "New Orleans|2024": {
+   "population": 363477,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "New Orleans|2025": {
+   "population": 362154,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Oklahoma City|2019": {
+   "population": 655057,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Oklahoma City|2020": {
+   "population": 682938,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Oklahoma City|2021": {
+   "population": 688604,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Oklahoma City|2022": {
+   "population": 696523,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Oklahoma City|2023": {
+   "population": 704366,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Oklahoma City|2024": {
+   "population": 713745,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Oklahoma City|2025": {
+   "population": 719849,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Omaha|2011": {
+   "population": 462101,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Omaha|2012": {
+   "population": 465261,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Omaha|2013": {
+   "population": 468086,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Omaha|2014": {
+   "population": 470423,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Philadelphia|2011": {
+   "population": 1540466,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Philadelphia|2012": {
+   "population": 1551824,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Philadelphia|2013": {
+   "population": 1558313,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Philadelphia|2014": {
+   "population": 1565460,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Phoenix|2011": {
+   "population": 1469796,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Phoenix|2012": {
+   "population": 1499274,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Phoenix|2013": {
+   "population": 1526491,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Phoenix|2014": {
+   "population": 1555445,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Pittsburgh|2019": {
+   "population": 300286,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Pittsburgh|2020": {
+   "population": 302859,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Pittsburgh|2021": {
+   "population": 305343,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Pittsburgh|2022": {
+   "population": 303012,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Pittsburgh|2023": {
+   "population": 304508,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Pittsburgh|2024": {
+   "population": 306719,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Pittsburgh|2025": {
+   "population": 307632,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "Portland|2011": {
+   "population": 595451,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Portland|2012": {
+   "population": 604264,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Portland|2013": {
+   "population": 609890,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Portland|2014": {
+   "population": 620510,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Raleigh|2011": {
+   "population": 413958,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Raleigh|2012": {
+   "population": 423304,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Raleigh|2013": {
+   "population": 431391,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Raleigh|2014": {
+   "population": 439503,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Sacramento|2011": {
+   "population": 470902,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Sacramento|2012": {
+   "population": 474226,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Sacramento|2013": {
+   "population": 478214,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Sacramento|2014": {
+   "population": 482762,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "San Antonio|2011": {
+   "population": 1357120,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "San Antonio|2012": {
+   "population": 1383075,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "San Antonio|2013": {
+   "population": 1408339,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "San Antonio|2014": {
+   "population": 1435456,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "San Diego|2011": {
+   "population": 1319592,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "San Diego|2012": {
+   "population": 1336776,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "San Diego|2013": {
+   "population": 1355320,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "San Diego|2014": {
+   "population": 1375831,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "San Francisco|2011": {
+   "population": 815650,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "San Francisco|2012": {
+   "population": 828876,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "San Francisco|2013": {
+   "population": 839572,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "San Francisco|2014": {
+   "population": 850750,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Seattle|2011": {
+   "population": 622694,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Seattle|2012": {
+   "population": 635928,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Seattle|2013": {
+   "population": 653588,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Seattle|2014": {
+   "population": 670109,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "St. Louis|1998": {
+   "population": 357888,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "St. Louis|1999": {
+   "population": 353039,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "St. Louis|2000": {
+   "population": 348189,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "St. Louis|2001": {
+   "population": 350240,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "St. Louis|2010": {
+   "population": 319294,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "St. Louis|2011": {
+   "population": 319344,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "St. Louis|2012": {
+   "population": 319416,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "St. Louis|2013": {
+   "population": 318476,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "St. Louis|2014": {
+   "population": 317399,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "St. Louis|2015": {
+   "population": 316010,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "St. Louis|2019": {
+   "population": 300576,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "St. Louis|2020": {
+   "population": 301578,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "St. Louis|2021": {
+   "population": 293553,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "St. Louis|2022": {
+   "population": 286509,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "St. Louis|2023": {
+   "population": 283190,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "St. Louis|2024": {
+   "population": 279695,
+   "pop_source": "populations_cities_v2 (PEP vintage-2025 SUMLEV 162)"
+  },
+  "St. Louis|2025": {
+   "population": 278144,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "St. Louis|2026": {
+   "population": 278144,
+   "pop_source": "population_series_v1 (decennial anchors + linear interp)"
+  },
+  "Tucson|2011": {
+   "population": 530709,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Tucson|2012": {
+   "population": 531880,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Tucson|2013": {
+   "population": 532945,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Tucson|2014": {
+   "population": 534800,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Tulsa|2011": {
+   "population": 393005,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Tulsa|2012": {
+   "population": 394643,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Tulsa|2013": {
+   "population": 398401,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Tulsa|2014": {
+   "population": 399892,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Virginia Beach|2011": {
+   "population": 442583,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Virginia Beach|2012": {
+   "population": 445044,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Virginia Beach|2013": {
+   "population": 447706,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Virginia Beach|2014": {
+   "population": 448864,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Wichita|2011": {
+   "population": 383773,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Wichita|2012": {
+   "population": 385751,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Wichita|2013": {
+   "population": 387210,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  },
+  "Wichita|2014": {
+   "population": 388416,
+   "pop_source": "populations_wide_v1 (PEP vintage-2019 SUMLEV 162)"
+  }
+ },
+ "care_honest_null_units": [
+  {
+   "city": "NYC",
+   "year": 2019,
+   "component": "nyc_parks",
+   "reason": "honest-null (not_applicable / no usd rows)",
+   "basis_note_na": false
+  },
+  {
+   "city": "NYC",
+   "year": 2019,
+   "component": "nyc_health",
+   "reason": "honest-null (not_applicable / no usd rows)",
+   "basis_note_na": false
+  },
+  {
+   "city": "NYC",
+   "year": 2019,
+   "component": "nyc_human_services",
+   "reason": "honest-null (not_applicable / no usd rows)",
+   "basis_note_na": false
+  },
+  {
+   "city": "NYC",
+   "year": 2019,
+   "component": "nyc_housing",
+   "reason": "honest-null (not_applicable / no usd rows)",
+   "basis_note_na": false
+  },
+  {
+   "city": "NYC",
+   "year": 2019,
+   "component": "nyc_libraries",
+   "reason": "honest-null (not_applicable / no usd rows)",
+   "basis_note_na": false
+  },
+  {
+   "city": "NYC",
+   "year": 2019,
+   "component": "nyc_youth",
+   "reason": "honest-null (not_applicable / no usd rows)",
+   "basis_note_na": false
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2004,
+   "component": "cincinnati_libraries",
+   "reason": "honest-null (not_applicable / no usd rows)",
+   "basis_note_na": true
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2005,
+   "component": "cincinnati_libraries",
+   "reason": "honest-null (not_applicable / no usd rows)",
+   "basis_note_na": true
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2006,
+   "component": "cincinnati_libraries",
+   "reason": "honest-null (not_applicable / no usd rows)",
+   "basis_note_na": true
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2007,
+   "component": "cincinnati_libraries",
+   "reason": "honest-null (not_applicable / no usd rows)",
+   "basis_note_na": true
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2008,
+   "component": "cincinnati_libraries",
+   "reason": "honest-null (not_applicable / no usd rows)",
+   "basis_note_na": true
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2009,
+   "component": "cincinnati_libraries",
+   "reason": "honest-null (not_applicable / no usd rows)",
+   "basis_note_na": true
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2010,
+   "component": "cincinnati_libraries",
+   "reason": "honest-null (not_applicable / no usd rows)",
+   "basis_note_na": true
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2011,
+   "component": "cincinnati_libraries",
+   "reason": "honest-null (not_applicable / no usd rows)",
+   "basis_note_na": true
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2012,
+   "component": "cincinnati_libraries",
+   "reason": "honest-null (not_applicable / no usd rows)",
+   "basis_note_na": true
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2013,
+   "component": "cincinnati_libraries",
+   "reason": "honest-null (not_applicable / no usd rows)",
+   "basis_note_na": true
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2014,
+   "component": "cincinnati_libraries",
+   "reason": "honest-null (not_applicable / no usd rows)",
+   "basis_note_na": true
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2015,
+   "component": "cincinnati_libraries",
+   "reason": "honest-null (not_applicable / no usd rows)",
+   "basis_note_na": true
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2016,
+   "component": "cincinnati_libraries",
+   "reason": "honest-null (not_applicable / no usd rows)",
+   "basis_note_na": true
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2017,
+   "component": "cincinnati_libraries",
+   "reason": "honest-null (not_applicable / no usd rows)",
+   "basis_note_na": true
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2018,
+   "component": "cincinnati_libraries",
+   "reason": "honest-null (not_applicable / no usd rows)",
+   "basis_note_na": true
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2019,
+   "component": "cincinnati_libraries",
+   "reason": "honest-null (not_applicable / no usd rows)",
+   "basis_note_na": true
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2020,
+   "component": "cincinnati_libraries",
+   "reason": "honest-null (not_applicable / no usd rows)",
+   "basis_note_na": true
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2021,
+   "component": "cincinnati_libraries",
+   "reason": "honest-null (not_applicable / no usd rows)",
+   "basis_note_na": true
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2022,
+   "component": "cincinnati_libraries",
+   "reason": "honest-null (not_applicable / no usd rows)",
+   "basis_note_na": true
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2023,
+   "component": "cincinnati_libraries",
+   "reason": "honest-null (not_applicable / no usd rows)",
+   "basis_note_na": true
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2024,
+   "component": "cincinnati_libraries",
+   "reason": "honest-null (not_applicable / no usd rows)",
+   "basis_note_na": true
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2025,
+   "component": "cincinnati_libraries",
+   "reason": "honest-null (not_applicable / no usd rows)",
+   "basis_note_na": true
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2026,
+   "component": "cincinnati_libraries",
+   "reason": "honest-null (not_applicable / no usd rows)",
+   "basis_note_na": true
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2027,
+   "component": "cincinnati_libraries",
+   "reason": "honest-null (not_applicable / no usd rows)",
+   "basis_note_na": true
+  }
+ ]
+}

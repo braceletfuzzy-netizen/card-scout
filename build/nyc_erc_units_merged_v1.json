@@ -1,0 +1,654 @@
+{
+ "402 GE INSTR & SCH LEADERSHIP -": {
+  "otps": 931193385,
+  "ps": null
+ },
+ "408 UNIVERSAL PRE-K -": {
+  "otps": 10124931,
+  "ps": null
+ },
+ "410 EARLY CHILDHOOD PROGRAMS -": {
+  "otps": 917957446,
+  "ps": null
+ },
+ "422 CW SE INSTR & SCHL LEADERSHIP -": {
+  "otps": 40843036,
+  "ps": null
+ },
+ "434 DIVISION OF TECHNOLOGY -": {
+  "otps": 569128037,
+  "ps": null
+ },
+ "438 PUPIL TRANSPORTATION -": {
+  "otps": 1222730470,
+  "ps": null
+ },
+ "440 SCHOOL FOOD SERVICES -": {
+  "otps": 332285760,
+  "ps": null
+ },
+ "454 CENTRAL ADMINISTRATION -": {
+  "otps": 91149954,
+  "ps": null
+ },
+ "474 NPS & FIT PMTS -": {
+  "otps": 1298926966,
+  "ps": null
+ },
+ "012 SENIOR COLLEGE": {
+  "otps": 1463801,
+  "ps": null
+ },
+ "110 DETECTIVE BUREAU -": {
+  "otps": 14395909,
+  "ps": null
+ },
+ "120 CHIEF OF DEPARTMENT -": {
+  "otps": 8238258,
+  "ps": null
+ },
+ "300 SCHOOL SAFETY-": {
+  "otps": 21033116,
+  "ps": null
+ },
+ "500 COMMUNICATIONS -": {
+  "otps": 42078546,
+  "ps": null
+ },
+ "800 PATROL, HOUSING & TRANSIT -": {
+  "otps": 562059,
+  "ps": null
+ },
+ "900 INTELLIGENCE AND COUNTERTERRORISM -": {
+  "otps": 2905339,
+  "ps": null
+ },
+ "008 JUVENILE JUSTICE -": {
+  "otps": 817654845,
+  "ps": null
+ },
+ "010 ADOPTION SUBSIDY -": {
+  "otps": 163620272,
+  "ps": null
+ },
+ "103 PUBLIC ASSISTANCE -": {
+  "otps": 293831915,
+  "ps": null
+ },
+ "104 MEDICAL ASSISTANCE -": {
+  "otps": 2964181569,
+  "ps": null
+ },
+ "105 ADULT SERVICES -": {
+  "otps": 6622321288,
+  "ps": null
+ },
+ "107 LEGAL SERVICES -": {
+  "otps": 318854347,
+  "ps": null
+ },
+ "110 EMERGENCY FOOD -": {
+  "otps": 21798087,
+  "ps": null
+ },
+ "200 SHELTER INTAKE AND PROGRAM -": {
+  "otps": 2949967378,
+  "ps": null
+ },
+ "202 STREET PROGRAMS -": {
+  "otps": 30223930,
+  "ps": null
+ },
+ "003 OPERATIONS -": {
+  "otps": 92899871,
+  "ps": null
+ },
+ "007 NYC DOC JAIL OPERATIONS -": {
+  "otps": 15349192,
+  "ps": null
+ },
+ "010 NYC DOC TRANSPORTATION": {
+  "otps": 33173094,
+  "ps": null
+ },
+ "833 COMM ON FIRE & CRIM JUSTICE": {
+  "otps": 4338506,
+  "ps": null
+ },
+ "002 OFFICE OF COMMISSIONER -": {
+  "otps": 3465534,
+  "ps": null
+ },
+ "002 OFFICE OF CRIMINAL JUSTICE -": {
+  "otps": 827120,
+  "ps": null
+ },
+ "005 INDIGENT DEFENSE -": {
+  "otps": 524609749,
+  "ps": null
+ },
+ "004 COMM DEVELOP": {
+  "otps": 598274,
+  "ps": null
+ },
+ "005 COMMUNITY DEVELOPMENT": {
+  "otps": 164826788,
+  "ps": null
+ },
+ "402 OFFICE OF NEIGHBORHOOD SAFETY-": {
+  "otps": 695386527,
+  "ps": null
+ },
+ "004 EXECUTIVE MANAGEMENT -": {
+  "otps": 36580164,
+  "ps": null
+ },
+ "005 CONTRACT COMP & BUS OPP -": {
+  "otps": 58253405,
+  "ps": null
+ },
+ "011 WORKFORCE INVESTMENT ACT -": {
+  "otps": 5839454,
+  "ps": null
+ },
+ "008 OFFICE OF ADMINISTRATION": {
+  "otps": 16430829,
+  "ps": null
+ },
+ "013 RENTAL SUBSIDY PROGRAMS -": {
+  "otps": 63855553,
+  "ps": null
+ },
+ "002 AGENCYWIDE OPERATIONS -": {
+  "otps": 44658234,
+  "ps": null
+ },
+ "006 SUSTAINABILITY": {
+  "otps": 5154722,
+  "ps": null
+ },
+ "111 HEALTH ADMINISTRATION -": {
+  "otps": 206072038,
+  "ps": null
+ },
+ "113 FAMILY & CHILD HEALTH -": {
+  "otps": 228549190,
+  "ps": null
+ },
+ "114 ENVIRONMENTAL HEALTH -": {
+  "otps": 57421595,
+  "ps": null
+ },
+ "115 EARLY INTERVENTION -": {
+  "otps": 58226239,
+  "ps": null
+ },
+ "118 MENTAL HYGIENE MANAGEMENT SERVICES-": {
+  "otps": 86092203,
+  "ps": null
+ },
+ "119 EPIDEMIOLOGY -": {
+  "otps": 48911074,
+  "ps": null
+ },
+ "121 DEVELOPMENT DISABILITY -": {
+  "otps": 564609094,
+  "ps": null
+ },
+ "002 OFFICE OF ADMIN. TRIALS & HEARINGS-": {
+  "otps": 20107380,
+  "ps": null
+ },
+ "004 UTILITY -": {
+  "otps": 936039312,
+  "ps": null
+ },
+ "077 PARKING VIOLATIONS BUREAU": {
+  "otps": 345711,
+  "ps": null
+ },
+ "007 BUREAU OF BRIDGES -": {
+  "otps": 33572382,
+  "ps": null
+ },
+ "006 MAINT & OPERATIONS -": {
+  "otps": 121247484,
+  "ps": null
+ },
+ "012 URBAN PARK SERVICE -": {
+  "otps": 3076330,
+  "ps": null
+ },
+ "002 DESIGN & ENGINEERING": {
+  "otps": 21442907,
+  "ps": null
+ },
+ "006 BD. OF STANDARD & APPEAL": {
+  "otps": 10510100,
+  "ps": null
+ },
+ "190 EXECUTIVE AND OPERATIONS SUPPORT -": {
+  "otps": 125659,
+  "ps": null
+ },
+ "490 OFFICE OF CITYWIDE PURCHASING -": {
+  "otps": 213353626,
+  "ps": null
+ },
+ "690 EXTERNAL PUBLICATIONS AND RETAIL -": {
+  "otps": 102324913,
+  "ps": null
+ },
+ "790 ENERGY MANAGEMENT -": {
+  "otps": 801739,
+  "ps": null
+ },
+ "890 CITYWIDE FLEET SERVICES -": {
+  "otps": 1138230451,
+  "ps": null
+ },
+ "002 TECHNOLOGY SERVICES -": {
+  "otps": 352789596,
+  "ps": null
+ },
+ "911 TECHNICAL OPERATIONS -": {
+  "otps": 49233147,
+  "ps": null
+ },
+ "002 OTHER THAN PERSONAL SERVICES": {
+  "otps": 26409,
+  "ps": null
+ },
+ "003 RENT": {
+  "otps": 76576,
+  "ps": null
+ },
+ "003 RENT AND ENERGY": {
+  "otps": 35888,
+  "ps": null
+ },
+ "003 PROBATION SERVICES-OTPS": {
+  "otps": 36580164,
+  "ps": null
+ },
+ "004 EXECUTIVE MANAGEMENT - OTPS": {
+  "otps": 125553,
+  "ps": null
+ },
+ "002 DEPT. OF BUSINESS O.T.P.S.": {
+  "otps": 58253405,
+  "ps": null
+ },
+ "005 CONTRACT COMP & BUS OPP - OTPS": {
+  "otps": 5839454,
+  "ps": null
+ },
+ "006 ECONOMIC DEVELOPMENT CORP.": {
+  "otps": 64945473,
+  "ps": null
+ },
+ "011 WORKFORCE INVESTMENT ACT - OTPS": {
+  "otps": 66831421,
+  "ps": null
+ },
+ "012 TRUST FOR GOVERNOR'S ISLAND AND NYC & CO": {
+  "otps": 39165614,
+  "ps": null
+ },
+ "008 OFFICE OF ADMINISTRATION OTPS": {
+  "otps": 16430829,
+  "ps": null
+ },
+ "009 OFFICE OF DEVELOPMENT OTPS": {
+  "otps": 50274346,
+  "ps": null
+ },
+ "010 HOUSING MANAGEMENT AND SALES": {
+  "otps": 11478452,
+  "ps": null
+ },
+ "011 OFFICE OF HOUSING PRESERVATION": {
+  "otps": 63855553,
+  "ps": null
+ },
+ "012 CITY ASSISTANCE TO NYC HOUSING AUTHORITY": {
+  "otps": 391626246,
+  "ps": null
+ },
+ "013 RENTAL SUBSIDY PROGRAMS - OTPS": {
+  "otps": 669641252,
+  "ps": null
+ },
+ "014 EMERGENCY SHELTER OPERATIONS": {
+  "otps": 159922844,
+  "ps": null
+ },
+ "002 AGENCYWIDE OPERATIONS - OTPS": {
+  "otps": 44658234,
+  "ps": null
+ },
+ "004 ENFORCEMENT AND DEVELOPMENT - OTPS": {
+  "otps": 5154722,
+  "ps": null
+ },
+ "006 SUSTAINABILITY OTPS": {
+  "otps": 3385211,
+  "ps": null
+ },
+ "111 HEALTH ADMINISTRATION - OTPS": {
+  "otps": 206072038,
+  "ps": null
+ },
+ "112 DISEASE CONTROL - OTPS": {
+  "otps": 228549190,
+  "ps": null
+ },
+ "113 FAMILY & CHILD HEALTH - OTPS": {
+  "otps": 57421595,
+  "ps": null
+ },
+ "114 ENVIRONMENTAL HEALTH - OTPS": {
+  "otps": 58226239,
+  "ps": null
+ },
+ "115 EARLY INTERVENTION - OTPS": {
+  "otps": 258346318,
+  "ps": null
+ },
+ "116 OFFICE OF CHIEF MEDICAL EXAMINER - OTPS": {
+  "otps": 27930194,
+  "ps": null
+ },
+ "117 CENTER FOR HLTH EQUITY&COMM WELLNESS-OTP": {
+  "otps": 86092203,
+  "ps": null
+ },
+ "118 MENTAL HYGIENE MANAGEMENT SERVICES- OTPS": {
+  "otps": 48911074,
+  "ps": null
+ },
+ "119 EPIDEMIOLOGY - OTPS": {
+  "otps": 14103304,
+  "ps": null
+ },
+ "120 MENTAL HEALTH": {
+  "otps": 564609094,
+  "ps": null
+ },
+ "121 DEVELOPMENT DISABILITY - OTPS": {
+  "otps": 8461743,
+  "ps": null
+ },
+ "122 ALCOHOL&DRUG USE PREVENT, CARE TREATMENT": {
+  "otps": 148829326,
+  "ps": null
+ },
+ "001 LUMP SUM": {
+  "otps": 1672894540,
+  "ps": null
+ },
+ "002 OFFICE OF ADMIN. TRIALS & HEARINGS- OTPS": {
+  "otps": 20107380,
+  "ps": null
+ },
+ "004 UTILITY - OTPS": {
+  "otps": 936039312,
+  "ps": null
+ },
+ "005 ENVIRONMENTAL MANAGEMENT -OTPS": {
+  "otps": 39264552,
+  "ps": null
+ },
+ "006 EXECUTIVE & SUPPORT-OTPS": {
+  "otps": 82802816,
+  "ps": null
+ },
+ "106 EXEC & ADMINISTRATIVE-OTPS": {
+  "otps": 130997042,
+  "ps": null
+ },
+ "109 CLEANING & COLLECTION-OTPS": {
+  "otps": 25632147,
+  "ps": null
+ },
+ "110 WASTE DISPOSAL-OTPS": {
+  "otps": 544396640,
+  "ps": null
+ },
+ "111 BUILDING MANAGEMENT-OTPS": {
+  "otps": 4179939,
+  "ps": null
+ },
+ "112 MOTOR EQUIPMENT-OTPS": {
+  "otps": 25909862,
+  "ps": null
+ },
+ "113 SNOW-OTPS": {
+  "otps": 37640274,
+  "ps": null
+ },
+ "011 ADMINISTRATION-OTPS": {
+  "otps": 91450999,
+  "ps": null
+ },
+ "022 OPERATIONS-OTPS": {
+  "otps": 40939902,
+  "ps": null
+ },
+ "033 PROPERTY-OTPS": {
+  "otps": 4931722,
+  "ps": null
+ },
+ "044 AUDIT-OTPS": {
+  "otps": 345711,
+  "ps": null
+ },
+ "055 LEGAL-OTPS": {
+  "otps": 93244,
+  "ps": null
+ },
+ "077 PARKING VIOLATIONS BUREAU OTPS": {
+  "otps": 890475,
+  "ps": null
+ },
+ "099 CITY SHERIFF-OTPS": {
+  "otps": 27603266,
+  "ps": null
+ },
+ "007 BUREAU OF BRIDGES - OTPS": {
+  "otps": 33572382,
+  "ps": null
+ },
+ "011 OTPS-EXEC AND ADMINISTRATION": {
+  "otps": 128724238,
+  "ps": null
+ },
+ "012 OTPS-HIGHWAY OPERATIONS": {
+  "otps": 151951215,
+  "ps": null
+ },
+ "013 OTPS-TRANSIT OPERATIONS": {
+  "otps": 46826554,
+  "ps": null
+ },
+ "014 OTPS-TRAFFIC OPERATIONS": {
+  "otps": 496972548,
+  "ps": null
+ },
+ "006 MAINT & OPERATIONS - OTPS": {
+  "otps": 121247484,
+  "ps": null
+ },
+ "007 EXEC MGT/ADMIN SVCS-OTPS": {
+  "otps": 36635560,
+  "ps": null
+ },
+ "009 RECREATION SERVICES-OTPS": {
+  "otps": 3076330,
+  "ps": null
+ },
+ "010 DESIGN & ENGINEERING-OTPS": {
+  "otps": 3063331,
+  "ps": null
+ },
+ "012 URBAN PARK SERVICE - OTPS": {
+  "otps": 894490,
+  "ps": null
+ },
+ "002 DESIGN & ENGINEERING OTPS": {
+  "otps": 21442907,
+  "ps": null
+ },
+ "004 EXEC, ADMIN & CAPITAL PLANNING OTPS": {
+  "otps": 11038863,
+  "ps": null
+ },
+ "002 HUMAN CAPITAL": {
+  "otps": 10510100,
+  "ps": null
+ },
+ "006 BD. OF STANDARD & APPEAL OTPS": {
+  "otps": 125659,
+  "ps": null
+ },
+ "190 EXECUTIVE AND OPERATIONS SUPPORT - OTPS": {
+  "otps": 11231494,
+  "ps": null
+ },
+ "290 DIV OF ADMINISTRATION AND SECURITY- OTPS": {
+  "otps": 21007893,
+  "ps": null
+ },
+ "390 ASSET MANAGEMENT-PUBLIC FACILITIES-OTPS": {
+  "otps": 213353626,
+  "ps": null
+ },
+ "490 OFFICE OF CITYWIDE PURCHASING - OTPS": {
+  "otps": 102324913,
+  "ps": null
+ },
+ "590 DIV OF REAL ESTATE SERVICES": {
+  "otps": 1083430,
+  "ps": null
+ },
+ "690 EXTERNAL PUBLICATIONS AND RETAIL - OTPS": {
+  "otps": 801739,
+  "ps": null
+ },
+ "790 ENERGY MANAGEMENT - OTPS": {
+  "otps": 1138230451,
+  "ps": null
+ },
+ "890 CITYWIDE FLEET SERVICES - OTPS": {
+  "otps": 39627899,
+  "ps": null
+ },
+ "002 TECHNOLOGY SERVICES - OTPS": {
+  "otps": 352789596,
+  "ps": null
+ },
+ "004 ADMIN/OPERATIONS OTPS": {
+  "otps": 49233147,
+  "ps": null
+ },
+ "010 MAYOR'S OFFICE OF MEDIA & ENTERTAINMENT": {
+  "otps": 13792632,
+  "ps": null
+ },
+ "014 NEW YORK CITY CYBER COMMAND": {
+  "otps": 88657844,
+  "ps": null
+ },
+ "200 OTHER THAN PERSONAL SERVICES": {
+  "otps": 10511662,
+  "ps": null
+ },
+ "003 OTHER THAN PERSONAL SERVICE": {
+  "otps": 40064107,
+  "ps": null
+ },
+ "001 PERSONAL SERVICES": {
+  "otps": null,
+  "ps": 248628
+ },
+ "001 DEPT. OF BUSINESS P.S.": {
+  "otps": null,
+  "ps": 21793240
+ },
+ "004 CONTRACT COMP & BUS. OPP - PS": {
+  "otps": null,
+  "ps": 4333226
+ },
+ "010 WORKFORCE INVESTMENT ACT - PS": {
+  "otps": null,
+  "ps": 11975010
+ },
+ "003 RENTAL SUBSIDY PROGRAMS - PS": {
+  "otps": null,
+  "ps": 27753306
+ },
+ "001 AGENCYWIDE OPERATIONS - PS": {
+  "otps": null,
+  "ps": 82072350
+ },
+ "101 HEALTH ADMINISTRATION - PS": {
+  "otps": null,
+  "ps": 69284920
+ },
+ "102 DISEASE CONTROL - PS": {
+  "otps": null,
+  "ps": 120610700
+ },
+ "103 FAMILY & CHILD HEALTH - PS": {
+  "otps": null,
+  "ps": 143843967
+ },
+ "104 ENVIRONMENTAL HEALTH - PS": {
+  "otps": null,
+  "ps": 84819938
+ },
+ "105 EARLY INTERVENTION - PS": {
+  "otps": null,
+  "ps": 19033967
+ },
+ "109 EPIDEMIOLOGY - PS": {
+  "otps": null,
+  "ps": 23202596
+ },
+ "001 TECHNOLOGY SERVICES - PS": {
+  "otps": null,
+  "ps": 87466214
+ },
+ "007 911 TECHNICAL OPERATIONS- PS": {
+  "otps": null,
+  "ps": 20002881
+ },
+ "100 PERSONAL SERVICES": {
+  "otps": null,
+  "ps": 4723338
+ },
+ "001 EXECUTIVE AND SUPPORT - PS": {
+  "otps": null,
+  "ps": 66949900
+ },
+ "002 ENVIRONMENTAL MANAGEMENT - PS": {
+  "otps": null,
+  "ps": 28443861
+ },
+ "003 WATER SUP. & WASTEWATER COLL - PS": {
+  "otps": null,
+  "ps": 278069007
+ },
+ "007 CENTRAL UTILITY - PS": {
+  "otps": null,
+  "ps": 98016862
+ },
+ "008 WASTEWATER TREATMENT - PS": {
+  "otps": null,
+  "ps": 247916724
+ },
+ "002 LICENSING/ENFORCEMENT - PS": {
+  "otps": null,
+  "ps": 19250612
+ }
+}

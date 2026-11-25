@@ -1,0 +1,57 @@
+{
+ "base": {
+  "Cincinnati": {
+   "year": 2025,
+   "care_per_100k": 47581679,
+   "cost_burden_30pct_plus_share": 53.0,
+   "median_home_value": 283300,
+   "snap_receipt_share_pct": 16.5,
+   "bachelors_pct": 8.3,
+   "murder_rate": 21.9
+  },
+  "Detroit": {
+   "year": 2025,
+   "care_per_100k": 62441342,
+   "cost_burden_30pct_plus_share": 61.0,
+   "median_home_value": 102600,
+   "snap_receipt_share_pct": 37.0,
+   "bachelors_pct": 14.6,
+   "murder_rate": 25.4
+  },
+  "Memphis": {
+   "year": 2025,
+   "care_per_100k": 23647636,
+   "cost_burden_30pct_plus_share": 56.5,
+   "median_home_value": 198200,
+   "snap_receipt_share_pct": 14.8,
+   "bachelors_pct": 11.2,
+   "murder_rate": 30.2
+  },
+  "NYC": {
+   "year": 2024,
+   "care_per_100k": 194199126,
+   "cost_burden_30pct_plus_share": 51.6,
+   "median_home_value": 778600,
+   "snap_receipt_share_pct": 22.4,
+   "bachelors_pct": 16.2,
+   "murder_rate": 4.2
+  },
+  "St. Louis": {
+   "year": 2025,
+   "care_per_100k": 41648694,
+   "cost_burden_30pct_plus_share": 43.3,
+   "median_home_value": 230900,
+   "snap_receipt_share_pct": 14.6,
+   "bachelors_pct": 10.4,
+   "murder_rate": 50.7
+  }
+ },
+ "sd": {
+  "care_per_100k": 11332665.278,
+  "cost_burden_30pct_plus_share": 1.281,
+  "median_home_value": 24360.658,
+  "snap_receipt_share_pct": 1.694,
+  "bachelors_pct": 0.801,
+  "murder_rate": 6.064
+ }
+}

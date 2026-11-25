@@ -1,0 +1,82 @@
+{
+ "city": "NYC",
+ "built": "2026-11-22 (run 2 of 5, MMR/budget backwards-run)",
+ "flip_era": "NO care-vs-cage flip found in the tested window; ratio shifts against CARE during the Giuliani crime-collapse (2.59 \u2192 2.26), i.e. cage-share GREW during the crime fall; a care-favoring flip, if any, is younger than FY2002 (test window ended at the flip-candidate era WITHOUT confirming it \u2014 honest-negative bracket).",
+ "ratio_series": {
+  "FY1998": {
+   "care_b": 9.24,
+   "cage_b": 3.57,
+   "fire_b": 0.97,
+   "care_over_cage": 2.59,
+   "care_over_cage_plus_fire": 2.04
+  },
+  "FY1999": {
+   "care_b": 9.36,
+   "cage_b": 3.91,
+   "fire_b": 1.03,
+   "care_over_cage": 2.39,
+   "care_over_cage_plus_fire": 1.9
+  },
+  "FY2000": {
+   "care_b": 9.97,
+   "cage_b": 4.21,
+   "fire_b": 1.08,
+   "care_over_cage": 2.37,
+   "care_over_cage_plus_fire": 1.89
+  },
+  "FY2001": {
+   "care_b": 10.73,
+   "cage_b": 4.42,
+   "fire_b": 1.07,
+   "care_over_cage": 2.43,
+   "care_over_cage_plus_fire": 1.95
+  },
+  "FY2002": {
+   "care_b": 11.06,
+   "cage_b": 4.89,
+   "fire_b": 1.25,
+   "care_over_cage": 2.26,
+   "care_over_cage_plus_fire": 1.8
+  },
+  "FY2026": {
+   "care_b": null,
+   "cage_police_only_b": 6.28,
+   "note": "care parse-blocked; NYPD $6.28B verified; not comparable (25 years + methodology shift)"
+  }
+ },
+ "care_buckets": [
+  "HRA",
+  "ACS",
+  "DHS(homeless)",
+  "Aging",
+  "DYCD",
+  "Parks",
+  "Libraries",
+  "Cultural",
+  "DOHMH"
+ ],
+ "cage_buckets": [
+  "NYPD",
+  "DOC",
+  "Probation",
+  "DJJ"
+ ],
+ "confidence": "High on FY98-FY02 $-rows (MMR FY2002 Agency Resources tables, cross-checked vs MMR FY2001/Feb-2002 Vol I: NYPD FY01 $3.42B/$3.4B both sources). Low-to-null on pre-1998 $-level (honest-gap).",
+ "falsifier": "If an independent FY1993-FY1996 agency-expenditure source (OMB adopted-Expense-Budget archive print, Comptroller's annual 'Budget Reports') shows care/cage \u22653.0 in FY1994-96, the Giuliani-era 'cage-grow' conclusion flips to care-side growth; falsifies flip_era='Giuliani-break' reading. Conversely the FY98\u2192FY02 series ALREADY falsifies a 'cage grew while crime fell' ratio break in the opposite direction: cage grew FASTER than care (2.59\u21922.26) during the crime collapse \u2014 the founder-predicted flip is not present in the tested data.",
+ "key_finding": "NYPD $2.607B (FY98) \u2192 $3.799B (FY02 = +45.7% nominal); CARE total $9.24B \u2192 $11.06B (+19.7% nominal). Uniformed headcount NYPD FY98 40,285 \u2192 FY02 36,790 while OT rose $145.9M \u2192 $610.3M \u2014 spending rose via overtime, not raw headcount (Safe Streets hires pre-dated FY98; the FY98-02 slice sits AFTER the 1994-97 hiring surge).",
+ "honest_gaps": [
+  "No Dinkins/Koch-era $-level found: NYC MMR PDFs online start FY1996-97 era; FY94-96 MMRs give only overtime ($542.8M FY94 citywide, Police+Fire+DOC+Sanitation uniformed $344.9M FY96) and headcount-reductions (-22,122 Dec93\u2192Jun96) \u2014 no per-agency budget totals.",
+  "archived NYC.gov MMR full-collection: earliest = FY1998; pre-1998 only summary volumes on ci.nyc.ny.us (1997 crawl) cover FY1996 preliminaries.",
+  "FY2026 care-side parse-blocked (BFA v2 rows partial) \u2014 anchor kept police-only-certain rather than fabricate.",
+  "FY2002 = 9/11 spike year; FY2001 = safer cross-year endpoint."
+ ],
+ "sources": {
+  "mmr_fy2002_full": "https://web.archive.org/web/20040310071123/http://www.nyc.gov/html/ops/downloads/pdf/2002_mmr/0902_mmr.pdf",
+  "mmr_fy2001_vol1": "https://web.archive.org/web/20040310030745/http://www.nyc.gov/html/ops/downloads/pdf/2001_mmr/0901_vol1.pdf",
+  "mmr_pre_fy2002_vol1": "https://web.archive.org/web/20061013215843/http://www.nyc.gov/html/ops/downloads/pdf/2002_mmr/0202_vol1.pdf",
+  "mmr_fy1996_summary": "https://web.archive.org/web/19970715141348/http://www.ci.nyc.ny.us/html/ops/pdf/summ_996.pdf",
+  "mmr_fy1996_prelim": "https://web.archive.org/web/19970715140805/http://www.ci.nyc.ny.us/html/ops/pdf/summcol.pdf",
+  "mmr_fy1997_prelim_files": "https://web.archive.org/web/19970715141457/http://www.ci.nyc.ny.us/html/ops/pdf/297manag.pdf",
+  "fy2026_anchor": "https://www.nyc.gov/assets/omb/downloads/pdf/adopt25/adopt25-bfa.pdf"
+ }
+}

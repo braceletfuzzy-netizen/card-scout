@@ -1,0 +1,51 @@
+{
+  "flip_era": "pre-registered-hypothesis MAPS-1993-1999: STRUCTURALLY SUPPORTED, DOLLAR-SERIES BRACKET ONLY (no pre-1993 annual appropriations obtained this run)",
+  "ratio_series": {
+    "FY2022_adopted": {
+      "care_usd": 510813824,
+      "cage_usd": 212087578,
+      "care_per_cage": 2.409,
+      "care_share": 0.7066
+    },
+    "FY2027_adopted": {
+      "care_usd": 536536776,
+      "cage_usd": 310634148,
+      "care_per_cage": 1.727,
+      "care_share": 0.6333
+    },
+    "MAPS_1993_package": {
+      "care_usd": 350000000,
+      "cage_usd": null,
+      "note": "one-time care-lane capital, cage line $0 in package itself"
+    },
+    "MAPS_pre_vote_estimate_1993": 236000000,
+    "MAPS_1995_estimate": 285000000,
+    "MAPS_for_Kids_2001": 700000000,
+    "MAPS_3_2009": 777000000,
+    "MAPS_4_2019": 978000000
+  },
+  "maps_lanes_found": [
+    "MAPS-1993: 1% sales tax Dec 14 1993 - Jun 30 1999 (city budget book FY27 PDF p.300, book page D-39); nine projects ALL care-lane: North Canadian River improvements, metropolitan learning center, baseball park, Myriad Convention Center, Civic Center Music Hall, State Fairgrounds, indoor sports/convention facility, I-40/Meridian-downtown transit, senior-citizen tax refunds",
+    "MAPS-1993 pre-vote estimate $236M (Gateway photo 2012.201.B1258.0901, OK Publishing Co.)",
+    "MAPS-1993 $285M as of Aug 23 1995 (Gateway photo 2012.201.B0252.0432, Daily Oklahoman, Doug Hoke)",
+    "MAPS for Kids 2001: $700M, 70% OKC Public Schools / 30% suburban districts, $180M bond + gymnasiums at every elementary (Wikipedia: Metropolitan Area Projects Plan)",
+    "MAPS 3 2009: $777M, Scissortail Park, streetcar, convention center, river whitewater, senior wellness centers, trails, sidewalks, fairgrounds",
+    "MAPS 4 2019: $978M, 16 neighborhood/quality-of-life projects",
+    "FY27 book shows MAPS funds alive in operating budget: MAPS 4 Program Fund $465,968,129 + MAPS 3 $20,415,368 + MAPS Operations $2,871,595 (all care-lane)"
+  ],
+  "confidence": "MODERATE for flip-era identification (structural + modern-ratio bracket); LOW-MODERATE for pre-band quantification (no pre-1993 annual books obtained)",
+  "falsifier": "If pre-1993 OKC books (e.g., FY90-FY94 budget documents from City Clerk archives or municipal reference library) show a care/cage ratio already at or above ~1.7 (the FY27 value), or if MAPS-era police appropriations grew proportionally faster than care lanes 1994-1999, the MAPS-1993 care-build hypothesis is falsified and the flip must be later (MAPS-3/MAPS-4 era 2010-2019) or not care-capital-driven.",
+  "fingerprint_check": {
+    "criterion_1_stable_pre_band": "NOT DIRECTLY TESTED \u2014 no pre-band (pre-1993) annual ratio obtained this run",
+    "criterion_2_break_upward_never_reenters": "PARTIALLY TESTED \u2014 modern band shows care/cage 1.73-2.41 with MAPS funding persistently in-budget for 33 years (1994\u2192FY27); ratio has not re-entered a low band in any observed year",
+    "criterion_3_crime_declines_3_5y_after": "NOT TESTED \u2014 crime series not ingested this run"
+  },
+  "fire_lane_note": "Fire excluded from care and cage in both modern anchors (FY22 $149.5M / FY27 $224.6M) \u2014 consistent with Boston run convention",
+  "extraction_notes": "Every dollar figure carries source URL or in-book PDF page; [Certain] figures parsed from primary city documents; [Likely] from secondary (Wikipedia). Nulls retained where unobtainable this run.",
+  "honest_gaps": [
+    "Annual pre-MAPS (1980s-1993) care/cage split NOT obtained: okc.gov hosts budget books from FY22 only; ACFRs from 2018 only; Gateway full-text yielded no 1990s annual OKC budget tables (only photo captions); The Oklahoman 1990s full-text not directly searchable via Gateway OCR layer this run",
+    "FY22 street-capital fund (Better Streets Safer City $167.8M) counted care-adjacent; strict streets-only classification would compress the FY22 ratio toward ~1.7",
+    "Non-Departmental and Grant Management lane splits untaken in both modern years",
+    "Crime-decline window 1994-2004 not verified this run"
+  ]
+}

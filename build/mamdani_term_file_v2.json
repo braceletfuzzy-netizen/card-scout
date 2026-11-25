@@ -1,0 +1,139 @@
+{
+ "statline": "Mayor Zohran Mamdani \u2014 New York City",
+ "term": {
+  "took_office": "2026-01-01",
+  "term_end": "2029-12-31"
+ },
+ "built": "2026-11-21",
+ "office_duration_note": "the founder-recalled-class: the in-office ~10-11-months at-build (the Jan-2026-takeover = the per the term-row); the term = the 4-year (the 2026-2029)",
+ "campaign_promises": [
+  {
+   "id": "CMP-001",
+   "promise": "Fare-free buses (the fast-and-free-class: the bus-service-speed-up + the fare-elimination for-buses)",
+   "category": "CURE-side/transit",
+   "clock": "the MTA-funding = the state-partner-dependent (the note: the buses = the MTA-controlled = the city-lane = the limited [the honest-scope-flag])",
+   "status": "IN-PROGRESS - IBO cost estimate (Jun-2026) + preliminary budget shortchanges MTA (Post critics) = not yet",
+   "claim_source_class": "CAMPAIGN-PLATFORM",
+   "claim_source_detail": "the 2025-platform (the the multiple-news-confirmed)"
+  },
+  {
+   "id": "CMP-002",
+   "promise": "Rent freeze for rent-stabilized tenants (the every-year-of-the-term)",
+   "category": "CURE-side/housing",
+   "clock": "the Rent-Guidelines-Board (RGB = the annual-vote = the mayoral-appointees = the city-controllable!)",
+   "status": "DELIVERED - RGB two-year freeze, one million apartments (first two-year freeze in city history); vote = 2026 cycle",
+   "claim_source_class": "CAMPAIGN-PLATFORM + RGB-OFFICIAL-VOTE",
+   "claim_source_detail": "the platform-promise + the two-year-freeze-official-vote [Certain] = the DOUBLE-SOURCED (the the strongest-class!)"
+  },
+  {
+   "id": "CMP-003",
+   "promise": "Universal no-cost child care",
+   "category": "CURE-side/families",
+   "clock": "the multi-year-phase (the budget-scale = the billions-class)",
+   "status": "IN-PROGRESS-TROUBLED - pilot launched (Apr-2026) + expansion funding-delay-snarled (mayor pledged payment reforms Aug-31)",
+   "claim_source_class": "CAMPAIGN-PLATFORM + OFFICIAL-LAUNCH",
+   "claim_source_detail": "the platform + the pilot-launched-Apr (the the nyc.gov-announce) but-the expansion-troubles = the the reporting-hedged"
+  },
+  {
+   "id": "CMP-004",
+   "promise": "City-owned grocery stores (the municipal-groceries = the food-affordability)",
+   "category": "CURE-side/food",
+   "clock": "the pilot-stores = the term-lane",
+   "status": "PENDING",
+   "progress": "STARTED: the first-site = La-Marqueta-East-Harlem (the identified-May-2026); the network = one-store-per-the-five-boroughs; the first-opening = the expected-late-2027",
+   "claim_source_class": "CAMPAIGN-PLATFORM + OFFICIAL-SITE-ANNOUNCE",
+   "claim_source_detail": "the La-Marqueta = the the city-announced (the the mayor's-office)"
+  },
+  {
+   "id": "CMP-005",
+   "promise": "Minimum wage $30/hour (the city-call = the state-action-needed [the honest-scope-flag])",
+   "category": "CURE-side/wages",
+   "clock": "the state-legislature-dependent",
+   "status": "PENDING",
+   "claim_source_class": "CAMPAIGN-PLATFORM",
+   "claim_source_detail": "the wage = the platform (the the state-dependent-scope-flag = the honest)"
+  },
+  {
+   "id": "CMP-006",
+   "promise": "The Rikers-closure (the MMD-001 = the already-registered)",
+   "category": "CURE-side/justice",
+   "clock": "2032",
+   "status": "PENDING"
+  },
+  {
+   "id": "CMP-007",
+   "promise": "Crime-down-40% (the MMD-002 = the already-registered)",
+   "category": "DETERRENCE-lane",
+   "clock": "the 12-month referee",
+   "status": "PENDING"
+  },
+  {
+   "id": "CMP-008",
+   "promise": "The housing-strategy (the MMD-003 = the already-registered)",
+   "category": "CURE-side/housing",
+   "clock": "annual",
+   "status": "PENDING"
+  }
+ ],
+ "year_prior_baselines": {
+  "note": "the FY2025 = the Adams-era-final-year = the scoring-baseline (the service-yield vs-the-YoY = the delta-scoring-lane)",
+  "budget_total_all_funds_fy2025": 119791000000,
+  "budget_total_all_funds_fy2026": 115065000000,
+  "personal_service": {
+   "fy2025": 57232000000,
+   "fy2026": 59657000000
+  },
+  "otps": {
+   "fy2025": 58488000000,
+   "fy2026": 50051000000
+  },
+  "debt_service": {
+   "fy2025": 7654000000,
+   "fy2026": 8741000000
+  },
+  "nypd": {
+   "fy2025_plan": 7003334000,
+   "fy2026_adopted": 6276536000,
+   "delta_pct": -10.4
+  },
+  "source": "the OMB sum5-25.pdf (the five-year-financial-plan-table, the p5-class)"
+ },
+ "service_yield_baselines_fy2025": {
+  "note": "the prior-year service-yields = the FY2025-adams-era = the baseline-rows (the gauge-delta = the Mamdani-yields vs-these)",
+  "crime": "the Part-I-crime = the Adams-era trajectory = the NYC-specific-figure pending (the null by-law until-sourced)",
+  "existing_rows": "the NYPD-BFA-rows = the FY2025-plan + the FY2026-adopted = the budget-side-done; the yield-side = the queue"
+ },
+ "laws": [
+  "every promise = the pre-registered at-claim-date",
+  "the scope-flags = the banked (the CMP-001 = the MTA-dependent; the CMP-005 = the state-dependent = the honest-scope-columns!)",
+  "the score = promise-vs-delivery, never-the-goodness",
+  "the baseline-deltas = the FY2025-vs-the-Mamdani-years = the service-yield-scoring-lane"
+ ],
+ "term_length_verified": {
+  "answer": "the NYC mayor = the FOUR-YEAR terms, the limited-to-TWO-consecutive (the may-run-again-after-a-four-year-break)",
+  "mamdani": "the took-office-Jan-1-2026 = the first-term-runs-through-2029 [Certain]"
+ },
+ "accomplishments_in_progress": [
+  {
+   "promise": "CMP-004 (the city-owned-grocery-stores)",
+   "status": "STARTED \u2014 the momentum-real [Certain]",
+   "evidence": [
+    "the FIRST-SITE = the identified: La Marqueta, East Harlem (the announced ~May-2026 + the re-confirmed [the 9-hours-ago-class news: the unveils-first-site])",
+    "the NETWORK = the planned: one-municipal-grocery-store-per-each-of-the-FIVE-boroughs (the mayor's-own-statement)",
+    "the first-store = the expected-to-open-late-2027 (the April-2026-report-class; the 8-figure-taxpayer-sum = the critics'-cost-tag [the noted-not-scored])"
+   ],
+   "score_logic": "the promise = the network-of-five = the delivered-when-the-stores-OPEN (the not-announced!) \u2014 the clock = the late-2027 = the first-store-opening = the first-scoreable-ticket",
+   "honest_column": "the cost-per-store = the countable (the 8-figure-class = the critics'-number = the needs-the official-figure = the null-until-sourced)"
+  },
+  {
+   "promise": "THE PUBLIC-WORKS/ROADS (the not-a-formal-campaign-promise = the GOVERNANCE-IMPLEMENTATION lane = the the founder's-named-big-deal)",
+   "status": "ACTIVE-AND-QUANTIFIED [Certain]",
+   "evidence": [
+    "the NYC-DOT = the 200,000th-pothole-filled of-2026 (the Sept-17-2026 = the mayor-repaired-it-personally = the milestone-event; the nyc.gov = the official-page: the street-repair-effort-accelerated)",
+    "the 80-crews-mobilized = the 7,200-potholes (the recent-video-claim [2-days-old])",
+    "the winter-mitigation = the DOT-measures (the mitigate-formation = the per-the Sept-report)"
+   ],
+   "score_logic": "the pothole-count = the Tier-1-countable = the annual-rows (the FY2025-Adams-baseline = the pending-source \u2192 the Mamdani-delta = the scoreable); the 200k-in-9-months = the pace-figure-class"
+  }
+ ]
+}

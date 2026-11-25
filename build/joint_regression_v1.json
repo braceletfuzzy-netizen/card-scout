@@ -1,0 +1,3023 @@
+{
+ "_record": "joint_regression_v1 — THE PHASE-2 JOINT REGRESSION + THE TIER-ORDERING FALSIFIER",
+ "built": "2026-11-24",
+ "parent_artifacts": [
+  "maslow_joint_panel_v1.jsonl (94 city-years)",
+  "maslow_joint_panel_v1.json (direction-classes)"
+ ],
+ "laws_held": [
+  "direction-class only, no causal claims",
+  "honest-null; no interpolation; no fabricated rows",
+  "format-lock: banked Phase-1 pooling convention VERIFIED and reused (Fisher-z mean pooled, |rho|=1 city dropped as atanh-singular — the lane12 'single_or_degenerate_dropped' law)",
+  "within-city discipline: every headline rho is within-city rank; between-city reads labeled separately",
+  "FE betas are within-city standardized; t-stats descriptive; saturated models flagged, none shipped as headline",
+  "banked lane12/lane14/lane15 reads carried verbatim, re-derived only as format-lock verification"
+ ],
+ "panels_used": {
+  "joint_block_rows": 25,
+  "joint_block_cities": [
+   "Cincinnati",
+   "Detroit",
+   "Memphis",
+   "NYC",
+   "St. Louis"
+  ],
+  "core_all_lanes_rows": 12,
+  "full_panel_rows": 94
+ },
+ "banked_read_verification": {
+  "median_home_value__x__murder_rate": {
+   "banked_pooled_rho": -0.728,
+   "rederived_pooled_rho": -0.819,
+   "match": false
+  },
+  "snap_receipt_share_pct__x__murder_rate": {
+   "banked_pooled_rho": 0.495,
+   "rederived_pooled_rho": 0.495,
+   "match": true
+  },
+  "cost_burden_30pct_plus_share__x__murder_rate": {
+   "banked_pooled_rho": -0.269,
+   "rederived_pooled_rho": -0.269,
+   "match": true
+  },
+  "rent_burden_50pct_plus_share__x__murder_rate": {
+   "banked_pooled_rho": 0.115,
+   "rederived_pooled_rho": 0.115,
+   "match": true
+  }
+ },
+ "banked_read_verification_note": "3 of 4 banked pooled_rhos reproduce EXACTLY (snap +0.495, burden30 -0.269, burden50 +0.115) under the verified Phase-1 convention (Fisher-z mean pooled, |rho|=1 city dropped). The home-value row shows banked -0.728 vs re-derived -0.819 — the Phase-1 verdict file carries BOTH numbers for this lane (-0.819 in first_joint_reads_direction_class, -0.728 in the Memphis narrative), so the re-derivation matches the verdict-table value exactly; class identical either way (strong negative). No correction to the banked artifact shipped.",
+ "within_city_reads": {
+  "care_per_100k__x__murder_rate": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 12,
+     "rho": 0.175
+    },
+    {
+     "city": "Detroit",
+     "n": 6,
+     "rho": -0.771
+    },
+    {
+     "city": "Memphis",
+     "n": 6,
+     "rho": -0.6
+    },
+    {
+     "city": "NYC",
+     "n": 6,
+     "rho": -1.0
+    },
+    {
+     "city": "St. Louis",
+     "n": 7,
+     "rho": -0.714
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.543,
+    "cities_used": 4,
+    "dropped_degenerate": 1
+   }
+  },
+  "care_per_100k__x__murder_rate_t0": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 12,
+     "rho": 0.175
+    },
+    {
+     "city": "Detroit",
+     "n": 6,
+     "rho": -0.771
+    },
+    {
+     "city": "Memphis",
+     "n": 6,
+     "rho": -0.6
+    },
+    {
+     "city": "NYC",
+     "n": 1,
+     "rho": null,
+     "note": "thin-or-degenerate"
+    },
+    {
+     "city": "St. Louis",
+     "n": 7,
+     "rho": -0.714
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.543,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "care_per_100k__x__murder_rate_t+1": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 11,
+     "rho": 0.155
+    },
+    {
+     "city": "Detroit",
+     "n": 5,
+     "rho": -0.9
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": -0.9
+    },
+    {
+     "city": "St. Louis",
+     "n": 7,
+     "rho": -0.821
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.756,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "care_per_100k__x__murder_rate_t+2": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 10,
+     "rho": 0.333
+    },
+    {
+     "city": "Detroit",
+     "n": 4,
+     "rho": -1.0
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": -0.8
+    },
+    {
+     "city": "St. Louis",
+     "n": 6,
+     "rho": -0.943
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.685,
+    "cities_used": 3,
+    "dropped_degenerate": 1
+   }
+  },
+  "care_per_100k__x__bookings_rate_t0": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 8,
+     "rho": -0.69
+    },
+    {
+     "city": "Detroit",
+     "n": 5,
+     "rho": -0.7
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": -0.8
+    },
+    {
+     "city": "St. Louis",
+     "n": 6,
+     "rho": -0.543
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.694,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "bonds_core_per_100k__x__murder_rate": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 12,
+     "rho": 0.294
+    },
+    {
+     "city": "Detroit",
+     "n": 6,
+     "rho": -0.943
+    },
+    {
+     "city": "Memphis",
+     "n": 6,
+     "rho": -0.771
+    },
+    {
+     "city": "NYC",
+     "n": 6,
+     "rho": -1.0
+    },
+    {
+     "city": "St. Louis",
+     "n": 7,
+     "rho": -0.786
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.71,
+    "cities_used": 4,
+    "dropped_degenerate": 1
+   }
+  },
+  "bonds_core_per_100k__x__murder_rate_t0": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 12,
+     "rho": 0.294
+    },
+    {
+     "city": "Detroit",
+     "n": 6,
+     "rho": -0.943
+    },
+    {
+     "city": "Memphis",
+     "n": 6,
+     "rho": -0.771
+    },
+    {
+     "city": "NYC",
+     "n": 1,
+     "rho": null,
+     "note": "thin-or-degenerate"
+    },
+    {
+     "city": "St. Louis",
+     "n": 7,
+     "rho": -0.786
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.71,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "bonds_core_per_100k__x__murder_rate_t+1": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 11,
+     "rho": 0.3
+    },
+    {
+     "city": "Detroit",
+     "n": 5,
+     "rho": -0.7
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": -0.8
+    },
+    {
+     "city": "St. Louis",
+     "n": 7,
+     "rho": -0.821
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.607,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "bonds_core_per_100k__x__murder_rate_t+2": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 10,
+     "rho": 0.236
+    },
+    {
+     "city": "Detroit",
+     "n": 4,
+     "rho": -0.8
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": -1.0
+    },
+    {
+     "city": "St. Louis",
+     "n": 6,
+     "rho": -0.886
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.637,
+    "cities_used": 3,
+    "dropped_degenerate": 1
+   }
+  },
+  "bonds_core_per_100k__x__bookings_rate_t0": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 8,
+     "rho": -0.667
+    },
+    {
+     "city": "Detroit",
+     "n": 5,
+     "rho": -0.4
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": -0.6
+    },
+    {
+     "city": "St. Louis",
+     "n": 6,
+     "rho": -0.314
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.509,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "cage_per_100k__x__murder_rate": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 12,
+     "rho": 0.189
+    },
+    {
+     "city": "Detroit",
+     "n": 2,
+     "rho": null,
+     "note": "thin-or-degenerate"
+    },
+    {
+     "city": "Memphis",
+     "n": 6,
+     "rho": -0.771
+    },
+    {
+     "city": "NYC",
+     "n": 1,
+     "rho": null,
+     "note": "thin-or-degenerate"
+    },
+    {
+     "city": "St. Louis",
+     "n": 6,
+     "rho": 0.086
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.243,
+    "cities_used": 3,
+    "dropped_degenerate": 0
+   }
+  },
+  "cage_per_100k__x__murder_rate_t0": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 12,
+     "rho": 0.189
+    },
+    {
+     "city": "Detroit",
+     "n": 2,
+     "rho": null,
+     "note": "thin-or-degenerate"
+    },
+    {
+     "city": "Memphis",
+     "n": 6,
+     "rho": -0.771
+    },
+    {
+     "city": "NYC",
+     "n": 1,
+     "rho": null,
+     "note": "thin-or-degenerate"
+    },
+    {
+     "city": "St. Louis",
+     "n": 6,
+     "rho": 0.086
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.243,
+    "cities_used": 3,
+    "dropped_degenerate": 0
+   }
+  },
+  "cage_per_100k__x__murder_rate_t+1": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 11,
+     "rho": 0.182
+    },
+    {
+     "city": "Detroit",
+     "n": 2,
+     "rho": null,
+     "note": "thin-or-degenerate"
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": -0.9
+    },
+    {
+     "city": "St. Louis",
+     "n": 6,
+     "rho": 0.086
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.381,
+    "cities_used": 3,
+    "dropped_degenerate": 0
+   }
+  },
+  "cage_per_100k__x__murder_rate_t+2": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 10,
+     "rho": 0.37
+    },
+    {
+     "city": "Detroit",
+     "n": 1,
+     "rho": null,
+     "note": "thin-or-degenerate"
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": -1.0
+    },
+    {
+     "city": "St. Louis",
+     "n": 5,
+     "rho": 0.3
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.335,
+    "cities_used": 2,
+    "dropped_degenerate": 1
+   }
+  },
+  "cage_per_100k__x__bookings_rate_t0": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 8,
+     "rho": -0.619
+    },
+    {
+     "city": "Detroit",
+     "n": 2,
+     "rho": null,
+     "note": "thin-or-degenerate"
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": -0.6
+    },
+    {
+     "city": "St. Louis",
+     "n": 5,
+     "rho": 0.1
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.413,
+    "cities_used": 3,
+    "dropped_degenerate": 0
+   }
+  },
+  "bookings_per_1000__x__murder_rate": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 8,
+     "rho": -0.238
+    },
+    {
+     "city": "Detroit",
+     "n": 5,
+     "rho": 0.4
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": -0.4
+    },
+    {
+     "city": "NYC",
+     "n": 5,
+     "rho": -0.9
+    },
+    {
+     "city": "St. Louis",
+     "n": 6,
+     "rho": -0.143
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.356,
+    "cities_used": 5,
+    "dropped_degenerate": 0
+   }
+  },
+  "bookings_per_1000__x__murder_rate_t0": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 8,
+     "rho": -0.238
+    },
+    {
+     "city": "Detroit",
+     "n": 5,
+     "rho": 0.4
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": -0.4
+    },
+    {
+     "city": "St. Louis",
+     "n": 6,
+     "rho": -0.143
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.096,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "bookings_per_1000__x__murder_rate_t+1": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 8,
+     "rho": 0.19
+    },
+    {
+     "city": "Detroit",
+     "n": 5,
+     "rho": 0.6
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": 0.8
+    },
+    {
+     "city": "St. Louis",
+     "n": 6,
+     "rho": 0.314
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.521,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "bookings_per_1000__x__murder_rate_t+2": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 7,
+     "rho": 0.571
+    },
+    {
+     "city": "Detroit",
+     "n": 4,
+     "rho": 0.8
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": 0.6
+    },
+    {
+     "city": "St. Louis",
+     "n": 6,
+     "rho": 0.429
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.62,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "bookings_per_1000__x__bookings_rate_t0": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 8,
+     "rho": 1.0
+    },
+    {
+     "city": "Detroit",
+     "n": 5,
+     "rho": 1.0
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": 1.0
+    },
+    {
+     "city": "St. Louis",
+     "n": 6,
+     "rho": 1.0
+    }
+   ],
+   "pooled": {
+    "pooled_rho": null,
+    "cities_used": 0,
+    "dropped_degenerate": 4
+   }
+  },
+  "officers_full_panel__x__murder_rate": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 9,
+     "rho": -0.317
+    },
+    {
+     "city": "Detroit",
+     "n": 2,
+     "rho": null,
+     "note": "thin-or-degenerate"
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": -0.3
+    },
+    {
+     "city": "St. Louis",
+     "n": 6,
+     "rho": 0.771
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.128,
+    "cities_used": 3,
+    "dropped_degenerate": 0
+   }
+  },
+  "officers_full_panel__x__murder_rate_t0": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 9,
+     "rho": -0.317
+    },
+    {
+     "city": "Detroit",
+     "n": 2,
+     "rho": null,
+     "note": "thin-or-degenerate"
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": -0.3
+    },
+    {
+     "city": "St. Louis",
+     "n": 6,
+     "rho": 0.771
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.128,
+    "cities_used": 3,
+    "dropped_degenerate": 0
+   }
+  },
+  "officers_full_panel__x__murder_rate_t+1": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 8,
+     "rho": 0.0
+    },
+    {
+     "city": "Detroit",
+     "n": 2,
+     "rho": null,
+     "note": "thin-or-degenerate"
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": -0.5
+    },
+    {
+     "city": "St. Louis",
+     "n": 6,
+     "rho": 0.829
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.209,
+    "cities_used": 3,
+    "dropped_degenerate": 0
+   }
+  },
+  "officers_full_panel__x__murder_rate_t+2": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 7,
+     "rho": -0.107
+    },
+    {
+     "city": "Detroit",
+     "n": 1,
+     "rho": null,
+     "note": "thin-or-degenerate"
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": -0.4
+    },
+    {
+     "city": "St. Louis",
+     "n": 5,
+     "rho": 1.0
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.259,
+    "cities_used": 2,
+    "dropped_degenerate": 1
+   }
+  },
+  "officers_full_panel__x__bookings_rate_t0": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 7,
+     "rho": 0.857
+    },
+    {
+     "city": "Detroit",
+     "n": 2,
+     "rho": null,
+     "note": "thin-or-degenerate"
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": -0.4
+    },
+    {
+     "city": "St. Louis",
+     "n": 5,
+     "rho": 0.6
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.475,
+    "cities_used": 3,
+    "dropped_degenerate": 0
+   }
+  },
+  "poverty_rate__x__murder_rate": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 5,
+     "rho": 0.9
+    },
+    {
+     "city": "Detroit",
+     "n": 5,
+     "rho": 0.0
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": 0.264
+    },
+    {
+     "city": "NYC",
+     "n": 4,
+     "rho": 0.105
+    },
+    {
+     "city": "St. Louis",
+     "n": 5,
+     "rho": -0.564
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.237,
+    "cities_used": 5,
+    "dropped_degenerate": 0
+   }
+  },
+  "poverty_rate__x__murder_rate_t0": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 5,
+     "rho": 0.9
+    },
+    {
+     "city": "Detroit",
+     "n": 5,
+     "rho": 0.0
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": 0.264
+    },
+    {
+     "city": "St. Louis",
+     "n": 5,
+     "rho": -0.564
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.269,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "poverty_rate__x__murder_rate_t+1": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 4,
+     "rho": 0.4
+    },
+    {
+     "city": "Detroit",
+     "n": 4,
+     "rho": -0.8
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": -0.158
+    },
+    {
+     "city": "St. Louis",
+     "n": 5,
+     "rho": -0.564
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.352,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "poverty_rate__x__murder_rate_t+2": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 3,
+     "rho": 0.5
+    },
+    {
+     "city": "Detroit",
+     "n": 3,
+     "rho": -0.5
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": -0.632
+    },
+    {
+     "city": "St. Louis",
+     "n": 4,
+     "rho": -0.316
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.262,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "poverty_rate__x__bookings_rate_t0": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 4,
+     "rho": 0.6
+    },
+    {
+     "city": "Detroit",
+     "n": 4,
+     "rho": -0.8
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": -0.632
+    },
+    {
+     "city": "St. Louis",
+     "n": 4,
+     "rho": 0.316
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.203,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "children_poverty_pct__x__murder_rate": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 5,
+     "rho": -0.103
+    },
+    {
+     "city": "Detroit",
+     "n": 5,
+     "rho": 0.2
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": 0.4
+    },
+    {
+     "city": "NYC",
+     "n": 4,
+     "rho": 1.0
+    },
+    {
+     "city": "St. Louis",
+     "n": 5,
+     "rho": 0.051
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.143,
+    "cities_used": 4,
+    "dropped_degenerate": 1
+   }
+  },
+  "children_poverty_pct__x__murder_rate_t0": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 5,
+     "rho": -0.103
+    },
+    {
+     "city": "Detroit",
+     "n": 5,
+     "rho": 0.2
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": 0.4
+    },
+    {
+     "city": "St. Louis",
+     "n": 5,
+     "rho": 0.051
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.143,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "children_poverty_pct__x__murder_rate_t+1": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 4,
+     "rho": 0.316
+    },
+    {
+     "city": "Detroit",
+     "n": 4,
+     "rho": 0.8
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": -0.2
+    },
+    {
+     "city": "St. Louis",
+     "n": 5,
+     "rho": -0.205
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.248,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "children_poverty_pct__x__murder_rate_t+2": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 3,
+     "rho": -1.0
+    },
+    {
+     "city": "Detroit",
+     "n": 3,
+     "rho": 0.5
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": 0.4
+    },
+    {
+     "city": "St. Louis",
+     "n": 4,
+     "rho": -0.632
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.076,
+    "cities_used": 3,
+    "dropped_degenerate": 1
+   }
+  },
+  "children_poverty_pct__x__bookings_rate_t0": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 4,
+     "rho": -0.632
+    },
+    {
+     "city": "Detroit",
+     "n": 4,
+     "rho": 0.8
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": -0.4
+    },
+    {
+     "city": "St. Louis",
+     "n": 4,
+     "rho": 0.316
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.064,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "bachelors_pct__x__murder_rate": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 5,
+     "rho": 0.975
+    },
+    {
+     "city": "Detroit",
+     "n": 5,
+     "rho": 0.7
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": 0.3
+    },
+    {
+     "city": "NYC",
+     "n": 4,
+     "rho": 0.0
+    },
+    {
+     "city": "St. Louis",
+     "n": 5,
+     "rho": -0.4
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.528,
+    "cities_used": 5,
+    "dropped_degenerate": 0
+   }
+  },
+  "bachelors_pct__x__murder_rate_t0": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 5,
+     "rho": 0.975
+    },
+    {
+     "city": "Detroit",
+     "n": 5,
+     "rho": 0.7
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": 0.3
+    },
+    {
+     "city": "St. Louis",
+     "n": 5,
+     "rho": -0.4
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.626,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "bachelors_pct__x__murder_rate_t+1": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 4,
+     "rho": 0.211
+    },
+    {
+     "city": "Detroit",
+     "n": 4,
+     "rho": 0.0
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": 0.1
+    },
+    {
+     "city": "St. Louis",
+     "n": 5,
+     "rho": 0.0
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.078,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "bachelors_pct__x__murder_rate_t+2": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 3,
+     "rho": 0.866
+    },
+    {
+     "city": "Detroit",
+     "n": 3,
+     "rho": 0.5
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": -0.4
+    },
+    {
+     "city": "St. Louis",
+     "n": 4,
+     "rho": 0.2
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.39,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "bachelors_pct__x__bookings_rate_t0": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 4,
+     "rho": 0.738
+    },
+    {
+     "city": "Detroit",
+     "n": 4,
+     "rho": -0.8
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": -0.4
+    },
+    {
+     "city": "St. Louis",
+     "n": 4,
+     "rho": 0.4
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.038,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "unemployment_rate__x__murder_rate": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 12,
+     "rho": 0.112
+    },
+    {
+     "city": "Detroit",
+     "n": 6,
+     "rho": 0.314
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": -0.359
+    },
+    {
+     "city": "NYC",
+     "n": 6,
+     "rho": 0.714
+    },
+    {
+     "city": "St. Louis",
+     "n": 7,
+     "rho": 0.126
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.213,
+    "cities_used": 5,
+    "dropped_degenerate": 0
+   }
+  },
+  "unemployment_rate__x__murder_rate_t0": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 12,
+     "rho": 0.112
+    },
+    {
+     "city": "Detroit",
+     "n": 6,
+     "rho": 0.314
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": -0.359
+    },
+    {
+     "city": "NYC",
+     "n": 1,
+     "rho": null,
+     "note": "thin-or-degenerate"
+    },
+    {
+     "city": "St. Louis",
+     "n": 7,
+     "rho": 0.126
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.047,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "unemployment_rate__x__murder_rate_t+1": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 12,
+     "rho": -0.077
+    },
+    {
+     "city": "Detroit",
+     "n": 5,
+     "rho": 0.6
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": -0.051
+    },
+    {
+     "city": "NYC",
+     "n": 1,
+     "rho": null,
+     "note": "thin-or-degenerate"
+    },
+    {
+     "city": "St. Louis",
+     "n": 7,
+     "rho": 0.036
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.149,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "unemployment_rate__x__murder_rate_t+2": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 12,
+     "rho": -0.196
+    },
+    {
+     "city": "Detroit",
+     "n": 4,
+     "rho": 1.0
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": 0.632
+    },
+    {
+     "city": "NYC",
+     "n": 1,
+     "rho": null,
+     "note": "thin-or-degenerate"
+    },
+    {
+     "city": "St. Louis",
+     "n": 6,
+     "rho": 0.406
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.315,
+    "cities_used": 3,
+    "dropped_degenerate": 1
+   }
+  },
+  "unemployment_rate__x__bookings_rate_t0": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 8,
+     "rho": 0.095
+    },
+    {
+     "city": "Detroit",
+     "n": 5,
+     "rho": 0.7
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": 0.632
+    },
+    {
+     "city": "St. Louis",
+     "n": 6,
+     "rho": 0.348
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.476,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "cost_burden_30pct_plus_share__x__murder_rate": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 5,
+     "rho": -0.3
+    },
+    {
+     "city": "Detroit",
+     "n": 5,
+     "rho": -0.1
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": -0.6
+    },
+    {
+     "city": "NYC",
+     "n": 4,
+     "rho": 1.0
+    },
+    {
+     "city": "St. Louis",
+     "n": 5,
+     "rho": 0.0
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.269,
+    "cities_used": 4,
+    "dropped_degenerate": 1
+   }
+  },
+  "cost_burden_30pct_plus_share__x__murder_rate_t0": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 5,
+     "rho": -0.3
+    },
+    {
+     "city": "Detroit",
+     "n": 5,
+     "rho": -0.1
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": -0.6
+    },
+    {
+     "city": "St. Louis",
+     "n": 5,
+     "rho": 0.0
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.269,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "cost_burden_30pct_plus_share__x__murder_rate_t+1": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 4,
+     "rho": -0.2
+    },
+    {
+     "city": "Detroit",
+     "n": 4,
+     "rho": -0.4
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": 0.2
+    },
+    {
+     "city": "St. Louis",
+     "n": 5,
+     "rho": 0.1
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.081,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "cost_burden_30pct_plus_share__x__murder_rate_t+2": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 3,
+     "rho": -0.5
+    },
+    {
+     "city": "Detroit",
+     "n": 3,
+     "rho": 0.5
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": 0.0
+    },
+    {
+     "city": "St. Louis",
+     "n": 4,
+     "rho": -0.8
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.268,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "cost_burden_30pct_plus_share__x__bookings_rate_t0": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 4,
+     "rho": -0.8
+    },
+    {
+     "city": "Detroit",
+     "n": 4,
+     "rho": -0.6
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": 0.8
+    },
+    {
+     "city": "St. Louis",
+     "n": 4,
+     "rho": 1.0
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.227,
+    "cities_used": 3,
+    "dropped_degenerate": 1
+   }
+  },
+  "rent_burden_50pct_plus_share__x__murder_rate": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 5,
+     "rho": 0.5
+    },
+    {
+     "city": "Detroit",
+     "n": 5,
+     "rho": -0.7
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": 0.9
+    },
+    {
+     "city": "NYC",
+     "n": 4,
+     "rho": 1.0
+    },
+    {
+     "city": "St. Louis",
+     "n": 5,
+     "rho": -0.6
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.115,
+    "cities_used": 4,
+    "dropped_degenerate": 1
+   }
+  },
+  "rent_burden_50pct_plus_share__x__murder_rate_t0": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 5,
+     "rho": 0.5
+    },
+    {
+     "city": "Detroit",
+     "n": 5,
+     "rho": -0.7
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": 0.9
+    },
+    {
+     "city": "St. Louis",
+     "n": 5,
+     "rho": -0.6
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.115,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "rent_burden_50pct_plus_share__x__murder_rate_t+1": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 4,
+     "rho": -0.8
+    },
+    {
+     "city": "Detroit",
+     "n": 4,
+     "rho": -0.8
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": 0.3
+    },
+    {
+     "city": "St. Louis",
+     "n": 5,
+     "rho": -0.5
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.544,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "rent_burden_50pct_plus_share__x__murder_rate_t+2": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 3,
+     "rho": 1.0
+    },
+    {
+     "city": "Detroit",
+     "n": 3,
+     "rho": -0.5
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": 0.0
+    },
+    {
+     "city": "St. Louis",
+     "n": 4,
+     "rho": -0.2
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.246,
+    "cities_used": 3,
+    "dropped_degenerate": 1
+   }
+  },
+  "rent_burden_50pct_plus_share__x__bookings_rate_t0": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 4,
+     "rho": -0.2
+    },
+    {
+     "city": "Detroit",
+     "n": 4,
+     "rho": -0.8
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": -0.8
+    },
+    {
+     "city": "St. Louis",
+     "n": 4,
+     "rho": 0.4
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.457,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "median_home_value__x__murder_rate": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 5,
+     "rho": -0.9
+    },
+    {
+     "city": "Detroit",
+     "n": 5,
+     "rho": -0.9
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": -0.2
+    },
+    {
+     "city": "NYC",
+     "n": 4,
+     "rho": -1.0
+    },
+    {
+     "city": "St. Louis",
+     "n": 5,
+     "rho": -0.9
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.819,
+    "cities_used": 4,
+    "dropped_degenerate": 1
+   }
+  },
+  "median_home_value__x__murder_rate_t0": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 5,
+     "rho": -0.9
+    },
+    {
+     "city": "Detroit",
+     "n": 5,
+     "rho": -0.9
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": -0.2
+    },
+    {
+     "city": "St. Louis",
+     "n": 5,
+     "rho": -0.9
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.819,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "median_home_value__x__murder_rate_t+1": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 4,
+     "rho": -0.8
+    },
+    {
+     "city": "Detroit",
+     "n": 4,
+     "rho": -1.0
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": -0.6
+    },
+    {
+     "city": "St. Louis",
+     "n": 5,
+     "rho": -1.0
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.714,
+    "cities_used": 2,
+    "dropped_degenerate": 2
+   }
+  },
+  "median_home_value__x__murder_rate_t+2": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 3,
+     "rho": -0.5
+    },
+    {
+     "city": "Detroit",
+     "n": 3,
+     "rho": -1.0
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": -1.0
+    },
+    {
+     "city": "St. Louis",
+     "n": 4,
+     "rho": -1.0
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.5,
+    "cities_used": 1,
+    "dropped_degenerate": 3
+   }
+  },
+  "median_home_value__x__bookings_rate_t0": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 4,
+     "rho": -0.8
+    },
+    {
+     "city": "Detroit",
+     "n": 4,
+     "rho": -0.4
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": -0.6
+    },
+    {
+     "city": "St. Louis",
+     "n": 4,
+     "rho": 0.8
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.272,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "median_gross_rent__x__murder_rate": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 5,
+     "rho": -0.9
+    },
+    {
+     "city": "Detroit",
+     "n": 5,
+     "rho": -0.9
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": -0.6
+    },
+    {
+     "city": "NYC",
+     "n": 4,
+     "rho": -1.0
+    },
+    {
+     "city": "St. Louis",
+     "n": 5,
+     "rho": -0.9
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.856,
+    "cities_used": 4,
+    "dropped_degenerate": 1
+   }
+  },
+  "median_gross_rent__x__murder_rate_t0": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 5,
+     "rho": -0.9
+    },
+    {
+     "city": "Detroit",
+     "n": 5,
+     "rho": -0.9
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": -0.6
+    },
+    {
+     "city": "St. Louis",
+     "n": 5,
+     "rho": -0.9
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.856,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "median_gross_rent__x__murder_rate_t+1": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 4,
+     "rho": -0.8
+    },
+    {
+     "city": "Detroit",
+     "n": 4,
+     "rho": -1.0
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": -0.8
+    },
+    {
+     "city": "St. Louis",
+     "n": 5,
+     "rho": -1.0
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.8,
+    "cities_used": 2,
+    "dropped_degenerate": 2
+   }
+  },
+  "median_gross_rent__x__murder_rate_t+2": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 3,
+     "rho": -0.5
+    },
+    {
+     "city": "Detroit",
+     "n": 3,
+     "rho": -1.0
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": -1.0
+    },
+    {
+     "city": "St. Louis",
+     "n": 4,
+     "rho": -1.0
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.5,
+    "cities_used": 1,
+    "dropped_degenerate": 3
+   }
+  },
+  "median_gross_rent__x__bookings_rate_t0": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 4,
+     "rho": -0.8
+    },
+    {
+     "city": "Detroit",
+     "n": 4,
+     "rho": -0.4
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": -0.6
+    },
+    {
+     "city": "St. Louis",
+     "n": 4,
+     "rho": 0.8
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.272,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "snap_receipt_share_pct__x__murder_rate": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 5,
+     "rho": 0.5
+    },
+    {
+     "city": "Detroit",
+     "n": 5,
+     "rho": 0.9
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": 0.6
+    },
+    {
+     "city": "NYC",
+     "n": 4,
+     "rho": -0.8
+    },
+    {
+     "city": "St. Louis",
+     "n": 5,
+     "rho": 0.8
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.495,
+    "cities_used": 5,
+    "dropped_degenerate": 0
+   }
+  },
+  "snap_receipt_share_pct__x__murder_rate_t0": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 5,
+     "rho": 0.5
+    },
+    {
+     "city": "Detroit",
+     "n": 5,
+     "rho": 0.9
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": 0.6
+    },
+    {
+     "city": "St. Louis",
+     "n": 5,
+     "rho": 0.8
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.741,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "snap_receipt_share_pct__x__murder_rate_t+1": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 4,
+     "rho": 1.0
+    },
+    {
+     "city": "Detroit",
+     "n": 4,
+     "rho": 0.8
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": 1.0
+    },
+    {
+     "city": "St. Louis",
+     "n": 5,
+     "rho": 0.9
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.858,
+    "cities_used": 2,
+    "dropped_degenerate": 2
+   }
+  },
+  "snap_receipt_share_pct__x__murder_rate_t+2": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 3,
+     "rho": -0.5
+    },
+    {
+     "city": "Detroit",
+     "n": 3,
+     "rho": 0.5
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": 0.8
+    },
+    {
+     "city": "St. Louis",
+     "n": 4,
+     "rho": 0.8
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.5,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "snap_receipt_share_pct__x__bookings_rate_t0": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 4,
+     "rho": 0.4
+    },
+    {
+     "city": "Detroit",
+     "n": 4,
+     "rho": -0.2
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": 0.8
+    },
+    {
+     "city": "St. Louis",
+     "n": 4,
+     "rho": -0.6
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.155,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  }
+ },
+ "fe_within_regressions": {
+  "FE-1_care_only_t0arc": {
+   "n": 32,
+   "cities": 6,
+   "outcome": "murder_rate_t0",
+   "within_dof": 25,
+   "saturated": false,
+   "betas_within_std": {
+    "care_per_100k": -0.159
+   },
+   "desc_t_stats": {
+    "care_per_100k": -0.88
+   },
+   "within_r2": 0.026,
+   "note": "within-city demeaned standardized OLS; t-stats descriptive; direction-class only"
+  },
+  "FE-1_care_only": {
+   "n": 37,
+   "cities": 6,
+   "outcome": "murder_rate",
+   "within_dof": 30,
+   "saturated": false,
+   "betas_within_std": {
+    "care_per_100k": -0.397
+   },
+   "desc_t_stats": {
+    "care_per_100k": -2.56
+   },
+   "within_r2": 0.158,
+   "note": "within-city demeaned standardized OLS; t-stats descriptive; direction-class only"
+  },
+  "FE-2_care_cage_bookings": {
+   "n": 12,
+   "cities": 4,
+   "outcome": "murder_rate",
+   "within_dof": 5,
+   "saturated": true,
+   "betas_within_std": {
+    "care_per_100k": -0.631,
+    "cage_per_100k": 0.063,
+    "bookings_per_1000": -0.137
+   },
+   "desc_t_stats": {
+    "care_per_100k": -2.31,
+    "cage_per_100k": 0.23,
+    "bookings_per_1000": -0.51
+   },
+   "within_r2": 0.419,
+   "note": "within-city demeaned standardized OLS; t-stats descriptive; direction-class only"
+  },
+  "FE-2b_plus_policing": {
+   "n": 12,
+   "cities": 4,
+   "outcome": "murder_rate",
+   "within_dof": 4,
+   "saturated": true,
+   "betas_within_std": {
+    "care_per_100k": -1.088,
+    "cage_per_100k": -0.582,
+    "bookings_per_1000": -0.089,
+    "officers_full_panel": 0.85
+   },
+   "desc_t_stats": {
+    "care_per_100k": -3.04,
+    "cage_per_100k": -1.31,
+    "bookings_per_1000": -0.37,
+    "officers_full_panel": 1.74
+   },
+   "within_r2": 0.595,
+   "note": "within-city demeaned standardized OLS; t-stats descriptive; direction-class only"
+  },
+  "FE-3_maslow_joint": {
+   "n": 24,
+   "cities": 5,
+   "outcome": "murder_rate",
+   "within_dof": 14,
+   "saturated": false,
+   "betas_within_std": {
+    "care_per_100k": -0.181,
+    "cost_burden_30pct_plus_share": -0.28,
+    "median_home_value": -0.099,
+    "snap_receipt_share_pct": 0.64,
+    "bachelors_pct": -0.003
+   },
+   "desc_t_stats": {
+    "care_per_100k": -1.1,
+    "cost_burden_30pct_plus_share": -2.12,
+    "median_home_value": -0.58,
+    "snap_receipt_share_pct": 4.05,
+    "bachelors_pct": -0.02
+   },
+   "within_r2": 0.695,
+   "note": "within-city demeaned standardized OLS; t-stats descriptive; direction-class only"
+  },
+  "FE-3_arc_tplus1": {
+   "n": 18,
+   "cities": 5,
+   "outcome": "murder_rate_t+1",
+   "within_dof": 8,
+   "saturated": false,
+   "betas_within_std": {
+    "care_per_100k": -0.197,
+    "cost_burden_30pct_plus_share": 0.056,
+    "median_home_value": -0.263,
+    "snap_receipt_share_pct": 0.544,
+    "bachelors_pct": -0.189
+   },
+   "desc_t_stats": {
+    "care_per_100k": -1.04,
+    "cost_burden_30pct_plus_share": 0.35,
+    "median_home_value": -1.27,
+    "snap_receipt_share_pct": 2.19,
+    "bachelors_pct": -1.26
+   },
+   "within_r2": 0.748,
+   "note": "within-city demeaned standardized OLS; t-stats descriptive; direction-class only"
+  },
+  "FE-3_arc_tplus2": {
+   "n": 14,
+   "cities": 5,
+   "outcome": "murder_rate_t+2",
+   "within_dof": 4,
+   "saturated": true,
+   "betas_within_std": {
+    "care_per_100k": -0.213,
+    "cost_burden_30pct_plus_share": -0.325,
+    "median_home_value": -0.624,
+    "snap_receipt_share_pct": 0.127,
+    "bachelors_pct": -0.233
+   },
+   "desc_t_stats": {
+    "care_per_100k": -0.98,
+    "cost_burden_30pct_plus_share": -1.92,
+    "median_home_value": -3.32,
+    "snap_receipt_share_pct": 0.52,
+    "bachelors_pct": -1.51
+   },
+   "within_r2": 0.843,
+   "note": "within-city demeaned standardized OLS; t-stats descriptive; direction-class only"
+  },
+  "FE-4_all_lanes_core": {
+   "n": 12,
+   "cities": 4,
+   "outcome": "murder_rate",
+   "within_dof": 3,
+   "saturated": true,
+   "betas_within_std": {
+    "care_per_100k": -0.295,
+    "cage_per_100k": 0.032,
+    "bookings_per_1000": -0.061,
+    "cost_burden_30pct_plus_share": -0.432,
+    "snap_receipt_share_pct": 0.404
+   },
+   "desc_t_stats": {
+    "care_per_100k": -0.75,
+    "cage_per_100k": 0.14,
+    "bookings_per_1000": -0.16,
+    "cost_burden_30pct_plus_share": -1.3,
+    "snap_receipt_share_pct": 0.81
+   },
+   "within_r2": 0.713,
+   "note": "within-city demeaned standardized OLS; t-stats descriptive; direction-class only"
+  },
+  "FE-5_choice_set": {
+   "n": 24,
+   "cities": 5,
+   "outcome": "murder_rate",
+   "within_dof": 15,
+   "saturated": false,
+   "betas_within_std": {
+    "care_per_100k": -0.51,
+    "poverty_rate": 0.111,
+    "children_poverty_pct": 0.031,
+    "bachelors_pct": 0.121
+   },
+   "desc_t_stats": {
+    "care_per_100k": -2.3,
+    "poverty_rate": 0.36,
+    "children_poverty_pct": 0.13,
+    "bachelors_pct": 0.41
+   },
+   "within_r2": 0.311,
+   "note": "within-city demeaned standardized OLS; t-stats descriptive; direction-class only"
+  }
+ },
+ "moderators2": {
+  "unemp_split_full_panel": {
+   "HIGH-unemp": {
+    "group_threshold": 5.7,
+    "cities": [
+     "Cincinnati",
+     "Detroit",
+     "NYC"
+    ],
+    "per_city": [
+     {
+      "city": "Cincinnati",
+      "n": 12,
+      "rho": 0.175
+     },
+     {
+      "city": "Detroit",
+      "n": 6,
+      "rho": -0.771
+     },
+     {
+      "city": "NYC",
+      "n": 6,
+      "rho": -1.0
+     }
+    ],
+    "pooled": {
+     "pooled_rho": -0.399,
+     "cities_used": 2,
+     "dropped_degenerate": 1
+    }
+   },
+   "LOW-unemp": {
+    "group_threshold": 5.7,
+    "cities": [
+     "Memphis",
+     "St. Louis"
+    ],
+    "per_city": [
+     {
+      "city": "Memphis",
+      "n": 6,
+      "rho": -0.6
+     },
+     {
+      "city": "St. Louis",
+      "n": 7,
+      "rho": -0.714
+     }
+    ],
+    "pooled": {
+     "pooled_rho": -0.661,
+     "cities_used": 2,
+     "dropped_degenerate": 0
+    }
+   }
+  },
+  "dm_split_joint_block": {
+   "HIGH-DM": {
+    "cities": [
+     "Cincinnati",
+     "Detroit",
+     "Memphis",
+     "New Orleans"
+    ],
+    "per_city": [
+     {
+      "city": "Cincinnati",
+      "n": 5,
+      "rho": -0.9
+     },
+     {
+      "city": "Detroit",
+      "n": 5,
+      "rho": -0.6
+     },
+     {
+      "city": "Memphis",
+      "n": 5,
+      "rho": -0.5
+     }
+    ],
+    "pooled": {
+     "pooled_rho": -0.719,
+     "cities_used": 3,
+     "dropped_degenerate": 0
+    }
+   },
+   "LOW-DM": {
+    "cities": [
+     "Boston",
+     "Houston",
+     "NYC",
+     "St. Louis"
+    ],
+    "per_city": [
+     {
+      "city": "NYC",
+      "n": 4,
+      "rho": -1.0
+     },
+     {
+      "city": "St. Louis",
+      "n": 5,
+      "rho": -0.6
+     }
+    ],
+    "pooled": {
+     "pooled_rho": -0.6,
+     "cities_used": 1,
+     "dropped_degenerate": 1
+    }
+   }
+  }
+ },
+ "tier_ordering": {
+  "tier_within_summary": {
+   "T1-food": {
+    "lanes": [
+     {
+      "lane": "snap_receipt_share_pct",
+      "pooled_rho": 0.495,
+      "deprivation_sign_rho": 0.495,
+      "abs_rho": 0.495,
+      "cities": 5,
+      "dropped_degenerate": 0
+     }
+    ],
+    "mean_abs_rho": 0.495,
+    "n_lanes": 1
+   },
+   "T1-housing": {
+    "lanes": [
+     {
+      "lane": "cost_burden_30pct_plus_share",
+      "pooled_rho": -0.269,
+      "deprivation_sign_rho": -0.269,
+      "abs_rho": 0.269,
+      "cities": 4,
+      "dropped_degenerate": 1
+     },
+     {
+      "lane": "rent_burden_50pct_plus_share",
+      "pooled_rho": 0.115,
+      "deprivation_sign_rho": 0.115,
+      "abs_rho": 0.115,
+      "cities": 4,
+      "dropped_degenerate": 1
+     },
+     {
+      "lane": "median_home_value",
+      "pooled_rho": -0.819,
+      "deprivation_sign_rho": 0.819,
+      "abs_rho": 0.819,
+      "cities": 4,
+      "dropped_degenerate": 1
+     },
+     {
+      "lane": "median_gross_rent",
+      "pooled_rho": -0.856,
+      "deprivation_sign_rho": null,
+      "abs_rho": 0.856,
+      "cities": 4,
+      "dropped_degenerate": 1
+     }
+    ],
+    "mean_abs_rho": 0.515,
+    "n_lanes": 4
+   },
+   "T2-care": {
+    "lanes": [
+     {
+      "lane": "care_per_100k",
+      "pooled_rho": -0.543,
+      "deprivation_sign_rho": 0.543,
+      "abs_rho": 0.543,
+      "cities": 4,
+      "dropped_degenerate": 1
+     },
+     {
+      "lane": "bonds_core_per_100k",
+      "pooled_rho": -0.71,
+      "deprivation_sign_rho": 0.71,
+      "abs_rho": 0.71,
+      "cities": 4,
+      "dropped_degenerate": 1
+     }
+    ],
+    "mean_abs_rho": 0.627,
+    "n_lanes": 2
+   },
+   "T2-safety": {
+    "lanes": [
+     {
+      "lane": "cage_per_100k",
+      "pooled_rho": -0.243,
+      "deprivation_sign_rho": null,
+      "abs_rho": 0.243,
+      "cities": 3,
+      "dropped_degenerate": 0
+     },
+     {
+      "lane": "bookings_per_1000",
+      "pooled_rho": -0.356,
+      "deprivation_sign_rho": -0.356,
+      "abs_rho": 0.356,
+      "cities": 5,
+      "dropped_degenerate": 0
+     }
+    ],
+    "mean_abs_rho": 0.299,
+    "n_lanes": 2
+   },
+   "T3-stability": {
+    "lanes": [
+     {
+      "lane": "unemployment_rate",
+      "pooled_rho": 0.213,
+      "deprivation_sign_rho": 0.213,
+      "abs_rho": 0.213,
+      "cities": 5,
+      "dropped_degenerate": 0
+     }
+    ],
+    "mean_abs_rho": 0.213,
+    "n_lanes": 1
+   },
+   "T45-choice": {
+    "lanes": [
+     {
+      "lane": "poverty_rate",
+      "pooled_rho": 0.237,
+      "deprivation_sign_rho": 0.237,
+      "abs_rho": 0.237,
+      "cities": 5,
+      "dropped_degenerate": 0
+     },
+     {
+      "lane": "children_poverty_pct",
+      "pooled_rho": 0.143,
+      "deprivation_sign_rho": 0.143,
+      "abs_rho": 0.143,
+      "cities": 4,
+      "dropped_degenerate": 1
+     }
+    ],
+    "mean_abs_rho": 0.19,
+    "n_lanes": 2
+   },
+   "T45-edu": {
+    "lanes": [
+     {
+      "lane": "bachelors_pct",
+      "pooled_rho": 0.528,
+      "deprivation_sign_rho": -0.528,
+      "abs_rho": 0.528,
+      "cities": 5,
+      "dropped_degenerate": 0
+     }
+    ],
+    "mean_abs_rho": 0.528,
+    "n_lanes": 1
+   },
+   "control": {
+    "lanes": [
+     {
+      "lane": "officers_full_panel",
+      "pooled_rho": 0.128,
+      "deprivation_sign_rho": null,
+      "abs_rho": 0.128,
+      "cities": 3,
+      "dropped_degenerate": 0
+     }
+    ],
+    "mean_abs_rho": 0.128,
+    "n_lanes": 1
+   }
+  },
+  "t1_within": {
+   "mean_abs_rho": 0.511,
+   "mean_depr_signed_rho": 0.29,
+   "n_lanes": 5
+  },
+  "t1_housing_within": {
+   "mean_abs_rho": 0.515,
+   "mean_depr_signed_rho": 0.222,
+   "n_lanes": 4
+  },
+  "t1_food_within": {
+   "mean_abs_rho": 0.495,
+   "mean_depr_signed_rho": 0.495,
+   "n_lanes": 1
+  },
+  "t45_within": {
+   "mean_abs_rho": 0.303,
+   "mean_depr_signed_rho": -0.049,
+   "n_lanes": 3
+  },
+  "t2_care_within": {
+   "mean_abs_rho": 0.627,
+   "mean_depr_signed_rho": 0.627,
+   "n_lanes": 2
+  },
+  "city_level_reads": {
+   "T1": {
+    "snap_receipt_share_pct": {
+     "rho": -0.5,
+     "n": 5,
+     "deprivation_dir_rho": -0.5
+    },
+    "cost_burden_30pct_plus_share": {
+     "rho": -0.1,
+     "n": 5,
+     "deprivation_dir_rho": -0.1
+    },
+    "rent_burden_50pct_plus_share": {
+     "rho": -0.3,
+     "n": 5,
+     "deprivation_dir_rho": -0.3
+    },
+    "median_home_value": {
+     "rho": -0.6,
+     "n": 5,
+     "deprivation_dir_rho": 0.6
+    },
+    "median_gross_rent": {
+     "rho": -0.6,
+     "n": 5,
+     "deprivation_dir_rho": null
+    }
+   },
+   "T45": {
+    "poverty_rate": {
+     "rho": 0.1,
+     "n": 5,
+     "deprivation_dir_rho": 0.1
+    },
+    "children_poverty_pct": {
+     "rho": -0.1,
+     "n": 5,
+     "deprivation_dir_rho": -0.1
+    },
+    "bachelors_pct": {
+     "rho": -0.2,
+     "n": 5,
+     "deprivation_dir_rho": 0.2
+    }
+   },
+   "T2": {
+    "care_per_100k": {
+     "rho": -0.8,
+     "n": 5,
+     "deprivation_dir_rho": 0.8
+    },
+    "cage_per_100k": {
+     "rho": 0.4,
+     "n": 4,
+     "deprivation_dir_rho": null
+    },
+    "bookings_per_1000": {
+     "rho": 0.6,
+     "n": 5,
+     "deprivation_dir_rho": 0.6
+    }
+   }
+  },
+  "t1_city_depr_mean": 0.375,
+  "t45_city_depr_mean": 0.133,
+  "strict_checks": {
+   "C1_T1housing_beats_T45_within": {
+    "a": 0.515,
+    "b": 0.303,
+    "pass": true
+   },
+   "C2_T1food_beats_T45_within": {
+    "a": 0.495,
+    "b": 0.303,
+    "pass": true
+   },
+   "C3_T1_beats_care_within": {
+    "a": 0.505,
+    "b": 0.627,
+    "pass": false
+   },
+   "C4_T1_beats_T45_citylevel": {
+    "a": 0.375,
+    "b": 0.133,
+    "pass": true
+   },
+   "C5_T1_sign_consistency": {
+    "a": "housing=+strong, food=+weak-with-class-flip (need-follows-violence)",
+    "b": null,
+    "pass": null
+   }
+  },
+  "city_means_joint_block": {
+   "Cincinnati": {
+    "care_per_100k": 40836410.62398055,
+    "bonds_core_per_100k": 17876268.98986292,
+    "cage_per_100k": 54823603.29384353,
+    "bookings_per_1000": 18.225,
+    "officers_full_panel": 310.6,
+    "poverty_rate": 24.720000000000002,
+    "children_poverty_pct": 12.779999999999998,
+    "bachelors_pct": 9.219999999999999,
+    "unemployment_rate": 4.140000000000001,
+    "cost_burden_30pct_plus_share": 52.55999999999999,
+    "rent_burden_50pct_plus_share": 30.2,
+    "median_home_value": 242400.0,
+    "median_gross_rent": 1005.8,
+    "snap_receipt_share_pct": 18.28,
+    "murder_rate": 24.660000000000004
+   },
+   "Detroit": {
+    "care_per_100k": 56236437.736852266,
+    "bonds_core_per_100k": 23516943.30594148,
+    "cage_per_100k": 56512064.39203343,
+    "bookings_per_1000": 17.9,
+    "officers_full_panel": 391.15,
+    "poverty_rate": 32.160000000000004,
+    "children_poverty_pct": 14.36,
+    "bachelors_pct": 16.02,
+    "unemployment_rate": 5.62,
+    "cost_burden_30pct_plus_share": 60.64,
+    "rent_burden_50pct_plus_share": 36.36,
+    "median_home_value": 87560.0,
+    "median_gross_rent": 1042.4,
+    "snap_receipt_share_pct": 38.46,
+    "murder_rate": 38.480000000000004
+   },
+   "Memphis": {
+    "care_per_100k": 21690213.47546696,
+    "bonds_core_per_100k": 10637484.448341198,
+    "cage_per_100k": 47781725.72312471,
+    "bookings_per_1000": 29.499999999999996,
+    "officers_full_panel": 314.38,
+    "poverty_rate": 22.4,
+    "children_poverty_pct": 15.580000000000002,
+    "bachelors_pct": 12.080000000000002,
+    "unemployment_rate": 4.9,
+    "cost_burden_30pct_plus_share": 56.239999999999995,
+    "rent_burden_50pct_plus_share": 29.96,
+    "median_home_value": 185020.0,
+    "median_gross_rent": 1153.2,
+    "snap_receipt_share_pct": 18.36,
+    "murder_rate": 45.8
+   },
+   "NYC": {
+    "care_per_100k": 184377853.79721093,
+    "bonds_core_per_100k": 11022820.161134738,
+    "cage_per_100k": null,
+    "bookings_per_1000": 24.575,
+    "officers_full_panel": null,
+    "poverty_rate": 18.04,
+    "children_poverty_pct": 13.440000000000001,
+    "bachelors_pct": 15.919999999999998,
+    "unemployment_rate": 5.319999999999999,
+    "cost_burden_30pct_plus_share": 52.31999999999999,
+    "rent_burden_50pct_plus_share": 29.3,
+    "median_home_value": 748480.0,
+    "median_gross_rent": 1746.0,
+    "snap_receipt_share_pct": 21.78,
+    "murder_rate": 5.0
+   },
+   "St. Louis": {
+    "care_per_100k": 35257853.301088035,
+    "bonds_core_per_100k": 12452879.384759827,
+    "cage_per_100k": 102042020.3482002,
+    "bookings_per_1000": 32.25,
+    "officers_full_panel": 343.44999999999993,
+    "poverty_rate": 20.7,
+    "children_poverty_pct": 11.8,
+    "bachelors_pct": 9.34,
+    "unemployment_rate": 4.159999999999999,
+    "cost_burden_30pct_plus_share": 46.379999999999995,
+    "rent_burden_50pct_plus_share": 25.020000000000003,
+    "median_home_value": 199880.0,
+    "median_gross_rent": 992.4,
+    "snap_receipt_share_pct": 17.359999999999996,
+    "murder_rate": 59.94000000000001
+   }
+  },
+  "verdict": [
+   "TIER-ORDERING FALSIFIER VERDICT (within-city pooled, deprivation-|rho|): STRICT Maslow ordering FAILS as a total order — T1-housing (0.515) leads the panel and beats T4-5 (0.303), but T1-food (0.495) runs WEAKER than T4-5 and rides the need-follows-violence class (SNAP pooled +0.495, city-level BETWEEN read flips to -0.5), and T2-care (0.627) sits near T1-housing, above the food tier.",
+   "What DOES survive: the housing-affordability tier is the strongest single Maslow lane (home-value pooled -0.819, mean T1-housing |rho| > T4-5 mean |rho|), consistent with the Maslow prior; the edu/choice tier (bachelors) carries REAL weight (~0.43-0.5) — the base-of-pyramid-only story is falsified; the panel's ordering is SHELTER (T1-housing) >= CARE (T2) >> SAFETY-PROCESS (T2-safety |0.14|) and > FOOD-AS-MEASURED (SNAP), with T4-5 choice/edu statistically tied with the food tier."
+  ]
+ },
+ "first_differences": {
+  "care_per_100k": {
+   "rho": 0.183,
+   "n": 19,
+   "city_year_diffs": 19
+  },
+  "cage_per_100k": {
+   "rho": -0.176,
+   "n": 10,
+   "city_year_diffs": 10
+  },
+  "bookings_per_1000": {
+   "rho": -0.359,
+   "n": 15,
+   "city_year_diffs": 15
+  },
+  "snap_receipt_share_pct": {
+   "rho": 0.233,
+   "n": 19,
+   "city_year_diffs": 19
+  },
+  "cost_burden_30pct_plus_share": {
+   "rho": -0.249,
+   "n": 19,
+   "city_year_diffs": 19
+  },
+  "median_home_value": {
+   "rho": 0.378,
+   "n": 19,
+   "city_year_diffs": 19
+  }
+ },
+ "arc_reads_t_plus_1": {
+  "care_per_100k_t_vs_rate_t+1": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 11,
+     "rho": 0.155
+    },
+    {
+     "city": "Detroit",
+     "n": 5,
+     "rho": -0.9
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": -0.9
+    },
+    {
+     "city": "St. Louis",
+     "n": 7,
+     "rho": -0.821
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.756,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "bookings_per_1000_t_vs_rate_t+1": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 8,
+     "rho": 0.19
+    },
+    {
+     "city": "Detroit",
+     "n": 5,
+     "rho": 0.6
+    },
+    {
+     "city": "Memphis",
+     "n": 4,
+     "rho": 0.8
+    },
+    {
+     "city": "St. Louis",
+     "n": 6,
+     "rho": 0.314
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.521,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  },
+  "snap_receipt_share_pct_t_vs_rate_t+1": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 4,
+     "rho": 1.0
+    },
+    {
+     "city": "Detroit",
+     "n": 4,
+     "rho": 0.8
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": 1.0
+    },
+    {
+     "city": "St. Louis",
+     "n": 5,
+     "rho": 0.9
+    }
+   ],
+   "pooled": {
+    "pooled_rho": 0.858,
+    "cities_used": 2,
+    "dropped_degenerate": 2
+   }
+  },
+  "cost_burden_30pct_plus_share_t_vs_rate_t+1": {
+   "per_city": [
+    {
+     "city": "Cincinnati",
+     "n": 4,
+     "rho": -0.2
+    },
+    {
+     "city": "Detroit",
+     "n": 4,
+     "rho": -0.4
+    },
+    {
+     "city": "Memphis",
+     "n": 5,
+     "rho": 0.2
+    },
+    {
+     "city": "St. Louis",
+     "n": 5,
+     "rho": 0.1
+    }
+   ],
+   "pooled": {
+    "pooled_rho": -0.081,
+    "cities_used": 4,
+    "dropped_degenerate": 0
+   }
+  }
+ },
+ "format_lock_verification_note": "Re-derived care/bonds arcs (care -0.543/-0.756/-0.685, bonds -0.709/-0.607/-0.637 at t+0/t+1/t+2 with the atanh-degenerate city-drop law) carry the lane12 direction-class (NEGATIVE-with-lag) at this panel's city-year grain; the banked lane12 numbers (-0.421/-0.484/-0.308, -0.475/-0.466/-0.477; pooled-z weighting, n=24-31 city-years) remain the CARRIED verbatim reads per format-lock — the two conventions agree in class, differ in weighting; no re-baselining claimed.",
+ "carried_verbatim_banked": {
+  "lane12_care_arcs_within_city": "care -0.421/-0.484/-0.308, bonds-core -0.475/-0.466/-0.477 (t+0/t+1/t+2), bookings x care -0.616 (format-lock, no re-run)",
+  "lane14_policing": "officer-lane ~orthogonal to murder margin in 14-city panel (all lags ns) — policing control enters FE-2b as the orthogonal-control check",
+  "lane15_dm": "HIGH-DM +0.136 vs LOW-DM -0.167 mean care-x-rate rho (banked T1); re-run on joint block in moderators2"
+ }
+}

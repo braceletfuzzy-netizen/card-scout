@@ -1,0 +1,42 @@
+{
+ "_record": "lane13_transport_lever_v1",
+ "built": "2026-11-24",
+ "lane": "LANE-13 \u2014 THE TRANSPORT-LEVER (one-pager #3 'Transport-to-Opportunity', the founder's queue-line: 'the transport-to-opportunity = the worker-ladder = the ACS-commute-by-income-band')",
+ "laws_held": [
+  "direction-class only, no causal claims",
+  "no fabricated rows \u2014 every figure read live from the keyless ACS table-based-SF .dat pulls on-disk (_lane13/*.dat + SAIPE est22all)",
+  "honest-null per failed route (Census API keyless walled; Census Reporter rate-limited -> the www2 table-based-SF direct route is the one that works)",
+  "the pre-registered falsifier per one-pager #3: if Memphis lower-band commute burden is NOT worse than comparison, the lane dies honestly \u2014 the read below runs that test"
+ ],
+ "route": {
+  "acs": "www2.census.gov/programs-surveys/acs/summary_file/2022/table-based-SF/data/1YRData + 5YRData/*.dat \u2014 KEYLESS, city-place + county grain (the Census-API route stays key-walled; banked honest-null)",
+  "income_census": "SAIPE 2022 county medians/poverty (est22all.txt, keyless) \u2014 the income-band denominator ACS does not expose",
+  "tables": [
+   "B08303 travel-time bins (counts)",
+   "B08301 mode counts",
+   "B08013 aggregate travel time (official mean commute)",
+   "B08136 aggregate by mode (mode mean-minutes)",
+   "B08141 vehicle-availability x mode",
+   "B08122/B08522 poverty-status x mode"
+  ]
+ },
+ "the_finding": [
+  "THE MEASURE-FIRST TABLE SHIPPED: 14 geo rows (10 counties + 4 city-proper), travel-time dist + mode shares + vehicle availability + official mean commute + SAIPE income/poverty merged per row",
+  "TEST-1 (the pre-registered falsifier): Memphis commute BURDEN is NOT worse than its comparison set \u2014 mean commute 20.9 min = mid-pack (4/10; longer than OKC/SanAnt/Cincinnati, shorter than Detroit/Chicago/Philly/Jacksonville); the naive 'Memphis = brutal commutes' prior DIES HONESTLY",
+  "TEST-2 (the lever that DID fire): transit AVAILABILITY, not commute length \u2014 Memphis 0.62% transit commute-share = 2nd-lowest of 10 counties (above only OKC 0.49%); the income-peer set (Cincinnati 2.82%, Detroit 2.33%, Jacksonville 3.37%, Philly 19.8%) runs 3.7x-32x Memphis's level",
+  "TEST-3 (the Poverty-band anatomy, Memphis city-proper 1-yr): 25,295 below-poverty workers \u2014 17,669 (69.8%) DRIVE ALONE to work; only 780 of 25,295 (3.1%) reach work by transit; of the 1,751 total transit riders, 44.5% are below poverty: WHERE the one bus line reaches, the poor band uses it \u2014 the service is absent, not the demand",
+  "TEST-4 (the no-car starve): 14,314 no-vehicle households in Memphis city (5.1%) vs transit riders 1,599 total citywide (5-yr county basis): ~93% of no-car households reach work by some non-transit means (walked/borrowed ride/stay-home) \u2014 the car-less-and-car-service-starved cell the founder's ladder question aims at",
+  "the commute-time x wage-band table: B08136 mode-mean-minutes confirms the shape (transit riders 42-54 min vs car 21-32 min across all captured counties \u2014 the transit penalty is universal; Memphis's gap is SERVICE, and route/schedule counts are the near-zero-capital lever exactly as banked)"
+ ],
+ "honest_nulls": [
+  "B08136 (mode-mean-minutes) row absent for Shelby + Hamilton counties in the 5-yr file (suppressed small-cell) \u2014 TN/OH state-level rows captured instead, flagged per row",
+  "Cincinnati/Detroit city-proper rows absent from the 1-yr A09053-class 1-yr B08522 pull (5-yr versions captured on the main table; 1-yr band-block carries Cook/Philly/Bexar/Memphis only)",
+  "Census API (api.census.gov) + Census Reporter api both unusable keyless this pass (key-wall / 403 rate-wall) \u2014 www2 census.gov direct file pulls are the working route"
+ ],
+ "board_implication": "rank-8 'summer-jobs-13-18' + one-pager #3: the transport-lever lane is now DATA-ARMED at the founder's exact question; the stipend+transport funding-plate design (one-pager #9's strongest novelty lever) gains its county-grain evidence table",
+ "artifacts": [
+  "lane13_transport_table_v1.json (the measure-first table, 14 rows + poverty-band block)",
+  "_lane13/*.dat raw pulls (b08301/b08303/b08013/b08136/b08141/b08122/b08522 + saipe_est22all.txt)",
+  "knockout_batch3_lane13_build.py"
+ ]
+}

@@ -1,0 +1,570 @@
+{
+ "Boston": {
+  "2015": {
+   "total": 16116,
+   "months_present": 12,
+   "label": "Boston Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/MA0130100/all?from=01-2015&to=12-2015&type=counts"
+  },
+  "2016": {
+   "total": 13957,
+   "months_present": 12,
+   "label": "Boston Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/MA0130100/all?from=01-2016&to=12-2016&type=counts"
+  },
+  "2017": {
+   "total": 13809,
+   "months_present": 12,
+   "label": "Boston Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/MA0130100/all?from=01-2017&to=12-2017&type=counts"
+  },
+  "2018": {
+   "total": 11925,
+   "months_present": 12,
+   "label": "Boston Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/MA0130100/all?from=01-2018&to=12-2018&type=counts"
+  },
+  "2019": {
+   "total": 9948,
+   "months_present": 12,
+   "label": "Boston Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/MA0130100/all?from=01-2019&to=12-2019&type=counts"
+  },
+  "2020": {
+   "total": 4341,
+   "months_present": 12,
+   "label": "Boston Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/MA0130100/all?from=01-2020&to=12-2020&type=counts"
+  },
+  "2021": {
+   "total": 4339,
+   "months_present": 12,
+   "label": "Boston Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/MA0130100/all?from=01-2021&to=12-2021&type=counts"
+  },
+  "2022": {
+   "total": 4782,
+   "months_present": 12,
+   "label": "Boston Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/MA0130100/all?from=01-2022&to=12-2022&type=counts"
+  },
+  "2023": {
+   "total": 5338,
+   "months_present": 12,
+   "label": "Boston Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/MA0130100/all?from=01-2023&to=12-2023&type=counts"
+  },
+  "2024": {
+   "total": 5446,
+   "months_present": 12,
+   "label": "Boston Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/MA0130100/all?from=01-2024&to=12-2024&type=counts"
+  }
+ },
+ "NYC": {
+  "2015": {
+   "total": 339470,
+   "months_present": 12,
+   "label": "NYPD Arrests \u2014 Socrata dataset 8h9b-rp9u count(*) by arrest_date year (replaces CDE arrest SRS series: artifact zeros/ones 2015-2022, not real values)",
+   "url": "https://data.cityofnewyork.us/resource/8h9b-rp9u.json",
+   "source_override": "nypd-socrata"
+  },
+  "2016": {
+   "total": 314864,
+   "months_present": 12,
+   "label": "NYPD Arrests \u2014 Socrata dataset 8h9b-rp9u count(*) by arrest_date year (replaces CDE arrest SRS series: artifact zeros/ones 2015-2022, not real values)",
+   "url": "https://data.cityofnewyork.us/resource/8h9b-rp9u.json",
+   "source_override": "nypd-socrata"
+  },
+  "2017": {
+   "total": 286225,
+   "months_present": 12,
+   "label": "NYPD Arrests \u2014 Socrata dataset 8h9b-rp9u count(*) by arrest_date year (replaces CDE arrest SRS series: artifact zeros/ones 2015-2022, not real values)",
+   "url": "https://data.cityofnewyork.us/resource/8h9b-rp9u.json",
+   "source_override": "nypd-socrata"
+  },
+  "2018": {
+   "total": 246773,
+   "months_present": 12,
+   "label": "NYPD Arrests \u2014 Socrata dataset 8h9b-rp9u count(*) by arrest_date year (replaces CDE arrest SRS series: artifact zeros/ones 2015-2022, not real values)",
+   "url": "https://data.cityofnewyork.us/resource/8h9b-rp9u.json",
+   "source_override": "nypd-socrata"
+  },
+  "2019": {
+   "total": 214617,
+   "months_present": 12,
+   "label": "NYPD Arrests \u2014 Socrata dataset 8h9b-rp9u count(*) by arrest_date year (replaces CDE arrest SRS series: artifact zeros/ones 2015-2022, not real values)",
+   "url": "https://data.cityofnewyork.us/resource/8h9b-rp9u.json",
+   "source_override": "nypd-socrata"
+  },
+  "2020": {
+   "total": 140413,
+   "months_present": 12,
+   "label": "NYPD Arrests \u2014 Socrata dataset 8h9b-rp9u count(*) by arrest_date year (replaces CDE arrest SRS series: artifact zeros/ones 2015-2022, not real values)",
+   "url": "https://data.cityofnewyork.us/resource/8h9b-rp9u.json",
+   "source_override": "nypd-socrata"
+  },
+  "2021": {
+   "total": 155507,
+   "months_present": 12,
+   "label": "NYPD Arrests \u2014 Socrata dataset 8h9b-rp9u count(*) by arrest_date year (replaces CDE arrest SRS series: artifact zeros/ones 2015-2022, not real values)",
+   "url": "https://data.cityofnewyork.us/resource/8h9b-rp9u.json",
+   "source_override": "nypd-socrata"
+  },
+  "2022": {
+   "total": 189774,
+   "months_present": 12,
+   "label": "NYPD Arrests \u2014 Socrata dataset 8h9b-rp9u count(*) by arrest_date year (replaces CDE arrest SRS series: artifact zeros/ones 2015-2022, not real values)",
+   "url": "https://data.cityofnewyork.us/resource/8h9b-rp9u.json",
+   "source_override": "nypd-socrata"
+  },
+  "2023": {
+   "total": 226872,
+   "months_present": 12,
+   "label": "NYPD Arrests \u2014 Socrata dataset 8h9b-rp9u count(*) by arrest_date year (replaces CDE arrest SRS series: artifact zeros/ones 2015-2022, not real values)",
+   "url": "https://data.cityofnewyork.us/resource/8h9b-rp9u.json",
+   "source_override": "nypd-socrata"
+  },
+  "2024": {
+   "total": 260503,
+   "months_present": 12,
+   "label": "NYPD Arrests \u2014 Socrata dataset 8h9b-rp9u count(*) by arrest_date year (replaces CDE arrest SRS series: artifact zeros/ones 2015-2022, not real values)",
+   "url": "https://data.cityofnewyork.us/resource/8h9b-rp9u.json",
+   "source_override": "nypd-socrata"
+  }
+ },
+ "St. Louis": {
+  "2015": {
+   "total": 25308,
+   "months_present": 12,
+   "label": "St. Louis Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/MOSPD0000/all?from=01-2015&to=12-2015&type=counts"
+  },
+  "2016": {
+   "total": 25184,
+   "months_present": 12,
+   "label": "St. Louis Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/MOSPD0000/all?from=01-2016&to=12-2016&type=counts"
+  },
+  "2017": {
+   "total": 23139,
+   "months_present": 12,
+   "label": "St. Louis Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/MOSPD0000/all?from=01-2017&to=12-2017&type=counts"
+  },
+  "2018": {
+   "total": 20722,
+   "months_present": 12,
+   "label": "St. Louis Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/MOSPD0000/all?from=01-2018&to=12-2018&type=counts"
+  },
+  "2019": {
+   "total": 21005,
+   "months_present": 12,
+   "label": "St. Louis Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/MOSPD0000/all?from=01-2019&to=12-2019&type=counts"
+  },
+  "2020": {
+   "total": 13466,
+   "months_present": 12,
+   "label": "St. Louis Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/MOSPD0000/all?from=01-2020&to=12-2020&type=counts"
+  },
+  "2021": {
+   "total": 9378,
+   "months_present": 12,
+   "label": "St. Louis Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/MOSPD0000/all?from=01-2021&to=12-2021&type=counts"
+  },
+  "2022": {
+   "total": 9038,
+   "months_present": 12,
+   "label": "St. Louis Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/MOSPD0000/all?from=01-2022&to=12-2022&type=counts"
+  },
+  "2023": {
+   "total": 9147,
+   "months_present": 12,
+   "label": "St. Louis Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/MOSPD0000/all?from=01-2023&to=12-2023&type=counts"
+  },
+  "2024": {
+   "total": 9260,
+   "months_present": 12,
+   "label": "St. Louis Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/MOSPD0000/all?from=01-2024&to=12-2024&type=counts"
+  }
+ },
+ "New Orleans": {
+  "2015": {
+   "total": 20756,
+   "months_present": 12,
+   "label": "New Orleans Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/LANPD0000/all?from=01-2015&to=12-2015&type=counts"
+  },
+  "2016": {
+   "total": 24677,
+   "months_present": 12,
+   "label": "New Orleans Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/LANPD0000/all?from=01-2016&to=12-2016&type=counts"
+  },
+  "2017": {
+   "total": 32155,
+   "months_present": 12,
+   "label": "New Orleans Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/LANPD0000/all?from=01-2017&to=12-2017&type=counts"
+  },
+  "2018": {
+   "total": 31930,
+   "months_present": 12,
+   "label": "New Orleans Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/LANPD0000/all?from=01-2018&to=12-2018&type=counts"
+  },
+  "2019": {
+   "total": 27751,
+   "months_present": 12,
+   "label": "New Orleans Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/LANPD0000/all?from=01-2019&to=12-2019&type=counts"
+  },
+  "2020": {
+   "total": 17686,
+   "months_present": 12,
+   "label": "New Orleans Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/LANPD0000/all?from=01-2020&to=12-2020&type=counts"
+  },
+  "2021": {
+   "total": 16580,
+   "months_present": 12,
+   "label": "New Orleans Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/LANPD0000/all?from=01-2021&to=12-2021&type=counts"
+  },
+  "2022": {
+   "total": 13822,
+   "months_present": 12,
+   "label": "New Orleans Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/LANPD0000/all?from=01-2022&to=12-2022&type=counts"
+  },
+  "2023": {
+   "total": 14694,
+   "months_present": 12,
+   "label": "New Orleans Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/LANPD0000/all?from=01-2023&to=12-2023&type=counts"
+  },
+  "2024": {
+   "total": null,
+   "months_present": 0,
+   "label": "New Orleans Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/LANPD0000/all?from=01-2024&to=12-2024&type=counts"
+  }
+ },
+ "Cincinnati": {
+  "2015": {
+   "total": 0,
+   "months_present": 12,
+   "label": "Cincinnati Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/OHCIP0000/all?from=01-2015&to=12-2015&type=counts"
+  },
+  "2016": {
+   "total": 0,
+   "months_present": 12,
+   "label": "Cincinnati Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/OHCIP0000/all?from=01-2016&to=12-2016&type=counts"
+  },
+  "2017": {
+   "total": 7073,
+   "months_present": 12,
+   "label": "Cincinnati Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/OHCIP0000/all?from=01-2017&to=12-2017&type=counts"
+  },
+  "2018": {
+   "total": 7022,
+   "months_present": 12,
+   "label": "Cincinnati Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/OHCIP0000/all?from=01-2018&to=12-2018&type=counts"
+  },
+  "2019": {
+   "total": 7167,
+   "months_present": 12,
+   "label": "Cincinnati Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/OHCIP0000/all?from=01-2019&to=12-2019&type=counts"
+  },
+  "2020": {
+   "total": 6096,
+   "months_present": 12,
+   "label": "Cincinnati Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/OHCIP0000/all?from=01-2020&to=12-2020&type=counts"
+  },
+  "2021": {
+   "total": 5706,
+   "months_present": 12,
+   "label": "Cincinnati Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/OHCIP0000/all?from=01-2021&to=12-2021&type=counts"
+  },
+  "2022": {
+   "total": 6037,
+   "months_present": 12,
+   "label": "Cincinnati Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/OHCIP0000/all?from=01-2022&to=12-2022&type=counts"
+  },
+  "2023": {
+   "total": 5522,
+   "months_present": 12,
+   "label": "Cincinnati Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/OHCIP0000/all?from=01-2023&to=12-2023&type=counts"
+  },
+  "2024": {
+   "total": 5332,
+   "months_present": 12,
+   "label": "Cincinnati Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/OHCIP0000/all?from=01-2024&to=12-2024&type=counts"
+  }
+ },
+ "Memphis": {
+  "2015": {
+   "total": 40640,
+   "months_present": 12,
+   "label": "Memphis Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/TNMPD0000/all?from=01-2015&to=12-2015&type=counts"
+  },
+  "2016": {
+   "total": 38979,
+   "months_present": 12,
+   "label": "Memphis Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/TNMPD0000/all?from=01-2016&to=12-2016&type=counts"
+  },
+  "2017": {
+   "total": 30105,
+   "months_present": 12,
+   "label": "Memphis Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/TNMPD0000/all?from=01-2017&to=12-2017&type=counts"
+  },
+  "2018": {
+   "total": 31382,
+   "months_present": 12,
+   "label": "Memphis Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/TNMPD0000/all?from=01-2018&to=12-2018&type=counts"
+  },
+  "2019": {
+   "total": 31292,
+   "months_present": 12,
+   "label": "Memphis Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/TNMPD0000/all?from=01-2019&to=12-2019&type=counts"
+  },
+  "2020": {
+   "total": 23093,
+   "months_present": 12,
+   "label": "Memphis Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/TNMPD0000/all?from=01-2020&to=12-2020&type=counts"
+  },
+  "2021": {
+   "total": 19949,
+   "months_present": 12,
+   "label": "Memphis Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/TNMPD0000/all?from=01-2021&to=12-2021&type=counts"
+  },
+  "2022": {
+   "total": 22563,
+   "months_present": 12,
+   "label": "Memphis Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/TNMPD0000/all?from=01-2022&to=12-2022&type=counts"
+  },
+  "2023": {
+   "total": 14821,
+   "months_present": 12,
+   "label": "Memphis Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/TNMPD0000/all?from=01-2023&to=12-2023&type=counts"
+  },
+  "2024": {
+   "total": 16489,
+   "months_present": 12,
+   "label": "Memphis Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/TNMPD0000/all?from=01-2024&to=12-2024&type=counts"
+  }
+ },
+ "Houston": {
+  "2015": {
+   "total": 73431,
+   "months_present": 12,
+   "label": "Houston Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/TXHPD0000/all?from=01-2015&to=12-2015&type=counts"
+  },
+  "2016": {
+   "total": 78169,
+   "months_present": 12,
+   "label": "Houston Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/TXHPD0000/all?from=01-2016&to=12-2016&type=counts"
+  },
+  "2017": {
+   "total": 63026,
+   "months_present": 12,
+   "label": "Houston Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/TXHPD0000/all?from=01-2017&to=12-2017&type=counts"
+  },
+  "2018": {
+   "total": 48506,
+   "months_present": 12,
+   "label": "Houston Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/TXHPD0000/all?from=01-2018&to=12-2018&type=counts"
+  },
+  "2019": {
+   "total": 37260,
+   "months_present": 12,
+   "label": "Houston Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/TXHPD0000/all?from=01-2019&to=12-2019&type=counts"
+  },
+  "2020": {
+   "total": 33408,
+   "months_present": 12,
+   "label": "Houston Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/TXHPD0000/all?from=01-2020&to=12-2020&type=counts"
+  },
+  "2021": {
+   "total": 32553,
+   "months_present": 12,
+   "label": "Houston Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/TXHPD0000/all?from=01-2021&to=12-2021&type=counts"
+  },
+  "2022": {
+   "total": 32283,
+   "months_present": 12,
+   "label": "Houston Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/TXHPD0000/all?from=01-2022&to=12-2022&type=counts"
+  },
+  "2023": {
+   "total": 34700,
+   "months_present": 12,
+   "label": "Houston Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/TXHPD0000/all?from=01-2023&to=12-2023&type=counts"
+  },
+  "2024": {
+   "total": 34400,
+   "months_present": 12,
+   "label": "Houston Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/TXHPD0000/all?from=01-2024&to=12-2024&type=counts"
+  }
+ },
+ "Detroit": {
+  "2015": {
+   "total": 14409,
+   "months_present": 12,
+   "label": "Detroit Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/MI8234900/all?from=01-2015&to=12-2015&type=counts"
+  },
+  "2016": {
+   "total": 13949,
+   "months_present": 12,
+   "label": "Detroit Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/MI8234900/all?from=01-2016&to=12-2016&type=counts"
+  },
+  "2017": {
+   "total": 9702,
+   "months_present": 12,
+   "label": "Detroit Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/MI8234900/all?from=01-2017&to=12-2017&type=counts"
+  },
+  "2018": {
+   "total": 10681,
+   "months_present": 12,
+   "label": "Detroit Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/MI8234900/all?from=01-2018&to=12-2018&type=counts"
+  },
+  "2019": {
+   "total": 11746,
+   "months_present": 12,
+   "label": "Detroit Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/MI8234900/all?from=01-2019&to=12-2019&type=counts"
+  },
+  "2020": {
+   "total": 13891,
+   "months_present": 12,
+   "label": "Detroit Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/MI8234900/all?from=01-2020&to=12-2020&type=counts"
+  },
+  "2021": {
+   "total": 12916,
+   "months_present": 12,
+   "label": "Detroit Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/MI8234900/all?from=01-2021&to=12-2021&type=counts"
+  },
+  "2022": {
+   "total": 10571,
+   "months_present": 12,
+   "label": "Detroit Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/MI8234900/all?from=01-2022&to=12-2022&type=counts"
+  },
+  "2023": {
+   "total": 11355,
+   "months_present": 12,
+   "label": "Detroit Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/MI8234900/all?from=01-2023&to=12-2023&type=counts"
+  },
+  "2024": {
+   "total": 11047,
+   "months_present": 12,
+   "label": "Detroit Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/MI8234900/all?from=01-2024&to=12-2024&type=counts"
+  }
+ },
+ "Oklahoma City": {
+  "2015": {
+   "total": 27562,
+   "months_present": 12,
+   "label": "Oklahoma City Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/OK0550600/all?from=01-2015&to=12-2015&type=counts"
+  },
+  "2016": {
+   "total": 26744,
+   "months_present": 12,
+   "label": "Oklahoma City Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/OK0550600/all?from=01-2016&to=12-2016&type=counts"
+  },
+  "2017": {
+   "total": 24141,
+   "months_present": 12,
+   "label": "Oklahoma City Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/OK0550600/all?from=01-2017&to=12-2017&type=counts"
+  },
+  "2018": {
+   "total": 21061,
+   "months_present": 12,
+   "label": "Oklahoma City Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/OK0550600/all?from=01-2018&to=12-2018&type=counts"
+  },
+  "2019": {
+   "total": 17661,
+   "months_present": 12,
+   "label": "Oklahoma City Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/OK0550600/all?from=01-2019&to=12-2019&type=counts"
+  },
+  "2020": {
+   "total": 15264,
+   "months_present": 12,
+   "label": "Oklahoma City Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/OK0550600/all?from=01-2020&to=12-2020&type=counts"
+  },
+  "2021": {
+   "total": 14024,
+   "months_present": 12,
+   "label": "Oklahoma City Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/OK0550600/all?from=01-2021&to=12-2021&type=counts"
+  },
+  "2022": {
+   "total": 14739,
+   "months_present": 12,
+   "label": "Oklahoma City Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/OK0550600/all?from=01-2022&to=12-2022&type=counts"
+  },
+  "2023": {
+   "total": 14687,
+   "months_present": 12,
+   "label": "Oklahoma City Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/OK0550600/all?from=01-2023&to=12-2023&type=counts"
+  },
+  "2024": {
+   "total": 15108,
+   "months_present": 12,
+   "label": "Oklahoma City Police Department Arrests",
+   "url": "https://cde.ucr.cjis.gov/LATEST/arrest/agency/OK0550600/all?from=01-2024&to=12-2024&type=counts"
+  }
+ }
+}

@@ -1,0 +1,5080 @@
+{
+ "Cincinnati|2014": {
+  "city": "Cincinnati",
+  "year": 2014,
+  "priority": "panel",
+  "murders": 63,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 298550.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 21.1,
+  "rate_src": "panel murder_rate (the FE-frame convention)"
+ },
+ "Cincinnati|2015": {
+  "city": "Cincinnati",
+  "year": 2015,
+  "priority": "panel",
+  "murders": 67,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 298800.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 22.4,
+  "rate_src": "panel murder_rate (the FE-frame convention)"
+ },
+ "Cincinnati|2016": {
+  "city": "Cincinnati",
+  "year": 2016,
+  "priority": "panel",
+  "murders": 59,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 299690.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 19.7,
+  "rate_src": "panel murder_rate (the FE-frame convention)"
+ },
+ "Cincinnati|2017": {
+  "city": "Cincinnati",
+  "year": 2017,
+  "priority": "panel",
+  "murders": 72,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 301301.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 23.9,
+  "rate_src": "panel murder_rate (the FE-frame convention)"
+ },
+ "Cincinnati|2018": {
+  "city": "Cincinnati",
+  "year": 2018,
+  "priority": "panel",
+  "murders": 61,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 302605.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 20.2,
+  "rate_src": "panel murder_rate (the FE-frame convention)"
+ },
+ "Cincinnati|2019": {
+  "city": "Cincinnati",
+  "year": 2019,
+  "priority": "panel",
+  "murders": 67,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 303940.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 22.0,
+  "rate_src": "panel murder_rate (the FE-frame convention)"
+ },
+ "Cincinnati|2020": {
+  "city": "Cincinnati",
+  "year": 2020,
+  "priority": "panel",
+  "murders": 96,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 309317.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 31.0,
+  "rate_src": "panel murder_rate (the FE-frame convention)"
+ },
+ "Cincinnati|2021": {
+  "city": "Cincinnati",
+  "year": 2021,
+  "priority": "panel",
+  "murders": 93,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 308935.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 30.1,
+  "rate_src": "panel murder_rate (the FE-frame convention)"
+ },
+ "Cincinnati|2022": {
+  "city": "Cincinnati",
+  "year": 2022,
+  "priority": "panel",
+  "murders": 77,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 309960.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 24.8,
+  "rate_src": "panel murder_rate (the FE-frame convention)"
+ },
+ "Cincinnati|2023": {
+  "city": "Cincinnati",
+  "year": 2023,
+  "priority": "panel",
+  "murders": 71,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 309317.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 23.0,
+  "rate_src": "panel murder_rate (the FE-frame convention)"
+ },
+ "Cincinnati|2024": {
+  "city": "Cincinnati",
+  "year": 2024,
+  "priority": "panel",
+  "murders": 74,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 314367.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 23.5,
+  "rate_src": "panel murder_rate (the FE-frame convention)"
+ },
+ "Cincinnati|2025": {
+  "city": "Cincinnati",
+  "year": 2025,
+  "priority": "panel",
+  "murders": 69,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 314367.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 21.9,
+  "rate_src": "panel murder_rate (the FE-frame convention)"
+ },
+ "Detroit|2020": {
+  "city": "Detroit",
+  "year": 2020,
+  "priority": "panel",
+  "murders": 321,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 638419.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 50.3,
+  "rate_src": "panel murder_rate (the FE-frame convention)"
+ },
+ "Detroit|2021": {
+  "city": "Detroit",
+  "year": 2021,
+  "priority": "panel",
+  "murders": 306,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 635046.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 48.2,
+  "rate_src": "panel murder_rate (the FE-frame convention)"
+ },
+ "Detroit|2022": {
+  "city": "Detroit",
+  "year": 2022,
+  "priority": "panel",
+  "murders": 309,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 639111.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 48.3,
+  "rate_src": "panel murder_rate (the FE-frame convention)"
+ },
+ "Detroit|2023": {
+  "city": "Detroit",
+  "year": 2023,
+  "priority": "panel",
+  "murders": 250,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 637452.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 39.2,
+  "rate_src": "panel murder_rate (the FE-frame convention)"
+ },
+ "Detroit|2024": {
+  "city": "Detroit",
+  "year": 2024,
+  "priority": "panel",
+  "murders": 203,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 649095.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 31.3,
+  "rate_src": "panel murder_rate (the FE-frame convention)"
+ },
+ "Detroit|2025": {
+  "city": "Detroit",
+  "year": 2025,
+  "priority": "panel",
+  "murders": 165,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 649095.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 25.4,
+  "rate_src": "panel murder_rate (the FE-frame convention)"
+ },
+ "Memphis|2021": {
+  "city": "Memphis",
+  "year": 2021,
+  "priority": "panel",
+  "murders": 345,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 633104.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 54.5,
+  "rate_src": "panel murder_rate (the FE-frame convention)"
+ },
+ "Memphis|2022": {
+  "city": "Memphis",
+  "year": 2022,
+  "priority": "panel",
+  "murders": 304,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 633104.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 48.0,
+  "rate_src": "panel murder_rate (the FE-frame convention)"
+ },
+ "Memphis|2023": {
+  "city": "Memphis",
+  "year": 2023,
+  "priority": "panel",
+  "murders": 344,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 615634.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 55.9,
+  "rate_src": "panel murder_rate (the FE-frame convention)"
+ },
+ "Memphis|2024": {
+  "city": "Memphis",
+  "year": 2024,
+  "priority": "panel",
+  "murders": 248,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 614222.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 40.4,
+  "rate_src": "panel murder_rate (the FE-frame convention)"
+ },
+ "Memphis|2025": {
+  "city": "Memphis",
+  "year": 2025,
+  "priority": "panel",
+  "murders": 184,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 609647.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 30.2,
+  "rate_src": "panel murder_rate (the FE-frame convention)"
+ },
+ "Memphis|2026": {
+  "city": "Memphis",
+  "year": 2026,
+  "priority": "panel",
+  "murders": 147,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 621056.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 23.7,
+  "rate_src": "panel murder_rate (the FE-frame convention)",
+  "partial_year_flag": "2026 YTD 9-11 months in the banked series — EXCLUDED from backwards scoring (honest partials, never annualized/fabricated)"
+ },
+ "NYC|2001": {
+  "city": "NYC",
+  "year": 2001,
+  "priority": "panel",
+  "murders": 649,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 8008300.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 8.1,
+  "rate_src": "panel murder_rate (the FE-frame convention)",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|2020": {
+  "city": "NYC",
+  "year": 2020,
+  "priority": "panel",
+  "murders": 468,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 8751188.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 5.3,
+  "rate_src": "panel murder_rate (the FE-frame convention)",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|2021": {
+  "city": "NYC",
+  "year": 2021,
+  "priority": "panel",
+  "murders": 488,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 8447958.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 5.8,
+  "rate_src": "panel murder_rate (the FE-frame convention)",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|2022": {
+  "city": "NYC",
+  "year": 2022,
+  "priority": "panel",
+  "murders": 438,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 8362665.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 5.2,
+  "rate_src": "panel murder_rate (the FE-frame convention)",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|2023": {
+  "city": "NYC",
+  "year": 2023,
+  "priority": "panel",
+  "murders": 404,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 8433834.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 4.8,
+  "rate_src": "panel murder_rate (the FE-frame convention)",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|2024": {
+  "city": "NYC",
+  "year": 2024,
+  "priority": "panel",
+  "murders": 357,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 8596825.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 4.2,
+  "rate_src": "panel murder_rate (the FE-frame convention)",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "St. Louis|2019": {
+  "city": "St. Louis",
+  "year": 2019,
+  "priority": "panel",
+  "murders": 194,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 300576.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 64.5,
+  "rate_src": "panel murder_rate (the FE-frame convention)"
+ },
+ "St. Louis|2020": {
+  "city": "St. Louis",
+  "year": 2020,
+  "priority": "panel",
+  "murders": 263,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 301578.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 87.2,
+  "rate_src": "panel murder_rate (the FE-frame convention)"
+ },
+ "St. Louis|2021": {
+  "city": "St. Louis",
+  "year": 2021,
+  "priority": "panel",
+  "murders": 203,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 293310.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 69.2,
+  "rate_src": "panel murder_rate (the FE-frame convention)"
+ },
+ "St. Louis|2022": {
+  "city": "St. Louis",
+  "year": 2022,
+  "priority": "panel",
+  "murders": 201,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 285658.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 70.4,
+  "rate_src": "panel murder_rate (the FE-frame convention)"
+ },
+ "St. Louis|2023": {
+  "city": "St. Louis",
+  "year": 2023,
+  "priority": "panel",
+  "murders": 158,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 283190.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 55.8,
+  "rate_src": "panel murder_rate (the FE-frame convention)"
+ },
+ "St. Louis|2024": {
+  "city": "St. Louis",
+  "year": 2024,
+  "priority": "panel",
+  "murders": 150,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 279695.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 53.6,
+  "rate_src": "panel murder_rate (the FE-frame convention)"
+ },
+ "St. Louis|2025": {
+  "city": "St. Louis",
+  "year": 2025,
+  "priority": "panel",
+  "murders": 141,
+  "murders_src": "panel maslow_joint_panel_v1 (banked murders)",
+  "population": 278144.0,
+  "pop_src": "panel denominator (banked)",
+  "rate": 50.7,
+  "rate_src": "panel murder_rate (the FE-frame convention)"
+ },
+ "Boston|1990": {
+  "city": "Boston",
+  "year": 1990,
+  "murders": 143,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 574283,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 24.9,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Boston|1991": {
+  "city": "Boston",
+  "year": 1991,
+  "murders": 113,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 575769,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 19.63,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Boston|1993": {
+  "city": "Boston",
+  "year": 1993,
+  "murders": 98,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 578740,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 16.93,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Boston|1994": {
+  "city": "Boston",
+  "year": 1994,
+  "murders": 85,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 580226,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 14.65,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Boston|1995": {
+  "city": "Boston",
+  "year": 1995,
+  "murders": 96,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 581712,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 16.5,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Boston|1999": {
+  "city": "Boston",
+  "year": 1999,
+  "murders": 31,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 587655,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 5.28,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Boston|2001": {
+  "city": "Boston",
+  "year": 2001,
+  "murders": 65,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 590627,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 11.01,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Boston|2019": {
+  "city": "Boston",
+  "year": 2019,
+  "murders": 42,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 692600,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 6.06,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Boston|2020": {
+  "city": "Boston",
+  "year": 2020,
+  "murders": 58,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 669665,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 8.66,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Boston|2021": {
+  "city": "Boston",
+  "year": 2021,
+  "murders": 37,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 659884,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 5.61,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Boston|2022": {
+  "city": "Boston",
+  "year": 2022,
+  "murders": 46,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 661014,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 6.96,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Boston|2025": {
+  "city": "Boston",
+  "year": 2025,
+  "murders": 24,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 672973,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 3.57,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Boston|2024": {
+  "city": "Boston",
+  "year": 2024,
+  "murders": 25,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 674311,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 3.71,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Boston|2026": {
+  "city": "Boston",
+  "year": 2026,
+  "murders": 19,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 672973,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 2.82,
+  "rate_src": "murders_all / pop-bank",
+  "partial_year_flag": "2026 YTD 9-11 months in the banked series — EXCLUDED from backwards scoring (honest partials, never annualized/fabricated)"
+ },
+ "New Orleans|1990": {
+  "city": "New Orleans",
+  "year": 1990,
+  "murders": 304,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 496938,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 61.17,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "New Orleans|1994": {
+  "city": "New Orleans",
+  "year": 1994,
+  "murders": 424,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 492032,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 86.17,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "New Orleans|2004": {
+  "city": "New Orleans",
+  "year": 2004,
+  "murders": 264,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 454865,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 58.04,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "New Orleans|2005": {
+  "city": "New Orleans",
+  "year": 2005,
+  "murders": 134,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 230000,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 58.26,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "New Orleans|2006": {
+  "city": "New Orleans",
+  "year": 2006,
+  "murders": 162,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 223000,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 72.65,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "New Orleans|2007": {
+  "city": "New Orleans",
+  "year": 2007,
+  "murders": 209,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 273000,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 76.56,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "New Orleans|2009": {
+  "city": "New Orleans",
+  "year": 2009,
+  "murders": 174,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 316000,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 55.06,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "New Orleans|2011": {
+  "city": "New Orleans",
+  "year": 2011,
+  "murders": 200,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 343829,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 58.17,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "New Orleans|2017": {
+  "city": "New Orleans",
+  "year": 2017,
+  "murders": 157,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 391493,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 40.1,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "New Orleans|2019": {
+  "city": "New Orleans",
+  "year": 2019,
+  "murders": 121,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 390144,
+  "pop_src": "pop-bank:populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+  "rate": 31.01,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "New Orleans|2022": {
+  "city": "New Orleans",
+  "year": 2022,
+  "murders": 266,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 371038,
+  "pop_src": "pop-bank:populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+  "rate": 71.69,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "New Orleans|2023": {
+  "city": "New Orleans",
+  "year": 2023,
+  "murders": 193,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 365782,
+  "pop_src": "pop-bank:populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+  "rate": 52.76,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "New Orleans|2024": {
+  "city": "New Orleans",
+  "year": 2024,
+  "murders": 124,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 363477,
+  "pop_src": "pop-bank:populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+  "rate": 34.11,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "St. Louis|1998": {
+  "city": "St. Louis",
+  "year": 1998,
+  "murders": 113,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 357888,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 31.57,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "St. Louis|1999": {
+  "city": "St. Louis",
+  "year": 1999,
+  "murders": 130,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 353039,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 36.82,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "St. Louis|2000": {
+  "city": "St. Louis",
+  "year": 2000,
+  "murders": 124,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 348189,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 35.61,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "St. Louis|2001": {
+  "city": "St. Louis",
+  "year": 2001,
+  "murders": 148,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 350240,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 42.26,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "St. Louis|2010": {
+  "city": "St. Louis",
+  "year": 2010,
+  "murders": 144,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 319294,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 45.1,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "St. Louis|2011": {
+  "city": "St. Louis",
+  "year": 2011,
+  "murders": 113,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 319344,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 35.39,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "St. Louis|2012": {
+  "city": "St. Louis",
+  "year": 2012,
+  "murders": 113,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 319416,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 35.38,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "St. Louis|2013": {
+  "city": "St. Louis",
+  "year": 2013,
+  "murders": 120,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 318476,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 37.68,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "St. Louis|2014": {
+  "city": "St. Louis",
+  "year": 2014,
+  "murders": 159,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 317399,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 50.09,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "St. Louis|2015": {
+  "city": "St. Louis",
+  "year": 2015,
+  "murders": 188,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 316010,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 59.49,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "St. Louis|2026": {
+  "city": "St. Louis",
+  "year": 2026,
+  "murders": 90,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 278144,
+  "pop_src": "pop-bank:population_series_v1 (decennial anchors + linear interp)",
+  "rate": 32.36,
+  "rate_src": "murders_all / pop-bank",
+  "partial_year_flag": "2026 YTD 9-11 months in the banked series — EXCLUDED from backwards scoring (honest partials, never annualized/fabricated)"
+ },
+ "NYC|1998": {
+  "city": "NYC",
+  "year": 1998,
+  "murders": 633,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 7423978,
+  "pop_src": "pop-bank:triple_slider_v6d",
+  "rate": 8.53,
+  "rate_src": "murders_all / pop-bank",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|1999": {
+  "city": "NYC",
+  "year": 1999,
+  "murders": 671,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 7454757,
+  "pop_src": "pop-bank:triple_slider_v6d",
+  "rate": 9.0,
+  "rate_src": "murders_all / pop-bank",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|2000": {
+  "city": "NYC",
+  "year": 2000,
+  "murders": 667,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 7475250,
+  "pop_src": "pop-bank:triple_slider_v6d",
+  "rate": 8.92,
+  "rate_src": "murders_all / pop-bank",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|2019": {
+  "city": "NYC",
+  "year": 2019,
+  "murders": 319,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 8336817,
+  "pop_src": "pop-bank:populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+  "rate": 3.83,
+  "rate_src": "murders_all / pop-bank",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "Memphis|2020": {
+  "city": "Memphis",
+  "year": 2020,
+  "murders": 332,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 628282,
+  "pop_src": "pop-bank:populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+  "rate": 52.84,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Cincinnati|2026": {
+  "city": "Cincinnati",
+  "year": 2026,
+  "murders": 45,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 309317,
+  "pop_src": "pop-bank:triple_slider_v6d",
+  "rate": 14.55,
+  "rate_src": "murders_all / pop-bank",
+  "partial_year_flag": "2026 YTD 9-11 months in the banked series — EXCLUDED from backwards scoring (honest partials, never annualized/fabricated)"
+ },
+ "Houston|2004": {
+  "city": "Houston",
+  "year": 2004,
+  "murders": 272,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 2043446,
+  "pop_src": "pop-bank:triple_slider_v6d",
+  "rate": 13.31,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Houston|2005": {
+  "city": "Houston",
+  "year": 2005,
+  "murders": 334,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 2045732,
+  "pop_src": "pop-bank:triple_slider_v6d",
+  "rate": 16.33,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Houston|2011": {
+  "city": "Houston",
+  "year": 2011,
+  "murders": 198,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 2143628,
+  "pop_src": "pop-bank:triple_slider_v6d",
+  "rate": 9.24,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Houston|2019": {
+  "city": "Houston",
+  "year": 2019,
+  "murders": 275,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 2355606,
+  "pop_src": "pop-bank:triple_slider_v6d",
+  "rate": 11.67,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Houston|2022": {
+  "city": "Houston",
+  "year": 2022,
+  "murders": 435,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 2304580,
+  "pop_src": "pop-bank:triple_slider_v6d",
+  "rate": 18.88,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Houston|2025": {
+  "city": "Houston",
+  "year": 2025,
+  "murders": 272,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 2307176,
+  "pop_src": "pop-bank:triple_slider_v6d",
+  "rate": 11.79,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Houston|2026": {
+  "city": "Houston",
+  "year": 2026,
+  "murders": 95,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 2307176,
+  "pop_src": "pop-bank:triple_slider_v6d",
+  "rate": 4.12,
+  "rate_src": "murders_all / pop-bank",
+  "partial_year_flag": "2026 YTD 9-11 months in the banked series — EXCLUDED from backwards scoring (honest partials, never annualized/fabricated)"
+ },
+ "Detroit|2013": {
+  "city": "Detroit",
+  "year": 2013,
+  "murders": 316,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 699889,
+  "pop_src": "pop-bank:triple_slider_v6d",
+  "rate": 45.15,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Detroit|2015": {
+  "city": "Detroit",
+  "year": 2015,
+  "murders": 295,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 673225,
+  "pop_src": "pop-bank:triple_slider_v6d",
+  "rate": 43.82,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Detroit|2016": {
+  "city": "Detroit",
+  "year": 2016,
+  "murders": 303,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 669673,
+  "pop_src": "pop-bank:triple_slider_v6d",
+  "rate": 45.25,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Detroit|2026": {
+  "city": "Detroit",
+  "year": 2026,
+  "murders": 123,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 649095,
+  "pop_src": "pop-bank:triple_slider_v6d",
+  "rate": 18.95,
+  "rate_src": "murders_all / pop-bank",
+  "partial_year_flag": "2026 YTD 9-11 months in the banked series — EXCLUDED from backwards scoring (honest partials, never annualized/fabricated)"
+ },
+ "Boston|1980": {
+  "city": "Boston",
+  "year": 1980,
+  "murders": 92,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 562519,
+  "pop_src": "pop-bank:triple_slider_v6d",
+  "rate": 16.36,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Boston|1983": {
+  "city": "Boston",
+  "year": 1983,
+  "murders": 211,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 589508,
+  "pop_src": "pop-bank:triple_slider_v6d",
+  "rate": 35.79,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Detroit|2012": {
+  "city": "Detroit",
+  "year": 2012,
+  "murders": 386,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 699889,
+  "pop_src": "pop-bank:triple_slider_v6d",
+  "rate": 55.15,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Houston|2006": {
+  "city": "Houston",
+  "year": 2006,
+  "murders": 377,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 2191123,
+  "pop_src": "pop-bank:triple_slider_v6d",
+  "rate": 17.21,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Houston|2007": {
+  "city": "Houston",
+  "year": 2007,
+  "murders": 351,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 2055705,
+  "pop_src": "pop-bank:triple_slider_v6d",
+  "rate": 17.07,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Houston|2024": {
+  "city": "Houston",
+  "year": 2024,
+  "murders": 334,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 2325502,
+  "pop_src": "pop-bank:triple_slider_v6d",
+  "rate": 14.36,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "St. Louis|2002": {
+  "city": "St. Louis",
+  "year": 2002,
+  "murders": 111,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 353004,
+  "pop_src": "pop-bank:triple_slider_v6d",
+  "rate": 31.44,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "St. Louis|2016": {
+  "city": "St. Louis",
+  "year": 2016,
+  "murders": 188,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "St. Louis|2017": {
+  "city": "St. Louis",
+  "year": 2017,
+  "murders": 205,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 308293,
+  "pop_src": "pop-bank:triple_slider_v6d",
+  "rate": 66.5,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "St. Louis|2018": {
+  "city": "St. Louis",
+  "year": 2018,
+  "murders": 187,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 304434,
+  "pop_src": "pop-bank:triple_slider_v6d",
+  "rate": 61.43,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Philadelphia|2011": {
+  "city": "Philadelphia",
+  "year": 2011,
+  "murders": 324,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 1540466,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 21.03,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Philadelphia|2012": {
+  "city": "Philadelphia",
+  "year": 2012,
+  "murders": 331,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 1551824,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 21.33,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Philadelphia|2013": {
+  "city": "Philadelphia",
+  "year": 2013,
+  "murders": 247,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 1558313,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 15.85,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Philadelphia|2014": {
+  "city": "Philadelphia",
+  "year": 2014,
+  "murders": 248,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 1565460,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 15.84,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Philadelphia|2015": {
+  "city": "Philadelphia",
+  "year": 2015,
+  "murders": 280,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Philadelphia|2016": {
+  "city": "Philadelphia",
+  "year": 2016,
+  "murders": 273,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Philadelphia|2017": {
+  "city": "Philadelphia",
+  "year": 2017,
+  "murders": 316,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Philadelphia|2018": {
+  "city": "Philadelphia",
+  "year": 2018,
+  "murders": 351,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Philadelphia|2019": {
+  "city": "Philadelphia",
+  "year": 2019,
+  "murders": 330,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Philadelphia|2020": {
+  "city": "Philadelphia",
+  "year": 2020,
+  "murders": 494,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Philadelphia|2021": {
+  "city": "Philadelphia",
+  "year": 2021,
+  "murders": 575,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Philadelphia|2022": {
+  "city": "Philadelphia",
+  "year": 2022,
+  "murders": 520,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Philadelphia|2023": {
+  "city": "Philadelphia",
+  "year": 2023,
+  "murders": 412,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Philadelphia|2024": {
+  "city": "Philadelphia",
+  "year": 2024,
+  "murders": 270,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Philadelphia|2025": {
+  "city": "Philadelphia",
+  "year": 2025,
+  "murders": 230,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Phoenix|2011": {
+  "city": "Phoenix",
+  "year": 2011,
+  "murders": 116,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 1469796,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 7.89,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Phoenix|2012": {
+  "city": "Phoenix",
+  "year": 2012,
+  "murders": 123,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 1499274,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 8.2,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Phoenix|2013": {
+  "city": "Phoenix",
+  "year": 2013,
+  "murders": 118,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 1526491,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 7.73,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Phoenix|2014": {
+  "city": "Phoenix",
+  "year": 2014,
+  "murders": 114,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 1555445,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 7.33,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Phoenix|2015": {
+  "city": "Phoenix",
+  "year": 2015,
+  "murders": 112,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Phoenix|2016": {
+  "city": "Phoenix",
+  "year": 2016,
+  "murders": 146,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Phoenix|2017": {
+  "city": "Phoenix",
+  "year": 2017,
+  "murders": 157,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Phoenix|2018": {
+  "city": "Phoenix",
+  "year": 2018,
+  "murders": 133,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Phoenix|2019": {
+  "city": "Phoenix",
+  "year": 2019,
+  "murders": 131,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Phoenix|2020": {
+  "city": "Phoenix",
+  "year": 2020,
+  "murders": 187,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Phoenix|2022": {
+  "city": "Phoenix",
+  "year": 2022,
+  "murders": 217,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Phoenix|2023": {
+  "city": "Phoenix",
+  "year": 2023,
+  "murders": 191,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Phoenix|2024": {
+  "city": "Phoenix",
+  "year": 2024,
+  "murders": 139,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Phoenix|2025": {
+  "city": "Phoenix",
+  "year": 2025,
+  "murders": 127,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Antonio|2011": {
+  "city": "San Antonio",
+  "year": 2011,
+  "murders": 89,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 1357120,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 6.56,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "San Antonio|2012": {
+  "city": "San Antonio",
+  "year": 2012,
+  "murders": 89,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 1383075,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 6.43,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "San Antonio|2013": {
+  "city": "San Antonio",
+  "year": 2013,
+  "murders": 72,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 1408339,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 5.11,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "San Antonio|2014": {
+  "city": "San Antonio",
+  "year": 2014,
+  "murders": 103,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 1435456,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 7.18,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "San Antonio|2015": {
+  "city": "San Antonio",
+  "year": 2015,
+  "murders": 94,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Antonio|2016": {
+  "city": "San Antonio",
+  "year": 2016,
+  "murders": 149,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Antonio|2017": {
+  "city": "San Antonio",
+  "year": 2017,
+  "murders": 124,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Antonio|2018": {
+  "city": "San Antonio",
+  "year": 2018,
+  "murders": 107,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Antonio|2019": {
+  "city": "San Antonio",
+  "year": 2019,
+  "murders": 105,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Antonio|2020": {
+  "city": "San Antonio",
+  "year": 2020,
+  "murders": 131,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Antonio|2021": {
+  "city": "San Antonio",
+  "year": 2021,
+  "murders": 164,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Antonio|2022": {
+  "city": "San Antonio",
+  "year": 2022,
+  "murders": 233,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Antonio|2023": {
+  "city": "San Antonio",
+  "year": 2023,
+  "murders": 163,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Antonio|2024": {
+  "city": "San Antonio",
+  "year": 2024,
+  "murders": 126,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Antonio|2025": {
+  "city": "San Antonio",
+  "year": 2025,
+  "murders": 106,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Dallas|2011": {
+  "city": "Dallas",
+  "year": 2011,
+  "murders": 133,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 1218282,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 10.92,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Dallas|2012": {
+  "city": "Dallas",
+  "year": 2012,
+  "murders": 154,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 1242115,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 12.4,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Dallas|2013": {
+  "city": "Dallas",
+  "year": 2013,
+  "murders": 143,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 1258835,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 11.36,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Dallas|2014": {
+  "city": "Dallas",
+  "year": 2014,
+  "murders": 116,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 1279098,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 9.07,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Dallas|2015": {
+  "city": "Dallas",
+  "year": 2015,
+  "murders": 136,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Dallas|2016": {
+  "city": "Dallas",
+  "year": 2016,
+  "murders": 171,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Dallas|2017": {
+  "city": "Dallas",
+  "year": 2017,
+  "murders": 167,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Dallas|2018": {
+  "city": "Dallas",
+  "year": 2018,
+  "murders": 153,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Dallas|2019": {
+  "city": "Dallas",
+  "year": 2019,
+  "murders": 200,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Dallas|2020": {
+  "city": "Dallas",
+  "year": 2020,
+  "murders": 247,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Dallas|2021": {
+  "city": "Dallas",
+  "year": 2021,
+  "murders": 210,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Dallas|2022": {
+  "city": "Dallas",
+  "year": 2022,
+  "murders": 212,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Dallas|2023": {
+  "city": "Dallas",
+  "year": 2023,
+  "murders": 244,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Dallas|2024": {
+  "city": "Dallas",
+  "year": 2024,
+  "murders": 181,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Dallas|2025": {
+  "city": "Dallas",
+  "year": 2025,
+  "murders": 140,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Diego|2011": {
+  "city": "San Diego",
+  "year": 2011,
+  "murders": 38,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 1319592,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 2.88,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "San Diego|2012": {
+  "city": "San Diego",
+  "year": 2012,
+  "murders": 47,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 1336776,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 3.52,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "San Diego|2013": {
+  "city": "San Diego",
+  "year": 2013,
+  "murders": 39,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 1355320,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 2.88,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "San Diego|2014": {
+  "city": "San Diego",
+  "year": 2014,
+  "murders": 32,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 1375831,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 2.33,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "San Diego|2015": {
+  "city": "San Diego",
+  "year": 2015,
+  "murders": 37,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Diego|2016": {
+  "city": "San Diego",
+  "year": 2016,
+  "murders": 50,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Diego|2017": {
+  "city": "San Diego",
+  "year": 2017,
+  "murders": 35,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Diego|2018": {
+  "city": "San Diego",
+  "year": 2018,
+  "murders": 35,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Diego|2019": {
+  "city": "San Diego",
+  "year": 2019,
+  "murders": 50,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Diego|2020": {
+  "city": "San Diego",
+  "year": 2020,
+  "murders": 56,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Diego|2021": {
+  "city": "San Diego",
+  "year": 2021,
+  "murders": 66,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Diego|2022": {
+  "city": "San Diego",
+  "year": 2022,
+  "murders": 53,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Diego|2023": {
+  "city": "San Diego",
+  "year": 2023,
+  "murders": 43,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Diego|2024": {
+  "city": "San Diego",
+  "year": 2024,
+  "murders": 37,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Diego|2025": {
+  "city": "San Diego",
+  "year": 2025,
+  "murders": 25,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Jacksonville|2021": {
+  "city": "Jacksonville",
+  "year": 2021,
+  "murders": 107,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Jacksonville|2022": {
+  "city": "Jacksonville",
+  "year": 2022,
+  "murders": 132,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Jacksonville|2023": {
+  "city": "Jacksonville",
+  "year": 2023,
+  "murders": 128,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Jacksonville|2024": {
+  "city": "Jacksonville",
+  "year": 2024,
+  "murders": 63,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Jacksonville|2025": {
+  "city": "Jacksonville",
+  "year": 2025,
+  "murders": 79,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Fort Worth|2011": {
+  "city": "Fort Worth",
+  "year": 2011,
+  "murders": 51,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 764142,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 6.67,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Fort Worth|2012": {
+  "city": "Fort Worth",
+  "year": 2012,
+  "murders": 46,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 781046,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 5.89,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Fort Worth|2013": {
+  "city": "Fort Worth",
+  "year": 2013,
+  "murders": 49,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 796073,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 6.16,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Fort Worth|2014": {
+  "city": "Fort Worth",
+  "year": 2014,
+  "murders": 53,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 815057,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 6.5,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Fort Worth|2015": {
+  "city": "Fort Worth",
+  "year": 2015,
+  "murders": 56,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Fort Worth|2016": {
+  "city": "Fort Worth",
+  "year": 2016,
+  "murders": 65,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Fort Worth|2017": {
+  "city": "Fort Worth",
+  "year": 2017,
+  "murders": 71,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Fort Worth|2018": {
+  "city": "Fort Worth",
+  "year": 2018,
+  "murders": 56,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Fort Worth|2019": {
+  "city": "Fort Worth",
+  "year": 2019,
+  "murders": 69,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Fort Worth|2020": {
+  "city": "Fort Worth",
+  "year": 2020,
+  "murders": 109,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Fort Worth|2021": {
+  "city": "Fort Worth",
+  "year": 2021,
+  "murders": 118,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Fort Worth|2022": {
+  "city": "Fort Worth",
+  "year": 2022,
+  "murders": 101,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Fort Worth|2023": {
+  "city": "Fort Worth",
+  "year": 2023,
+  "murders": 85,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Fort Worth|2024": {
+  "city": "Fort Worth",
+  "year": 2024,
+  "murders": 72,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Fort Worth|2025": {
+  "city": "Fort Worth",
+  "year": 2025,
+  "murders": 78,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Austin|2011": {
+  "city": "Austin",
+  "year": 2011,
+  "murders": 27,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 828459,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 3.26,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Austin|2012": {
+  "city": "Austin",
+  "year": 2012,
+  "murders": 31,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 854482,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 3.63,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Austin|2013": {
+  "city": "Austin",
+  "year": 2013,
+  "murders": 26,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 875003,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 2.97,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Austin|2014": {
+  "city": "Austin",
+  "year": 2014,
+  "murders": 32,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 901170,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 3.55,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Austin|2015": {
+  "city": "Austin",
+  "year": 2015,
+  "murders": 23,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Austin|2016": {
+  "city": "Austin",
+  "year": 2016,
+  "murders": 39,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Austin|2017": {
+  "city": "Austin",
+  "year": 2017,
+  "murders": 26,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Austin|2018": {
+  "city": "Austin",
+  "year": 2018,
+  "murders": 32,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Austin|2019": {
+  "city": "Austin",
+  "year": 2019,
+  "murders": 33,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Austin|2020": {
+  "city": "Austin",
+  "year": 2020,
+  "murders": 45,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Austin|2021": {
+  "city": "Austin",
+  "year": 2021,
+  "murders": 81,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Austin|2022": {
+  "city": "Austin",
+  "year": 2022,
+  "murders": 63,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Austin|2023": {
+  "city": "Austin",
+  "year": 2023,
+  "murders": 64,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Austin|2024": {
+  "city": "Austin",
+  "year": 2024,
+  "murders": 66,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Austin|2025": {
+  "city": "Austin",
+  "year": 2025,
+  "murders": 52,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Charlotte|2011": {
+  "city": "Charlotte",
+  "year": 2011,
+  "murders": 56,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 754829,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 7.42,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Charlotte|2012": {
+  "city": "Charlotte",
+  "year": 2012,
+  "murders": 52,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 773264,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 6.72,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Charlotte|2013": {
+  "city": "Charlotte",
+  "year": 2013,
+  "murders": 59,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 792047,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 7.45,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Charlotte|2014": {
+  "city": "Charlotte",
+  "year": 2014,
+  "murders": 47,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 807400,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 5.82,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Charlotte|2015": {
+  "city": "Charlotte",
+  "year": 2015,
+  "murders": 61,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Charlotte|2016": {
+  "city": "Charlotte",
+  "year": 2016,
+  "murders": 67,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Charlotte|2017": {
+  "city": "Charlotte",
+  "year": 2017,
+  "murders": 86,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Charlotte|2018": {
+  "city": "Charlotte",
+  "year": 2018,
+  "murders": 59,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Charlotte|2019": {
+  "city": "Charlotte",
+  "year": 2019,
+  "murders": 101,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Charlotte|2020": {
+  "city": "Charlotte",
+  "year": 2020,
+  "murders": 118,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Charlotte|2021": {
+  "city": "Charlotte",
+  "year": 2021,
+  "murders": 96,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Charlotte|2022": {
+  "city": "Charlotte",
+  "year": 2022,
+  "murders": 107,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Charlotte|2023": {
+  "city": "Charlotte",
+  "year": 2023,
+  "murders": 89,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Charlotte|2024": {
+  "city": "Charlotte",
+  "year": 2024,
+  "murders": 107,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Charlotte|2025": {
+  "city": "Charlotte",
+  "year": 2025,
+  "murders": 93,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Columbus|2011": {
+  "city": "Columbus",
+  "year": 2011,
+  "murders": 87,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 800607,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 10.87,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Columbus|2012": {
+  "city": "Columbus",
+  "year": 2012,
+  "murders": 71,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 812740,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 8.74,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Columbus|2013": {
+  "city": "Columbus",
+  "year": 2013,
+  "murders": 78,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 827797,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 9.42,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Columbus|2014": {
+  "city": "Columbus",
+  "year": 2014,
+  "murders": 85,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 841673,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 10.1,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Columbus|2015": {
+  "city": "Columbus",
+  "year": 2015,
+  "murders": 83,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Columbus|2016": {
+  "city": "Columbus",
+  "year": 2016,
+  "murders": 104,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Columbus|2017": {
+  "city": "Columbus",
+  "year": 2017,
+  "murders": 145,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Columbus|2018": {
+  "city": "Columbus",
+  "year": 2018,
+  "murders": 110,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Columbus|2019": {
+  "city": "Columbus",
+  "year": 2019,
+  "murders": 90,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Columbus|2020": {
+  "city": "Columbus",
+  "year": 2020,
+  "murders": 179,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Columbus|2021": {
+  "city": "Columbus",
+  "year": 2021,
+  "murders": 212,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Columbus|2022": {
+  "city": "Columbus",
+  "year": 2022,
+  "murders": 136,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Columbus|2023": {
+  "city": "Columbus",
+  "year": 2023,
+  "murders": 147,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Columbus|2024": {
+  "city": "Columbus",
+  "year": 2024,
+  "murders": 118,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Columbus|2025": {
+  "city": "Columbus",
+  "year": 2025,
+  "murders": 85,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Indianapolis|2011": {
+  "city": "Indianapolis",
+  "year": 2011,
+  "murders": 96,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 827664,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 11.6,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Indianapolis|2012": {
+  "city": "Indianapolis",
+  "year": 2012,
+  "murders": 97,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 835499,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 11.61,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Indianapolis|2013": {
+  "city": "Indianapolis",
+  "year": 2013,
+  "murders": 129,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 844696,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 15.27,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Indianapolis|2014": {
+  "city": "Indianapolis",
+  "year": 2014,
+  "murders": 136,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 850164,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 16.0,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Indianapolis|2015": {
+  "city": "Indianapolis",
+  "year": 2015,
+  "murders": 148,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Indianapolis|2016": {
+  "city": "Indianapolis",
+  "year": 2016,
+  "murders": 148,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Indianapolis|2017": {
+  "city": "Indianapolis",
+  "year": 2017,
+  "murders": 156,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Indianapolis|2018": {
+  "city": "Indianapolis",
+  "year": 2018,
+  "murders": 162,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Indianapolis|2019": {
+  "city": "Indianapolis",
+  "year": 2019,
+  "murders": 145,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Indianapolis|2020": {
+  "city": "Indianapolis",
+  "year": 2020,
+  "murders": 216,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Indianapolis|2021": {
+  "city": "Indianapolis",
+  "year": 2021,
+  "murders": 246,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Indianapolis|2022": {
+  "city": "Indianapolis",
+  "year": 2022,
+  "murders": 210,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Indianapolis|2023": {
+  "city": "Indianapolis",
+  "year": 2023,
+  "murders": 169,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Indianapolis|2024": {
+  "city": "Indianapolis",
+  "year": 2024,
+  "murders": 172,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Indianapolis|2025": {
+  "city": "Indianapolis",
+  "year": 2025,
+  "murders": 139,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Francisco|2011": {
+  "city": "San Francisco",
+  "year": 2011,
+  "murders": 50,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 815650,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 6.13,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "San Francisco|2012": {
+  "city": "San Francisco",
+  "year": 2012,
+  "murders": 69,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 828876,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 8.32,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "San Francisco|2013": {
+  "city": "San Francisco",
+  "year": 2013,
+  "murders": 48,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 839572,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 5.72,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "San Francisco|2014": {
+  "city": "San Francisco",
+  "year": 2014,
+  "murders": 45,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 850750,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 5.29,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "San Francisco|2015": {
+  "city": "San Francisco",
+  "year": 2015,
+  "murders": 53,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Francisco|2016": {
+  "city": "San Francisco",
+  "year": 2016,
+  "murders": 57,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Francisco|2017": {
+  "city": "San Francisco",
+  "year": 2017,
+  "murders": 56,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Francisco|2018": {
+  "city": "San Francisco",
+  "year": 2018,
+  "murders": 46,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Francisco|2019": {
+  "city": "San Francisco",
+  "year": 2019,
+  "murders": 40,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Francisco|2020": {
+  "city": "San Francisco",
+  "year": 2020,
+  "murders": 48,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Francisco|2022": {
+  "city": "San Francisco",
+  "year": 2022,
+  "murders": 55,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Francisco|2023": {
+  "city": "San Francisco",
+  "year": 2023,
+  "murders": 52,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Francisco|2024": {
+  "city": "San Francisco",
+  "year": 2024,
+  "murders": 35,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "San Francisco|2025": {
+  "city": "San Francisco",
+  "year": 2025,
+  "murders": 28,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Seattle|2011": {
+  "city": "Seattle",
+  "year": 2011,
+  "murders": 20,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 622694,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 3.21,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Seattle|2012": {
+  "city": "Seattle",
+  "year": 2012,
+  "murders": 25,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 635928,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 3.93,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Seattle|2013": {
+  "city": "Seattle",
+  "year": 2013,
+  "murders": 18,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 653588,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 2.75,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Seattle|2014": {
+  "city": "Seattle",
+  "year": 2014,
+  "murders": 26,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 670109,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 3.88,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Seattle|2015": {
+  "city": "Seattle",
+  "year": 2015,
+  "murders": 24,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Seattle|2016": {
+  "city": "Seattle",
+  "year": 2016,
+  "murders": 17,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Seattle|2017": {
+  "city": "Seattle",
+  "year": 2017,
+  "murders": 24,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Seattle|2018": {
+  "city": "Seattle",
+  "year": 2018,
+  "murders": 25,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Seattle|2019": {
+  "city": "Seattle",
+  "year": 2019,
+  "murders": 30,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Seattle|2020": {
+  "city": "Seattle",
+  "year": 2020,
+  "murders": 50,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Seattle|2021": {
+  "city": "Seattle",
+  "year": 2021,
+  "murders": 43,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Seattle|2022": {
+  "city": "Seattle",
+  "year": 2022,
+  "murders": 54,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Seattle|2023": {
+  "city": "Seattle",
+  "year": 2023,
+  "murders": 68,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Seattle|2024": {
+  "city": "Seattle",
+  "year": 2024,
+  "murders": 51,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Seattle|2025": {
+  "city": "Seattle",
+  "year": 2025,
+  "murders": 34,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Denver|2011": {
+  "city": "Denver",
+  "year": 2011,
+  "murders": 37,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 620530,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 5.96,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Denver|2012": {
+  "city": "Denver",
+  "year": 2012,
+  "murders": 39,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 635163,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 6.14,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Denver|2013": {
+  "city": "Denver",
+  "year": 2013,
+  "murders": 41,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 649391,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 6.31,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Denver|2014": {
+  "city": "Denver",
+  "year": 2014,
+  "murders": 31,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 664582,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 4.66,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Denver|2015": {
+  "city": "Denver",
+  "year": 2015,
+  "murders": 53,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Denver|2016": {
+  "city": "Denver",
+  "year": 2016,
+  "murders": 56,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Denver|2017": {
+  "city": "Denver",
+  "year": 2017,
+  "murders": 58,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Denver|2018": {
+  "city": "Denver",
+  "year": 2018,
+  "murders": 64,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Denver|2019": {
+  "city": "Denver",
+  "year": 2019,
+  "murders": 66,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Denver|2020": {
+  "city": "Denver",
+  "year": 2020,
+  "murders": 95,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Denver|2021": {
+  "city": "Denver",
+  "year": 2021,
+  "murders": 100,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Denver|2022": {
+  "city": "Denver",
+  "year": 2022,
+  "murders": 90,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Denver|2023": {
+  "city": "Denver",
+  "year": 2023,
+  "murders": 88,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Denver|2024": {
+  "city": "Denver",
+  "year": 2024,
+  "murders": 71,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Denver|2025": {
+  "city": "Denver",
+  "year": 2025,
+  "murders": 44,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Nashville|2011": {
+  "city": "Nashville",
+  "year": 2011,
+  "murders": 50,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 612518,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 8.16,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Nashville|2012": {
+  "city": "Nashville",
+  "year": 2012,
+  "murders": 63,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 625550,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 10.07,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Nashville|2013": {
+  "city": "Nashville",
+  "year": 2013,
+  "murders": 35,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 635999,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 5.5,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Nashville|2014": {
+  "city": "Nashville",
+  "year": 2014,
+  "murders": 42,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 645259,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 6.51,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Nashville|2015": {
+  "city": "Nashville",
+  "year": 2015,
+  "murders": 79,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Nashville|2016": {
+  "city": "Nashville",
+  "year": 2016,
+  "murders": 81,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Nashville|2017": {
+  "city": "Nashville",
+  "year": 2017,
+  "murders": 110,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Nashville|2018": {
+  "city": "Nashville",
+  "year": 2018,
+  "murders": 89,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Nashville|2019": {
+  "city": "Nashville",
+  "year": 2019,
+  "murders": 86,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Nashville|2020": {
+  "city": "Nashville",
+  "year": 2020,
+  "murders": 115,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Nashville|2021": {
+  "city": "Nashville",
+  "year": 2021,
+  "murders": 101,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Nashville|2022": {
+  "city": "Nashville",
+  "year": 2022,
+  "murders": 109,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Nashville|2023": {
+  "city": "Nashville",
+  "year": 2023,
+  "murders": 101,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Nashville|2024": {
+  "city": "Nashville",
+  "year": 2024,
+  "murders": 103,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Nashville|2025": {
+  "city": "Nashville",
+  "year": 2025,
+  "murders": 57,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Albuquerque|2011": {
+  "city": "Albuquerque",
+  "year": 2011,
+  "murders": 38,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 552066,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 6.88,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Albuquerque|2012": {
+  "city": "Albuquerque",
+  "year": 2012,
+  "murders": 41,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 555002,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 7.39,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Albuquerque|2013": {
+  "city": "Albuquerque",
+  "year": 2013,
+  "murders": 37,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 557445,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 6.64,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Albuquerque|2014": {
+  "city": "Albuquerque",
+  "year": 2014,
+  "murders": 30,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 557444,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 5.38,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Albuquerque|2015": {
+  "city": "Albuquerque",
+  "year": 2015,
+  "murders": 43,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Albuquerque|2016": {
+  "city": "Albuquerque",
+  "year": 2016,
+  "murders": 61,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Albuquerque|2017": {
+  "city": "Albuquerque",
+  "year": 2017,
+  "murders": 70,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Albuquerque|2018": {
+  "city": "Albuquerque",
+  "year": 2018,
+  "murders": 69,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Albuquerque|2019": {
+  "city": "Albuquerque",
+  "year": 2019,
+  "murders": 80,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Albuquerque|2020": {
+  "city": "Albuquerque",
+  "year": 2020,
+  "murders": 76,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Albuquerque|2021": {
+  "city": "Albuquerque",
+  "year": 2021,
+  "murders": 125,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Albuquerque|2022": {
+  "city": "Albuquerque",
+  "year": 2022,
+  "murders": 126,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Albuquerque|2023": {
+  "city": "Albuquerque",
+  "year": 2023,
+  "murders": 109,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Albuquerque|2024": {
+  "city": "Albuquerque",
+  "year": 2024,
+  "murders": 106,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Albuquerque|2025": {
+  "city": "Albuquerque",
+  "year": 2025,
+  "murders": 75,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Baltimore|2011": {
+  "city": "Baltimore",
+  "year": 2011,
+  "murders": 197,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 620410,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 31.75,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Baltimore|2012": {
+  "city": "Baltimore",
+  "year": 2012,
+  "murders": 216,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 622895,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 34.68,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Baltimore|2013": {
+  "city": "Baltimore",
+  "year": 2013,
+  "murders": 233,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 622391,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 37.44,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Baltimore|2014": {
+  "city": "Baltimore",
+  "year": 2014,
+  "murders": 211,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 623587,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 33.84,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Baltimore|2015": {
+  "city": "Baltimore",
+  "year": 2015,
+  "murders": 344,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Baltimore|2016": {
+  "city": "Baltimore",
+  "year": 2016,
+  "murders": 318,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Baltimore|2017": {
+  "city": "Baltimore",
+  "year": 2017,
+  "murders": 342,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Baltimore|2018": {
+  "city": "Baltimore",
+  "year": 2018,
+  "murders": 309,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Baltimore|2019": {
+  "city": "Baltimore",
+  "year": 2019,
+  "murders": 348,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Baltimore|2020": {
+  "city": "Baltimore",
+  "year": 2020,
+  "murders": 330,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Baltimore|2021": {
+  "city": "Baltimore",
+  "year": 2021,
+  "murders": 174,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Baltimore|2022": {
+  "city": "Baltimore",
+  "year": 2022,
+  "murders": 325,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Baltimore|2023": {
+  "city": "Baltimore",
+  "year": 2023,
+  "murders": 247,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Baltimore|2024": {
+  "city": "Baltimore",
+  "year": 2024,
+  "murders": 195,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Baltimore|2025": {
+  "city": "Baltimore",
+  "year": 2025,
+  "murders": 136,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Fresno|2011": {
+  "city": "Fresno",
+  "year": 2011,
+  "murders": 35,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 501429,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 6.98,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Fresno|2012": {
+  "city": "Fresno",
+  "year": 2012,
+  "murders": 51,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 505414,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 10.09,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Fresno|2013": {
+  "city": "Fresno",
+  "year": 2013,
+  "murders": 40,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 508880,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 7.86,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Fresno|2014": {
+  "city": "Fresno",
+  "year": 2014,
+  "murders": 47,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 514100,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 9.14,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Fresno|2015": {
+  "city": "Fresno",
+  "year": 2015,
+  "murders": 39,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Fresno|2016": {
+  "city": "Fresno",
+  "year": 2016,
+  "murders": 39,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Fresno|2017": {
+  "city": "Fresno",
+  "year": 2017,
+  "murders": 56,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Fresno|2018": {
+  "city": "Fresno",
+  "year": 2018,
+  "murders": 32,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Fresno|2019": {
+  "city": "Fresno",
+  "year": 2019,
+  "murders": 35,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Fresno|2020": {
+  "city": "Fresno",
+  "year": 2020,
+  "murders": 77,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Fresno|2021": {
+  "city": "Fresno",
+  "year": 2021,
+  "murders": 73,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Fresno|2022": {
+  "city": "Fresno",
+  "year": 2022,
+  "murders": 62,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Fresno|2023": {
+  "city": "Fresno",
+  "year": 2023,
+  "murders": 38,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Fresno|2024": {
+  "city": "Fresno",
+  "year": 2024,
+  "murders": 32,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Fresno|2025": {
+  "city": "Fresno",
+  "year": 2025,
+  "murders": 24,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Kansas City|2011": {
+  "city": "Kansas City",
+  "year": 2011,
+  "murders": 108,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 462368,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 23.36,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Kansas City|2012": {
+  "city": "Kansas City",
+  "year": 2012,
+  "murders": 105,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 464595,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 22.6,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Kansas City|2013": {
+  "city": "Kansas City",
+  "year": 2013,
+  "murders": 99,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 467213,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 21.19,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Kansas City|2014": {
+  "city": "Kansas City",
+  "year": 2014,
+  "murders": 79,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 470629,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 16.79,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Kansas City|2015": {
+  "city": "Kansas City",
+  "year": 2015,
+  "murders": 110,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Kansas City|2016": {
+  "city": "Kansas City",
+  "year": 2016,
+  "murders": 131,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Kansas City|2017": {
+  "city": "Kansas City",
+  "year": 2017,
+  "murders": 153,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Kansas City|2018": {
+  "city": "Kansas City",
+  "year": 2018,
+  "murders": 142,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Kansas City|2019": {
+  "city": "Kansas City",
+  "year": 2019,
+  "murders": 152,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Kansas City|2020": {
+  "city": "Kansas City",
+  "year": 2020,
+  "murders": 176,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Kansas City|2021": {
+  "city": "Kansas City",
+  "year": 2021,
+  "murders": 156,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Kansas City|2022": {
+  "city": "Kansas City",
+  "year": 2022,
+  "murders": 167,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Kansas City|2023": {
+  "city": "Kansas City",
+  "year": 2023,
+  "murders": 180,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Kansas City|2024": {
+  "city": "Kansas City",
+  "year": 2024,
+  "murders": 141,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Kansas City|2025": {
+  "city": "Kansas City",
+  "year": 2025,
+  "murders": 134,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Las Vegas|2011": {
+  "city": "Las Vegas",
+  "year": 2011,
+  "murders": 82,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 586606,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 13.98,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Las Vegas|2012": {
+  "city": "Las Vegas",
+  "year": 2012,
+  "murders": 76,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 593275,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 12.81,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Las Vegas|2013": {
+  "city": "Las Vegas",
+  "year": 2013,
+  "murders": 97,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 599551,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 16.18,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Las Vegas|2014": {
+  "city": "Las Vegas",
+  "year": 2014,
+  "murders": 122,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 607976,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 20.07,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Las Vegas|2015": {
+  "city": "Las Vegas",
+  "year": 2015,
+  "murders": 127,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Las Vegas|2016": {
+  "city": "Las Vegas",
+  "year": 2016,
+  "murders": 158,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Las Vegas|2017": {
+  "city": "Las Vegas",
+  "year": 2017,
+  "murders": 198,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Las Vegas|2018": {
+  "city": "Las Vegas",
+  "year": 2018,
+  "murders": 120,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Las Vegas|2019": {
+  "city": "Las Vegas",
+  "year": 2019,
+  "murders": 85,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Las Vegas|2020": {
+  "city": "Las Vegas",
+  "year": 2020,
+  "murders": 100,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Las Vegas|2021": {
+  "city": "Las Vegas",
+  "year": 2021,
+  "murders": 161,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Las Vegas|2022": {
+  "city": "Las Vegas",
+  "year": 2022,
+  "murders": 148,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Las Vegas|2023": {
+  "city": "Las Vegas",
+  "year": 2023,
+  "murders": 142,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Las Vegas|2024": {
+  "city": "Las Vegas",
+  "year": 2024,
+  "murders": 112,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Las Vegas|2025": {
+  "city": "Las Vegas",
+  "year": 2025,
+  "murders": 94,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Long Beach|2011": {
+  "city": "Long Beach",
+  "year": 2011,
+  "murders": 25,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 464512,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 5.38,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Long Beach|2012": {
+  "city": "Long Beach",
+  "year": 2012,
+  "murders": 32,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 466873,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 6.85,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Long Beach|2013": {
+  "city": "Long Beach",
+  "year": 2013,
+  "murders": 34,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 468000,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 7.26,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Long Beach|2014": {
+  "city": "Long Beach",
+  "year": 2014,
+  "murders": 23,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 469109,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 4.9,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Long Beach|2015": {
+  "city": "Long Beach",
+  "year": 2015,
+  "murders": 36,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Long Beach|2016": {
+  "city": "Long Beach",
+  "year": 2016,
+  "murders": 33,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Long Beach|2017": {
+  "city": "Long Beach",
+  "year": 2017,
+  "murders": 22,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Long Beach|2018": {
+  "city": "Long Beach",
+  "year": 2018,
+  "murders": 30,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Long Beach|2019": {
+  "city": "Long Beach",
+  "year": 2019,
+  "murders": 34,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Long Beach|2020": {
+  "city": "Long Beach",
+  "year": 2020,
+  "murders": 36,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Long Beach|2022": {
+  "city": "Long Beach",
+  "year": 2022,
+  "murders": 37,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Long Beach|2023": {
+  "city": "Long Beach",
+  "year": 2023,
+  "murders": 27,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Long Beach|2024": {
+  "city": "Long Beach",
+  "year": 2024,
+  "murders": 37,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Long Beach|2025": {
+  "city": "Long Beach",
+  "year": 2025,
+  "murders": 28,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Milwaukee|2011": {
+  "city": "Milwaukee",
+  "year": 2011,
+  "murders": 86,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 597086,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 14.4,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Milwaukee|2012": {
+  "city": "Milwaukee",
+  "year": 2012,
+  "murders": 93,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 598569,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 15.54,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Milwaukee|2013": {
+  "city": "Milwaukee",
+  "year": 2013,
+  "murders": 104,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 599916,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 17.34,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Milwaukee|2014": {
+  "city": "Milwaukee",
+  "year": 2014,
+  "murders": 86,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 600664,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 14.32,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Milwaukee|2015": {
+  "city": "Milwaukee",
+  "year": 2015,
+  "murders": 146,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Milwaukee|2016": {
+  "city": "Milwaukee",
+  "year": 2016,
+  "murders": 141,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Milwaukee|2017": {
+  "city": "Milwaukee",
+  "year": 2017,
+  "murders": 119,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Milwaukee|2018": {
+  "city": "Milwaukee",
+  "year": 2018,
+  "murders": 100,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Milwaukee|2019": {
+  "city": "Milwaukee",
+  "year": 2019,
+  "murders": 97,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Milwaukee|2020": {
+  "city": "Milwaukee",
+  "year": 2020,
+  "murders": 192,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Milwaukee|2021": {
+  "city": "Milwaukee",
+  "year": 2021,
+  "murders": 194,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Milwaukee|2022": {
+  "city": "Milwaukee",
+  "year": 2022,
+  "murders": 214,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Milwaukee|2023": {
+  "city": "Milwaukee",
+  "year": 2023,
+  "murders": 174,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Milwaukee|2024": {
+  "city": "Milwaukee",
+  "year": 2024,
+  "murders": 137,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Milwaukee|2025": {
+  "city": "Milwaukee",
+  "year": 2025,
+  "murders": 143,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Omaha|2011": {
+  "city": "Omaha",
+  "year": 2011,
+  "murders": 43,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 462101,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 9.31,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Omaha|2012": {
+  "city": "Omaha",
+  "year": 2012,
+  "murders": 41,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 465261,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 8.81,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Omaha|2013": {
+  "city": "Omaha",
+  "year": 2013,
+  "murders": 42,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 468086,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 8.97,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Omaha|2014": {
+  "city": "Omaha",
+  "year": 2014,
+  "murders": 32,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 470423,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 6.8,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Omaha|2015": {
+  "city": "Omaha",
+  "year": 2015,
+  "murders": 48,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Omaha|2016": {
+  "city": "Omaha",
+  "year": 2016,
+  "murders": 29,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Omaha|2017": {
+  "city": "Omaha",
+  "year": 2017,
+  "murders": 31,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Omaha|2018": {
+  "city": "Omaha",
+  "year": 2018,
+  "murders": 22,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Omaha|2019": {
+  "city": "Omaha",
+  "year": 2019,
+  "murders": 23,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Omaha|2020": {
+  "city": "Omaha",
+  "year": 2020,
+  "murders": 37,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Omaha|2022": {
+  "city": "Omaha",
+  "year": 2022,
+  "murders": 29,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Omaha|2023": {
+  "city": "Omaha",
+  "year": 2023,
+  "murders": 16,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Omaha|2024": {
+  "city": "Omaha",
+  "year": 2024,
+  "murders": 20,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Omaha|2025": {
+  "city": "Omaha",
+  "year": 2025,
+  "murders": 26,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Portland|2011": {
+  "city": "Portland",
+  "year": 2011,
+  "murders": 20,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 595451,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 3.36,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Portland|2012": {
+  "city": "Portland",
+  "year": 2012,
+  "murders": 20,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 604264,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 3.31,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Portland|2013": {
+  "city": "Portland",
+  "year": 2013,
+  "murders": 14,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 609890,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 2.3,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Portland|2014": {
+  "city": "Portland",
+  "year": 2014,
+  "murders": 26,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 620510,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 4.19,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Portland|2015": {
+  "city": "Portland",
+  "year": 2015,
+  "murders": 4,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Portland|2016": {
+  "city": "Portland",
+  "year": 2016,
+  "murders": 16,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Portland|2017": {
+  "city": "Portland",
+  "year": 2017,
+  "murders": 25,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Portland|2018": {
+  "city": "Portland",
+  "year": 2018,
+  "murders": 27,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Portland|2019": {
+  "city": "Portland",
+  "year": 2019,
+  "murders": 30,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Portland|2020": {
+  "city": "Portland",
+  "year": 2020,
+  "murders": 53,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Portland|2021": {
+  "city": "Portland",
+  "year": 2021,
+  "murders": 86,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Portland|2022": {
+  "city": "Portland",
+  "year": 2022,
+  "murders": 95,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Portland|2023": {
+  "city": "Portland",
+  "year": 2023,
+  "murders": 75,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Portland|2024": {
+  "city": "Portland",
+  "year": 2024,
+  "murders": 68,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Portland|2025": {
+  "city": "Portland",
+  "year": 2025,
+  "murders": 50,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Raleigh|2011": {
+  "city": "Raleigh",
+  "year": 2011,
+  "murders": 17,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 413958,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 4.11,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Raleigh|2012": {
+  "city": "Raleigh",
+  "year": 2012,
+  "murders": 17,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 423304,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 4.02,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Raleigh|2013": {
+  "city": "Raleigh",
+  "year": 2013,
+  "murders": 12,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 431391,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 2.78,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Raleigh|2014": {
+  "city": "Raleigh",
+  "year": 2014,
+  "murders": 8,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 439503,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 1.82,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Raleigh|2019": {
+  "city": "Raleigh",
+  "year": 2019,
+  "murders": 28,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Raleigh|2020": {
+  "city": "Raleigh",
+  "year": 2020,
+  "murders": 24,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Raleigh|2021": {
+  "city": "Raleigh",
+  "year": 2021,
+  "murders": 26,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Raleigh|2022": {
+  "city": "Raleigh",
+  "year": 2022,
+  "murders": 45,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Raleigh|2023": {
+  "city": "Raleigh",
+  "year": 2023,
+  "murders": 28,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Raleigh|2024": {
+  "city": "Raleigh",
+  "year": 2024,
+  "murders": 24,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Raleigh|2025": {
+  "city": "Raleigh",
+  "year": 2025,
+  "murders": 25,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Sacramento|2011": {
+  "city": "Sacramento",
+  "year": 2011,
+  "murders": 36,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 470902,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 7.64,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Sacramento|2012": {
+  "city": "Sacramento",
+  "year": 2012,
+  "murders": 34,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 474226,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 7.17,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Sacramento|2013": {
+  "city": "Sacramento",
+  "year": 2013,
+  "murders": 34,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 478214,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 7.11,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Sacramento|2014": {
+  "city": "Sacramento",
+  "year": 2014,
+  "murders": 28,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 482762,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 5.8,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Sacramento|2015": {
+  "city": "Sacramento",
+  "year": 2015,
+  "murders": 43,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Sacramento|2016": {
+  "city": "Sacramento",
+  "year": 2016,
+  "murders": 41,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Sacramento|2017": {
+  "city": "Sacramento",
+  "year": 2017,
+  "murders": 39,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Sacramento|2018": {
+  "city": "Sacramento",
+  "year": 2018,
+  "murders": 36,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Sacramento|2019": {
+  "city": "Sacramento",
+  "year": 2019,
+  "murders": 34,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Sacramento|2020": {
+  "city": "Sacramento",
+  "year": 2020,
+  "murders": 42,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Sacramento|2022": {
+  "city": "Sacramento",
+  "year": 2022,
+  "murders": 54,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Sacramento|2023": {
+  "city": "Sacramento",
+  "year": 2023,
+  "murders": 40,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Sacramento|2024": {
+  "city": "Sacramento",
+  "year": 2024,
+  "murders": 44,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Sacramento|2025": {
+  "city": "Sacramento",
+  "year": 2025,
+  "murders": 42,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Tucson|2011": {
+  "city": "Tucson",
+  "year": 2011,
+  "murders": 51,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 530709,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 9.61,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Tucson|2012": {
+  "city": "Tucson",
+  "year": 2012,
+  "murders": 42,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 531880,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 7.9,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Tucson|2013": {
+  "city": "Tucson",
+  "year": 2013,
+  "murders": 47,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 532945,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 8.82,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Tucson|2014": {
+  "city": "Tucson",
+  "year": 2014,
+  "murders": 35,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 534800,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 6.54,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Tucson|2015": {
+  "city": "Tucson",
+  "year": 2015,
+  "murders": 31,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Tucson|2016": {
+  "city": "Tucson",
+  "year": 2016,
+  "murders": 30,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Tucson|2017": {
+  "city": "Tucson",
+  "year": 2017,
+  "murders": 46,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Tucson|2018": {
+  "city": "Tucson",
+  "year": 2018,
+  "murders": 47,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Tucson|2019": {
+  "city": "Tucson",
+  "year": 2019,
+  "murders": 40,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Tucson|2020": {
+  "city": "Tucson",
+  "year": 2020,
+  "murders": 57,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Tucson|2022": {
+  "city": "Tucson",
+  "year": 2022,
+  "murders": 43,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Tucson|2023": {
+  "city": "Tucson",
+  "year": 2023,
+  "murders": 42,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Tucson|2024": {
+  "city": "Tucson",
+  "year": 2024,
+  "murders": 47,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Tucson|2025": {
+  "city": "Tucson",
+  "year": 2025,
+  "murders": 41,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Tulsa|2011": {
+  "city": "Tulsa",
+  "year": 2011,
+  "murders": 49,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 393005,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 12.47,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Tulsa|2012": {
+  "city": "Tulsa",
+  "year": 2012,
+  "murders": 42,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 394643,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 10.64,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Tulsa|2013": {
+  "city": "Tulsa",
+  "year": 2013,
+  "murders": 60,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 398401,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 15.06,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Tulsa|2014": {
+  "city": "Tulsa",
+  "year": 2014,
+  "murders": 46,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 399892,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 11.5,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Tulsa|2015": {
+  "city": "Tulsa",
+  "year": 2015,
+  "murders": 55,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Tulsa|2016": {
+  "city": "Tulsa",
+  "year": 2016,
+  "murders": 72,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Tulsa|2017": {
+  "city": "Tulsa",
+  "year": 2017,
+  "murders": 70,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Tulsa|2018": {
+  "city": "Tulsa",
+  "year": 2018,
+  "murders": 60,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Tulsa|2019": {
+  "city": "Tulsa",
+  "year": 2019,
+  "murders": 55,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Tulsa|2020": {
+  "city": "Tulsa",
+  "year": 2020,
+  "murders": 72,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Tulsa|2021": {
+  "city": "Tulsa",
+  "year": 2021,
+  "murders": 60,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Tulsa|2022": {
+  "city": "Tulsa",
+  "year": 2022,
+  "murders": 59,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Tulsa|2023": {
+  "city": "Tulsa",
+  "year": 2023,
+  "murders": 35,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Tulsa|2024": {
+  "city": "Tulsa",
+  "year": 2024,
+  "murders": 38,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Tulsa|2025": {
+  "city": "Tulsa",
+  "year": 2025,
+  "murders": 26,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Virginia Beach|2011": {
+  "city": "Virginia Beach",
+  "year": 2011,
+  "murders": 15,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 442583,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 3.39,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Virginia Beach|2012": {
+  "city": "Virginia Beach",
+  "year": 2012,
+  "murders": 21,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 445044,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 4.72,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Virginia Beach|2013": {
+  "city": "Virginia Beach",
+  "year": 2013,
+  "murders": 17,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 447706,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 3.8,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Virginia Beach|2014": {
+  "city": "Virginia Beach",
+  "year": 2014,
+  "murders": 17,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 448864,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 3.79,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Virginia Beach|2015": {
+  "city": "Virginia Beach",
+  "year": 2015,
+  "murders": 19,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Virginia Beach|2016": {
+  "city": "Virginia Beach",
+  "year": 2016,
+  "murders": 21,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Virginia Beach|2017": {
+  "city": "Virginia Beach",
+  "year": 2017,
+  "murders": 14,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Virginia Beach|2018": {
+  "city": "Virginia Beach",
+  "year": 2018,
+  "murders": 16,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Virginia Beach|2019": {
+  "city": "Virginia Beach",
+  "year": 2019,
+  "murders": 30,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Virginia Beach|2020": {
+  "city": "Virginia Beach",
+  "year": 2020,
+  "murders": 17,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Virginia Beach|2021": {
+  "city": "Virginia Beach",
+  "year": 2021,
+  "murders": 14,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Virginia Beach|2022": {
+  "city": "Virginia Beach",
+  "year": 2022,
+  "murders": 22,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Virginia Beach|2023": {
+  "city": "Virginia Beach",
+  "year": 2023,
+  "murders": 23,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Virginia Beach|2024": {
+  "city": "Virginia Beach",
+  "year": 2024,
+  "murders": 15,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Virginia Beach|2025": {
+  "city": "Virginia Beach",
+  "year": 2025,
+  "murders": 15,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Wichita|2011": {
+  "city": "Wichita",
+  "year": 2011,
+  "murders": 25,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 383773,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 6.51,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Wichita|2012": {
+  "city": "Wichita",
+  "year": 2012,
+  "murders": 23,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 385751,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 5.96,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Wichita|2013": {
+  "city": "Wichita",
+  "year": 2013,
+  "murders": 15,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 387210,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 3.87,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Wichita|2014": {
+  "city": "Wichita",
+  "year": 2014,
+  "murders": 21,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 388416,
+  "pop_src": "pop-bank:populations_wide_v1 (PEP vintage-2019 SUMLEV 162)",
+  "rate": 5.41,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Wichita|2015": {
+  "city": "Wichita",
+  "year": 2015,
+  "murders": 27,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Wichita|2016": {
+  "city": "Wichita",
+  "year": 2016,
+  "murders": 31,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Wichita|2017": {
+  "city": "Wichita",
+  "year": 2017,
+  "murders": 35,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Wichita|2018": {
+  "city": "Wichita",
+  "year": 2018,
+  "murders": 35,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Wichita|2019": {
+  "city": "Wichita",
+  "year": 2019,
+  "murders": 35,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Wichita|2020": {
+  "city": "Wichita",
+  "year": 2020,
+  "murders": 54,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Wichita|2021": {
+  "city": "Wichita",
+  "year": 2021,
+  "murders": 47,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Wichita|2022": {
+  "city": "Wichita",
+  "year": 2022,
+  "murders": 31,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Wichita|2023": {
+  "city": "Wichita",
+  "year": 2023,
+  "murders": 39,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Wichita|2024": {
+  "city": "Wichita",
+  "year": 2024,
+  "murders": 33,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Wichita|2025": {
+  "city": "Wichita",
+  "year": 2025,
+  "murders": 36,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all"
+ },
+ "Pittsburgh|2019": {
+  "city": "Pittsburgh",
+  "year": 2019,
+  "murders": 30,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 300286,
+  "pop_src": "pop-bank:populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+  "rate": 9.99,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Pittsburgh|2020": {
+  "city": "Pittsburgh",
+  "year": 2020,
+  "murders": 48,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 302859,
+  "pop_src": "pop-bank:populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+  "rate": 15.85,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Pittsburgh|2022": {
+  "city": "Pittsburgh",
+  "year": 2022,
+  "murders": 66,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 303012,
+  "pop_src": "pop-bank:populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+  "rate": 21.78,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Pittsburgh|2023": {
+  "city": "Pittsburgh",
+  "year": 2023,
+  "murders": 51,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 304508,
+  "pop_src": "pop-bank:populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+  "rate": 16.75,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Pittsburgh|2024": {
+  "city": "Pittsburgh",
+  "year": 2024,
+  "murders": 39,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 306719,
+  "pop_src": "pop-bank:populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+  "rate": 12.72,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Pittsburgh|2025": {
+  "city": "Pittsburgh",
+  "year": 2025,
+  "murders": 31,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 307632,
+  "pop_src": "pop-bank:populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+  "rate": 10.08,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Pittsburgh|2026": {
+  "city": "Pittsburgh",
+  "year": 2026,
+  "murders": 6,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "partial_year_flag": "2026 YTD 9-11 months in the banked series — EXCLUDED from backwards scoring (honest partials, never annualized/fabricated)"
+ },
+ "Oklahoma City|2019": {
+  "city": "Oklahoma City",
+  "year": 2019,
+  "murders": 76,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 655057,
+  "pop_src": "pop-bank:populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+  "rate": 11.6,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Oklahoma City|2020": {
+  "city": "Oklahoma City",
+  "year": 2020,
+  "murders": 67,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 682938,
+  "pop_src": "pop-bank:populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+  "rate": 9.81,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Oklahoma City|2021": {
+  "city": "Oklahoma City",
+  "year": 2021,
+  "murders": 83,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 688604,
+  "pop_src": "pop-bank:populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+  "rate": 12.05,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Oklahoma City|2022": {
+  "city": "Oklahoma City",
+  "year": 2022,
+  "murders": 71,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 696523,
+  "pop_src": "pop-bank:populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+  "rate": 10.19,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Oklahoma City|2023": {
+  "city": "Oklahoma City",
+  "year": 2023,
+  "murders": 69,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 704366,
+  "pop_src": "pop-bank:populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+  "rate": 9.8,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Oklahoma City|2024": {
+  "city": "Oklahoma City",
+  "year": 2024,
+  "murders": 77,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 713745,
+  "pop_src": "pop-bank:populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+  "rate": 10.79,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Oklahoma City|2025": {
+  "city": "Oklahoma City",
+  "year": 2025,
+  "murders": 70,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 719849,
+  "pop_src": "pop-bank:populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+  "rate": 9.72,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "Oklahoma City|2026": {
+  "city": "Oklahoma City",
+  "year": 2026,
+  "murders": 47,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "partial_year_flag": "2026 YTD 9-11 months in the banked series — EXCLUDED from backwards scoring (honest partials, never annualized/fabricated)"
+ },
+ "Detroit|2019": {
+  "city": "Detroit",
+  "year": 2019,
+  "murders": 281,
+  "murders_src": "murders_all_v1 (banked)",
+  "priority": "murders_all",
+  "population": 670031,
+  "pop_src": "pop-bank:populations_cities_v2 (PEP vintage-2025 SUMLEV 162)",
+  "rate": 41.94,
+  "rate_src": "murders_all / pop-bank"
+ },
+ "NYC|1980": {
+  "city": "NYC",
+  "year": 1980,
+  "murders": 1814,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "population": 7071639,
+  "pop_src": "wiki NYC historical-population table (decennial census)",
+  "rate": 25.65,
+  "rate_src": "NYPD count / decennial census pop",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|1981": {
+  "city": "NYC",
+  "year": 1981,
+  "murders": 1826,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|1982": {
+  "city": "NYC",
+  "year": 1982,
+  "murders": 1668,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|1983": {
+  "city": "NYC",
+  "year": 1983,
+  "murders": 1622,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|1984": {
+  "city": "NYC",
+  "year": 1984,
+  "murders": 1450,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|1985": {
+  "city": "NYC",
+  "year": 1985,
+  "murders": 1384,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|1986": {
+  "city": "NYC",
+  "year": 1986,
+  "murders": 1582,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|1987": {
+  "city": "NYC",
+  "year": 1987,
+  "murders": 1672,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|1988": {
+  "city": "NYC",
+  "year": 1988,
+  "murders": 1896,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|1989": {
+  "city": "NYC",
+  "year": 1989,
+  "murders": 1905,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|1990": {
+  "city": "NYC",
+  "year": 1990,
+  "murders": 2245,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "population": 7322564,
+  "pop_src": "wiki NYC historical-population table (decennial census)",
+  "rate": 30.66,
+  "rate_src": "NYPD count / decennial census pop",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|1991": {
+  "city": "NYC",
+  "year": 1991,
+  "murders": 2154,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|1992": {
+  "city": "NYC",
+  "year": 1992,
+  "murders": 1995,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|1993": {
+  "city": "NYC",
+  "year": 1993,
+  "murders": 1946,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|1994": {
+  "city": "NYC",
+  "year": 1994,
+  "murders": 1561,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|1995": {
+  "city": "NYC",
+  "year": 1995,
+  "murders": 1177,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|1996": {
+  "city": "NYC",
+  "year": 1996,
+  "murders": 983,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|1997": {
+  "city": "NYC",
+  "year": 1997,
+  "murders": 770,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|2002": {
+  "city": "NYC",
+  "year": 2002,
+  "murders": 587,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|2003": {
+  "city": "NYC",
+  "year": 2003,
+  "murders": 597,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|2004": {
+  "city": "NYC",
+  "year": 2004,
+  "murders": 570,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|2005": {
+  "city": "NYC",
+  "year": 2005,
+  "murders": 539,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|2006": {
+  "city": "NYC",
+  "year": 2006,
+  "murders": 596,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|2007": {
+  "city": "NYC",
+  "year": 2007,
+  "murders": 496,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|2008": {
+  "city": "NYC",
+  "year": 2008,
+  "murders": 523,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|2009": {
+  "city": "NYC",
+  "year": 2009,
+  "murders": 471,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|2010": {
+  "city": "NYC",
+  "year": 2010,
+  "murders": 536,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|2011": {
+  "city": "NYC",
+  "year": 2011,
+  "murders": 515,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|2012": {
+  "city": "NYC",
+  "year": 2012,
+  "murders": 419,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|2013": {
+  "city": "NYC",
+  "year": 2013,
+  "murders": 335,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|2014": {
+  "city": "NYC",
+  "year": 2014,
+  "murders": 333,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|2015": {
+  "city": "NYC",
+  "year": 2015,
+  "murders": 352,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|2016": {
+  "city": "NYC",
+  "year": 2016,
+  "murders": 335,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|2017": {
+  "city": "NYC",
+  "year": 2017,
+  "murders": 292,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|2018": {
+  "city": "NYC",
+  "year": 2018,
+  "murders": 295,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ },
+ "NYC|2025": {
+  "city": "NYC",
+  "year": 2025,
+  "murders": 303,
+  "murders_src": "banked NYPD murdery-by-year wiki table (_wiki_Crime_in_New_York_City.txt)",
+  "priority": "wiki_nyc",
+  "population": 8584629,
+  "pop_src": "pop-bank (PEP vintage-2025 SUMLEV 162)",
+  "rate": 3.53,
+  "rate_src": "NYPD count / decennial census pop",
+  "nypd_dcjs_basis_note": "NYPD table may differ from the DCJS basis by plus/minus a few counts (e.g. 2019-2024); labeled, not reconciled"
+ }
+}

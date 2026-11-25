@@ -1,0 +1,1277 @@
+{
+ "city": "Cincinnati",
+ "band": "C",
+ "cycle": "FY2027 (adopted FY26-27 biennial; FY27 as Budget Update)",
+ "source": {
+  "dataset": "Fiscal Year 2027 Performance Agreements",
+  "owner": "Office of Performance & Data Analytics (OPDA), City of Cincinnati",
+  "dataset_id": "2n5d-w8z5",
+  "dataset_url": "https://data.cincinnati-oh.gov/Thriving-Neighborhoods/Fiscal-Year-2027-Performance-Agreements/2n5d-w8z5",
+  "pdf_asset": "FY 2027 Performance Agreements.pdf (assetId 41aa0a9c-ee14-4b6e-b36f-c14b20a6a66f)",
+  "pdf_url": "https://data.cincinnati-oh.gov/api/views/2n5d-w8z5/files/41aa0a9c-ee14-4b6e-b36f-c14b20a6a66f?download=true",
+  "pdf_bytes": 9228886,
+  "pdf_pages": 135
+ },
+ "measure_count": 142,
+ "department_count": 23,
+ "departments": [
+  {
+   "department": "Budget",
+   "measures": [
+    {
+     "service": "Position Management and Approval",
+     "city_goal": "Fiscal Sustainability",
+     "goal": "90% of requisitions approved within two days of the monthly Vacancy Review (VR) meeting",
+     "measure_type": "Volume",
+     "measure": "# of Requisitions Processed",
+     "page": 9
+    },
+    {
+     "service": "Community Engagement",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "Hold at least 7 budget engagement sessions each year",
+     "measure_type": "Volume",
+     "measure": "# of budget engagement sessions annually",
+     "page": 9
+    },
+    {
+     "service": "Operating Budget Monitoring/Budget Status",
+     "city_goal": "Fiscal Sustainability",
+     "goal": "No (0) Department requires a mid-year supplemental appropriation to address a foreseeable expense that was not authorized by the City Manager's Office prior to being incurred",
+     "measure_type": "Volume",
+     "measure": "# of departments requiring a supplemental appropriation in advance of the Final Adjustment Ordinance (FAO)",
+     "page": 9
+    },
+    {
+     "service": "Ordinance Processing",
+     "city_goal": "Fiscal Sustainability",
+     "goal": "90% of ordinances submitted to Law within 8 business days of receipt from department",
+     "measure_type": "Volume",
+     "measure": "# of ordinances processed",
+     "page": 10
+    },
+    {
+     "service": "Performance/operational audits",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "6 months after the final report is issued, Internal Audit will confirm that 75% of audit recommendations are implemented, or an action plan has been created.",
+     "measure_type": "Volume",
+     "measure": "# of recommendations implemented",
+     "page": 10
+    }
+   ]
+  },
+  {
+   "department": "Buildings",
+   "measures": [
+    {
+     "service": "Tier 3 Plan Review (Large)",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "90% of Initial Tier 3 Plan Reviews, will be reviewed, from the date of application completeness, within 10 business days for RCO project and within 15 business days for OBC projects",
+     "measure_type": "Volume",
+     "measure": "# of Tier 3 Plan reviews received",
+     "page": 3
+    },
+    {
+     "service": "Tier 2 Plan Review (Small) & Revision Review (Tier 2 & 3)",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "90% of initial Tier 2 Reviews and any Revision Reviews, will be reviewed, from date of application completeness, within 5 business days for eligible RCO projects and OBC projects",
+     "measure_type": "Volume",
+     "measure": "# of Tier 2 Plan Reviews and Revision Reviews (Tier 2 and 3) received",
+     "page": 3
+    },
+    {
+     "service": "PMCE Service Requests",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "90% of Initial Inspections for will be completed within 5 business days of the service request initiating a code enforcement record",
+     "measure_type": "Volume",
+     "measure": "# of PMCE CS Rs received",
+     "page": 3
+    },
+    {
+     "service": "Reduce Quantity of Vacated Buildings",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "10% reduction of total number of unoccupiable/hazardous structures identified as of 6/30/27 shall be removed or remediated by 6/30/28",
+     "measure_type": "Volume",
+     "measure": "# of Unoccupied/Hazardous Structure",
+     "page": 4
+    },
+    {
+     "service": "PLAP Service Requests",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "90% of initial PLAP Inspections will be completed in 2 business days of service request initiating the code enforcement record",
+     "measure_type": "Volume",
+     "measure": "# of PLAP CSRs received",
+     "page": 4
+    },
+    {
+     "service": "Abatement Cost Recovery",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "90% of all costs billing for completed abatements will be processed to the status of Paid, Assessed, or Referred to Law for collections within 120 days of invoicing",
+     "measure_type": "Volume",
+     "measure": "# of Litter, Tall Grass, Graffiti, Stabilization, Tree, Essential Services, VFPR Point of Sale, Hazard and Barricade",
+     "page": 4
+    }
+   ]
+  },
+  {
+   "department": "CMO Offices",
+   "measures": [
+    {
+     "service": "ADA and Aging Program Administrator",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "At least 6 City departments present to the Cincinnati Accessibility Board of Advisors (CABA), providing an overview of programs, services, or initiatives, and receiving accessibility-focused feedback and recommendations.",
+     "measure_type": "Volume",
+     "measure": "# of presentations or requests for feedback brought before the Cincinnati Accessibility Board of Advisors (CABA) by",
+     "page": 24
+    },
+    {
+     "service": "Executive Training",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "Provide at least 10 executive training sessions in 12 months",
+     "measure_type": "Volume",
+     "measure": "# of training opportunities",
+     "page": 24
+    },
+    {
+     "service": "Quality of Life Response",
+     "city_goal": "Public Safety and Health",
+     "goal": "75% of hoarders who engage with City intervention services avoid City litigation/ abatement",
+     "measure_type": "Volume",
+     "measure": "# of hoarders who engage with City intervention services avoid City litigation/ abatement",
+     "page": 24
+    },
+    {
+     "service": "Special Events",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "90% of permits submitted by deadline",
+     "measure_type": "Volume",
+     "measure": "# of permits applied for by requirement date",
+     "page": 25
+    },
+    {
+     "service": "ACT for Cincy",
+     "city_goal": "Public Safety and Health",
+     "goal": "The Main Street Office is fully staffed by department representatives at rate of at least 80%",
+     "measure_type": "Volume",
+     "measure": "# of Main St. office participants",
+     "page": 25
+    }
+   ]
+  },
+  {
+   "department": "Cincinnati Fire Department",
+   "measures": [
+    {
+     "service": "Operations",
+     "city_goal": "Public Safety and Health",
+     "goal": "First engine arrives on scene within 480 seconds for 100% of low- and medium- hazard runs",
+     "measure_type": "Volume",
+     "measure": "total # of runs",
+     "page": 19
+    },
+    {
+     "service": "Operations",
+     "city_goal": "Public Safety and Health",
+     "goal": "EMS response performance based on N FPA Standard 1710 benchmark for the arrival of Basic Life Support (BLS) unit within 360 seconds 100% of the time",
+     "measure_type": "Volume",
+     "measure": "# of EMS runs",
+     "page": 19
+    },
+    {
+     "service": "Finance",
+     "city_goal": "Fiscal Sustainability",
+     "goal": "# of overtime hours in the quarter",
+     "measure_type": "Volume",
+     "measure": "$ of overtime spend in the quarter",
+     "page": 19
+    },
+    {
+     "service": "Fire Prevention",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "85% of all fire investigations that started in the current fiscal year have a determined cause classification (this is a running total for the FY)",
+     "measure_type": "Volume",
+     "measure": "# of investigations conducted/completed",
+     "page": 20
+    },
+    {
+     "service": "Emergency Management",
+     "city_goal": "Public Safety and Health",
+     "goal": "Min of 36 formal information products annually",
+     "measure_type": "Volume",
+     "measure": "# of information products",
+     "page": 20
+    },
+    {
+     "service": "Human Resources",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "% of CFO sworn personnel have completed health screening (annually. contract is Feb-Feb)",
+     "measure_type": "Volume",
+     "measure": "# of CFO sworn personnel completing health screening in the quarter",
+     "page": 20
+    }
+   ]
+  },
+  {
+   "department": "Citizen's Complaint Authority",
+   "measures": [
+    {
+     "service": "Outreach Engagement Sessions",
+     "city_goal": "Public Safety and Health",
+     "goal": "Attend 1 outreach event per month",
+     "measure_type": "Volume",
+     "measure": "# of outreach events attended per month",
+     "page": 14
+    },
+    {
+     "service": "Complaint-Based Investigations",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "80% of investigations are closed within one year",
+     "measure_type": "Volume",
+     "measure": "# of investigations closed in 1 year",
+     "page": 14
+    },
+    {
+     "service": "Complaint-Based Investigations",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "95% of investigations are assigned to an investigator within 2 business days",
+     "measure_type": "Volume",
+     "measure": "# of investigations assigned to an investigator",
+     "page": 14
+    },
+    {
+     "service": "Complaint-Based Investigations",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "CCA will average 1.5 closed investigations per month per FTE",
+     "measure_type": "Volume",
+     "measure": "# of investigations completed per month per FTE",
+     "page": 15
+    },
+    {
+     "service": "Review Police Policies and Make Recommendations",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "CCA should make at least 2 recommendations per quarter",
+     "measure_type": "Volume",
+     "measure": "# of recommendations made",
+     "page": 15
+    }
+   ]
+  },
+  {
+   "department": "City Planning & Engagement",
+   "measures": [
+    {
+     "service": "Subdivisions",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "90% of major subdivisions reviewed within 30 days",
+     "measure_type": "Volume",
+     "measure": "# of major subdivisions",
+     "page": 128
+    },
+    {
+     "service": "Zoning Studies and Amendments",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "90% of zoning studies/amendments are complete within 6 months for zone change application or one year for zoning study",
+     "measure_type": "Volume",
+     "measure": "# of zoning studies/amendments of each type",
+     "page": 128
+    },
+    {
+     "service": "Permit Review and Support",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "90% of plan reviews are completed in 10 business days for residential permits",
+     "measure_type": "Volume",
+     "measure": "# of residential plan reviews",
+     "page": 128
+    },
+    {
+     "service": "Permit Review and Support",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "90% of plan reviews are completed in 15 business days for commercial permits",
+     "measure_type": "Volume",
+     "measure": "# of commercial permit reviews",
+     "page": 129
+    },
+    {
+     "service": "Zoning Hearing Review and Recommendations",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "90% of HCB Reports transmitted to Law 4 business days before the hearing",
+     "measure_type": "Volume",
+     "measure": "# HCB cases",
+     "page": 129
+    },
+    {
+     "service": "Zoning Hearing Review and Recommendations",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "90% of ZHE reports will be transmitted one week before the hearing",
+     "measure_type": "Volume",
+     "measure": "# of ZHE cases",
+     "page": 129
+    },
+    {
+     "service": "Athletics",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "3% increase in field permit revenue from the previous fiscal year",
+     "measure_type": "Volume",
+     "measure": "$ in program revenue",
+     "page": 133
+    },
+    {
+     "service": "Capital Improvement Facility Maintenance",
+     "city_goal": "Fiscal Sustainability",
+     "goal": "Leverage at least $500k per year in partnerships",
+     "measure_type": "Volume",
+     "measure": "# of leveraged partnerships",
+     "page": 133
+    },
+    {
+     "service": "Childcare",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "80% of available capacity filled in childcare and summer camp",
+     "measure_type": "Volume",
+     "measure": "# of participants served in childcare and summer camp",
+     "page": 133
+    },
+    {
+     "service": "Memberships",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "# of active memberships",
+     "measure_type": "Volume",
+     "measure": "# of active memberships",
+     "page": 134
+    },
+    {
+     "service": "Teen Programs and Events",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "5% quarterly increase in participation in teen programs and events from the previous fiscal year",
+     "measure_type": "Volume",
+     "measure": "# of attendees",
+     "page": 134
+    },
+    {
+     "service": "Cincy On Track Spending",
+     "city_goal": "Fiscal Sustainability",
+     "goal": "% of the allocated funds that have been deployed (encumbered + expensed). Running total of all fiscal years.",
+     "measure_type": "Volume",
+     "measure": "Running total of Encumbered and Expensed Cincy on Track dollars (all fiscal years)",
+     "page": 134
+    }
+   ]
+  },
+  {
+   "department": "Communications",
+   "measures": [
+    {
+     "service": "Administrative Communications and Brand Management",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "95% of social media requests from departments are approved/completed within 10 days",
+     "measure_type": "Volume",
+     "measure": "# of social media requests from departments",
+     "page": 29
+    },
+    {
+     "service": "Council Communications",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "# of email communications sent to Council annually (items that were not elevated to level of FYls)",
+     "measure_type": "Volume",
+     "measure": "Council Communications",
+     "page": 29
+    },
+    {
+     "service": "Council Communications",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "Maintain or exceed numbers of FYls sent annually",
+     "measure_type": "Volume",
+     "measure": "FYI Communications",
+     "page": 29
+    },
+    {
+     "service": "Media Related Public Records Requests",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "Responding to 70% of all media requests within 4 weeks of the original request",
+     "measure_type": "Volume",
+     "measure": "# of media records requests received",
+     "page": 30
+    },
+    {
+     "service": "Online/Electronic Communications",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "10% increase in lnstagram followers annually",
+     "measure_type": "Volume",
+     "measure": "# of lnstagram followers",
+     "page": 30
+    },
+    {
+     "service": "District Patrol Squads",
+     "city_goal": "Public Safety and Health",
+     "goal": "Improve total aggregated Response Times for Priority Calls by 30 Seconds",
+     "measure_type": "Volume",
+     "measure": "Average Response Time for Priority Calls",
+     "page": 34
+    },
+    {
+     "service": "District Patrol Squads",
+     "city_goal": "Public Safety and Health",
+     "goal": "Decrease Number of Traffic Crashes by 150 from 2025 counts",
+     "measure_type": "Volume",
+     "measure": "# of crashes (by type)",
+     "page": 34
+    },
+    {
+     "service": "District Investigative UniWiolent Crime Squad",
+     "city_goal": "Public Safety and Health",
+     "goal": "Improve case clearance/ closure rate by 3% for non-fatal shootings, homicides, and thefts from auto",
+     "measure_type": "Volume",
+     "measure": "% cases with positive clearance",
+     "page": 34
+    },
+    {
+     "service": "Crime Analysis & Problem Solving (CAPS) and Collaborative Agreement Compliance",
+     "city_goal": "Public Safety and Health",
+     "goal": "Review CPD's adherence to the Collaborative Agreement by responding quarterly to at least 2 listed recommendations in the Refresh document and 2 policy recommendations from CCA's quarterly report.",
+     "measure_type": "Volume",
+     "measure": "# of recommendations acted upon",
+     "page": 35
+    },
+    {
+     "service": "District Neighborhood Liasion Units (NLU)",
+     "city_goal": "Public Safety and Health",
+     "goal": "Improve citizen satisfaction with police visibility",
+     "measure_type": "Volume",
+     "measure": "% of residents who feel police presence is \"About Right\" in their Neighborhood",
+     "page": 35
+    }
+   ]
+  },
+  {
+   "department": "Department of Economic Inclusion and Procurement",
+   "measures": [
+    {
+     "service": "MBE/WBE/SBE Certification Program",
+     "city_goal": "Growing Economic Opportunities",
+     "goal": "80% of certifications are completed within 90 days(provided applications are complete)",
+     "measure_type": "Volume",
+     "measure": "# of new firms being certified bi-annually",
+     "page": 39
+    },
+    {
+     "service": "Community/Partner Engagement",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "Host or Participate in 2 programs a quarter",
+     "measure_type": "Volume",
+     "measure": "# of events",
+     "page": 39
+    },
+    {
+     "service": "Small Dollar Purchases and Purchase Orders (under $50k)",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "90% POs <$50k submitted to A&A within 5 business days after receipt of all required approvals and documentation",
+     "measure_type": "Volume",
+     "measure": "# of Purchase Order (PO) requests <$50k received",
+     "page": 39
+    },
+    {
+     "service": "Quantitative Solicitations (ITBs)",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "90% ITBs awarded within 90 days from receipt of complete specifications",
+     "measure_type": "Volume",
+     "measure": "# of Invitation to Bid (1TB) requests received",
+     "page": 40
+    },
+    {
+     "service": "Waiver Requests",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "90% waiver requests approved within 1 day (Emergency) and 3 days (SAS, DA, AR23, MAC, State/Co-op Purchases)",
+     "measure_type": "Volume",
+     "measure": "# of waiver requests received (SAS, DA, AR23, MAC, Emergency, State/Co-op Purchases)",
+     "page": 40
+    },
+    {
+     "service": "Cincy On Track Monitoring",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "The average completion time of COT projects are approved in Procurement a percentage (%) faster than non-COT projects (upon receipt of all necessary documentation). Baseline in FY 2027.",
+     "measure_type": "Volume",
+     "measure": "# of Cincy On Track requests",
+     "page": 40
+    }
+   ]
+  },
+  {
+   "department": "Department of Opportunity and Resident Services",
+   "measures": [
+    {
+     "service": "Workforce Opportunity",
+     "city_goal": "Growing Economic Opportunities",
+     "goal": "# of unduplicated individuals that participated in internal or external workforce development programs",
+     "measure_type": "Volume",
+     "measure": "# of workforce development programs that the City invests in",
+     "page": 45
+    },
+    {
+     "service": "Small Business and Women-Owned Business/ Minority-Owned Business Support",
+     "city_goal": "Growing Economic Opportunities",
+     "goal": "# of small businesses engaged with in the quarter",
+     "measure_type": "Volume",
+     "measure": "# of outreach events attended in the quarter",
+     "page": 45
+    },
+    {
+     "service": "Homeowner Support",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "90% of ADDI applications receive a determination letter within 60 days",
+     "measure_type": "Volume",
+     "measure": "# of ADDI applications received",
+     "page": 45
+    },
+    {
+     "service": "Unhoused Support",
+     "city_goal": "Public Safety and Health",
+     "goal": "80% of homeless encampment CSRs are abated within 30 days of request submission",
+     "measure_type": "Volume",
+     "measure": "# of encampment clean up CSRs received",
+     "page": 46
+    },
+    {
+     "service": "Financial Freedom Blueprint",
+     "city_goal": "Growing Economic Opportunities",
+     "goal": "# of recommendations that have been implemented",
+     "measure_type": "Volume",
+     "measure": "# of recommendations made",
+     "page": 46
+    }
+   ]
+  },
+  {
+   "department": "Emergency Communication Center",
+   "measures": [
+    {
+     "service": "Customer Service Call Taking",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "90% of 311 customer service calls are answered within 90 seconds",
+     "measure_type": "Volume",
+     "measure": "# of calls received in 311 customer service queue",
+     "page": 63
+    },
+    {
+     "service": "Customer Service Call Taking",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "90% of 311 call-taker experience satisfaction survey respondents are satisfied (score of 4 or 5) with their 311 call\u00ad taker experience",
+     "measure_type": "Volume",
+     "measure": "# of 311 call-taker experience satisfaction surveys completed",
+     "page": 63
+    },
+    {
+     "service": "Fire Dispatching",
+     "city_goal": "Public Safety and Health",
+     "goal": "90% of CAD incidents are viewed within 60 seconds",
+     "measure_type": "Volume",
+     "measure": "# of viewed CAD incidents",
+     "page": 63
+    },
+    {
+     "service": "Quality Assurance",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "3% of public safety calls evaluated through quality assurance (within each protocol discipline)",
+     "measure_type": "Volume",
+     "measure": "# of case evaluations by evaluator",
+     "page": 64
+    },
+    {
+     "service": "Police Dispatching",
+     "city_goal": "Public Safety and Health",
+     "goal": "90% of priority 1 and 2 CAD incidents are viewed within 60 seconds",
+     "measure_type": "Volume",
+     "measure": "# of viewed CAD incidents by priority",
+     "page": 64
+    },
+    {
+     "service": "Public Safety Call Taking",
+     "city_goal": "Public Safety and Health",
+     "goal": "90% of 911 calls are answered within 15 seconds",
+     "measure_type": "Volume",
+     "measure": "# of 911 calls received",
+     "page": 64
+    }
+   ]
+  },
+  {
+   "department": "Enterprise Tech Solutions",
+   "measures": [
+    {
+     "service": "Phishing Simulation (PhishNotify) & Education",
+     "city_goal": "Public Safety and Health",
+     "goal": "<5% of phishing simulation emails were clicked on in the reporting quarter",
+     "measure_type": "Volume",
+     "measure": "# of all phishing emails sent during reporting frequency",
+     "page": 68
+    },
+    {
+     "service": "PMO",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "100% of PMO managed IT Implementation projects go live on target date - attributes to be considered for projects included in this metric are: critical for the enterprise, Transform (vs . Run/Grow projects).",
+     "measure_type": "Volume",
+     "measure": "# of IT Implementation projects managed by PMO",
+     "page": 68
+    },
+    {
+     "service": "Desktop Support",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "Above 90% satisfaction rate through ServiceNow tickets",
+     "measure_type": "Volume",
+     "measure": "# of ServiceNow ticket requests",
+     "page": 68
+    },
+    {
+     "service": "Risk Management",
+     "city_goal": "Public Safety and Health",
+     "goal": "100% staff completed annual cybersecurity training",
+     "measure_type": "Volume",
+     "measure": "# of staff completing cybersecurity training in the quarter",
+     "page": 69
+    },
+    {
+     "service": "Risk Management",
+     "city_goal": "Public Safety and Health",
+     "goal": "100% of IT policies reviewed and updated annually",
+     "measure_type": "Volume",
+     "measure": "# of IT policies reviewed in the quarter",
+     "page": 69
+    }
+   ]
+  },
+  {
+   "department": "Environment and Sustainability",
+   "measures": [
+    {
+     "service": "Electric Vehicles & Charging",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "Ratio of fleet EVs to Level 2 chargers of 2: 1 or lower",
+     "measure_type": "Volume",
+     "measure": "# of fleet charging stations",
+     "page": 108
+    },
+    {
+     "service": "Energy Affordability",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "100 LMI households receiving energy relief annually",
+     "measure_type": "Volume",
+     "measure": "# of LMI households receiving energy relief",
+     "page": 108
+    },
+    {
+     "service": "Green Cincinnati Plan",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "90% percent of Green Cincinnati actions completed or in progress",
+     "measure_type": "Volume",
+     "measure": "# of Green Cincinnati actions completed or in progress in the quarter",
+     "page": 108
+    },
+    {
+     "service": "Renewable Energy",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "125 megawatts of renewable energy and battery storage combined procured annually",
+     "measure_type": "Volume",
+     "measure": "# megawatts of renewable energy and battery storage combined procured annually",
+     "page": 109
+    },
+    {
+     "service": "Zero Waste Initiatives",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "22% of residential waste stream diverted from landfill annually",
+     "measure_type": "Volume",
+     "measure": "# tons of residential waste diverted from landfill annually",
+     "page": 109
+    }
+   ]
+  },
+  {
+   "department": "Finance",
+   "measures": [
+    {
+     "service": "Payroll",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "Fewer than 20% of departments have payroll errors (80% of departments are free of payroll errors)",
+     "measure_type": "Volume",
+     "measure": "# of departments with payroll errors",
+     "page": 73
+    },
+    {
+     "service": "Audits (Income Tax)",
+     "city_goal": "Fiscal Sustainability",
+     "goal": "250 business accounts (1000 selective high audit risk cases each year) to be reviewed and tracked each quarter, report to include status of reviews and additional revenue",
+     "measure_type": "Volume",
+     "measure": "# of audits",
+     "page": 73
+    },
+    {
+     "service": "Investments (Retirement)",
+     "city_goal": "Fiscal Sustainability",
+     "goal": "60% of the portfolio equals or exceeds the benchmark (on rolling 3yr, 5yr and 1 0yr periods), annually at 12/31",
+     "measure_type": "Volume",
+     "measure": "Investment return percentage (internal)",
+     "page": 73
+    },
+    {
+     "service": "Safety & Workers Compensation",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "15 facility/job site safety audits per quarter",
+     "measure_type": "Volume",
+     "measure": "# Facility/job site safety audits; # of workplace injuries",
+     "page": 74
+    },
+    {
+     "service": "Investments (Treasury)",
+     "city_goal": "Fiscal Sustainability",
+     "goal": "100% of funds managed by an investment firm meet or exceed the 1-5-year Treasury Index benchmark",
+     "measure_type": "Volume",
+     "measure": "Investment return percentage (external)",
+     "page": 74
+    },
+    {
+     "service": "Business Services",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "80% of employees are in compliance with department training requirement",
+     "measure_type": "Volume",
+     "measure": "# of employees meeting training standard per quarter",
+     "page": 78
+    },
+    {
+     "service": "Commercial Services",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "Average wait time is <=90 seconds",
+     "measure_type": "Volume",
+     "measure": "# of calls",
+     "page": 78
+    },
+    {
+     "service": "Director's Office (Lead Lines)",
+     "city_goal": "Public Safety and Health",
+     "goal": "2,400 lead service lines will be replaced in FY27",
+     "measure_type": "Volume",
+     "measure": "# of lead lines replaced",
+     "page": 78
+    },
+    {
+     "service": "Distribution",
+     "city_goal": "Growing Economic Opportunities",
+     "goal": "90% of water main breaks are repaired in < 24 hours",
+     "measure_type": "Volume",
+     "measure": "# of breaks repaired",
+     "page": 79
+    },
+    {
+     "service": "Stormwater Management (Sewer Inspections)",
+     "city_goal": "Public Safety and Health",
+     "goal": "30 sewer miles inspected annually",
+     "measure_type": "Volume",
+     "measure": "# of miles inspected",
+     "page": 79
+    }
+   ]
+  },
+  {
+   "department": "Grant Management",
+   "measures": [
+    {
+     "service": "Citywide Grant - Strategic Planning & Implementation",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "60% of all City departments engage in GMO TA., capacity building, or grant writing",
+     "measure_type": "Volume",
+     "measure": "# of departments engaging in GMO TA., capacity building, or grant writing",
+     "page": 83
+    },
+    {
+     "service": "Direct Grant Management",
+     "city_goal": "Fiscal Sustainability",
+     "goal": "Meet HUD timeliness test, expend 20% per quarter",
+     "measure_type": "Volume",
+     "measure": "$ spent/ utilized per quarter (how quickly City is deploying HUD funds (CDBG))",
+     "page": 83
+    },
+    {
+     "service": "Fiscal and Compliance",
+     "city_goal": "Fiscal Sustainability",
+     "goal": "At least 95% of contracts are fully compliant with all terms and conditions.",
+     "measure_type": "Volume",
+     "measure": "# of projects in compliance",
+     "page": 83
+    },
+    {
+     "service": "Government Affairs",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "Of the City Departments impacted by Fed/State legislation; budget; or policy, 80% meaningfully engage in lobbying strategy",
+     "measure_type": "Volume",
+     "measure": "# departments engaged in legislative items w/ CMO",
+     "page": 84
+    },
+    {
+     "service": "Special Projects",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "95% of special projects are completed or meeting quarterly milestones",
+     "measure_type": "Volume",
+     "measure": "# of special projects",
+     "page": 84
+    }
+   ]
+  },
+  {
+   "department": "Health",
+   "measures": [
+    {
+     "service": "Environmental Health Services (Inspections)",
+     "city_goal": "Public Safety and Health",
+     "goal": "80% of mold CSRs closed timely within 90 days",
+     "measure_type": "Volume",
+     "measure": "# mold complaints",
+     "page": 88
+    },
+    {
+     "service": "Environmental Health Services (Inspections)",
+     "city_goal": "Public Safety and Health",
+     "goal": "# of days between food facilities and mobile permit inspection requests to inspection",
+     "measure_type": "Volume",
+     "measure": "# of food facilities and mobile permit inspection requests",
+     "page": 88
+    },
+    {
+     "service": "Health Education and Promotion (Cribs for Kids, Tobacco 21)",
+     "city_goal": "Public Safety and Health",
+     "goal": "Meet at least 90% of demand for cribs to eligible clients who contacted CHO",
+     "measure_type": "Volume",
+     "measure": "# of cribs distributed",
+     "page": 88
+    },
+    {
+     "service": "Lead Prevention Program",
+     "city_goal": "Public Safety and Health",
+     "goal": "75% of lead risk assessments have first contact with occupant made within 3 business days",
+     "measure_type": "Volume",
+     "measure": "# of lead referrals for elevated blood lead levels",
+     "page": 89
+    },
+    {
+     "service": "Healthcare Delivery (Primary Care, Womens Health, Dental, etc, Title X reproductive Health)",
+     "city_goal": "Public Safety and Health",
+     "goal": "80% scheduling efficiency (slot utilization) for Primary Care services",
+     "measure_type": "Volume",
+     "measure": "# of patients seen",
+     "page": 89
+    },
+    {
+     "service": "Cincy On Track Spending",
+     "city_goal": "Fiscal Sustainability",
+     "goal": "% of the allocated funds that have been deployed (encumbered + expensed). Running total of all fiscal years.",
+     "measure_type": "Volume",
+     "measure": "Running total of Encumbered and Expensed Cincy on Track dollars (all fiscal years)",
+     "page": 89
+    }
+   ]
+  },
+  {
+   "department": "Human Resources",
+   "measures": [
+    {
+     "service": "Hiring, Selection, & Civil Service Testing",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "80% of bargaining unit hires, excluding hard to fill positions, are completed within 90 days of requisition approval",
+     "measure_type": "Volume",
+     "measure": "avgerage # of days to fill days",
+     "page": 93
+    },
+    {
+     "service": "Hiring, Selection, & Civil Service Testing",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "80% of Interviews are completed within 30 days from the date applicants are referred to hiring manager(s).",
+     "measure_type": "Volume",
+     "measure": "# interview processes completed",
+     "page": 93
+    },
+    {
+     "service": "Labor & Employee Relations",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "90% of Tier 2 complaints investigated within 85-working days",
+     "measure_type": "Volume",
+     "measure": "# of Tier 2 complaints investigated by Employee Services Staff",
+     "page": 93
+    },
+    {
+     "service": "Labor & Employee Relations",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "90% grievances will be resolved at mediation without requiring arbitration",
+     "measure_type": "Volume",
+     "measure": "# of grievances",
+     "page": 94
+    },
+    {
+     "service": "Recruitment, Internships & Career Connections",
+     "city_goal": "Growing Economic Opportunities",
+     "goal": "Conduct at least 100 annual outreach engagements with educational institutions and organizations (e.g. high schools, colleges, community groups).",
+     "measure_type": "Volume",
+     "measure": "# of community engagement events",
+     "page": 94
+    },
+    {
+     "service": "Labor & Employee Relations",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "90% of Tier 1 complaints are investigated by centralized staff within 85 days",
+     "measure_type": "Volume",
+     "measure": "# of Tier 1 complaints investigated by centralized staff",
+     "page": 94
+    }
+   ]
+  },
+  {
+   "department": "Law",
+   "measures": [
+    {
+     "service": "Contracts where City is receiving good or service",
+     "city_goal": "Fiscal Sustainability",
+     "goal": "Less than 33% of overdue contracts be because the majority of the time it was \"with Law\"",
+     "measure_type": "Volume",
+     "measure": "Number of days RLS request was \"awaiting response.\" (establish baseline in FY2Y)",
+     "page": 98
+    },
+    {
+     "service": "Quality of Life",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "# of housing units impacted during the quarter",
+     "measure_type": "Volume",
+     "measure": "Total orders cleared during the quarter",
+     "page": 98
+    },
+    {
+     "service": "Collections",
+     "city_goal": "Fiscal Sustainability",
+     "goal": "Collection Effectiveness Index= (Total Cash Collected I Total Outstanding Receivables) x 100",
+     "measure_type": "Volume",
+     "measure": "# of debts referred",
+     "page": 98
+    },
+    {
+     "service": "Collections",
+     "city_goal": "Fiscal Sustainability",
+     "goal": "90% of tax debt assessment are completed in 3 months of referral from Tax",
+     "measure_type": "Volume",
+     "measure": "time (days) from referral of Tax debt to litigation, resolution, or referral.",
+     "page": 99
+    },
+    {
+     "service": "Prosecution",
+     "city_goal": "Public Safety and Health",
+     "goal": "Mediation program should be able to divert >80% of referred cases from prosecution.",
+     "measure_type": "Volume",
+     "measure": "# of cases successfully diverted from prosecution through mediation during the reporting period.",
+     "page": 99
+    }
+   ]
+  },
+  {
+   "department": "Metropolitan Sewer District",
+   "measures": [
+    {
+     "service": "Wastewater Treatment in Compliance with the Clean Water Act",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "100% of NPDES permit-related items will be in compliance with permit",
+     "measure_type": "Volume",
+     "measure": "# of pump station dry weather overflows",
+     "page": 103
+    },
+    {
+     "service": "Sewer Backup Program",
+     "city_goal": "Public Safety and Health",
+     "goal": "100% of sewer backup (SBU) calls are responded to within 4 hours or less (excluding exceptions in the Global Consent Decree)",
+     "measure_type": "Volume",
+     "measure": "# of SBU site investigation calls received",
+     "page": 103
+    },
+    {
+     "service": "Customer Assistance Program",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "Increase CAP participation by 14% in FY 2027 compared to FY 2026 (+500 participants annually or -+125 per quarter)",
+     "measure_type": "Volume",
+     "measure": "# of customers receiving discounted sewer services",
+     "page": 103
+    },
+    {
+     "service": "Optimize Wastewater Infrastructure Lifecycle Affordability",
+     "city_goal": "Fiscal Sustainability",
+     "goal": "At least 85% of completed Structural Rehabilitation Work Orders (includes Repair and Rehabilitation) are for planned work",
+     "measure_type": "Volume",
+     "measure": "# of completed Structural Rehabilitation Work Orders (includes Repair and Rehabilitation)",
+     "page": 104
+    },
+    {
+     "service": "Property Development Support",
+     "city_goal": "Growing Economic Opportunities",
+     "goal": "90% of sewer availability review requests are completed within 10 business days",
+     "measure_type": "Volume",
+     "measure": "# of sewer availability review requests",
+     "page": 104
+    }
+   ]
+  },
+  {
+   "department": "Office of Strategic Growth",
+   "measures": [
+    {
+     "service": "Business Site Visits and Outreach",
+     "city_goal": "Growing Economic Opportunities",
+     "goal": "Complete at least 15 Business Retention Expansion engagements per quarter",
+     "measure_type": "Volume",
+     "measure": "# of BRE's",
+     "page": 118
+    },
+    {
+     "service": "Development Outcomes",
+     "city_goal": "Growing Economic Opportunities",
+     "goal": "Maintain or increase the annual ratio of Outside Investment (Pl) to Direct City Investment (DCI) to 12:1 or more",
+     "measure_type": "Volume",
+     "measure": "Total Outside Investment (OI) in $",
+     "page": 118
+    },
+    {
+     "service": "Development Outcomes",
+     "city_goal": "Growing Economic Opportunities",
+     "goal": "Create or preserve at least 300 housing units quarterly",
+     "measure_type": "Volume",
+     "measure": "# of new housing units created or preserved",
+     "page": 118
+    },
+    {
+     "service": "Neighborhood Development",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "Encumber at least 90% of the Neighborhood Development Fund annually",
+     "measure_type": "Volume",
+     "measure": "Total $ of available funds committed annually",
+     "page": 119
+    },
+    {
+     "service": "Expansion, Retention, and Attraction Incentives",
+     "city_goal": "Growing Economic Opportunities",
+     "goal": "Create I retain at least 1,400 jobs annually",
+     "measure_type": "Volume",
+     "measure": "# of jobs created / retained",
+     "page": 119
+    }
+   ]
+  },
+  {
+   "department": "Parks",
+   "measures": [
+    {
+     "service": "Communication/Engagement",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "85% of the previous fiscal year's engagements",
+     "measure_type": "Volume",
+     "measure": "# of social media engagements",
+     "page": 123
+    },
+    {
+     "service": "Nature Education (Explore Nature)",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "70% of participants Very Satisfied or Extremely Satisfied with programming",
+     "measure_type": "Volume",
+     "measure": "# of people served",
+     "page": 123
+    },
+    {
+     "service": "Operations/Park Beautification",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "Fewer than 30 litter CSRs (Litter in Parks and Can Overflowing in Parks) received per quarter",
+     "measure_type": "Volume",
+     "measure": "# of litter CS Rs received",
+     "page": 123
+    },
+    {
+     "service": "Urban Forestry, ROW, Tree Assessment, Trees",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "90% of all Urban Forestry CS Rs are closed within 30 days",
+     "measure_type": "Volume",
+     "measure": "# of Urban Forestry CS Rs entered",
+     "page": 124
+    },
+    {
+     "service": "Volunteerism",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "Maintain at least 75% of previous year's volunteer base per quarter",
+     "measure_type": "Volume",
+     "measure": "# of volunteers",
+     "page": 124
+    },
+    {
+     "service": "Cincy On Track Spending",
+     "city_goal": "Fiscal Sustainability",
+     "goal": "% of the allocated funds that have been deployed (encumbered + expensed). Running total of all fiscal years.",
+     "measure_type": "Volume",
+     "measure": "Running total of Encumbered and Expensed Cincy on Track dollars (all fiscal years)",
+     "page": 124
+    }
+   ]
+  },
+  {
+   "department": "Performance & Data Analytics",
+   "measures": [
+    {
+     "service": "Strategy and Performance Management",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "2% increase in views of PM dashboards (excluding OPDA staff), each quarter",
+     "measure_type": "Volume",
+     "measure": "# of views on PM dashboards (excluding OPDA staff)",
+     "page": 114
+    },
+    {
+     "service": "Data Reporting and Analysis",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "2% increase in views of internal (non-PM) dashboards (views exclude OPDA staff), each quarter",
+     "measure_type": "Volume",
+     "measure": "# of views on internal (non-PM) dashboards",
+     "page": 114
+    },
+    {
+     "service": "Cincylnsights and the Open Data Portal",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "Cincylnsights/Open Data Portal assets have combined views of at least 40,000 each quarter",
+     "measure_type": "Volume",
+     "measure": "Total # of Cincylnsights/Open Data Portal views",
+     "page": 114
+    },
+    {
+     "service": "Departmental and Public Facing Application Development and Support Services",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "at least 99% (annual uptime percentage)",
+     "measure_type": "Volume",
+     "measure": "# of downtime events",
+     "page": 115
+    },
+    {
+     "service": "Departmental and Public Facing Application Development and Support Services",
+     "city_goal": "Excellent & Equitable Service Delivery",
+     "goal": "1 % increase in click rate percentage (annual)",
+     "measure_type": "Volume",
+     "measure": "# of hits on websites combined",
+     "page": 115
+    }
+   ]
+  },
+  {
+   "department": "Public Services",
+   "measures": [
+    {
+     "service": "Collections",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "90% of bulk item service request closed within 7 days of the scheduled pick up date",
+     "measure_type": "Volume",
+     "measure": "# of bulk item collection requests received",
+     "page": 57
+    },
+    {
+     "service": "Greenspace",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "90% of corner can overflowing request are completed within 48 hrs. working days",
+     "measure_type": "Volume",
+     "measure": "# of corner can overflowing CSRs received",
+     "page": 57
+    },
+    {
+     "service": "Fleet",
+     "city_goal": "Fiscal Sustainability",
+     "goal": "90% of vehicles in compliance for preventative maintenance",
+     "measure_type": "Volume",
+     "measure": "# of Preventative Maintenance Services Completed (PM)",
+     "page": 57
+    },
+    {
+     "service": "On-Street",
+     "city_goal": "Fiscal Sustainability",
+     "goal": "95% of pay stations and meters receiving payments during FY",
+     "measure_type": "Volume",
+     "measure": "# of meter malfunctions resulting in payment loss",
+     "page": 58
+    },
+    {
+     "service": "ROW Maintenance",
+     "city_goal": "Growing Economic Opportunities",
+     "goal": "90% of pothole CS Rs are closed within 7 working days",
+     "measure_type": "Volume",
+     "measure": "# of pothole CS Rs received",
+     "page": 58
+    },
+    {
+     "service": "Cincy On Track Spending",
+     "city_goal": "Fiscal Sustainability",
+     "goal": "% of the allocated funds that have been deployed (encumbered + expensed). Running total of all fiscal years.",
+     "measure_type": "Volume",
+     "measure": "Running total of Encumbered and Expensed Cincy on Track dollars (all fiscal years)",
+     "page": 58
+    }
+   ]
+  },
+  {
+   "department": "Transportation & Engineering",
+   "measures": [
+    {
+     "service": "Emergency Outages",
+     "city_goal": "Growing Economic Opportunities",
+     "goal": "95% of emergency outages are responded to within 24-hours of notification",
+     "measure_type": "Volume",
+     "measure": "# of emergency outage requests",
+     "page": 51
+    },
+    {
+     "service": "Bridge Program",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "Weighted average condition rating for City bridges of satisfactory or better shape per the annual bridge report (corresponds to a 6 or higher rating)",
+     "measure_type": "Volume",
+     "measure": "# of bridges",
+     "page": 51
+    },
+    {
+     "service": "Traffic Signal Management (CTCS management, traffic signals, data collection, private traffic",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "10 traffic signals rebuilt each year",
+     "measure_type": "Volume",
+     "measure": "# of traffic signals rebuilt",
+     "page": 51
+    },
+    {
+     "service": "Pedestrian Safety I Speed Reduction",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "Reduce the percentage of drivers speeding following construction of a speed cushion/speed table 100% of the time",
+     "measure_type": "Volume",
+     "measure": "Average percent decrease in drivers speeding following construction of a speed cushion/speed table",
+     "page": 52
+    },
+    {
+     "service": "Street Rehabilitation",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "Increase % lane miles of combined paving/pavement repair/surface treatments above the previous year",
+     "measure_type": "Volume",
+     "measure": "Annual PCI rating",
+     "page": 52
+    },
+    {
+     "service": "Cincy On Track Spending",
+     "city_goal": "Fiscal Sustainability",
+     "goal": "% of the allocated funds that have been deployed (encumbered + expensed). Running total of all fiscal years.",
+     "measure_type": "Volume",
+     "measure": "Running total of Encumbered and Expensed Cincy on Track dollars (all fiscal years)",
+     "page": 52
+    },
+    {
+     "service": "Sidewalk Safety Program",
+     "city_goal": "Thriving Neighborhoods",
+     "goal": "# of property owners that received assistance",
+     "measure_type": "Volume",
+     "measure": "Avg $ amount of assistance received",
+     "page": 53
+    }
+   ]
+  }
+ ],
+ "honest_gaps": [
+  "Source is the OPDA Performance-Agreement PDF (the populated PBB measures tables), not a budget-book 'Volume III'; Cincinnati's FY26-27 budget Volumes I/II (Operating/Capital, fetched and verified at vendorselfservice.cincinnati-oh.gov/sites/budget/assets/) contain only a performance-measure glossary, no populated tables.",
+  "Targets/actuals live in the CincyInsights dashboards (data.cincinnati-oh.gov); this file banks the agreement-level service/goal/measure structure from the FY2027 PDF.",
+  "Parser is page-local: multi-page measure blocks could in principle be missed; 142 measures across 23 departments captured (raw parser JSON retained)."
+ ],
+ "extraction_notes": "Structure per block: Select a Service -> City Goal -> Select a Goal -> [Volume|Effectiveness|Efficiency|Output|Input] Measure -> measure name. page = PDF page number.",
+ "extracted_at_utc": "2026-11-22T12:12:22.325896Z"
+}

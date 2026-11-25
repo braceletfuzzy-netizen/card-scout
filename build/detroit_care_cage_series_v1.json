@@ -1,0 +1,35 @@
+{
+  "flip_era": "No clean flip detected on a consistent basis. On the all-funds EM-era basis (FY13-14 through FY16) the care/cage ratio is roughly flat-to-rising (0.43 -> 0.56) because police was cut harder during receivership. On the GF-only basis (FY22 vs FY26) the ratio is flat (0.38 vs 0.35) — the post-bankruptcy rebuild did NOT print a care-lane breakout; police re-grew fastest (+34% GF in 4 years) while care lanes ride through merged/mixed GSD lines.",
+  "ratio_series": [
+    {
+      "era_or_year": "FY2012-13 [Likely, pre-bankruptcy]",
+      "care_per_cage": 0.516
+    },
+    {
+      "era_or_year": "FY2013-14 (EM Orr, Mayor's Recommended)",
+      "care_per_cage": 0.428
+    },
+    {
+      "era_or_year": "FY2015 (Emergency Manager budget)",
+      "care_per_cage": 0.528
+    },
+    {
+      "era_or_year": "FY2016 (EM budget, first post-exit year)",
+      "care_per_cage": 0.56
+    },
+    {
+      "era_or_year": "FY2022 (post-bankruptcy rebuild, GF basis)",
+      "care_per_cage": 0.344
+    },
+    {
+      "era_or_year": "FY2024 (adopted, GF basis + DPL dedicated fund)",
+      "care_per_cage": 0.367
+    },
+    {
+      "era_or_year": "FY2026 (adopted, modern anchor, GF basis)",
+      "care_per_cage": 0.351
+    }
+  ],
+  "confidence": "Medium: figures are source-verified from official PDFs, but the series mixes bases (all-funds pre-2022 vs GF-only 2022+). Directional claims across the 2016->2022 seam are weak. Within-basis trends (12-13 -> 16, and 22 -> 26) are reliable.",
+  "falsifier": "The care-break hypothesis would be supported if a consistent-basis series showed care/cage JUMPING after the 2014 exit. On any basis we could assemble, it does not: the EM-era floor cut police AND care together (~both down ~15-20%), and the post-exit rebuild re-grew police faster than care lanes. If FY18-FY21 GF-basis budgets surface with the same Sec-C structure, they could refine — not plausibly reverse — this conclusion, unless parks/library spending is hiding inside the non-departmental or bond lanes at a scale beyond 30-40M/yr."
+}

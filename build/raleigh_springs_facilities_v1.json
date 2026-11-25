@@ -1,0 +1,139 @@
+{
+  "_meta": {
+    "name": "raleigh_springs_facilities_v1",
+    "description": "Confounder scan: youth-serving organizations within ~1 mile (1.6 km) of Raleigh Springs Civic Center (35.2192, -89.9084), Memphis TN, treatment window 2016-2026.",
+    "generated": "2026-11-23",
+    "anchor": {"lat": 35.2192, "lon": -89.9084, "radius_miles": 1.0, "radius_m": 1600},
+    "methods": [
+      "OSM Nominatim keyword search (bounded viewbox ~1mi)",
+      "Overpass API attempted on 5 mirrors (kumi.systems, overpass-api.de, private.coffee, maps.mail.ru, weltraumfaenger) - ALL failed (TLS/timeout/502/504); Nominatim + direct site pulls substituted",
+      "Direct extraction: ymcamemphis.org/locations/, bgcm.org/who-we-serve/our-clubs/, bgctn.org/clubs/, promiseacademy.com (history + after-school pages), memphisparks.com (deferred), en.wikipedia.org (Raleigh Springs Civic Center), NCES CCD school detail 470015702398",
+      "DuckDuckGo html endpoint for org-directory discovery (rate-limited mid-sweep)",
+      "web_search tool failed (Nous Tool Gateway unavailable); fabricating results was not permitted"
+    ],
+    "honest_nulls_note": "'null' means 'not found by this sweep', NOT 'does not exist'. Opening years left null where no dated primary source was retrieved - no fabrication."
+  },
+  "treatment_window_baseline": {
+    "Raleigh Springs Civic Center (site itself)": {
+      "opened": "2020 (trail/skatepark/police precinct, spring 2020; library ribbon-cutting 2020-11-19; mall demolished 2016, groundbreaking 2017-12)",
+      "source": "https://en.wikipedia.org/wiki/Raleigh_Springs_Civic_Center"
+    }
+  },
+  "search_classes": {
+    "YMCAs": {
+      "hits_within_1mi": 0,
+      "closest_branches": [
+        {"name": "Bartlett YMCA", "address": "7700 Flaherty Place, Bartlett, TN 38133", "miles": 5.83, "status": "existing (no 2016-26 opening date found, null)"},
+        {"name": "Cordova Family YMCA", "address": "7950 Club Center, Cordova, TN 38016", "miles": null, "status": "exists; distance not geocoded (est. >4mi)"},
+        {"name": "Church Health YMCA", "address": "1350 Concourse Ave #241, Memphis 38104", "miles": null, "status": "Crosstown area, far from corridor"},
+        {"name": "Millington Family YMCA", "address": null, "miles": null, "status": "Millington, ~6+mi north"},
+        {"name": "Olive Branch Family YMCA", "address": "MS; far SE", "miles": null, "status": "exists, outside corridor"}
+      ],
+      "branch_count_directory": 14,
+      "conclusion": "No YMCA opened or renovated in the Raleigh corridor 2016-2026 based on directory + null Nominatim hits; nearest branch is Bartlett ~5.8mi.",
+      "source": "https://www.ymcamemphis.org/locations/"
+    },
+    "Boys_Girls_Clubs": {
+      "org": "Boys & Girls Clubs of Greater Memphis (BGCM), CEO Gwendolyn Woods, ~14-19 clubs",
+      "hits_within_1mi": 1,
+      "closest_clubs": [
+        {"name": "Craigmont High School Club", "address": "3333 Covington Pike, Memphis TN 38128", "miles": 0.82,
+         "note": "School-based BGC club at Craigmont HS (grades 9-12); Craigmont HS itself is 0.65mi from RSCC.",
+         "opened": null, "opened_source": "no dated primary source retrieved",
+         "source": "https://bgcm.org/who-we-serve/our-clubs/"},
+        {"name": "Promise Academy - Spring Hill Club", "address": "3796 Frayser Raleigh Road, Memphis TN 38128", "miles": 1.73,
+         "note": "BGC after-school club hosted ON Promise Academy Springhill campus; campus PK-5, 400+ students. Marginally outside 1mi ring but strong confounder for corridor treatment (same ZIP, same road).",
+         "opened": "2014 (campus), PK-5 complete 2018",
+         "opened_source": "https://promiseacademy.com/about/history/ + /springhill-campus/",
+         "source": "https://bgcm.org/who-we-serve/our-clubs/"}
+      ],
+      "other_clubs_in_network": ["Bernal E. Smith Sr. (38141)", "John Dustin Buckman (38107)", "Ira Samelson Jr. (38122)", "Sycamore View (38134)", "Porter Goodwill (38106)", "Oakhaven (38118)", "Juice Plus+ Technical Training Center (38126)", "Booker T. Washington (38126)", "Melrose HS (38114)", "Trezevant HS (38127)", "Westwood HS (38109)", "Ridgeway HS (38118)"]
+    },
+    "church_youth_programs": {
+      "hits_confirmed_active_youth_programs_1mi": 0,
+      "churches_found_1mi_via_osm": [
+        "East Side Baptist Church (Longacre Ave)", "Messiah Church (St Elmo Rd)", "Stage Road Church of Christ (Stage Rd)",
+        "Raleigh United Methodist Church (3495 Powers Rd, 0.6mi)", "Vietnamese Baptist Church (Yale Rd)",
+        "Raleigh Primitive Baptist Church (Austin Peay)", "Raleigh Church of Christ (Raleigh-Millington Rd)",
+        "Living Word Fellowship Church (Hammond Rd)", "Catholic Church of the Ascension (3680 Ramill Rd)",
+        "Raleigh Baptist Church (Tena Dr)", "Greater Imani Church (3824 Austin Peay)", "Lighthouse Baptist Church (Covington Pike)",
+        "Heritage Baptist Church (Hanna Dr)", "Church of God In Christ New Day (East Rd)"
+      ],
+      "opened_2016_2026": null,
+      "conclusion": "14+ churches within ~1mi found, but NO dated evidence of a NEW 2016-2026 youth-program launch at any of them; honest null pending outreach/news check.",
+      "source_osm_keywords": ["church", "school", "youth"]
+    },
+    "charter_new_school_campuses": {
+      "hits_within_1mi_or_38128_corridor": [
+        {"name": "Promise Academy Springhill (charter, PK-5)", "address": "3796 Frayser Raleigh Road, Memphis TN 38128",
+         "miles": 1.73, "opened_campus": "2014 (PK-1); grew to PK-5 by 2018 (400+ students)",
+         "opened_source": "https://promiseacademy.com/about/history/",
+         "note": "THE major school-confounder: charter opened just before treatment window and reached full PK-5 build-out (2018) INSIDE the window; also hosts BGC club.",
+         "nces_id": "470015702398", "source": "https://nces.ed.gov/ccd/schoolsearch/school_detail.asp?ID=470015702398"},
+        {"name": "David Grayson Christian Academy (private)", "address": "East Road, Memphis TN 38128",
+         "miles": 1.10, "opened": null, "opened_source": "not located"},
+        {"name": "Craigmont High School (MSCS, 9-12)", "address": "3333 Covington Pike, Memphis TN 38128",
+         "miles": 0.65, "opened": null, "opened_source": "pre-existing (long-established); no new campus 2016-26",
+         "hosts": "BGC Craigmont High School Club"},
+        {"name": "Craigmont Middle School (MSCS, 6-8)", "address": "3455 Covington Pike, Memphis TN 38128",
+         "miles": 0.67, "opened": null, "opened_source": "pre-existing"},
+        {"name": "Coleman Elementary School (MSCS)", "address": "Raleigh-Millington Road, Memphis TN",
+         "miles": 0.94, "opened": null, "opened_source": "pre-existing"},
+        {"name": "Church of God In Christ New Day (school)", "address": "East Road, Memphis TN 38128",
+         "miles": 1.10, "opened": null, "opened_source": "not located"}
+      ],
+      "new_campus_opened_inside_window_within_1mi": "none confirmed; Promise Academy Springhill grade-level build-out (2014-2018) is the nearest dated facility expansion affecting the corridor"
+    },
+    "parks_rec_community_centers": {
+      "hits_within_1mi_other_than_RSCC": [
+        {"name": "Raleigh Community Center (City of Memphis Parks)", "address": "3678 Powers Rd, Memphis TN 38128",
+         "miles": 0.53, "opened": null, "opened_source": "no dated primary source retrieved in sweep",
+         "note": "Pre-existing: pool, 8 tennis courts, gym, computer lab, game room, multi-purpose room.memphisparks.com page 403'd on fetch; existence + amenities confirmed via DDG-indexed snippet + rec.desk listing.",
+         "source": "https://memphisparks.com/park/harry-c-pierotti-park-raleigh-community-center/"},
+        {"name": "Youth and Family Resource Center", "address": "3157 Powers Rd, Memphis TN 38128",
+         "miles": 0.89, "opened": null, "opened_source": "not located",
+         "note": "OSM social_facility tag; operator not confirmed."}
+      ],
+      "source": "OSM/Nominatim + DuckDuckGo"
+    },
+    "other_youth_serving": {
+      "hits_within_1mi": [
+        {"name": "Raleigh Library (City of Memphis / new building)", "address": "3452 Austin Peay Hwy, Memphis TN 38128",
+         "miles": 0.06, "opened": "2020-11-19 (ribbon cutting)",
+         "opened_source": "https://en.wikipedia.org/wiki/Raleigh_Springs_Civic_Center",
+         "note": "YOUTH-RELEVANT AND IN-WINDOW: O.T. Marshall Architects, observation deck over 11-acre pond; sits inside RSCC campus itself. A major confounder if treatment timing overlaps late 2020."}
+      ]
+    }
+  },
+  "confounder_summary": {
+    "in_window_in_1mi": [
+      "Raleigh Library opening (Nov 2020) - 0.06mi, part of RSCC campus itself",
+      "Craigmont High School BGC after-school club - 0.82mi, start date null (school-based)"
+    ],
+    "in_window_just_outside_1mi": [
+      "Promise Academy Springhill full PK-5 build-out (completed 2018) + BGC club - 1.73mi"
+    ],
+    "negative_findings": [
+      "No YMCA branch in or near corridor (nearest 5.8mi Bartlett)",
+      "No dated new-church-youth-program launch found",
+      "No new charter/public school campus opened inside the 1mi ring during 2016-2026"
+    ],
+    "nulls_held": ["Raleigh Community Center opening year", "Youth & Family Resource Center operator + opening", "Craigmont HS BGC club start date", "David Grayson Christian Academy opening", "all 14 churches' youth-program dates"]
+  },
+  "files_generated": [
+    "C:/Users/J/raleigh_springs_facilities_v1.json",
+    "C:/Users/J/raleigh_nominatim_raw.json",
+    "C:/Users/J/raleigh_springs_osm_raw.json",
+    "C:/Users/J/ymcamemphis_locations.html.txt",
+    "C:/Users/J/bgcgm_clubs.txt",
+    "C:/Users/J/bgctn_clubs.txt",
+    "C:/Users/J/nces_promise.txt",
+    "C:/Users/J/promise_site.txt",
+    "C:/Users/J/promise_history.txt",
+    "C:/Users/J/rscc_wiki.txt",
+    "C:/Users/J/craigmont_wiki.txt",
+    "C:/Users/J/ddg_bgc.txt",
+    "C:/Users/J/ddg_rscc.txt",
+    "C:/Users/J/mojeek_raw.html"
+  ]
+}

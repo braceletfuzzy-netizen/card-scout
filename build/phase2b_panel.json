@@ -1,0 +1,149 @@
+[
+ {
+  "city": "Boston",
+  "year": 2020,
+  "care": 368.1,
+  "crime": 16.6,
+  "edu": 86.3
+ },
+ {
+  "city": "Boston",
+  "year": 2021,
+  "care": 399.2,
+  "crime": 10.3,
+  "edu": 97.5
+ },
+ {
+  "city": "Boston",
+  "year": 2022,
+  "care": 394.6,
+  "crime": 14.6,
+  "edu": 100.1
+ },
+ {
+  "city": "Cincinnati",
+  "year": 2020,
+  "care": 75.5,
+  "crime": 59.2,
+  "edu": 100.0
+ },
+ {
+  "city": "Cincinnati",
+  "year": 2021,
+  "care": 75.5,
+  "crime": 55.2,
+  "edu": 100.0
+ },
+ {
+  "city": "Cincinnati",
+  "year": 2022,
+  "care": 70.8,
+  "crime": 51.9,
+  "edu": 100.0
+ },
+ {
+  "city": "Cincinnati",
+  "year": 2023,
+  "care": 71.1,
+  "crime": 41.5,
+  "edu": 97.8
+ },
+ {
+  "city": "Cincinnati",
+  "year": 2024,
+  "care": 71.7,
+  "crime": 75.2,
+  "edu": 107.0
+ },
+ {
+  "city": "Detroit",
+  "year": 2022,
+  "care": 34.4,
+  "crime": 100.6,
+  "edu": 82.0
+ },
+ {
+  "city": "Detroit",
+  "year": 2024,
+  "care": 36.7,
+  "crime": 100.0,
+  "edu": 80.6
+ },
+ {
+  "city": "Detroit",
+  "year": 2026,
+  "care": 35.099999999999994,
+  "crime": 79.1,
+  "edu": 87.2
+ },
+ {
+  "city": "Houston",
+  "year": 2022,
+  "care": 18.7,
+  "crime": 39.4,
+  "edu": 44.5
+ },
+ {
+  "city": "Houston",
+  "year": 2024,
+  "care": 24.8,
+  "crime": 45.3,
+  "edu": 46.5
+ },
+ {
+  "city": "Memphis",
+  "year": 2020,
+  "care": 45.800000000000004,
+  "crime": 100.0,
+  "edu": 138.6
+ },
+ {
+  "city": "Memphis",
+  "year": 2021,
+  "care": 47.9,
+  "crime": 100.0,
+  "edu": 183.3
+ },
+ {
+  "city": "Memphis",
+  "year": 2022,
+  "care": 48.6,
+  "crime": 100.0,
+  "edu": 135.1
+ },
+ {
+  "city": "Memphis",
+  "year": 2023,
+  "care": 39.900000000000006,
+  "crime": 100.0,
+  "edu": 140.5
+ },
+ {
+  "city": "Memphis",
+  "year": 2024,
+  "care": 51.5,
+  "crime": 125.5,
+  "edu": 128.5
+ },
+ {
+  "city": "Memphis",
+  "year": 2025,
+  "care": 45.800000000000004,
+  "crime": 132.7,
+  "edu": 175.1
+ },
+ {
+  "city": "St. Louis",
+  "year": 2023,
+  "care": 19.5,
+  "crime": 100.7,
+  "edu": 100.0
+ },
+ {
+  "city": "St. Louis",
+  "year": 2025,
+  "care": 19.8,
+  "crime": 227.4,
+  "edu": 93.6
+ }
+]

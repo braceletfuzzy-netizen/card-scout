@@ -1,0 +1,147 @@
+{
+ "Auditor": {
+  "fy2026_total_allfunds": 3908991,
+  "fy2026_general_fund": 2129312,
+  "category": "Administration"
+ },
+ "Aviation": {
+  "fy2026_total_allfunds": 427469633,
+  "fy2026_general_fund": 0,
+  "category": "Infrastructure"
+ },
+ "Citizen Review Board": {
+  "fy2026_total_allfunds": 2036370,
+  "fy2026_general_fund": 2036370,
+  "category": "Public Safety"
+ },
+ "City Council": {
+  "fy2026_total_allfunds": 12375717,
+  "fy2026_general_fund": 12375717,
+  "category": "Administration"
+ },
+ "City Planning": {
+  "fy2026_total_allfunds": 26918174,
+  "fy2026_general_fund": 26918174,
+  "category": "Community Services"
+ },
+ "Corrections": {
+  "fy2026_total_allfunds": 27913530,
+  "fy2026_general_fund": 27913530,
+  "category": "Public Safety"
+ },
+ "Customer Service (ATL311)": {
+  "fy2026_total_allfunds": 9929389,
+  "fy2026_general_fund": 4382980,
+  "category": "Community Services"
+ },
+ "Enterprise Asset Management": {
+  "fy2026_total_allfunds": 21002334,
+  "fy2026_general_fund": 21002334,
+  "category": "Infrastructure"
+ },
+ "Ethics": {
+  "fy2026_total_allfunds": 2576342,
+  "fy2026_general_fund": 1719679,
+  "category": "Administration"
+ },
+ "Executive Offices": {
+  "fy2026_total_allfunds": 28857251,
+  "fy2026_general_fund": 27810503,
+  "category": "Administration"
+ },
+ "Finance": {
+  "fy2026_total_allfunds": 28357852,
+  "fy2026_general_fund": 24436174,
+  "category": "Administration"
+ },
+ "Fire Rescue": {
+  "fy2026_total_allfunds": 181395163,
+  "fy2026_general_fund": 137326330,
+  "category": "Public Safety"
+ },
+ "Grants & Community Development": {
+  "fy2026_total_allfunds": 3009174,
+  "fy2026_general_fund": 3009174,
+  "category": "Community Services"
+ },
+ "Human Resources": {
+  "fy2026_total_allfunds": 18253381,
+  "fy2026_general_fund": 10376684,
+  "category": "Administration"
+ },
+ "Information Management": {
+  "fy2026_total_allfunds": 40075741,
+  "fy2026_general_fund": 35467775,
+  "category": "Administration"
+ },
+ "Inspector General": {
+  "fy2026_total_allfunds": 2890156,
+  "fy2026_general_fund": 1468960,
+  "category": "Administration"
+ },
+ "Invest Atlanta": {
+  "fy2026_total_allfunds": 0,
+  "fy2026_general_fund": 0,
+  "category": "Community Services"
+ },
+ "Labor & Employment Services": {
+  "fy2026_total_allfunds": 1015562,
+  "fy2026_general_fund": 1015562,
+  "category": "Community Services"
+ },
+ "Law": {
+  "fy2026_total_allfunds": 28708633,
+  "fy2026_general_fund": 13575001,
+  "category": "Administration"
+ },
+ "Municipal Court": {
+  "fy2026_total_allfunds": 15898700,
+  "fy2026_general_fund": 15898700,
+  "category": "Public Safety"
+ },
+ "Non-Departmental": {
+  "fy2026_total_allfunds": 1150766371,
+  "fy2026_general_fund": 134815646,
+  "category": "Administration"
+ },
+ "Parks & Recreation": {
+  "fy2026_total_allfunds": 57396938,
+  "fy2026_general_fund": 57396938,
+  "category": "Community Services"
+ },
+ "Police": {
+  "fy2026_total_allfunds": 361000836,
+  "fy2026_general_fund": 307866350,
+  "category": "Public Safety"
+ },
+ "Procurement": {
+  "fy2026_total_allfunds": 9970247,
+  "fy2026_general_fund": 5518397,
+  "category": "Administration"
+ },
+ "Public Defender": {
+  "fy2026_total_allfunds": 6058127,
+  "fy2026_general_fund": 6058127,
+  "category": "Public Safety"
+ },
+ "Public Works": {
+  "fy2026_total_allfunds": 120740805,
+  "fy2026_general_fund": 24116624,
+  "category": "Infrastructure"
+ },
+ "Solicitor": {
+  "fy2026_total_allfunds": 12226559,
+  "fy2026_general_fund": 12094449,
+  "category": "Public Safety"
+ },
+ "Transportation": {
+  "fy2026_total_allfunds": 58643746,
+  "fy2026_general_fund": 58643746,
+  "category": "Infrastructure"
+ },
+ "Watershed Management": {
+  "fy2026_total_allfunds": 342689632,
+  "fy2026_general_fund": 0,
+  "category": "Infrastructure"
+ }
+}

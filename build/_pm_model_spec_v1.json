@@ -1,0 +1,155 @@
+{
+ "laws": [
+  "direction-class only, no causal claims",
+  "honest-null; no interpolation; no fabricated rows",
+  "within-city discipline: all headline rhos are within-city rank (Spearman); between-city labeled separately",
+  "FE betas within-city standardized; t-stats descriptive; single-2025-vintage OEWS: no within-city wage arc (snapshot only)"
+ ],
+ "fe3_t0": {
+  "n": 24,
+  "cities": 5,
+  "outcome": "murder_rate",
+  "r2": 0.695,
+  "betas": {
+   "care_per_100k": -0.181,
+   "cost_burden_30pct_plus_share": -0.28,
+   "median_home_value": -0.099,
+   "snap_receipt_share_pct": 0.64,
+   "bachelors_pct": -0.003
+  },
+  "sd": {
+   "care_per_100k": 13742670.9,
+   "cost_burden_30pct_plus_share": 1.4999,
+   "median_home_value": 25262.9,
+   "snap_receipt_share_pct": 1.8054,
+   "bachelors_pct": 0.8776,
+   "murder_rate": 7.216
+  },
+  "t": {
+   "care_per_100k": -1.1,
+   "cost_burden_30pct_plus_share": -2.12,
+   "median_home_value": -0.58,
+   "snap_receipt_share_pct": 4.05,
+   "bachelors_pct": -0.02
+  }
+ },
+ "fe3_t1": {
+  "n": 18,
+  "outcome": "murder_rate_t+1",
+  "r2": 0.748,
+  "betas": {
+   "care_per_100k": -0.197,
+   "cost_burden_30pct_plus_share": 0.056,
+   "median_home_value": -0.263,
+   "snap_receipt_share_pct": 0.544,
+   "bachelors_pct": -0.189
+  },
+  "sd": {
+   "murder_rate": 9.7769,
+   "care_per_100k": 13375375.0,
+   "cost_burden_30pct_plus_share": 1.662,
+   "median_home_value": 21670.2,
+   "snap_receipt_share_pct": 1.9647,
+   "bachelors_pct": 0.9042
+  }
+ },
+ "fe6": {
+  "n": 36,
+  "cities": 5,
+  "r2": 0.263,
+  "betas": {
+   "care_per_100k": -0.304,
+   "unemployment_rate": 0.312
+  },
+  "sd": {
+   "care_per_100k": 16760000.0,
+   "unemployment_rate": 1.84,
+   "murder_rate": 7.621,
+   "unemp_within_sd": 1.84,
+   "care_within_sd_M": 16760000.0
+  },
+  "t": {
+   "care_per_100k": -1.87,
+   "unemployment_rate": 1.92
+  }
+ },
+ "fe2": {
+  "n": 19,
+  "cities": 4,
+  "r2": 0.423,
+  "betas": {
+   "care_per_100k": -0.452,
+   "cage_per_100k": 0.419,
+   "bookings_rate_t0": 0.013
+  },
+  "sd": {
+   "care_per_100k": 10900159.1,
+   "cage_per_100k": 15285991.8,
+   "bookings_rate_t0": 799.8,
+   "murder_rate": 6.9717
+  },
+  "t": {
+   "care_per_100k": -2.24,
+   "cage_per_100k": 2.05,
+   "bookings_per_1000": 0.06
+  }
+ },
+ "thead": {
+  "rho": {
+   "p10": -0.452,
+   "median": -0.667,
+   "p90": -0.857,
+   "p90_over_p10": -0.714
+  },
+  "n": 8,
+  "grain": "Spearman, between-city cross-section"
+ },
+ "output_vector_crime": {
+  "pooled_unemp_x_murder": 0.104,
+  "pooled_emp_share_x_murder": -0.104,
+  "delta_unemp_x_delta_murder": 0.006,
+  "n_diff": 33,
+  "per_city": [
+   [
+    "Boston",
+    13,
+    0.639
+   ],
+   [
+    "Cincinnati",
+    12,
+    0.151
+   ],
+   [
+    "Detroit",
+    6,
+    0.319
+   ],
+   [
+    "Houston",
+    9,
+    -0.285
+   ],
+   [
+    "Memphis",
+    6,
+    -0.116
+   ],
+   [
+    "New Orleans",
+    10,
+    0.316
+   ],
+   [
+    "New York",
+    4,
+    -0.4
+   ]
+  ]
+ },
+ "edu": {
+  "naep_x_ba_spearman": 0.373,
+  "naep_x_hs_spearman": 0.172,
+  "n": 48
+ }
+}

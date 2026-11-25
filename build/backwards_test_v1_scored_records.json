@@ -1,0 +1,5420 @@
+[
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "Cincinnati",
+  "t": 2021,
+  "lag": 1,
+  "year_scored": 2022,
+  "pred": 27.68,
+  "pred_delta_from_mean": 3.02,
+  "actual": 24.8,
+  "actual_delta_from_mean": 0.14,
+  "direction_hit": true,
+  "abs_err": 2.88,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "Cincinnati",
+  "t": 2021,
+  "lag": 2,
+  "year_scored": 2023,
+  "pred": 27.68,
+  "pred_delta_from_mean": 3.02,
+  "actual": 23.0,
+  "actual_delta_from_mean": -1.66,
+  "direction_hit": false,
+  "abs_err": 4.68,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "Cincinnati",
+  "t": 2021,
+  "lag": 3,
+  "year_scored": 2024,
+  "pred": 27.68,
+  "pred_delta_from_mean": 3.02,
+  "actual": 23.5,
+  "actual_delta_from_mean": -1.16,
+  "direction_hit": false,
+  "abs_err": 4.18,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "Cincinnati",
+  "t": 2021,
+  "lag": 4,
+  "year_scored": 2025,
+  "pred": 27.68,
+  "pred_delta_from_mean": 3.02,
+  "actual": 21.9,
+  "actual_delta_from_mean": -2.76,
+  "direction_hit": false,
+  "abs_err": 5.78,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "Cincinnati",
+  "t": 2022,
+  "lag": 1,
+  "year_scored": 2023,
+  "pred": 27.46,
+  "pred_delta_from_mean": 2.8,
+  "actual": 23.0,
+  "actual_delta_from_mean": -1.66,
+  "direction_hit": false,
+  "abs_err": 4.46,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "Cincinnati",
+  "t": 2022,
+  "lag": 2,
+  "year_scored": 2024,
+  "pred": 27.46,
+  "pred_delta_from_mean": 2.8,
+  "actual": 23.5,
+  "actual_delta_from_mean": -1.16,
+  "direction_hit": false,
+  "abs_err": 3.96,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "Cincinnati",
+  "t": 2022,
+  "lag": 3,
+  "year_scored": 2025,
+  "pred": 27.46,
+  "pred_delta_from_mean": 2.8,
+  "actual": 21.9,
+  "actual_delta_from_mean": -2.76,
+  "direction_hit": false,
+  "abs_err": 5.56,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "Cincinnati",
+  "t": 2023,
+  "lag": 1,
+  "year_scored": 2024,
+  "pred": 25.94,
+  "pred_delta_from_mean": 1.28,
+  "actual": 23.5,
+  "actual_delta_from_mean": -1.16,
+  "direction_hit": false,
+  "abs_err": 2.44,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "Cincinnati",
+  "t": 2023,
+  "lag": 2,
+  "year_scored": 2025,
+  "pred": 25.94,
+  "pred_delta_from_mean": 1.28,
+  "actual": 21.9,
+  "actual_delta_from_mean": -2.76,
+  "direction_hit": false,
+  "abs_err": 4.04,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "Cincinnati",
+  "t": 2024,
+  "lag": 1,
+  "year_scored": 2025,
+  "pred": 20.92,
+  "pred_delta_from_mean": -3.74,
+  "actual": 21.9,
+  "actual_delta_from_mean": -2.76,
+  "direction_hit": true,
+  "abs_err": 0.98,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "Detroit",
+  "t": 2021,
+  "lag": 1,
+  "year_scored": 2022,
+  "pred": 47.78,
+  "pred_delta_from_mean": 9.3,
+  "actual": 48.3,
+  "actual_delta_from_mean": 9.82,
+  "direction_hit": true,
+  "abs_err": 0.52,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "Detroit",
+  "t": 2021,
+  "lag": 2,
+  "year_scored": 2023,
+  "pred": 47.78,
+  "pred_delta_from_mean": 9.3,
+  "actual": 39.2,
+  "actual_delta_from_mean": 0.72,
+  "direction_hit": true,
+  "abs_err": 8.58,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "Detroit",
+  "t": 2021,
+  "lag": 3,
+  "year_scored": 2024,
+  "pred": 47.78,
+  "pred_delta_from_mean": 9.3,
+  "actual": 31.3,
+  "actual_delta_from_mean": -7.18,
+  "direction_hit": false,
+  "abs_err": 16.48,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "Detroit",
+  "t": 2021,
+  "lag": 4,
+  "year_scored": 2025,
+  "pred": 47.78,
+  "pred_delta_from_mean": 9.3,
+  "actual": 25.4,
+  "actual_delta_from_mean": -13.08,
+  "direction_hit": false,
+  "abs_err": 22.38,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "Detroit",
+  "t": 2022,
+  "lag": 1,
+  "year_scored": 2023,
+  "pred": 48.36,
+  "pred_delta_from_mean": 9.88,
+  "actual": 39.2,
+  "actual_delta_from_mean": 0.72,
+  "direction_hit": true,
+  "abs_err": 9.16,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "Detroit",
+  "t": 2022,
+  "lag": 2,
+  "year_scored": 2024,
+  "pred": 48.36,
+  "pred_delta_from_mean": 9.88,
+  "actual": 31.3,
+  "actual_delta_from_mean": -7.18,
+  "direction_hit": false,
+  "abs_err": 17.06,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "Detroit",
+  "t": 2022,
+  "lag": 3,
+  "year_scored": 2025,
+  "pred": 48.36,
+  "pred_delta_from_mean": 9.88,
+  "actual": 25.4,
+  "actual_delta_from_mean": -13.08,
+  "direction_hit": false,
+  "abs_err": 22.96,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "Detroit",
+  "t": 2023,
+  "lag": 1,
+  "year_scored": 2024,
+  "pred": 38.1,
+  "pred_delta_from_mean": -0.38,
+  "actual": 31.3,
+  "actual_delta_from_mean": -7.18,
+  "direction_hit": true,
+  "abs_err": 6.8,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "Detroit",
+  "t": 2023,
+  "lag": 2,
+  "year_scored": 2025,
+  "pred": 38.1,
+  "pred_delta_from_mean": -0.38,
+  "actual": 25.4,
+  "actual_delta_from_mean": -13.08,
+  "direction_hit": true,
+  "abs_err": 12.7,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "Detroit",
+  "t": 2024,
+  "lag": 1,
+  "year_scored": 2025,
+  "pred": 26.77,
+  "pred_delta_from_mean": -11.71,
+  "actual": 25.4,
+  "actual_delta_from_mean": -13.08,
+  "direction_hit": true,
+  "abs_err": 1.37,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "Memphis",
+  "t": 2021,
+  "lag": 1,
+  "year_scored": 2022,
+  "pred": 54.53,
+  "pred_delta_from_mean": 8.73,
+  "actual": 48.0,
+  "actual_delta_from_mean": 2.2,
+  "direction_hit": true,
+  "abs_err": 6.53,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "Memphis",
+  "t": 2021,
+  "lag": 2,
+  "year_scored": 2023,
+  "pred": 54.53,
+  "pred_delta_from_mean": 8.73,
+  "actual": 55.9,
+  "actual_delta_from_mean": 10.1,
+  "direction_hit": true,
+  "abs_err": 1.37,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "Memphis",
+  "t": 2021,
+  "lag": 3,
+  "year_scored": 2024,
+  "pred": 54.53,
+  "pred_delta_from_mean": 8.73,
+  "actual": 40.4,
+  "actual_delta_from_mean": -5.4,
+  "direction_hit": false,
+  "abs_err": 14.13,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "Memphis",
+  "t": 2021,
+  "lag": 4,
+  "year_scored": 2025,
+  "pred": 54.53,
+  "pred_delta_from_mean": 8.73,
+  "actual": 30.2,
+  "actual_delta_from_mean": -15.6,
+  "direction_hit": false,
+  "abs_err": 24.33,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "Memphis",
+  "t": 2022,
+  "lag": 1,
+  "year_scored": 2023,
+  "pred": 52.21,
+  "pred_delta_from_mean": 6.41,
+  "actual": 55.9,
+  "actual_delta_from_mean": 10.1,
+  "direction_hit": true,
+  "abs_err": 3.69,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "Memphis",
+  "t": 2022,
+  "lag": 2,
+  "year_scored": 2024,
+  "pred": 52.21,
+  "pred_delta_from_mean": 6.41,
+  "actual": 40.4,
+  "actual_delta_from_mean": -5.4,
+  "direction_hit": false,
+  "abs_err": 11.81,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "Memphis",
+  "t": 2022,
+  "lag": 3,
+  "year_scored": 2025,
+  "pred": 52.21,
+  "pred_delta_from_mean": 6.41,
+  "actual": 30.2,
+  "actual_delta_from_mean": -15.6,
+  "direction_hit": false,
+  "abs_err": 22.01,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "Memphis",
+  "t": 2023,
+  "lag": 1,
+  "year_scored": 2024,
+  "pred": 51.51,
+  "pred_delta_from_mean": 5.71,
+  "actual": 40.4,
+  "actual_delta_from_mean": -5.4,
+  "direction_hit": false,
+  "abs_err": 11.11,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "Memphis",
+  "t": 2023,
+  "lag": 2,
+  "year_scored": 2025,
+  "pred": 51.51,
+  "pred_delta_from_mean": 5.71,
+  "actual": 30.2,
+  "actual_delta_from_mean": -15.6,
+  "direction_hit": false,
+  "abs_err": 21.31,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "Memphis",
+  "t": 2024,
+  "lag": 1,
+  "year_scored": 2025,
+  "pred": 36.46,
+  "pred_delta_from_mean": -9.34,
+  "actual": 30.2,
+  "actual_delta_from_mean": -15.6,
+  "direction_hit": true,
+  "abs_err": 6.26,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "NYC",
+  "t": 2021,
+  "lag": 1,
+  "year_scored": 2022,
+  "pred": 4.34,
+  "pred_delta_from_mean": -0.66,
+  "actual": 5.2,
+  "actual_delta_from_mean": 0.2,
+  "direction_hit": false,
+  "abs_err": 0.86,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "NYC",
+  "t": 2021,
+  "lag": 2,
+  "year_scored": 2023,
+  "pred": 4.34,
+  "pred_delta_from_mean": -0.66,
+  "actual": 4.8,
+  "actual_delta_from_mean": -0.2,
+  "direction_hit": true,
+  "abs_err": 0.46,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "NYC",
+  "t": 2021,
+  "lag": 3,
+  "year_scored": 2024,
+  "pred": 4.34,
+  "pred_delta_from_mean": -0.66,
+  "actual": 4.2,
+  "actual_delta_from_mean": -0.8,
+  "direction_hit": true,
+  "abs_err": 0.14,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "NYC",
+  "t": 2021,
+  "lag": 4,
+  "year_scored": 2025,
+  "pred": 4.34,
+  "pred_delta_from_mean": -0.66,
+  "actual": 3.53,
+  "actual_delta_from_mean": -1.47,
+  "direction_hit": true,
+  "abs_err": 0.81,
+  "outcome_src": "NYPD count / decennial census pop",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "NYC",
+  "t": 2022,
+  "lag": 1,
+  "year_scored": 2023,
+  "pred": 5.27,
+  "pred_delta_from_mean": 0.27,
+  "actual": 4.8,
+  "actual_delta_from_mean": -0.2,
+  "direction_hit": false,
+  "abs_err": 0.47,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "NYC",
+  "t": 2022,
+  "lag": 2,
+  "year_scored": 2024,
+  "pred": 5.27,
+  "pred_delta_from_mean": 0.27,
+  "actual": 4.2,
+  "actual_delta_from_mean": -0.8,
+  "direction_hit": false,
+  "abs_err": 1.07,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "NYC",
+  "t": 2022,
+  "lag": 3,
+  "year_scored": 2025,
+  "pred": 5.27,
+  "pred_delta_from_mean": 0.27,
+  "actual": 3.53,
+  "actual_delta_from_mean": -1.47,
+  "direction_hit": false,
+  "abs_err": 1.74,
+  "outcome_src": "NYPD count / decennial census pop",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "NYC",
+  "t": 2023,
+  "lag": 1,
+  "year_scored": 2024,
+  "pred": 5.1,
+  "pred_delta_from_mean": 0.1,
+  "actual": 4.2,
+  "actual_delta_from_mean": -0.8,
+  "direction_hit": false,
+  "abs_err": 0.9,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "NYC",
+  "t": 2023,
+  "lag": 2,
+  "year_scored": 2025,
+  "pred": 5.1,
+  "pred_delta_from_mean": 0.1,
+  "actual": 3.53,
+  "actual_delta_from_mean": -1.47,
+  "direction_hit": false,
+  "abs_err": 1.57,
+  "outcome_src": "NYPD count / decennial census pop",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "NYC",
+  "t": 2024,
+  "lag": 1,
+  "year_scored": 2025,
+  "pred": 5.29,
+  "pred_delta_from_mean": 0.29,
+  "actual": 3.53,
+  "actual_delta_from_mean": -1.47,
+  "direction_hit": false,
+  "abs_err": 1.76,
+  "outcome_src": "NYPD count / decennial census pop",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "St. Louis",
+  "t": 2021,
+  "lag": 1,
+  "year_scored": 2022,
+  "pred": 70.87,
+  "pred_delta_from_mean": 10.93,
+  "actual": 70.4,
+  "actual_delta_from_mean": 10.46,
+  "direction_hit": true,
+  "abs_err": 0.47,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "St. Louis",
+  "t": 2021,
+  "lag": 2,
+  "year_scored": 2023,
+  "pred": 70.87,
+  "pred_delta_from_mean": 10.93,
+  "actual": 55.8,
+  "actual_delta_from_mean": -4.14,
+  "direction_hit": false,
+  "abs_err": 15.07,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "St. Louis",
+  "t": 2021,
+  "lag": 3,
+  "year_scored": 2024,
+  "pred": 70.87,
+  "pred_delta_from_mean": 10.93,
+  "actual": 53.6,
+  "actual_delta_from_mean": -6.34,
+  "direction_hit": false,
+  "abs_err": 17.27,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "St. Louis",
+  "t": 2021,
+  "lag": 4,
+  "year_scored": 2025,
+  "pred": 70.87,
+  "pred_delta_from_mean": 10.93,
+  "actual": 50.7,
+  "actual_delta_from_mean": -9.24,
+  "direction_hit": false,
+  "abs_err": 20.17,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "St. Louis",
+  "t": 2022,
+  "lag": 1,
+  "year_scored": 2023,
+  "pred": 63.55,
+  "pred_delta_from_mean": 3.61,
+  "actual": 55.8,
+  "actual_delta_from_mean": -4.14,
+  "direction_hit": false,
+  "abs_err": 7.75,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "St. Louis",
+  "t": 2022,
+  "lag": 2,
+  "year_scored": 2024,
+  "pred": 63.55,
+  "pred_delta_from_mean": 3.61,
+  "actual": 53.6,
+  "actual_delta_from_mean": -6.34,
+  "direction_hit": false,
+  "abs_err": 9.95,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "St. Louis",
+  "t": 2022,
+  "lag": 3,
+  "year_scored": 2025,
+  "pred": 63.55,
+  "pred_delta_from_mean": 3.61,
+  "actual": 50.7,
+  "actual_delta_from_mean": -9.24,
+  "direction_hit": false,
+  "abs_err": 12.85,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "St. Louis",
+  "t": 2023,
+  "lag": 1,
+  "year_scored": 2024,
+  "pred": 59.22,
+  "pred_delta_from_mean": -0.72,
+  "actual": 53.6,
+  "actual_delta_from_mean": -6.34,
+  "direction_hit": true,
+  "abs_err": 5.62,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "St. Louis",
+  "t": 2023,
+  "lag": 2,
+  "year_scored": 2025,
+  "pred": 59.22,
+  "pred_delta_from_mean": -0.72,
+  "actual": 50.7,
+  "actual_delta_from_mean": -9.24,
+  "direction_hit": true,
+  "abs_err": 8.52,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_maslow_joint_t0",
+  "city": "St. Louis",
+  "t": 2024,
+  "lag": 1,
+  "year_scored": 2025,
+  "pred": 55.12,
+  "pred_delta_from_mean": -4.82,
+  "actual": 50.7,
+  "actual_delta_from_mean": -9.24,
+  "direction_hit": true,
+  "abs_err": 4.42,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "Cincinnati",
+  "t": 2021,
+  "lag": 1,
+  "year_scored": 2022,
+  "pred": 24.44,
+  "pred_delta_from_mean": 1.11,
+  "actual": 24.8,
+  "actual_delta_from_mean": 1.48,
+  "direction_hit": true,
+  "abs_err": 0.36,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "Cincinnati",
+  "t": 2021,
+  "lag": 2,
+  "year_scored": 2023,
+  "pred": 24.44,
+  "pred_delta_from_mean": 1.11,
+  "actual": 23.0,
+  "actual_delta_from_mean": -0.32,
+  "direction_hit": false,
+  "abs_err": 1.44,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "Cincinnati",
+  "t": 2021,
+  "lag": 3,
+  "year_scored": 2024,
+  "pred": 24.44,
+  "pred_delta_from_mean": 1.11,
+  "actual": 23.5,
+  "actual_delta_from_mean": 0.18,
+  "direction_hit": true,
+  "abs_err": 0.94,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "Cincinnati",
+  "t": 2021,
+  "lag": 4,
+  "year_scored": 2025,
+  "pred": 24.44,
+  "pred_delta_from_mean": 1.11,
+  "actual": 21.9,
+  "actual_delta_from_mean": -1.42,
+  "direction_hit": false,
+  "abs_err": 2.54,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "Cincinnati",
+  "t": 2022,
+  "lag": 1,
+  "year_scored": 2023,
+  "pred": 23.26,
+  "pred_delta_from_mean": -0.06,
+  "actual": 23.0,
+  "actual_delta_from_mean": -0.32,
+  "direction_hit": true,
+  "abs_err": 0.26,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "Cincinnati",
+  "t": 2022,
+  "lag": 2,
+  "year_scored": 2024,
+  "pred": 23.26,
+  "pred_delta_from_mean": -0.06,
+  "actual": 23.5,
+  "actual_delta_from_mean": 0.18,
+  "direction_hit": false,
+  "abs_err": 0.24,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "Cincinnati",
+  "t": 2022,
+  "lag": 3,
+  "year_scored": 2025,
+  "pred": 23.26,
+  "pred_delta_from_mean": -0.06,
+  "actual": 21.9,
+  "actual_delta_from_mean": -1.42,
+  "direction_hit": true,
+  "abs_err": 1.36,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "Cincinnati",
+  "t": 2023,
+  "lag": 1,
+  "year_scored": 2024,
+  "pred": 23.65,
+  "pred_delta_from_mean": 0.33,
+  "actual": 23.5,
+  "actual_delta_from_mean": 0.18,
+  "direction_hit": true,
+  "abs_err": 0.15,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "Cincinnati",
+  "t": 2023,
+  "lag": 2,
+  "year_scored": 2025,
+  "pred": 23.65,
+  "pred_delta_from_mean": 0.33,
+  "actual": 21.9,
+  "actual_delta_from_mean": -1.42,
+  "direction_hit": false,
+  "abs_err": 1.75,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "Cincinnati",
+  "t": 2024,
+  "lag": 1,
+  "year_scored": 2025,
+  "pred": 21.94,
+  "pred_delta_from_mean": -1.38,
+  "actual": 21.9,
+  "actual_delta_from_mean": -1.42,
+  "direction_hit": true,
+  "abs_err": 0.04,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "Detroit",
+  "t": 2021,
+  "lag": 1,
+  "year_scored": 2022,
+  "pred": 43.66,
+  "pred_delta_from_mean": 7.59,
+  "actual": 48.3,
+  "actual_delta_from_mean": 12.23,
+  "direction_hit": true,
+  "abs_err": 4.64,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "Detroit",
+  "t": 2021,
+  "lag": 2,
+  "year_scored": 2023,
+  "pred": 43.66,
+  "pred_delta_from_mean": 7.59,
+  "actual": 39.2,
+  "actual_delta_from_mean": 3.13,
+  "direction_hit": true,
+  "abs_err": 4.46,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "Detroit",
+  "t": 2021,
+  "lag": 3,
+  "year_scored": 2024,
+  "pred": 43.66,
+  "pred_delta_from_mean": 7.59,
+  "actual": 31.3,
+  "actual_delta_from_mean": -4.77,
+  "direction_hit": false,
+  "abs_err": 12.36,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "Detroit",
+  "t": 2021,
+  "lag": 4,
+  "year_scored": 2025,
+  "pred": 43.66,
+  "pred_delta_from_mean": 7.59,
+  "actual": 25.4,
+  "actual_delta_from_mean": -10.67,
+  "direction_hit": false,
+  "abs_err": 18.26,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "Detroit",
+  "t": 2022,
+  "lag": 1,
+  "year_scored": 2023,
+  "pred": 42.33,
+  "pred_delta_from_mean": 6.26,
+  "actual": 39.2,
+  "actual_delta_from_mean": 3.13,
+  "direction_hit": true,
+  "abs_err": 3.13,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "Detroit",
+  "t": 2022,
+  "lag": 2,
+  "year_scored": 2024,
+  "pred": 42.33,
+  "pred_delta_from_mean": 6.26,
+  "actual": 31.3,
+  "actual_delta_from_mean": -4.77,
+  "direction_hit": false,
+  "abs_err": 11.03,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "Detroit",
+  "t": 2022,
+  "lag": 3,
+  "year_scored": 2025,
+  "pred": 42.33,
+  "pred_delta_from_mean": 6.26,
+  "actual": 25.4,
+  "actual_delta_from_mean": -10.67,
+  "direction_hit": false,
+  "abs_err": 16.93,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "Detroit",
+  "t": 2023,
+  "lag": 1,
+  "year_scored": 2024,
+  "pred": 32.42,
+  "pred_delta_from_mean": -3.65,
+  "actual": 31.3,
+  "actual_delta_from_mean": -4.77,
+  "direction_hit": true,
+  "abs_err": 1.12,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "Detroit",
+  "t": 2023,
+  "lag": 2,
+  "year_scored": 2025,
+  "pred": 32.42,
+  "pred_delta_from_mean": -3.65,
+  "actual": 25.4,
+  "actual_delta_from_mean": -10.67,
+  "direction_hit": true,
+  "abs_err": 7.02,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "Detroit",
+  "t": 2024,
+  "lag": 1,
+  "year_scored": 2025,
+  "pred": 25.86,
+  "pred_delta_from_mean": -10.2,
+  "actual": 25.4,
+  "actual_delta_from_mean": -10.67,
+  "direction_hit": true,
+  "abs_err": 0.46,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "Memphis",
+  "t": 2021,
+  "lag": 1,
+  "year_scored": 2022,
+  "pred": 47.99,
+  "pred_delta_from_mean": 8.36,
+  "actual": 48.0,
+  "actual_delta_from_mean": 8.38,
+  "direction_hit": true,
+  "abs_err": 0.01,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "Memphis",
+  "t": 2021,
+  "lag": 2,
+  "year_scored": 2023,
+  "pred": 47.99,
+  "pred_delta_from_mean": 8.36,
+  "actual": 55.9,
+  "actual_delta_from_mean": 16.28,
+  "direction_hit": true,
+  "abs_err": 7.91,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "Memphis",
+  "t": 2021,
+  "lag": 3,
+  "year_scored": 2024,
+  "pred": 47.99,
+  "pred_delta_from_mean": 8.36,
+  "actual": 40.4,
+  "actual_delta_from_mean": 0.78,
+  "direction_hit": true,
+  "abs_err": 7.59,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "Memphis",
+  "t": 2021,
+  "lag": 4,
+  "year_scored": 2025,
+  "pred": 47.99,
+  "pred_delta_from_mean": 8.36,
+  "actual": 30.2,
+  "actual_delta_from_mean": -9.42,
+  "direction_hit": false,
+  "abs_err": 17.79,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "Memphis",
+  "t": 2022,
+  "lag": 1,
+  "year_scored": 2023,
+  "pred": 55.11,
+  "pred_delta_from_mean": 15.49,
+  "actual": 55.9,
+  "actual_delta_from_mean": 16.28,
+  "direction_hit": true,
+  "abs_err": 0.79,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "Memphis",
+  "t": 2022,
+  "lag": 2,
+  "year_scored": 2024,
+  "pred": 55.11,
+  "pred_delta_from_mean": 15.49,
+  "actual": 40.4,
+  "actual_delta_from_mean": 0.78,
+  "direction_hit": true,
+  "abs_err": 14.71,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "Memphis",
+  "t": 2022,
+  "lag": 3,
+  "year_scored": 2025,
+  "pred": 55.11,
+  "pred_delta_from_mean": 15.49,
+  "actual": 30.2,
+  "actual_delta_from_mean": -9.42,
+  "direction_hit": false,
+  "abs_err": 24.91,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "Memphis",
+  "t": 2023,
+  "lag": 1,
+  "year_scored": 2024,
+  "pred": 39.91,
+  "pred_delta_from_mean": 0.29,
+  "actual": 40.4,
+  "actual_delta_from_mean": 0.78,
+  "direction_hit": true,
+  "abs_err": 0.49,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "Memphis",
+  "t": 2023,
+  "lag": 2,
+  "year_scored": 2025,
+  "pred": 39.91,
+  "pred_delta_from_mean": 0.29,
+  "actual": 30.2,
+  "actual_delta_from_mean": -9.42,
+  "direction_hit": false,
+  "abs_err": 9.71,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "Memphis",
+  "t": 2024,
+  "lag": 1,
+  "year_scored": 2025,
+  "pred": 25.66,
+  "pred_delta_from_mean": -13.96,
+  "actual": 30.2,
+  "actual_delta_from_mean": -9.42,
+  "direction_hit": true,
+  "abs_err": 4.54,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "St. Louis",
+  "t": 2021,
+  "lag": 1,
+  "year_scored": 2022,
+  "pred": 66.1,
+  "pred_delta_from_mean": 13.53,
+  "actual": 70.4,
+  "actual_delta_from_mean": 17.83,
+  "direction_hit": true,
+  "abs_err": 4.3,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "St. Louis",
+  "t": 2021,
+  "lag": 2,
+  "year_scored": 2023,
+  "pred": 66.1,
+  "pred_delta_from_mean": 13.53,
+  "actual": 55.8,
+  "actual_delta_from_mean": 3.23,
+  "direction_hit": true,
+  "abs_err": 10.3,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "St. Louis",
+  "t": 2021,
+  "lag": 3,
+  "year_scored": 2024,
+  "pred": 66.1,
+  "pred_delta_from_mean": 13.53,
+  "actual": 53.6,
+  "actual_delta_from_mean": 1.03,
+  "direction_hit": true,
+  "abs_err": 12.5,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "St. Louis",
+  "t": 2021,
+  "lag": 4,
+  "year_scored": 2025,
+  "pred": 66.1,
+  "pred_delta_from_mean": 13.53,
+  "actual": 50.7,
+  "actual_delta_from_mean": -1.87,
+  "direction_hit": false,
+  "abs_err": 15.4,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "St. Louis",
+  "t": 2022,
+  "lag": 1,
+  "year_scored": 2023,
+  "pred": 59.57,
+  "pred_delta_from_mean": 7.0,
+  "actual": 55.8,
+  "actual_delta_from_mean": 3.23,
+  "direction_hit": true,
+  "abs_err": 3.77,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "St. Louis",
+  "t": 2022,
+  "lag": 2,
+  "year_scored": 2024,
+  "pred": 59.57,
+  "pred_delta_from_mean": 7.0,
+  "actual": 53.6,
+  "actual_delta_from_mean": 1.03,
+  "direction_hit": true,
+  "abs_err": 5.97,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "St. Louis",
+  "t": 2022,
+  "lag": 3,
+  "year_scored": 2025,
+  "pred": 59.57,
+  "pred_delta_from_mean": 7.0,
+  "actual": 50.7,
+  "actual_delta_from_mean": -1.87,
+  "direction_hit": false,
+  "abs_err": 8.87,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "St. Louis",
+  "t": 2023,
+  "lag": 1,
+  "year_scored": 2024,
+  "pred": 54.47,
+  "pred_delta_from_mean": 1.9,
+  "actual": 53.6,
+  "actual_delta_from_mean": 1.03,
+  "direction_hit": true,
+  "abs_err": 0.87,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "St. Louis",
+  "t": 2023,
+  "lag": 2,
+  "year_scored": 2025,
+  "pred": 54.47,
+  "pred_delta_from_mean": 1.9,
+  "actual": 50.7,
+  "actual_delta_from_mean": -1.87,
+  "direction_hit": false,
+  "abs_err": 3.77,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-3_arc_tplus1",
+  "city": "St. Louis",
+  "t": 2024,
+  "lag": 1,
+  "year_scored": 2025,
+  "pred": 51.33,
+  "pred_delta_from_mean": -1.24,
+  "actual": 50.7,
+  "actual_delta_from_mean": -1.87,
+  "direction_hit": true,
+  "abs_err": 0.63,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2014,
+  "lag": 1,
+  "year_scored": 2015,
+  "pred": 25.81,
+  "pred_delta_from_mean": 2.17,
+  "actual": 22.4,
+  "actual_delta_from_mean": -1.23,
+  "direction_hit": false,
+  "abs_err": 3.41,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2014,
+  "lag": 2,
+  "year_scored": 2016,
+  "pred": 25.81,
+  "pred_delta_from_mean": 2.17,
+  "actual": 19.7,
+  "actual_delta_from_mean": -3.93,
+  "direction_hit": false,
+  "abs_err": 6.11,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2014,
+  "lag": 3,
+  "year_scored": 2017,
+  "pred": 25.81,
+  "pred_delta_from_mean": 2.17,
+  "actual": 23.9,
+  "actual_delta_from_mean": 0.27,
+  "direction_hit": true,
+  "abs_err": 1.91,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2014,
+  "lag": 4,
+  "year_scored": 2018,
+  "pred": 25.81,
+  "pred_delta_from_mean": 2.17,
+  "actual": 20.2,
+  "actual_delta_from_mean": -3.43,
+  "direction_hit": false,
+  "abs_err": 5.61,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2014,
+  "lag": 5,
+  "year_scored": 2019,
+  "pred": 25.81,
+  "pred_delta_from_mean": 2.17,
+  "actual": 22.0,
+  "actual_delta_from_mean": -1.63,
+  "direction_hit": false,
+  "abs_err": 3.81,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2015,
+  "lag": 1,
+  "year_scored": 2016,
+  "pred": 25.04,
+  "pred_delta_from_mean": 1.4,
+  "actual": 19.7,
+  "actual_delta_from_mean": -3.93,
+  "direction_hit": false,
+  "abs_err": 5.34,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2015,
+  "lag": 2,
+  "year_scored": 2017,
+  "pred": 25.04,
+  "pred_delta_from_mean": 1.4,
+  "actual": 23.9,
+  "actual_delta_from_mean": 0.27,
+  "direction_hit": true,
+  "abs_err": 1.14,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2015,
+  "lag": 3,
+  "year_scored": 2018,
+  "pred": 25.04,
+  "pred_delta_from_mean": 1.4,
+  "actual": 20.2,
+  "actual_delta_from_mean": -3.43,
+  "direction_hit": false,
+  "abs_err": 4.84,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2015,
+  "lag": 4,
+  "year_scored": 2019,
+  "pred": 25.04,
+  "pred_delta_from_mean": 1.4,
+  "actual": 22.0,
+  "actual_delta_from_mean": -1.63,
+  "direction_hit": false,
+  "abs_err": 3.04,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2015,
+  "lag": 5,
+  "year_scored": 2020,
+  "pred": 25.04,
+  "pred_delta_from_mean": 1.4,
+  "actual": 31.0,
+  "actual_delta_from_mean": 7.37,
+  "direction_hit": true,
+  "abs_err": 5.96,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2016,
+  "lag": 1,
+  "year_scored": 2017,
+  "pred": 24.34,
+  "pred_delta_from_mean": 0.71,
+  "actual": 23.9,
+  "actual_delta_from_mean": 0.27,
+  "direction_hit": true,
+  "abs_err": 0.44,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2016,
+  "lag": 2,
+  "year_scored": 2018,
+  "pred": 24.34,
+  "pred_delta_from_mean": 0.71,
+  "actual": 20.2,
+  "actual_delta_from_mean": -3.43,
+  "direction_hit": false,
+  "abs_err": 4.14,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2016,
+  "lag": 3,
+  "year_scored": 2019,
+  "pred": 24.34,
+  "pred_delta_from_mean": 0.71,
+  "actual": 22.0,
+  "actual_delta_from_mean": -1.63,
+  "direction_hit": false,
+  "abs_err": 2.34,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2016,
+  "lag": 4,
+  "year_scored": 2020,
+  "pred": 24.34,
+  "pred_delta_from_mean": 0.71,
+  "actual": 31.0,
+  "actual_delta_from_mean": 7.37,
+  "direction_hit": true,
+  "abs_err": 6.66,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2016,
+  "lag": 5,
+  "year_scored": 2021,
+  "pred": 24.34,
+  "pred_delta_from_mean": 0.71,
+  "actual": 30.1,
+  "actual_delta_from_mean": 6.47,
+  "direction_hit": true,
+  "abs_err": 5.76,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2017,
+  "lag": 1,
+  "year_scored": 2018,
+  "pred": 24.03,
+  "pred_delta_from_mean": 0.4,
+  "actual": 20.2,
+  "actual_delta_from_mean": -3.43,
+  "direction_hit": false,
+  "abs_err": 3.83,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2017,
+  "lag": 2,
+  "year_scored": 2019,
+  "pred": 24.03,
+  "pred_delta_from_mean": 0.4,
+  "actual": 22.0,
+  "actual_delta_from_mean": -1.63,
+  "direction_hit": false,
+  "abs_err": 2.03,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2017,
+  "lag": 3,
+  "year_scored": 2020,
+  "pred": 24.03,
+  "pred_delta_from_mean": 0.4,
+  "actual": 31.0,
+  "actual_delta_from_mean": 7.37,
+  "direction_hit": true,
+  "abs_err": 6.97,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2017,
+  "lag": 4,
+  "year_scored": 2021,
+  "pred": 24.03,
+  "pred_delta_from_mean": 0.4,
+  "actual": 30.1,
+  "actual_delta_from_mean": 6.47,
+  "direction_hit": true,
+  "abs_err": 6.07,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2017,
+  "lag": 5,
+  "year_scored": 2022,
+  "pred": 24.03,
+  "pred_delta_from_mean": 0.4,
+  "actual": 24.8,
+  "actual_delta_from_mean": 1.17,
+  "direction_hit": true,
+  "abs_err": 0.77,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2018,
+  "lag": 1,
+  "year_scored": 2019,
+  "pred": 23.06,
+  "pred_delta_from_mean": -0.57,
+  "actual": 22.0,
+  "actual_delta_from_mean": -1.63,
+  "direction_hit": true,
+  "abs_err": 1.06,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2018,
+  "lag": 2,
+  "year_scored": 2020,
+  "pred": 23.06,
+  "pred_delta_from_mean": -0.57,
+  "actual": 31.0,
+  "actual_delta_from_mean": 7.37,
+  "direction_hit": false,
+  "abs_err": 7.94,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2018,
+  "lag": 3,
+  "year_scored": 2021,
+  "pred": 23.06,
+  "pred_delta_from_mean": -0.57,
+  "actual": 30.1,
+  "actual_delta_from_mean": 6.47,
+  "direction_hit": false,
+  "abs_err": 7.04,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2018,
+  "lag": 4,
+  "year_scored": 2022,
+  "pred": 23.06,
+  "pred_delta_from_mean": -0.57,
+  "actual": 24.8,
+  "actual_delta_from_mean": 1.17,
+  "direction_hit": false,
+  "abs_err": 1.74,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2018,
+  "lag": 5,
+  "year_scored": 2023,
+  "pred": 23.06,
+  "pred_delta_from_mean": -0.57,
+  "actual": 23.0,
+  "actual_delta_from_mean": -0.63,
+  "direction_hit": true,
+  "abs_err": 0.06,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2019,
+  "lag": 1,
+  "year_scored": 2020,
+  "pred": 22.97,
+  "pred_delta_from_mean": -0.66,
+  "actual": 31.0,
+  "actual_delta_from_mean": 7.37,
+  "direction_hit": false,
+  "abs_err": 8.03,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2019,
+  "lag": 2,
+  "year_scored": 2021,
+  "pred": 22.97,
+  "pred_delta_from_mean": -0.66,
+  "actual": 30.1,
+  "actual_delta_from_mean": 6.47,
+  "direction_hit": false,
+  "abs_err": 7.13,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2019,
+  "lag": 3,
+  "year_scored": 2022,
+  "pred": 22.97,
+  "pred_delta_from_mean": -0.66,
+  "actual": 24.8,
+  "actual_delta_from_mean": 1.17,
+  "direction_hit": false,
+  "abs_err": 1.83,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2019,
+  "lag": 4,
+  "year_scored": 2023,
+  "pred": 22.97,
+  "pred_delta_from_mean": -0.66,
+  "actual": 23.0,
+  "actual_delta_from_mean": -0.63,
+  "direction_hit": true,
+  "abs_err": 0.03,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2019,
+  "lag": 5,
+  "year_scored": 2024,
+  "pred": 22.97,
+  "pred_delta_from_mean": -0.66,
+  "actual": 23.5,
+  "actual_delta_from_mean": -0.13,
+  "direction_hit": true,
+  "abs_err": 0.53,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2020,
+  "lag": 1,
+  "year_scored": 2021,
+  "pred": 26.82,
+  "pred_delta_from_mean": 3.18,
+  "actual": 30.1,
+  "actual_delta_from_mean": 6.47,
+  "direction_hit": true,
+  "abs_err": 3.28,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2020,
+  "lag": 2,
+  "year_scored": 2022,
+  "pred": 26.82,
+  "pred_delta_from_mean": 3.18,
+  "actual": 24.8,
+  "actual_delta_from_mean": 1.17,
+  "direction_hit": true,
+  "abs_err": 2.02,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2020,
+  "lag": 3,
+  "year_scored": 2023,
+  "pred": 26.82,
+  "pred_delta_from_mean": 3.18,
+  "actual": 23.0,
+  "actual_delta_from_mean": -0.63,
+  "direction_hit": false,
+  "abs_err": 3.82,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2020,
+  "lag": 4,
+  "year_scored": 2024,
+  "pred": 26.82,
+  "pred_delta_from_mean": 3.18,
+  "actual": 23.5,
+  "actual_delta_from_mean": -0.13,
+  "direction_hit": false,
+  "abs_err": 3.32,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2020,
+  "lag": 5,
+  "year_scored": 2025,
+  "pred": 26.82,
+  "pred_delta_from_mean": 3.18,
+  "actual": 21.9,
+  "actual_delta_from_mean": -1.73,
+  "direction_hit": false,
+  "abs_err": 4.92,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2021,
+  "lag": 1,
+  "year_scored": 2022,
+  "pred": 24.27,
+  "pred_delta_from_mean": 0.63,
+  "actual": 24.8,
+  "actual_delta_from_mean": 1.17,
+  "direction_hit": true,
+  "abs_err": 0.53,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2021,
+  "lag": 2,
+  "year_scored": 2023,
+  "pred": 24.27,
+  "pred_delta_from_mean": 0.63,
+  "actual": 23.0,
+  "actual_delta_from_mean": -0.63,
+  "direction_hit": false,
+  "abs_err": 1.27,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2021,
+  "lag": 3,
+  "year_scored": 2024,
+  "pred": 24.27,
+  "pred_delta_from_mean": 0.63,
+  "actual": 23.5,
+  "actual_delta_from_mean": -0.13,
+  "direction_hit": false,
+  "abs_err": 0.77,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2021,
+  "lag": 4,
+  "year_scored": 2025,
+  "pred": 24.27,
+  "pred_delta_from_mean": 0.63,
+  "actual": 21.9,
+  "actual_delta_from_mean": -1.73,
+  "direction_hit": false,
+  "abs_err": 2.37,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2022,
+  "lag": 1,
+  "year_scored": 2023,
+  "pred": 22.33,
+  "pred_delta_from_mean": -1.3,
+  "actual": 23.0,
+  "actual_delta_from_mean": -0.63,
+  "direction_hit": true,
+  "abs_err": 0.67,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2022,
+  "lag": 2,
+  "year_scored": 2024,
+  "pred": 22.33,
+  "pred_delta_from_mean": -1.3,
+  "actual": 23.5,
+  "actual_delta_from_mean": -0.13,
+  "direction_hit": true,
+  "abs_err": 1.17,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2022,
+  "lag": 3,
+  "year_scored": 2025,
+  "pred": 22.33,
+  "pred_delta_from_mean": -1.3,
+  "actual": 21.9,
+  "actual_delta_from_mean": -1.73,
+  "direction_hit": true,
+  "abs_err": 0.43,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2023,
+  "lag": 1,
+  "year_scored": 2024,
+  "pred": 21.74,
+  "pred_delta_from_mean": -1.89,
+  "actual": 23.5,
+  "actual_delta_from_mean": -0.13,
+  "direction_hit": true,
+  "abs_err": 1.76,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2023,
+  "lag": 2,
+  "year_scored": 2025,
+  "pred": 21.74,
+  "pred_delta_from_mean": -1.89,
+  "actual": 21.9,
+  "actual_delta_from_mean": -1.73,
+  "direction_hit": true,
+  "abs_err": 0.16,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Cincinnati",
+  "t": 2024,
+  "lag": 1,
+  "year_scored": 2025,
+  "pred": 21.78,
+  "pred_delta_from_mean": -1.85,
+  "actual": 21.9,
+  "actual_delta_from_mean": -1.73,
+  "direction_hit": true,
+  "abs_err": 0.12,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 12,
+   "years": [
+    2014,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Detroit",
+  "t": 2020,
+  "lag": 1,
+  "year_scored": 2021,
+  "pred": 49.61,
+  "pred_delta_from_mean": 9.16,
+  "actual": 48.2,
+  "actual_delta_from_mean": 7.75,
+  "direction_hit": true,
+  "abs_err": 1.41,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 6,
+   "years": [
+    2020,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Detroit",
+  "t": 2020,
+  "lag": 2,
+  "year_scored": 2022,
+  "pred": 49.61,
+  "pred_delta_from_mean": 9.16,
+  "actual": 48.3,
+  "actual_delta_from_mean": 7.85,
+  "direction_hit": true,
+  "abs_err": 1.31,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 6,
+   "years": [
+    2020,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Detroit",
+  "t": 2020,
+  "lag": 3,
+  "year_scored": 2023,
+  "pred": 49.61,
+  "pred_delta_from_mean": 9.16,
+  "actual": 39.2,
+  "actual_delta_from_mean": -1.25,
+  "direction_hit": false,
+  "abs_err": 10.41,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 6,
+   "years": [
+    2020,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Detroit",
+  "t": 2020,
+  "lag": 4,
+  "year_scored": 2024,
+  "pred": 49.61,
+  "pred_delta_from_mean": 9.16,
+  "actual": 31.3,
+  "actual_delta_from_mean": -9.15,
+  "direction_hit": false,
+  "abs_err": 18.31,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 6,
+   "years": [
+    2020,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Detroit",
+  "t": 2020,
+  "lag": 5,
+  "year_scored": 2025,
+  "pred": 49.61,
+  "pred_delta_from_mean": 9.16,
+  "actual": 25.4,
+  "actual_delta_from_mean": -15.05,
+  "direction_hit": false,
+  "abs_err": 24.21,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 6,
+   "years": [
+    2020,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Detroit",
+  "t": 2021,
+  "lag": 1,
+  "year_scored": 2022,
+  "pred": 43.55,
+  "pred_delta_from_mean": 3.1,
+  "actual": 48.3,
+  "actual_delta_from_mean": 7.85,
+  "direction_hit": true,
+  "abs_err": 4.75,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 6,
+   "years": [
+    2020,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Detroit",
+  "t": 2021,
+  "lag": 2,
+  "year_scored": 2023,
+  "pred": 43.55,
+  "pred_delta_from_mean": 3.1,
+  "actual": 39.2,
+  "actual_delta_from_mean": -1.25,
+  "direction_hit": false,
+  "abs_err": 4.35,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 6,
+   "years": [
+    2020,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Detroit",
+  "t": 2021,
+  "lag": 3,
+  "year_scored": 2024,
+  "pred": 43.55,
+  "pred_delta_from_mean": 3.1,
+  "actual": 31.3,
+  "actual_delta_from_mean": -9.15,
+  "direction_hit": false,
+  "abs_err": 12.25,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 6,
+   "years": [
+    2020,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Detroit",
+  "t": 2021,
+  "lag": 4,
+  "year_scored": 2025,
+  "pred": 43.55,
+  "pred_delta_from_mean": 3.1,
+  "actual": 25.4,
+  "actual_delta_from_mean": -15.05,
+  "direction_hit": false,
+  "abs_err": 18.15,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 6,
+   "years": [
+    2020,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Detroit",
+  "t": 2022,
+  "lag": 1,
+  "year_scored": 2023,
+  "pred": 40.82,
+  "pred_delta_from_mean": 0.37,
+  "actual": 39.2,
+  "actual_delta_from_mean": -1.25,
+  "direction_hit": false,
+  "abs_err": 1.62,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 6,
+   "years": [
+    2020,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Detroit",
+  "t": 2022,
+  "lag": 2,
+  "year_scored": 2024,
+  "pred": 40.82,
+  "pred_delta_from_mean": 0.37,
+  "actual": 31.3,
+  "actual_delta_from_mean": -9.15,
+  "direction_hit": false,
+  "abs_err": 9.52,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 6,
+   "years": [
+    2020,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Detroit",
+  "t": 2022,
+  "lag": 3,
+  "year_scored": 2025,
+  "pred": 40.82,
+  "pred_delta_from_mean": 0.37,
+  "actual": 25.4,
+  "actual_delta_from_mean": -15.05,
+  "direction_hit": false,
+  "abs_err": 15.42,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 6,
+   "years": [
+    2020,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Detroit",
+  "t": 2023,
+  "lag": 1,
+  "year_scored": 2024,
+  "pred": 36.12,
+  "pred_delta_from_mean": -4.33,
+  "actual": 31.3,
+  "actual_delta_from_mean": -9.15,
+  "direction_hit": true,
+  "abs_err": 4.82,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 6,
+   "years": [
+    2020,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Detroit",
+  "t": 2023,
+  "lag": 2,
+  "year_scored": 2025,
+  "pred": 36.12,
+  "pred_delta_from_mean": -4.33,
+  "actual": 25.4,
+  "actual_delta_from_mean": -15.05,
+  "direction_hit": true,
+  "abs_err": 10.72,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 6,
+   "years": [
+    2020,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Detroit",
+  "t": 2024,
+  "lag": 1,
+  "year_scored": 2025,
+  "pred": 34.34,
+  "pred_delta_from_mean": -6.11,
+  "actual": 25.4,
+  "actual_delta_from_mean": -15.05,
+  "direction_hit": true,
+  "abs_err": 8.94,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 6,
+   "years": [
+    2020,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Memphis",
+  "t": 2021,
+  "lag": 1,
+  "year_scored": 2022,
+  "pred": 52.62,
+  "pred_delta_from_mean": 6.82,
+  "actual": 48.0,
+  "actual_delta_from_mean": 2.2,
+  "direction_hit": true,
+  "abs_err": 4.62,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Memphis",
+  "t": 2021,
+  "lag": 2,
+  "year_scored": 2023,
+  "pred": 52.62,
+  "pred_delta_from_mean": 6.82,
+  "actual": 55.9,
+  "actual_delta_from_mean": 10.1,
+  "direction_hit": true,
+  "abs_err": 3.28,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Memphis",
+  "t": 2021,
+  "lag": 3,
+  "year_scored": 2024,
+  "pred": 52.62,
+  "pred_delta_from_mean": 6.82,
+  "actual": 40.4,
+  "actual_delta_from_mean": -5.4,
+  "direction_hit": false,
+  "abs_err": 12.22,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Memphis",
+  "t": 2021,
+  "lag": 4,
+  "year_scored": 2025,
+  "pred": 52.62,
+  "pred_delta_from_mean": 6.82,
+  "actual": 30.2,
+  "actual_delta_from_mean": -15.6,
+  "direction_hit": false,
+  "abs_err": 22.42,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Memphis",
+  "t": 2022,
+  "lag": 1,
+  "year_scored": 2023,
+  "pred": 48.59,
+  "pred_delta_from_mean": 2.79,
+  "actual": 55.9,
+  "actual_delta_from_mean": 10.1,
+  "direction_hit": true,
+  "abs_err": 7.31,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Memphis",
+  "t": 2022,
+  "lag": 2,
+  "year_scored": 2024,
+  "pred": 48.59,
+  "pred_delta_from_mean": 2.79,
+  "actual": 40.4,
+  "actual_delta_from_mean": -5.4,
+  "direction_hit": false,
+  "abs_err": 8.19,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Memphis",
+  "t": 2022,
+  "lag": 3,
+  "year_scored": 2025,
+  "pred": 48.59,
+  "pred_delta_from_mean": 2.79,
+  "actual": 30.2,
+  "actual_delta_from_mean": -15.6,
+  "direction_hit": false,
+  "abs_err": 18.39,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Memphis",
+  "t": 2023,
+  "lag": 1,
+  "year_scored": 2024,
+  "pred": 44.61,
+  "pred_delta_from_mean": -1.19,
+  "actual": 40.4,
+  "actual_delta_from_mean": -5.4,
+  "direction_hit": true,
+  "abs_err": 4.21,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Memphis",
+  "t": 2023,
+  "lag": 2,
+  "year_scored": 2025,
+  "pred": 44.61,
+  "pred_delta_from_mean": -1.19,
+  "actual": 30.2,
+  "actual_delta_from_mean": -15.6,
+  "direction_hit": true,
+  "abs_err": 14.41,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "Memphis",
+  "t": 2024,
+  "lag": 1,
+  "year_scored": 2025,
+  "pred": 39.9,
+  "pred_delta_from_mean": -5.9,
+  "actual": 30.2,
+  "actual_delta_from_mean": -15.6,
+  "direction_hit": true,
+  "abs_err": 9.7,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2021,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "NYC",
+  "t": 2020,
+  "lag": 1,
+  "year_scored": 2021,
+  "pred": 6.28,
+  "pred_delta_from_mean": 0.71,
+  "actual": 5.8,
+  "actual_delta_from_mean": 0.23,
+  "direction_hit": true,
+  "abs_err": 0.48,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 6,
+   "years": [
+    2001,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "NYC",
+  "t": 2020,
+  "lag": 2,
+  "year_scored": 2022,
+  "pred": 6.28,
+  "pred_delta_from_mean": 0.71,
+  "actual": 5.2,
+  "actual_delta_from_mean": -0.37,
+  "direction_hit": false,
+  "abs_err": 1.08,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 6,
+   "years": [
+    2001,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "NYC",
+  "t": 2020,
+  "lag": 3,
+  "year_scored": 2023,
+  "pred": 6.28,
+  "pred_delta_from_mean": 0.71,
+  "actual": 4.8,
+  "actual_delta_from_mean": -0.77,
+  "direction_hit": false,
+  "abs_err": 1.48,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 6,
+   "years": [
+    2001,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "NYC",
+  "t": 2020,
+  "lag": 4,
+  "year_scored": 2024,
+  "pred": 6.28,
+  "pred_delta_from_mean": 0.71,
+  "actual": 4.2,
+  "actual_delta_from_mean": -1.37,
+  "direction_hit": false,
+  "abs_err": 2.08,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 6,
+   "years": [
+    2001,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "NYC",
+  "t": 2020,
+  "lag": 5,
+  "year_scored": 2025,
+  "pred": 6.28,
+  "pred_delta_from_mean": 0.71,
+  "actual": 3.53,
+  "actual_delta_from_mean": -2.04,
+  "direction_hit": false,
+  "abs_err": 2.75,
+  "outcome_src": "NYPD count / decennial census pop",
+  "city_frame": {
+   "n": 6,
+   "years": [
+    2001,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "NYC",
+  "t": 2021,
+  "lag": 1,
+  "year_scored": 2022,
+  "pred": 6.07,
+  "pred_delta_from_mean": 0.5,
+  "actual": 5.2,
+  "actual_delta_from_mean": -0.37,
+  "direction_hit": false,
+  "abs_err": 0.87,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 6,
+   "years": [
+    2001,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "NYC",
+  "t": 2021,
+  "lag": 2,
+  "year_scored": 2023,
+  "pred": 6.07,
+  "pred_delta_from_mean": 0.5,
+  "actual": 4.8,
+  "actual_delta_from_mean": -0.77,
+  "direction_hit": false,
+  "abs_err": 1.27,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 6,
+   "years": [
+    2001,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "NYC",
+  "t": 2021,
+  "lag": 3,
+  "year_scored": 2024,
+  "pred": 6.07,
+  "pred_delta_from_mean": 0.5,
+  "actual": 4.2,
+  "actual_delta_from_mean": -1.37,
+  "direction_hit": false,
+  "abs_err": 1.87,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 6,
+   "years": [
+    2001,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "NYC",
+  "t": 2021,
+  "lag": 4,
+  "year_scored": 2025,
+  "pred": 6.07,
+  "pred_delta_from_mean": 0.5,
+  "actual": 3.53,
+  "actual_delta_from_mean": -2.04,
+  "direction_hit": false,
+  "abs_err": 2.54,
+  "outcome_src": "NYPD count / decennial census pop",
+  "city_frame": {
+   "n": 6,
+   "years": [
+    2001,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "NYC",
+  "t": 2022,
+  "lag": 1,
+  "year_scored": 2023,
+  "pred": 5.12,
+  "pred_delta_from_mean": -0.45,
+  "actual": 4.8,
+  "actual_delta_from_mean": -0.77,
+  "direction_hit": true,
+  "abs_err": 0.32,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 6,
+   "years": [
+    2001,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "NYC",
+  "t": 2022,
+  "lag": 2,
+  "year_scored": 2024,
+  "pred": 5.12,
+  "pred_delta_from_mean": -0.45,
+  "actual": 4.2,
+  "actual_delta_from_mean": -1.37,
+  "direction_hit": true,
+  "abs_err": 0.92,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 6,
+   "years": [
+    2001,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "NYC",
+  "t": 2022,
+  "lag": 3,
+  "year_scored": 2025,
+  "pred": 5.12,
+  "pred_delta_from_mean": -0.45,
+  "actual": 3.53,
+  "actual_delta_from_mean": -2.04,
+  "direction_hit": true,
+  "abs_err": 1.59,
+  "outcome_src": "NYPD count / decennial census pop",
+  "city_frame": {
+   "n": 6,
+   "years": [
+    2001,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "NYC",
+  "t": 2023,
+  "lag": 1,
+  "year_scored": 2024,
+  "pred": 4.91,
+  "pred_delta_from_mean": -0.65,
+  "actual": 4.2,
+  "actual_delta_from_mean": -1.37,
+  "direction_hit": true,
+  "abs_err": 0.71,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 6,
+   "years": [
+    2001,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "NYC",
+  "t": 2023,
+  "lag": 2,
+  "year_scored": 2025,
+  "pred": 4.91,
+  "pred_delta_from_mean": -0.65,
+  "actual": 3.53,
+  "actual_delta_from_mean": -2.04,
+  "direction_hit": true,
+  "abs_err": 1.38,
+  "outcome_src": "NYPD count / decennial census pop",
+  "city_frame": {
+   "n": 6,
+   "years": [
+    2001,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "NYC",
+  "t": 2024,
+  "lag": 1,
+  "year_scored": 2025,
+  "pred": 4.84,
+  "pred_delta_from_mean": -0.73,
+  "actual": 3.53,
+  "actual_delta_from_mean": -2.04,
+  "direction_hit": true,
+  "abs_err": 1.31,
+  "outcome_src": "NYPD count / decennial census pop",
+  "city_frame": {
+   "n": 6,
+   "years": [
+    2001,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "St. Louis",
+  "t": 2019,
+  "lag": 1,
+  "year_scored": 2020,
+  "pred": 65.55,
+  "pred_delta_from_mean": 1.07,
+  "actual": 87.2,
+  "actual_delta_from_mean": 22.71,
+  "direction_hit": true,
+  "abs_err": 21.65,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 7,
+   "years": [
+    2019,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "St. Louis",
+  "t": 2019,
+  "lag": 2,
+  "year_scored": 2021,
+  "pred": 65.55,
+  "pred_delta_from_mean": 1.07,
+  "actual": 69.2,
+  "actual_delta_from_mean": 4.71,
+  "direction_hit": true,
+  "abs_err": 3.65,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 7,
+   "years": [
+    2019,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "St. Louis",
+  "t": 2019,
+  "lag": 3,
+  "year_scored": 2022,
+  "pred": 65.55,
+  "pred_delta_from_mean": 1.07,
+  "actual": 70.4,
+  "actual_delta_from_mean": 5.91,
+  "direction_hit": true,
+  "abs_err": 4.85,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 7,
+   "years": [
+    2019,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "St. Louis",
+  "t": 2019,
+  "lag": 4,
+  "year_scored": 2023,
+  "pred": 65.55,
+  "pred_delta_from_mean": 1.07,
+  "actual": 55.8,
+  "actual_delta_from_mean": -8.69,
+  "direction_hit": false,
+  "abs_err": 9.75,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 7,
+   "years": [
+    2019,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "St. Louis",
+  "t": 2019,
+  "lag": 5,
+  "year_scored": 2024,
+  "pred": 65.55,
+  "pred_delta_from_mean": 1.07,
+  "actual": 53.6,
+  "actual_delta_from_mean": -10.89,
+  "direction_hit": false,
+  "abs_err": 11.95,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 7,
+   "years": [
+    2019,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "St. Louis",
+  "t": 2020,
+  "lag": 1,
+  "year_scored": 2021,
+  "pred": 76.28,
+  "pred_delta_from_mean": 11.8,
+  "actual": 69.2,
+  "actual_delta_from_mean": 4.71,
+  "direction_hit": true,
+  "abs_err": 7.08,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 7,
+   "years": [
+    2019,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "St. Louis",
+  "t": 2020,
+  "lag": 2,
+  "year_scored": 2022,
+  "pred": 76.28,
+  "pred_delta_from_mean": 11.8,
+  "actual": 70.4,
+  "actual_delta_from_mean": 5.91,
+  "direction_hit": true,
+  "abs_err": 5.88,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 7,
+   "years": [
+    2019,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "St. Louis",
+  "t": 2020,
+  "lag": 3,
+  "year_scored": 2023,
+  "pred": 76.28,
+  "pred_delta_from_mean": 11.8,
+  "actual": 55.8,
+  "actual_delta_from_mean": -8.69,
+  "direction_hit": false,
+  "abs_err": 20.48,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 7,
+   "years": [
+    2019,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "St. Louis",
+  "t": 2020,
+  "lag": 4,
+  "year_scored": 2024,
+  "pred": 76.28,
+  "pred_delta_from_mean": 11.8,
+  "actual": 53.6,
+  "actual_delta_from_mean": -10.89,
+  "direction_hit": false,
+  "abs_err": 22.68,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 7,
+   "years": [
+    2019,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "St. Louis",
+  "t": 2020,
+  "lag": 5,
+  "year_scored": 2025,
+  "pred": 76.28,
+  "pred_delta_from_mean": 11.8,
+  "actual": 50.7,
+  "actual_delta_from_mean": -13.79,
+  "direction_hit": false,
+  "abs_err": 25.58,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 7,
+   "years": [
+    2019,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "St. Louis",
+  "t": 2021,
+  "lag": 1,
+  "year_scored": 2022,
+  "pred": 69.99,
+  "pred_delta_from_mean": 5.5,
+  "actual": 70.4,
+  "actual_delta_from_mean": 5.91,
+  "direction_hit": true,
+  "abs_err": 0.41,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 7,
+   "years": [
+    2019,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "St. Louis",
+  "t": 2021,
+  "lag": 2,
+  "year_scored": 2023,
+  "pred": 69.99,
+  "pred_delta_from_mean": 5.5,
+  "actual": 55.8,
+  "actual_delta_from_mean": -8.69,
+  "direction_hit": false,
+  "abs_err": 14.19,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 7,
+   "years": [
+    2019,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "St. Louis",
+  "t": 2021,
+  "lag": 3,
+  "year_scored": 2024,
+  "pred": 69.99,
+  "pred_delta_from_mean": 5.5,
+  "actual": 53.6,
+  "actual_delta_from_mean": -10.89,
+  "direction_hit": false,
+  "abs_err": 16.39,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 7,
+   "years": [
+    2019,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "St. Louis",
+  "t": 2021,
+  "lag": 4,
+  "year_scored": 2025,
+  "pred": 69.99,
+  "pred_delta_from_mean": 5.5,
+  "actual": 50.7,
+  "actual_delta_from_mean": -13.79,
+  "direction_hit": false,
+  "abs_err": 19.29,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 7,
+   "years": [
+    2019,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "St. Louis",
+  "t": 2022,
+  "lag": 1,
+  "year_scored": 2023,
+  "pred": 59.03,
+  "pred_delta_from_mean": -5.45,
+  "actual": 55.8,
+  "actual_delta_from_mean": -8.69,
+  "direction_hit": true,
+  "abs_err": 3.23,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 7,
+   "years": [
+    2019,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "St. Louis",
+  "t": 2022,
+  "lag": 2,
+  "year_scored": 2024,
+  "pred": 59.03,
+  "pred_delta_from_mean": -5.45,
+  "actual": 53.6,
+  "actual_delta_from_mean": -10.89,
+  "direction_hit": true,
+  "abs_err": 5.43,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 7,
+   "years": [
+    2019,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "St. Louis",
+  "t": 2022,
+  "lag": 3,
+  "year_scored": 2025,
+  "pred": 59.03,
+  "pred_delta_from_mean": -5.45,
+  "actual": 50.7,
+  "actual_delta_from_mean": -13.79,
+  "direction_hit": true,
+  "abs_err": 8.33,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 7,
+   "years": [
+    2019,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "St. Louis",
+  "t": 2023,
+  "lag": 1,
+  "year_scored": 2024,
+  "pred": 61.98,
+  "pred_delta_from_mean": -2.5,
+  "actual": 53.6,
+  "actual_delta_from_mean": -10.89,
+  "direction_hit": true,
+  "abs_err": 8.38,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 7,
+   "years": [
+    2019,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "St. Louis",
+  "t": 2023,
+  "lag": 2,
+  "year_scored": 2025,
+  "pred": 61.98,
+  "pred_delta_from_mean": -2.5,
+  "actual": 50.7,
+  "actual_delta_from_mean": -13.79,
+  "direction_hit": true,
+  "abs_err": 11.28,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 7,
+   "years": [
+    2019,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-6_care_plus_unemp",
+  "city": "St. Louis",
+  "t": 2024,
+  "lag": 1,
+  "year_scored": 2025,
+  "pred": 58.4,
+  "pred_delta_from_mean": -6.08,
+  "actual": 50.7,
+  "actual_delta_from_mean": -13.79,
+  "direction_hit": true,
+  "abs_err": 7.7,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 7,
+   "years": [
+    2019,
+    2025
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Cincinnati",
+  "t": 2017,
+  "lag": 1,
+  "year_scored": 2018,
+  "pred": 24.25,
+  "pred_delta_from_mean": -0.56,
+  "actual": 20.2,
+  "actual_delta_from_mean": -4.61,
+  "direction_hit": true,
+  "abs_err": 4.05,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 8,
+   "years": [
+    2017,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Cincinnati",
+  "t": 2017,
+  "lag": 2,
+  "year_scored": 2019,
+  "pred": 24.25,
+  "pred_delta_from_mean": -0.56,
+  "actual": 22.0,
+  "actual_delta_from_mean": -2.81,
+  "direction_hit": true,
+  "abs_err": 2.25,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 8,
+   "years": [
+    2017,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Cincinnati",
+  "t": 2017,
+  "lag": 3,
+  "year_scored": 2020,
+  "pred": 24.25,
+  "pred_delta_from_mean": -0.56,
+  "actual": 31.0,
+  "actual_delta_from_mean": 6.19,
+  "direction_hit": false,
+  "abs_err": 6.75,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 8,
+   "years": [
+    2017,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Cincinnati",
+  "t": 2017,
+  "lag": 4,
+  "year_scored": 2021,
+  "pred": 24.25,
+  "pred_delta_from_mean": -0.56,
+  "actual": 30.1,
+  "actual_delta_from_mean": 5.29,
+  "direction_hit": false,
+  "abs_err": 5.85,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 8,
+   "years": [
+    2017,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Cincinnati",
+  "t": 2017,
+  "lag": 5,
+  "year_scored": 2022,
+  "pred": 24.25,
+  "pred_delta_from_mean": -0.56,
+  "actual": 24.8,
+  "actual_delta_from_mean": -0.01,
+  "direction_hit": true,
+  "abs_err": 0.55,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 8,
+   "years": [
+    2017,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Cincinnati",
+  "t": 2018,
+  "lag": 1,
+  "year_scored": 2019,
+  "pred": 24.8,
+  "pred_delta_from_mean": -0.01,
+  "actual": 22.0,
+  "actual_delta_from_mean": -2.81,
+  "direction_hit": true,
+  "abs_err": 2.8,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 8,
+   "years": [
+    2017,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Cincinnati",
+  "t": 2018,
+  "lag": 2,
+  "year_scored": 2020,
+  "pred": 24.8,
+  "pred_delta_from_mean": -0.01,
+  "actual": 31.0,
+  "actual_delta_from_mean": 6.19,
+  "direction_hit": false,
+  "abs_err": 6.2,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 8,
+   "years": [
+    2017,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Cincinnati",
+  "t": 2018,
+  "lag": 3,
+  "year_scored": 2021,
+  "pred": 24.8,
+  "pred_delta_from_mean": -0.01,
+  "actual": 30.1,
+  "actual_delta_from_mean": 5.29,
+  "direction_hit": false,
+  "abs_err": 5.3,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 8,
+   "years": [
+    2017,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Cincinnati",
+  "t": 2018,
+  "lag": 4,
+  "year_scored": 2022,
+  "pred": 24.8,
+  "pred_delta_from_mean": -0.01,
+  "actual": 24.8,
+  "actual_delta_from_mean": -0.01,
+  "direction_hit": true,
+  "abs_err": 0.0,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 8,
+   "years": [
+    2017,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Cincinnati",
+  "t": 2018,
+  "lag": 5,
+  "year_scored": 2023,
+  "pred": 24.8,
+  "pred_delta_from_mean": -0.01,
+  "actual": 23.0,
+  "actual_delta_from_mean": -1.81,
+  "direction_hit": true,
+  "abs_err": 1.8,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 8,
+   "years": [
+    2017,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Cincinnati",
+  "t": 2019,
+  "lag": 1,
+  "year_scored": 2020,
+  "pred": 25.32,
+  "pred_delta_from_mean": 0.51,
+  "actual": 31.0,
+  "actual_delta_from_mean": 6.19,
+  "direction_hit": true,
+  "abs_err": 5.68,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 8,
+   "years": [
+    2017,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Cincinnati",
+  "t": 2019,
+  "lag": 2,
+  "year_scored": 2021,
+  "pred": 25.32,
+  "pred_delta_from_mean": 0.51,
+  "actual": 30.1,
+  "actual_delta_from_mean": 5.29,
+  "direction_hit": true,
+  "abs_err": 4.78,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 8,
+   "years": [
+    2017,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Cincinnati",
+  "t": 2019,
+  "lag": 3,
+  "year_scored": 2022,
+  "pred": 25.32,
+  "pred_delta_from_mean": 0.51,
+  "actual": 24.8,
+  "actual_delta_from_mean": -0.01,
+  "direction_hit": false,
+  "abs_err": 0.52,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 8,
+   "years": [
+    2017,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Cincinnati",
+  "t": 2019,
+  "lag": 4,
+  "year_scored": 2023,
+  "pred": 25.32,
+  "pred_delta_from_mean": 0.51,
+  "actual": 23.0,
+  "actual_delta_from_mean": -1.81,
+  "direction_hit": false,
+  "abs_err": 2.32,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 8,
+   "years": [
+    2017,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Cincinnati",
+  "t": 2019,
+  "lag": 5,
+  "year_scored": 2024,
+  "pred": 25.32,
+  "pred_delta_from_mean": 0.51,
+  "actual": 23.5,
+  "actual_delta_from_mean": -1.31,
+  "direction_hit": false,
+  "abs_err": 1.82,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 8,
+   "years": [
+    2017,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Cincinnati",
+  "t": 2020,
+  "lag": 1,
+  "year_scored": 2021,
+  "pred": 24.88,
+  "pred_delta_from_mean": 0.06,
+  "actual": 30.1,
+  "actual_delta_from_mean": 5.29,
+  "direction_hit": true,
+  "abs_err": 5.22,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 8,
+   "years": [
+    2017,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Cincinnati",
+  "t": 2020,
+  "lag": 2,
+  "year_scored": 2022,
+  "pred": 24.88,
+  "pred_delta_from_mean": 0.06,
+  "actual": 24.8,
+  "actual_delta_from_mean": -0.01,
+  "direction_hit": false,
+  "abs_err": 0.08,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 8,
+   "years": [
+    2017,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Cincinnati",
+  "t": 2020,
+  "lag": 3,
+  "year_scored": 2023,
+  "pred": 24.88,
+  "pred_delta_from_mean": 0.06,
+  "actual": 23.0,
+  "actual_delta_from_mean": -1.81,
+  "direction_hit": false,
+  "abs_err": 1.88,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 8,
+   "years": [
+    2017,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Cincinnati",
+  "t": 2020,
+  "lag": 4,
+  "year_scored": 2024,
+  "pred": 24.88,
+  "pred_delta_from_mean": 0.06,
+  "actual": 23.5,
+  "actual_delta_from_mean": -1.31,
+  "direction_hit": false,
+  "abs_err": 1.38,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 8,
+   "years": [
+    2017,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Cincinnati",
+  "t": 2020,
+  "lag": 5,
+  "year_scored": 2025,
+  "pred": 24.88,
+  "pred_delta_from_mean": 0.06,
+  "actual": 21.9,
+  "actual_delta_from_mean": -2.91,
+  "direction_hit": false,
+  "abs_err": 2.98,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 8,
+   "years": [
+    2017,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Cincinnati",
+  "t": 2021,
+  "lag": 1,
+  "year_scored": 2022,
+  "pred": 25.4,
+  "pred_delta_from_mean": 0.58,
+  "actual": 24.8,
+  "actual_delta_from_mean": -0.01,
+  "direction_hit": false,
+  "abs_err": 0.6,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 8,
+   "years": [
+    2017,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Cincinnati",
+  "t": 2021,
+  "lag": 2,
+  "year_scored": 2023,
+  "pred": 25.4,
+  "pred_delta_from_mean": 0.58,
+  "actual": 23.0,
+  "actual_delta_from_mean": -1.81,
+  "direction_hit": false,
+  "abs_err": 2.4,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 8,
+   "years": [
+    2017,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Cincinnati",
+  "t": 2021,
+  "lag": 3,
+  "year_scored": 2024,
+  "pred": 25.4,
+  "pred_delta_from_mean": 0.58,
+  "actual": 23.5,
+  "actual_delta_from_mean": -1.31,
+  "direction_hit": false,
+  "abs_err": 1.9,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 8,
+   "years": [
+    2017,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Cincinnati",
+  "t": 2021,
+  "lag": 4,
+  "year_scored": 2025,
+  "pred": 25.4,
+  "pred_delta_from_mean": 0.58,
+  "actual": 21.9,
+  "actual_delta_from_mean": -2.91,
+  "direction_hit": false,
+  "abs_err": 3.5,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 8,
+   "years": [
+    2017,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Cincinnati",
+  "t": 2022,
+  "lag": 1,
+  "year_scored": 2023,
+  "pred": 25.32,
+  "pred_delta_from_mean": 0.51,
+  "actual": 23.0,
+  "actual_delta_from_mean": -1.81,
+  "direction_hit": false,
+  "abs_err": 2.32,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 8,
+   "years": [
+    2017,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Cincinnati",
+  "t": 2022,
+  "lag": 2,
+  "year_scored": 2024,
+  "pred": 25.32,
+  "pred_delta_from_mean": 0.51,
+  "actual": 23.5,
+  "actual_delta_from_mean": -1.31,
+  "direction_hit": false,
+  "abs_err": 1.82,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 8,
+   "years": [
+    2017,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Cincinnati",
+  "t": 2022,
+  "lag": 3,
+  "year_scored": 2025,
+  "pred": 25.32,
+  "pred_delta_from_mean": 0.51,
+  "actual": 21.9,
+  "actual_delta_from_mean": -2.91,
+  "direction_hit": false,
+  "abs_err": 3.42,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 8,
+   "years": [
+    2017,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Cincinnati",
+  "t": 2023,
+  "lag": 1,
+  "year_scored": 2024,
+  "pred": 24.46,
+  "pred_delta_from_mean": -0.36,
+  "actual": 23.5,
+  "actual_delta_from_mean": -1.31,
+  "direction_hit": true,
+  "abs_err": 0.96,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 8,
+   "years": [
+    2017,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Cincinnati",
+  "t": 2023,
+  "lag": 2,
+  "year_scored": 2025,
+  "pred": 24.46,
+  "pred_delta_from_mean": -0.36,
+  "actual": 21.9,
+  "actual_delta_from_mean": -2.91,
+  "direction_hit": true,
+  "abs_err": 2.56,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 8,
+   "years": [
+    2017,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Cincinnati",
+  "t": 2024,
+  "lag": 1,
+  "year_scored": 2025,
+  "pred": 24.07,
+  "pred_delta_from_mean": -0.74,
+  "actual": 21.9,
+  "actual_delta_from_mean": -2.91,
+  "direction_hit": true,
+  "abs_err": 2.17,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 8,
+   "years": [
+    2017,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Detroit",
+  "t": 2022,
+  "lag": 1,
+  "year_scored": 2023,
+  "pred": 39.97,
+  "pred_delta_from_mean": 0.17,
+  "actual": 39.2,
+  "actual_delta_from_mean": -0.6,
+  "direction_hit": false,
+  "abs_err": 0.77,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 2,
+   "years": [
+    2022,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Detroit",
+  "t": 2022,
+  "lag": 2,
+  "year_scored": 2024,
+  "pred": 39.97,
+  "pred_delta_from_mean": 0.17,
+  "actual": 31.3,
+  "actual_delta_from_mean": -8.5,
+  "direction_hit": false,
+  "abs_err": 8.67,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 2,
+   "years": [
+    2022,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Detroit",
+  "t": 2022,
+  "lag": 3,
+  "year_scored": 2025,
+  "pred": 39.97,
+  "pred_delta_from_mean": 0.17,
+  "actual": 25.4,
+  "actual_delta_from_mean": -14.4,
+  "direction_hit": false,
+  "abs_err": 14.57,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 2,
+   "years": [
+    2022,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Detroit",
+  "t": 2024,
+  "lag": 1,
+  "year_scored": 2025,
+  "pred": 39.63,
+  "pred_delta_from_mean": -0.17,
+  "actual": 25.4,
+  "actual_delta_from_mean": -14.4,
+  "direction_hit": true,
+  "abs_err": 14.23,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 2,
+   "years": [
+    2022,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Memphis",
+  "t": 2021,
+  "lag": 1,
+  "year_scored": 2022,
+  "pred": 47.5,
+  "pred_delta_from_mean": -2.2,
+  "actual": 48.0,
+  "actual_delta_from_mean": -1.7,
+  "direction_hit": true,
+  "abs_err": 0.5,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Memphis",
+  "t": 2021,
+  "lag": 2,
+  "year_scored": 2023,
+  "pred": 47.5,
+  "pred_delta_from_mean": -2.2,
+  "actual": 55.9,
+  "actual_delta_from_mean": 6.2,
+  "direction_hit": false,
+  "abs_err": 8.4,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Memphis",
+  "t": 2021,
+  "lag": 3,
+  "year_scored": 2024,
+  "pred": 47.5,
+  "pred_delta_from_mean": -2.2,
+  "actual": 40.4,
+  "actual_delta_from_mean": -9.3,
+  "direction_hit": true,
+  "abs_err": 7.1,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Memphis",
+  "t": 2021,
+  "lag": 4,
+  "year_scored": 2025,
+  "pred": 47.5,
+  "pred_delta_from_mean": -2.2,
+  "actual": 30.2,
+  "actual_delta_from_mean": -19.5,
+  "direction_hit": true,
+  "abs_err": 17.3,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Memphis",
+  "t": 2022,
+  "lag": 1,
+  "year_scored": 2023,
+  "pred": 51.42,
+  "pred_delta_from_mean": 1.72,
+  "actual": 55.9,
+  "actual_delta_from_mean": 6.2,
+  "direction_hit": true,
+  "abs_err": 4.48,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Memphis",
+  "t": 2022,
+  "lag": 2,
+  "year_scored": 2024,
+  "pred": 51.42,
+  "pred_delta_from_mean": 1.72,
+  "actual": 40.4,
+  "actual_delta_from_mean": -9.3,
+  "direction_hit": false,
+  "abs_err": 11.02,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Memphis",
+  "t": 2022,
+  "lag": 3,
+  "year_scored": 2025,
+  "pred": 51.42,
+  "pred_delta_from_mean": 1.72,
+  "actual": 30.2,
+  "actual_delta_from_mean": -19.5,
+  "direction_hit": false,
+  "abs_err": 21.22,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Memphis",
+  "t": 2023,
+  "lag": 1,
+  "year_scored": 2024,
+  "pred": 50.59,
+  "pred_delta_from_mean": 0.89,
+  "actual": 40.4,
+  "actual_delta_from_mean": -9.3,
+  "direction_hit": false,
+  "abs_err": 10.19,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Memphis",
+  "t": 2023,
+  "lag": 2,
+  "year_scored": 2025,
+  "pred": 50.59,
+  "pred_delta_from_mean": 0.89,
+  "actual": 30.2,
+  "actual_delta_from_mean": -19.5,
+  "direction_hit": false,
+  "abs_err": 20.39,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "Memphis",
+  "t": 2024,
+  "lag": 1,
+  "year_scored": 2025,
+  "pred": 49.29,
+  "pred_delta_from_mean": -0.41,
+  "actual": 30.2,
+  "actual_delta_from_mean": -19.5,
+  "direction_hit": true,
+  "abs_err": 19.09,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 4,
+   "years": [
+    2021,
+    2024
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "St. Louis",
+  "t": 2019,
+  "lag": 1,
+  "year_scored": 2020,
+  "pred": 69.6,
+  "pred_delta_from_mean": 0.18,
+  "actual": 87.2,
+  "actual_delta_from_mean": 17.78,
+  "direction_hit": true,
+  "abs_err": 17.6,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2019,
+    2023
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "St. Louis",
+  "t": 2019,
+  "lag": 2,
+  "year_scored": 2021,
+  "pred": 69.6,
+  "pred_delta_from_mean": 0.18,
+  "actual": 69.2,
+  "actual_delta_from_mean": -0.22,
+  "direction_hit": false,
+  "abs_err": 0.4,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2019,
+    2023
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "St. Louis",
+  "t": 2019,
+  "lag": 3,
+  "year_scored": 2022,
+  "pred": 69.6,
+  "pred_delta_from_mean": 0.18,
+  "actual": 70.4,
+  "actual_delta_from_mean": 0.98,
+  "direction_hit": true,
+  "abs_err": 0.8,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2019,
+    2023
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "St. Louis",
+  "t": 2019,
+  "lag": 4,
+  "year_scored": 2023,
+  "pred": 69.6,
+  "pred_delta_from_mean": 0.18,
+  "actual": 55.8,
+  "actual_delta_from_mean": -13.62,
+  "direction_hit": false,
+  "abs_err": 13.8,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2019,
+    2023
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "St. Louis",
+  "t": 2019,
+  "lag": 5,
+  "year_scored": 2024,
+  "pred": 69.6,
+  "pred_delta_from_mean": 0.18,
+  "actual": 53.6,
+  "actual_delta_from_mean": -15.82,
+  "direction_hit": false,
+  "abs_err": 16.0,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2019,
+    2023
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "St. Louis",
+  "t": 2020,
+  "lag": 1,
+  "year_scored": 2021,
+  "pred": 78.77,
+  "pred_delta_from_mean": 9.35,
+  "actual": 69.2,
+  "actual_delta_from_mean": -0.22,
+  "direction_hit": false,
+  "abs_err": 9.57,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2019,
+    2023
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "St. Louis",
+  "t": 2020,
+  "lag": 2,
+  "year_scored": 2022,
+  "pred": 78.77,
+  "pred_delta_from_mean": 9.35,
+  "actual": 70.4,
+  "actual_delta_from_mean": 0.98,
+  "direction_hit": true,
+  "abs_err": 8.37,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2019,
+    2023
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "St. Louis",
+  "t": 2020,
+  "lag": 3,
+  "year_scored": 2023,
+  "pred": 78.77,
+  "pred_delta_from_mean": 9.35,
+  "actual": 55.8,
+  "actual_delta_from_mean": -13.62,
+  "direction_hit": false,
+  "abs_err": 22.97,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2019,
+    2023
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "St. Louis",
+  "t": 2020,
+  "lag": 4,
+  "year_scored": 2024,
+  "pred": 78.77,
+  "pred_delta_from_mean": 9.35,
+  "actual": 53.6,
+  "actual_delta_from_mean": -15.82,
+  "direction_hit": false,
+  "abs_err": 25.17,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2019,
+    2023
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "St. Louis",
+  "t": 2020,
+  "lag": 5,
+  "year_scored": 2025,
+  "pred": 78.77,
+  "pred_delta_from_mean": 9.35,
+  "actual": 50.7,
+  "actual_delta_from_mean": -18.72,
+  "direction_hit": false,
+  "abs_err": 28.07,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2019,
+    2023
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "St. Louis",
+  "t": 2021,
+  "lag": 1,
+  "year_scored": 2022,
+  "pred": 78.0,
+  "pred_delta_from_mean": 8.58,
+  "actual": 70.4,
+  "actual_delta_from_mean": 0.98,
+  "direction_hit": true,
+  "abs_err": 7.6,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2019,
+    2023
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "St. Louis",
+  "t": 2021,
+  "lag": 2,
+  "year_scored": 2023,
+  "pred": 78.0,
+  "pred_delta_from_mean": 8.58,
+  "actual": 55.8,
+  "actual_delta_from_mean": -13.62,
+  "direction_hit": false,
+  "abs_err": 22.2,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2019,
+    2023
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "St. Louis",
+  "t": 2021,
+  "lag": 3,
+  "year_scored": 2024,
+  "pred": 78.0,
+  "pred_delta_from_mean": 8.58,
+  "actual": 53.6,
+  "actual_delta_from_mean": -15.82,
+  "direction_hit": false,
+  "abs_err": 24.4,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2019,
+    2023
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "St. Louis",
+  "t": 2021,
+  "lag": 4,
+  "year_scored": 2025,
+  "pred": 78.0,
+  "pred_delta_from_mean": 8.58,
+  "actual": 50.7,
+  "actual_delta_from_mean": -18.72,
+  "direction_hit": false,
+  "abs_err": 27.3,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2019,
+    2023
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "St. Louis",
+  "t": 2022,
+  "lag": 1,
+  "year_scored": 2023,
+  "pred": 58.26,
+  "pred_delta_from_mean": -11.16,
+  "actual": 55.8,
+  "actual_delta_from_mean": -13.62,
+  "direction_hit": true,
+  "abs_err": 2.46,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2019,
+    2023
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "St. Louis",
+  "t": 2022,
+  "lag": 2,
+  "year_scored": 2024,
+  "pred": 58.26,
+  "pred_delta_from_mean": -11.16,
+  "actual": 53.6,
+  "actual_delta_from_mean": -15.82,
+  "direction_hit": true,
+  "abs_err": 4.66,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2019,
+    2023
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "St. Louis",
+  "t": 2022,
+  "lag": 3,
+  "year_scored": 2025,
+  "pred": 58.26,
+  "pred_delta_from_mean": -11.16,
+  "actual": 50.7,
+  "actual_delta_from_mean": -18.72,
+  "direction_hit": true,
+  "abs_err": 7.56,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2019,
+    2023
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "St. Louis",
+  "t": 2023,
+  "lag": 1,
+  "year_scored": 2024,
+  "pred": 62.46,
+  "pred_delta_from_mean": -6.96,
+  "actual": 53.6,
+  "actual_delta_from_mean": -15.82,
+  "direction_hit": true,
+  "abs_err": 8.86,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2019,
+    2023
+   ]
+  }
+ },
+ {
+  "model": "FE-2_care_cage_bookings",
+  "city": "St. Louis",
+  "t": 2023,
+  "lag": 2,
+  "year_scored": 2025,
+  "pred": 62.46,
+  "pred_delta_from_mean": -6.96,
+  "actual": 50.7,
+  "actual_delta_from_mean": -18.72,
+  "direction_hit": true,
+  "abs_err": 11.76,
+  "outcome_src": "panel murder_rate (the FE-frame convention)",
+  "city_frame": {
+   "n": 5,
+   "years": [
+    2019,
+    2023
+   ]
+  }
+ }
+]

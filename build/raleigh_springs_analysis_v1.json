@@ -1,0 +1,1382 @@
+{
+ "_meta": {
+  "id": "raleigh_springs_analysis_v1",
+  "name": "Raleigh Springs pre/post analysis pass (dated-treatment flagship)",
+  "built": "2026-11-24",
+  "inputs": [
+   "raleigh_springs_site_v2.json (TIBRS TOPS 13-yr citywide arcs x3 agencies; MPD bbox corridor 2020-26)",
+   "crime_series_full.json + years_bbox1p4km.json (corridor totals/property/violent/by-category; alt 1.4km bbox)",
+   "bookings_series_v1.jsonl (Memphis arrests proxy 2015-2024)",
+   "raleigh_springs_facilities_v1.json (confounder scan)"
+  ],
+  "treatment_dates": {
+   "mall_closed": "2016-11-18",
+   "mall_purchased": "2016-11",
+   "demolished": "2016-2017",
+   "components_opened": "spring 2020",
+   "library_opened": "2020-11-19 (ribbon cutting)",
+   "hcd_completed": "2020-11-18",
+   "treatment_window": "2016 purchase/demolition -> 2020-11 build-out"
+  },
+  "laws": [
+   "direction-class only, no causal claims",
+   "honest-null = routes-tried-no-capture, never a placeholder",
+   "no fabricated numbers; population/period honesty layer on every series"
+  ]
+ },
+ "1_pre_post_arc": {
+  "citywide_tibrs_13yr": {
+   "pre_years": [
+    "2010",
+    "2011",
+    "2012",
+    "2013",
+    "2014",
+    "2015"
+   ],
+   "post_years": [
+    "2020",
+    "2021",
+    "2022",
+    "2023",
+    "2024",
+    "2025",
+    "2026"
+   ],
+   "design_honesty": "no 2016-2019 rows banked for either series; the arc has a hard gap exactly where the treatment began \u2014 pre vs post compare 2010-15 against 2020-26 and say nothing about 2016-19",
+   "series": [
+    {
+     "year": "2010",
+     "period": "pre",
+     "murder": {
+      "cases": 89,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "sex_offenses_nc": {
+      "cases": 1035,
+      "clearance_pct": 36.81,
+      "cleared_count": null
+     },
+     "agg_assault": {
+      "cases": 6696,
+      "clearance_pct": 47.12,
+      "cleared_count": null
+     },
+     "robbery": {
+      "cases": 3269,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "burglary": {
+      "cases": 13131,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "motor_vehicle_theft": {
+      "cases": 3987,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "fraud": {
+      "cases": 2987,
+      "clearance_pct": 6.16,
+      "cleared_count": null
+     },
+     "dui_arrests": {
+      "cases": 1623,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "drug_narcotic_violations": {
+      "cases": 5859,
+      "clearance_pct": 97.1,
+      "cleared_count": null
+     },
+     "weapon_law_violations": {
+      "cases": 1426,
+      "clearance_pct": 95.58,
+      "cleared_count": null
+     },
+     "domestic_violence": {
+      "cases": 20715,
+      "clearance_pct": null,
+      "cleared_count": 6164
+     },
+     "hate_crime": {
+      "cases": 14,
+      "clearance_pct": null,
+      "cleared_count": 3
+     },
+     "violent_index3": 10054,
+     "index5_murder_agg_rob_burg_mvt": 27172
+    },
+    {
+     "year": "2011",
+     "period": "pre",
+     "murder": {
+      "cases": 118,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "sex_offenses_nc": {
+      "cases": 997,
+      "clearance_pct": 44.53,
+      "cleared_count": null
+     },
+     "agg_assault": {
+      "cases": 6777,
+      "clearance_pct": 45.27,
+      "cleared_count": null
+     },
+     "robbery": {
+      "cases": 3104,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "burglary": {
+      "cases": 12966,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "motor_vehicle_theft": {
+      "cases": 3471,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "fraud": {
+      "cases": 3195,
+      "clearance_pct": 9.11,
+      "cleared_count": null
+     },
+     "dui_arrests": {
+      "cases": 1537,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "drug_narcotic_violations": {
+      "cases": 5188,
+      "clearance_pct": 93.87,
+      "cleared_count": null
+     },
+     "weapon_law_violations": {
+      "cases": 1385,
+      "clearance_pct": 93.0,
+      "cleared_count": null
+     },
+     "domestic_violence": {
+      "cases": 20656,
+      "clearance_pct": null,
+      "cleared_count": 6645
+     },
+     "hate_crime": {
+      "cases": 26,
+      "clearance_pct": null,
+      "cleared_count": 5
+     },
+     "violent_index3": 9999,
+     "index5_murder_agg_rob_burg_mvt": 26436
+    },
+    {
+     "year": "2012",
+     "period": "pre",
+     "murder": {
+      "cases": 134,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "sex_offenses_nc": {
+      "cases": 1053,
+      "clearance_pct": 38.37,
+      "cleared_count": null
+     },
+     "agg_assault": {
+      "cases": 7504,
+      "clearance_pct": 36.47,
+      "cleared_count": null
+     },
+     "robbery": {
+      "cases": 3410,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "burglary": {
+      "cases": 12523,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "motor_vehicle_theft": {
+      "cases": 3012,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "fraud": {
+      "cases": 3741,
+      "clearance_pct": 8.93,
+      "cleared_count": null
+     },
+     "dui_arrests": {
+      "cases": 1349,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "drug_narcotic_violations": {
+      "cases": 5530,
+      "clearance_pct": 94.45,
+      "cleared_count": null
+     },
+     "weapon_law_violations": {
+      "cases": 1392,
+      "clearance_pct": 93.1,
+      "cleared_count": null
+     },
+     "domestic_violence": {
+      "cases": 19779,
+      "clearance_pct": null,
+      "cleared_count": 6256
+     },
+     "hate_crime": {
+      "cases": 40,
+      "clearance_pct": null,
+      "cleared_count": 14
+     },
+     "violent_index3": 11048,
+     "index5_murder_agg_rob_burg_mvt": 26583
+    },
+    {
+     "year": "2013",
+     "period": "pre",
+     "murder": {
+      "cases": 125,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "sex_offenses_nc": {
+      "cases": 898,
+      "clearance_pct": 42.98,
+      "cleared_count": null
+     },
+     "agg_assault": {
+      "cases": 7235,
+      "clearance_pct": 30.77,
+      "cleared_count": null
+     },
+     "robbery": {
+      "cases": 3162,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "burglary": {
+      "cases": 11880,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "motor_vehicle_theft": {
+      "cases": 2733,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "fraud": {
+      "cases": 3932,
+      "clearance_pct": 10.58,
+      "cleared_count": null
+     },
+     "dui_arrests": {
+      "cases": 1121,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "drug_narcotic_violations": {
+      "cases": 5257,
+      "clearance_pct": 93.49,
+      "cleared_count": null
+     },
+     "weapon_law_violations": {
+      "cases": 1389,
+      "clearance_pct": 92.44,
+      "cleared_count": null
+     },
+     "domestic_violence": {
+      "cases": 19274,
+      "clearance_pct": null,
+      "cleared_count": 6528
+     },
+     "hate_crime": {
+      "cases": 36,
+      "clearance_pct": null,
+      "cleared_count": 8
+     },
+     "violent_index3": 10522,
+     "index5_murder_agg_rob_burg_mvt": 25135
+    },
+    {
+     "year": "2014",
+     "period": "pre",
+     "murder": {
+      "cases": 136,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "sex_offenses_nc": {
+      "cases": 904,
+      "clearance_pct": 39.93,
+      "cleared_count": null
+     },
+     "agg_assault": {
+      "cases": 7596,
+      "clearance_pct": 28.61,
+      "cleared_count": null
+     },
+     "robbery": {
+      "cases": 3327,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "burglary": {
+      "cases": 11259,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "motor_vehicle_theft": {
+      "cases": 3027,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "fraud": {
+      "cases": 3677,
+      "clearance_pct": 8.05,
+      "cleared_count": null
+     },
+     "dui_arrests": {
+      "cases": 864,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "drug_narcotic_violations": {
+      "cases": 3714,
+      "clearance_pct": 92.43,
+      "cleared_count": null
+     },
+     "weapon_law_violations": {
+      "cases": 1186,
+      "clearance_pct": 92.5,
+      "cleared_count": null
+     },
+     "domestic_violence": {
+      "cases": 17447,
+      "clearance_pct": null,
+      "cleared_count": 5438
+     },
+     "hate_crime": {
+      "cases": 14,
+      "clearance_pct": null,
+      "cleared_count": 3
+     },
+     "violent_index3": 11059,
+     "index5_murder_agg_rob_burg_mvt": 25345
+    },
+    {
+     "year": "2015",
+     "period": "pre",
+     "murder": {
+      "cases": 137,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "sex_offenses_nc": {
+      "cases": 944,
+      "clearance_pct": 36.02,
+      "cleared_count": null
+     },
+     "agg_assault": {
+      "cases": 7774,
+      "clearance_pct": 28.81,
+      "cleared_count": null
+     },
+     "robbery": {
+      "cases": 3168,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "burglary": {
+      "cases": 10276,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "motor_vehicle_theft": {
+      "cases": 2786,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "fraud": {
+      "cases": 3162,
+      "clearance_pct": 7.18,
+      "cleared_count": null
+     },
+     "dui_arrests": {
+      "cases": 728,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "drug_narcotic_violations": {
+      "cases": 3118,
+      "clearance_pct": 91.76,
+      "cleared_count": null
+     },
+     "weapon_law_violations": {
+      "cases": 1010,
+      "clearance_pct": 91.88,
+      "cleared_count": null
+     },
+     "domestic_violence": {
+      "cases": 16874,
+      "clearance_pct": null,
+      "cleared_count": 4978
+     },
+     "hate_crime": {
+      "cases": 18,
+      "clearance_pct": null,
+      "cleared_count": 1
+     },
+     "violent_index3": 11079,
+     "index5_murder_agg_rob_burg_mvt": 24141
+    },
+    {
+     "year": "2020",
+     "period": "post",
+     "murder": {
+      "cases": 293,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "sex_offenses_nc": {
+      "cases": 744,
+      "clearance_pct": 22.04,
+      "cleared_count": null
+     },
+     "agg_assault": {
+      "cases": 12796,
+      "clearance_pct": 25.77,
+      "cleared_count": null
+     },
+     "robbery": {
+      "cases": 2166,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "burglary": {
+      "cases": 5533,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "motor_vehicle_theft": {
+      "cases": 4636,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "fraud": {
+      "cases": 3277,
+      "clearance_pct": 7.38,
+      "cleared_count": null
+     },
+     "dui_arrests": {
+      "cases": 418,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "drug_narcotic_violations": {
+      "cases": 3262,
+      "clearance_pct": 88.26,
+      "cleared_count": null
+     },
+     "weapon_law_violations": {
+      "cases": 2853,
+      "clearance_pct": 65.93,
+      "cleared_count": null
+     },
+     "domestic_violence": {
+      "cases": 15063,
+      "clearance_pct": null,
+      "cleared_count": 4998
+     },
+     "hate_crime": {
+      "cases": 20,
+      "clearance_pct": null,
+      "cleared_count": 4
+     },
+     "violent_index3": 15255,
+     "index5_murder_agg_rob_burg_mvt": 25424
+    },
+    {
+     "year": "2021",
+     "period": "post",
+     "murder": {
+      "cases": 307,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "sex_offenses_nc": {
+      "cases": 684,
+      "clearance_pct": 23.68,
+      "cleared_count": null
+     },
+     "agg_assault": {
+      "cases": 13327,
+      "clearance_pct": 21.51,
+      "cleared_count": null
+     },
+     "robbery": {
+      "cases": 2058,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "burglary": {
+      "cases": 5087,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "motor_vehicle_theft": {
+      "cases": 5097,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "fraud": {
+      "cases": 3051,
+      "clearance_pct": 10.32,
+      "cleared_count": null
+     },
+     "dui_arrests": {
+      "cases": 331,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "drug_narcotic_violations": {
+      "cases": 3743,
+      "clearance_pct": 89.18,
+      "cleared_count": null
+     },
+     "weapon_law_violations": {
+      "cases": 3349,
+      "clearance_pct": 70.59,
+      "cleared_count": null
+     },
+     "domestic_violence": {
+      "cases": 15015,
+      "clearance_pct": null,
+      "cleared_count": 4305
+     },
+     "hate_crime": {
+      "cases": 3,
+      "clearance_pct": null,
+      "cleared_count": 0
+     },
+     "violent_index3": 15692,
+     "index5_murder_agg_rob_burg_mvt": 25876
+    },
+    {
+     "year": "2022",
+     "period": "post",
+     "murder": {
+      "cases": 253,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "sex_offenses_nc": {
+      "cases": 761,
+      "clearance_pct": 13.27,
+      "cleared_count": null
+     },
+     "agg_assault": {
+      "cases": 12344,
+      "clearance_pct": 22.0,
+      "cleared_count": null
+     },
+     "robbery": {
+      "cases": 2321,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "burglary": {
+      "cases": 5828,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "motor_vehicle_theft": {
+      "cases": 11044,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "fraud": {
+      "cases": 3316,
+      "clearance_pct": 9.29,
+      "cleared_count": null
+     },
+     "dui_arrests": {
+      "cases": 84,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "drug_narcotic_violations": {
+      "cases": 3894,
+      "clearance_pct": 62.87,
+      "cleared_count": null
+     },
+     "weapon_law_violations": {
+      "cases": 3783,
+      "clearance_pct": 47.82,
+      "cleared_count": null
+     },
+     "domestic_violence": {
+      "cases": 14295,
+      "clearance_pct": null,
+      "cleared_count": 3750
+     },
+     "hate_crime": {
+      "cases": 6,
+      "clearance_pct": null,
+      "cleared_count": 3
+     },
+     "violent_index3": 14918,
+     "index5_murder_agg_rob_burg_mvt": 31790
+    },
+    {
+     "year": "2023",
+     "period": "post",
+     "murder": {
+      "cases": 350,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "sex_offenses_nc": {
+      "cases": 746,
+      "clearance_pct": 10.99,
+      "cleared_count": null
+     },
+     "agg_assault": {
+      "cases": 12879,
+      "clearance_pct": 18.15,
+      "cleared_count": null
+     },
+     "robbery": {
+      "cases": 2796,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "burglary": {
+      "cases": 6757,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "motor_vehicle_theft": {
+      "cases": 15874,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "fraud": {
+      "cases": 3481,
+      "clearance_pct": 7.44,
+      "cleared_count": null
+     },
+     "dui_arrests": {
+      "cases": 151,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "drug_narcotic_violations": {
+      "cases": 2297,
+      "clearance_pct": 54.9,
+      "cleared_count": null
+     },
+     "weapon_law_violations": {
+      "cases": 3150,
+      "clearance_pct": 35.94,
+      "cleared_count": null
+     },
+     "domestic_violence": {
+      "cases": 14973,
+      "clearance_pct": null,
+      "cleared_count": 3765
+     },
+     "hate_crime": {
+      "cases": 6,
+      "clearance_pct": null,
+      "cleared_count": 3
+     },
+     "violent_index3": 16025,
+     "index5_murder_agg_rob_burg_mvt": 38656
+    },
+    {
+     "year": "2024",
+     "period": "post",
+     "murder": {
+      "cases": 251,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "sex_offenses_nc": {
+      "cases": 764,
+      "clearance_pct": 9.55,
+      "cleared_count": null
+     },
+     "agg_assault": {
+      "cases": 12892,
+      "clearance_pct": 19.88,
+      "cleared_count": null
+     },
+     "robbery": {
+      "cases": 2161,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "burglary": {
+      "cases": 5450,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "motor_vehicle_theft": {
+      "cases": 9862,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "fraud": {
+      "cases": 3335,
+      "clearance_pct": 8.55,
+      "cleared_count": null
+     },
+     "dui_arrests": {
+      "cases": 266,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "drug_narcotic_violations": {
+      "cases": 2582,
+      "clearance_pct": 57.75,
+      "cleared_count": null
+     },
+     "weapon_law_violations": {
+      "cases": 4717,
+      "clearance_pct": 31.59,
+      "cleared_count": null
+     },
+     "domestic_violence": {
+      "cases": 15314,
+      "clearance_pct": null,
+      "cleared_count": 4516
+     },
+     "hate_crime": {
+      "cases": 2,
+      "clearance_pct": null,
+      "cleared_count": 0
+     },
+     "violent_index3": 15304,
+     "index5_murder_agg_rob_burg_mvt": 30616
+    },
+    {
+     "year": "2025",
+     "period": "post",
+     "murder": {
+      "cases": 188,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "sex_offenses_nc": {
+      "cases": 581,
+      "clearance_pct": 12.56,
+      "cleared_count": null
+     },
+     "agg_assault": {
+      "cases": 9458,
+      "clearance_pct": 25.67,
+      "cleared_count": null
+     },
+     "robbery": {
+      "cases": 1482,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "burglary": {
+      "cases": 4273,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "motor_vehicle_theft": {
+      "cases": 5568,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "fraud": {
+      "cases": 3082,
+      "clearance_pct": 7.59,
+      "cleared_count": null
+     },
+     "dui_arrests": {
+      "cases": 244,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "drug_narcotic_violations": {
+      "cases": 2854,
+      "clearance_pct": 59.15,
+      "cleared_count": null
+     },
+     "weapon_law_violations": {
+      "cases": 4224,
+      "clearance_pct": 36.65,
+      "cleared_count": null
+     },
+     "domestic_violence": {
+      "cases": 14632,
+      "clearance_pct": null,
+      "cleared_count": 4639
+     },
+     "hate_crime": {
+      "cases": 2,
+      "clearance_pct": null,
+      "cleared_count": 0
+     },
+     "violent_index3": 11128,
+     "index5_murder_agg_rob_burg_mvt": 20969
+    },
+    {
+     "year": "2026",
+     "period": "post",
+     "murder": {
+      "cases": 141,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "sex_offenses_nc": {
+      "cases": 415,
+      "clearance_pct": 12.77,
+      "cleared_count": null
+     },
+     "agg_assault": {
+      "cases": 6750,
+      "clearance_pct": 36.18,
+      "cleared_count": null
+     },
+     "robbery": {
+      "cases": 851,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "burglary": {
+      "cases": 2779,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "motor_vehicle_theft": {
+      "cases": 2635,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "fraud": {
+      "cases": 2407,
+      "clearance_pct": 7.23,
+      "cleared_count": null
+     },
+     "dui_arrests": {
+      "cases": 193,
+      "clearance_pct": null,
+      "cleared_count": null
+     },
+     "drug_narcotic_violations": {
+      "cases": 2785,
+      "clearance_pct": 62.01,
+      "cleared_count": null
+     },
+     "weapon_law_violations": {
+      "cases": 2723,
+      "clearance_pct": 46.02,
+      "cleared_count": null
+     },
+     "domestic_violence": {
+      "cases": 12326,
+      "clearance_pct": null,
+      "cleared_count": 4606
+     },
+     "hate_crime": {
+      "cases": 5,
+      "clearance_pct": null,
+      "cleared_count": 1
+     },
+     "violent_index3": 7742,
+     "index5_murder_agg_rob_burg_mvt": 13156
+    }
+   ],
+   "citywide_trends_2020_2026": {
+    "violent_index3": {
+     "from": "2020",
+     "to": "2026",
+     "v0": 15255,
+     "v1": 7742,
+     "pct_change": -49.24942641756801
+    },
+    "index5": {
+     "from": "2020",
+     "to": "2026",
+     "v0": 25424,
+     "v1": 13156,
+     "pct_change": -48.25361862806797
+    },
+    "murder": {
+     "from": "2020",
+     "to": "2026",
+     "v0": 293,
+     "v1": 141,
+     "pct_change": -51.877133105802045
+    },
+    "agg_assault": {
+     "from": "2020",
+     "to": "2026",
+     "v0": 12796,
+     "v1": 6750,
+     "pct_change": -47.249140356361366
+    },
+    "robbery": {
+     "from": "2020",
+     "to": "2026",
+     "v0": 2166,
+     "v1": 851,
+     "pct_change": -60.71098799630656
+    },
+    "burglary": {
+     "from": "2020",
+     "to": "2026",
+     "v0": 5533,
+     "v1": 2779,
+     "pct_change": -49.77408277607085
+    },
+    "mvt": {
+     "from": "2020",
+     "to": "2026",
+     "v0": 4636,
+     "v1": 2635,
+     "pct_change": -43.16220880069025
+    }
+   },
+   "pre_vs_post_headlines": {
+    "murder_pre_mean": 123.16666666666667,
+    "murder_post_mean": 254.71428571428572,
+    "agg_assault_pre_mean": 7263.666666666667,
+    "agg_assault_post_mean": 11492.285714285714,
+    "note": "pre(2010-15) vs post(2020-26) means carry the full citywide arc, not just the corridor; read as context, not treatment effect"
+   }
+  },
+  "corridor_mpd_bbox_2020_2026": {
+   "design_honesty": "MPD public incident dataset starts 2020-01-01; zero rows in bbox 2016-2019 (verified by live count in banked pull). Corridor is post-only; any pre-period comparison is impossible from this source.",
+   "rows_in_bbox_all_years": 7257,
+   "earliest_offense_in_bbox": "2020-01-01",
+   "series": [
+    {
+     "year": "2020",
+     "period": "post-bbox-only",
+     "all_incidents": 1889,
+     "violent_bbox": 501,
+     "property_bbox": 1153,
+     "by_category": {
+      "AGGRAVATED ASSAULT": 103,
+      "ALL OTHER OFFENSES ": 10,
+      "ANIMAL CRUELTY": 3,
+      "ARSON": 2,
+      "ASSAULT": 368,
+      "BURG/BREAK & ENTER": 71,
+      "COUNTERFEITING/FORGERY": 18,
+      "DEST/DAM/VAND OF PROPERTY": 188,
+      "DISORDERLY CONDUCT": 1,
+      "DRIVING UNDER THE INFLUENCE": 5,
+      "DRUG/NARCOTIC": 54,
+      "EMBEZZLEMENT": 21,
+      "EXTORTION/BLACKMAIL": 1,
+      "FRAUD": 74,
+      "HOMICIDE": 4,
+      "KIDNAPPING/ABDUCTION": 12,
+      "LARCENY/THEFT": 796,
+      "MOTOR VEHICLE THEFT": 96,
+      "PORNOGRAPHY/OBSCN MAT": 1,
+      "ROBBERY": 26,
+      "STOLEN PROPERTY": 1,
+      "TRESPASS OF REAL PROPERTY ": 10,
+      "WEAPON LAW VIOLATION": 24
+     },
+     "citywide_violent_index3_same_year": 15255
+    },
+    {
+     "year": "2021",
+     "period": "post-bbox-only",
+     "all_incidents": 1861,
+     "violent_bbox": 554,
+     "property_bbox": 1036,
+     "by_category": {
+      "AGGRAVATED ASSAULT": 135,
+      "ALL OTHER OFFENSES ": 10,
+      "ANIMAL CRUELTY": 1,
+      "ARSON": 8,
+      "ASSAULT": 376,
+      "BURG/BREAK & ENTER": 89,
+      "COUNTERFEITING/FORGERY": 15,
+      "DEST/DAM/VAND OF PROPERTY": 179,
+      "DISORDERLY CONDUCT": 2,
+      "DRIVING UNDER THE INFLUENCE": 10,
+      "DRUG/NARCOTIC": 68,
+      "DRUNKENNESS": 2,
+      "EMBEZZLEMENT": 22,
+      "EXTORTION/BLACKMAIL": 1,
+      "FRAUD": 53,
+      "HOMICIDE": 15,
+      "KIDNAPPING/ABDUCTION": 27,
+      "LARCENY/THEFT": 678,
+      "MOTOR VEHICLE THEFT": 82,
+      "PORNOGRAPHY/OBSCN MAT": 2,
+      "ROBBERY": 28,
+      "STOLEN PROPERTY": 8,
+      "TRESPASS OF REAL PROPERTY ": 4,
+      "WEAPON LAW VIOLATION": 46
+     },
+     "citywide_violent_index3_same_year": 15692
+    },
+    {
+     "year": "2022",
+     "period": "post-bbox-only",
+     "all_incidents": 2294,
+     "violent_bbox": 537,
+     "property_bbox": 1478,
+     "by_category": {
+      "AGGRAVATED ASSAULT": 102,
+      "ALL OTHER OFFENSES ": 11,
+      "ARSON": 4,
+      "ASSAULT": 391,
+      "BURG/BREAK & ENTER": 157,
+      "COUNTERFEITING/FORGERY": 29,
+      "DEST/DAM/VAND OF PROPERTY": 252,
+      "DISORDERLY CONDUCT": 2,
+      "DRIVING UNDER THE INFLUENCE": 1,
+      "DRUG/NARCOTIC": 66,
+      "DRUNKENNESS": 2,
+      "EMBEZZLEMENT": 17,
+      "EXTORTION/BLACKMAIL": 2,
+      "FRAUD": 74,
+      "GAMBLING": 1,
+      "HOMICIDE": 5,
+      "KIDNAPPING/ABDUCTION": 15,
+      "LARCENY/THEFT": 823,
+      "MOTOR VEHICLE THEFT": 242,
+      "PORNOGRAPHY/OBSCN MAT": 5,
+      "ROBBERY": 39,
+      "STOLEN PROPERTY": 11,
+      "TRESPASS OF REAL PROPERTY ": 9,
+      "WEAPON LAW VIOLATION": 34
+     },
+     "citywide_violent_index3_same_year": 14918
+    },
+    {
+     "year": "2023",
+     "period": "post-bbox-only",
+     "all_incidents": 2446,
+     "violent_bbox": 594,
+     "property_bbox": 1624,
+     "by_category": {
+      "AGGRAVATED ASSAULT": 122,
+      "ALL OTHER OFFENSES ": 5,
+      "ANIMAL CRUELTY": 2,
+      "ARSON": 3,
+      "ASSAULT": 423,
+      "BURG/BREAK & ENTER": 133,
+      "COUNTERFEITING/FORGERY": 10,
+      "CURFEW/LOITERING/VAGRANCY VIOLATIONS": 1,
+      "DEST/DAM/VAND OF PROPERTY": 317,
+      "DISORDERLY CONDUCT": 2,
+      "DRIVING UNDER THE INFLUENCE": 3,
+      "DRUG/NARCOTIC": 27,
+      "EMBEZZLEMENT": 22,
+      "EXTORTION/BLACKMAIL": 1,
+      "FRAUD": 94,
+      "GAMBLING": 2,
+      "HOMICIDE": 13,
+      "KIDNAPPING/ABDUCTION": 11,
+      "LARCENY/THEFT": 894,
+      "MOTOR VEHICLE THEFT": 277,
+      "PORNOGRAPHY/OBSCN MAT": 3,
+      "ROBBERY": 36,
+      "STOLEN PROPERTY": 6,
+      "TRESPASS OF REAL PROPERTY ": 7,
+      "WEAPON LAW VIOLATION": 32
+     },
+     "citywide_violent_index3_same_year": 16025
+    },
+    {
+     "year": "2024",
+     "period": "post-bbox-only",
+     "all_incidents": 2024,
+     "violent_bbox": 570,
+     "property_bbox": 1150,
+     "by_category": {
+      "AGGRAVATED ASSAULT": 124,
+      "ALL OTHER OFFENSES ": 11,
+      "ANIMAL CRUELTY": 2,
+      "ARSON": 1,
+      "ASSAULT": 399,
+      "BURG/BREAK & ENTER": 79,
+      "COUNTERFEITING/FORGERY": 23,
+      "CURFEW/LOITERING/VAGRANCY VIOLATIONS": 2,
+      "DEST/DAM/VAND OF PROPERTY": 279,
+      "DISORDERLY CONDUCT": 2,
+      "DRIVING UNDER THE INFLUENCE": 8,
+      "DRUG/NARCOTIC": 43,
+      "DRUNKENNESS": 3,
+      "EMBEZZLEMENT": 12,
+      "EXTORTION/BLACKMAIL": 1,
+      "FRAUD": 89,
+      "GAMBLING": 1,
+      "HOMICIDE": 9,
+      "KIDNAPPING/ABDUCTION": 19,
+      "LARCENY/THEFT": 630,
+      "MOTOR VEHICLE THEFT": 161,
+      "PORNOGRAPHY/OBSCN MAT": 7,
+      "ROBBERY": 38,
+      "STOLEN PROPERTY": 8,
+      "TRESPASS OF REAL PROPERTY ": 17,
+      "WEAPON LAW VIOLATION": 56
+     },
+     "citywide_violent_index3_same_year": 15304
+    },
+    {
+     "year": "2025",
+     "period": "post-bbox-only",
+     "all_incidents": 1658,
+     "violent_bbox": 524,
+     "property_bbox": 870,
+     "by_category": {
+      "AGGRAVATED ASSAULT": 85,
+      "ALL OTHER OFFENSES ": 7,
+      "ANIMAL CRUELTY": 4,
+      "ARSON": 5,
+      "ASSAULT": 412,
+      "BURG/BREAK & ENTER": 76,
+      "COUNTERFEITING/FORGERY": 14,
+      "DEST/DAM/VAND OF PROPERTY": 182,
+      "DISORDERLY CONDUCT": 1,
+      "DRIVING UNDER THE INFLUENCE": 4,
+      "DRUG/NARCOTIC": 55,
+      "EMBEZZLEMENT": 11,
+      "EXTORTION/BLACKMAIL": 2,
+      "FRAUD": 78,
+      "GAMBLING": 1,
+      "HOMICIDE": 2,
+      "KIDNAPPING/ABDUCTION": 11,
+      "LARCENY/THEFT": 496,
+      "MOTOR VEHICLE THEFT": 111,
+      "PORNOGRAPHY/OBSCN MAT": 8,
+      "ROBBERY": 25,
+      "STOLEN PROPERTY": 8,
+      "TRESPASS OF REAL PROPERTY ": 10,
+      "WEAPON LAW VIOLATION": 50
+     },
+     "citywide_violent_index3_same_year": 11128
+    },
+    {
+     "year": "2026",
+     "period": "post-bbox-only",
+     "all_incidents": 1204,
+     "violent_bbox": 450,
+     "property_bbox": 533,
+     "by_category": {
+      "AGGRAVATED ASSAULT": 73,
+      "ALL OTHER OFFENSES ": 8,
+      "ANIMAL CRUELTY": 1,
+      "ARSON": 2,
+      "ASSAULT": 361,
+      "BURG/BREAK & ENTER": 38,
+      "COUNTERFEITING/FORGERY": 10,
+      "DEST/DAM/VAND OF PROPERTY": 124,
+      "DISORDERLY CONDUCT": 3,
+      "DRIVING UNDER THE INFLUENCE": 9,
+      "DRUG/NARCOTIC": 43,
+      "DRUNKENNESS": 2,
+      "EMBEZZLEMENT": 4,
+      "FAMILY OFFENSES, NONVIOLENT": 1,
+      "FRAUD": 64,
+      "HOMICIDE": 4,
+      "KIDNAPPING/ABDUCTION": 14,
+      "LARCENY/THEFT": 331,
+      "MOTOR VEHICLE THEFT": 38,
+      "PORNOGRAPHY/OBSCN MAT": 5,
+      "ROBBERY": 12,
+      "STOLEN PROPERTY": 8,
+      "TRESPASS OF REAL PROPERTY ": 17,
+      "WEAPON LAW VIOLATION": 32
+     },
+     "citywide_violent_index3_same_year": 7742
+    }
+   ],
+   "corridor_trends_2020_2026": {
+    "all_incidents": {
+     "from": "2020",
+     "to": "2026",
+     "v0": 1889,
+     "v1": 1204,
+     "pct_change": -36.262572789835886
+    },
+    "violent_bbox": {
+     "from": "2020",
+     "to": "2026",
+     "v0": 501,
+     "v1": 450,
+     "pct_change": -10.179640718562874
+    },
+    "property_bbox": {
+     "from": "2020",
+     "to": "2026",
+     "v0": 1153,
+     "v1": 533,
+     "pct_change": -53.772766695576756
+    }
+   },
+   "alt_bbox_1p4km_counts": {
+    "2016": 0,
+    "2017": 0,
+    "2018": 0,
+    "2019": 0,
+    "2020": 1356,
+    "2021": 1333,
+    "2022": 1613,
+    "2023": 1833,
+    "2024": 1489,
+    "2025": 1227,
+    "2026": 848
+   },
+   "corridor_vs_city_over_full_years": {
+    "pearson_r_all_vs_city_index3_2020_2025": 0.6395886920783129,
+    "pearson_r_violent_vs_city_index3_2020_2025": 0.4594244930990683
+   }
+  },
+  "differential_matched_2020_2026": {
+   "definition": "corridor 2020->2026 pct change minus citywide violent-index3 2020->2026 pct change; direction-class only (partial-year caveat on both 2026 endpoints)",
+   "corridor_all_incidents_pct": -36.262572789835886,
+   "citywide_violent_index3_pct": -49.24942641756801,
+   "differential_points": 12.986853627732124,
+   "corridor_violent_bbox_pct": -10.179640718562874,
+   "differential_violent_points": 39.06978569900514
+  },
+  "differential_tail_2024_2026": {
+   "definition": "2024->2026 tail, same construction; post-treatment-maturity window",
+   "corridor_all_pct": -40.51383399209486,
+   "citywide_violent_index3_pct": -49.411918452692106,
+   "differential_points": 8.898084460597246,
+   "corridor_violent_pct": -21.052631578947366,
+   "differential_violent_points": 28.35928687374474
+  },
+  "differential_full_span_2020_2025": {
+   "definition": "2020->2025 full-year matched span (period-honest)",
+   "corridor_all_pct": -12.228692429857068,
+   "corridor_violent_pct": 4.590818363273453,
+   "corridor_property_pct": -24.544666088464876,
+   "citywide_violent_index3_pct": -27.05342510652245,
+   "citywide_murder_pct": -35.83617747440273,
+   "citywide_agg_pct": -26.086276961550485,
+   "citywide_rob_pct": -31.57894736842105,
+   "differential_all_points": 14.824732676665382,
+   "differential_violent_points": 31.644243469795903
+  },
+  "verdict_direction_class": [
+   "FULL-SPAN 2020->2025: corridor all-incidents -12.2% vs citywide violent-index3 -27.1% -> differential +14.8 points",
+   "  violent bbox +4.6% vs city -27.1% -> differential +31.6 points",
+   "THROUGH-2026 (both endpoints partial): corridor -36.3% vs city -49.2% -> +13.0 points",
+   "TAIL 2024->2026 (both endpoints partial): corridor -40.5% vs city -49.4% -> +8.9 points",
+   "READ (direction-class only): corridor post-window moves broadly with the citywide arc; the honest test (difference in trends, not before/after) shows no corridor-specific improvement large enough to clear the same-period partial-data caveat; property-crime fall is the largest corridor move but 2026 is partial in both sources."
+  ]
+ },
+ "2_rate_adjusted_honesty_layer": {
+  "rate_anchor_2025": {
+   "year": 2025,
+   "memphis_pd_population": 606629,
+   "group_a_crimes": 89652,
+   "rate_per_1000": 147.79,
+   "shelby_rate_per_1000": 113.57,
+   "tennessee_rate_per_1000": 58.67,
+   "note": "Single-year anchor (view20 is year-slicer-fixed at 2025). No interpolated population denominators were banked; rate arcs pre/post are honestly unavailable at citywide level."
+  },
+  "corridor_rate_status": {
+   "pre_2016": null,
+   "note": "No bbox/neighborhood population denominator banked (census tract 47157020541 not pulled this pass); corridor counts remain absolute, not rates.",
+   "population_denominator_pulled": false
+  },
+  "period_honesty": {
+   "tibrs_2026": "partial through mid-November (TBI TOPS live DB; Dec=0)",
+   "mpd_bbox_2026": "partial through pull date 2026-11-23",
+   "mpd_bbox_2025": "full year in banked pull; re-pull could shift counts (live dataset)",
+   "arrests_series_end": "2024 (12/12 months each; source CDE UCR arrests, agency TNMPD0000)",
+   "same_period_comparison": "2020->2025 full-year-to-full-year is the cleanest matched span; 2026 endpoints marked partial"
+  },
+  "arrests_proxy_series_citywide": {
+   "definition": "Memphis PD arrests (bookings/intake proxy), CDE UCR arrests, citywide, 2015-2024, 12/12 months each",
+   "series": {
+    "2015": 40640,
+    "2016": 38979,
+    "2017": 30105,
+    "2018": 31382,
+    "2019": 31292,
+    "2020": 23093,
+    "2021": 19949,
+    "2022": 22563,
+    "2023": 14821,
+    "2024": 16489
+   },
+   "pct_2015_to_2019": -23.001968503937007,
+   "pct_2019_to_2024": -47.30602070816822
+  },
+  "honest_nulls": [
+   "corridor population denominator (tract 47157020541 / bbox pop) \u2014 not pulled this pass; corridor stays counts-only",
+   "2016-2019 citywide TIBRS rows \u2014 gap covers the treatment start; not banked (route exists via TOPS but sweep stopped at 2010-15/2020-26)",
+   "pre-2020 corridor incidents \u2014 source dataset has none",
+   "2010-2015 MPD-corridor equivalent of TIBRS cards \u2014 no public keyless route banked"
+  ]
+ },
+ "3_clearance_diagnostics": {
+  "source_note": "clearance_pct from TIBRS TOPS cards (citywide); MPD incident layer has no clearance field \u2014 corridor clearance is an honest null",
+  "corridor_clearance": null,
+  "cards": [
+   {
+    "key": "sex_offenses_nc",
+    "pre_n": 6,
+    "post_n": 7,
+    "pre_mean_pct": 39.77333333333333,
+    "post_mean_pct": 14.979999999999999,
+    "delta_points": -24.793333333333337
+   },
+   {
+    "key": "agg_assault",
+    "pre_n": 6,
+    "post_n": 7,
+    "pre_mean_pct": 36.175000000000004,
+    "post_mean_pct": 24.16571428571429,
+    "delta_points": -12.009285714285713
+   },
+   {
+    "key": "fraud",
+    "pre_n": 6,
+    "post_n": 7,
+    "pre_mean_pct": 8.334999999999999,
+    "post_mean_pct": 8.257142857142858,
+    "delta_points": -0.07785714285714107
+   },
+   {
+    "key": "drug_narcotic_violations",
+    "pre_n": 6,
+    "post_n": 7,
+    "pre_mean_pct": 93.85000000000001,
+    "post_mean_pct": 67.73142857142857,
+    "delta_points": -26.118571428571443
+   },
+   {
+    "key": "weapon_law_violations",
+    "pre_n": 6,
+    "post_n": 7,
+    "pre_mean_pct": 93.08333333333333,
+    "post_mean_pct": 47.79142857142857,
+    "delta_points": -45.29190476190476
+   }
+  ],
+  "read": "delta_points = post_mean - pre_mean, citywide; direction-class only"
+ }
+}

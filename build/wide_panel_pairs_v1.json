@@ -1,0 +1,210 @@
+[
+ {
+  "city": "Boston",
+  "care_year": 1993,
+  "crime_year": 1993,
+  "care_ratio": 1.358,
+  "murders": 98,
+  "rate": 16.9
+ },
+ {
+  "city": "Boston",
+  "care_year": 1994,
+  "crime_year": 1994,
+  "care_ratio": 1.607,
+  "murders": 85,
+  "rate": 14.6
+ },
+ {
+  "city": "Boston",
+  "care_year": 1995,
+  "crime_year": 1995,
+  "care_ratio": 4.417,
+  "murders": 96,
+  "rate": 16.5
+ },
+ {
+  "city": "Boston",
+  "care_year": 1999,
+  "crime_year": 1999,
+  "care_ratio": 2.834,
+  "murders": 31,
+  "rate": 5.3
+ },
+ {
+  "city": "Boston",
+  "care_year": 2001,
+  "crime_year": 2001,
+  "care_ratio": 2.721,
+  "murders": 65,
+  "rate": 11.0
+ },
+ {
+  "city": "STLOUIS",
+  "care_year": 2010,
+  "crime_year": 2010,
+  "care_ratio": 0.137,
+  "murders": 144,
+  "rate": 45.1
+ },
+ {
+  "city": "STLOUIS",
+  "care_year": 2011,
+  "crime_year": 2011,
+  "care_ratio": 0.127,
+  "murders": 113,
+  "rate": 35.4
+ },
+ {
+  "city": "STLOUIS",
+  "care_year": 2012,
+  "crime_year": 2012,
+  "care_ratio": 0.164,
+  "murders": 113,
+  "rate": 35.4
+ },
+ {
+  "city": "STLOUIS",
+  "care_year": 2013,
+  "crime_year": 2013,
+  "care_ratio": 0.133,
+  "murders": 120,
+  "rate": 37.7
+ },
+ {
+  "city": "STLOUIS",
+  "care_year": 2014,
+  "crime_year": 2014,
+  "care_ratio": 0.134,
+  "murders": 159,
+  "rate": 50.1
+ },
+ {
+  "city": "New Orleans",
+  "care_year": 2017,
+  "crime_year": 2017,
+  "care_ratio": 0.313,
+  "murders": 157,
+  "rate": 40.1
+ },
+ {
+  "city": "New Orleans",
+  "care_year": 2019,
+  "crime_year": 2019,
+  "care_ratio": 0.318,
+  "murders": 121,
+  "rate": 31.0
+ },
+ {
+  "city": "New Orleans",
+  "care_year": 2024,
+  "crime_year": 2024,
+  "care_ratio": 0.524,
+  "murders": 124,
+  "rate": 34.2
+ },
+ {
+  "city": "New Orleans",
+  "care_year": 2025,
+  "crime_year": 2024,
+  "care_ratio": 0.154,
+  "murders": 124,
+  "rate": 34.2
+ },
+ {
+  "city": "STLOUIS",
+  "care_year": 2021,
+  "crime_year": 2021,
+  "care_ratio": 0.131,
+  "murders": 203,
+  "rate": 69.2
+ },
+ {
+  "city": "STLOUIS",
+  "care_year": 2022,
+  "crime_year": 2022,
+  "care_ratio": 0.226,
+  "murders": 201,
+  "rate": 70.2
+ },
+ {
+  "city": "STLOUIS",
+  "care_year": 2023,
+  "crime_year": 2023,
+  "care_ratio": 0.195,
+  "murders": 158,
+  "rate": 55.8
+ },
+ {
+  "city": "STLOUIS",
+  "care_year": 2025,
+  "crime_year": 2025,
+  "care_ratio": 0.198,
+  "murders": 141,
+  "rate": 50.7
+ },
+ {
+  "city": "STLOUIS",
+  "care_year": 2020,
+  "crime_year": 2020,
+  "care_ratio": 0.12,
+  "murders": 263,
+  "rate": 87.2
+ },
+ {
+  "city": "New Orleans",
+  "care_year": 2004,
+  "crime_year": 2004,
+  "care_ratio": 0.164,
+  "murders": 264,
+  "rate": 58.0
+ },
+ {
+  "city": "New Orleans",
+  "care_year": 2005,
+  "crime_year": 2005,
+  "care_ratio": 0.131,
+  "murders": 134,
+  "rate": 58.3
+ },
+ {
+  "city": "New Orleans",
+  "care_year": 2006,
+  "crime_year": 2006,
+  "care_ratio": 0.095,
+  "murders": 162,
+  "rate": 72.6
+ },
+ {
+  "city": "New Orleans",
+  "care_year": 2007,
+  "crime_year": 2007,
+  "care_ratio": 0.13,
+  "murders": 209,
+  "rate": 76.6
+ },
+ {
+  "city": "New Orleans",
+  "care_year": 2009,
+  "crime_year": 2009,
+  "care_ratio": 0.166,
+  "murders": 174,
+  "rate": 55.1
+ },
+ {
+  "city": "New Orleans",
+  "care_year": 2011,
+  "crime_year": 2011,
+  "care_ratio": 0.311,
+  "murders": 200,
+  "rate": 58.2
+ },
+ {
+  "city": "New Orleans",
+  "care_year": 2022,
+  "crime_year": 2022,
+  "care_ratio": 0.365,
+  "murders": 266,
+  "rate": 71.7
+ }
+]

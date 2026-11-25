@@ -1,0 +1,79 @@
+{
+ "built": "2026-11-22",
+ "the_title": "THE FLIP-YEAR-BAND = THE SIX-CITY MANUFACTURED-VS-BUDGET-INVISIBLE CLASSIFIER v1",
+ "the_cities": [
+  {
+   "city": "BOSTON",
+   "verdict": "PUBLIC-FLIP CONFIRMED [Certain]",
+   "flip_year": 1995,
+   "ratio_move": "1.61 -> 4.42",
+   "driver_rows": "BPS $405M->$534M->$548M",
+   "lane_class": "1-public-flip",
+   "evidence": "boston_care_cage_series_v1"
+  },
+  {
+   "city": "OKLAHOMA CITY",
+   "verdict": "PUBLIC-FLIP STRUCTURALLY-CONFIRMED [Certain-struct/Moderate-dollar]",
+   "flip_era": "1993-1999 (MAPS)",
+   "ratio_move": "the modern 1.73-2.41-band persist",
+   "driver_rows": "MAPS nine-voter-projects ALL-care-lane [Certain]",
+   "lane_class": "1-public-flip",
+   "evidence": "okc_care_cage_series_v1"
+  },
+  {
+   "city": "NEW YORK CITY",
+   "verdict": "NO FLIP IN THE TESTED WINDOW [High-conf-rows] \u2014 the PROPORTIONAL-FOLLOW-class",
+   "flip_era": null,
+   "ratio_move": "2.59 -> 2.26 FY98-FY02 (cage-grew-faster-through-crime-collapse!)",
+   "driver_rows": "NYPD +45.7% vs care +19.7%",
+   "lane_class": "6-proportional-follow",
+   "evidence": "nyc_care_cage_series_v1"
+  },
+  {
+   "city": "DETROIT",
+   "verdict": "NO CLEAN FLIP [Medium] \u2014 the AUSTERITY-MECHANICAL-class",
+   "flip_era": null,
+   "ratio_move": "EM-era-rise-was-mechanical (the police-cut-more); GF-basis-0.344-0.351-FLAT",
+   "driver_rows": "the police-re-grew-fastest (+34%)",
+   "lane_class": "4-austerity-mechanical",
+   "evidence": "detroit_care_cage_series_v1"
+  },
+  {
+   "city": "PITTSBURGH",
+   "verdict": "NO BREAK \u2014 the REGIONAL-ECONOMY-class",
+   "flip_era": null,
+   "ratio_move": "0.56 -> 0.33 -> 0.06 (the DOWN-series!)",
+   "driver_rows": "police-grew-while-parks-fell-through-the-revival",
+   "lane_class": "3-regional-economy-invisible",
+   "evidence": "pittsburgh_care_cage_series_v1"
+  },
+  {
+   "city": "CINCINNATI",
+   "verdict": "NO BREAK \u2014 the PRIVATE-CAPITAL-class",
+   "flip_era": null,
+   "ratio_move": "0.637-0.728 stable-mild-tilt",
+   "driver_rows": "3CDC $250M/$1.3B outside-the-ledger [Likely]",
+   "lane_class": "2-private-capital-invisible",
+   "evidence": "cincinnati_care_cage_series_v1"
+  },
+  {
+   "city": "MEMPHIS",
+   "verdict": "NO INVERSE-SURGE \u2014 the EXTERNAL-STATE-CAGING-class",
+   "surge_era": null,
+   "ratio_move": "0.40-0.52 banded (FY26-0.516 = the care-high!)",
+   "driver_rows": "zero-MSTF-line-items-in-381pp = the state-money-cage",
+   "lane_class": "5-external-state-caging",
+   "evidence": "memphis_care_cage_series_v1"
+  }
+ ],
+ "the_taxonomy (the six-classes-from-seven-cities!)": {
+  "1-public-flip": "Boston-1995 + OKC-MAPS (the the care-build-printed!)",
+  "2-private-capital-invisible": "Cincinnati-OTR (the 3CDC-lane)",
+  "3-regional-economy-invisible": "Pittsburgh (the eds-and-meds-around-the-city)",
+  "4-austerity-mechanical": "Detroit (the EM-arithmetic)",
+  "5-external-state-caging": "Memphis (the Task-Force = the state/federal-money)",
+  "6-proportional-follow": "NYC (the budget-followed-the-crime-collapse-proportionally!)"
+ },
+ "the_fingerprint_summary": "THE FINGERPRINT (the the pre-band + the BREAK-never-re-enters + the crime-declines) = the prints-in-TWO-of-seven-cities (the Boston + the OKC = the both-with-the-NAMED-care-drivers = the voter-voted-or-the-schools-invested!) \u2014 the OTHER-FOUR = the the revivals-that-happened-OUTSIDE-the-city-ledger (the private-capital/the regional-economy = the the the manufactured-question-needs-the-ledger-scope-awareness!) = THE THE-BROTHERS'-QUESTION-ANSWERED-AT-SCALE: the care-cage-flip = the THE-PRINTS-WHEN-THE-POLICY-RUNS-THROUGH-THE-PUBLIC-BUDGET.",
+ "the_honest_frame": "the confidence-per-city = the the carried-in-each-file (the High-for-Boston/the Moderate-for-OKC [the pre-band-untested]/the High-on-the-rows-for-NYC [the window-limited]); the falsifiers = the carried-in-every-summary!"
+}

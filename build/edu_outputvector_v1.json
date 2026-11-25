@@ -1,0 +1,2023 @@
+{
+ "_record": "edu_outputvector_v1 \u2014 BOARD-2 THE EDU-OUTPUT-VECTOR LANES (grad + test-score pulls, joint panel)",
+ "built": "2026-11-24",
+ "laws_held": [
+  "direction-class only, no causal claims",
+  "honest-null = routes-tried-no-capture, never a placeholder",
+  "every number read live from pulled files; consistency check (B15003 L1 = sum L2..L25) enforced per row",
+  "static-vintage separation: NAEP year labels are NAEP administration years; ACS rows are labeled by ACS vintage"
+ ],
+ "lane_grad": {
+  "what": "ACS B15003 educational attainment, population 25 years and over, state level",
+  "correction_banked": "the dispatch said B14005; B14005 is the 16-19 school-enrollment table \u2014 the 25+ attainment table is B15003 (verified against the ACS 1-yr sequence lookup, Universe line)",
+  "definition_law": "HS+ = sum of lines 17..25 (B15003 categories are mutually exclusive, NOT cumulative \u2014 summing L17+L18 only gives ~30% and is the banked first-pass mistake)",
+  "route_grad_2011_2019": "ftp.census.gov per-state All_Geographies zips -> B15003 seq (per-year lookup) -> state 040 row",
+  "route_grad_2021_2024": "www2.census.gov table-based-SF acsdt1y{y}-b15003.dat (keyless)",
+  "rows": 98,
+  "states": {
+   "MS": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "MI": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "NY": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "OH": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "MO": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "CO": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "TN": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2021,
+    2022,
+    2023,
+    2024
+   ],
+   "MA": [
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2021,
+    2022,
+    2023,
+    2024
+   ]
+  },
+  "honest_nulls": [
+   "2020: 1-YR experiment released without B15003 for these states \u2014 honest-null, not interpolated",
+   "2025: www2 .dat file structurally truncated at E023 (professional/doctorate cells absent) \u2014 HS+/BA+ shares would be lower-bound-biased; shipped honest-null with the flag banked",
+   "2010: state-zip route exists but zip was not pulled before the FTP job window \u2014 left for a later pass, honest-null in the meantime"
+  ],
+  "mistake_guards_banked": [
+   "off-by-one at (start-1): L_k = parts[start-1 + (k-1)]; the first pass read L18..L25+1 as L17..L25 and printed CO = 110.58% \u2014 caught by the >100% sanity tripwire, fixed, re-run",
+   "some-college/associate cells dropped in the first re-run (HS+ = 51-61%) \u2014 caught against the API-truth MS 2019 ~86 % check",
+   "two state zips (2015-MS, 2017-TN) were corrupt partials from a killed FTP job \u2014 re-downloaded size-verified before extraction"
+  ],
+  "truth_checks": [
+   "MS 2019: total 25+ = 1,979,664 (sum-consistency exact)",
+   "MS 2021 HS+ = 86.49 % (known truth ~85.9 % class)",
+   "CO 2019 = 92.4 / BA+ 42.66, MA 2019 = 91.32 / 44.98 \u2014 both match public ACS reads"
+  ]
+ },
+ "lane_test_scores": {
+  "what": "NAEP main-NAEP mean scale scores, state level, all students (variable TOTAL, stattype MN:MN), grades 4 and 8, mathematics (MRPCM) and reading (RRPCM)",
+  "route": "nationsreportcard.gov DataService GetAdhocData.aspx (keyless; param contract learned by probe:",
+  "endpoint_template": "type=data&subject={mathematics|reading}&grade={4|8}&subscale={MRPCM|RRPCM}&jurisdiction={XX}&year={Y}&variable=TOTAL&stattype=MN:MN",
+  "years_pulled": [
+   2013,
+   2015,
+   2017,
+   2019,
+   2022,
+   2024
+  ],
+  "rows": 192,
+  "states": {
+   "MS": [
+    2013,
+    2013,
+    2013,
+    2013,
+    2015,
+    2015,
+    2015,
+    2015,
+    2017,
+    2017,
+    2017,
+    2017,
+    2019,
+    2019,
+    2019,
+    2019,
+    2022,
+    2022,
+    2022,
+    2022,
+    2024,
+    2024,
+    2024,
+    2024
+   ],
+   "MI": [
+    2013,
+    2013,
+    2013,
+    2013,
+    2015,
+    2015,
+    2015,
+    2015,
+    2017,
+    2017,
+    2017,
+    2017,
+    2019,
+    2019,
+    2019,
+    2019,
+    2022,
+    2022,
+    2022,
+    2022,
+    2024,
+    2024,
+    2024,
+    2024
+   ],
+   "NY": [
+    2013,
+    2013,
+    2013,
+    2013,
+    2015,
+    2015,
+    2015,
+    2015,
+    2017,
+    2017,
+    2017,
+    2017,
+    2019,
+    2019,
+    2019,
+    2019,
+    2022,
+    2022,
+    2022,
+    2022,
+    2024,
+    2024,
+    2024,
+    2024
+   ],
+   "OH": [
+    2013,
+    2013,
+    2013,
+    2013,
+    2015,
+    2015,
+    2015,
+    2015,
+    2017,
+    2017,
+    2017,
+    2017,
+    2019,
+    2019,
+    2019,
+    2019,
+    2022,
+    2022,
+    2022,
+    2022,
+    2024,
+    2024,
+    2024,
+    2024
+   ],
+   "MO": [
+    2013,
+    2013,
+    2013,
+    2013,
+    2015,
+    2015,
+    2015,
+    2015,
+    2017,
+    2017,
+    2017,
+    2017,
+    2019,
+    2019,
+    2019,
+    2019,
+    2022,
+    2022,
+    2022,
+    2022,
+    2024,
+    2024,
+    2024,
+    2024
+   ],
+   "CO": [
+    2013,
+    2013,
+    2013,
+    2013,
+    2015,
+    2015,
+    2015,
+    2015,
+    2017,
+    2017,
+    2017,
+    2017,
+    2019,
+    2019,
+    2019,
+    2019,
+    2022,
+    2022,
+    2022,
+    2022,
+    2024,
+    2024,
+    2024,
+    2024
+   ],
+   "TN": [
+    2013,
+    2013,
+    2013,
+    2013,
+    2015,
+    2015,
+    2015,
+    2015,
+    2017,
+    2017,
+    2017,
+    2017,
+    2019,
+    2019,
+    2019,
+    2019,
+    2022,
+    2022,
+    2022,
+    2022,
+    2024,
+    2024,
+    2024,
+    2024
+   ],
+   "MA": [
+    2013,
+    2013,
+    2013,
+    2013,
+    2015,
+    2015,
+    2015,
+    2015,
+    2017,
+    2017,
+    2017,
+    2017,
+    2019,
+    2019,
+    2019,
+    2019,
+    2022,
+    2022,
+    2022,
+    2022,
+    2024,
+    2024,
+    2024,
+    2024
+   ]
+  },
+  "mistake_guards_banked": [
+   "param-name discovery: juris->jurisdiction, years->year, + required variable & stattype (learned from API 400 error text, no guessing)",
+   "isStatDisplayable flag respected \u2014 non-displayable cells would ship honest-null"
+  ]
+ },
+ "joint_panel": {
+  "grain": "state-year (edu-output cells) + city-year join back to maslow_joint_panel_v1 (6 panel cities mapped to own states: Cincinnati->OH, Denver->CO, Detroit->MI, Memphis->TN, NYC->NY, St. Louis->MO)",
+  "state_year_rows": 98,
+  "city_year_joint_rows": 39,
+  "city_year_joint_cells_filled": 116
+ },
+ "state_year_table": [
+  {
+   "state": "MS",
+   "year": 2011,
+   "hs_grad_or_higher_share": 81.13,
+   "bachelors_or_higher_share": 19.85,
+   "pop25_plus": 1912708,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "MS",
+   "year": 2012,
+   "hs_grad_or_higher_share": 82.3,
+   "bachelors_or_higher_share": 20.66,
+   "pop25_plus": 1911968,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "MS",
+   "year": 2013,
+   "hs_grad_or_higher_share": 82.37,
+   "bachelors_or_higher_share": 20.37,
+   "pop25_plus": 1931054,
+   "naep_g4_math": 231.11,
+   "naep_g4_reading": 208.52,
+   "naep_g8_math": 271.16,
+   "naep_g8_reading": 253.15
+  },
+  {
+   "state": "MS",
+   "year": 2014,
+   "hs_grad_or_higher_share": 82.78,
+   "bachelors_or_higher_share": 21.07,
+   "pop25_plus": 1950710,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "MS",
+   "year": 2015,
+   "hs_grad_or_higher_share": 83.47,
+   "bachelors_or_higher_share": 20.83,
+   "pop25_plus": 1952337,
+   "naep_g4_math": 234.24,
+   "naep_g4_reading": 214.11,
+   "naep_g8_math": 270.58,
+   "naep_g8_reading": 251.98
+  },
+  {
+   "state": "MS",
+   "year": 2016,
+   "hs_grad_or_higher_share": 84.12,
+   "bachelors_or_higher_share": 21.78,
+   "pop25_plus": 1957022,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "MS",
+   "year": 2017,
+   "hs_grad_or_higher_share": 84.38,
+   "bachelors_or_higher_share": 21.87,
+   "pop25_plus": 1959341,
+   "naep_g4_math": 234.69,
+   "naep_g4_reading": 215.2,
+   "naep_g8_math": 270.91,
+   "naep_g8_reading": 256.34
+  },
+  {
+   "state": "MS",
+   "year": 2018,
+   "hs_grad_or_higher_share": 85.4,
+   "bachelors_or_higher_share": 23.2,
+   "pop25_plus": 1977283,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "MS",
+   "year": 2019,
+   "hs_grad_or_higher_share": 85.3,
+   "bachelors_or_higher_share": 22.31,
+   "pop25_plus": 1979664,
+   "naep_g4_math": 240.71,
+   "naep_g4_reading": 219.34,
+   "naep_g8_math": 273.73,
+   "naep_g8_reading": 256.38
+  },
+  {
+   "state": "MS",
+   "year": 2021,
+   "hs_grad_or_higher_share": 86.49,
+   "bachelors_or_higher_share": 24.78,
+   "pop25_plus": 1968167,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "MS",
+   "year": 2022,
+   "hs_grad_or_higher_share": 87.6,
+   "bachelors_or_higher_share": 24.76,
+   "pop25_plus": 1963322,
+   "naep_g4_math": 233.56,
+   "naep_g4_reading": 217.16,
+   "naep_g8_math": 265.57,
+   "naep_g8_reading": 252.93
+  },
+  {
+   "state": "MS",
+   "year": 2023,
+   "hs_grad_or_higher_share": 87.76,
+   "bachelors_or_higher_share": 25.54,
+   "pop25_plus": 1980147,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "MS",
+   "year": 2024,
+   "hs_grad_or_higher_share": 88.0,
+   "bachelors_or_higher_share": 27.02,
+   "pop25_plus": 1983602,
+   "naep_g4_math": 239.18,
+   "naep_g4_reading": 218.5,
+   "naep_g8_math": 269.06,
+   "naep_g8_reading": 253.47
+  },
+  {
+   "state": "MI",
+   "year": 2012,
+   "hs_grad_or_higher_share": 89.19,
+   "bachelors_or_higher_share": 26.03,
+   "pop25_plus": 6621018,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "MI",
+   "year": 2013,
+   "hs_grad_or_higher_share": 89.43,
+   "bachelors_or_higher_share": 26.9,
+   "pop25_plus": 6645295,
+   "naep_g4_math": 236.82,
+   "naep_g4_reading": 217.37,
+   "naep_g8_math": 280.13,
+   "naep_g8_reading": 265.94
+  },
+  {
+   "state": "MI",
+   "year": 2014,
+   "hs_grad_or_higher_share": 89.86,
+   "bachelors_or_higher_share": 27.35,
+   "pop25_plus": 6680525,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "MI",
+   "year": 2015,
+   "hs_grad_or_higher_share": 90.15,
+   "bachelors_or_higher_share": 27.8,
+   "pop25_plus": 6728347,
+   "naep_g4_math": 235.73,
+   "naep_g4_reading": 216.31,
+   "naep_g8_math": 278.17,
+   "naep_g8_reading": 264.5
+  },
+  {
+   "state": "MI",
+   "year": 2016,
+   "hs_grad_or_higher_share": 90.42,
+   "bachelors_or_higher_share": 28.25,
+   "pop25_plus": 6760402,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "MI",
+   "year": 2017,
+   "hs_grad_or_higher_share": 90.91,
+   "bachelors_or_higher_share": 29.12,
+   "pop25_plus": 6819310,
+   "naep_g4_math": 235.56,
+   "naep_g4_reading": 217.75,
+   "naep_g8_math": 279.51,
+   "naep_g8_reading": 265.47
+  },
+  {
+   "state": "MI",
+   "year": 2018,
+   "hs_grad_or_higher_share": 91.09,
+   "bachelors_or_higher_share": 29.58,
+   "pop25_plus": 6869846,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "MI",
+   "year": 2019,
+   "hs_grad_or_higher_share": 91.35,
+   "bachelors_or_higher_share": 30.03,
+   "pop25_plus": 6894627,
+   "naep_g4_math": 236.15,
+   "naep_g4_reading": 218.27,
+   "naep_g8_math": 280.28,
+   "naep_g8_reading": 262.58
+  },
+  {
+   "state": "MI",
+   "year": 2021,
+   "hs_grad_or_higher_share": 91.96,
+   "bachelors_or_higher_share": 31.67,
+   "pop25_plus": 6971895,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "MI",
+   "year": 2022,
+   "hs_grad_or_higher_share": 91.84,
+   "bachelors_or_higher_share": 32.12,
+   "pop25_plus": 6978952,
+   "naep_g4_math": 232.2,
+   "naep_g4_reading": 211.84,
+   "naep_g8_math": 272.55,
+   "naep_g8_reading": 258.51
+  },
+  {
+   "state": "MI",
+   "year": 2023,
+   "hs_grad_or_higher_share": 92.03,
+   "bachelors_or_higher_share": 32.68,
+   "pop25_plus": 7007856,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "MI",
+   "year": 2024,
+   "hs_grad_or_higher_share": 92.24,
+   "bachelors_or_higher_share": 33.33,
+   "pop25_plus": 7102388,
+   "naep_g4_math": 235.22,
+   "naep_g4_reading": 209.14,
+   "naep_g8_math": 269.98,
+   "naep_g8_reading": 255.06
+  },
+  {
+   "state": "NY",
+   "year": 2012,
+   "hs_grad_or_higher_share": 85.31,
+   "bachelors_or_higher_share": 33.39,
+   "pop25_plus": 13309761,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "NY",
+   "year": 2013,
+   "hs_grad_or_higher_share": 85.59,
+   "bachelors_or_higher_share": 34.08,
+   "pop25_plus": 13419310,
+   "naep_g4_math": 240.35,
+   "naep_g4_reading": 223.81,
+   "naep_g8_math": 281.81,
+   "naep_g8_reading": 266.35
+  },
+  {
+   "state": "NY",
+   "year": 2014,
+   "hs_grad_or_higher_share": 85.74,
+   "bachelors_or_higher_share": 34.48,
+   "pop25_plus": 13539612,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "NY",
+   "year": 2015,
+   "hs_grad_or_higher_share": 85.96,
+   "bachelors_or_higher_share": 35.03,
+   "pop25_plus": 13641473,
+   "naep_g4_math": 236.8,
+   "naep_g4_reading": 222.65,
+   "naep_g8_math": 280.09,
+   "naep_g8_reading": 263.25
+  },
+  {
+   "state": "NY",
+   "year": 2016,
+   "hs_grad_or_higher_share": 86.32,
+   "bachelors_or_higher_share": 35.65,
+   "pop25_plus": 13653592,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "NY",
+   "year": 2017,
+   "hs_grad_or_higher_share": 86.58,
+   "bachelors_or_higher_share": 36.03,
+   "pop25_plus": 13821132,
+   "naep_g4_math": 235.55,
+   "naep_g4_reading": 221.88,
+   "naep_g8_math": 281.69,
+   "naep_g8_reading": 264.16
+  },
+  {
+   "state": "NY",
+   "year": 2018,
+   "hs_grad_or_higher_share": 87.15,
+   "bachelors_or_higher_share": 37.24,
+   "pop25_plus": 13672343,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "NY",
+   "year": 2019,
+   "hs_grad_or_higher_share": 87.6,
+   "bachelors_or_higher_share": 37.81,
+   "pop25_plus": 13664734,
+   "naep_g4_math": 236.73,
+   "naep_g4_reading": 219.6,
+   "naep_g8_math": 280.41,
+   "naep_g8_reading": 261.75
+  },
+  {
+   "state": "NY",
+   "year": 2021,
+   "hs_grad_or_higher_share": 88.03,
+   "bachelors_or_higher_share": 39.92,
+   "pop25_plus": 13987094,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "NY",
+   "year": 2022,
+   "hs_grad_or_higher_share": 87.9,
+   "bachelors_or_higher_share": 40.0,
+   "pop25_plus": 13892241,
+   "naep_g4_math": 227.09,
+   "naep_g4_reading": 213.57,
+   "naep_g8_math": 274.27,
+   "naep_g8_reading": 261.66
+  },
+  {
+   "state": "NY",
+   "year": 2023,
+   "hs_grad_or_higher_share": 88.33,
+   "bachelors_or_higher_share": 40.64,
+   "pop25_plus": 13885155,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "NY",
+   "year": 2024,
+   "hs_grad_or_higher_share": 88.04,
+   "bachelors_or_higher_share": 41.22,
+   "pop25_plus": 14118068,
+   "naep_g4_math": 234.16,
+   "naep_g4_reading": 214.63,
+   "naep_g8_math": 270.85,
+   "naep_g8_reading": 256.87
+  },
+  {
+   "state": "OH",
+   "year": 2012,
+   "hs_grad_or_higher_share": 88.79,
+   "bachelors_or_higher_share": 25.24,
+   "pop25_plus": 7770716,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "OH",
+   "year": 2013,
+   "hs_grad_or_higher_share": 89.03,
+   "bachelors_or_higher_share": 26.14,
+   "pop25_plus": 7805254,
+   "naep_g4_math": 245.55,
+   "naep_g4_reading": 223.89,
+   "naep_g8_math": 289.53,
+   "naep_g8_reading": 269.09
+  },
+  {
+   "state": "OH",
+   "year": 2014,
+   "hs_grad_or_higher_share": 89.36,
+   "bachelors_or_higher_share": 26.63,
+   "pop25_plus": 7857460,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "OH",
+   "year": 2015,
+   "hs_grad_or_higher_share": 89.7,
+   "bachelors_or_higher_share": 26.79,
+   "pop25_plus": 7896470,
+   "naep_g4_math": 243.6,
+   "naep_g4_reading": 224.93,
+   "naep_g8_math": 285.06,
+   "naep_g8_reading": 265.88
+  },
+  {
+   "state": "OH",
+   "year": 2016,
+   "hs_grad_or_higher_share": 90.02,
+   "bachelors_or_higher_share": 27.51,
+   "pop25_plus": 7922061,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "OH",
+   "year": 2017,
+   "hs_grad_or_higher_share": 90.26,
+   "bachelors_or_higher_share": 27.96,
+   "pop25_plus": 7981885,
+   "naep_g4_math": 240.93,
+   "naep_g4_reading": 225.26,
+   "naep_g8_math": 287.71,
+   "naep_g8_reading": 268.45
+  },
+  {
+   "state": "OH",
+   "year": 2018,
+   "hs_grad_or_higher_share": 90.7,
+   "bachelors_or_higher_share": 28.97,
+   "pop25_plus": 8027035,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "OH",
+   "year": 2019,
+   "hs_grad_or_higher_share": 90.8,
+   "bachelors_or_higher_share": 29.28,
+   "pop25_plus": 8049805,
+   "naep_g4_math": 241.14,
+   "naep_g4_reading": 221.97,
+   "naep_g8_math": 285.71,
+   "naep_g8_reading": 267.05
+  },
+  {
+   "state": "OH",
+   "year": 2021,
+   "hs_grad_or_higher_share": 91.74,
+   "bachelors_or_higher_share": 30.72,
+   "pop25_plus": 8117973,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "OH",
+   "year": 2022,
+   "hs_grad_or_higher_share": 91.75,
+   "bachelors_or_higher_share": 31.98,
+   "pop25_plus": 8130929,
+   "naep_g4_math": 237.76,
+   "naep_g4_reading": 218.56,
+   "naep_g8_math": 276.06,
+   "naep_g8_reading": 262.0
+  },
+  {
+   "state": "OH",
+   "year": 2023,
+   "hs_grad_or_higher_share": 91.88,
+   "bachelors_or_higher_share": 32.03,
+   "pop25_plus": 8172692,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "OH",
+   "year": 2024,
+   "hs_grad_or_higher_share": 92.18,
+   "bachelors_or_higher_share": 32.35,
+   "pop25_plus": 8253310,
+   "naep_g4_math": 239.42,
+   "naep_g4_reading": 215.99,
+   "naep_g8_math": 278.81,
+   "naep_g8_reading": 260.42
+  },
+  {
+   "state": "MO",
+   "year": 2012,
+   "hs_grad_or_higher_share": 87.96,
+   "bachelors_or_higher_share": 26.41,
+   "pop25_plus": 4023641,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "MO",
+   "year": 2013,
+   "hs_grad_or_higher_share": 88.69,
+   "bachelors_or_higher_share": 26.96,
+   "pop25_plus": 4047283,
+   "naep_g4_math": 239.55,
+   "naep_g4_reading": 222.33,
+   "naep_g8_math": 282.99,
+   "naep_g8_reading": 267.22
+  },
+  {
+   "state": "MO",
+   "year": 2014,
+   "hs_grad_or_higher_share": 88.87,
+   "bachelors_or_higher_share": 27.49,
+   "pop25_plus": 4076767,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "MO",
+   "year": 2015,
+   "hs_grad_or_higher_share": 88.93,
+   "bachelors_or_higher_share": 27.84,
+   "pop25_plus": 4097212,
+   "naep_g4_math": 238.96,
+   "naep_g4_reading": 222.73,
+   "naep_g8_math": 280.82,
+   "naep_g8_reading": 266.88
+  },
+  {
+   "state": "MO",
+   "year": 2016,
+   "hs_grad_or_higher_share": 89.57,
+   "bachelors_or_higher_share": 28.46,
+   "pop25_plus": 4121014,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "MO",
+   "year": 2017,
+   "hs_grad_or_higher_share": 89.7,
+   "bachelors_or_higher_share": 29.05,
+   "pop25_plus": 4150275,
+   "naep_g4_math": 239.5,
+   "naep_g4_reading": 222.68,
+   "naep_g8_math": 280.6,
+   "naep_g8_reading": 266.04
+  },
+  {
+   "state": "MO",
+   "year": 2018,
+   "hs_grad_or_higher_share": 90.48,
+   "bachelors_or_higher_share": 29.55,
+   "pop25_plus": 4182787,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "MO",
+   "year": 2019,
+   "hs_grad_or_higher_share": 90.68,
+   "bachelors_or_higher_share": 30.22,
+   "pop25_plus": 4206162,
+   "naep_g4_math": 238.41,
+   "naep_g4_reading": 218.0,
+   "naep_g8_math": 280.76,
+   "naep_g8_reading": 263.29
+  },
+  {
+   "state": "MO",
+   "year": 2021,
+   "hs_grad_or_higher_share": 91.59,
+   "bachelors_or_higher_share": 31.72,
+   "pop25_plus": 4226634,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "MO",
+   "year": 2022,
+   "hs_grad_or_higher_share": 91.56,
+   "bachelors_or_higher_share": 32.2,
+   "pop25_plus": 4236010,
+   "naep_g4_math": 232.38,
+   "naep_g4_reading": 213.36,
+   "naep_g8_math": 272.15,
+   "naep_g8_reading": 257.63
+  },
+  {
+   "state": "MO",
+   "year": 2023,
+   "hs_grad_or_higher_share": 92.02,
+   "bachelors_or_higher_share": 33.22,
+   "pop25_plus": 4255810,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "MO",
+   "year": 2024,
+   "hs_grad_or_higher_share": 92.01,
+   "bachelors_or_higher_share": 33.47,
+   "pop25_plus": 4303277,
+   "naep_g4_math": 235.0,
+   "naep_g4_reading": 211.9,
+   "naep_g8_math": 270.36,
+   "naep_g8_reading": 255.28
+  },
+  {
+   "state": "CO",
+   "year": 2012,
+   "hs_grad_or_higher_share": 90.6,
+   "bachelors_or_higher_share": 37.48,
+   "pop25_plus": 3444654,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "CO",
+   "year": 2013,
+   "hs_grad_or_higher_share": 90.54,
+   "bachelors_or_higher_share": 37.8,
+   "pop25_plus": 3514235,
+   "naep_g4_math": 246.98,
+   "naep_g4_reading": 226.66,
+   "naep_g8_math": 289.68,
+   "naep_g8_reading": 271.01
+  },
+  {
+   "state": "CO",
+   "year": 2014,
+   "hs_grad_or_higher_share": 90.55,
+   "bachelors_or_higher_share": 38.34,
+   "pop25_plus": 3584463,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "CO",
+   "year": 2015,
+   "hs_grad_or_higher_share": 91.18,
+   "bachelors_or_higher_share": 39.24,
+   "pop25_plus": 3671853,
+   "naep_g4_math": 241.56,
+   "naep_g4_reading": 224.02,
+   "naep_g8_math": 285.54,
+   "naep_g8_reading": 268.07
+  },
+  {
+   "state": "CO",
+   "year": 2016,
+   "hs_grad_or_higher_share": 91.44,
+   "bachelors_or_higher_share": 39.86,
+   "pop25_plus": 3745506,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "CO",
+   "year": 2017,
+   "hs_grad_or_higher_share": 91.64,
+   "bachelors_or_higher_share": 41.2,
+   "pop25_plus": 3822068,
+   "naep_g4_math": 240.7,
+   "naep_g4_reading": 224.69,
+   "naep_g8_math": 286.25,
+   "naep_g8_reading": 270.34
+  },
+  {
+   "state": "CO",
+   "year": 2018,
+   "hs_grad_or_higher_share": 91.87,
+   "bachelors_or_higher_share": 41.68,
+   "pop25_plus": 3900287,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "CO",
+   "year": 2019,
+   "hs_grad_or_higher_share": 92.4,
+   "bachelors_or_higher_share": 42.66,
+   "pop25_plus": 3974943,
+   "naep_g4_math": 241.87,
+   "naep_g4_reading": 224.86,
+   "naep_g8_math": 284.67,
+   "naep_g8_reading": 267.31
+  },
+  {
+   "state": "CO",
+   "year": 2021,
+   "hs_grad_or_higher_share": 92.43,
+   "bachelors_or_higher_share": 44.42,
+   "pop25_plus": 4044182,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "CO",
+   "year": 2022,
+   "hs_grad_or_higher_share": 93.03,
+   "bachelors_or_higher_share": 45.91,
+   "pop25_plus": 4084004,
+   "naep_g4_math": 236.17,
+   "naep_g4_reading": 222.85,
+   "naep_g8_math": 275.11,
+   "naep_g8_reading": 263.45
+  },
+  {
+   "state": "CO",
+   "year": 2023,
+   "hs_grad_or_higher_share": 93.28,
+   "bachelors_or_higher_share": 46.43,
+   "pop25_plus": 4135123,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "CO",
+   "year": 2024,
+   "hs_grad_or_higher_share": 93.16,
+   "bachelors_or_higher_share": 47.77,
+   "pop25_plus": 4204962,
+   "naep_g4_math": 239.13,
+   "naep_g4_reading": 220.92,
+   "naep_g8_math": 278.11,
+   "naep_g8_reading": 264.54
+  },
+  {
+   "state": "TN",
+   "year": 2011,
+   "hs_grad_or_higher_share": 84.25,
+   "bachelors_or_higher_share": 23.61,
+   "pop25_plus": 4294392,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "TN",
+   "year": 2012,
+   "hs_grad_or_higher_share": 85.14,
+   "bachelors_or_higher_share": 24.28,
+   "pop25_plus": 4336473,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "TN",
+   "year": 2013,
+   "hs_grad_or_higher_share": 85.57,
+   "bachelors_or_higher_share": 24.77,
+   "pop25_plus": 4370035,
+   "naep_g4_math": 239.77,
+   "naep_g4_reading": 219.74,
+   "naep_g8_math": 277.72,
+   "naep_g8_reading": 265.36
+  },
+  {
+   "state": "TN",
+   "year": 2014,
+   "hs_grad_or_higher_share": 85.79,
+   "bachelors_or_higher_share": 25.27,
+   "pop25_plus": 4425073,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "TN",
+   "year": 2015,
+   "hs_grad_or_higher_share": 86.06,
+   "bachelors_or_higher_share": 25.73,
+   "pop25_plus": 4473487,
+   "naep_g4_math": 240.67,
+   "naep_g4_reading": 218.61,
+   "naep_g8_math": 278.2,
+   "naep_g8_reading": 264.77
+  },
+  {
+   "state": "TN",
+   "year": 2016,
+   "hs_grad_or_higher_share": 86.96,
+   "bachelors_or_higher_share": 26.13,
+   "pop25_plus": 4527198,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "TN",
+   "year": 2017,
+   "hs_grad_or_higher_share": 87.8,
+   "bachelors_or_higher_share": 27.33,
+   "pop25_plus": 4588453,
+   "naep_g4_math": 236.69,
+   "naep_g4_reading": 218.95,
+   "naep_g8_math": 278.78,
+   "naep_g8_reading": 262.05
+  },
+  {
+   "state": "TN",
+   "year": 2018,
+   "hs_grad_or_higher_share": 87.83,
+   "bachelors_or_higher_share": 27.48,
+   "pop25_plus": 4640823,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "TN",
+   "year": 2019,
+   "hs_grad_or_higher_share": 88.01,
+   "bachelors_or_higher_share": 28.72,
+   "pop25_plus": 4693962,
+   "naep_g4_math": 239.7,
+   "naep_g4_reading": 219.06,
+   "naep_g8_math": 280.08,
+   "naep_g8_reading": 262.46
+  },
+  {
+   "state": "TN",
+   "year": 2021,
+   "hs_grad_or_higher_share": 89.74,
+   "bachelors_or_higher_share": 30.48,
+   "pop25_plus": 4814533,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "TN",
+   "year": 2022,
+   "hs_grad_or_higher_share": 90.36,
+   "bachelors_or_higher_share": 31.1,
+   "pop25_plus": 4868110,
+   "naep_g4_math": 236.35,
+   "naep_g4_reading": 214.0,
+   "naep_g8_math": 271.98,
+   "naep_g8_reading": 257.56
+  },
+  {
+   "state": "TN",
+   "year": 2023,
+   "hs_grad_or_higher_share": 90.13,
+   "bachelors_or_higher_share": 31.68,
+   "pop25_plus": 4931967,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "TN",
+   "year": 2024,
+   "hs_grad_or_higher_share": 90.57,
+   "bachelors_or_higher_share": 32.42,
+   "pop25_plus": 4996558,
+   "naep_g4_math": 239.62,
+   "naep_g4_reading": 215.06,
+   "naep_g8_math": 275.98,
+   "naep_g8_reading": 258.97
+  },
+  {
+   "state": "MA",
+   "year": 2012,
+   "hs_grad_or_higher_share": 89.66,
+   "bachelors_or_higher_share": 39.28,
+   "pop25_plus": 4556609,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "MA",
+   "year": 2013,
+   "hs_grad_or_higher_share": 89.9,
+   "bachelors_or_higher_share": 40.29,
+   "pop25_plus": 4604795,
+   "naep_g4_math": 253.03,
+   "naep_g4_reading": 232.37,
+   "naep_g8_math": 300.57,
+   "naep_g8_reading": 277.01
+  },
+  {
+   "state": "MA",
+   "year": 2014,
+   "hs_grad_or_higher_share": 89.69,
+   "bachelors_or_higher_share": 41.18,
+   "pop25_plus": 4654351,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "MA",
+   "year": 2015,
+   "hs_grad_or_higher_share": 90.24,
+   "bachelors_or_higher_share": 41.47,
+   "pop25_plus": 4706644,
+   "naep_g4_math": 250.57,
+   "naep_g4_reading": 235.28,
+   "naep_g8_math": 296.91,
+   "naep_g8_reading": 274.5
+  },
+  {
+   "state": "MA",
+   "year": 2016,
+   "hs_grad_or_higher_share": 90.42,
+   "bachelors_or_higher_share": 42.74,
+   "pop25_plus": 4727515,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "MA",
+   "year": 2017,
+   "hs_grad_or_higher_share": 90.76,
+   "bachelors_or_higher_share": 43.41,
+   "pop25_plus": 4788573,
+   "naep_g4_math": 249.1,
+   "naep_g4_reading": 235.7,
+   "naep_g8_math": 297.04,
+   "naep_g8_reading": 277.78
+  },
+  {
+   "state": "MA",
+   "year": 2018,
+   "hs_grad_or_higher_share": 90.76,
+   "bachelors_or_higher_share": 44.53,
+   "pop25_plus": 4832728,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "MA",
+   "year": 2019,
+   "hs_grad_or_higher_share": 91.32,
+   "bachelors_or_higher_share": 44.98,
+   "pop25_plus": 4850576,
+   "naep_g4_math": 247.32,
+   "naep_g4_reading": 231.09,
+   "naep_g8_math": 294.47,
+   "naep_g8_reading": 273.11
+  },
+  {
+   "state": "MA",
+   "year": 2021,
+   "hs_grad_or_higher_share": 91.1,
+   "bachelors_or_higher_share": 46.62,
+   "pop25_plus": 4934755,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "MA",
+   "year": 2022,
+   "hs_grad_or_higher_share": 91.33,
+   "bachelors_or_higher_share": 46.65,
+   "pop25_plus": 4947384,
+   "naep_g4_math": 241.73,
+   "naep_g4_reading": 226.8,
+   "naep_g8_math": 283.59,
+   "naep_g8_reading": 268.75
+  },
+  {
+   "state": "MA",
+   "year": 2023,
+   "hs_grad_or_higher_share": 91.39,
+   "bachelors_or_higher_share": 47.78,
+   "pop25_plus": 4975152,
+   "naep_g4_math": null,
+   "naep_g4_reading": null,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "state": "MA",
+   "year": 2024,
+   "hs_grad_or_higher_share": 91.4,
+   "bachelors_or_higher_share": 48.27,
+   "pop25_plus": 5074342,
+   "naep_g4_math": 246.49,
+   "naep_g4_reading": 224.78,
+   "naep_g8_math": 283.47,
+   "naep_g8_reading": 268.01
+  }
+ ],
+ "city_year_joint_rows": [
+  {
+   "city": "Cincinnati",
+   "state": "OH",
+   "year": 2012,
+   "hs_grad_or_higher_share": 88.79,
+   "bachelors_or_higher_share": 25.24,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "city": "Cincinnati",
+   "state": "OH",
+   "year": 2013,
+   "hs_grad_or_higher_share": 89.03,
+   "bachelors_or_higher_share": 26.14,
+   "naep_g8_math": 289.53,
+   "naep_g8_reading": 269.09
+  },
+  {
+   "city": "Cincinnati",
+   "state": "OH",
+   "year": 2014,
+   "hs_grad_or_higher_share": 89.36,
+   "bachelors_or_higher_share": 26.63,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "city": "Cincinnati",
+   "state": "OH",
+   "year": 2015,
+   "hs_grad_or_higher_share": 89.7,
+   "bachelors_or_higher_share": 26.79,
+   "naep_g8_math": 285.06,
+   "naep_g8_reading": 265.88
+  },
+  {
+   "city": "Cincinnati",
+   "state": "OH",
+   "year": 2016,
+   "hs_grad_or_higher_share": 90.02,
+   "bachelors_or_higher_share": 27.51,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "city": "Cincinnati",
+   "state": "OH",
+   "year": 2017,
+   "hs_grad_or_higher_share": 90.26,
+   "bachelors_or_higher_share": 27.96,
+   "naep_g8_math": 287.71,
+   "naep_g8_reading": 268.45
+  },
+  {
+   "city": "Cincinnati",
+   "state": "OH",
+   "year": 2018,
+   "hs_grad_or_higher_share": 90.7,
+   "bachelors_or_higher_share": 28.97,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "city": "Cincinnati",
+   "state": "OH",
+   "year": 2019,
+   "hs_grad_or_higher_share": 90.8,
+   "bachelors_or_higher_share": 29.28,
+   "naep_g8_math": 285.71,
+   "naep_g8_reading": 267.05
+  },
+  {
+   "city": "Cincinnati",
+   "state": "OH",
+   "year": 2021,
+   "hs_grad_or_higher_share": 91.74,
+   "bachelors_or_higher_share": 30.72,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "city": "Cincinnati",
+   "state": "OH",
+   "year": 2022,
+   "hs_grad_or_higher_share": 91.75,
+   "bachelors_or_higher_share": 31.98,
+   "naep_g8_math": 276.06,
+   "naep_g8_reading": 262.0
+  },
+  {
+   "city": "Cincinnati",
+   "state": "OH",
+   "year": 2023,
+   "hs_grad_or_higher_share": 91.88,
+   "bachelors_or_higher_share": 32.03,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "city": "Cincinnati",
+   "state": "OH",
+   "year": 2024,
+   "hs_grad_or_higher_share": 92.18,
+   "bachelors_or_higher_share": 32.35,
+   "naep_g8_math": 278.81,
+   "naep_g8_reading": 260.42
+  },
+  {
+   "city": "Denver",
+   "state": "CO",
+   "year": 2021,
+   "hs_grad_or_higher_share": 92.43,
+   "bachelors_or_higher_share": 44.42,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "city": "Denver",
+   "state": "CO",
+   "year": 2022,
+   "hs_grad_or_higher_share": 93.03,
+   "bachelors_or_higher_share": 45.91,
+   "naep_g8_math": 275.11,
+   "naep_g8_reading": 263.45
+  },
+  {
+   "city": "Denver",
+   "state": "CO",
+   "year": 2023,
+   "hs_grad_or_higher_share": 93.28,
+   "bachelors_or_higher_share": 46.43,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "city": "Detroit",
+   "state": "MI",
+   "year": 2021,
+   "hs_grad_or_higher_share": 91.96,
+   "bachelors_or_higher_share": 31.67,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "city": "Detroit",
+   "state": "MI",
+   "year": 2022,
+   "hs_grad_or_higher_share": 91.84,
+   "bachelors_or_higher_share": 32.12,
+   "naep_g8_math": 272.55,
+   "naep_g8_reading": 258.51
+  },
+  {
+   "city": "Detroit",
+   "state": "MI",
+   "year": 2023,
+   "hs_grad_or_higher_share": 92.03,
+   "bachelors_or_higher_share": 32.68,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "city": "Detroit",
+   "state": "MI",
+   "year": 2024,
+   "hs_grad_or_higher_share": 92.24,
+   "bachelors_or_higher_share": 33.33,
+   "naep_g8_math": 269.98,
+   "naep_g8_reading": 255.06
+  },
+  {
+   "city": "Memphis",
+   "state": "TN",
+   "year": 2021,
+   "hs_grad_or_higher_share": 89.74,
+   "bachelors_or_higher_share": 30.48,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "city": "Memphis",
+   "state": "TN",
+   "year": 2022,
+   "hs_grad_or_higher_share": 90.36,
+   "bachelors_or_higher_share": 31.1,
+   "naep_g8_math": 271.98,
+   "naep_g8_reading": 257.56
+  },
+  {
+   "city": "Memphis",
+   "state": "TN",
+   "year": 2023,
+   "hs_grad_or_higher_share": 90.13,
+   "bachelors_or_higher_share": 31.68,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "city": "Memphis",
+   "state": "TN",
+   "year": 2024,
+   "hs_grad_or_higher_share": 90.57,
+   "bachelors_or_higher_share": 32.42,
+   "naep_g8_math": 275.98,
+   "naep_g8_reading": 258.97
+  },
+  {
+   "city": "NYC",
+   "state": "NY",
+   "year": 2012,
+   "hs_grad_or_higher_share": 85.31,
+   "bachelors_or_higher_share": 33.39,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "city": "NYC",
+   "state": "NY",
+   "year": 2013,
+   "hs_grad_or_higher_share": 85.59,
+   "bachelors_or_higher_share": 34.08,
+   "naep_g8_math": 281.81,
+   "naep_g8_reading": 266.35
+  },
+  {
+   "city": "NYC",
+   "state": "NY",
+   "year": 2014,
+   "hs_grad_or_higher_share": 85.74,
+   "bachelors_or_higher_share": 34.48,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "city": "NYC",
+   "state": "NY",
+   "year": 2015,
+   "hs_grad_or_higher_share": 85.96,
+   "bachelors_or_higher_share": 35.03,
+   "naep_g8_math": 280.09,
+   "naep_g8_reading": 263.25
+  },
+  {
+   "city": "NYC",
+   "state": "NY",
+   "year": 2016,
+   "hs_grad_or_higher_share": 86.32,
+   "bachelors_or_higher_share": 35.65,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "city": "NYC",
+   "state": "NY",
+   "year": 2017,
+   "hs_grad_or_higher_share": 86.58,
+   "bachelors_or_higher_share": 36.03,
+   "naep_g8_math": 281.69,
+   "naep_g8_reading": 264.16
+  },
+  {
+   "city": "NYC",
+   "state": "NY",
+   "year": 2018,
+   "hs_grad_or_higher_share": 87.15,
+   "bachelors_or_higher_share": 37.24,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "city": "NYC",
+   "state": "NY",
+   "year": 2021,
+   "hs_grad_or_higher_share": 88.03,
+   "bachelors_or_higher_share": 39.92,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "city": "NYC",
+   "state": "NY",
+   "year": 2022,
+   "hs_grad_or_higher_share": 87.9,
+   "bachelors_or_higher_share": 40.0,
+   "naep_g8_math": 274.27,
+   "naep_g8_reading": 261.66
+  },
+  {
+   "city": "NYC",
+   "state": "NY",
+   "year": 2023,
+   "hs_grad_or_higher_share": 88.33,
+   "bachelors_or_higher_share": 40.64,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "city": "NYC",
+   "state": "NY",
+   "year": 2024,
+   "hs_grad_or_higher_share": 88.04,
+   "bachelors_or_higher_share": 41.22,
+   "naep_g8_math": 270.85,
+   "naep_g8_reading": 256.87
+  },
+  {
+   "city": "St. Louis",
+   "state": "MO",
+   "year": 2019,
+   "hs_grad_or_higher_share": 90.68,
+   "bachelors_or_higher_share": 30.22,
+   "naep_g8_math": 280.76,
+   "naep_g8_reading": 263.29
+  },
+  {
+   "city": "St. Louis",
+   "state": "MO",
+   "year": 2021,
+   "hs_grad_or_higher_share": 91.59,
+   "bachelors_or_higher_share": 31.72,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "city": "St. Louis",
+   "state": "MO",
+   "year": 2022,
+   "hs_grad_or_higher_share": 91.56,
+   "bachelors_or_higher_share": 32.2,
+   "naep_g8_math": 272.15,
+   "naep_g8_reading": 257.63
+  },
+  {
+   "city": "St. Louis",
+   "state": "MO",
+   "year": 2023,
+   "hs_grad_or_higher_share": 92.02,
+   "bachelors_or_higher_share": 33.22,
+   "naep_g8_math": null,
+   "naep_g8_reading": null
+  },
+  {
+   "city": "St. Louis",
+   "state": "MO",
+   "year": 2024,
+   "hs_grad_or_higher_share": 92.01,
+   "bachelors_or_higher_share": 33.47,
+   "naep_g8_math": 270.36,
+   "naep_g8_reading": 255.28
+  }
+ ],
+ "first_joint_reads_direction_class": [
+  {
+   "pair": "naep_g8_math x state_hs_grad_or_higher_share",
+   "n": 48,
+   "rho": 0.173
+  },
+  {
+   "pair": "naep_g8_math x state_bachelors_or_higher_share",
+   "n": 48,
+   "rho": 0.373
+  },
+  {
+   "pair": "naep_g8_math within-state arc delta (first->last captured)",
+   "per_state": {
+    "MS": {
+     "from": [
+      2013,
+      271.16
+     ],
+     "to": [
+      2024,
+      269.06
+     ],
+     "delta": -2.1
+    },
+    "MI": {
+     "from": [
+      2013,
+      280.13
+     ],
+     "to": [
+      2024,
+      269.98
+     ],
+     "delta": -10.15
+    },
+    "NY": {
+     "from": [
+      2013,
+      281.81
+     ],
+     "to": [
+      2024,
+      270.85
+     ],
+     "delta": -10.96
+    },
+    "OH": {
+     "from": [
+      2013,
+      289.53
+     ],
+     "to": [
+      2024,
+      278.81
+     ],
+     "delta": -10.72
+    },
+    "MO": {
+     "from": [
+      2013,
+      282.99
+     ],
+     "to": [
+      2024,
+      270.36
+     ],
+     "delta": -12.63
+    },
+    "CO": {
+     "from": [
+      2013,
+      289.68
+     ],
+     "to": [
+      2024,
+      278.11
+     ],
+     "delta": -11.57
+    },
+    "TN": {
+     "from": [
+      2013,
+      277.72
+     ],
+     "to": [
+      2024,
+      275.98
+     ],
+     "delta": -1.74
+    },
+    "MA": {
+     "from": [
+      2013,
+      300.57
+     ],
+     "to": [
+      2024,
+      283.47
+     ],
+     "delta": -17.1
+    }
+   }
+  },
+  {
+   "pair": "state hs_grad_or_higher_share arc delta",
+   "per_state": {
+    "MS": {
+     "from": [
+      2011,
+      81.13
+     ],
+     "to": [
+      2024,
+      88.0
+     ],
+     "delta": 6.87
+    },
+    "MI": {
+     "from": [
+      2012,
+      89.19
+     ],
+     "to": [
+      2024,
+      92.24
+     ],
+     "delta": 3.05
+    },
+    "NY": {
+     "from": [
+      2012,
+      85.31
+     ],
+     "to": [
+      2024,
+      88.04
+     ],
+     "delta": 2.73
+    },
+    "OH": {
+     "from": [
+      2012,
+      88.79
+     ],
+     "to": [
+      2024,
+      92.18
+     ],
+     "delta": 3.39
+    },
+    "MO": {
+     "from": [
+      2012,
+      87.96
+     ],
+     "to": [
+      2024,
+      92.01
+     ],
+     "delta": 4.05
+    },
+    "CO": {
+     "from": [
+      2012,
+      90.6
+     ],
+     "to": [
+      2024,
+      93.16
+     ],
+     "delta": 2.56
+    },
+    "TN": {
+     "from": [
+      2011,
+      84.25
+     ],
+     "to": [
+      2024,
+      90.57
+     ],
+     "delta": 6.32
+    },
+    "MA": {
+     "from": [
+      2012,
+      89.66
+     ],
+     "to": [
+      2024,
+      91.4
+     ],
+     "delta": 1.74
+    }
+   }
+  }
+ ],
+ "files_banked": [
+  "_edu_raw/grad_lane_b15003_ftp_years.json (66 rows + audit)",
+  "_edu_raw/grad_lane_b15003_dat_years.json (40 rows, 2025 rows flagged)",
+  "_edu_raw/naep_testscore_lane_raw.jsonl (192 rows)",
+  "_edu_raw/acs[year]_1yr_[state]_allgeo.zip (raw FTP pulls, size-verified)",
+  "_edu_raw/acs1y_b15003_[2021-2025].dat (raw www2 pulls)",
+  "_edu_raw/lookups/seqtable_[2010-2019].txt (per-year B15003 seq/start lookups)",
+  "_edu_ftp_fetch.py + _edu_grad_lane_extract.py (the reproducible route)"
+ ]
+}

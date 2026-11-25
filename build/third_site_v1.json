@@ -1,0 +1,277 @@
+{
+  "artifact": "third_site_v1.json",
+  "built": "2026-11-24",
+  "spec_source": "founder third-site spec (Google-search a municipal skate park in a metro city we HAVE data in first; else pull data on a city that has one)",
+  "search_status": "METRO-WE-HAVE-DATA-IN = SATISFIED — Cincinnati is a full panel metro (care/cage FY2014-FY2027 banked, city dept-years 2004+, OH CDE files)",
+  "site": {
+    "name": "Camp Washington Skatepark",
+    "city": "Cincinnati, OH",
+    "address": "1201 Stock Ave, CRC Camp Washington Recreation Area",
+    "zip": "45225",
+    "police_district": "CPD District 3",
+    "claim": "Cincinnati's FIRST full-scale municipal public skatepark",
+    "size_sqft": {
+      "initial": 12000,
+      "final": 15500
+    },
+    "design_build": "Hunger Skateparks",
+    "features": "bowl 3.5ft shallow to 8ft deep; hours 6am-10pm daily; no membership",
+    "confidence": "Certain (CRC official page + CRC facility Socrata listing + press)"
+  },
+  "arc": {
+    "advocacy": "Cincinnati Skatepark Project — years of campaigning; site picked via resident surveys",
+    "council_reserve_approval": {
+      "amount": 300000,
+      "year": 2025,
+      "confidence": "Likely (Stray Rocket)"
+    },
+    "groundbreaking": "2026-04-03",
+    "opened": "2026-08-27 (grand opening / ribbon-cut)",
+    "confidence": "Certain (FOX19 + Enquirer + Cincinnati Exchange verified)"
+  },
+  "construction": {
+    "total": {
+      "amount": 950000,
+      "confidence": "Likely (three-source press: Enquirer + FOX19 + Stray Rocket)"
+    },
+    "paper_anchors": [
+      {
+        "line": "CRC Facilities Improvements - Skate Park Match - $250,000",
+        "book": "FY2025-26 biennial budget book (cincy_fy2526_biennial_v4_live.pdf, 473pp)",
+        "pdf_page": 60,
+        "context": "Mayor's FY2023-capital reallocation list (with Regional Safety Complex $2.25M, Bike Plan $400K)",
+        "confidence": "Certain - re-verified in this finalize by pypdf page-text extraction"
+      },
+      {
+        "line": "Outdoor Facilities Renovation - CSR: Camp Washington-Basketball / ADA access / Pavement - $100,000",
+        "book": "FY27 budget book (cincy_fy27_rec27_full.pdf, 515pp)",
+        "pdf_page": 325,
+        "companion_total": "Camp Washington FY27 total $6,150,000 (pdf p324-326, 482: Fleet Facility $6M + Outdoor $100K + St Rehab $50K)",
+        "confidence": "Certain - re-verified in this finalize by pypdf page-text extraction"
+      }
+    ],
+    "funding_mix": "city appropriations + foundation grants + ODNR matching grant (CRC-stated)",
+    "odnr_grant": {
+      "present": true,
+      "amount": null,
+      "note": "ODNR matching grant named in CRC funding mix; dollar amount not located in banked books - carried null + note, not fabricated"
+    },
+    "fy26_book_note": "FY2026 construction-year book has no 'skate' CIP line (funding passed across FY24 match + FY25 reserve + grants)"
+  },
+  "co_location": {
+    "class": "recreation-campus / partial (DIFFERENT from Raleigh Springs)",
+    "same_project": [
+      "skatepark",
+      "new playground",
+      "pool (Camp Washington Pool, 1201 Stock)",
+      "rebuilt basketball courts"
+    ],
+    "absent_on_site": [
+      "library",
+      "police precinct"
+    ],
+    "note": "the 'complete trinity' (park + library + police precinct) stays unique to Raleigh — this is the park-as-amenity-cluster instrument",
+    "nearest_crc_center": "Millvale Rec (45225)"
+  },
+  "crime": {
+    "source": "CDE (keyless) ORI OHCIP0000, Cincinnati PD — all series re-verified against raw payloads in finalize",
+    "ori": "OHCIP0000",
+    "population_ori": {
+      "2015": 298478,
+      "2025": 316260
+    },
+    "murders_2015_2025": {
+      "2015": 67,
+      "2016": 59,
+      "2017": 72,
+      "2018": 58,
+      "2019": 67,
+      "2020": 95,
+      "2021": 91,
+      "2022": 74,
+      "2023": 68,
+      "2024": 69,
+      "2025": 66
+    },
+    "murder_rate_per_100k": {
+      "2015": 22.45,
+      "2016": 19.74,
+      "2017": 24.07,
+      "2018": 19.21,
+      "2019": 22.09,
+      "2020": 31.18,
+      "2021": 29.81,
+      "2022": 24.04,
+      "2023": 21.97,
+      "2024": 22.14,
+      "2025": 20.87
+    },
+    "citywide_series_2015_2025": {
+      "aggravated_assault": {
+        "2015": 1200,
+        "2016": 1210,
+        "2017": 1279,
+        "2018": 1302,
+        "2019": 1357,
+        "2020": 1685,
+        "2021": 1581,
+        "2022": 1610,
+        "2023": 1358,
+        "2024": 1680,
+        "2025": 1641
+      },
+      "robbery": {
+        "2015": 1266,
+        "2016": 1279,
+        "2017": 1197,
+        "2018": 899,
+        "2019": 873,
+        "2020": 755,
+        "2021": 627,
+        "2022": 640,
+        "2023": 639,
+        "2024": 725,
+        "2025": 601
+      },
+      "rape": {
+        "2015": 255,
+        "2016": 255,
+        "2017": 317,
+        "2018": 333,
+        "2019": 318,
+        "2020": 234,
+        "2021": 247,
+        "2022": 273,
+        "2023": 237,
+        "2024": 202,
+        "2025": 185
+      },
+      "burglary": {
+        "2015": 4424,
+        "2016": 3934,
+        "2017": 3455,
+        "2018": 2987,
+        "2019": 2772,
+        "2020": 2329,
+        "2021": 1756,
+        "2022": 1884,
+        "2023": 1926,
+        "2024": 1726,
+        "2025": 1756
+      },
+      "larceny": {
+        "2015": 10947,
+        "2016": 10257,
+        "2017": 10223,
+        "2018": 9479,
+        "2019": 8980,
+        "2020": 7488,
+        "2021": 6911,
+        "2022": 7692,
+        "2023": 7624,
+        "2024": 7587,
+        "2025": 7427
+      },
+      "motor_vehicle_theft": {
+        "2015": 1163,
+        "2016": 1237,
+        "2017": 1491,
+        "2018": 1329,
+        "2019": 1353,
+        "2020": 1508,
+        "2021": 1468,
+        "2022": 2014,
+        "2023": 3767,
+        "2024": 2772,
+        "2025": 2224
+      },
+      "arson": {
+        "2015": 440,
+        "2016": 485,
+        "2017": 1,
+        "2018": 1,
+        "2019": 0,
+        "2020": 0,
+        "2021": 0,
+        "2022": 1,
+        "2023": 0,
+        "2024": 0,
+        "2025": 0,
+        "_data_note": "2015-2016 values (440/485) vs ~0-1 after — apparent offense-inclusion/reporting-rule change in the CDE series; carried honest, not smoothed"
+      }
+    },
+    "opencincy_site_level": {
+      "dataset": "OpenCincy t9kw-3jfx (CPD reported-crime, keyless Socrata)",
+      "coverage": "2020-2025, all 12/12 months present (month-completeness re-verified)",
+      "neighborhood_key": "snaneighborhood = 'Camp Washington' (case-sensitive; ALL-CAPS key returns zero — trap logged)",
+      "camp_washington_totals": {
+        "2020": 253,
+        "2021": 248,
+        "2022": 307,
+        "2023": 305,
+        "2024": 288,
+        "2025": 263
+      },
+      "camp_washington_violent": {
+        "2020": 23,
+        "2021": 21,
+        "2022": 29,
+        "2023": 30,
+        "2024": 29,
+        "2025": 23
+      },
+      "camp_washington_homicides": {
+        "2020": 0,
+        "2021": 1,
+        "2022": 2,
+        "2023": 0,
+        "2024": 1,
+        "2025": 0
+      },
+      "citywide_totals": {
+        "2020": 24890,
+        "2021": 23286,
+        "2022": 25268,
+        "2023": 27381,
+        "2024": 25323,
+        "2025": 24524
+      },
+      "citywide_violent": {
+        "2020": 2020,
+        "2021": 1852,
+        "2022": 1821,
+        "2023": 1900,
+        "2024": 2089,
+        "2025": 1972
+      },
+      "reconciliation_note": "summary-vs-verify deltas (CW total 258→253 in 2020, 310→307, 307→305, 284→288, 260→263): this finalize re-pulled live and its numbers are authoritative; deltas are small (~2%) and likely a neighborhood-shape/key difference in the first pass. Summary cited \"citywide violent 2036/1872/1806/1898/2095/1963\" — the live re-pull shows those are citywide TOTALS (all categories), while citywide VIOLENT is 2020-1972; the label, not the numbers, was mixed in the summary pass.",
+      "differential_design": "opening year 2026 is partial — pre/post differential buildable as 2026-partial vs matched-2025-partial (same convention as banked Raleigh pass); dataset starts 2020 (same honest-null short pre-period as MPD)"
+    }
+  },
+  "program_line_banked": [
+    "cincinnati_care_cage_series_v1.json (care/cage FY2014-FY2027, trough 2018-19, 0.728 by FY2027)",
+    "cincinnati_budget_deptyear_agg.json (3,212 dept-year rows)"
+  ],
+  "compare_to_banked_sites": {
+    "flagship": "Raleigh Springs Civic Center (Raleigh TN) — dated-treatment + clean-confounder instrument (the complete trinity)",
+    "second": "Kingsport TN — fully-countable three-line dollars instrument",
+    "this": "Camp Washington (Cincinnati OH) — park-as-amenity-cluster instrument in a full panel metro"
+  },
+  "laws_held": [
+    "numbers carry source-URLs / raw files (all CDE + OpenCincy + budget-book lines re-verified in finalize)",
+    "unavailable = null + note, never fabricated (ODNR amount carried null)",
+    "confidence tags on every dollar line [Certain/Likely]",
+    "honest-null pre-period stated (OpenCincy starts 2020; opening year partial)",
+    "score = never the goodness; direction-class only"
+  ],
+  "honest_nulls_open_subtasks": [
+    "web_search tool was down the whole search run — keyless routes used (curl + Google-News-RSS + DDG HTML + Socrata + Wikipedia API + Wayback CDX)",
+    "confounder sweep (YMCA / Boys&Girls Club / library 1-mi ring at Raleigh depth) NOT completed — DDG rate-walls + Overpass timeouts; flag as open sub-task",
+    "FY26 construction-year \"skate\" CIP line absent from books (see construction.fy26_book_note)"
+  ],
+  "workspace_files": {
+    "raw_cde": "_board2b/_cincy_pd_*_2015_2025.json (8 series)",
+    "budget_books": "_board2b/cincy_*.pdf, vol2_*.pdf, funded_projects_fy2627.pdf, fy26_inbrief.pdf",
+    "verify_script": "_board2b/_verify_opencincy.py + _board2b/_find_skate_match.py (re-pull + pypdf page-text verification)"
+  }
+}

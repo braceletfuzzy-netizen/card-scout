@@ -1,0 +1,627 @@
+{
+ "headline": {
+  "outcome_cells_banked": 584,
+  "city_year_window_span_total": 663,
+  "city_years_present": 576,
+  "city_years_dropped_interior": 116,
+  "history_carry_fraction": 0.832,
+  "read": "of every city-year that EXISTS in the banked windows, this fraction survived to a banked cell; the rest are drop events (publication stops, month-guards, format breaks) — the panel's history exists only where a city kept publishing through all of these."
+ },
+ "per_city_sweep": [
+  {
+   "city": "Albuquerque",
+   "window": "2011-2025",
+   "span_years": 15,
+   "present": 15,
+   "carry_fraction": 1.0,
+   "dropped_years": 0,
+   "class": "wide-lane (input $ never pulled — outcome cells only, no fit)"
+  },
+  {
+   "city": "Austin",
+   "window": "2011-2025",
+   "span_years": 15,
+   "present": 15,
+   "carry_fraction": 1.0,
+   "dropped_years": 0,
+   "class": "wide-lane (input $ never pulled — outcome cells only, no fit)"
+  },
+  {
+   "city": "Baltimore",
+   "window": "2011-2025",
+   "span_years": 15,
+   "present": 15,
+   "carry_fraction": 1.0,
+   "dropped_years": 0,
+   "class": "months-guard (non-reporting years dropped, never zeroed)"
+  },
+  {
+   "city": "Boston",
+   "window": "1980-2025",
+   "span_years": 46,
+   "present": 15,
+   "carry_fraction": 0.326,
+   "dropped_years": 31,
+   "class": "wide-lane (input $ never pulled — outcome cells only, no fit)"
+  },
+  {
+   "city": "Charlotte",
+   "window": "2011-2025",
+   "span_years": 15,
+   "present": 15,
+   "carry_fraction": 1.0,
+   "dropped_years": 0,
+   "class": "wide-lane (input $ never pulled — outcome cells only, no fit)"
+  },
+  {
+   "city": "Cincinnati",
+   "window": "2014-2025",
+   "span_years": 12,
+   "present": 12,
+   "carry_fraction": 1.0,
+   "dropped_years": 0,
+   "class": "panel city"
+  },
+  {
+   "city": "Columbus",
+   "window": "2011-2025",
+   "span_years": 15,
+   "present": 15,
+   "carry_fraction": 1.0,
+   "dropped_years": 0,
+   "class": "wide-lane (input $ never pulled — outcome cells only, no fit)"
+  },
+  {
+   "city": "Dallas",
+   "window": "2011-2025",
+   "span_years": 15,
+   "present": 15,
+   "carry_fraction": 1.0,
+   "dropped_years": 0,
+   "class": "wide-lane (input $ never pulled — outcome cells only, no fit)"
+  },
+  {
+   "city": "Denver",
+   "window": "2011-2025",
+   "span_years": 15,
+   "present": 15,
+   "carry_fraction": 1.0,
+   "dropped_years": 0,
+   "class": "panel city"
+  },
+  {
+   "city": "Detroit",
+   "window": "2012-2025",
+   "span_years": 14,
+   "present": 11,
+   "carry_fraction": 0.786,
+   "dropped_years": 3,
+   "class": "panel city"
+  },
+  {
+   "city": "Fort Worth",
+   "window": "2011-2025",
+   "span_years": 15,
+   "present": 15,
+   "carry_fraction": 1.0,
+   "dropped_years": 0,
+   "class": "wide-lane (input $ never pulled — outcome cells only, no fit)"
+  },
+  {
+   "city": "Fresno",
+   "window": "2011-2025",
+   "span_years": 15,
+   "present": 15,
+   "carry_fraction": 1.0,
+   "dropped_years": 0,
+   "class": "months-guard (non-reporting years dropped, never zeroed)"
+  },
+  {
+   "city": "Houston",
+   "window": "2004-2025",
+   "span_years": 22,
+   "present": 9,
+   "carry_fraction": 0.409,
+   "dropped_years": 13,
+   "class": "wide-lane (input $ never pulled — outcome cells only, no fit)"
+  },
+  {
+   "city": "Indianapolis",
+   "window": "2011-2025",
+   "span_years": 15,
+   "present": 15,
+   "carry_fraction": 1.0,
+   "dropped_years": 0,
+   "class": "wide-lane (input $ never pulled — outcome cells only, no fit)"
+  },
+  {
+   "city": "Jacksonville",
+   "window": "2021-2025",
+   "span_years": 5,
+   "present": 5,
+   "carry_fraction": 1.0,
+   "dropped_years": 0,
+   "class": "months-guard (non-reporting years dropped, never zeroed)"
+  },
+  {
+   "city": "Kansas City",
+   "window": "2011-2025",
+   "span_years": 15,
+   "present": 15,
+   "carry_fraction": 1.0,
+   "dropped_years": 0,
+   "class": "wide-lane (input $ never pulled — outcome cells only, no fit)"
+  },
+  {
+   "city": "Las Vegas",
+   "window": "2011-2025",
+   "span_years": 15,
+   "present": 15,
+   "carry_fraction": 1.0,
+   "dropped_years": 0,
+   "class": "wide-lane (input $ never pulled — outcome cells only, no fit)"
+  },
+  {
+   "city": "Long Beach",
+   "window": "2011-2025",
+   "span_years": 15,
+   "present": 14,
+   "carry_fraction": 0.933,
+   "dropped_years": 1,
+   "class": "months-guard (non-reporting years dropped, never zeroed)"
+  },
+  {
+   "city": "Memphis",
+   "window": "2020-2025",
+   "span_years": 6,
+   "present": 6,
+   "carry_fraction": 1.0,
+   "dropped_years": 0,
+   "class": "panel city"
+  },
+  {
+   "city": "Milwaukee",
+   "window": "2011-2025",
+   "span_years": 15,
+   "present": 15,
+   "carry_fraction": 1.0,
+   "dropped_years": 0,
+   "class": "wide-lane (input $ never pulled — outcome cells only, no fit)"
+  },
+  {
+   "city": "NYC",
+   "window": "1980-2025",
+   "span_years": 46,
+   "present": 46,
+   "carry_fraction": 1.0,
+   "dropped_years": 0,
+   "class": "panel city"
+  },
+  {
+   "city": "Nashville",
+   "window": "2011-2025",
+   "span_years": 15,
+   "present": 15,
+   "carry_fraction": 1.0,
+   "dropped_years": 0,
+   "class": "wide-lane (input $ never pulled — outcome cells only, no fit)"
+  },
+  {
+   "city": "New Orleans",
+   "window": "1990-2024",
+   "span_years": 35,
+   "present": 13,
+   "carry_fraction": 0.371,
+   "dropped_years": 22,
+   "class": "wide-lane (input $ never pulled — outcome cells only, no fit)"
+  },
+  {
+   "city": "Oklahoma City",
+   "window": "2019-2025",
+   "span_years": 7,
+   "present": 7,
+   "carry_fraction": 1.0,
+   "dropped_years": 0,
+   "class": "months-guard (non-reporting years dropped, never zeroed)"
+  },
+  {
+   "city": "Omaha",
+   "window": "2011-2025",
+   "span_years": 15,
+   "present": 14,
+   "carry_fraction": 0.933,
+   "dropped_years": 1,
+   "class": "months-guard (non-reporting years dropped, never zeroed)"
+  },
+  {
+   "city": "Philadelphia",
+   "window": "2011-2025",
+   "span_years": 15,
+   "present": 15,
+   "carry_fraction": 1.0,
+   "dropped_years": 0,
+   "class": "wide-lane (input $ never pulled — outcome cells only, no fit)"
+  },
+  {
+   "city": "Phoenix",
+   "window": "2011-2025",
+   "span_years": 15,
+   "present": 14,
+   "carry_fraction": 0.933,
+   "dropped_years": 1,
+   "class": "months-guard (non-reporting years dropped, never zeroed)"
+  },
+  {
+   "city": "Pittsburgh",
+   "window": "2019-2025",
+   "span_years": 7,
+   "present": 6,
+   "carry_fraction": 0.857,
+   "dropped_years": 1,
+   "class": "months-guard (non-reporting years dropped, never zeroed)"
+  },
+  {
+   "city": "Portland",
+   "window": "2011-2025",
+   "span_years": 15,
+   "present": 15,
+   "carry_fraction": 1.0,
+   "dropped_years": 0,
+   "class": "wide-lane (input $ never pulled — outcome cells only, no fit)"
+  },
+  {
+   "city": "Raleigh",
+   "window": "2011-2025",
+   "span_years": 15,
+   "present": 11,
+   "carry_fraction": 0.733,
+   "dropped_years": 4,
+   "class": "months-guard (non-reporting years dropped, never zeroed)"
+  },
+  {
+   "city": "Sacramento",
+   "window": "2011-2025",
+   "span_years": 15,
+   "present": 14,
+   "carry_fraction": 0.933,
+   "dropped_years": 1,
+   "class": "months-guard (non-reporting years dropped, never zeroed)"
+  },
+  {
+   "city": "San Antonio",
+   "window": "2011-2025",
+   "span_years": 15,
+   "present": 15,
+   "carry_fraction": 1.0,
+   "dropped_years": 0,
+   "class": "wide-lane (input $ never pulled — outcome cells only, no fit)"
+  },
+  {
+   "city": "San Diego",
+   "window": "2011-2025",
+   "span_years": 15,
+   "present": 15,
+   "carry_fraction": 1.0,
+   "dropped_years": 0,
+   "class": "wide-lane (input $ never pulled — outcome cells only, no fit)"
+  },
+  {
+   "city": "San Francisco",
+   "window": "2011-2025",
+   "span_years": 15,
+   "present": 14,
+   "carry_fraction": 0.933,
+   "dropped_years": 1,
+   "class": "months-guard (non-reporting years dropped, never zeroed)"
+  },
+  {
+   "city": "Seattle",
+   "window": "2011-2025",
+   "span_years": 15,
+   "present": 15,
+   "carry_fraction": 1.0,
+   "dropped_years": 0,
+   "class": "wide-lane (input $ never pulled — outcome cells only, no fit)"
+  },
+  {
+   "city": "St. Louis",
+   "window": "1998-2025",
+   "span_years": 28,
+   "present": 21,
+   "carry_fraction": 0.75,
+   "dropped_years": 7,
+   "class": "panel city"
+  },
+  {
+   "city": "Tucson",
+   "window": "2011-2025",
+   "span_years": 15,
+   "present": 14,
+   "carry_fraction": 0.933,
+   "dropped_years": 1,
+   "class": "months-guard (non-reporting years dropped, never zeroed)"
+  },
+  {
+   "city": "Tulsa",
+   "window": "2011-2025",
+   "span_years": 15,
+   "present": 15,
+   "carry_fraction": 1.0,
+   "dropped_years": 0,
+   "class": "wide-lane (input $ never pulled — outcome cells only, no fit)"
+  },
+  {
+   "city": "Virginia Beach",
+   "window": "2011-2025",
+   "span_years": 15,
+   "present": 15,
+   "carry_fraction": 1.0,
+   "dropped_years": 0,
+   "class": "wide-lane (input $ never pulled — outcome cells only, no fit)"
+  },
+  {
+   "city": "Wichita",
+   "window": "2011-2025",
+   "span_years": 15,
+   "present": 15,
+   "carry_fraction": 1.0,
+   "dropped_years": 0,
+   "class": "wide-lane (input $ never pulled — outcome cells only, no fit)"
+  }
+ ],
+ "months_guard_events": {
+  "Phoenix": {
+   "2021": {
+    "months": 2,
+    "src_file": "crime_wide.jsonl"
+   }
+  },
+  "Jacksonville": {
+   "2011": {
+    "months": 0,
+    "src_file": "crime_wide.jsonl"
+   },
+   "2012": {
+    "months": 0,
+    "src_file": "crime_wide.jsonl"
+   },
+   "2013": {
+    "months": 0,
+    "src_file": "crime_wide.jsonl"
+   },
+   "2014": {
+    "months": 0,
+    "src_file": "crime_wide.jsonl"
+   },
+   "2015": {
+    "months": 0,
+    "src_file": "crime_wide.jsonl"
+   },
+   "2016": {
+    "months": 0,
+    "src_file": "crime_wide.jsonl"
+   },
+   "2017": {
+    "months": 0,
+    "src_file": "crime_wide.jsonl"
+   },
+   "2018": {
+    "months": 0,
+    "src_file": "crime_wide.jsonl"
+   },
+   "2019": {
+    "months": 0,
+    "src_file": "crime_wide.jsonl"
+   },
+   "2020": {
+    "months": 0,
+    "src_file": "crime_wide.jsonl"
+   }
+  },
+  "San Francisco": {
+   "2021": {
+    "months": 0,
+    "src_file": "crime_wide.jsonl"
+   }
+  },
+  "Baltimore": {
+   "2021": {
+    "months": 7,
+    "src_file": "crime_wide_b.jsonl"
+   }
+  },
+  "Fresno": {
+   "2019": {
+    "months": 10,
+    "src_file": "crime_wide_b.jsonl"
+   }
+  },
+  "Long Beach": {
+   "2021": {
+    "months": 9,
+    "src_file": "crime_wide_b.jsonl"
+   }
+  },
+  "Omaha": {
+   "2021": {
+    "months": 0,
+    "src_file": "crime_wide_b.jsonl"
+   },
+   "2023": {
+    "months": 7,
+    "src_file": "crime_wide_b.jsonl"
+   }
+  },
+  "Raleigh": {
+   "2014": {
+    "months": 5,
+    "src_file": "crime_wide_b.jsonl"
+   },
+   "2015": {
+    "months": 0,
+    "src_file": "crime_wide_b.jsonl"
+   },
+   "2016": {
+    "months": 0,
+    "src_file": "crime_wide_b.jsonl"
+   },
+   "2017": {
+    "months": 0,
+    "src_file": "crime_wide_b.jsonl"
+   },
+   "2018": {
+    "months": 3,
+    "src_file": "crime_wide_b.jsonl"
+   }
+  },
+  "Sacramento": {
+   "2021": {
+    "months": 0,
+    "src_file": "crime_wide_b.jsonl"
+   }
+  },
+  "Tucson": {
+   "2021": {
+    "months": 0,
+    "src_file": "crime_wide_b.jsonl"
+   }
+  },
+  "Pittsburgh": {
+   "2019": {
+    "months": 11,
+    "src_file": "crime_wide_c.jsonl"
+   },
+   "2021": {
+    "months": 8,
+    "src_file": "crime_wide_c.jsonl"
+   },
+   "2026": {
+    "months": 5,
+    "src_file": "crime_wide_c.jsonl"
+   }
+  },
+  "Oklahoma City": {
+   "2026": {
+    "months": 10,
+    "src_file": "crime_wide_c.jsonl"
+   }
+  },
+  "Detroit": {
+   "2026": {
+    "months": 11,
+    "src_file": "crime_wide_c.jsonl"
+   }
+  }
+ },
+ "partials_2026_class": [
+  [
+   "Boston",
+   2026
+  ],
+  [
+   "Cincinnati",
+   2026
+  ],
+  [
+   "Detroit",
+   2026
+  ],
+  [
+   "Houston",
+   2026
+  ],
+  [
+   "Memphis",
+   2026
+  ],
+  [
+   "Oklahoma City",
+   2026
+  ],
+  [
+   "Pittsburgh",
+   2026
+  ],
+  [
+   "St. Louis",
+   2026
+  ]
+ ],
+ "panel_city_spans": {
+  "Cincinnati": {
+   "panel_rows": 24,
+   "panel_span": "2004-2027",
+   "panel_span_years": 24,
+   "outcome_cells_present": 13,
+   "outcome_interior_gaps": [],
+   "input_lane": "care/cage city-books (Cincinnati 2004-2025; Detroit 2012+; Memphis 2021+; NYC IBO 1980+; St. Louis 2019+; Denver 2021-2023 no-denominator)"
+  },
+  "Denver": {
+   "panel_rows": 3,
+   "panel_span": "2021-2023",
+   "panel_span_years": 3,
+   "outcome_cells_present": 15,
+   "outcome_interior_gaps": [],
+   "input_lane": "care/cage city-books (Cincinnati 2004-2025; Detroit 2012+; Memphis 2021+; NYC IBO 1980+; St. Louis 2019+; Denver 2021-2023 no-denominator)"
+  },
+  "Detroit": {
+   "panel_rows": 9,
+   "panel_span": "2020-2028",
+   "panel_span_years": 9,
+   "outcome_cells_present": 12,
+   "outcome_interior_gaps": [
+    2014,
+    2017,
+    2018
+   ],
+   "input_lane": "care/cage city-books (Cincinnati 2004-2025; Detroit 2012+; Memphis 2021+; NYC IBO 1980+; St. Louis 2019+; Denver 2021-2023 no-denominator)"
+  },
+  "Memphis": {
+   "panel_rows": 6,
+   "panel_span": "2021-2026",
+   "panel_span_years": 6,
+   "outcome_cells_present": 7,
+   "outcome_interior_gaps": [],
+   "input_lane": "care/cage city-books (Cincinnati 2004-2025; Detroit 2012+; Memphis 2021+; NYC IBO 1980+; St. Louis 2019+; Denver 2021-2023 no-denominator)"
+  },
+  "NYC": {
+   "panel_rows": 45,
+   "panel_span": "1980-2025",
+   "panel_span_years": 46,
+   "outcome_cells_present": 46,
+   "outcome_interior_gaps": [],
+   "input_lane": "care/cage city-books (Cincinnati 2004-2025; Detroit 2012+; Memphis 2021+; NYC IBO 1980+; St. Louis 2019+; Denver 2021-2023 no-denominator)"
+  },
+  "St. Louis": {
+   "panel_rows": 7,
+   "panel_span": "2019-2025",
+   "panel_span_years": 7,
+   "outcome_cells_present": 22,
+   "outcome_interior_gaps": [
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009
+   ],
+   "input_lane": "care/cage city-books (Cincinnati 2004-2025; Detroit 2012+; Memphis 2021+; NYC IBO 1980+; St. Louis 2019+; Denver 2021-2023 no-denominator)"
+  }
+ },
+ "banked_drop_events_named": {
+  "St. Louis 2003-2009": "7-year interior publication gap (banked outcome series)",
+  "New Orleans 1990-2024": "22 interior missing years across the span (banked); NOLA 2025 = 0/12 months non-reporting excluded (banked months-guard)",
+  "Houston 2004-2026": "13 interior missing years (banked); care-gap years 2011/2019-class carried labeled (nola_houston_pair banked)",
+  "Raleigh 2015-2018": "4-year gap after the 5/12-months 2014 report (banked months-guard)",
+  "Boston 1980-2026": "33 interior missing years (banked); 2026 partial excluded",
+  "Jacksonville 2011-2020": "10 consecutive non-reporting years 0/12 months (banked NULL-guard class) — the no-bookings class founder-named",
+  "Omaha/Fresno/Baltimore/Long Beach/Sacramento/Tucson/SF/Phoenix/Pittsburgh": "single-year or two-year months-guard drops (banked)",
+  "Detroit 2014/2017/2018 + 2026 11-months": "interior publication gaps + partial (banked)",
+  "Denver": "care dollars only, no murder denominator in the panel window (eff-panel guard, banked)",
+  "NYC pre-2021": "no ACS inputs (honest-null input side); NYC carries 45 panel rows on IBO care lane but only ONE complete predicted city-year (2001; eff-panel banked)",
+  "PIT homelessness 2013/2016": "HUD published nothing at per-CoC route (banked honest-null, never backfilled)",
+  "eviction judgments 2020-21": "COVID freeze flags (banked)",
+  "TX state MH budget biennial": "state-lane years excluded (banked)"
+ }
+}

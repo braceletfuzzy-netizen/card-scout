@@ -1,0 +1,364 @@
+[
+ {
+  "paperId": "1adf4e47fa0f8e03edceba242641b301ac1ee481",
+  "title": "Locomotives of Local Growth: The Short- and Long-Term Impact of Railroads in Sweden",
+  "venue": "",
+  "year": 2017,
+  "citationCount": 181,
+  "openAccessPdf": {
+   "url": "https://lup.lub.lu.se/search/files/5899588/7868956",
+   "status": "GREEN",
+   "license": "other-oa",
+   "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1016/J.JUE.2015.09.001?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1016/J.JUE.2015.09.001, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+  },
+  "authors": [
+   {
+    "authorId": "81515987",
+    "name": "T. Berger"
+   },
+   {
+    "authorId": "98028165",
+    "name": "Kerstin Enflo"
+   }
+  ],
+  "abstract": null,
+  "key": "Frisvold 2015 breakfast"
+ },
+ {
+  "paperId": "d91545a95bec31c3f67da3a648b09fff705aae37",
+  "title": "The Signaling Value of a High School Diploma",
+  "venue": "Journal of Political Economy",
+  "year": 2014,
+  "citationCount": 169,
+  "openAccessPdf": {
+   "url": "",
+   "status": "CLOSED",
+   "license": null,
+   "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1086/675238?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1086/675238, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+  },
+  "authors": [
+   {
+    "authorId": "50441622",
+    "name": "Damon Clark"
+   },
+   {
+    "authorId": "40026481",
+    "name": "P. Martorell"
+   }
+  ],
+  "abstract": null,
+  "key": "Jacob TEACH"
+ },
+ {
+  "paperId": "ca30c7dbe4159532466416e6f58464b9fd7a64e1",
+  "title": "Neighborhoods and violent crime: a multilevel study of collective efficacy.",
+  "venue": "Science",
+  "year": 1997,
+  "citationCount": 12376,
+  "openAccessPdf": {
+   "url": "",
+   "status": "CLOSED",
+   "license": null,
+   "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1126/SCIENCE.277.5328.918?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1126/SCIENCE.277.5328.918, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+  },
+  "authors": [
+   {
+    "authorId": "3127687",
+    "name": "R. Sampson"
+   },
+   {
+    "authorId": "2077414229",
+    "name": "S. Raudenbush"
+   },
+   {
+    "authorId": "152350840",
+    "name": "F. Earls"
+   }
+  ],
+  "abstract": null,
+  "key": "Sampson 1997 Science"
+ },
+ {
+  "paperId": "5ef84e7acf542c3ceb69257692e0efbffc189a3c",
+  "title": "New Perspectives on Emergence in Economics",
+  "venue": "",
+  "year": 2012,
+  "citationCount": 72,
+  "openAccessPdf": {
+   "url": "https://doi.org/10.2139/ssrn.2650391",
+   "status": "GREEN",
+   "license": null,
+   "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1016/J.JEBO.2012.02.004?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1016/J.JEBO.2012.02.004, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+  },
+  "authors": [
+   {
+    "authorId": "2070424080",
+    "name": "David A. Harper"
+   },
+   {
+    "authorId": "2411169324",
+    "name": "P. Lewis"
+   }
+  ],
+  "abstract": null,
+  "key": "Akcomak ter Weel"
+ },
+ {
+  "doi": "10.1257/jep.30.4.141",
+  "error": "404",
+  "key": "Chetty MTO JEP/REStat"
+ },
+ {
+  "paperId": "84829243b614c20cd71647f580f31454ce49c579",
+  "title": "Wealth Inequality in the United States since 1913: Evidence from Capitalized Income Tax Data",
+  "venue": "",
+  "year": 2016,
+  "citationCount": 1676,
+  "openAccessPdf": {
+   "url": "https://doi.org/10.3386/w20625",
+   "status": "CLOSED",
+   "license": null,
+   "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1093/QJE/QJW004?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1093/QJE/QJW004, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+  },
+  "authors": [
+   {
+    "authorId": "8418288",
+    "name": "Emmanuel Saez"
+   },
+   {
+    "authorId": "103450873",
+    "name": "Gabriel Zucman"
+   }
+  ],
+  "abstract": null,
+  "key": "Chetty Hendren Katz QJE 2016"
+ },
+ {
+  "paperId": "767c44ce7a89739071cb6cc92ed495626b5f2bc3",
+  "title": "What Hinders Investment in the Aftermath of Financial Crises: Insolvent Firms or Illiquid Banks?",
+  "venue": "Review of Economics and Statistics",
+  "year": 2010,
+  "citationCount": 101,
+  "openAccessPdf": {
+   "url": "https://doi.org/10.3386/w16528",
+   "status": "GREEN",
+   "license": null,
+   "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1162/REST_a_00590?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1162/REST_a_00590, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+  },
+  "authors": [
+   {
+    "authorId": "1411640319",
+    "name": "S. Kalemli-ozcan"
+   },
+   {
+    "authorId": "66720483",
+    "name": "H. Kamil"
+   },
+   {
+    "authorId": "1403069825",
+    "name": "Carolina Villegas-Sanchez"
+   }
+  ],
+  "abstract": null,
+  "key": "Chetty Hendren REStat 2016"
+ },
+ {
+  "paperId": "8768a559e2d6d2baea5749af42e944ec22d4f31f",
+  "title": "The Short- and Long-Term Career Effects of Graduating in a Recession",
+  "venue": "",
+  "year": 2012,
+  "citationCount": 985,
+  "openAccessPdf": {
+   "url": "https://www.aeaweb.org/articles/pdf/doi/10.1257/app.4.1.1",
+   "status": "BRONZE",
+   "license": null,
+   "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1257/APP.4.1.1?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1257/APP.4.1.1, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+  },
+  "authors": [
+   {
+    "authorId": "5700930",
+    "name": "Philip Oreopoulos"
+   },
+   {
+    "authorId": "117842972",
+    "name": "T. V. von Wachter"
+   },
+   {
+    "authorId": "75096042",
+    "name": "A. Heisz"
+   }
+  ],
+  "abstract": null,
+  "key": "Heller summer jobs"
+ },
+ {
+  "doi": "10.1177/1529100611416638",
+  "error": "404",
+  "key": "Braga 2012 focused deterrence"
+ },
+ {
+  "paperId": "898cbb5a084aa818ba1fe651a33fb355314bd0ba",
+  "title": "In utero exposures, season of birth and population studies of older adults: Author's reply",
+  "venue": "",
+  "year": 2011,
+  "citationCount": 0,
+  "openAccessPdf": {
+   "url": "",
+   "status": "CLOSED",
+   "license": null,
+   "disclaimer": "Notice: The following paper fields have been elided by the publisher: {'abstract'}. Paper or abstract available at https://api.unpaywall.org/v2/10.1016/J.SOCSCIMED.2010.12.020?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1016/J.SOCSCIMED.2010.12.020, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+  },
+  "authors": [
+   {
+    "authorId": "50197445",
+    "name": "M. McEniry"
+   }
+  ],
+  "abstract": null,
+  "key": "DuBois 2011"
+ },
+ {
+  "paperId": "668d0bae512fe139193cfd5f00413235726c3584",
+  "title": "Political Centralization and Government Accountability",
+  "venue": "",
+  "year": 2016,
+  "citationCount": 84,
+  "openAccessPdf": {
+   "url": "https://repositori.upf.edu/bitstreams/e9943119-5ad4-445b-a2b9-b980432dcb2d/download",
+   "status": "GREEN",
+   "license": "CCBYNCND",
+   "disclaimer": "Notice: Paper or abstract available at https://api.unpaywall.org/v2/10.1093/QJE/QJV035?email=<INSERT_YOUR_EMAIL> or https://doi.org/10.1093/QJE/QJV035, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+  },
+  "authors": [
+   {
+    "authorId": "81837620",
+    "name": "F. Boffa"
+   },
+   {
+    "authorId": "2521720",
+    "name": "Amedeo Piolatto"
+   },
+   {
+    "authorId": "98060361",
+    "name": "G. Ponzetto"
+   }
+  ],
+  "abstract": "This article explains why decentralization can undermine accountability and answers three questions: what determines if power should be centralized or decentralized when regions are heterogeneous? How many levels of government should there be? How should state borders be drawn? We develop a model of political agency in which voters differ in their ability to monitor rent-seeking politicians. We find that rent extraction is a decreasing and convex function of the share of informed voters, because voter information improves monitoring but also reduces the appeal of holding office. As a result, information heterogeneity pushes toward centralization to reduce rent extraction. Taste heterogeneity pulls instead toward decentralization to match local preferences. Our model thus implies that optimal borders should cluster by tastes but ensure diversity of information. We also find economies of scope in accountability that explain why multiplying government tiers harms efficiency. A single government in charge of many policies has better incentives than many special-purpose governments splitting its budget and responsibilities. Hence, a federal system is desirable only if information varies enough across regions. JEL Codes: D72, D82, H73, H77.",
+  "key": "Jackson QJE"
+ },
+ {
+  "doi": "10.1007/s11524-014-9897-1",
+  "error": "404",
+  "key": "Reyes lead"
+ },
+ {
+  "doi": "10.1016/s0013-9351(00)00097-7",
+  "error": "404",
+  "key": "Nevin 2000"
+ },
+ {
+  "paperId": "b9ed9f4a85cfd61cab11e4a7bfb42fd4e06539bf",
+  "title": "Social capital II: determinants of economic connectedness",
+  "venue": "Nature",
+  "year": 2022,
+  "citationCount": 239,
+  "openAccessPdf": {
+   "url": "https://www.nature.com/articles/s41586-022-04997-3.pdf",
+   "status": "HYBRID",
+   "license": "CCBY",
+   "disclaimer": "Notice: Paper or abstract available at https://pmc.ncbi.nlm.nih.gov/articles/PMC9352593, which is subject to the license by the author or copyright owner provided with this content. Please go to the source to verify the license and copyright information for your use."
+  },
+  "authors": [
+   {
+    "authorId": "50976894",
+    "name": "Raj Chetty"
+   },
+   {
+    "authorId": "1724913",
+    "name": "M. Jackson"
+   },
+   {
+    "authorId": "79403023",
+    "name": "Theresa Kuchler"
+   },
+   {
+    "authorId": "51486091",
+    "name": "Johannes Stroebel"
+   },
+   {
+    "authorId": "3920191",
+    "name": "Nathaniel Hendren"
+   },
+   {
+    "authorId": "2180043293",
+    "name": "R. Fluegge"
+   },
+   {
+    "authorId": "2180044330",
+    "name": "Sara Gong"
+   },
+   {
+    "authorId": "2180026361",
+    "name": "Federico Gonzalez"
+   },
+   {
+    "authorId": "2180042943",
+    "name": "Armelle Grondin"
+   },
+   {
+    "authorId": "2163698979",
+    "name": "Matthew Jacob"
+   },
+   {
+    "authorId": "47359812",
+    "name": "Drew Johnston"
+   },
+   {
+    "authorId": "2075498768",
+    "name": "Martin Koenen"
+   },
+   {
+    "authorId": "2113839608",
+    "name": "Eduardo Laguna-Muggenburg"
+   },
+   {
+    "authorId": "2114459011",
+    "name": "Florian Mudekereza"
+   },
+   {
+    "authorId": "2555440214",
+    "name": "Tom A. Rutter"
+   },
+   {
+    "authorId": "2180043043",
+    "name": "Nicolaj Thor"
+   },
+   {
+    "authorId": "51309608",
+    "name": "Wilbur Townsend"
+   },
+   {
+    "authorId": "2180297329",
+    "name": "Ruby Zhang"
+   },
+   {
+    "authorId": "2069434278",
+    "name": "Michael C. Bailey"
+   },
+   {
+    "authorId": "47206305",
+    "name": "Pablo Barber\u00e1"
+   },
+   {
+    "authorId": "84583464",
+    "name": "Monica Bhole"
+   },
+   {
+    "authorId": "3610247",
+    "name": "Nils Wernerfelt"
+   }
+  ],
+  "abstract": "Low levels of social interaction across class lines have generated widespread concern1\u20134 and are associated with worse outcomes, such as lower rates of upward income mobility4\u20137. Here we analyse the determinants of cross-class interaction using data from Facebook, building on the analysis in our companion paper7. We show that about half of the social disconnection across socioeconomic lines\u2014measured as the difference in the share of high-socioeconomic status (SES) friends between people with low and high SES\u2014is explained by differences in exposure to people with high SES in groups such as schools and religious organizations. The other half is explained by friending bias\u2014the tendency for people with low SES to befriend people with high SES at lower rates even conditional on exposure. Friending bias is shaped by the structure of the groups in which people interact. For example, friending bias is higher in larger and more diverse groups and lower in religious organizations than in schools and workplaces. Distinguishing exposure from friending bias is helpful for identifying interventions to increase cross-SES friendships (economic connectedness). Using fluctuations in the share of students with high SES across high school cohorts, we show that increases in high-SES exposure lead low-SES people to form more friendships with high-SES people in schools that exhibit low levels of friending bias. Thus, socioeconomic integration can increase economic connectedness in communities in which friending bias is low. By contrast, when friending bias is high, increasing cross-SES interactions among existing members may be necessary to increase economic connectedness. To support such efforts, we release privacy-protected statistics on economic connectedness, exposure and friending bias for each ZIP (postal) code, high school and college in the United States at https://www.socialcapital.org. Social disconnection across socioeconomic lines is explained by both differences in exposure to people with high socioeconomic status and friending bias\u2014the tendency for people to befriend peers with similar socioeconomic status even conditional on exposure.",
+  "key": "Chetty 2022 social capital"
+ }
+]

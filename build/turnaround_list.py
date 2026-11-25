@@ -1,0 +1,36 @@
+import json
+
+# POLYSCOUT — THE TURNAROUND-PAYLOAD-LIST v1 (the founder: "identify-potential-cities = the giant-payload-potential = the examine-for-the-turnarounds"!)
+payload = {
+    'built': '2026-11-22',
+    'the_frame': 'THE BACKWARDS-LOOK-LANE (the the format-lock-law = the the backward-works!): the winners-and-the-turnarounds = the go-BACKWARDS = the the last-20-years-of-the-data + the POLICIES = the the how-they-got-there = THE LONGITUDINAL-COMPARATIVE (the the the countable-policy-to-outcome-lag = the the Q3-machinery!)',
+    'the_payload_cities (the the famous-turnarounds = the the machine-read + the the history-class-verified):': [
+        {'city': 'NEW YORK CITY', 'payload': '**THE MOTHERLODE** — the 1970s-bankruptcy (\u002cFord-to-City-drop-dead\u0029-75) → the 90s-Times-Square-revival → the 2000s-rezones → the 2010s-tech-boom: the 50-years-of-the-budget-articles = the every-one-published = the the MMR-series = the SINCE-1977-class!; the archive = the the deepest-in-the-nation', 'band': 'D', 'the_turnaround_story': 'the bankruptcy-to-the-capital-of-the-world = THE CASE-STUDY-class!'},
+        {'city': 'BOSTON', 'payload': 'the 70s-\u002cBoston-is-dying\u0029 (the the Buzzard\u0027s-Bay-class = the the 1976-texbook!) → the the biotech/the ed-med-boom; the HUD-2019-\u002cComeback-Communities\u002d-report = the the official-case-study (the 12-cities-including!)', 'band': 'B'},
+        {'city': 'PITTSBURGH', 'payload': 'the steel-collapse (\u002cHell-with-the-lid-off\u0029-80s) → the eds-and-meds-revival: the the canonical-rust-belt-turnaround = the the two-recoveries (the the steel→the Pittsburgh-Renaissance-I-and-II!)', 'band': 'B', 'note': 'the would-band-B (the ~$1.2-1.5B-class = the the Band-A-B-boundary!)'},
+        {'city': 'CLEVELAND', 'payload': 'the burning-river-60s → the the rock-hall/the med-district-the-revival; the the HUD-report-listed + the the \u002cComeback-City\u002d-politics-book = THE documented-case!; the ALREADY-ON-the-band-A-candidates-lane (the ~$2.3B-class)', 'band': 'A-B-boundary'},
+        {'city': 'DETROIT', 'payload': 'THE EXTREMES-CASE = the the 2013-municipal-bankruptcy (the the largest-in-US-history!) → the the post-Jones-the-revival = the the bankruptcy-to-the-recovery = the the most-dramatic-turnaround-lab = the the budget-records = the the everything-published!; the HUD-2019-listed', 'band': 'B', 'the_payload': 'the the ultimate-stress-test-of-the-policy-manufacturability-question!'},
+        {'city': 'OKLAHOMA CITY', 'payload': 'THE POLICY-MANUFACTURED-TURNAROUND = the MAPS-tax (the the 1993-1-cent-sales-tax = the the citizen-voted-projects = the the Bricktown/the arena/the river!): the self-inflicted-revival = THE MANUFACTURED-lane = the the clearest-policy-to-outcome-chain-in-urban-America!', 'band': 'B'},
+        {'city': 'DENVER', 'payload': 'the 80s-oil-bust → the the airport/the transit/the weed-infrastructure-era = the the policy-sequenced-revival', 'band': 'B-C'},
+        {'city': 'ST. LOUIS (the already-in-the-Band-A!)', 'payload': 'the Arch/the Cortex-district = the the partial-turnaround-lane = THE ALREADY-INGESTED-class!'},
+        {'city': 'CINCINNATI (the already-in-the-Band-A!)', 'payload': 'the OTR-revival (the Over-the-Rhine = the the one-of-the-largest-urban-renewals!) = THE ALREADY-INGESTED-class!'}
+    ],
+    'the_source_rail (the the machine-verified [Certain])': [
+        'the HUD-Report: \u002cComeback-Communities-The-Revival-of-Americas-Cities\u0029 (Jan-2019) = the 12-case-studies = the Detroit/Cleveland/Boston-included [Certain]',
+        'the \u002cAmericas-Comeback-Cities-A-Turnaround-Story\u0029 (the Apr-2025-class [Certain])',
+        'the OCITY-2026-database (the 714-city-routes = the the Rust-Belt-revival-check = the the data-lane!)'
+    ],
+    'the_payload_ranking (the the the founder\u0027s-the-giant-payload-frame = the the the ranked-by-the-backwards-data-availability!):': [
+        'T1 = NYC (the the 50yrs/the MMR-series = the the deepest-archive = the already-ingested-the-machines!)',
+        'T1 = Detroit (the bankruptcy = the everything-public = the the most-extreme-lab!)',
+        'T1 = OKC (the MAPS = the the MANUFACTURED-by-policy = the the the Q2-question\u0027s-the-perfect-answer-case!)',
+        'T2 = Boston/Pittsburgh/Cleveland/Denver (the the 2-revivals-each = the documented!)',
+        'THE ALREADY-IN = the STL (the Cortex) + the CIN (the OTR!) = the the Band-A = the THE LUCKY-COINCIDENCE (the the the foursome = the the already-carried-two-turnaround-cities!)'
+    ],
+    'the_20-year-lookback-mechanism': 'the the per-city = the the budget-PDF-archive-walk (the the most-cities = the the publish-the-decade+ = the the NYC = the the decades!) + the the policy-timeline = the the council-records/the the news-lane = THE PROMISE-CLOCKS-RUN-BACKWARDS = THE THE ALREADY-BUILT-MACHINERY = the the applied-to-the-history!'
+}
+import json as j
+j.dump(payload, open('C:/Users/J/Documents/LLM/cardscout-2.0/For You/PolyScout/build/turnaround_payload_v1.json', 'w', encoding='utf-8'), indent=1)
+print('WROTE turnaround_payload_v1.json')
+for c in payload['the_payload_cities (the the famous-turnarounds = the the machine-read + the the history-class-verified):']:
+    print(' *', c['city'], '-', c.get('the_turnaround_story', c.get('band',''))[:60])

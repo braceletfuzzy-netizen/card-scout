@@ -1,0 +1,2025 @@
+{
+  "_record": "stock_flow_elasticities_v1 — THE STOCK-vs-FLOW EXTENSION (founder systems-efficiency frame: beds-and-staff = STOCK standing at day-0; the annual dollar = FLOW; the two carry different elasticities and both are now machine-readable cards)",
+  "built": "2026-11-24",
+  "parent_artifacts": [
+    "elasticities_v1.json (the delta machines + the level converters — the FLOW/STOCK engines)",
+    "maslow_joint_panel_v1.jsonl (94 city-years, 6 cities) + joint_regression_v2.json (banked betas, v2 T-head)",
+    "peer_review_scan_v16.jsonl (28 curated magnitude rows; the Jackson stock exemplar)",
+    "peer_review_scan_v17_synth.json (28 wage/employment magnitude lanes; Grogger clause)",
+    "peer_review_scan_v18_synth.json (37 youth-spend lanes: pools/skateparks/libraries/rec/capital)"
+  ],
+  "laws_held": [
+    "direction-class only, no causal claims beyond the studies' own designs",
+    "no fabricated magnitudes: every card number traced to a banked field (delta-form | level-converter | scan row), machine labeled per card",
+    "format-lock: v1's banked converter rows re-derived before shipping (see verification_battery)",
+    "honest-nulls carried: the panel's flow changes DO NOT persist (AR-1 rho=-0.104) — stock reads come from LEVEL machines, never extrapolated flows"
+  ],
+  "the_founder_frame": {
+    "stock": "the beds and staff — capacity standing at day-0. A dollar funds it only in order to HAVE it there.",
+    "flow": "the annual budget line — an in-year decision that moves the capacity only while it recurs.",
+    "the_equation_in_words": "one input-panel, two machines: the FLOW machine (delta/changes form) prices the in-year decision; the STOCK machine (level/betas converter) prices the standing thing. Same x%, different y — and the gap between them is the multiplier the founder is asking for."
+  },
+  "A_ELASTICITY_PAIRS": {
+    "care_per_100k": {
+      "input": "care_per_100k (T2 care-capacity: the beds-and-staff lane)",
+      "flow_row": {
+        "card": "x% change in care dollars for ONE year -> murder rate change THIS year",
+        "machine": "FLOW = the delta form (within-city contiguous-year dln pairs)",
+        "x_example": 10.0,
+        "y_example": -0.155,
+        "units": "murder rate-points per +1pct one-year care change = -0.0155 (semi-elastic form); standardized rate-form = -0.0004 per 1pct",
+        "n": 31,
+        "t_desc": -0.27,
+        "direction_class": "NEGATIVE direction-class only (t=-0.22 — NOISY, no magnitude claim from the flow pool alone)"
+      },
+      "stock_row": {
+        "card": "x% change in SUSTAINED care capacity -> the standing outcome level",
+        "machine": "STOCK = the level-form converter (within-city standardized betas on LEVELS)",
+        "rows": [
+          {
+            "model": "FE-3_maslow_joint_t0 (n=24)",
+            "x": 10.0,
+            "y_ratepts": -1.478,
+            "per_1pct_ratepts": -0.1478,
+            "pct_geo_per_1pct": -0.0055
+          },
+          {
+            "model": "FE-3_arc_t+1 (n=18; NEXT year still carrying)",
+            "x": 10.0,
+            "y_ratepts": -0.894,
+            "per_1pct_ratepts": -0.0894,
+            "pct_geo_per_1pct": -0.0033
+          },
+          {
+            "model": "FE-6_care_plus_unemp (n=36)",
+            "x": 10.0,
+            "y_ratepts": -1.801,
+            "per_1pct_ratepts": -0.1801,
+            "pct_geo_per_1pct": -0.0067
+          },
+          {
+            "model": "FE-2_care_cage_bookings (n=19)",
+            "x": 10.0,
+            "y_ratepts": -2.264,
+            "per_1pct_ratepts": -0.2264
+          }
+        ],
+        "t_desc_note": "level-form t up to -2.24 (FE-2) — the stock machines carry the significance the flow pool lacks"
+      },
+      "the_multiplier": {
+        "stock_over_flow": 11.6,
+        "stock_over_flow_fe3_spec": 9.5,
+        "reading": "the SAME panel, read as a STOCK (level machine) vs a FLOW (delta machine): the level read is ~11.6x (FE-6 spec) / ~9.5x (FE-3 spec) the delta read per unit. The founder frame is the mechanism: a flow dollar moves nothing until it stands as capacity; the level betas carry the co-movement of the standing thing."
+      },
+      "persistence_honest_null": {
+        "ar1_persistence_coef": -0.1042,
+        "n": 58,
+        "reading": "care FLOW changes do NOT persist year-to-year (budgets are annual votes, not stocks). Honest consequence: a stock read for the panel comes from the LEVEL machines only — never from extrapolating a one-year flow forward."
+      },
+      "horizon_activation": {
+        "note": "THE STOCK ACTIVATES ACROSS HORIZONS — same sustained +1% capacity read at t0, t+1 (and the compounding-correct window read); the beds standing at day-0 keep paying after the dollar leaves.",
+        "t0_ratepts_per_1pct": -0.1478,
+        "tplus1_ratepts_per_1pct": -0.0894,
+        "pct_geo_per_1pct_t0": -0.0055,
+        "pct_geo_per_1pct_tplus1": -0.0033,
+        "compounding_correct_window_reads": {
+          "note": "cumulative dln care over the scored window (panel arcs); compounding = each year carries the full stock change; persistence_decay = AR1 rho on dln care; banked level-machine dir_acc = baseline",
+          "models": {
+            "FE-3_maslow_joint_t0": {
+              "1": {
+                "pairs": [
+                  {
+                    "city": "Cincinnati",
+                    "t": 2021,
+                    "year": 2022,
+                    "cum_dln_care_pct": -2.32,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": 0.036,
+                    "pred_persistence_ratepts": 0.036
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2022,
+                    "year": 2023,
+                    "cum_dln_care_pct": 9.4,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.146,
+                    "pred_persistence_ratepts": -0.146
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2023,
+                    "year": 2024,
+                    "cum_dln_care_pct": 5.14,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.08,
+                    "pred_persistence_ratepts": -0.08
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2024,
+                    "year": 2025,
+                    "cum_dln_care_pct": 8.88,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.138,
+                    "pred_persistence_ratepts": -0.138
+                  },
+                  {
+                    "city": "Detroit",
+                    "t": 2021,
+                    "year": 2022,
+                    "cum_dln_care_pct": 15.62,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": -0.242,
+                    "pred_persistence_ratepts": -0.242
+                  },
+                  {
+                    "city": "Detroit",
+                    "t": 2022,
+                    "year": 2023,
+                    "cum_dln_care_pct": 0.86,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": -0.013,
+                    "pred_persistence_ratepts": -0.013
+                  },
+                  {
+                    "city": "Detroit",
+                    "t": 2023,
+                    "year": 2024,
+                    "cum_dln_care_pct": 82.08,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -1.273,
+                    "pred_persistence_ratepts": -1.273
+                  },
+                  {
+                    "city": "Detroit",
+                    "t": 2024,
+                    "year": 2025,
+                    "cum_dln_care_pct": 31.72,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.492,
+                    "pred_persistence_ratepts": -0.492
+                  },
+                  {
+                    "city": "Memphis",
+                    "t": 2022,
+                    "year": 2023,
+                    "cum_dln_care_pct": -21.69,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": 0.337,
+                    "pred_persistence_ratepts": 0.337
+                  },
+                  {
+                    "city": "Memphis",
+                    "t": 2023,
+                    "year": 2024,
+                    "cum_dln_care_pct": 21.88,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.339,
+                    "pred_persistence_ratepts": -0.339
+                  },
+                  {
+                    "city": "Memphis",
+                    "t": 2024,
+                    "year": 2025,
+                    "cum_dln_care_pct": 26.74,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.415,
+                    "pred_persistence_ratepts": -0.415
+                  },
+                  {
+                    "city": "NYC",
+                    "t": 2021,
+                    "year": 2022,
+                    "cum_dln_care_pct": -6.09,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": 0.094,
+                    "pred_persistence_ratepts": 0.094
+                  },
+                  {
+                    "city": "NYC",
+                    "t": 2022,
+                    "year": 2023,
+                    "cum_dln_care_pct": 15.45,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.24,
+                    "pred_persistence_ratepts": -0.24
+                  },
+                  {
+                    "city": "NYC",
+                    "t": 2023,
+                    "year": 2024,
+                    "cum_dln_care_pct": 7.43,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.115,
+                    "pred_persistence_ratepts": -0.115
+                  },
+                  {
+                    "city": "NYC",
+                    "t": 2024,
+                    "year": 2025,
+                    "cum_dln_care_pct": 3.93,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.061,
+                    "pred_persistence_ratepts": -0.061
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2021,
+                    "year": 2022,
+                    "cum_dln_care_pct": 4.16,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": -0.065,
+                    "pred_persistence_ratepts": -0.065
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2022,
+                    "year": 2023,
+                    "cum_dln_care_pct": 42.16,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.654,
+                    "pred_persistence_ratepts": -0.654
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2023,
+                    "year": 2024,
+                    "cum_dln_care_pct": -12.56,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": 0.195,
+                    "pred_persistence_ratepts": 0.195
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2024,
+                    "year": 2025,
+                    "cum_dln_care_pct": 32.2,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.5,
+                    "pred_persistence_ratepts": -0.5
+                  }
+                ],
+                "banked_dir_acc": 0.6,
+                "n": 19,
+                "dir_acc_compounding": 0.789,
+                "dir_acc_persistence": 0.789,
+                "n_covered_compounding": 19,
+                "n_covered_persistence": 19
+              },
+              "2": {
+                "pairs": [
+                  {
+                    "city": "Cincinnati",
+                    "t": 2021,
+                    "year": 2023,
+                    "cum_dln_care_pct": -1.89,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": 0.059,
+                    "pred_persistence_ratepts": 0.026
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2022,
+                    "year": 2024,
+                    "cum_dln_care_pct": 7.08,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.22,
+                    "pred_persistence_ratepts": -0.098
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2023,
+                    "year": 2025,
+                    "cum_dln_care_pct": 14.54,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.451,
+                    "pred_persistence_ratepts": -0.202
+                  },
+                  {
+                    "city": "Detroit",
+                    "t": 2022,
+                    "year": 2024,
+                    "cum_dln_care_pct": 16.48,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.512,
+                    "pred_persistence_ratepts": -0.229
+                  },
+                  {
+                    "city": "Detroit",
+                    "t": 2023,
+                    "year": 2025,
+                    "cum_dln_care_pct": 82.94,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -2.574,
+                    "pred_persistence_ratepts": -1.153
+                  },
+                  {
+                    "city": "Memphis",
+                    "t": 2023,
+                    "year": 2025,
+                    "cum_dln_care_pct": 0.19,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.006,
+                    "pred_persistence_ratepts": -0.003
+                  },
+                  {
+                    "city": "NYC",
+                    "t": 2022,
+                    "year": 2024,
+                    "cum_dln_care_pct": 9.36,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.291,
+                    "pred_persistence_ratepts": -0.13
+                  },
+                  {
+                    "city": "NYC",
+                    "t": 2023,
+                    "year": 2025,
+                    "cum_dln_care_pct": 22.88,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.71,
+                    "pred_persistence_ratepts": -0.318
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2021,
+                    "year": 2023,
+                    "cum_dln_care_pct": 0.9,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.028,
+                    "pred_persistence_ratepts": -0.012
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2022,
+                    "year": 2024,
+                    "cum_dln_care_pct": 46.31,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -1.437,
+                    "pred_persistence_ratepts": -0.644
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2023,
+                    "year": 2025,
+                    "cum_dln_care_pct": 29.59,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.918,
+                    "pred_persistence_ratepts": -0.411
+                  }
+                ],
+                "banked_dir_acc": 0.333,
+                "n": 11,
+                "dir_acc_compounding": 0.909,
+                "dir_acc_persistence": 0.909,
+                "n_covered_compounding": 11,
+                "n_covered_persistence": 11
+              },
+              "3": {
+                "pairs": [
+                  {
+                    "city": "Cincinnati",
+                    "t": 2021,
+                    "year": 2024,
+                    "cum_dln_care_pct": -4.72,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": 0.22,
+                    "pred_persistence_ratepts": 0.066
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2022,
+                    "year": 2025,
+                    "cum_dln_care_pct": 7.51,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.349,
+                    "pred_persistence_ratepts": -0.106
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2022,
+                    "year": 2025,
+                    "cum_dln_care_pct": 43.05,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -2.004,
+                    "pred_persistence_ratepts": -0.606
+                  }
+                ],
+                "banked_dir_acc": null,
+                "n": 3,
+                "dir_acc_compounding": 0.667,
+                "dir_acc_persistence": 0.667,
+                "n_covered_compounding": 3,
+                "n_covered_persistence": 3
+              }
+            },
+            "FE-3_arc_tplus1": {
+              "1": {
+                "pairs": [
+                  {
+                    "city": "Cincinnati",
+                    "t": 2021,
+                    "year": 2022,
+                    "cum_dln_care_pct": -2.32,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": 0.036,
+                    "pred_persistence_ratepts": 0.036
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2022,
+                    "year": 2023,
+                    "cum_dln_care_pct": 9.4,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.146,
+                    "pred_persistence_ratepts": -0.146
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2023,
+                    "year": 2024,
+                    "cum_dln_care_pct": 5.14,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": -0.08,
+                    "pred_persistence_ratepts": -0.08
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2024,
+                    "year": 2025,
+                    "cum_dln_care_pct": 8.88,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.138,
+                    "pred_persistence_ratepts": -0.138
+                  },
+                  {
+                    "city": "Detroit",
+                    "t": 2021,
+                    "year": 2022,
+                    "cum_dln_care_pct": 15.62,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": -0.242,
+                    "pred_persistence_ratepts": -0.242
+                  },
+                  {
+                    "city": "Detroit",
+                    "t": 2022,
+                    "year": 2023,
+                    "cum_dln_care_pct": 0.86,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": -0.013,
+                    "pred_persistence_ratepts": -0.013
+                  },
+                  {
+                    "city": "Detroit",
+                    "t": 2023,
+                    "year": 2024,
+                    "cum_dln_care_pct": 82.08,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -1.273,
+                    "pred_persistence_ratepts": -1.273
+                  },
+                  {
+                    "city": "Detroit",
+                    "t": 2024,
+                    "year": 2025,
+                    "cum_dln_care_pct": 31.72,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.492,
+                    "pred_persistence_ratepts": -0.492
+                  },
+                  {
+                    "city": "Memphis",
+                    "t": 2022,
+                    "year": 2023,
+                    "cum_dln_care_pct": -21.69,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": 0.337,
+                    "pred_persistence_ratepts": 0.337
+                  },
+                  {
+                    "city": "Memphis",
+                    "t": 2023,
+                    "year": 2024,
+                    "cum_dln_care_pct": 21.88,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": -0.339,
+                    "pred_persistence_ratepts": -0.339
+                  },
+                  {
+                    "city": "Memphis",
+                    "t": 2024,
+                    "year": 2025,
+                    "cum_dln_care_pct": 26.74,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.415,
+                    "pred_persistence_ratepts": -0.415
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2021,
+                    "year": 2022,
+                    "cum_dln_care_pct": 4.16,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": -0.065,
+                    "pred_persistence_ratepts": -0.065
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2022,
+                    "year": 2023,
+                    "cum_dln_care_pct": 42.16,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": -0.654,
+                    "pred_persistence_ratepts": -0.654
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2023,
+                    "year": 2024,
+                    "cum_dln_care_pct": -12.56,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": 0.195,
+                    "pred_persistence_ratepts": 0.195
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2024,
+                    "year": 2025,
+                    "cum_dln_care_pct": 32.2,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.5,
+                    "pred_persistence_ratepts": -0.5
+                  }
+                ],
+                "banked_dir_acc": 0.938,
+                "n": 15,
+                "dir_acc_compounding": 0.6,
+                "dir_acc_persistence": 0.6,
+                "n_covered_compounding": 15,
+                "n_covered_persistence": 15
+              },
+              "2": {
+                "pairs": [
+                  {
+                    "city": "Cincinnati",
+                    "t": 2021,
+                    "year": 2023,
+                    "cum_dln_care_pct": -1.89,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": 0.059,
+                    "pred_persistence_ratepts": 0.026
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2022,
+                    "year": 2024,
+                    "cum_dln_care_pct": 7.08,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": -0.22,
+                    "pred_persistence_ratepts": -0.098
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2023,
+                    "year": 2025,
+                    "cum_dln_care_pct": 14.54,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.451,
+                    "pred_persistence_ratepts": -0.202
+                  },
+                  {
+                    "city": "Detroit",
+                    "t": 2022,
+                    "year": 2024,
+                    "cum_dln_care_pct": 16.48,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.512,
+                    "pred_persistence_ratepts": -0.229
+                  },
+                  {
+                    "city": "Detroit",
+                    "t": 2023,
+                    "year": 2025,
+                    "cum_dln_care_pct": 82.94,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -2.574,
+                    "pred_persistence_ratepts": -1.153
+                  },
+                  {
+                    "city": "Memphis",
+                    "t": 2023,
+                    "year": 2025,
+                    "cum_dln_care_pct": 0.19,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.006,
+                    "pred_persistence_ratepts": -0.003
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2021,
+                    "year": 2023,
+                    "cum_dln_care_pct": 0.9,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": -0.028,
+                    "pred_persistence_ratepts": -0.012
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2022,
+                    "year": 2024,
+                    "cum_dln_care_pct": 46.31,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": -1.437,
+                    "pred_persistence_ratepts": -0.644
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2023,
+                    "year": 2025,
+                    "cum_dln_care_pct": 29.59,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.918,
+                    "pred_persistence_ratepts": -0.411
+                  }
+                ],
+                "banked_dir_acc": 0.583,
+                "n": 9,
+                "dir_acc_compounding": 0.556,
+                "dir_acc_persistence": 0.556,
+                "n_covered_compounding": 9,
+                "n_covered_persistence": 9
+              },
+              "3": {
+                "pairs": [
+                  {
+                    "city": "Cincinnati",
+                    "t": 2021,
+                    "year": 2024,
+                    "cum_dln_care_pct": -4.72,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": 0.22,
+                    "pred_persistence_ratepts": 0.066
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2022,
+                    "year": 2025,
+                    "cum_dln_care_pct": 7.51,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.349,
+                    "pred_persistence_ratepts": -0.106
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2022,
+                    "year": 2025,
+                    "cum_dln_care_pct": 43.05,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -2.004,
+                    "pred_persistence_ratepts": -0.606
+                  }
+                ],
+                "banked_dir_acc": null,
+                "n": 3,
+                "dir_acc_compounding": 1.0,
+                "dir_acc_persistence": 1.0,
+                "n_covered_compounding": 3,
+                "n_covered_persistence": 3
+              }
+            },
+            "FE-6_care_plus_unemp": {
+              "1": {
+                "pairs": [
+                  {
+                    "city": "Cincinnati",
+                    "t": 2015,
+                    "year": 2016,
+                    "cum_dln_care_pct": -1.74,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": 0.027,
+                    "pred_persistence_ratepts": 0.027
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2016,
+                    "year": 2017,
+                    "cum_dln_care_pct": 8.31,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": -0.129,
+                    "pred_persistence_ratepts": -0.129
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2017,
+                    "year": 2018,
+                    "cum_dln_care_pct": 3.33,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.052,
+                    "pred_persistence_ratepts": -0.052
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2018,
+                    "year": 2019,
+                    "cum_dln_care_pct": 9.9,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.154,
+                    "pred_persistence_ratepts": -0.154
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2019,
+                    "year": 2020,
+                    "cum_dln_care_pct": -2.83,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": 0.044,
+                    "pred_persistence_ratepts": 0.044
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2020,
+                    "year": 2021,
+                    "cum_dln_care_pct": 0.43,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": -0.007,
+                    "pred_persistence_ratepts": -0.007
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2021,
+                    "year": 2022,
+                    "cum_dln_care_pct": -2.32,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": 0.036,
+                    "pred_persistence_ratepts": 0.036
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2022,
+                    "year": 2023,
+                    "cum_dln_care_pct": 9.4,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.146,
+                    "pred_persistence_ratepts": -0.146
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2023,
+                    "year": 2024,
+                    "cum_dln_care_pct": 5.14,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.08,
+                    "pred_persistence_ratepts": -0.08
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2024,
+                    "year": 2025,
+                    "cum_dln_care_pct": 8.88,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.138,
+                    "pred_persistence_ratepts": -0.138
+                  },
+                  {
+                    "city": "Detroit",
+                    "t": 2021,
+                    "year": 2022,
+                    "cum_dln_care_pct": 15.62,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": -0.242,
+                    "pred_persistence_ratepts": -0.242
+                  },
+                  {
+                    "city": "Detroit",
+                    "t": 2022,
+                    "year": 2023,
+                    "cum_dln_care_pct": 0.86,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.013,
+                    "pred_persistence_ratepts": -0.013
+                  },
+                  {
+                    "city": "Detroit",
+                    "t": 2023,
+                    "year": 2024,
+                    "cum_dln_care_pct": 82.08,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -1.273,
+                    "pred_persistence_ratepts": -1.273
+                  },
+                  {
+                    "city": "Detroit",
+                    "t": 2024,
+                    "year": 2025,
+                    "cum_dln_care_pct": 31.72,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.492,
+                    "pred_persistence_ratepts": -0.492
+                  },
+                  {
+                    "city": "Memphis",
+                    "t": 2022,
+                    "year": 2023,
+                    "cum_dln_care_pct": -21.69,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": 0.337,
+                    "pred_persistence_ratepts": 0.337
+                  },
+                  {
+                    "city": "Memphis",
+                    "t": 2023,
+                    "year": 2024,
+                    "cum_dln_care_pct": 21.88,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.339,
+                    "pred_persistence_ratepts": -0.339
+                  },
+                  {
+                    "city": "Memphis",
+                    "t": 2024,
+                    "year": 2025,
+                    "cum_dln_care_pct": 26.74,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.415,
+                    "pred_persistence_ratepts": -0.415
+                  },
+                  {
+                    "city": "NYC",
+                    "t": 2021,
+                    "year": 2022,
+                    "cum_dln_care_pct": -6.09,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": 0.094,
+                    "pred_persistence_ratepts": 0.094
+                  },
+                  {
+                    "city": "NYC",
+                    "t": 2022,
+                    "year": 2023,
+                    "cum_dln_care_pct": 15.45,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.24,
+                    "pred_persistence_ratepts": -0.24
+                  },
+                  {
+                    "city": "NYC",
+                    "t": 2023,
+                    "year": 2024,
+                    "cum_dln_care_pct": 7.43,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.115,
+                    "pred_persistence_ratepts": -0.115
+                  },
+                  {
+                    "city": "NYC",
+                    "t": 2024,
+                    "year": 2025,
+                    "cum_dln_care_pct": 3.93,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.061,
+                    "pred_persistence_ratepts": -0.061
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2020,
+                    "year": 2021,
+                    "cum_dln_care_pct": -3.26,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": 0.051,
+                    "pred_persistence_ratepts": 0.051
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2021,
+                    "year": 2022,
+                    "cum_dln_care_pct": 4.16,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": -0.065,
+                    "pred_persistence_ratepts": -0.065
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2022,
+                    "year": 2023,
+                    "cum_dln_care_pct": 42.16,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.654,
+                    "pred_persistence_ratepts": -0.654
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2023,
+                    "year": 2024,
+                    "cum_dln_care_pct": -12.56,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": 0.195,
+                    "pred_persistence_ratepts": 0.195
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2024,
+                    "year": 2025,
+                    "cum_dln_care_pct": 32.2,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.5,
+                    "pred_persistence_ratepts": -0.5
+                  }
+                ],
+                "banked_dir_acc": 0.806,
+                "n": 26,
+                "dir_acc_compounding": 0.731,
+                "dir_acc_persistence": 0.731,
+                "n_covered_compounding": 26,
+                "n_covered_persistence": 26
+              },
+              "2": {
+                "pairs": [
+                  {
+                    "city": "Cincinnati",
+                    "t": 2016,
+                    "year": 2018,
+                    "cum_dln_care_pct": 6.56,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.204,
+                    "pred_persistence_ratepts": -0.091
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2017,
+                    "year": 2019,
+                    "cum_dln_care_pct": 11.64,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.361,
+                    "pred_persistence_ratepts": -0.162
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2018,
+                    "year": 2020,
+                    "cum_dln_care_pct": 13.24,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": -0.411,
+                    "pred_persistence_ratepts": -0.184
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2019,
+                    "year": 2021,
+                    "cum_dln_care_pct": 7.07,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": -0.219,
+                    "pred_persistence_ratepts": -0.098
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2020,
+                    "year": 2022,
+                    "cum_dln_care_pct": -2.41,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": 0.075,
+                    "pred_persistence_ratepts": 0.033
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2021,
+                    "year": 2023,
+                    "cum_dln_care_pct": -1.89,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": 0.059,
+                    "pred_persistence_ratepts": 0.026
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2022,
+                    "year": 2024,
+                    "cum_dln_care_pct": 7.08,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.22,
+                    "pred_persistence_ratepts": -0.098
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2023,
+                    "year": 2025,
+                    "cum_dln_care_pct": 14.54,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.451,
+                    "pred_persistence_ratepts": -0.202
+                  },
+                  {
+                    "city": "Detroit",
+                    "t": 2022,
+                    "year": 2024,
+                    "cum_dln_care_pct": 16.48,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.512,
+                    "pred_persistence_ratepts": -0.229
+                  },
+                  {
+                    "city": "Detroit",
+                    "t": 2023,
+                    "year": 2025,
+                    "cum_dln_care_pct": 82.94,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -2.574,
+                    "pred_persistence_ratepts": -1.153
+                  },
+                  {
+                    "city": "Memphis",
+                    "t": 2023,
+                    "year": 2025,
+                    "cum_dln_care_pct": 0.19,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.006,
+                    "pred_persistence_ratepts": -0.003
+                  },
+                  {
+                    "city": "NYC",
+                    "t": 2022,
+                    "year": 2024,
+                    "cum_dln_care_pct": 9.36,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.291,
+                    "pred_persistence_ratepts": -0.13
+                  },
+                  {
+                    "city": "NYC",
+                    "t": 2023,
+                    "year": 2025,
+                    "cum_dln_care_pct": 22.88,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.71,
+                    "pred_persistence_ratepts": -0.318
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2021,
+                    "year": 2023,
+                    "cum_dln_care_pct": 0.9,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.028,
+                    "pred_persistence_ratepts": -0.012
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2022,
+                    "year": 2024,
+                    "cum_dln_care_pct": 46.31,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -1.437,
+                    "pred_persistence_ratepts": -0.644
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2023,
+                    "year": 2025,
+                    "cum_dln_care_pct": 29.59,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.918,
+                    "pred_persistence_ratepts": -0.411
+                  }
+                ],
+                "banked_dir_acc": 0.538,
+                "n": 16,
+                "dir_acc_compounding": 0.812,
+                "dir_acc_persistence": 0.812,
+                "n_covered_compounding": 16,
+                "n_covered_persistence": 16
+              },
+              "3": {
+                "pairs": [
+                  {
+                    "city": "Cincinnati",
+                    "t": 2017,
+                    "year": 2020,
+                    "cum_dln_care_pct": 9.9,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": -0.461,
+                    "pred_persistence_ratepts": -0.139
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2018,
+                    "year": 2021,
+                    "cum_dln_care_pct": 21.54,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": -1.003,
+                    "pred_persistence_ratepts": -0.303
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2019,
+                    "year": 2022,
+                    "cum_dln_care_pct": 10.4,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": -0.484,
+                    "pred_persistence_ratepts": -0.146
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2020,
+                    "year": 2023,
+                    "cum_dln_care_pct": 7.49,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.349,
+                    "pred_persistence_ratepts": -0.105
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2021,
+                    "year": 2024,
+                    "cum_dln_care_pct": -4.72,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": 0.22,
+                    "pred_persistence_ratepts": 0.066
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2022,
+                    "year": 2025,
+                    "cum_dln_care_pct": 7.51,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.349,
+                    "pred_persistence_ratepts": -0.106
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2022,
+                    "year": 2025,
+                    "cum_dln_care_pct": 43.05,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -2.004,
+                    "pred_persistence_ratepts": -0.606
+                  }
+                ],
+                "banked_dir_acc": null,
+                "n": 7,
+                "dir_acc_compounding": 0.429,
+                "dir_acc_persistence": 0.429,
+                "n_covered_compounding": 7,
+                "n_covered_persistence": 7
+              }
+            },
+            "FE-2_care_cage_bookings": {
+              "1": {
+                "pairs": [
+                  {
+                    "city": "Cincinnati",
+                    "t": 2017,
+                    "year": 2018,
+                    "cum_dln_care_pct": 3.33,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.052,
+                    "pred_persistence_ratepts": -0.052
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2018,
+                    "year": 2019,
+                    "cum_dln_care_pct": 9.9,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.154,
+                    "pred_persistence_ratepts": -0.154
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2019,
+                    "year": 2020,
+                    "cum_dln_care_pct": -2.83,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": 0.044,
+                    "pred_persistence_ratepts": 0.044
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2020,
+                    "year": 2021,
+                    "cum_dln_care_pct": 0.43,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": -0.007,
+                    "pred_persistence_ratepts": -0.007
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2021,
+                    "year": 2022,
+                    "cum_dln_care_pct": -2.32,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": 0.036,
+                    "pred_persistence_ratepts": 0.036
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2022,
+                    "year": 2023,
+                    "cum_dln_care_pct": 9.4,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.146,
+                    "pred_persistence_ratepts": -0.146
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2023,
+                    "year": 2024,
+                    "cum_dln_care_pct": 5.14,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.08,
+                    "pred_persistence_ratepts": -0.08
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2024,
+                    "year": 2025,
+                    "cum_dln_care_pct": 8.88,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.138,
+                    "pred_persistence_ratepts": -0.138
+                  },
+                  {
+                    "city": "Detroit",
+                    "t": 2022,
+                    "year": 2023,
+                    "cum_dln_care_pct": 0.86,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.013,
+                    "pred_persistence_ratepts": -0.013
+                  },
+                  {
+                    "city": "Detroit",
+                    "t": 2024,
+                    "year": 2025,
+                    "cum_dln_care_pct": 31.72,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.492,
+                    "pred_persistence_ratepts": -0.492
+                  },
+                  {
+                    "city": "Memphis",
+                    "t": 2022,
+                    "year": 2023,
+                    "cum_dln_care_pct": -21.69,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": 0.337,
+                    "pred_persistence_ratepts": 0.337
+                  },
+                  {
+                    "city": "Memphis",
+                    "t": 2023,
+                    "year": 2024,
+                    "cum_dln_care_pct": 21.88,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.339,
+                    "pred_persistence_ratepts": -0.339
+                  },
+                  {
+                    "city": "Memphis",
+                    "t": 2024,
+                    "year": 2025,
+                    "cum_dln_care_pct": 26.74,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.415,
+                    "pred_persistence_ratepts": -0.415
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2020,
+                    "year": 2021,
+                    "cum_dln_care_pct": -3.26,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": 0.051,
+                    "pred_persistence_ratepts": 0.051
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2021,
+                    "year": 2022,
+                    "cum_dln_care_pct": 4.16,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": -0.065,
+                    "pred_persistence_ratepts": -0.065
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2022,
+                    "year": 2023,
+                    "cum_dln_care_pct": 42.16,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.654,
+                    "pred_persistence_ratepts": -0.654
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2023,
+                    "year": 2024,
+                    "cum_dln_care_pct": -12.56,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": 0.195,
+                    "pred_persistence_ratepts": 0.195
+                  }
+                ],
+                "banked_dir_acc": 0.737,
+                "n": 17,
+                "dir_acc_compounding": 0.706,
+                "dir_acc_persistence": 0.706,
+                "n_covered_compounding": 17,
+                "n_covered_persistence": 17
+              },
+              "2": {
+                "pairs": [
+                  {
+                    "city": "Cincinnati",
+                    "t": 2017,
+                    "year": 2019,
+                    "cum_dln_care_pct": 11.64,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.361,
+                    "pred_persistence_ratepts": -0.162
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2018,
+                    "year": 2020,
+                    "cum_dln_care_pct": 13.24,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": -0.411,
+                    "pred_persistence_ratepts": -0.184
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2019,
+                    "year": 2021,
+                    "cum_dln_care_pct": 7.07,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": -0.219,
+                    "pred_persistence_ratepts": -0.098
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2020,
+                    "year": 2022,
+                    "cum_dln_care_pct": -2.41,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": 0.075,
+                    "pred_persistence_ratepts": 0.033
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2021,
+                    "year": 2023,
+                    "cum_dln_care_pct": -1.89,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": 0.059,
+                    "pred_persistence_ratepts": 0.026
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2022,
+                    "year": 2024,
+                    "cum_dln_care_pct": 7.08,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.22,
+                    "pred_persistence_ratepts": -0.098
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2023,
+                    "year": 2025,
+                    "cum_dln_care_pct": 14.54,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.451,
+                    "pred_persistence_ratepts": -0.202
+                  },
+                  {
+                    "city": "Detroit",
+                    "t": 2022,
+                    "year": 2024,
+                    "cum_dln_care_pct": 16.48,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.512,
+                    "pred_persistence_ratepts": -0.229
+                  },
+                  {
+                    "city": "Memphis",
+                    "t": 2023,
+                    "year": 2025,
+                    "cum_dln_care_pct": 0.19,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.006,
+                    "pred_persistence_ratepts": -0.003
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2021,
+                    "year": 2023,
+                    "cum_dln_care_pct": 0.9,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.028,
+                    "pred_persistence_ratepts": -0.012
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2022,
+                    "year": 2024,
+                    "cum_dln_care_pct": 46.31,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -1.437,
+                    "pred_persistence_ratepts": -0.644
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2023,
+                    "year": 2025,
+                    "cum_dln_care_pct": 29.59,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.918,
+                    "pred_persistence_ratepts": -0.411
+                  }
+                ],
+                "banked_dir_acc": 0.375,
+                "n": 12,
+                "dir_acc_compounding": 0.667,
+                "dir_acc_persistence": 0.667,
+                "n_covered_compounding": 12,
+                "n_covered_persistence": 12
+              },
+              "3": {
+                "pairs": [
+                  {
+                    "city": "Cincinnati",
+                    "t": 2017,
+                    "year": 2020,
+                    "cum_dln_care_pct": 9.9,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": -0.461,
+                    "pred_persistence_ratepts": -0.139
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2018,
+                    "year": 2021,
+                    "cum_dln_care_pct": 21.54,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": -1.003,
+                    "pred_persistence_ratepts": -0.303
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2019,
+                    "year": 2022,
+                    "cum_dln_care_pct": 10.4,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.484,
+                    "pred_persistence_ratepts": -0.146
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2020,
+                    "year": 2023,
+                    "cum_dln_care_pct": 7.49,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.349,
+                    "pred_persistence_ratepts": -0.105
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2021,
+                    "year": 2024,
+                    "cum_dln_care_pct": -4.72,
+                    "dir_compounding_hit": false,
+                    "dir_persistence_hit": false,
+                    "pred_compounding_ratepts": 0.22,
+                    "pred_persistence_ratepts": 0.066
+                  },
+                  {
+                    "city": "Cincinnati",
+                    "t": 2022,
+                    "year": 2025,
+                    "cum_dln_care_pct": 7.51,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -0.349,
+                    "pred_persistence_ratepts": -0.106
+                  },
+                  {
+                    "city": "St. Louis",
+                    "t": 2022,
+                    "year": 2025,
+                    "cum_dln_care_pct": 43.05,
+                    "dir_compounding_hit": true,
+                    "dir_persistence_hit": true,
+                    "pred_compounding_ratepts": -2.004,
+                    "pred_persistence_ratepts": -0.606
+                  }
+                ],
+                "banked_dir_acc": null,
+                "n": 7,
+                "dir_acc_compounding": 0.571,
+                "dir_acc_persistence": 0.571,
+                "n_covered_compounding": 7,
+                "n_covered_persistence": 7
+              }
+            }
+          },
+          "b_semi_ratepts_per_100pct": -1.5515,
+          "ar1_persistence_rho_care": -0.10424
+        }
+      }
+    },
+    "unemployment_rate": {
+      "input": "unemployment_rate (the T-labor flow lane)",
+      "flow_row": {
+        "card": "delta unemployment x delta murder (33 diff-pairs)",
+        "machine": "FLOW = first-difference correlations",
+        "rho": 0.006,
+        "n": 33,
+        "direction_class": "~zero (rho=0.006): month-to-month labor FLOWS carry no within-year murder signal in this panel"
+      },
+      "stock_row": {
+        "card": "x% points SUSTAINED unemployment -> standing murder level",
+        "machine": "STOCK = level-form converter FE-6",
+        "per_1pct_ratepts": 0.1834,
+        "pct_geo_per_1pct": 0.0068,
+        "banked_beta_within_std": 0.312,
+        "x10_example_ratepts": 1.834,
+        "reading": "the SAME GROGGER-SHAPED GAP the wage lane shows: the standing STOCK (structure) carries the signal; the FLOW does not."
+      }
+    },
+    "one_machine_only_lanes": [
+      {
+        "input": "cost_burden_30pct_plus_share (T1 shelter-stock: the rent-weighs lane)",
+        "flow_row": {
+          "card": "no FLOW machine banked (no dln housing pair pool) — honest-null, not backfilled"
+        },
+        "stock_row": {
+          "card": "x% points of sustained rent-burden share -> standing murder level",
+          "rows": [
+            {
+              "model": "FE-3_maslow_joint_t0",
+              "per_1pct_ratepts": -1.9117,
+              "pct_geo_per_1pct": -0.0707,
+              "banked_beta_within_std": -0.28,
+              "x10_example_ratepts": -19.117
+            },
+            {
+              "model": "FE-3_arc_tplus1",
+              "per_1pct_ratepts": 0.2124,
+              "pct_geo_per_1pct": 0.0079,
+              "banked_beta_within_std": 0.056,
+              "x10_example_ratepts": 2.124
+            }
+          ]
+        }
+      },
+      {
+        "input": "median_home_value (shelter: the strongest single stock lane)",
+        "flow_row": {
+          "card": "no FLOW machine banked — honest-null"
+        },
+        "stock_row": {
+          "card": "x% sustained home values (the neighborhood stock) -> standing murder level",
+          "rows": [
+            {
+              "model": "FE-3_maslow_joint_t0",
+              "per_1pct_ratepts": -0.1913,
+              "pct_geo_per_1pct": -0.0071,
+              "banked_beta_within_std": -0.099,
+              "x10_example_ratepts": -1.913
+            },
+            {
+              "model": "FE-3_arc_tplus1",
+              "per_1pct_ratepts": -0.2824,
+              "pct_geo_per_1pct": -0.0104,
+              "banked_beta_within_std": -0.263,
+              "x10_example_ratepts": -2.824
+            }
+          ]
+        }
+      },
+      {
+        "input": "snap_receipt_share_pct (T1 food; class-flipping lane)",
+        "flow_row": {
+          "card": "no FLOW machine banked — honest-null (the need-follows-violence reactive pattern survives conditioning, banked)"
+        },
+        "stock_row": {
+          "card": "x% points sustained SNAP share -> standing murder level (POSITIVE sign within: the reactive class)",
+          "rows": [
+            {
+              "model": "FE-3_maslow_joint_t0",
+              "per_1pct_ratepts": 1.5491,
+              "pct_geo_per_1pct": 0.0573,
+              "banked_beta_within_std": 0.64,
+              "x10_example_ratepts": 15.491
+            },
+            {
+              "model": "FE-3_arc_tplus1",
+              "per_1pct_ratepts": 0.7316,
+              "pct_geo_per_1pct": 0.0271,
+              "banked_beta_within_std": 0.544,
+              "x10_example_ratepts": 7.316
+            }
+          ]
+        }
+      },
+      {
+        "input": "bachelors_pct (T4/T5 choice-set stock)",
+        "flow_row": {
+          "card": "no FLOW machine banked — honest-null"
+        },
+        "stock_row": {
+          "card": "x% points sustained bachelor-share -> standing murder level",
+          "rows": [
+            {
+              "model": "FE-3_maslow_joint_t0",
+              "per_1pct_ratepts": -0.008,
+              "pct_geo_per_1pct": -0.0003,
+              "banked_beta_within_std": -0.003,
+              "x10_example_ratepts": -0.08
+            },
+            {
+              "model": "FE-3_arc_tplus1",
+              "per_1pct_ratepts": -0.2803,
+              "pct_geo_per_1pct": -0.0104,
+              "banked_beta_within_std": -0.189,
+              "x10_example_ratepts": -2.803
+            }
+          ]
+        }
+      }
+    ],
+    "wage_strata_snapshot_head": {
+      "input": "stratified wages (the wage-ladder: min/mid/specialized bands)",
+      "flow_row": {
+        "card": "OEWS = single-2025-vintage — NO within-city arc possible; documented honest-null per format-lock"
+      },
+      "stock_row": {
+        "card": "the wage STRUCTURE (a standing employer-structure stock) -> crime level",
+        "machine": "STOCK = snapshot-head betas, joint_regression_v2",
+        "betas": {
+          "p10_min_band": -0.452,
+          "median_mid_band": -0.667,
+          "p90_ceiling": -0.857,
+          "p90_over_p10": -0.714
+        },
+        "reading": "gradient STEEPENS UP the ladder; the p90 ceiling is the strongest single input on crime in the full model"
+      },
+      "literature_stock_cards": [
+        "Grogger clause (v17): wages > unemployment as the crime carrier",
+        "oligopsony moderation (v17): 1% min-wage floor -> -0.31% larceny in concentrated markets"
+      ]
+    }
+  },
+  "B_ELASTICITY_CARDS": {
+    "schema": "x% for 1 year (FLOW card) | x% sustained N years (STOCK card); units: murder rate-points (frame-scale) and % change vs geo-mean rate 27.04",
+    "cards": [
+      {
+        "input": "care capacity",
+        "FLOW": "+10% care dollars ONE year -> ~ -0.16 rate-points same-year (NOISY, t=-0.22, direction-class only)",
+        "STOCK": "+10% sustained capacity -> -1.48 rate-points (t0 read) and still -0.89 rate-points carried at t+1; FE-6 spec -1.80 rate-points",
+        "geo_form": "-0.06% murder per stock-year vs geo-mean"
+      },
+      {
+        "input": "unemployment",
+        "FLOW": "delta-unemp x delta-murder rho = 0.006 (n=33) — the flow carries ~nothing",
+        "STOCK": "+10pp sustained unemployment -> +1.83 rate-points standing"
+      },
+      {
+        "input": "shelter (home value)",
+        "FLOW": "honest-null (no delta machine banked)",
+        "STOCK": "+10% sustained home values -> -2.82 rate-points (arc t+1 read: -2.82; t0 read -1.91)"
+      },
+      {
+        "input": "SNAP share",
+        "FLOW": "honest-null",
+        "STOCK": "+10pp sustained SNAP share -> +15.5 rate-points within (POSITIVE: the reactive need-follows-violence class)"
+      },
+      {
+        "input": "per-pupil spending (LITERATURE exemplar)",
+        "FLOW": "+10% for one cohort-year -> +0.05-0.2 SD test scores per treated year",
+        "STOCK": "+10% sustained 12 years -> +0.31 yrs education / +7% wages / -3.2 pp adult poverty (N=12 dose-linear)"
+      }
+    ]
+  },
+  "C_DURABILITY_LADDER": {
+    "note": "THE DURABILITY LADDER — how long must the flow recur before it counts as a stock (literature, direction-class only)",
+    "ladder_rows": [
+      {
+        "lane": "T4 edu spending",
+        "durability": "dose-linear per treated year; 12-year sustain -> +0.31 yrs edu / +7% wages",
+        "horizon": "adulthood",
+        "source": "Jackson et al. 2015 QJE"
+      },
+      {
+        "lane": "T2 lead-removal",
+        "durability": "the exposure stock decays over decades; elasticity ~0.8",
+        "horizon": "years-decades",
+        "source": "Reyes 2007 BEJEAP (via scan-16)"
+      },
+      {
+        "lane": "T5 neighborhood (Chetty/MTO)",
+        "durability": "under-13 exposure ~carry; adolescent/adult exposure null-to-negative",
+        "horizon": "pre-13 window",
+        "source": "scan-16 / Chetty N=7M"
+      },
+      {
+        "lane": "panel care FLOWS",
+        "durability": "AR-1 rho = -0.104 (t=-0.7): annual flow changes DO NOT PERSIST",
+        "horizon": "none — annual votes",
+        "source": "elasticities_v1.json A section (the honest-null)"
+      }
+    ],
+    "the_fellows_clause": "prevention (standing stocks, young cohorts) beats remediation (flows at crisis) by multiples — the founder frame in its banked form"
+  },
+  "D_HORIZON_ACTIVATION_READ": {
+    "note": "THE STOCK ACTIVATES LATE AND STAYS: the beds standing at day-0 keep paying at t+1/t+2 after the dollar year is gone",
+    "care_t0_vs_tplus1_ratepts_per_1pct": [
+      -0.1478,
+      -0.0894
+    ],
+    "compounding_correct_re_read_headline": {
+      "FE-3_t0_dir_acc": "0.333 -> 0.909 (n=11)",
+      "FE-2_dir_acc": "0.375 -> 0.667 (n=12)",
+      "FE-6_dir_acc": "0.538 -> 0.812 (n=16)",
+      "FE-3_arc_tplus1": "0.938 -> 0.60 (level-anchored — honest dual number, carried)",
+      "verdict_source": "elasticities_v1.json verdict[3] (the compounding-correct re-read, n=145)"
+    },
+    "the_ar1_gate": "AR-1 rho = -0.104 (n=58, t=-0.7): compounding vs persistence variants score IDENTICALLY (the t+2 lift is the WHOLE-WINDOW read, not extrapolation) — so the stock machine multiplies NOTHING forward: it prices the standing level directly."
+  },
+  "verification_battery": {
+    "converter_rederivation": {
+      "passed": true,
+      "checks": [
+        {
+          "model": "FE-3_maslow_joint_t0",
+          "care_change_pct": 5.0,
+          "rederived": -0.739,
+          "banked": -0.739,
+          "match": true
+        },
+        {
+          "model": "FE-3_maslow_joint_t0",
+          "care_change_pct": 10.0,
+          "rederived": -1.478,
+          "banked": -1.478,
+          "match": true
+        },
+        {
+          "model": "FE-3_maslow_joint_t0",
+          "care_change_pct": 20.0,
+          "rederived": -2.956,
+          "banked": -2.956,
+          "match": true
+        },
+        {
+          "model": "FE-3_arc_tplus1",
+          "care_change_pct": 5.0,
+          "rederived": -0.447,
+          "banked": -0.447,
+          "match": true
+        },
+        {
+          "model": "FE-3_arc_tplus1",
+          "care_change_pct": 10.0,
+          "rederived": -0.894,
+          "banked": -0.894,
+          "match": true
+        },
+        {
+          "model": "FE-3_arc_tplus1",
+          "care_change_pct": 20.0,
+          "rederived": -1.788,
+          "banked": -1.788,
+          "match": true
+        },
+        {
+          "model": "FE-6_care_plus_unemp",
+          "care_change_pct": 5.0,
+          "rederived": -0.901,
+          "banked": -0.901,
+          "match": true
+        },
+        {
+          "model": "FE-6_care_plus_unemp",
+          "care_change_pct": 10.0,
+          "rederived": -1.801,
+          "banked": -1.801,
+          "match": true
+        },
+        {
+          "model": "FE-6_care_plus_unemp",
+          "care_change_pct": 20.0,
+          "rederived": -3.602,
+          "banked": -3.602,
+          "match": true
+        },
+        {
+          "model": "FE-2_care_cage_bookings",
+          "care_change_pct": 5.0,
+          "rederived": -1.132,
+          "banked": -1.132,
+          "match": true
+        },
+        {
+          "model": "FE-2_care_cage_bookings",
+          "care_change_pct": 10.0,
+          "rederived": -2.264,
+          "banked": -2.264,
+          "match": true
+        },
+        {
+          "model": "FE-2_care_cage_bookings",
+          "care_change_pct": 20.0,
+          "rederived": -4.528,
+          "banked": -4.528,
+          "match": true
+        }
+      ]
+    },
+    "per_city_delta_rhos_source": "elasticities_v1.json A1_PER_CITY_DELTA_RHOS (carried, unmodified)",
+    "counts": {
+      "elasticity_pairs": 7,
+      "flow_cards_shipped": 3,
+      "stock_cards_shipped": 6,
+      "honest_nulls_carried": 5,
+      "literature_stock_exemplars": 3,
+      "v16_rows_scanned": 28,
+      "v18_lanes_scanned": 37
+    }
+  },
+  "lit_stock_cards": [
+    {
+      "exemplar": "Jackson/Johnson/Persico QJE 2015 — THE stock-flow template from the literature",
+      "flow_card": "+10% per-pupil spending for ONE cohort-year -> test scores +0.05-0.2 SD per treated year (dose-linear; the in-year FLOW dose)",
+      "stock_card": "+10% SUSTAINED for 12 years -> +0.31 years of education, +7% adult wages, -3.2 pp adult poverty",
+      "conversion": "linear dose: 0.583% wages per dose-year (per +10% per-pupil-year); 12 dose-years compound additively (dose-LINEAR, not compounding)",
+      "source": "10.1093/qje/qjv036",
+      "evidence_quality": "quasi-experimental (strong), high-credibility"
+    },
+    {
+      "exemplar": "Care-capacity stock cards from scan-16 (the T2 lane)",
+      "stock_cards": [
+        "psychiatric bed capacity / institutionalization policy (scan-16 row)",
+        "lead removal: ~0.8 crime elasticity, Reyes (2007) BEJEAP — removing the stock of exposure, decades-long payoff",
+        "summer-jobs: -43% (Heller, Science) — a STOCK seat, single-summer delivery"
+      ]
+    },
+    {
+      "exemplar": "v18 youth-spend lanes (37 lanes) — municipal STOCK builds",
+      "stock_cards": [
+        "pools/rec-centers/capital = capacity standing at day-0 (the founder frame, matched asset class)",
+        "the pool-block warning lane: unstructured drop-in centers can RAISE antisocial behavior (peer-aggregation beats supervision) — the stock's OPERATING MODEL matters, not just its existence"
+      ],
+      "source_artifact": "peer_review_scan_v18_synth.json (tiers 1-5, 588 deduped records)"
+    }
+  ],
+  "verdict": [
+    "THE PAIR (care lane, the founder's headlands example): the FLOW card (+10% one-year -> ~-0.16 rate-points, t=-0.22 direction-class only) vs the STOCK card (+10% sustained -> -1.48 t0 / -0.89 t+1 rate-points, t to -2.24). Same panel, same input, ~11.6x apart on the FE-6 spec (~9.5x on FE-3) — the stock machine carries the significance AND the size. The dollar matters only as it becomes beds at day-0.",
+    "THE HORIZONS CLAUSE: the stock read PAYS ACROSS HORIZONS — t0 -0.148 and t+1 still -0.089 rate-points per sustained 1%; the compounding-correct window re-read lifts the t+2 cells on every multi-input model (dir-acc 0.33->0.91 FE-3_t0) while the AR-1 gate (rho=-0.104) proves the lift is the whole-window LEVEL change, not flow extrapolation.",
+    "THE DURABILITY LADDER orders the lanes: Jackson's 12-year dose-linear stock (+7% wages) is the literature template; MTO's under-13 window is the exposure-critical stock; the panel's own care flows are the honest-null bottom rung (annual votes, zero persistence).",
+    "THE GROGGER-TWIN: unemployment shows the stock/flow gap WITHIN one input — delta rho 0.006 (nothing) vs sustained +10pp -> +1.83 rate-points standing — the same shape the wage ladder shows (p90 ceiling -0.857 the strongest stock in the model).",
+    "THE HONEST LIMITS: direction-class only; stock/flow ratio ~11.6x (FE-6) / ~9.5x (FE-3) is a two-machine artifact of the same panel, not an independent causal estimate; NYC panel murder single-year and Denver no murder denominator (carried honest-null); OEWS strata = one 2025 snapshot (no arc); SNAP's positive within-sign is the reactive class, not a policy read."
+  ]
+}

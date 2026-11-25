@@ -1,0 +1,2275 @@
+{
+ "build": {
+  "id": "raleigh_springs_site_v2",
+  "name": "Raleigh Springs Civic Center — site-level treatment test (TBI/UCR baseline added)",
+  "built_at": "2026-11-23",
+  "method": "v1 lanes + TBI Crime Insight TOPS TIBRS series (keyless JSON endpoints); no API keys, no scrapers",
+  "supersedes": "raleigh_springs_site_v1.json",
+  "v1_preserved": true
+ },
+ "site": {
+  "name": "Raleigh Springs Civic Center",
+  "city": "Memphis",
+  "county": "Shelby County",
+  "state": "TN",
+  "zip": "38128",
+  "lat": 35.2192058,
+  "lon": -89.9083968,
+  "corridor": "Austin Peay Hwy / Yale Rd / Singleton Pkwy — Raleigh community",
+  "mpd_precinct": "AUSTIN PEAY (per crime layer Precinct field); MPD Old Allen Precinct building located on-site per Wikipedia/redevelopment plan",
+  "mp3_anchor": {
+   "type": "Urban Center",
+   "treatment": "ACCELERATE",
+   "evidence": "Raleigh Town Center Anchor Neighborhood Summary Report (Aug 2019): 'Raleigh Town Center is an Urban Center anchor type'; 'ACCELERATE Raleigh Springs Mall URBAN CENTER'"
+  },
+  "site_history": {
+   "mall_opened": "1971-08-11",
+   "mall_closed": "2016-11-18",
+   "mall_purchased_by_city": "2016-11",
+   "mall_demolished": "2016–2017",
+   "site_components_opened": "spring 2020 (skatepark, walking trail, 11-acre detention pond, MPD precinct building)",
+   "library_opened": "2020-11 (ribbon cutting 2020-11-19)",
+   "project_number": "CD01092",
+   "fy2015_go_funding": 17400000,
+   "fy2015_narrative_investment": 24000000,
+   "hcd_total_funds_committed": 41941459,
+   "hcd_status": "Complete",
+   "hcd_completion_date": "2020-11-18",
+   "census_tract": "47157020541",
+   "planning_district": "Raleigh"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Raleigh_Springs_Mall",
+   "C:/Users/J/memphis_fy15_book.pdf (project CD01092 Raleigh Springs Mall — G.O. $17.4M)",
+   "C:/Users/J/memphis_fy17_book.pdf (operations narrative mention)",
+   "C:/Users/J/memphis_fy25_book.pdf (HCD CIP line, Raleigh Springs, status TBD)",
+   "https://services2.arcgis.com/saWmpKJIUAjyyNVc/arcgis/rest/services/HCD_Property_Investments/FeatureServer/0"
+  ]
+ },
+ "lanes": {
+  "1_crime_series": {
+   "status": "PARTIAL-POST-ONLY (honest null for pre-2016)",
+   "dataset": "MPD Public Safety Incidents (keyless FeatureServer)",
+   "service": "https://services2.arcgis.com/saWmpKJIUAjyyNVc/arcgis/rest/services/MPD_Public_Safety_Incidents/FeatureServer/0",
+   "hub_page": "https://data.memphistn.gov/datasets/MEMEGIS::mpd-public-safety-incidents-1",
+   "bbox_definition": "±0.014° lat (≈1.55 km N-S), ±0.017°/0.020° lon (≈1.5–1.8 km E-W) around site centroid; envelope intersects; spatialRel=esriSpatialRelIntersects; inSR=102100",
+   "dataset_total_rows": 9699,
+   "rows_in_bbox_all_years": 7257,
+   "pre_2016_rows_in_bbox": 0,
+   "earliest_offense_in_bbox": "2020-01-01",
+   "nulls": {
+    "pre_2016_series": null,
+    "note": "No public keyless route to pre-2016 incident-level MPD data was found; the open dataset starts 2020. Cannot build a pre/mid/post diff here honestly."
+   },
+   "annual_counts_bbox": {
+    "2020": 1889,
+    "2021": 1861,
+    "2022": 2294,
+    "2023": 2446,
+    "2024": 2024,
+    "2025": 1658,
+    "2026": 1204
+   },
+   "violent_counts_bbox": {
+    "2020": 501,
+    "2021": 554,
+    "2022": 537,
+    "2023": 594,
+    "2024": 570,
+    "2025": 524,
+    "2026": 450
+   },
+   "property_counts_bbox": {
+    "2020": 1153,
+    "2021": 1036,
+    "2022": 1478,
+    "2023": 1624,
+    "2024": 1150,
+    "2025": 870,
+    "2026": 533
+   },
+   "categories_2020": {
+    "AGGRAVATED ASSAULT": 103,
+    "ALL OTHER OFFENSES ": 10,
+    "ANIMAL CRUELTY": 3,
+    "ARSON": 2,
+    "ASSAULT": 368,
+    "BURG/BREAK & ENTER": 71,
+    "COUNTERFEITING/FORGERY": 18,
+    "DEST/DAM/VAND OF PROPERTY": 188,
+    "DISORDERLY CONDUCT": 1,
+    "DRIVING UNDER THE INFLUENCE": 5,
+    "DRUG/NARCOTIC": 54,
+    "EMBEZZLEMENT": 21,
+    "EXTORTION/BLACKMAIL": 1,
+    "FRAUD": 74,
+    "HOMICIDE": 4,
+    "KIDNAPPING/ABDUCTION": 12,
+    "LARCENY/THEFT": 796,
+    "MOTOR VEHICLE THEFT": 96,
+    "PORNOGRAPHY/OBSCN MAT": 1,
+    "ROBBERY": 26,
+    "STOLEN PROPERTY": 1,
+    "TRESPASS OF REAL PROPERTY ": 10,
+    "WEAPON LAW VIOLATION": 24
+   },
+   "categories_full_2020plus": null,
+   "caveats": [
+    "Offense_Datetime null count in bbox: 0",
+    "2026 partial through pull date",
+    "No population denominator in this layer — counts are absolute, per-bbox, not rates."
+   ]
+  },
+  "2_cip_lane": {
+   "status": "VERIFIED-PARTIAL",
+   "project_number": "CD01092",
+   "fy2015": {
+    "project_name": "Raleigh Springs Mall",
+    "go_funding": "$17.4M",
+    "debt_service_impact": "$1.4M",
+    "description": "Development of the Raleigh Civic Plaza including replacement of the North Police Precinct, Traffic Precinct and the Raleigh Springs Library.",
+    "mayor_narrative_total": "$24M purchase+demo+redevelop (proposed FY2015)"
+   },
+   "fy2016": {
+    "narrative": "Capital projects list includes 'redevelopment of the Raleigh Springs Mall' under HCD budget summary"
+   },
+   "fy2017": {
+    "narrative": "General Services reported maintaining Raleigh Springs Mall (pre-demolition)"
+   },
+   "fy2018_fy2024_books_on_disk": [
+    "fy15",
+    "fy16",
+    "fy17",
+    "fy18",
+    "fy22",
+    "fy23",
+    "fy24"
+   ],
+   "fy2018_fy2024_raleigh_hits": 0,
+   "fy2025": "HCD CIP table lists 'CD-TBD Raleigh Springs' project line (amounts in adjacent columns; TBD-coded in budget book)",
+   "hcd_official_funding_trace": {
+    "funds_committed": 41941459,
+    "status": "Complete",
+    "completed": "2020-11-18",
+    "source": "HCD_Property_Investments FeatureServer (City of Memphis)",
+    "adjacent_projects": [
+     {
+      "name": "Raleigh Springs PDO (Private Development Opportunity)",
+      "funds": 9100000,
+      "status": "Planning"
+     },
+     {
+      "name": "Raleigh Vehicle Repair Shop",
+      "funds": 2510915,
+      "status": "Re-assigned"
+     },
+     {
+      "name": "Raleigh Community Farmer's Market & Food Truck Park",
+      "funds": 573232,
+      "status": "In Progress"
+     }
+    ]
+   },
+   "nulls": {
+    "fy19_fy21_books": "not on disk; not pulled (route not attempted — budget books local only)",
+    "line_item_level_CIP_spread": null
+   }
+  },
+  "3_component_lane": {
+   "status": "VERIFIED",
+   "plan": "Memphis 3.0 Comprehensive Plan (adopted Feb 2019, unanimously; Exec Order May 2021; City Council adoption Dec 2021)",
+   "raleigh_small_area_plan": {
+    "title": "Raleigh Town Center Anchor Neighborhood Summary Report",
+    "date": "August 2019",
+    "url_pdf": "https://www.memphis3point0.com/_files/ugd/100a0d_ec2ac28cbe884974871ec5334e39147a.pdf",
+    "anchor_type": "Urban Center",
+    "anchor_treatment": "ACCELERATE",
+    "accelerate_actions_quotes": [
+     "ACCELERATE Raleigh Springs Mall URBAN CENTER",
+     "Provide incentives to small and minority owned businesses to locate in commercial districts (short-term 1-2 yrs)",
+     "Encourage and incentivize infill on parking lots at anchors with excess parking (short-term 1-2 yrs)",
+     "Apply traffic calming measures along Austin Peay (short-term 1-2 yrs)",
+     "Activate Kennedy Park and Pierotti Park to decrease nuisance issues (medium-term 2-5 yrs)"
+    ],
+    "big_ideas": [
+     "Create a Main Street for Raleigh",
+     "Create Mixed-Use Neighborhoods",
+     "Introduce New Housing Types",
+     "Mobility Improvements"
+    ],
+    "demographics_2017": {
+     "households": 19195,
+     "median_income_est": 35600,
+     "median_home_value_est": 97800,
+     "annual_market_potential_households": 5850,
+     "ami_buckets": {
+      "100%+ AMI": "1,975 (34%)",
+      "50-100% AMI": "1,700 (29%)",
+      "Below 50% AMI": "2,175 (37%)"
+     }
+    }
+   },
+   "civic_center_components_cross_check": {
+    "skatepark": true,
+    "walking_trail": true,
+    "pond_11_acre": true,
+    "mpd_precinct_on_site": true,
+    "library_on_site": true,
+    "note": "All five components cross-checked against Wikipedia redevelopment section."
+   }
+  },
+  "4_assessor_lane": {
+   "status": "HONEST-NULL (attribute route unavailable)",
+   "what_was_attempted": [
+    "Shelby County parcel layers found on AGO: services1.arcgis.com/hwQMmmEzVzbTfv5U/.../Shelby_Parcels/FeatureServer/2 (Tax Parcels) — geometry-only fields (PARCELID, CALC_ACRE, WARD); NO owner/appraisal/land value attributes exposed.",
+    "tiles.arcgis.com/tiles/VqPd1Ybcc46AvijK/.../Parcels/MapServer (Shelby County Parcels, item b3f2cce117c247259da85fa0d30c1e60) — tile-only caches; query 404.",
+    "tiles.arcgis.com/tiles/s9fZ9Xw5NF8fOMXl/.../Memphis_Parcels/MapServer (seealliance) — same schema, no valuation fields, tile caches.",
+    "assessor.shelbycountytn.gov DNS does not resolve from this environment.",
+    "tnmap.tn.gov services folder sweep — no parcel/assessor service published."
+   ],
+   "near_site_parcels_sampled": [
+    {
+     "parcelid": "085017  00001",
+     "acres": 15.23,
+     "ward": 85,
+     "y": 35.22081,
+     "x": -89.90669
+    },
+    {
+     "parcelid": "085017  00003",
+     "acres": 12.34,
+     "ward": 85,
+     "y": 35.21823,
+     "x": -89.90677
+    },
+    {
+     "parcelid": "085016  00035C",
+     "acres": 9.5,
+     "ward": 85,
+     "y": 35.22022,
+     "x": -89.9114
+    }
+   ],
+   "sampled_note": "Geometry + parcel-ID only; these are candidate civic-center footprints near the site but carry no valuation data.",
+   "nulls": {
+    "owner_names": null,
+    "assessed_values_time_series": null,
+    "pre_2016_valuations": null,
+    "reason": "Shelby County Assessor does not expose attribute-level valuation data on any keyless REST route reachable from this environment; only parcel geometry is public-API accessible."
+   }
+  },
+  "5_city_ownership_lane": {
+   "status": "VERIFIED",
+   "city_ownership": true,
+   "evidence": [
+    "Wikipedia: 'In November 2016, the City of Memphis purchased the Raleigh Springs Mall property...'",
+    "City HCD Property Investments layer: project 'Raleigh Mall Redevelop Project (now Raleigh Springs Civic Center)' listed Complete, $41,941,459 committed, Planning_District=Raleigh, tract 47157020541",
+    "FY2015 budget narrative: purchase, demolition and redevelopment proposed as CIP priority"
+   ],
+   "hcd_investments_within_1p5km": {
+    "total_records": 45,
+    "strategic_initiatives": [
+     {
+      "name": "Raleigh Mall Redevelop Project (now Raleigh Springs Civic Center)",
+      "funds": 41941459,
+      "status": "Complete"
+     },
+     {
+      "name": "Raleigh Springs PDO (Private Development Opportunity)",
+      "funds": 9100000,
+      "status": "Planning"
+     },
+     {
+      "name": "Raleigh Vehicle Repair Shop",
+      "funds": 2510915,
+      "status": "Re-assigned"
+     },
+     {
+      "name": "Raleigh Community Farmer's Market & Food Truck Park",
+      "funds": 573232,
+      "status": "In Progress"
+     }
+    ],
+    "other_programs_summary": "Remaining 41 records within 1.5km are CHDO/NSP1/DPA/WAP/Lead-hazard investments totaling ~$1.6M across Frayser CDC, CAAP Inc, Neighborhood Housing Ops, United Housing, HCD."
+   }
+  },
+  "1a_tibrs_baseline_lane": {
+   "status": "VERIFIED-PRE+POST (TIBRS official state data via TBI Crime Insight TOPS)",
+   "endpoint_theme": "https://crimeinsight.tbi.tn.gov/tops/report/query/{theme}/{jurisdiction}/{year}/info/{card}",
+   "endpoint_view": "https://crimeinsight.tbi.tn.gov/tops/report/{theme}/{jurisdiction-slug}/{year}",
+   "jurisdiction_codes": {
+    "memphis_police": "TNMPD0000",
+    "shelby_county_sheriff": "TN0790000",
+    "tennessee_state": "TNSTATE"
+   },
+   "data_source": "TIBRS, Offense Data (live TIBRS DB copy; annual published snapshots differ per TBI note)",
+   "pulled_at": "2026-11-23 (CST)",
+   "coverage": "years 1991-2026 selectable; 2026 YTD through mid-November (Nov partial, Dec zero)",
+   "card_map": {
+    "violent-crimes": {
+     "1": "Murder",
+     "7": "Sex Offenses Non-Consensual",
+     "14": "Aggravated Assault"
+    },
+    "property-crimes": {
+     "1": "Robbery",
+     "7": "Burglary",
+     "13": "Motor Vehicle Theft",
+     "19": "Fraud"
+    },
+    "drugs-dui": {
+     "2": "DUI Arrests",
+     "7": "Drug/Narcotic Violations",
+     "13": "Weapon Law Violations"
+    },
+    "domestic-violence": {
+     "1": "Domestic Violence (cases + cleared count)"
+    },
+    "hate-crime": {
+     "1": "Hate Crime (cases + cleared count)"
+    }
+   },
+   "memphis_pd_series": [
+    {
+     "year": "2010",
+     "period": "pre",
+     "murder": {
+      "title": "Murder",
+      "cases": 89,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -33.08
+     },
+     "sex_offenses_nc": {
+      "title": "Sex Offenses, Non-Consensual",
+      "cases": 1035,
+      "cleared_count": null,
+      "clearance_pct": 36.81,
+      "trend_vs_prior_year": 18.97
+     },
+     "agg_assault": {
+      "title": "Aggravated Assault",
+      "cases": 6696,
+      "cleared_count": null,
+      "clearance_pct": 47.12,
+      "trend_vs_prior_year": -10.47
+     },
+     "robbery": {
+      "title": "Robbery",
+      "cases": 3269,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -21.49
+     },
+     "burglary": {
+      "title": "Burglary",
+      "cases": 13131,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -4.53
+     },
+     "motor_vehicle_theft": {
+      "title": "Motor Vehicle Theft",
+      "cases": 3987,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -6.3
+     },
+     "fraud": {
+      "title": "Fraud",
+      "cases": 2987,
+      "cleared_count": null,
+      "clearance_pct": 6.16,
+      "trend_vs_prior_year": -0.93
+     },
+     "dui_arrests": {
+      "title": "DUI",
+      "cases": 1623,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 2.98
+     },
+     "drug_narcotic_violations": {
+      "title": "Drug/Narcotic Violations",
+      "cases": 5859,
+      "cleared_count": null,
+      "clearance_pct": 97.1,
+      "trend_vs_prior_year": 8.32
+     },
+     "weapon_law_violations": {
+      "title": "Weapon Law Violations",
+      "cases": 1426,
+      "cleared_count": null,
+      "clearance_pct": 95.58,
+      "trend_vs_prior_year": -5.75
+     },
+     "domestic_violence": {
+      "title": "Domestic Violence",
+      "cases": 20715,
+      "cleared_count": 6164,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 1.29
+     },
+     "hate_crime": {
+      "title": "Hate Crime",
+      "cases": 14,
+      "cleared_count": 3,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -67.44
+     }
+    },
+    {
+     "year": "2011",
+     "period": "pre",
+     "murder": {
+      "title": "Murder",
+      "cases": 118,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 32.58
+     },
+     "sex_offenses_nc": {
+      "title": "Sex Offenses, Non-Consensual",
+      "cases": 997,
+      "cleared_count": null,
+      "clearance_pct": 44.53,
+      "trend_vs_prior_year": -3.67
+     },
+     "agg_assault": {
+      "title": "Aggravated Assault",
+      "cases": 6777,
+      "cleared_count": null,
+      "clearance_pct": 45.27,
+      "trend_vs_prior_year": 1.21
+     },
+     "robbery": {
+      "title": "Robbery",
+      "cases": 3104,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -5.05
+     },
+     "burglary": {
+      "title": "Burglary",
+      "cases": 12966,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -1.26
+     },
+     "motor_vehicle_theft": {
+      "title": "Motor Vehicle Theft",
+      "cases": 3471,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -12.94
+     },
+     "fraud": {
+      "title": "Fraud",
+      "cases": 3195,
+      "cleared_count": null,
+      "clearance_pct": 9.11,
+      "trend_vs_prior_year": 6.96
+     },
+     "dui_arrests": {
+      "title": "DUI",
+      "cases": 1537,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -5.3
+     },
+     "drug_narcotic_violations": {
+      "title": "Drug/Narcotic Violations",
+      "cases": 5188,
+      "cleared_count": null,
+      "clearance_pct": 93.87,
+      "trend_vs_prior_year": -11.45
+     },
+     "weapon_law_violations": {
+      "title": "Weapon Law Violations",
+      "cases": 1385,
+      "cleared_count": null,
+      "clearance_pct": 93.0,
+      "trend_vs_prior_year": -2.88
+     },
+     "domestic_violence": {
+      "title": "Domestic Violence",
+      "cases": 20656,
+      "cleared_count": 6645,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -0.28
+     },
+     "hate_crime": {
+      "title": "Hate Crime",
+      "cases": 26,
+      "cleared_count": 5,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 85.71
+     }
+    },
+    {
+     "year": "2012",
+     "period": "pre",
+     "murder": {
+      "title": "Murder",
+      "cases": 134,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 13.56
+     },
+     "sex_offenses_nc": {
+      "title": "Sex Offenses, Non-Consensual",
+      "cases": 1053,
+      "cleared_count": null,
+      "clearance_pct": 38.37,
+      "trend_vs_prior_year": 5.62
+     },
+     "agg_assault": {
+      "title": "Aggravated Assault",
+      "cases": 7504,
+      "cleared_count": null,
+      "clearance_pct": 36.47,
+      "trend_vs_prior_year": 10.73
+     },
+     "robbery": {
+      "title": "Robbery",
+      "cases": 3410,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 9.86
+     },
+     "burglary": {
+      "title": "Burglary",
+      "cases": 12523,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -3.42
+     },
+     "motor_vehicle_theft": {
+      "title": "Motor Vehicle Theft",
+      "cases": 3012,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -13.22
+     },
+     "fraud": {
+      "title": "Fraud",
+      "cases": 3741,
+      "cleared_count": null,
+      "clearance_pct": 8.93,
+      "trend_vs_prior_year": 17.09
+     },
+     "dui_arrests": {
+      "title": "DUI",
+      "cases": 1349,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -12.23
+     },
+     "drug_narcotic_violations": {
+      "title": "Drug/Narcotic Violations",
+      "cases": 5530,
+      "cleared_count": null,
+      "clearance_pct": 94.45,
+      "trend_vs_prior_year": 6.59
+     },
+     "weapon_law_violations": {
+      "title": "Weapon Law Violations",
+      "cases": 1392,
+      "cleared_count": null,
+      "clearance_pct": 93.1,
+      "trend_vs_prior_year": 0.51
+     },
+     "domestic_violence": {
+      "title": "Domestic Violence",
+      "cases": 19779,
+      "cleared_count": 6256,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -4.25
+     },
+     "hate_crime": {
+      "title": "Hate Crime",
+      "cases": 40,
+      "cleared_count": 14,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 53.85
+     }
+    },
+    {
+     "year": "2013",
+     "period": "pre",
+     "murder": {
+      "title": "Murder",
+      "cases": 125,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -6.72
+     },
+     "sex_offenses_nc": {
+      "title": "Sex Offenses, Non-Consensual",
+      "cases": 898,
+      "cleared_count": null,
+      "clearance_pct": 42.98,
+      "trend_vs_prior_year": -14.72
+     },
+     "agg_assault": {
+      "title": "Aggravated Assault",
+      "cases": 7235,
+      "cleared_count": null,
+      "clearance_pct": 30.77,
+      "trend_vs_prior_year": -3.58
+     },
+     "robbery": {
+      "title": "Robbery",
+      "cases": 3162,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -7.27
+     },
+     "burglary": {
+      "title": "Burglary",
+      "cases": 11880,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -5.13
+     },
+     "motor_vehicle_theft": {
+      "title": "Motor Vehicle Theft",
+      "cases": 2733,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -9.26
+     },
+     "fraud": {
+      "title": "Fraud",
+      "cases": 3932,
+      "cleared_count": null,
+      "clearance_pct": 10.58,
+      "trend_vs_prior_year": 5.11
+     },
+     "dui_arrests": {
+      "title": "DUI",
+      "cases": 1121,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -16.9
+     },
+     "drug_narcotic_violations": {
+      "title": "Drug/Narcotic Violations",
+      "cases": 5257,
+      "cleared_count": null,
+      "clearance_pct": 93.49,
+      "trend_vs_prior_year": -4.94
+     },
+     "weapon_law_violations": {
+      "title": "Weapon Law Violations",
+      "cases": 1389,
+      "cleared_count": null,
+      "clearance_pct": 92.44,
+      "trend_vs_prior_year": -0.22
+     },
+     "domestic_violence": {
+      "title": "Domestic Violence",
+      "cases": 19274,
+      "cleared_count": 6528,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -2.55
+     },
+     "hate_crime": {
+      "title": "Hate Crime",
+      "cases": 36,
+      "cleared_count": 8,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -10.0
+     }
+    },
+    {
+     "year": "2014",
+     "period": "pre",
+     "murder": {
+      "title": "Murder",
+      "cases": 136,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 8.8
+     },
+     "sex_offenses_nc": {
+      "title": "Sex Offenses, Non-Consensual",
+      "cases": 904,
+      "cleared_count": null,
+      "clearance_pct": 39.93,
+      "trend_vs_prior_year": 0.67
+     },
+     "agg_assault": {
+      "title": "Aggravated Assault",
+      "cases": 7596,
+      "cleared_count": null,
+      "clearance_pct": 28.61,
+      "trend_vs_prior_year": 4.99
+     },
+     "robbery": {
+      "title": "Robbery",
+      "cases": 3327,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 5.22
+     },
+     "burglary": {
+      "title": "Burglary",
+      "cases": 11259,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -5.23
+     },
+     "motor_vehicle_theft": {
+      "title": "Motor Vehicle Theft",
+      "cases": 3027,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 10.76
+     },
+     "fraud": {
+      "title": "Fraud",
+      "cases": 3677,
+      "cleared_count": null,
+      "clearance_pct": 8.05,
+      "trend_vs_prior_year": -6.49
+     },
+     "dui_arrests": {
+      "title": "DUI",
+      "cases": 864,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -22.93
+     },
+     "drug_narcotic_violations": {
+      "title": "Drug/Narcotic Violations",
+      "cases": 3714,
+      "cleared_count": null,
+      "clearance_pct": 92.43,
+      "trend_vs_prior_year": -29.35
+     },
+     "weapon_law_violations": {
+      "title": "Weapon Law Violations",
+      "cases": 1186,
+      "cleared_count": null,
+      "clearance_pct": 92.5,
+      "trend_vs_prior_year": -14.61
+     },
+     "domestic_violence": {
+      "title": "Domestic Violence",
+      "cases": 17447,
+      "cleared_count": 5438,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -9.48
+     },
+     "hate_crime": {
+      "title": "Hate Crime",
+      "cases": 14,
+      "cleared_count": 3,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -61.11
+     }
+    },
+    {
+     "year": "2015",
+     "period": "pre",
+     "murder": {
+      "title": "Murder",
+      "cases": 137,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 0.74
+     },
+     "sex_offenses_nc": {
+      "title": "Sex Offenses, Non-Consensual",
+      "cases": 944,
+      "cleared_count": null,
+      "clearance_pct": 36.02,
+      "trend_vs_prior_year": 4.42
+     },
+     "agg_assault": {
+      "title": "Aggravated Assault",
+      "cases": 7774,
+      "cleared_count": null,
+      "clearance_pct": 28.81,
+      "trend_vs_prior_year": 2.34
+     },
+     "robbery": {
+      "title": "Robbery",
+      "cases": 3168,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -4.78
+     },
+     "burglary": {
+      "title": "Burglary",
+      "cases": 10276,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -8.73
+     },
+     "motor_vehicle_theft": {
+      "title": "Motor Vehicle Theft",
+      "cases": 2786,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -7.96
+     },
+     "fraud": {
+      "title": "Fraud",
+      "cases": 3162,
+      "cleared_count": null,
+      "clearance_pct": 7.18,
+      "trend_vs_prior_year": -14.01
+     },
+     "dui_arrests": {
+      "title": "DUI",
+      "cases": 728,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -15.74
+     },
+     "drug_narcotic_violations": {
+      "title": "Drug/Narcotic Violations",
+      "cases": 3118,
+      "cleared_count": null,
+      "clearance_pct": 91.76,
+      "trend_vs_prior_year": -16.05
+     },
+     "weapon_law_violations": {
+      "title": "Weapon Law Violations",
+      "cases": 1010,
+      "cleared_count": null,
+      "clearance_pct": 91.88,
+      "trend_vs_prior_year": -14.84
+     },
+     "domestic_violence": {
+      "title": "Domestic Violence",
+      "cases": 16874,
+      "cleared_count": 4978,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -3.28
+     },
+     "hate_crime": {
+      "title": "Hate Crime",
+      "cases": 18,
+      "cleared_count": 1,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 28.57
+     }
+    },
+    {
+     "year": "2020",
+     "period": "post",
+     "murder": {
+      "title": "Murder",
+      "cases": 293,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 49.49
+     },
+     "sex_offenses_nc": {
+      "title": "Sex Offenses, Non-Consensual",
+      "cases": 744,
+      "cleared_count": null,
+      "clearance_pct": 22.04,
+      "trend_vs_prior_year": -13.19
+     },
+     "agg_assault": {
+      "title": "Aggravated Assault",
+      "cases": 12796,
+      "cleared_count": null,
+      "clearance_pct": 25.77,
+      "trend_vs_prior_year": 35.16
+     },
+     "robbery": {
+      "title": "Robbery",
+      "cases": 2166,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -12.24
+     },
+     "burglary": {
+      "title": "Burglary",
+      "cases": 5533,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -25.79
+     },
+     "motor_vehicle_theft": {
+      "title": "Motor Vehicle Theft",
+      "cases": 4636,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 10.46
+     },
+     "fraud": {
+      "title": "Fraud",
+      "cases": 3277,
+      "cleared_count": null,
+      "clearance_pct": 7.38,
+      "trend_vs_prior_year": -14.24
+     },
+     "dui_arrests": {
+      "title": "DUI",
+      "cases": 418,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -24.14
+     },
+     "drug_narcotic_violations": {
+      "title": "Drug/Narcotic Violations",
+      "cases": 3262,
+      "cleared_count": null,
+      "clearance_pct": 88.26,
+      "trend_vs_prior_year": 7.16
+     },
+     "weapon_law_violations": {
+      "title": "Weapon Law Violations",
+      "cases": 2853,
+      "cleared_count": null,
+      "clearance_pct": 65.93,
+      "trend_vs_prior_year": 134.04
+     },
+     "domestic_violence": {
+      "title": "Domestic Violence",
+      "cases": 15063,
+      "cleared_count": 4998,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -3.45
+     },
+     "hate_crime": {
+      "title": "Hate Crime",
+      "cases": 20,
+      "cleared_count": 4,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 300.0
+     }
+    },
+    {
+     "year": "2021",
+     "period": "post",
+     "murder": {
+      "title": "Murder",
+      "cases": 307,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 4.78
+     },
+     "sex_offenses_nc": {
+      "title": "Sex Offenses, Non-Consensual",
+      "cases": 684,
+      "cleared_count": null,
+      "clearance_pct": 23.68,
+      "trend_vs_prior_year": -8.06
+     },
+     "agg_assault": {
+      "title": "Aggravated Assault",
+      "cases": 13327,
+      "cleared_count": null,
+      "clearance_pct": 21.51,
+      "trend_vs_prior_year": 4.15
+     },
+     "robbery": {
+      "title": "Robbery",
+      "cases": 2058,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -4.99
+     },
+     "burglary": {
+      "title": "Burglary",
+      "cases": 5087,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -8.06
+     },
+     "motor_vehicle_theft": {
+      "title": "Motor Vehicle Theft",
+      "cases": 5097,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 9.94
+     },
+     "fraud": {
+      "title": "Fraud",
+      "cases": 3051,
+      "cleared_count": null,
+      "clearance_pct": 10.32,
+      "trend_vs_prior_year": -6.9
+     },
+     "dui_arrests": {
+      "title": "DUI",
+      "cases": 331,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -20.81
+     },
+     "drug_narcotic_violations": {
+      "title": "Drug/Narcotic Violations",
+      "cases": 3743,
+      "cleared_count": null,
+      "clearance_pct": 89.18,
+      "trend_vs_prior_year": 14.75
+     },
+     "weapon_law_violations": {
+      "title": "Weapon Law Violations",
+      "cases": 3349,
+      "cleared_count": null,
+      "clearance_pct": 70.59,
+      "trend_vs_prior_year": 17.39
+     },
+     "domestic_violence": {
+      "title": "Domestic Violence",
+      "cases": 15015,
+      "cleared_count": 4305,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -0.32
+     },
+     "hate_crime": {
+      "title": "Hate Crime",
+      "cases": 3,
+      "cleared_count": 0,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -85.0
+     }
+    },
+    {
+     "year": "2022",
+     "period": "post",
+     "murder": {
+      "title": "Murder",
+      "cases": 253,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -17.59
+     },
+     "sex_offenses_nc": {
+      "title": "Sex Offenses, Non-Consensual",
+      "cases": 761,
+      "cleared_count": null,
+      "clearance_pct": 13.27,
+      "trend_vs_prior_year": 11.26
+     },
+     "agg_assault": {
+      "title": "Aggravated Assault",
+      "cases": 12344,
+      "cleared_count": null,
+      "clearance_pct": 22.0,
+      "trend_vs_prior_year": -7.38
+     },
+     "robbery": {
+      "title": "Robbery",
+      "cases": 2321,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 12.78
+     },
+     "burglary": {
+      "title": "Burglary",
+      "cases": 5828,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 14.57
+     },
+     "motor_vehicle_theft": {
+      "title": "Motor Vehicle Theft",
+      "cases": 11044,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 116.68
+     },
+     "fraud": {
+      "title": "Fraud",
+      "cases": 3316,
+      "cleared_count": null,
+      "clearance_pct": 9.29,
+      "trend_vs_prior_year": 8.69
+     },
+     "dui_arrests": {
+      "title": "DUI",
+      "cases": 84,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -74.62
+     },
+     "drug_narcotic_violations": {
+      "title": "Drug/Narcotic Violations",
+      "cases": 3894,
+      "cleared_count": null,
+      "clearance_pct": 62.87,
+      "trend_vs_prior_year": 4.03
+     },
+     "weapon_law_violations": {
+      "title": "Weapon Law Violations",
+      "cases": 3783,
+      "cleared_count": null,
+      "clearance_pct": 47.82,
+      "trend_vs_prior_year": 12.96
+     },
+     "domestic_violence": {
+      "title": "Domestic Violence",
+      "cases": 14295,
+      "cleared_count": 3750,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -4.8
+     },
+     "hate_crime": {
+      "title": "Hate Crime",
+      "cases": 6,
+      "cleared_count": 3,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 100.0
+     }
+    },
+    {
+     "year": "2023",
+     "period": "post",
+     "murder": {
+      "title": "Murder",
+      "cases": 350,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 38.34
+     },
+     "sex_offenses_nc": {
+      "title": "Sex Offenses, Non-Consensual",
+      "cases": 746,
+      "cleared_count": null,
+      "clearance_pct": 10.99,
+      "trend_vs_prior_year": -1.97
+     },
+     "agg_assault": {
+      "title": "Aggravated Assault",
+      "cases": 12879,
+      "cleared_count": null,
+      "clearance_pct": 18.15,
+      "trend_vs_prior_year": 4.33
+     },
+     "robbery": {
+      "title": "Robbery",
+      "cases": 2796,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 20.47
+     },
+     "burglary": {
+      "title": "Burglary",
+      "cases": 6757,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 15.94
+     },
+     "motor_vehicle_theft": {
+      "title": "Motor Vehicle Theft",
+      "cases": 15874,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 43.73
+     },
+     "fraud": {
+      "title": "Fraud",
+      "cases": 3481,
+      "cleared_count": null,
+      "clearance_pct": 7.44,
+      "trend_vs_prior_year": 4.98
+     },
+     "dui_arrests": {
+      "title": "DUI",
+      "cases": 151,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 79.76
+     },
+     "drug_narcotic_violations": {
+      "title": "Drug/Narcotic Violations",
+      "cases": 2297,
+      "cleared_count": null,
+      "clearance_pct": 54.9,
+      "trend_vs_prior_year": -41.01
+     },
+     "weapon_law_violations": {
+      "title": "Weapon Law Violations",
+      "cases": 3150,
+      "cleared_count": null,
+      "clearance_pct": 35.94,
+      "trend_vs_prior_year": -16.73
+     },
+     "domestic_violence": {
+      "title": "Domestic Violence",
+      "cases": 14973,
+      "cleared_count": 3765,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 4.74
+     },
+     "hate_crime": {
+      "title": "Hate Crime",
+      "cases": 6,
+      "cleared_count": 3,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 0.0
+     }
+    },
+    {
+     "year": "2024",
+     "period": "post",
+     "murder": {
+      "title": "Murder",
+      "cases": 251,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -28.29
+     },
+     "sex_offenses_nc": {
+      "title": "Sex Offenses, Non-Consensual",
+      "cases": 764,
+      "cleared_count": null,
+      "clearance_pct": 9.55,
+      "trend_vs_prior_year": 2.41
+     },
+     "agg_assault": {
+      "title": "Aggravated Assault",
+      "cases": 12892,
+      "cleared_count": null,
+      "clearance_pct": 19.88,
+      "trend_vs_prior_year": 0.1
+     },
+     "robbery": {
+      "title": "Robbery",
+      "cases": 2161,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -22.71
+     },
+     "burglary": {
+      "title": "Burglary",
+      "cases": 5450,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -19.34
+     },
+     "motor_vehicle_theft": {
+      "title": "Motor Vehicle Theft",
+      "cases": 9862,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -37.87
+     },
+     "fraud": {
+      "title": "Fraud",
+      "cases": 3335,
+      "cleared_count": null,
+      "clearance_pct": 8.55,
+      "trend_vs_prior_year": -4.19
+     },
+     "dui_arrests": {
+      "title": "DUI",
+      "cases": 266,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 76.16
+     },
+     "drug_narcotic_violations": {
+      "title": "Drug/Narcotic Violations",
+      "cases": 2582,
+      "cleared_count": null,
+      "clearance_pct": 57.75,
+      "trend_vs_prior_year": 12.41
+     },
+     "weapon_law_violations": {
+      "title": "Weapon Law Violations",
+      "cases": 4717,
+      "cleared_count": null,
+      "clearance_pct": 31.59,
+      "trend_vs_prior_year": 49.75
+     },
+     "domestic_violence": {
+      "title": "Domestic Violence",
+      "cases": 15314,
+      "cleared_count": 4516,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 2.28
+     },
+     "hate_crime": {
+      "title": "Hate Crime",
+      "cases": 2,
+      "cleared_count": 0,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -66.67
+     }
+    },
+    {
+     "year": "2025",
+     "period": "post",
+     "murder": {
+      "title": "Murder",
+      "cases": 188,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -25.1
+     },
+     "sex_offenses_nc": {
+      "title": "Sex Offenses, Non-Consensual",
+      "cases": 581,
+      "cleared_count": null,
+      "clearance_pct": 12.56,
+      "trend_vs_prior_year": -23.95
+     },
+     "agg_assault": {
+      "title": "Aggravated Assault",
+      "cases": 9458,
+      "cleared_count": null,
+      "clearance_pct": 25.67,
+      "trend_vs_prior_year": -26.64
+     },
+     "robbery": {
+      "title": "Robbery",
+      "cases": 1482,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -31.42
+     },
+     "burglary": {
+      "title": "Burglary",
+      "cases": 4273,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -21.6
+     },
+     "motor_vehicle_theft": {
+      "title": "Motor Vehicle Theft",
+      "cases": 5568,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -43.54
+     },
+     "fraud": {
+      "title": "Fraud",
+      "cases": 3082,
+      "cleared_count": null,
+      "clearance_pct": 7.59,
+      "trend_vs_prior_year": -7.59
+     },
+     "dui_arrests": {
+      "title": "DUI",
+      "cases": 244,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -8.27
+     },
+     "drug_narcotic_violations": {
+      "title": "Drug/Narcotic Violations",
+      "cases": 2854,
+      "cleared_count": null,
+      "clearance_pct": 59.15,
+      "trend_vs_prior_year": 10.53
+     },
+     "weapon_law_violations": {
+      "title": "Weapon Law Violations",
+      "cases": 4224,
+      "cleared_count": null,
+      "clearance_pct": 36.65,
+      "trend_vs_prior_year": -10.45
+     },
+     "domestic_violence": {
+      "title": "Domestic Violence",
+      "cases": 14632,
+      "cleared_count": 4639,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -4.45
+     },
+     "hate_crime": {
+      "title": "Hate Crime",
+      "cases": 2,
+      "cleared_count": 0,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 0.0
+     }
+    },
+    {
+     "year": "2026",
+     "period": "post",
+     "murder": {
+      "title": "Murder",
+      "cases": 141,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -25.0
+     },
+     "sex_offenses_nc": {
+      "title": "Sex Offenses, Non-Consensual",
+      "cases": 415,
+      "cleared_count": null,
+      "clearance_pct": 12.77,
+      "trend_vs_prior_year": -28.57
+     },
+     "agg_assault": {
+      "title": "Aggravated Assault",
+      "cases": 6750,
+      "cleared_count": null,
+      "clearance_pct": 36.18,
+      "trend_vs_prior_year": -28.63
+     },
+     "robbery": {
+      "title": "Robbery",
+      "cases": 851,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -42.58
+     },
+     "burglary": {
+      "title": "Burglary",
+      "cases": 2779,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -34.96
+     },
+     "motor_vehicle_theft": {
+      "title": "Motor Vehicle Theft",
+      "cases": 2635,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -52.68
+     },
+     "fraud": {
+      "title": "Fraud",
+      "cases": 2407,
+      "cleared_count": null,
+      "clearance_pct": 7.23,
+      "trend_vs_prior_year": -21.9
+     },
+     "dui_arrests": {
+      "title": "DUI",
+      "cases": 193,
+      "cleared_count": null,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -20.9
+     },
+     "drug_narcotic_violations": {
+      "title": "Drug/Narcotic Violations",
+      "cases": 2785,
+      "cleared_count": null,
+      "clearance_pct": 62.01,
+      "trend_vs_prior_year": -2.42
+     },
+     "weapon_law_violations": {
+      "title": "Weapon Law Violations",
+      "cases": 2723,
+      "cleared_count": null,
+      "clearance_pct": 46.02,
+      "trend_vs_prior_year": -35.54
+     },
+     "domestic_violence": {
+      "title": "Domestic Violence",
+      "cases": 12326,
+      "cleared_count": 4606,
+      "clearance_pct": null,
+      "trend_vs_prior_year": -15.76
+     },
+     "hate_crime": {
+      "title": "Hate Crime",
+      "cases": 5,
+      "cleared_count": 1,
+      "clearance_pct": null,
+      "trend_vs_prior_year": 150.0
+     }
+    }
+   ],
+   "shelby_county_sheriff_series": [
+    {
+     "year": "2010",
+     "period": "pre",
+     "murder": {
+      "title": "Murder",
+      "cases": 6,
+      "cleared_count": null,
+      "clearance_pct": 66.67,
+      "trend_vs_prior_year": 0.0
+     },
+     "sex_offenses_nc": {
+      "title": "Sex Offenses, Non-Consensual",
+      "cases": 114,
+      "cleared_count": null,
+      "clearance_pct": 47.37,
+      "trend_vs_prior_year": 2.7
+     },
+     "agg_assault": {
+      "title": "Aggravated Assault",
+      "cases": 363,
+      "cleared_count": null,
+      "clearance_pct": 54.82,
+      "trend_vs_prior_year": 5.22
+     },
+     "robbery": {
+      "title": "Robbery",
+      "cases": 70,
+      "cleared_count": null,
+      "clearance_pct": 25.71,
+      "trend_vs_prior_year": -7.89
+     },
+     "burglary": {
+      "title": "Burglary",
+      "cases": 1303,
+      "cleared_count": null,
+      "clearance_pct": 7.44,
+      "trend_vs_prior_year": 1.24
+     },
+     "motor_vehicle_theft": {
+      "title": "Motor Vehicle Theft",
+      "cases": 269,
+      "cleared_count": null,
+      "clearance_pct": 5.2,
+      "trend_vs_prior_year": 8.03
+     },
+     "fraud": {
+      "title": "Fraud",
+      "cases": 225,
+      "cleared_count": null,
+      "clearance_pct": 6.22,
+      "trend_vs_prior_year": -0.88
+     }
+    },
+    {
+     "year": "2011",
+     "period": "pre",
+     "murder": {
+      "title": "Murder",
+      "cases": 6,
+      "cleared_count": null,
+      "clearance_pct": 33.33,
+      "trend_vs_prior_year": 0.0
+     },
+     "sex_offenses_nc": {
+      "title": "Sex Offenses, Non-Consensual",
+      "cases": 107,
+      "cleared_count": null,
+      "clearance_pct": 40.19,
+      "trend_vs_prior_year": -6.14
+     },
+     "agg_assault": {
+      "title": "Aggravated Assault",
+      "cases": 397,
+      "cleared_count": null,
+      "clearance_pct": 57.18,
+      "trend_vs_prior_year": 9.37
+     },
+     "robbery": {
+      "title": "Robbery",
+      "cases": 55,
+      "cleared_count": null,
+      "clearance_pct": 23.64,
+      "trend_vs_prior_year": -21.43
+     },
+     "burglary": {
+      "title": "Burglary",
+      "cases": 1134,
+      "cleared_count": null,
+      "clearance_pct": 6.79,
+      "trend_vs_prior_year": -12.97
+     },
+     "motor_vehicle_theft": {
+      "title": "Motor Vehicle Theft",
+      "cases": 237,
+      "cleared_count": null,
+      "clearance_pct": 5.49,
+      "trend_vs_prior_year": -11.9
+     },
+     "fraud": {
+      "title": "Fraud",
+      "cases": 263,
+      "cleared_count": null,
+      "clearance_pct": 3.8,
+      "trend_vs_prior_year": 16.89
+     }
+    },
+    {
+     "year": "2012",
+     "period": "pre",
+     "murder": {
+      "title": "Murder",
+      "cases": 3,
+      "cleared_count": null,
+      "clearance_pct": 100.0,
+      "trend_vs_prior_year": -50.0
+     },
+     "sex_offenses_nc": {
+      "title": "Sex Offenses, Non-Consensual",
+      "cases": 103,
+      "cleared_count": null,
+      "clearance_pct": 25.24,
+      "trend_vs_prior_year": -3.74
+     },
+     "agg_assault": {
+      "title": "Aggravated Assault",
+      "cases": 487,
+      "cleared_count": null,
+      "clearance_pct": 52.57,
+      "trend_vs_prior_year": 22.67
+     },
+     "robbery": {
+      "title": "Robbery",
+      "cases": 78,
+      "cleared_count": null,
+      "clearance_pct": 17.95,
+      "trend_vs_prior_year": 41.82
+     },
+     "burglary": {
+      "title": "Burglary",
+      "cases": 952,
+      "cleared_count": null,
+      "clearance_pct": 7.14,
+      "trend_vs_prior_year": -16.05
+     },
+     "motor_vehicle_theft": {
+      "title": "Motor Vehicle Theft",
+      "cases": 170,
+      "cleared_count": null,
+      "clearance_pct": 1.76,
+      "trend_vs_prior_year": -28.27
+     },
+     "fraud": {
+      "title": "Fraud",
+      "cases": 275,
+      "cleared_count": null,
+      "clearance_pct": 5.82,
+      "trend_vs_prior_year": 4.56
+     }
+    },
+    {
+     "year": "2013",
+     "period": "pre",
+     "murder": {
+      "title": "Murder",
+      "cases": 6,
+      "cleared_count": null,
+      "clearance_pct": 66.67,
+      "trend_vs_prior_year": 100.0
+     },
+     "sex_offenses_nc": {
+      "title": "Sex Offenses, Non-Consensual",
+      "cases": 107,
+      "cleared_count": null,
+      "clearance_pct": 17.76,
+      "trend_vs_prior_year": 3.88
+     },
+     "agg_assault": {
+      "title": "Aggravated Assault",
+      "cases": 388,
+      "cleared_count": null,
+      "clearance_pct": 53.35,
+      "trend_vs_prior_year": -20.33
+     },
+     "robbery": {
+      "title": "Robbery",
+      "cases": 76,
+      "cleared_count": null,
+      "clearance_pct": 21.05,
+      "trend_vs_prior_year": -2.56
+     },
+     "burglary": {
+      "title": "Burglary",
+      "cases": 899,
+      "cleared_count": null,
+      "clearance_pct": 8.68,
+      "trend_vs_prior_year": -5.57
+     },
+     "motor_vehicle_theft": {
+      "title": "Motor Vehicle Theft",
+      "cases": 154,
+      "cleared_count": null,
+      "clearance_pct": 7.14,
+      "trend_vs_prior_year": -9.41
+     },
+     "fraud": {
+      "title": "Fraud",
+      "cases": 203,
+      "cleared_count": null,
+      "clearance_pct": 7.88,
+      "trend_vs_prior_year": -26.18
+     }
+    },
+    {
+     "year": "2014",
+     "period": "pre",
+     "murder": {
+      "title": "Murder",
+      "cases": 6,
+      "cleared_count": null,
+      "clearance_pct": 83.33,
+      "trend_vs_prior_year": 0.0
+     },
+     "sex_offenses_nc": {
+      "title": "Sex Offenses, Non-Consensual",
+      "cases": 96,
+      "cleared_count": null,
+      "clearance_pct": 9.38,
+      "trend_vs_prior_year": -10.28
+     },
+     "agg_assault": {
+      "title": "Aggravated Assault",
+      "cases": 477,
+      "cleared_count": null,
+      "clearance_pct": 37.74,
+      "trend_vs_prior_year": 22.94
+     },
+     "robbery": {
+      "title": "Robbery",
+      "cases": 82,
+      "cleared_count": null,
+      "clearance_pct": 18.29,
+      "trend_vs_prior_year": 7.89
+     },
+     "burglary": {
+      "title": "Burglary",
+      "cases": 780,
+      "cleared_count": null,
+      "clearance_pct": 7.82,
+      "trend_vs_prior_year": -13.24
+     },
+     "motor_vehicle_theft": {
+      "title": "Motor Vehicle Theft",
+      "cases": 179,
+      "cleared_count": null,
+      "clearance_pct": 6.7,
+      "trend_vs_prior_year": 16.23
+     },
+     "fraud": {
+      "title": "Fraud",
+      "cases": 276,
+      "cleared_count": null,
+      "clearance_pct": 5.8,
+      "trend_vs_prior_year": 35.96
+     }
+    },
+    {
+     "year": "2015",
+     "period": "pre",
+     "murder": {
+      "title": "Murder",
+      "cases": 3,
+      "cleared_count": null,
+      "clearance_pct": 33.33,
+      "trend_vs_prior_year": -50.0
+     },
+     "sex_offenses_nc": {
+      "title": "Sex Offenses, Non-Consensual",
+      "cases": 71,
+      "cleared_count": null,
+      "clearance_pct": 19.72,
+      "trend_vs_prior_year": -26.04
+     },
+     "agg_assault": {
+      "title": "Aggravated Assault",
+      "cases": 357,
+      "cleared_count": null,
+      "clearance_pct": 40.9,
+      "trend_vs_prior_year": -25.16
+     },
+     "robbery": {
+      "title": "Robbery",
+      "cases": 86,
+      "cleared_count": null,
+      "clearance_pct": 11.63,
+      "trend_vs_prior_year": 4.88
+     },
+     "burglary": {
+      "title": "Burglary",
+      "cases": 802,
+      "cleared_count": null,
+      "clearance_pct": 9.48,
+      "trend_vs_prior_year": 2.82
+     },
+     "motor_vehicle_theft": {
+      "title": "Motor Vehicle Theft",
+      "cases": 183,
+      "cleared_count": null,
+      "clearance_pct": 12.57,
+      "trend_vs_prior_year": 2.23
+     },
+     "fraud": {
+      "title": "Fraud",
+      "cases": 300,
+      "cleared_count": null,
+      "clearance_pct": 9.0,
+      "trend_vs_prior_year": 8.7
+     }
+    },
+    {
+     "year": "2020",
+     "period": "post",
+     "murder": {
+      "title": "Murder",
+      "cases": 11,
+      "cleared_count": null,
+      "clearance_pct": 63.64,
+      "trend_vs_prior_year": 120.0
+     },
+     "sex_offenses_nc": {
+      "title": "Sex Offenses, Non-Consensual",
+      "cases": 64,
+      "cleared_count": null,
+      "clearance_pct": 51.56,
+      "trend_vs_prior_year": -36.0
+     },
+     "agg_assault": {
+      "title": "Aggravated Assault",
+      "cases": 695,
+      "cleared_count": null,
+      "clearance_pct": 42.59,
+      "trend_vs_prior_year": 46.62
+     },
+     "robbery": {
+      "title": "Robbery",
+      "cases": 50,
+      "cleared_count": null,
+      "clearance_pct": 26.0,
+      "trend_vs_prior_year": -30.56
+     },
+     "burglary": {
+      "title": "Burglary",
+      "cases": 402,
+      "cleared_count": null,
+      "clearance_pct": 9.2,
+      "trend_vs_prior_year": -24.58
+     },
+     "motor_vehicle_theft": {
+      "title": "Motor Vehicle Theft",
+      "cases": 279,
+      "cleared_count": null,
+      "clearance_pct": 5.73,
+      "trend_vs_prior_year": 22.91
+     },
+     "fraud": {
+      "title": "Fraud",
+      "cases": 225,
+      "cleared_count": null,
+      "clearance_pct": 8.44,
+      "trend_vs_prior_year": 18.42
+     }
+    },
+    {
+     "year": "2021",
+     "period": "post",
+     "murder": {
+      "title": "Murder",
+      "cases": 9,
+      "cleared_count": null,
+      "clearance_pct": 100.0,
+      "trend_vs_prior_year": -18.18
+     },
+     "sex_offenses_nc": {
+      "title": "Sex Offenses, Non-Consensual",
+      "cases": 84,
+      "cleared_count": null,
+      "clearance_pct": 27.38,
+      "trend_vs_prior_year": 31.25
+     },
+     "agg_assault": {
+      "title": "Aggravated Assault",
+      "cases": 561,
+      "cleared_count": null,
+      "clearance_pct": 46.35,
+      "trend_vs_prior_year": -19.28
+     },
+     "robbery": {
+      "title": "Robbery",
+      "cases": 52,
+      "cleared_count": null,
+      "clearance_pct": 19.23,
+      "trend_vs_prior_year": 4.0
+     },
+     "burglary": {
+      "title": "Burglary",
+      "cases": 413,
+      "cleared_count": null,
+      "clearance_pct": 6.78,
+      "trend_vs_prior_year": 2.74
+     },
+     "motor_vehicle_theft": {
+      "title": "Motor Vehicle Theft",
+      "cases": 334,
+      "cleared_count": null,
+      "clearance_pct": 5.09,
+      "trend_vs_prior_year": 19.71
+     },
+     "fraud": {
+      "title": "Fraud",
+      "cases": 169,
+      "cleared_count": null,
+      "clearance_pct": 5.92,
+      "trend_vs_prior_year": -24.89
+     }
+    },
+    {
+     "year": "2022",
+     "period": "post",
+     "murder": {
+      "title": "Murder",
+      "cases": 9,
+      "cleared_count": null,
+      "clearance_pct": 44.44,
+      "trend_vs_prior_year": 0.0
+     },
+     "sex_offenses_nc": {
+      "title": "Sex Offenses, Non-Consensual",
+      "cases": 102,
+      "cleared_count": null,
+      "clearance_pct": 16.67,
+      "trend_vs_prior_year": 21.43
+     },
+     "agg_assault": {
+      "title": "Aggravated Assault",
+      "cases": 599,
+      "cleared_count": null,
+      "clearance_pct": 34.89,
+      "trend_vs_prior_year": 6.77
+     },
+     "robbery": {
+      "title": "Robbery",
+      "cases": 52,
+      "cleared_count": null,
+      "clearance_pct": 5.77,
+      "trend_vs_prior_year": 0.0
+     },
+     "burglary": {
+      "title": "Burglary",
+      "cases": 396,
+      "cleared_count": null,
+      "clearance_pct": 8.08,
+      "trend_vs_prior_year": -4.12
+     },
+     "motor_vehicle_theft": {
+      "title": "Motor Vehicle Theft",
+      "cases": 512,
+      "cleared_count": null,
+      "clearance_pct": 3.71,
+      "trend_vs_prior_year": 53.29
+     },
+     "fraud": {
+      "title": "Fraud",
+      "cases": 228,
+      "cleared_count": null,
+      "clearance_pct": 1.32,
+      "trend_vs_prior_year": 34.91
+     }
+    },
+    {
+     "year": "2023",
+     "period": "post",
+     "murder": {
+      "title": "Murder",
+      "cases": 9,
+      "cleared_count": null,
+      "clearance_pct": 44.44,
+      "trend_vs_prior_year": 0.0
+     },
+     "sex_offenses_nc": {
+      "title": "Sex Offenses, Non-Consensual",
+      "cases": 93,
+      "cleared_count": null,
+      "clearance_pct": 29.03,
+      "trend_vs_prior_year": -8.82
+     },
+     "agg_assault": {
+      "title": "Aggravated Assault",
+      "cases": 524,
+      "cleared_count": null,
+      "clearance_pct": 36.26,
+      "trend_vs_prior_year": -12.52
+     },
+     "robbery": {
+      "title": "Robbery",
+      "cases": 49,
+      "cleared_count": null,
+      "clearance_pct": 22.45,
+      "trend_vs_prior_year": -5.77
+     },
+     "burglary": {
+      "title": "Burglary",
+      "cases": 428,
+      "cleared_count": null,
+      "clearance_pct": 7.71,
+      "trend_vs_prior_year": 8.08
+     },
+     "motor_vehicle_theft": {
+      "title": "Motor Vehicle Theft",
+      "cases": 822,
+      "cleared_count": null,
+      "clearance_pct": 4.01,
+      "trend_vs_prior_year": 60.55
+     },
+     "fraud": {
+      "title": "Fraud",
+      "cases": 245,
+      "cleared_count": null,
+      "clearance_pct": 4.9,
+      "trend_vs_prior_year": 7.46
+     }
+    },
+    {
+     "year": "2024",
+     "period": "post",
+     "murder": {
+      "title": "Murder",
+      "cases": 12,
+      "cleared_count": null,
+      "clearance_pct": 91.67,
+      "trend_vs_prior_year": 33.33
+     },
+     "sex_offenses_nc": {
+      "title": "Sex Offenses, Non-Consensual",
+      "cases": 114,
+      "cleared_count": null,
+      "clearance_pct": 32.46,
+      "trend_vs_prior_year": 22.58
+     },
+     "agg_assault": {
+      "title": "Aggravated Assault",
+      "cases": 535,
+      "cleared_count": null,
+      "clearance_pct": 51.4,
+      "trend_vs_prior_year": 2.1
+     },
+     "robbery": {
+      "title": "Robbery",
+      "cases": 46,
+      "cleared_count": null,
+      "clearance_pct": 32.61,
+      "trend_vs_prior_year": -6.12
+     },
+     "burglary": {
+      "title": "Burglary",
+      "cases": 270,
+      "cleared_count": null,
+      "clearance_pct": 19.26,
+      "trend_vs_prior_year": -36.92
+     },
+     "motor_vehicle_theft": {
+      "title": "Motor Vehicle Theft",
+      "cases": 772,
+      "cleared_count": null,
+      "clearance_pct": 8.16,
+      "trend_vs_prior_year": -6.08
+     },
+     "fraud": {
+      "title": "Fraud",
+      "cases": 275,
+      "cleared_count": null,
+      "clearance_pct": 5.09,
+      "trend_vs_prior_year": 12.24
+     }
+    },
+    {
+     "year": "2025",
+     "period": "post",
+     "murder": {
+      "title": "Murder",
+      "cases": 11,
+      "cleared_count": null,
+      "clearance_pct": 81.82,
+      "trend_vs_prior_year": -8.33
+     },
+     "sex_offenses_nc": {
+      "title": "Sex Offenses, Non-Consensual",
+      "cases": 76,
+      "cleared_count": null,
+      "clearance_pct": 46.05,
+      "trend_vs_prior_year": -33.33
+     },
+     "agg_assault": {
+      "title": "Aggravated Assault",
+      "cases": 413,
+      "cleared_count": null,
+      "clearance_pct": 54.24,
+      "trend_vs_prior_year": -22.8
+     },
+     "robbery": {
+      "title": "Robbery",
+      "cases": 29,
+      "cleared_count": null,
+      "clearance_pct": 41.38,
+      "trend_vs_prior_year": -36.96
+     },
+     "burglary": {
+      "title": "Burglary",
+      "cases": 283,
+      "cleared_count": null,
+      "clearance_pct": 17.67,
+      "trend_vs_prior_year": 4.81
+     },
+     "motor_vehicle_theft": {
+      "title": "Motor Vehicle Theft",
+      "cases": 451,
+      "cleared_count": null,
+      "clearance_pct": 11.31,
+      "trend_vs_prior_year": -41.58
+     },
+     "fraud": {
+      "title": "Fraud",
+      "cases": 250,
+      "cleared_count": null,
+      "clearance_pct": 6.8,
+      "trend_vs_prior_year": -9.09
+     }
+    },
+    {
+     "year": "2026",
+     "period": "post",
+     "murder": {
+      "title": "Murder",
+      "cases": 7,
+      "cleared_count": null,
+      "clearance_pct": 85.71,
+      "trend_vs_prior_year": -36.36
+     },
+     "sex_offenses_nc": {
+      "title": "Sex Offenses, Non-Consensual",
+      "cases": 61,
+      "cleared_count": null,
+      "clearance_pct": 18.03,
+      "trend_vs_prior_year": -19.74
+     },
+     "agg_assault": {
+      "title": "Aggravated Assault",
+      "cases": 375,
+      "cleared_count": null,
+      "clearance_pct": 57.6,
+      "trend_vs_prior_year": -9.2
+     },
+     "robbery": {
+      "title": "Robbery",
+      "cases": 21,
+      "cleared_count": null,
+      "clearance_pct": 38.1,
+      "trend_vs_prior_year": -27.59
+     },
+     "burglary": {
+      "title": "Burglary",
+      "cases": 188,
+      "cleared_count": null,
+      "clearance_pct": 18.09,
+      "trend_vs_prior_year": -33.57
+     },
+     "motor_vehicle_theft": {
+      "title": "Motor Vehicle Theft",
+      "cases": 199,
+      "cleared_count": null,
+      "clearance_pct": 11.56,
+      "trend_vs_prior_year": -55.88
+     },
+     "fraud": {
+      "title": "Fraud",
+      "cases": 173,
+      "cleared_count": null,
+      "clearance_pct": 4.62,
+      "trend_vs_prior_year": -30.8
+     }
+    }
+   ],
+   "tennessee_state_series": {
+    "murder": {
+     "2010": 362,
+     "2011": 390,
+     "2012": 419,
+     "2013": 341,
+     "2014": 369,
+     "2015": 421,
+     "2020": 705,
+     "2021": 707,
+     "2022": 657,
+     "2023": 733,
+     "2024": 592,
+     "2025": 484,
+     "2026": 317
+    },
+    "extra_5yr_probe": {
+     "2010": {
+      "robbery": 8405,
+      "burglary": 64326,
+      "mvt": 15248,
+      "agg_assault": 28203,
+      "sex_offenses": 5653
+     },
+     "2015": {
+      "robbery": 7600,
+      "burglary": 44214,
+      "mvt": 13615,
+      "agg_assault": 30528,
+      "sex_offenses": 5817
+     },
+     "2020": {
+      "robbery": 5669,
+      "burglary": 26214,
+      "mvt": 22216,
+      "agg_assault": 38055,
+      "sex_offenses": 5648
+     },
+     "2025": {
+      "robbery": 3095,
+      "burglary": 14888,
+      "mvt": 17168,
+      "agg_assault": 30592,
+      "sex_offenses": 5447
+     },
+     "2026": {
+      "robbery": 1928,
+      "burglary": 10586,
+      "mvt": 10124,
+      "agg_assault": 23687,
+      "sex_offenses": 4281
+     }
+    }
+   },
+   "rate_context_snapshot_2025_view20": {
+    "note": "Beyond 20/20 view 'Crimes Rates by Jurisdiction' (ReportId=20); year slicer fixed at 2025 snapshot year; only 2025 obtainable via this view (stateless).",
+    "memphis_pd": {
+     "rate_per_1000": 147.79,
+     "estimated_population": 606629,
+     "group_a_crimes": 89652
+    },
+    "shelby_county": {
+     "rate_per_1000": 113.57,
+     "estimated_population": 908319,
+     "group_a_crimes": 103162
+    },
+    "shelby_county_sheriff": {
+     "rate_per_1000": null,
+     "estimated_population": null,
+     "group_a_crimes": 6055
+    },
+    "tennessee": {
+     "rate_per_1000": 58.67,
+     "estimated_population": 7337623,
+     "group_a_crimes": 430500
+    },
+    "source": "crimeinsight.tbi.tn.gov/public View 20 CSV download (Incident Date: 2025; TIBRS Offense Data)"
+   },
+   "reconciliation_2025": {
+    "mpd_ucr_index_sum_of_7": 24632,
+    "mpd_group_a_all_view20": 89652,
+    "note": "TOPS 'Cases' are offense-level counts within the theme; view20 'Number of Crimes' counts ALL Group A offenses (broader, incl. larceny, vandalism, etc.). Different numerators, both TIBRS-based."
+   },
+   "caveats": [
+    "TIBRS live DB vs published annual volumes may differ (TBI note on TOPS landing page)",
+    "2026 is partial: Jan-Nov (Nov partial; Dec=0)",
+    "TOPS jurisdiction = agency level; Memphis PD covers Memphis city incl. Raleigh/38128; ZIP/precinct splits not in TIBRS public views",
+    "Jurisdiction boundaries follow reporting agency; do not use as ZIP-level denominators"
+   ]
+  },
+  "1b_zip38128_lane": {
+   "status": "PARTIAL (agency-level only; ZIP-level TIBRS not public)",
+   "zip": "38128",
+   "what_we_have": "TIBRS counts for Memphis Police Department (agency covering ZIP 38128) + Shelby County Sheriff's Office (adjacent patrol) + Tennessee state baseline, 2010-2015 (pre) and 2020-2026 (post)",
+   "zip_level_official_tibrs": null,
+   "null_note": "TBI public views (TOPS + Beyond 20/20 'Crimes Rates by Jurisdiction') report at AGENCY jurisdiction level; ZIP-level offense rolls are not exposed in any keyless public TBI route found (2026-11-23).",
+   "mpd_precinct_note": "Site sits in MPD Old Allen Precinct (precinct building co-located on site since 2020); precinct-level TIBRS series not public."
+  }
+ },
+ "confidence": {
+  "site_facts": "HIGH (Wikipedia + city budget books + city GIS layer all agree)",
+  "cip_funding": "HIGH (budget book + HCD layer agree; $41.9M committed trace)",
+  "crime_post_2020": "HIGH (direct keyless query of official City of Memphis FeatureServer)",
+  "crime_pre_2016": "NULL — dataset does not go back; honest null recorded",
+  "assessor_valuations": "NULL — attribute route unavailable; honest null recorded"
+ }
+}

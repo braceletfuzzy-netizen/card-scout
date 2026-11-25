@@ -1,0 +1,322 @@
+[
+ {
+  "city": "Cincinnati",
+  "year": 2019,
+  "rate": 22.04,
+  "per_cap": {
+   "parks": 16171.48,
+   "health": 17713.17,
+   "housing": 1431.65
+  },
+  "care_per_cap": 35316.29
+ },
+ {
+  "city": "Cincinnati",
+  "year": 2020,
+  "rate": 31.0,
+  "per_cap": {
+   "parks": 16061.74,
+   "health": 17988.82,
+   "housing": 1376.03
+  },
+  "care_per_cap": 35426.59
+ },
+ {
+  "city": "Cincinnati",
+  "year": 2021,
+  "rate": 30.14,
+  "per_cap": {
+   "parks": 15970.28,
+   "health": 17605.91,
+   "housing": 1115.01
+  },
+  "care_per_cap": 34691.2
+ },
+ {
+  "city": "Cincinnati",
+  "year": 2022,
+  "rate": 24.83,
+  "per_cap": {
+   "parks": 16176.21,
+   "health": 20785.76,
+   "housing": 1089.01
+  },
+  "care_per_cap": 38050.98
+ },
+ {
+  "city": "Cincinnati",
+  "year": 2023,
+  "rate": 22.7,
+  "per_cap": {
+   "parks": 17725.37,
+   "health": 20756.0,
+   "housing": 1159.62
+  },
+  "care_per_cap": 39641.0
+ },
+ {
+  "city": "Cincinnati",
+  "year": 2024,
+  "rate": 23.5,
+  "per_cap": {
+   "parks": 18604.72,
+   "health": 21598.31,
+   "housing": 3526.86
+  },
+  "care_per_cap": 43729.89
+ },
+ {
+  "city": "Cincinnati",
+  "year": 2025,
+  "rate": 21.95,
+  "per_cap": {
+   "parks": 20689.23,
+   "health": 22702.64,
+   "housing": 4189.8
+  },
+  "care_per_cap": 47581.68
+ },
+ {
+  "city": "Cincinnati",
+  "year": 2026,
+  "rate": 14.31,
+  "per_cap": {
+   "parks": 22104.18,
+   "health": 24822.54,
+   "housing": 3575.04
+  },
+  "care_per_cap": 50501.76
+ },
+ {
+  "city": "Detroit",
+  "year": 2024,
+  "rate": 31.52,
+  "per_cap": {
+   "housing": 10610.25,
+   "health": 6688.75,
+   "parks": 9297.4,
+   "libraries": 5420.3
+  },
+  "care_per_cap": 32016.7
+ },
+ {
+  "city": "Detroit",
+  "year": 2020,
+  "rate": 50.28,
+  "per_cap": {
+   "health": 5289.62,
+   "housing": 14579.85,
+   "libraries": 5250.94
+  },
+  "care_per_cap": 25120.41
+ },
+ {
+  "city": "Detroit",
+  "year": 2021,
+  "rate": 48.19,
+  "per_cap": {
+   "health": 6520.86,
+   "housing": 9830.34,
+   "libraries": 5584.9,
+   "parks": 7431.59
+  },
+  "care_per_cap": 29367.69
+ },
+ {
+  "city": "Detroit",
+  "year": 2022,
+  "rate": 48.72,
+  "per_cap": {
+   "health": 6741.76,
+   "housing": 11027.13,
+   "libraries": 4388.91,
+   "parks": 7693.02
+  },
+  "care_per_cap": 29850.83
+ },
+ {
+  "city": "Detroit",
+  "year": 2023,
+  "rate": 39.22,
+  "per_cap": {
+   "health": 8105.06,
+   "housing": 16828.94,
+   "libraries": 5827.16,
+   "parks": 7563.92
+  },
+  "care_per_cap": 38325.08
+ },
+ {
+  "city": "Detroit",
+  "year": 2025,
+  "rate": 25.42,
+  "per_cap": {
+   "health": 6688.4,
+   "housing": 12383.99,
+   "libraries": 5985.28,
+   "parks": 8095.7
+  },
+  "care_per_cap": 33153.38
+ },
+ {
+  "city": "Detroit",
+  "year": 2026,
+  "rate": 18.95,
+  "per_cap": {
+   "health": 6814.98,
+   "housing": 10414.61,
+   "libraries": 6227.09,
+   "parks": 7248.77
+  },
+  "care_per_cap": 30705.44
+ },
+ {
+  "city": "Memphis",
+  "year": 2021,
+  "rate": 55.42,
+  "per_cap": {
+   "libraries": 3406.41,
+   "parks": 5601.69,
+   "housing": 1038.55,
+   "human_services": 10906.22
+  },
+  "care_per_cap": 20952.88
+ },
+ {
+  "city": "Memphis",
+  "year": 2022,
+  "rate": 49.12,
+  "per_cap": {
+   "libraries": 3703.24,
+   "parks": 6293.38,
+   "housing": 780.86,
+   "human_services": 6189.18
+  },
+  "care_per_cap": 16966.66
+ },
+ {
+  "city": "Memphis",
+  "year": 2023,
+  "rate": 55.88,
+  "per_cap": {
+   "libraries": 3715.28,
+   "parks": 6640.03,
+   "housing": 780.99,
+   "human_services": 9506.62
+  },
+  "care_per_cap": 20642.93
+ },
+ {
+  "city": "Memphis",
+  "year": 2024,
+  "rate": 40.38,
+  "per_cap": {
+   "libraries": 3663.83,
+   "parks": 8682.86,
+   "housing": 717.56,
+   "human_services": 13906.93
+  },
+  "care_per_cap": 26971.19
+ },
+ {
+  "city": "Memphis",
+  "year": 2025,
+  "rate": 30.18,
+  "per_cap": {
+   "libraries": 4097.0,
+   "parks": 7758.25,
+   "housing": 1011.35,
+   "human_services": 10781.03
+  },
+  "care_per_cap": 23647.64
+ },
+ {
+  "city": "Memphis",
+  "year": 2026,
+  "rate": 24.11,
+  "per_cap": {
+   "libraries": 4288.48,
+   "parks": 8464.4,
+   "housing": 1032.26,
+   "human_services": 10605.05
+  },
+  "care_per_cap": 24390.19
+ },
+ {
+  "city": "St. Louis",
+  "year": 2019,
+  "rate": 64.54,
+  "per_cap": {
+   "health": 7290.66,
+   "human_services": 6125.72,
+   "parks": 9896.22
+  },
+  "care_per_cap": 23312.6
+ },
+ {
+  "city": "St. Louis",
+  "year": 2020,
+  "rate": 87.21,
+  "per_cap": {
+   "health": 7505.68,
+   "human_services": 5933.21,
+   "parks": 9125.78
+  },
+  "care_per_cap": 22564.67
+ },
+ {
+  "city": "St. Louis",
+  "year": 2021,
+  "rate": 69.15,
+  "per_cap": {
+   "health": 7685.37,
+   "human_services": 6651.58,
+   "parks": 9166.15
+  },
+  "care_per_cap": 23503.1
+ },
+ {
+  "city": "St. Louis",
+  "year": 2022,
+  "rate": 70.15,
+  "per_cap": {
+   "health": 12092.66,
+   "human_services": 11224.83,
+   "parks": 12432.36
+  },
+  "care_per_cap": 35749.85
+ },
+ {
+  "city": "St. Louis",
+  "year": 2023,
+  "rate": 55.79,
+  "per_cap": {
+   "health": 10649.51,
+   "human_services": 9742.84,
+   "parks": 11231.35
+  },
+  "care_per_cap": 31623.71
+ },
+ {
+  "city": "St. Louis",
+  "year": 2024,
+  "rate": 53.63,
+  "per_cap": {
+   "health": 11871.91,
+   "human_services": 17816.93,
+   "parks": 13949.11
+  },
+  "care_per_cap": 43637.95
+ },
+ {
+  "city": "St. Louis",
+  "year": 2025,
+  "rate": 50.69,
+  "per_cap": {
+   "health": 12844.58,
+   "human_services": 13363.32,
+   "parks": 15440.8
+  },
+  "care_per_cap": 41648.69
+ }
+]

@@ -1,0 +1,51 @@
+{
+ "pair_verdict": {
+  "headline": "SPLIT VERDICT: NO's care flip is MANUFACTURED BY BUDGET (a deliberate, durable rebuild-era reset that doubled a stable pre-storm ratio); Houston's care posture is ABSORBED-BY-GROWTH (the diaspora landed in a static care lane \u2014 flat-to-cut dollars FY05-FY06 \u2014 and the care ratio never re-based: it drifted 0.27 pre-shock -> 0.16-0.20 by FY26 as the cage lane grew faster than care).",
+  "no_side": "0.164 (FY04 actual) -> 0.095 trough (FY06) -> 0.311 (FY11) -> 0.313-0.318 (FY17-19) -> 0.365 (FY22) [Certain-as-published]. The post-storm ratio PLATEAUES at ~2x pre-storm and never re-enters the old band \u2014 a structural reset (Library Fund, NORD/Parkway mills, Health dept rebuild), exactly the public-budget flip class.",
+  "houston_side": "0.270 (FY04 budget-col) -> 0.243 (FY05) -> 0.228 (FY06, care CUT 1% in dollars while Police +5%) -> 0.245 (FY07, first care wave +15.7%: Health +62%, Parks +40%) -> 0.187 (FY22) -> 0.248 (FY24, subtotal-read) / ~0.21 (component-read) -> 0.199 (FY26) -> 0.160 (FY27). NO care-ratio break, no flip: care/resident rose 64->92 (+44%) FY04->FY26 but cage/resident rose 245->461 (+88%) \u2014 cage ran away WITH the population, care roughly tracked it. The newcomers landed in STATIC care capacity; Houston's response was growth-absorptive, not care-progressive.",
+  "the_twin_law": "Same shock, opposite budget postures: the city that LOST people re-based its care ratio UP through its own ledger (deliberate budget choice); the city that GAINED people never re-based (care lanes static; the ratio fell). Population shock alone does NOT produce a care flip \u2014 the NO flip required the rebuild-millage/ledger mechanism.",
+  "care_resident_arc": {
+   "NO": "60.5 (FY04) -> 58.7 (FY06) -> 146.3 (FY11) -> 292.2 (FY22): care-per-resident UP ~4.4x",
+   "HO": "66.2 (FY04) -> 58.5 (FY06) -> 92.0 (FY26): care-per-resident UP ~1.4x"
+  },
+  "cage_resident_arc": {
+   "NO": "368.2 (FY04) -> 619.4 (FY06 trough, tiny pop denominator) -> 470.7 (FY11) -> 800.4 (FY22)",
+   "HO": "245.3 (FY04) -> 294.0 (FY07) -> 461.1 (FY26): cage-per-resident +88% \u2014 the CRIME+ input: Houston absorbed the diaspora into a cage lane that grew twice as fast as care"
+  }
+ },
+ "no_series": "10 banked points (neworleans_care_cage_series_v1.jsonl, Certain-as-published, page-cited) + 1 FY2024 total-only context row inserted in this pair file",
+ "houston_series": "8 points NEW in this run: FY2004 (FY05 book budget-col + FY06 book actual col), FY2005 (pre-storm adopted), FY2006 (first post-shock), FY2007 (first care wave), FY2022, FY2024, FY2026 (dept-grain delta-0), FY2026-27 (bands row). Sources: FOUR live houstontx.gov adopted-budget books (05/06/07 budadopt II_GFS.pdf pp II-2/II-3, fetched + vision-read 2026-11-22) + FY22/FY24 II_GFS + banked FY26/FY27 rows. WAYBACK NOT NEEDED: houstontx.gov still hosts the 2005-2007 books natively.",
+ "diaspora_composition_notes": {
+  "who_arrived": "Texas took ~250,000 evacuees (Wikipedia New Orleans diaspora <- FEMA/state counts, Sep 2005); Houston city alone sheltered '>150,000 people from New Orleans' (Wikipedia Houston <- Houston Chronicle 'Katrina's Human Legacy' Aug 27 2006) [Certain-as-published]. Permanent-stay class tracked upstream at 200,000-300,000 never-returned (SPINOFF_IDEAS banked-studies lane) [Likely].",
+  "age_family_income": "Wikipedia diaspora article: ~40% of 1.5M Gulf evacuees could not return home; 25% relocated <10mi; 25% >450mi [Certain-as-cited]. Income/family-structure granularity (age bands, single-parent %, income deciles) NOT yet machine-ingested here \u2014 flagged as the open composition lane; the Harris County evacuee-profile studies (Kaiser/Katrina-era surveys) are the named next source.",
+  "who_left_NO": "NO lost >50% pop (>230k); Black residents, renters, elderly, and low-income disproportionately (Wikipedia New Orleans <- Nelson/Ehrenfeucht/Laska Cityscape 2007 + Morse 2008) [Certain-as-cited]; July 2006 census est 223,000; 2007 273,000.",
+  "care_ratio_response": "NO: care ratio RE-BASED (0.16 -> 0.31-0.37 plateau) \u2014 budget-led. HO: care ratio never re-based (0.27 -> 0.16-0.20) \u2014 care lanes static while cage grew with the population. The arrival-class composition (Black, renter, low-income, disproportionately younger families) matches the cage-lane growth pressure: Police +$600M (FY05->FY27) absorbed the demand side."
+ },
+ "population_shock_response_comparison": {
+  "population": {
+   "NO": "454,865 (Jul 2005 POPEST) -> 223,000 (Jul 2006) -> 273,000 (2007) -> 343,829 (2010 census) -> 393,000 (2017) -> 369,748 (2022) -> 362,154 (2025 est) [Certain decennial anchors, Likely PEP]",
+   "HO": "1,953,631 (2000) -> 2,099,451 (2010) -> 2,304,580 (2020) -> 2,397,315 (2025 est) [Certain anchors] + ~150k evacuees arriving Aug-Sep 2005"
+  },
+  "budget_per_resident": {
+   "NO": "548 (FY04) -> 883 (FY06) -> 1,052 (FY17) -> 1,435 (FY22): the shrinking denominator drives budget/head UP ~2.6x",
+   "HO": "451 (FY04) -> 463 (FY06) -> 746 (FY22) -> 845 (FY26): +87% over 22 years \u2014 steady growth-city economics, no shock signature"
+  },
+  "response_read": "NO's per-resident care spend quadrupled (60->292) because the city CHOSE a rebuild that re-based care; Houston's per-resident care grew only +44% (66->92) while the city absorbed the largest single-city Katrina intake \u2014 capacity-per-head barely moved: absorption, not expansion."
+ },
+ "confidence": {
+  "NO_series": "HIGH \u2014 banked Certain-as-published (official adopted-book tables, page-cited, flip falsifier already tested upstream)",
+  "Houston_series": "MEDIUM-HIGH \u2014 (a) FY05/06/07 + FY22/24 read via VISION from scanned image PDFs (no text layer) but every subtotal arithmetic-checked (4/6 books reconcile to \u22640.4%; FY2005 3,597/2,990/1,510-dollar sub-read deltas = prior-year restatements; FY2024 book has a REAL printed-subtotal discrepancy of ~181M between component lines and the printed PS subtotal, carried openly with both cage reads); (b) FY2004 Houston row is BUDGET-column-based (Actual column restatement-affected, both readings in the row); (c) FY26 dept-grain is delta-0-Certain; (d) interpolations 2001-2009 population are linear between decennial anchors and labeled",
+  "pair_conclusion": "MEDIUM-HIGH: the direction (NO flips and plateaus, Houston drifts 0.27->0.16-0.20) survives the basis-change check (both series carried on fire-excluded, courts-included convention; NO's flip already survived its own GF-only falsifier upstream)"
+ },
+ "falsifier": {
+  "claim": "Houston absorbed the Katrina diaspora WITHOUT a care-ratio flip (static care capacity; absorption not budget-manufactured expansion), while NO's flip was budget-manufactured",
+  "falsified_if": [
+   "A Houston care flip exists OUTSIDE the General Fund: the all-funds/capital lanes (Metro 2012 parks bonds, 2023 parks bond, library capital, Houston Parks Board MOU) could carry a care expansion invisible to GF ratios \u2014 TEST: recompute Houston care/cage at all-funds grain (the II_GFS Table-I all-fund volumes exist for every era read here); if all-funds care/cage jumps >1.5x off its pre-2005 band after 2005 and never re-enters, the 'absorbed by growth' verdict fails.",
+   "The 0.27->0.16 Houston drift is a Fire-inflation artifact: Fire grew 281M->732M (2.6x) and is excluded from cage. If Fire is INCLUDED in cage (NO-series convention keeps fire_flagged OUT of cage but a fire-inclusive control read exists), Houston's ratio still falls 0.165->0.123 (FY04->FY26) and never flips \u2014 the drift is genuinely cage-side (Police +$624M).",
+   "NO's flip is a population-denominator artifact: NO falsifier already tested this upstream (GF-only + all-funds checks) \u2014 survives; the twin-city control HERE is the strongest confirmation: if the flip were mechanical (any big population shock flips care/cage), Houston should have flipped TOO \u2014 it did not.",
+   "The FY24 Houston subtotal discrepancy hides a care break: the printed-vs-component 181M gap is on the PUBLIC SAFETY side; recomputing with the component-sum cage (1,042.7M) gives ratio 0.207 \u2014 still inside the 0.16-0.21 no-flip band."
+  ]
+ },
+ "built": "2026-11-22 (subagent pair run)",
+ "provenance_law": "Every number carries source_refs + data_quality; interpolations and restatement effects labeled per row; FY2024-open-ARITHMETIC-FLAG preserved verbatim."
+}

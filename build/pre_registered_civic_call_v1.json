@@ -1,0 +1,26 @@
+{
+  "_record": "pre_registered_civic_call_v1 — THE PRE-REGISTERED CIVIC CALL (Louisville KY), timestamped + falsifiable, founder-visible",
+  "city": "Louisville KY (Louisville Metro Police Department, Census place 48006 / agency ORI KY0568000)",
+  "timestamp_utc": "2026-11-25T07:20:00-06:00",
+  "registered_by": "hermes pre-expansion-gauntlet child run (step 6), workspace build/",
+  "prediction": "DOWN — Louisville's 2026 murder rate finishes BELOW its own 2021-2025 mean of 30.69 per-100k",
+  "prediction_class": "direction-only (the banked within-city convention: hit iff sign(2026 rate − 2021-25 mean) == DOWN). NO level forecast claimed — the full-read magnitude (−32.5 rate-pts) is OUT-OF-SUPPORT and voided, see laws.",
+  "target_year": 2026,
+  "falsifier": "LMPD full-year 2026 homicide count published on the keyless FBI CDE summarizer (cde.ucr.cjis.gov/LATEST/summarized/agency/KY0568000/HOM, refreshes ~Mar-2027) or the LMPD year-end report; convert rate = count / CDE agency-jurisdiction pop × 1e5. The call is FALSIFIED iff sign(2026 rate − 30.69) != negative (i.e. the rate finishes at-or-above 30.69). Unresolvable if the 0/12-months non-reporting class recurs (the Jacksonville 2011-2020 banked pattern) — in that case the call is void, not scored.",
+  "inputs_2024_basis": [
+    "murder arc: fresh pull 2026-11-25, route cde.ucr.cjis.gov/LATEST/summarized/agency/KY0568000/HOM (keyless) — 2021:252 2022:244 2023:198 2024:210 2025:136 counts; CDE agency-pop denominators 678236/677554/669468/676843/691630",
+    "poverty 2024: 15.48% — ACS 1-yr 2024 B17001, route www2.census.gov/programs-surveys/acs/summary_file/2024/table-based-SF/data/1YRData/acsdt1y2024-b17001.dat (keyless, the banked panel route), geo 1600000US2148006",
+    "bachelors+ 2024: 30.44% — ACS 1-yr 2024 B15003 same route",
+    "rent-burden-50%+ 2024: 30.87% — ACS 1-yr 2024 B25070 same route",
+    "median home value 2024: $241,700 — ACS 1-yr 2024 B25077 same route, geo 1600000US2148006 (fresh pull this session)",
+    "care-$ per-100k 2024: HONEST-NULL — Louisville budget dept-grain extraction not routed in this pass; the care lane is the model's t~2+ coefficient and CANNOT be priced here; the prediction therefore leans on the ACS strata only and is registered at the weaker confidence class",
+    "snap receipt share 2024: HONEST-NULL — ACS B22010 not routed in this pass; z pinned at the panel frame mean, labeled"
+  ],
+  "betas_used": "LOCO-refit stable-class mean (step-1 hold-out refits, FE-3_arc_tplus1): care −0.332 / burden +0.120 / home −0.227 / snap +0.463 / bach −0.167 (per-city refits range carried in civic_call_prediction_v1.json)",
+  "math": "z = (Lou 2024 − panel-frame mean)/panel-frame sd; Σβz = −5.231 × Louisville own-arc SD 6.22 = −32.5 rate-pts vs own mean — OUT-OF-SUPPORT full read (Louisville z: burden −17.9, bach +21.1 — 18-21 SD off the 5-city panel frame); DIRECTION retained per the within city convention, MAGNITUDE voided",
+  "lou_own_mean_rate_2021_25": 30.69,
+  "lou_own_sd_2021_25": 6.22,
+  "in_support_channel_read": "Louisville 2025 rate already fell 36% below its own mean (19.66 vs 30.69); within-2025 the burden channel (30.87% rent-burden-50+, panel-frame z −3.8-class) and bachelors channel read DOWN as well. The registered DOWN direction agrees across the out-of-support full read AND the in-support channel read; the falsifier above is the only thing that resolves it.",
+  "honest_nulls": ["care_per_100k (budget dept-grain not routed)", "snap_receipt_share (B22010 not routed)", "2025 ACS 1-yr not yet published — prediction inputs are 2024-vintage", "CDE agency-pop ≠ ACS place pop (691,630 vs 640,793 in 2024) — both carried, rate class identical either way"],
+  "laws": ["zero fabricated numbers — every figure traces to the banked files or the route-labeled fresh pulls above", "no causal claims", "direction-class at small n", "partial-month 2026 data never annualized (months-guard law in recheck script)", "cron re-check: civic_call_recheck_v1.py, the 10am class"]
+}

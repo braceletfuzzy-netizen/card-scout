@@ -1,0 +1,42 @@
+[
+ {
+  "year": "2020",
+  "edu_total_usd": 625000000,
+  "basis": "district",
+  "source_refs": [
+   "CPS FY2020-21 Adopted Budget (cps-k12.org /fs/resource-manager/view/c22405a0-74ed-4bcd-9a05-c2c6c46382e8), General Fund FY21 Adopted budget Grand Total $625,000,000.00"
+  ],
+  "data_quality": "Certain-as-published (official adopted-budget; single grand-total row)",
+  "notes": "CPS GF FY20-21 adopted. City of Cincinnati carries no public-school appropriation; city_contribution null.",
+  "honest_gaps": [
+   "GF-only scope (ESSER shown separately in this book; not aggregated like the FY23-24 5-col table)",
+   "Grand total read single-column; cross-check pending if the FY21-22 book restates FY21"
+  ]
+ },
+ {
+  "year": "2021",
+  "edu_total_usd": 609000000,
+  "basis": "district",
+  "source_refs": [
+   "CPS FY22 Adopted General Fund Operating Budget (cps-k12.org /fs/resource-manager/view/5104adc0-c455-4ecd-ac5a-5832cae79eda), Total General Fund Budget $609,000,000.00"
+  ],
+  "data_quality": "Certain-as-published (official adopted-budget total row)",
+  "notes": "FY21-22 GF adopted total.",
+  "honest_gaps": [
+   "GF-only; ESSER 2.0 federal funds not aggregated in the FY22 book total row"
+  ]
+ },
+ {
+  "year": "2022",
+  "edu_total_usd": 612911537,
+  "basis": "district",
+  "source_refs": [
+   "CPS FY23 General Fund Budget (cps-k12.org /fs/resource-manager/view/d8d6edbe-20ef-44b2-9f27-a17905606a11), total $612,911,536.56"
+  ],
+  "data_quality": "Certain-as-published (official budget total; single-figure book)",
+  "notes": "FY22-23 GF budget (adopted-class).",
+  "honest_gaps": [
+   "GF-only; ESSER 3.0 not in the FY23 book total"
+  ]
+ }
+]

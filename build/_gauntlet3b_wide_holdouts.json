@@ -1,0 +1,21 @@
+{
+ "Jacksonville": {
+  "status": "honest-null: no outcome cells"
+ },
+ "Raleigh": {
+  "status": "honest-null: no banked city unemployment lane on disk for this city",
+  "city_own_outcome_moments": {
+   "mean": 3.2,
+   "sd": 0.9,
+   "n_years": 4
+  }
+ },
+ "Omaha": {
+  "status": "honest-null: no banked city unemployment lane on disk for this city",
+  "city_own_outcome_moments": {
+   "mean": 8.5,
+   "sd": 1.0,
+   "n_years": 4
+  }
+ }
+}

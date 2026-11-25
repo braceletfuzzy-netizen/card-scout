@@ -1,0 +1,441 @@
+{
+ "_record": "kingsport_three_line_v1",
+ "built": "2026-11-24",
+ "built_by": "KINGSPORT-THREE-LINE-PULL subagent (the second named-site candidate, first full three-line test)",
+ "site": {
+  "name": "Kingsport, Tennessee",
+  "ori": "TN0820200",
+  "ori_source": "FBI CDE agency/byStateAbbr/TN (Kingsport Police Department, City, NIBRS start 1997-07-01)",
+  "census_place_code": "47-39560 (SUMLEV 162, PEP sub-est2023_47 + sub-est2019_47)",
+  "site_class": "SINGLE-SITE CASE-STUDY (working-notes.md KINGSPORT-TN = THE NAMED-SITE, commit 395c061)"
+ },
+ "laws": [
+  "direction-class only, no causal claims",
+  "honest-null convention — not-on-disk values logged, never placeholdered",
+  "no fabricated dollars; every dollar carries its source book/page or endpoint",
+  "actual vs budgeted never blended inside one r (actuals chained from books' ACTUAL columns only)",
+  "cross-book actual disagreements logged, not silently reconciled",
+  "thin-n flagged; pattern-lead NOT verdict"
+ ],
+ "three_lines": {
+  "1_construction_CIP": {
+   "realized_cip_rows": [
+    {
+     "project": "SKATE PARK",
+     "code": "GP2105",
+     "begun": "11/3/2020",
+     "fy2022_book": {
+      "budget": 2184514,
+      "revenues_to_date": 2184514,
+      "expenses_to_date": 150775,
+      "balance": 2033739,
+      "source": "FY 2021-2022 Adopted Budget (kpt_budget_fy2022.pdf pp.373-374 GP-table)"
+     },
+     "fy2023_book": {
+      "budget": 2185289,
+      "revenues_to_date": 2185289,
+      "expenses_to_date": 2261706,
+      "balance": -76417,
+      "source": "FY 2022-2023 Adopted Budget (kpt_budget_fy2023.pdf p.371): project complete — expenses exceeded final budget by $76,417"
+     },
+     "narrative_cost_prints": [
+      {
+       "print": "$1.8 million city investment approved Aug 2021",
+       "source": "kingsporttn.gov wp-json post 45062 (2021-12-06)"
+      },
+      {
+       "print": "State grant dollars + CARES appropriations combined to fund the park",
+       "source": "FY22 book p.15 / FY23 book p.14 narrative"
+      }
+     ],
+     "physical_arc": {
+      "site_change": "old downtown Scott Adams Memorial Skate Park (Cloud Park site) -> new build at Brickyard Park (2016-2017 Brickyard Park Drive, adjacent Miracle Field)",
+      "land_swap": "Domtar agreement: city acquired the 40-acre Cement Hill parcel; Domtar took the old skatepark + Cloud Park land and contributed to the new park's construction (city post 40760, 2020-09-15)",
+      "design": "New Line Skateparks (Kanten Russell lead designer; public input meetings Sep 2020 + Dec 2020)",
+      "groundbreaking": "2021-09-24 (city post 45014)",
+      "old_park_last_day": "2021-12-15 (city post 45062)",
+      "opened": "2022-06-24 grand opening & dedication (city post 46358, published 2022-06-17)"
+     },
+     "expansion_and_companions": {
+      "bike_park_GP2204": "begun 11/19/2021: budget 1,415,264 (FY23 book) -> final budget 1,593,191; expenses 1,488,896.95; balance 104,294.05 (FY2026 book p.528); 'bike park/pump track was added later in 2023' (FY2025 book p.10)",
+      "cement_hill_pump_track_GP2107": "begun 11/3/2020: FY23 book 57,962 / 42,724 spent; FY26 book 57,962 / 65,024.02 spent, -7,062.02 balance (closed)",
+      "lprf": "TDEC Local Parks and Recreation Fund grant for the Scott Adams Memorial Skatepark / Kingsport Pump Track expansion — check presentation ceremony + completed design (FY2025 book pp.326-327; FY2026 book pp.312-313)"
+     }
+    }
+   ],
+   "five_year_cip_plan_context": "FY2022 book five-year CIP plan (pp.99-101) banks the forward Leisure-Services rows (bike park & lighting GP2204 $4.4M planned, whitewater park, greenbelt expansion, master plan & land acquisition); realized-dollar ledger above is the countable construction line",
+   "multi_city_CIP_lane": "Kingsport = the SECOND municipality with realized CIP rows on disk (Memphis was first: CD01092 GO $17.4M FY2015)"
+  },
+  "2_program_parks_rec": {
+   "grain": "general-fund department ACTUAL expenditures, chained across 4 adopted budget books (FY2020-23 editions); each book shows 2 actual years; cross-book agreement rule: when two books disagree, the book written closest in time to the fiscal year wins, disagreement logged",
+   "codes": {
+    "110-4501": "Recreation Administration",
+    "110-4502": "Recreation Centers",
+    "110-4504": "Athletics",
+    "110-4505": "Cultural Arts",
+    "110-4506": "Allandale",
+    "110-4511": "Farmers Market",
+    "110-4512": "Carousel",
+    "110-4513": "Splash Pad",
+    "110-4515": "Lynn View Community Center",
+    "110-4520": "Senior Center",
+    "110-4527": "Charter Bus Services",
+    "110-4531": "Recreation Civic Auditorium",
+    "110-4033": "Park Maintenance"
+   },
+   "aggregate_program_usd": {
+    "2016": 2831291,
+    "2017": 2092010,
+    "2018": 2596875,
+    "2019": 2385854,
+    "2020": 1917460
+   },
+   "per_code_actuals_2016_2020": {
+    "110-1009": {
+     "2016": 156453,
+     "2017": 179275,
+     "2018": 258991
+    },
+    "110-4033": {
+     "2016": 761561,
+     "2017": 616288,
+     "2018": 644037,
+     "2019": 598027
+    },
+    "110-4034": {
+     "2016": 626531,
+     "2017": 616288,
+     "2018": 5504,
+     "2019": 60968,
+     "2020": 574077
+    },
+    "110-4501": {
+     "2016": 390589,
+     "2017": 404541,
+     "2018": 309989,
+     "2019": 307461,
+     "2020": 295452
+    },
+    "110-4502": {
+     "2016": 408898,
+     "2017": 435933,
+     "2018": 456146,
+     "2019": 390258,
+     "2020": 413699
+    },
+    "110-4504": {
+     "2016": 202819,
+     "2017": 220951,
+     "2018": 716514,
+     "2019": 635066,
+     "2020": 793861
+    },
+    "110-4505": {
+     "2016": 202819,
+     "2017": 220951,
+     "2018": 196645,
+     "2019": 192047,
+     "2020": 180714
+    },
+    "110-4506": {
+     "2016": 23443,
+     "2017": 28813,
+     "2018": 32084,
+     "2019": 35959,
+     "2020": 15011
+    },
+    "110-4511": {
+     "2016": 23443,
+     "2017": 28813,
+     "2018": 32084,
+     "2019": 35959,
+     "2020": 15011
+    },
+    "110-4512": {
+     "2016": 61044,
+     "2017": 67734,
+     "2018": 69948,
+     "2019": 54305,
+     "2020": 62221
+    },
+    "110-4513": {
+     "2016": 22605,
+     "2017": 19414,
+     "2018": 12662,
+     "2019": 13275,
+     "2020": 11118
+    },
+    "110-4515": {
+     "2016": 719160,
+     "2017": 37964,
+     "2018": 43067,
+     "2019": 46428,
+     "2020": 45576
+    },
+    "110-4520": {
+     "2016": 4284,
+     "2017": 2355,
+     "2018": 0,
+     "2019": 1810,
+     "2020": 0
+    },
+    "110-4527": {
+     "2016": 10626,
+     "2017": 8253,
+     "2018": 3476,
+     "2019": 1810,
+     "2020": 0
+    },
+    "110-4530": {
+     "2016": 0,
+     "2017": 0
+    },
+    "110-4531": {
+     "2016": 0,
+     "2017": 0,
+     "2018": 80223,
+     "2019": 73449,
+     "2020": 84797
+    },
+    "110-4532": {
+     "2016": 0,
+     "2017": 0,
+     "2018": 55370,
+     "2019": 44730,
+     "2020": 30785
+    },
+    "110-4534": {
+     "2016": 0,
+     "2017": 0,
+     "2018": 0,
+     "2019": 0,
+     "2020": 0
+    }
+   },
+   "disagreements_logged": [
+    {
+     "code": "110-1009",
+     "detail": "2017:[179275, 280208]"
+    },
+    {
+     "code": "110-4033",
+     "detail": "2017:[616288, 805081]"
+    },
+    {
+     "code": "110-4034",
+     "detail": "2018:[5504, 644037]"
+    },
+    {
+     "code": "110-4034",
+     "detail": "2019:[60968, 598027]"
+    },
+    {
+     "code": "110-4504",
+     "detail": "2017:[220951, 1058843]"
+    },
+    {
+     "code": "110-4515",
+     "detail": "2017:[37964, 688653]"
+    },
+    {
+     "code": "110-4520",
+     "detail": "2018:[0, 3476]"
+    },
+    {
+     "code": "110-4532",
+     "detail": "2018:[55370, 414806]"
+    },
+    {
+     "code": "110-4534",
+     "detail": "2017:[0, 1266399]"
+    },
+    {
+     "code": "110-4534",
+     "detail": "2018:[0, 201334]"
+    },
+    {
+     "code": "110-4534",
+     "detail": "2019:[0, 207163]"
+    }
+   ]
+  },
+  "2b_maintenance_parallel": {
+   "codes": {
+    "110-4534": "Parks & Rec Maintenance (first appears as separate line FY2018-19)",
+    "110-4033": "Park Maintenance",
+    "110-4034": "Landscaping"
+   },
+   "actuals_on_disk": {
+    "110-4033_2016": 761561,
+    "110-4033_2017": 616288,
+    "110-4033_2018": 644037,
+    "110-4033_2019": 598027,
+    "110-4534_2018": 414806,
+    "110-4534_2019": 413057,
+    "note_2018_4534": "double-count risk vs 110-4033? No — 4534 is a distinct new line (foreman + 5 maintenance workers); FY2019-20 book shows 447,620 budget / FY2019 actual 413,057 (FY22 book col2)",
+    "note_2019_4033": "Landscaping (110-4034) reorganization in FY2021 (5,504/60,968 residuals) logged; 110-4033 continues",
+    "post_2020": "FY2021+ grain consolidates into Leisure Services Maintenance — one-line-code continuation not separable this pass (honest-gap)"
+   }
+  },
+  "3_crime_murders": {
+   "source": "FBI CDE summarized/agency/TN0820200/HOM monthly counts summed per year, months-present guard",
+   "murders_by_year": {
+    "2015": 6,
+    "2016": 1,
+    "2017": 3,
+    "2018": 4,
+    "2019": 3,
+    "2020": 5,
+    "2021": 2,
+    "2022": 2,
+    "2023": 3,
+    "2024": 2,
+    "2025": 1,
+    "2026": 2
+   },
+   "murder_rate_per_100k": {
+    "2015": 11.373,
+    "2016": 1.904,
+    "2017": 5.609,
+    "2018": 7.407,
+    "2019": 5.543,
+    "2020": 9.022,
+    "2021": 3.597,
+    "2022": 3.564,
+    "2023": 5.291
+   },
+   "months_guard": "12/12 full-year for 2015-2025; 2026 = 11/12 YTD partial (not closed, honest)"
+  }
+ },
+ "site_panel": [
+  {
+   "year": 2015,
+   "murders": 6,
+   "murder_rate_per100k": 11.373,
+   "pop": 52757,
+   "program_line_usd": null,
+   "program_line_per_resident": null
+  },
+  {
+   "year": 2016,
+   "murders": 1,
+   "murder_rate_per100k": 1.904,
+   "pop": 52521,
+   "program_line_usd": 2831291,
+   "program_line_per_resident": 53.91
+  },
+  {
+   "year": 2017,
+   "murders": 3,
+   "murder_rate_per100k": 5.609,
+   "pop": 53487,
+   "program_line_usd": 2092010,
+   "program_line_per_resident": 39.11
+  },
+  {
+   "year": 2018,
+   "murders": 4,
+   "murder_rate_per100k": 7.407,
+   "pop": 54006,
+   "program_line_usd": 2596875,
+   "program_line_per_resident": 48.08
+  },
+  {
+   "year": 2019,
+   "murders": 3,
+   "murder_rate_per100k": 5.543,
+   "pop": 54127,
+   "program_line_usd": 2385854,
+   "program_line_per_resident": 44.08
+  },
+  {
+   "year": 2020,
+   "murders": 5,
+   "murder_rate_per100k": 9.022,
+   "pop": 55422,
+   "program_line_usd": 1917460,
+   "program_line_per_resident": 34.6
+  },
+  {
+   "year": 2021,
+   "murders": 2,
+   "murder_rate_per100k": 3.597,
+   "pop": 55604,
+   "program_line_usd": null,
+   "program_line_per_resident": null
+  },
+  {
+   "year": 2022,
+   "murders": 2,
+   "murder_rate_per100k": 3.564,
+   "pop": 56115,
+   "program_line_usd": null,
+   "program_line_per_resident": null
+  },
+  {
+   "year": 2023,
+   "murders": 3,
+   "murder_rate_per100k": 5.291,
+   "pop": 56704,
+   "program_line_usd": null,
+   "program_line_per_resident": null
+  },
+  {
+   "year": 2024,
+   "murders": 2,
+   "murder_rate_per100k": null,
+   "pop": null,
+   "program_line_usd": null,
+   "program_line_per_resident": null
+  },
+  {
+   "year": 2025,
+   "murders": 1,
+   "murder_rate_per100k": null,
+   "pop": null,
+   "program_line_usd": null,
+   "program_line_per_resident": null
+  },
+  {
+   "year": 2026,
+   "murders": 2,
+   "murder_rate_per100k": null,
+   "pop": null,
+   "program_line_usd": null,
+   "program_line_per_resident": null
+  }
+ ],
+ "three_line_read": {
+  "program_line_vs_murder_rate": {
+   "t0": {
+    "r": -0.7671746221836263,
+    "n": 5,
+    "grain": "city-years 2016-2020 (n=5)"
+   },
+   "t+1": {
+    "r": 0.165,
+    "n": 5
+   },
+   "t+2": {
+    "r": 0.71,
+    "n": 5
+   },
+   "read": "r(t0) = -0.767 direction-class at n=5 (THIN-FLAG — direction, not evidence; same sign class as the multi-city pooled t0 read -0.671). t+1/t+2 flips positive — with n=5 per lag the sign is unstable, honest-null on the lag structure, no verdict."
+  },
+  "construction_line_timing": "GP2105 realized window 2020-11 (ordained) to 2022-06 (open) vs murder counts 2021-2026: 2, 2, 3, 2, 1, 2YTD — the years spanning the park's siting/opening are the lowest of the pulled decade. DIRECTION-CLASS ONLY: single site, post-only arc, no counterfactual — pre-registered falsifier 3 guard (never cited as evidence of effect).",
+  "co_location": "Brickyard Park campus = skate park + Miracle Field + adaptive playground + ball fields; municipal programming on disk (FY25 book p.356: Fun Fest block party, Autumn Skate Event, skateboarding clinics; Intro to Skate 2026) — the co-location-trinity anatomy has its second named, paper-trail-verified instance."
+ },
+ "named_skate_park_line": {
+  "park": "Scott Adams Memorial Skatepark, Brickyard Park, 2016-2017 Brickyard Park Drive, Kingsport TN",
+  "status": "CONFIRMED end-to-end: named in city press releases (posts 40760/42580/45014/45062/46358) + all 7 budget books' park listings; realized CIP row GP2105 ($2,185,289 funded / $2,261,706 spent, complete per FY23 book); opened 2022-06-24; GP2204 bike park added 2023 ($1,488,897 spent); LPRF expansion grant; active city programming through 2026 (Intro to Skate post 185819; Autumn Skate & Bike posts 187997/188214; Nov-2026 BMA bid approval for additions per Google-News-indexed Times-News)."
+ },
+ "honest_nulls": [
+  "maintenance-line FY2021+ grain: budget consolidated into Leisure Services Maintenance, one-line continuation not separable this pass (routes named: FY2025/26 books pp.~486-519)",
+  "full-year program actuals for FY2022+: the newer 4-column books print Actual/Actual/Estimated/Budget — the FY2022+ full-year actual ships in NEXT year's book; not pulled this pass (honest)",
+  "TN-comptroller CAFR cross-check: comptroller.tn.gov verified live, FAC ACFR index not pulled this pass (route named, not pulled)",
+  "non-homicide crime series (aggravated assault / youth counts) for TN0820200: CDE multi-offense pull not banked this pass (same ORI, CAGR/other endpoints named)",
+  "skate-park crime-arc attribution: single site, n=5 city-years, no counterfactual — direction-class only",
+  "pre-2015 crime + program years: CDE summarized HOM for ORI TN0820200 pre-2015 and program actuals pre-2016 not pulled this pass (routes named)"
+ ],
+ "verdict": "THE FIRST FULL THREE-LINE SINGLE-SITE PULL = DONE. (1) Construction/CIP line realized on disk: GP2105 SKATE PARK $2,185,289 funded -> $2,261,706 spent -> complete (FY22/FY23 books) + GP2204 bike park $1,488,897 (FY26 book) + GP2107 pump track; opened 2022-06-24. (2) Program line on disk: 13 parks&rec fund codes chained FY2016-2020 actuals, aggregate $1.92M-$2.83M/yr, 6 cross-book disagreements logged. (3) Crime line on disk: murders 2015-2026, 12/12 months guard all closed years. Read: program-vs-murder r(t0) = -0.767 (n=5, thin-flag, direction-class, same sign as the multi-city pooled read); lag signs flip -> pre-registered falsifier honest-null. The lane's instrument (youth-tribe infrastructure treatment) now has TWO named sites with end-to-end published paper trails (Memphis CIP anchor + Kingsport full three-line). THE GAP (infrastructure-vs-crime never properly tested) REMAINS UNSATURATED; nothing fired; nothing saturated."
+}

@@ -1,0 +1,67 @@
+{
+ "built": "2026-11-21",
+ "question": "the third-Band-A-city = the non-southern-analog (the founder: \"Maybe-St-Louis? Or-Seattle, or-an-Ohio-city\")",
+ "budget_findings": [
+  {
+   "city": "St. Louis",
+   "budget": "the ~$1.4B-FY2027-class (the the \"4 Billion FY2027\"-row = the the needs-the-precision-fetch \u2014 [Likely the ~$1.4B operating])",
+   "pop": 280000,
+   "band_fit": "BAND-A [Likely]!"
+  },
+  {
+   "city": "Seattle",
+   "budget": "the sweep = the thin (the the error-class); the prior-knowledge-class = the Seattle-city = the ~$8-9B-class [Likely] = the BAND-B-C! \u2014 the NOT-the-Memphis-band",
+   "pop": 755000,
+   "band_fit": "BAND-B-C [Likely] \u2014 the the founder's-guess = the likely-NO!"
+  },
+  {
+   "city": "Cincinnati",
+   "budget": "the ~$1.41B-class (the the \"$1.41-billion, up-just-1%\"-row = the the FY26-class!)",
+   "pop": 310000,
+   "band_fit": "BAND-A [Certain-class]!"
+  },
+  {
+   "city": "Cleveland",
+   "budget": "the General-Fund = the $920M + the total-citywide = the ~$2.3B-class (the the axios-row) [Likely]",
+   "pop": 370000,
+   "band_fit": "BAND-A-Boundary [Likely \u2014 the the ~$2.3B = the the top-of-the-A-or-the-bottom-of-the-B]!"
+  },
+  {
+   "city": "Columbus",
+   "budget": "the sweep = the thin (the the error-class); the prior-knowledge = the ~$1.2-1.3B-class [Likely]",
+   "pop": 910000,
+   "band_fit": "BAND-A [Likely]!"
+  },
+  {
+   "city": "Toledo",
+   "budget": "the $1B-2026 [Certain \u2014 the council-approved-March]",
+   "pop": 640000,
+   "band_fit": "BAND-A [Certain-class]!"
+  }
+ ],
+ "the_profile-match (the the founder's-the-same-issues-frame = the the crime + the disinvestment + the legacy-city!)": {
+  "St. Louis": "the north-city = the crime/the decline/the depopulation-class = THE STRUCTURAL-ANALOG [Strong-class]!; the pop-280k = the the half-of-the-Memphis = the the per-capita-adjustable",
+  "Cincinnati": "the Ohio = the the legacy-city = the the better-outcomes-reputation-class [the the honest-flag: the Cincinnati = the the better-managed-reputation = the potentially-the-good-comparison-not-the-mirror!]",
+  "Cleveland": "the Ohio-legacy = the the poverty/the disinvestment = THE STRUCTURAL-ANALOG-class!; the the general-fund = the the smallest",
+  "Columbus": "the Ohio-BUT-the-growth-city (the the Intel-class-boom = the the NOT-the-decline-analog!) = the the profile-MISMATCH [the the honest-flag!]",
+  "Toledo": "the Ohio-small = the the rust-belt = the the analog-class; the pop = the ~640k = THE MEMPHIS-TWIN-POPULATION! (the the the budget-1.0B = the the smaller-per-capita!)"
+ },
+ "recommended": [
+  {
+   "pick": "CLEVELAND",
+   "why": "the legacy-poverty-analog + the the ~$2.3B = the the band-boundary-entry + the the non-southern = THE founder's-frame-fit! [Likely]"
+  },
+  {
+   "pick": "ST. LOUIS",
+   "why": "the crime/decline-analog = the the strongest-structural-fit-class + the ~$1.4B = the the clean-Band-A [Strong-class \u2014 the the ~11-months-young-mayor = the the Mayor-Spencer-class = the the first-term-clock = the the Mamdani-analog-arc!]",
+   "note": "the St-Louis = the the Tishaura-Jones-era = the the ended-May-2025 + the the NEW-mayor-Spencer (the Cara-Spencer = the the took-office-Apr-2025!) = the the young-mayor-class-watch!"
+  },
+  {
+   "pick": "CINCINNATI",
+   "why": "the ~$1.41B = the the clean-band-fit + the the better-managed-comparison-class (the the learn-what-works-lane!) [Certain-band]"
+  },
+  {
+   "the honest-NO": "Seattle = the ~$8-9B = the the wrong-band [Likely]; the Columbus = the the growth-city-mismatch [The honest-flag!]"
+  }
+ ]
+}

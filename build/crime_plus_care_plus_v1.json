@@ -1,0 +1,209 @@
+[
+ {
+  "city": "Cincinnati",
+  "year": 2014,
+  "murders": 63,
+  "rate": 21.2,
+  "crime_plus": null,
+  "care_cage_ratio": 0.701,
+  "care_usd": 88297320
+ },
+ {
+  "city": "Cincinnati",
+  "year": 2018,
+  "murders": 61,
+  "rate": 20.2,
+  "crime_plus": null,
+  "care_cage_ratio": 0.698,
+  "care_usd": 106688450
+ },
+ {
+  "city": "Cincinnati",
+  "year": 2020,
+  "murders": 96,
+  "rate": 31.0,
+  "crime_plus": 59.2,
+  "care_cage_ratio": 0.755,
+  "care_usd": 116430870
+ },
+ {
+  "city": "Cincinnati",
+  "year": 2024,
+  "murders": 74,
+  "rate": 23.9,
+  "crime_plus": 69.0,
+  "care_cage_ratio": 0.717,
+  "care_usd": 130549820
+ },
+ {
+  "city": "Detroit",
+  "year": 2013,
+  "murders": 316,
+  "rate": 45.2,
+  "crime_plus": null,
+  "care_cage_ratio": 0.428,
+  "care_usd": 167400607
+ },
+ {
+  "city": "Detroit",
+  "year": 2015,
+  "murders": 295,
+  "rate": 43.8,
+  "crime_plus": null,
+  "care_cage_ratio": 0.528,
+  "care_usd": 169330039
+ },
+ {
+  "city": "Detroit",
+  "year": 2016,
+  "murders": 303,
+  "rate": 45.2,
+  "crime_plus": null,
+  "care_cage_ratio": 0.56,
+  "care_usd": 195348237
+ },
+ {
+  "city": "Detroit",
+  "year": 2022,
+  "murders": 309,
+  "rate": 48.3,
+  "crime_plus": 100.7,
+  "care_cage_ratio": 0.344,
+  "care_usd": 122913559
+ },
+ {
+  "city": "Detroit",
+  "year": 2024,
+  "murders": 203,
+  "rate": 31.8,
+  "crime_plus": 91.6,
+  "care_cage_ratio": 0.367,
+  "care_usd": 136230721
+ },
+ {
+  "city": "Houston",
+  "year": 2004,
+  "murders": 272,
+  "rate": 13.3,
+  "crime_plus": null,
+  "care_cage_ratio": 0.27,
+  "care_usd": 133097059
+ },
+ {
+  "city": "Houston",
+  "year": 2005,
+  "murders": 334,
+  "rate": 16.3,
+  "crime_plus": null,
+  "care_cage_ratio": 0.243,
+  "care_usd": 129313723
+ },
+ {
+  "city": "Houston",
+  "year": 2011,
+  "murders": 198,
+  "rate": 9.2,
+  "crime_plus": null,
+  "care_cage_ratio": 0.311,
+  "care_usd": 50300154
+ },
+ {
+  "city": "Houston",
+  "year": 2019,
+  "murders": 275,
+  "rate": 11.7,
+  "crime_plus": null,
+  "care_cage_ratio": 0.318,
+  "care_usd": 85759647
+ },
+ {
+  "city": "Houston",
+  "year": 2022,
+  "murders": 435,
+  "rate": 18.9,
+  "crime_plus": 39.3,
+  "care_cage_ratio": 0.187,
+  "care_usd": 183989337
+ },
+ {
+  "city": "Houston",
+  "year": 2025,
+  "murders": 272,
+  "rate": 11.8,
+  "crime_plus": 39.8,
+  "care_cage_ratio": null,
+  "care_usd": null
+ },
+ {
+  "city": "Memphis",
+  "year": 2020,
+  "murders": 332,
+  "rate": 52.4,
+  "crime_plus": 100.0,
+  "care_cage_ratio": 0.458,
+  "care_usd": 131244391
+ },
+ {
+  "city": "Memphis",
+  "year": 2021,
+  "murders": 345,
+  "rate": 54.5,
+  "crime_plus": null,
+  "care_cage_ratio": 0.479,
+  "care_usd": 135489924
+ },
+ {
+  "city": "Memphis",
+  "year": 2022,
+  "murders": 304,
+  "rate": 48.0,
+  "crime_plus": 100.0,
+  "care_cage_ratio": 0.486,
+  "care_usd": 139775703
+ },
+ {
+  "city": "Memphis",
+  "year": 2023,
+  "murders": 344,
+  "rate": 55.4,
+  "crime_plus": null,
+  "care_cage_ratio": 0.399,
+  "care_usd": 116838773
+ },
+ {
+  "city": "Memphis",
+  "year": 2024,
+  "murders": 248,
+  "rate": 39.9,
+  "crime_plus": 115.2,
+  "care_cage_ratio": 0.515,
+  "care_usd": 159742276
+ },
+ {
+  "city": "Memphis",
+  "year": 2025,
+  "murders": 184,
+  "rate": 29.6,
+  "crime_plus": 100.0,
+  "care_cage_ratio": 0.458,
+  "care_usd": 141667104
+ },
+ {
+  "city": "New Orleans",
+  "year": 2024,
+  "murders": 124,
+  "rate": 34.7,
+  "crime_plus": 100.0,
+  "care_cage_ratio": null,
+  "care_usd": null
+ },
+ {
+  "city": "St. Louis",
+  "year": 2024,
+  "murders": 150,
+  "rate": 54.4,
+  "crime_plus": 157.1,
+  "care_cage_ratio": null,
+  "care_usd": null
+ }
+]

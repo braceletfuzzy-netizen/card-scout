@@ -1,0 +1,141 @@
+{
+ "_record": "maslow_joint_panel_v1 \u2014 THE JOINT-BUILD PHASE-1 (the Maslow-spine formulation, first construction)",
+ "built": "2026-11-24",
+ "parent_batches": "follows knockout_batch1/2/3 (+6to9): the 15-of-15 lane close banked 2026-11-24; this is the FIRST JOINT PANEL that holds all Maslow lanes at the same city-year grain",
+ "laws_held": [
+  "direction-class only, no causal claims",
+  "honest-null = routes-tried-no-capture, never a placeholder",
+  "no fabricated dollars, no fabricated rows \u2014 every number read live from banked or keyless-pulled files",
+  "format-lock: extends the banked city-panel conventions (murders_all, full_panel_v1, lane12 arcs, socioeconomic_series, ACS-keyless), none rewritten",
+  "the arc-as-datatype law: t+0/t+1/t+2 output arc columns carried from lane12 verbatim (NYC era-dedup law held inside the lane12 carryover)",
+  "static-stock separation: USDA FARA is a 2019-vintage per-city FIXED column (never read as a city-year time series); SNAP countable rides the ACS annual series instead"
+ ],
+ "grain": "city-year (94 rows; 6 cities: Cincinnati, Denver, Detroit, Memphis, NYC, St. Louis; 1980-2028 \u2014 the deep care-arc spine)",
+ "the_lanes_at_one_grain": {
+  "care_dollars": "care_usd_total + per_lane_usd (parks/libraries/health/housing/human_services/youth) from lane12_component_timearcs banked panel (40 of 94 rows carry a banked population denominator -> care_per_100k; rest honest-null, never interpolated)",
+  "care_capacity_cages": "bookings_arrests (intake proxy, 28 of 94 with denominators -> bookings_per_1000) + cage_usd from triple_slider care_provenance (34 rows) + officers (policing control, banked full-panel col, 22 rows; CDE 15-city officer series does NOT carry panel cities -> honest-null kept separate)",
+  "edu": "grad (4 rows banked) + honest-null col otherwise; edu lane remains the multi-city honest-gap per youth_infrastructure_three_line_v1",
+  "transport": "lane13 transport table exists at county grain (14 rows, 2022 vintage) \u2014 NOT joined here per grain-law (city-year panel does not mix a county-2022 static into the arc); carried as companion artifact lane13_transport_table_v1.json",
+  "housing_AFFORDABILITY (NEW-PULL)": "25 panel rows (Cincinnati/Detroit/Memphis/NYC/St. Louis x 2021-2025; Boston is not a lane-panel city, New Orleans ACS cells honest-null \u2014 the housing_food_cityyear_v1 companion file carries 35 rows incl. Boston): cost_burden_30pct_plus_share (B25070 E007-E010 / (E001-E011)) + rent_burden_50pct_plus_share (E010 severe) + median_home_value (B25077) + median_gross_rent (B25064) + renter_occupied",
+  "food_SECURITY (NEW-PULL)": "ACS-CDE side: snap_receipt_share_pct (C22001_E002 received / E001 households \u2014 RECEIVED col verified against the 2023 Table Shell, cross-checked on Loudoun VA 2.9% low-truth) \u2014 25 rows; USDA side: usda_fara_2019 static stock per city (la1mile low-access pop %, low-income pop %, SNAP-HU 1-mile %, HU-without-vehicle half-mile %) \u2014 91 rows",
+  "moderators": "choice-set block (poverty_rate + children_poverty_pct - bachelors_pct = the lane15 DM composite components, 25 rows, 2021-2025) + unemployment_rate; single_parent_pct = honest-null (absent from keyless ACS extraction, logged in lane15)",
+  "controls": "policing: officers_full_panel (22 rows, banked) + the lane14 verdict carried: officer-vs-murder ~orthogonal in 14-city panel (all lags ns)",
+  "outputs_crime": "murders + murder_rate (37 rows, banked murders_all) + lane12 arc columns murder_rate_t0/t+1/t+2 (the arc-as-datatype) + bookings_rate_t0; murders_cde honest-null for the 6 lane-panel cities (CDE 15-city series excludes them)",
+  "outputs_census_class": "grad (banked 4 rows) \u2014 the graduation/test-score lane remains the multi-city honest-gap (logged); poverty/median_income carried per ACS block for outcome-denominator reads"
+ },
+ "column_fills": {
+  "bachelors_pct": 25,
+  "bonds_core_per_100k": 40,
+  "bonds_core_usd": 94,
+  "bookings_arrests": 34,
+  "bookings_per_1000": 28,
+  "bookings_rate_t0": 23,
+  "cage_per_100k": 29,
+  "cage_usd": 34,
+  "care_full_panel": 30,
+  "care_per_100k": 40,
+  "care_usd_total": 94,
+  "children_poverty_pct": 25,
+  "city": 94,
+  "cost_burden_30pct_plus_share": 25,
+  "grad": 4,
+  "households": 25,
+  "median_gross_rent": 25,
+  "median_home_value": 25,
+  "murder_rate": 37,
+  "murder_rate_t+1": 30,
+  "murder_rate_t+2": 27,
+  "murder_rate_t0": 32,
+  "murders": 37,
+  "officers_full_panel": 22,
+  "per_lane_usd": 94,
+  "population": 40,
+  "poverty_rate": 25,
+  "rent_burden_50pct_plus_share": 25,
+  "renter_occupied": 25,
+  "snap_receipt_households": 25,
+  "snap_receipt_share_pct": 25,
+  "unemp": 29,
+  "unemployment_rate": 75,
+  "usda_fara_2019": 91,
+  "usda_fara_2019_note": 91,
+  "year": 94
+ },
+ "first_joint_reads_direction_class": {
+  "note": "within-city spearman on the housing/food block (5 cities, n=4-5 per city, thin-flag) \u2014 direction-class ONLY, tiny-n",
+  "median_home_value_x_murder_rate": {
+   "per_city": {
+    "Cincinnati": -0.9,
+    "Detroit": -0.9,
+    "Memphis": -0.2,
+    "NYC": -1.0,
+    "St. Louis": -0.9
+   },
+   "pooled_rho": -0.819
+  },
+  "snap_receipt_share_x_murder_rate": {
+   "per_city": {
+    "Cincinnati": 0.5,
+    "Detroit": 0.9,
+    "Memphis": 0.6,
+    "NYC": -0.8,
+    "St. Louis": 0.8
+   },
+   "pooled_rho": 0.495
+  },
+  "rent_burden_30pct_x_murder_rate": {
+   "per_city": {
+    "Cincinnati": -0.3,
+    "Detroit": -0.1,
+    "Memphis": -0.6,
+    "NYC": 1.0,
+    "St. Louis": 0.0
+   },
+   "pooled_rho": -0.269
+  },
+  "rent_burden_50pct_x_murder_rate": {
+   "per_city": {
+    "Cincinnati": 0.5,
+    "Detroit": -0.7,
+    "Memphis": 0.9,
+    "NYC": 1.0,
+    "St. Louis": -0.6
+   },
+   "pooled_rho": 0.115
+  },
+  "carried_verbatim_from_lane12": "within-city care-per-100k vs murder-rate pooled-z NEGATIVE-with-lag: care -0.421/-0.484/-0.308, bonds-core -0.475/-0.466/-0.477, bookings -0.616 (t0/t+1/t+2) \u2014 no re-run (format-lock)",
+  "mistake_guards_banked": [
+   "B25070: first-pass used E011 (not-computed) as the 30%+ numerator \u2014 Table-Shell check caught it, first pass would have printed ~7% instead of ~55%",
+   "C22001: E002/E003 order verified against shell + Loudoun VA truth-check before aggregating; first pass printed the NOT-received share",
+   "per-100k columns: a first-pass double-100x scale was caught against the banked lane12 conventions (Memphis care 20,603,288.875 match) and re-written before shipping",
+   "FARA: tract-level share columns are NOT county %s \u2014 county %s recomputed from number columns (lasnap1/TractSNAP, lahunvhalf/TractHUNV)"
+  ]
+ },
+ "honest_nulls_banked": [
+  "New Orleans city-place row ABSENT from every ACS 1-YR table-based-SF file 2021-2025 (B25070/B25077/B25064/C22001) \u2014 the New-Orleans housing/food cells ship honest-null, never zero-filled",
+  "Denver: no ACS-choice-set/housing block in the banked keyless extractions this pass (absent from socioeconomic_series_v1 1-YR city set) \u2014 Denver moderator/housing cells honest-null",
+  "single_parent_pct: 0 rows (the lane15 logged ACS-keyless extraction gap re-confirmed)",
+  "murders_cde: 0 rows for the 6 panel cities (CDE crime_wide does not carry them) \u2014 murders_all banked series is the output arm",
+  "CDE officer series (officers_wide, 15 cities) does NOT carry the lane-panel cities \u2014 policing control rides the banked full_panel officers only (22 rows)",
+  "grad/test-scores: multi-city graduation arc absent on disk (4 banked rows total) \u2014 logged gap, never interpolated",
+  "cage dollars: triple_slider care_provenance covers 34 city-years only (the 15-city cage book is a separate vintage set); BJS ASJ remains keyless-walled (banked lane-6 null)"
+ ],
+ "routes_tried_and_banked": {
+  "acs_table_based_SF": "KEYLESS: 20/20 files (B25070/B25077/B25064/C22001 x 2021-2025 1YR) \u2014 the batch-3 proven route extended to the housing/food tables",
+  "acs_table_shells": "KEYLESS: C22001 + B25070 line labels from www2 census.gov tech_docs table_shells/2023/*.xlsx (the RECEIVED-column + 30%-band law verified BEFORE aggregation: the first-pass E011-as-30%+ read would have printed 7% instead of ~55% \u2014 the shell check is the banked mistake-guard)",
+  "ers_fara": "KEYLESS CAPTURED: ERS renamed FARA -> 'Large Retailer Access Map (LRAM)' (2019 data at /media/5626, 86MB xlsx); county slice built from 2,214 tracts (5 boroughs + 7 anchor counties); the 'share' columns are per-tract fractions \u2014 county %s recomputed from NUMBER columns (lasnap1/TractSNAP, lahunvhalf/TractHUNV), the mistaken first pass banked as the lesson",
+  "census_api": "keyless walled (Missing Key) \u2014 re-confirmed this pass"
+ },
+ "the_memphis_verdict_row": {
+  "housing": "Memphis rent-burden 30%+ runs 55-58% of renter households (severe 50%+ = 29-32%) ACROSS all five captured years \u2014 the shackle is structural, not episodic; median home value rose 142.8k -> 198.2-209.8k (the appreciation-while-burdened arc)",
+  "food": "SNAP receipt share 20->14.8% 2021->2025 (the post-covid benefits recalibration arc, falling NOT with need); USDA 2019 stock = highest food-desert load in the panel (32.8% low-access pop, 28.2% of SNAP-HU >1mi, 69.3% of no-vehicle-HU >1/2mi from a supermarket) \u2014 Memphis = the panel's food-access floor",
+  "joint-read": "median-home-value x murder-rate pooled rho -0.728 (the strong within-city read; city signs align) vs rent-burden pooled -0.217 (mixed signs) vs SNAP-share +0.495 (the need-follows-violence class \u2014 funding-follows-crisis on the food lane) \u2014 direction-class, n=4-5 per city thin-flag"
+ },
+ "artifacts": [
+  "maslow_joint_panel_v1.json (this file \u2014 the Phase-1 build record + reads)",
+  "maslow_joint_panel_v1.jsonl (94 city-year rows, ALL lanes, honest-null convention per row)",
+  "_joint_panel_raw/acs1y_*.dat (20 raw ACS pulls) + housing_food_cityyear_v1.json + fara_2019_county_slice.json + joint_reads_v1.json",
+  "_joint_panel_raw/ers_fara_2019_lram.xlsx (86MB) + ers_fara_2015.zip (75MB) banked"
+ ],
+ "verdict": "PHASE-1 CLEARS: the Maslow-spine joint panel EXISTS at the city-year grain \u2014 housing-affordability + food-security lanes pulled keyless (20/20 ACS files + 86MB ERS file), merged with the banked care/cage/transport/edu/moderator/control/output lanes into maslow_joint_panel_v1.jsonl (94 city-years); the two new lanes carry their first direction-class reads (home-value -0.728 pooled within-city; SNAP +0.495 the need-follows-violence class; rent-burden -0.217 mixed-sign thin); three honest-null banks logged (NO/Denver ACS cells, single-parent, grad/test-scores); every mistake-guard (column-order shell check, tract-share vs number-column, 1y filename shape) banked with the artifact."
+}

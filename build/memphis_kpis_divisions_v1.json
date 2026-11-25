@@ -1,0 +1,82 @@
+{
+ "city": "Memphis",
+ "built": "2026-11-21",
+ "fire": {
+  "city": "Memphis",
+  "division": "Fire Services",
+  "source": "FY26 Adopted Budget Book p.295-301",
+  "note": "the Fire = the KPI-header-page-empty [p.298 = the 92-chars] = the table-format = the NOT-carried for-this-division (the honest-null!) \u2014 the outputs = the narrative-embedded [p.296] = the countables-pulled:",
+  "service_out_v1": [
+   {
+    "metric": "citizens reached via fire-education/outreach",
+    "value": 183053,
+    "period": "FY25"
+   },
+   {
+    "metric": "fire-communications calls-for-service",
+    "value": 304075,
+    "period": "FY25"
+   },
+   {
+    "metric": "incidents",
+    "value": 163948,
+    "period": "FY25"
+   },
+   {
+    "metric": "responses",
+    "value": 366641,
+    "period": "FY25"
+   },
+   {
+    "metric": "% emergency-911-calls answered within-20-seconds",
+    "value": "93%",
+    "period": "FY24"
+   },
+   {
+    "metric": "new firefighters hired",
+    "value": 184,
+    "note": "from-24-states, 119-with-NR-EMS-certs"
+   }
+  ],
+  "comparative": "the Police = the calls-answered-within-20s = 94.3% (the FY25-actual) vs-the Fire = the 93% (the FY24) \u2014 the same-metric-class across-the-safety-divisions!"
+ },
+ "library": {
+  "city": "Memphis",
+  "division": "Library Services (MPL)",
+  "source": "FY26 Adopted Budget Book p.340-342",
+  "service_out_v1": [
+   {
+    "metric": "people served per-year (in-person + virtual)",
+    "value": "2,000,000+",
+    "note": "the p342-stated"
+   },
+   {
+    "metric": "new/renovated libraries opened",
+    "value": "Orange Mound (2024), Frayser (2025)",
+    "note": "the Southwest Twin + the Parkway-Village = the coming"
+   },
+   {
+    "metric": "Teen Innovation Centers",
+    "value": "installed-in-almost-all-branches",
+    "note": "the FY26 = the additional-locations-scheduled"
+   },
+   {
+    "metric": "programs",
+    "value": "thousands-per-year",
+    "note": "the workforce-development + the STEAM + the grade-level-reading + the Explore-Memphis-summer"
+   },
+   {
+    "metric": "Discover READ Early-Literacy-Centers",
+    "value": "the interactive-play-areas for-children-0-5"
+   }
+  ]
+ },
+ "public_works": {
+  "division": "Public Works",
+  "note": "the KPI-table = the not-found-in-the-scanned-pages (the p371 = the legal-levels-class) \u2014 the honest-null + the street-maintenance = the pothole-repairs/the ROW-maintenance = the identified-lane (the deep-scan = the queued)"
+ },
+ "parks": {
+  "division": "Memphis Parks",
+  "note": "the KPI-table = the not-found-in-the-scanned-pages (the p349-351 = the legal-levels/managed-properties) \u2014 the honest-null; the managed-properties = the Overton/the Zoo/the Brooks-Museum-class = the partner-fee-lane"
+ }
+}

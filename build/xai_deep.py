@@ -1,0 +1,41 @@
+import json
+
+# POLYSCOUT — THE XAI-MEMPHIS DEEP-DIVE v1 (the founder-ask: the circumvention-class!)
+xai = {
+    'built': '2026-11-21',
+    'subject': 'xAI Colossus Data Center — South Memphis (the Boxtown-adjacent)',
+    'founder_frame': 'the founder = the lives-in-the-area = the LIVED-TRUTH-CHECK = the the local-air/the-smell/the-truck-traffic = the the ground-sensor-on-this-one!',
+    'facts_verified': [
+        'THE COLUSSUS = the ~35-METHANE-GAS-TURBINES = the running-in-South-Memphis — the MOST-NEVER-PERMITTED (the Jul-23-2026-coverage [Certain])',
+        'the permit-appeals = the filed (the SELC/Pearson/ community-groups) — the Memphis-Shelby-County-Health-Dept = the ISSUED-the-permits',
+        'the Air-Pollution-Control-Board = the vote-AGAINST-xAI-instances (the the board-votes vs-the health-dept-decisions = the the multi-body-conflict-class!) + the appeal-dismissed-6-1 (the Flyer)',
+        'the MORATORIUM-question = the city-council-lane (the the weigh-class [the the pause-new-data-centers?])',
+        'the GREYWATER-facility = the xAI-promised (the recycle = the reduce-the-aquifer-drain) — the PROJECT-PAUSED (the the council-questions-June-9-2026: the city-could-TAKE-BACK-the-land!)',
+        'the LAND-DEAL = the city-xAI = the finalized ~June-5-2026 (the the city-land + the the resumption-promise [the mayor-optimistic-quoted])'
+    ],
+    'the_circumvention_pattern_lanes': [
+        {'lane': 'PERMIT-VS-BUILD-INVERSION', 'fact': 'the turbines = the operating-BEFORE-the-permits = the built-first/ask-later = THE circumvention-signature-class [Certain]'},
+        {'lane': 'THE BOARD-SPLIT', 'fact': 'the health-dept = the issued + the pollution-board = the voted-against + the appeals-dismissed = the the regulatory-maze = the the who-holds-the-power-question'},
+        {'lane': 'THE LAND-FOR-PROMISES', 'fact': 'the city-land-deal = the tied-to-the greywater-facility-promise = the which-paused = the the promise-vs-delivery = the EXACTLY-the-MMD-class-scoring-lane!'},
+        {'lane': 'THE AQUIFER-LANE', 'fact': 'the greywater = the the Memphis-aquifer-protection-lane (the the sand-aquifer = the the Memphis\u0027s-drinking-water = the the stakes-class)'},
+        {'lane': 'THE HEALTH-LANE', 'fact': 'the Boxtown = the the historically-black-area = the the asthma/emissions-impact = the the environmental-justice-lane = the the founders\u0027-civic-crime-lane-adjacent!'}
+    ],
+    'master_class_tags': [
+        'OBFUSCATION-SIGNATURE: the permitless-operation (the the 35-turbines-running = the never-permitted = the signature-class!)',
+        'INSTITUTION-CAPTURE-QUESTIONS: the land-deal-terms = the the city-gave-what? (the the tax-class = the pending-source)',
+        'FISCAL: the PILOT/incentives = the pending-source (the the what-did-the-city-give-away = the the countable-when-sourced)',
+        'TRANSPARENCY: the greywater-promise = the the pause = the the countable-promise-clock!'
+    ],
+    'gauge_entries': [
+        {'id': 'XAI-001', 'promise': 'the greywater-recycling-facility (the xAI\u0027s-promise-to-the-city = the the land-deal-tied)', 'clock': 'the construction-resumption = the promised (the June-2026-class)', 'status': 'PAUSED-PENDING — the countable-clock = the the founder\u0027s-city = the the watch!'},
+        {'id': 'XAI-002', 'promise': 'the permits = the compliance (the the 35-turbines = the the permit-or-remove-class)', 'clock': 'the appeals-lane', 'status': 'CONTESTED'}
+    ],
+    'honest_notes': [
+        'the founder = the the ground-truth-sensor (the the lived-air = the the reports-vs-the-what-he-breathes = the the cross-check!)',
+        'the sources-mix = the local (the Flyer/the WREG) + the legal (the SELC) + the national = the the layered-honesty',
+        'the young-admin-role = the the optimistic-quote-class [the the land-deal = the the admin-tied = the the enters-YM-statline!]'
+    ]
+}
+import json
+json.dump(xai, open('C:/Users/J/Documents/LLM/cardscout-2.0/For You/PolyScout/build/xai_memphis_deep_dive_v1.json', 'w', encoding='utf-8'), indent=1)
+print('WROTE xai_memphis_deep_dive_v1.json')

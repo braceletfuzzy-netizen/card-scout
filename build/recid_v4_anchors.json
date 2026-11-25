@@ -1,0 +1,4003 @@
+{
+ "Davis2013_rand": [
+  {
+   "DOI": "10.7249/rb9728",
+   "title": [
+    "How Effective is Correctional Education? The Results of a Meta-Analysis"
+   ],
+   "author": [
+    {
+     "given": "Lois",
+     "family": "Davis",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    },
+    {
+     "given": "Robert",
+     "family": "Bozick",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    },
+    {
+     "given": "Jennifer",
+     "family": "Steele",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    },
+    {
+     "given": "Jessica",
+     "family": "Saunders",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    },
+    {
+     "given": "Jeremy",
+     "family": "Miles",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2013
+     ]
+    ]
+   },
+   "is-referenced-by-count": 3,
+   "type": "edited-book"
+  },
+  {
+   "DOI": "10.7249/rr266",
+   "title": [
+    "Evaluating the Effectiveness of Correctional Education: A Meta-Analysis of Programs That Provide Education to Incarcerated Adults"
+   ],
+   "author": [
+    {
+     "given": "Lois",
+     "family": "Davis",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Robert",
+     "family": "Bozick",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Jennifer",
+     "family": "Steele",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Jessica",
+     "family": "Saunders",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Jeremy",
+     "family": "Miles",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2013
+     ]
+    ]
+   },
+   "is-referenced-by-count": 214,
+   "type": "edited-book"
+  },
+  {
+   "DOI": "10.1007/s11292-018-9334-6",
+   "title": [
+    "Does providing inmates with education improve postrelease outcomes? A meta-analysis of correctional education programs in the United States"
+   ],
+   "author": [
+    {
+     "given": "Robert",
+     "family": "Bozick",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Jennifer",
+     "family": "Steele",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Lois",
+     "family": "Davis",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Susan",
+     "family": "Turner",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2018,
+      5,
+      24
+     ]
+    ]
+   },
+   "container-title": [
+    "Journal of Experimental Criminology"
+   ],
+   "is-referenced-by-count": 126,
+   "type": "journal-article"
+  },
+  {
+   "DOI": "10.7249/ig113",
+   "title": [
+    "Serving Time or Wasting Time? Correctional Education Programs Improve Job Prospects, Reduce Recidivism, and Save Taxpayer Dollars"
+   ],
+   "author": [
+    {
+     "given": "Lois",
+     "family": "Davis",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    },
+    {
+     "given": "Robert",
+     "family": "Bozick",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    },
+    {
+     "given": "Jennifer",
+     "family": "Steele",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    },
+    {
+     "given": "Jessica",
+     "family": "Saunders",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    },
+    {
+     "given": "Jeremy",
+     "family": "Miles",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2013
+     ]
+    ]
+   },
+   "is-referenced-by-count": 1,
+   "type": "edited-book"
+  },
+  {
+   "DOI": "10.7249/rr564",
+   "title": [
+    "How Effective Is Correctional Education, and Where Do We Go from Here? The Results of a Comprehensive Evaluation"
+   ],
+   "author": [
+    {
+     "given": "Lois",
+     "family": "Davis",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Jennifer",
+     "family": "Steele",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Robert",
+     "family": "Bozick",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Malcolm",
+     "family": "Williams",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Susan",
+     "family": "Turner",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Jeremy",
+     "family": "Miles",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Jessica",
+     "family": "Saunders",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Paul",
+     "family": "Steinberg",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2014
+     ]
+    ]
+   },
+   "is-referenced-by-count": 85,
+   "type": "edited-book"
+  }
+ ],
+ "Aos2011_wsjipp": [
+  {
+   "DOI": "10.1080/15564880802612615",
+   "title": [
+    "Evidence-Based Public Policy Options to Reduce Crime and Criminal Justice Costs: Implications in Washington State"
+   ],
+   "author": [
+    {
+     "given": "Elizabeth K.",
+     "family": "Drake",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Steve",
+     "family": "Aos",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Marna G.",
+     "family": "Miller",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2009,
+      2,
+      13
+     ]
+    ]
+   },
+   "container-title": [
+    "Victims &amp; Offenders"
+   ],
+   "is-referenced-by-count": 191,
+   "type": "journal-article"
+  },
+  {
+   "DOI": "10.5040/9798400641749.ch-006",
+   "title": [
+    "Public Opinion, Public Policy, and Juvenile Justice"
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2012
+     ]
+    ]
+   },
+   "container-title": [
+    "Do the Crime, Do the Time"
+   ],
+   "is-referenced-by-count": 0,
+   "type": "other"
+  },
+  {
+   "DOI": "10.1525/fsr.2007.19.4.275",
+   "title": [
+    "Evidence-Based Public Policy Options to Reduce Future Prison Construction, Criminal Justice Costs, and Crime Rates"
+   ],
+   "author": [
+    {
+     "name": "Washington State Institute for Public Policy",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2007,
+      4,
+      1
+     ]
+    ]
+   },
+   "container-title": [
+    "Federal Sentencing Reporter"
+   ],
+   "is-referenced-by-count": 20,
+   "type": "journal-article"
+  },
+  {
+   "DOI": "10.1111/j.1755-6988.1971.tb00377.x",
+   "title": [
+    "Adult Community\u2010Based Corrections"
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      1971,
+      2
+     ]
+    ]
+   },
+   "container-title": [
+    "Juvenile Court Judges Journal"
+   ],
+   "is-referenced-by-count": 0,
+   "type": "journal-article"
+  },
+  {
+   "DOI": "10.4135/9781452243948.n13",
+   "title": [
+    "Experiencing the Parallels between Juvenile and Adult Community Corrections"
+   ],
+   "author": [
+    {
+     "given": "Cassandra L.",
+     "family": "Reyes",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2012
+     ]
+    ]
+   },
+   "container-title": [
+    "Experiencing Corrections: From Practitioner to Professor"
+   ],
+   "is-referenced-by-count": 0,
+   "type": "book-chapter"
+  }
+ ],
+ "Landenberger_Lipsey2005": [
+  {
+   "DOI": "10.1007/s11292-005-3541-7",
+   "title": [
+    "The positive effects of cognitive\u2013behavioral programs for offenders: A meta-analysis of factors associated with effective treatment"
+   ],
+   "author": [
+    {
+     "given": "Nana A.",
+     "family": "Landenberger",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Mark W.",
+     "family": "Lipsey",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2005,
+      12
+     ]
+    ]
+   },
+   "container-title": [
+    "Journal of Experimental Criminology"
+   ],
+   "is-referenced-by-count": 604,
+   "type": "journal-article"
+  },
+  {
+   "DOI": "10.4073/csr.2007.6",
+   "title": [
+    "Effects of Cognitive-Behavioral Programs for Criminal Offenders"
+   ],
+   "author": [
+    {
+     "given": "Mark W.",
+     "family": "Lipsey",
+     "sequence": "first",
+     "affiliation": [
+      {
+       "name": "Center for Evaluation Research and Methodology, Vanderbilt Institute for Public Policy Studies, 1207 18th Ave., South, Nashville, TN, 37212, USA"
+      }
+     ],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Nana A.",
+     "family": "Landenberger",
+     "sequence": "additional",
+     "affiliation": [
+      {
+       "name": "Center for Evaluation Research and Methodology, Vanderbilt Institute for Public Policy Studies, 1207 18th Ave., South, Nashville, TN, 37212, USA"
+      }
+     ],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Sandra J.",
+     "family": "Wilson",
+     "sequence": "additional",
+     "affiliation": [
+      {
+       "name": "Center for Evaluation Research and Methodology, Vanderbilt Institute for Public Policy Studies, 1207 18th Ave., South, Nashville, TN, 37212, USA"
+      }
+     ],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2007,
+      6
+     ]
+    ]
+   },
+   "container-title": [
+    "Campbell Systematic Reviews: Better Evidence for a Better World"
+   ],
+   "abstract": "<jats:p>Cognitive-behavioural therapy can prevent criminal offenders from continuing their criminal careers. However, some treatment programmes work better than others.</jats:p>\n                  <jats:p>This Campbell review shows that a small number of factors make the difference. It is particularly important for the programmes to be stringently implemented, by well-trained providers. No significant differences were found in the effectiveness of the different types of programmes or \u201cbrand names\u201d. Whether the treatment is implemented in prison or in the community has no influence on the outcome.</jats:p>",
+   "is-referenced-by-count": 197,
+   "type": "journal-article"
+  },
+  {
+   "DOI": "10.1002/cl2.42",
+   "title": [
+    "PROTOCOL: Cognitive-Behavioral Programs for Juvenile and Adult Offenders: A Meta-Analysis of Controlled Intervention Studies"
+   ],
+   "author": [
+    {
+     "given": "Mark W.",
+     "family": "Lipsey",
+     "sequence": "first",
+     "affiliation": [
+      {
+       "name": "Vanderbilt Institute for Public Policy Studies"
+      }
+     ],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Nana A.",
+     "family": "Landenberger",
+     "sequence": "additional",
+     "affiliation": [
+      {
+       "name": "Vanderbilt Institute for Public Policy Studies"
+      }
+     ],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2007,
+      6
+     ]
+    ]
+   },
+   "container-title": [
+    "Campbell Systematic Reviews: Better Evidence for a Better World"
+   ],
+   "is-referenced-by-count": 40,
+   "type": "journal-article"
+  },
+  {
+   "DOI": "10.1007/s11292-018-9329-3",
+   "title": [
+    "The effects of specialized treatment on the recidivism of juvenile sex offenders: a systematic review and meta-analysis"
+   ],
+   "author": [
+    {
+     "given": "Heather Hensman",
+     "family": "Kettrey",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Mark W.",
+     "family": "Lipsey",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2018,
+      5,
+      10
+     ]
+    ]
+   },
+   "container-title": [
+    "Journal of Experimental Criminology"
+   ],
+   "is-referenced-by-count": 47,
+   "type": "journal-article"
+  },
+  {
+   "DOI": "10.1007/1-4020-4244-2_4",
+   "title": [
+    "Cognitive-Behavioral Interventions"
+   ],
+   "author": [
+    {
+     "given": "Mark W.",
+     "family": "Lipsey",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Nana A.",
+     "family": "Landenberger",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      null
+     ]
+    ]
+   },
+   "container-title": [
+    "Preventing Crime"
+   ],
+   "is-referenced-by-count": 31,
+   "type": "book-chapter"
+  }
+ ],
+ "Lipsey2009": [
+  {
+   "DOI": "10.4073/csr.2007.6",
+   "title": [
+    "Effects of Cognitive-Behavioral Programs for Criminal Offenders"
+   ],
+   "author": [
+    {
+     "given": "Mark W.",
+     "family": "Lipsey",
+     "sequence": "first",
+     "affiliation": [
+      {
+       "name": "Center for Evaluation Research and Methodology, Vanderbilt Institute for Public Policy Studies, 1207 18th Ave., South, Nashville, TN, 37212, USA"
+      }
+     ],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Nana A.",
+     "family": "Landenberger",
+     "sequence": "additional",
+     "affiliation": [
+      {
+       "name": "Center for Evaluation Research and Methodology, Vanderbilt Institute for Public Policy Studies, 1207 18th Ave., South, Nashville, TN, 37212, USA"
+      }
+     ],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Sandra J.",
+     "family": "Wilson",
+     "sequence": "additional",
+     "affiliation": [
+      {
+       "name": "Center for Evaluation Research and Methodology, Vanderbilt Institute for Public Policy Studies, 1207 18th Ave., South, Nashville, TN, 37212, USA"
+      }
+     ],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2007,
+      6
+     ]
+    ]
+   },
+   "container-title": [
+    "Campbell Systematic Reviews: Better Evidence for a Better World"
+   ],
+   "abstract": "<jats:p>Cognitive-behavioural therapy can prevent criminal offenders from continuing their criminal careers. However, some treatment programmes work better than others.</jats:p>\n                  <jats:p>This Campbell review shows that a small number of factors make the difference. It is particularly important for the programmes to be stringently implemented, by well-trained providers. No significant differences were found in the effectiveness of the different types of programmes or \u201cbrand names\u201d. Whether the treatment is implemented in prison or in the community has no influence on the outcome.</jats:p>",
+   "is-referenced-by-count": 197,
+   "type": "journal-article"
+  },
+  {
+   "DOI": "10.1007/s11292-005-3541-7",
+   "title": [
+    "The positive effects of cognitive\u2013behavioral programs for offenders: A meta-analysis of factors associated with effective treatment"
+   ],
+   "author": [
+    {
+     "given": "Nana A.",
+     "family": "Landenberger",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Mark W.",
+     "family": "Lipsey",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2005,
+      12
+     ]
+    ]
+   },
+   "container-title": [
+    "Journal of Experimental Criminology"
+   ],
+   "is-referenced-by-count": 604,
+   "type": "journal-article"
+  },
+  {
+   "DOI": "10.1007/1-4020-4244-2_4",
+   "title": [
+    "Cognitive-Behavioral Interventions"
+   ],
+   "author": [
+    {
+     "given": "Mark W.",
+     "family": "Lipsey",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Nana A.",
+     "family": "Landenberger",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      null
+     ]
+    ]
+   },
+   "container-title": [
+    "Preventing Crime"
+   ],
+   "is-referenced-by-count": 31,
+   "type": "book-chapter"
+  },
+  {
+   "DOI": "10.1007/978-0-387-69169-5_4",
+   "title": [
+    "Cognitive-Behavioral Interventions"
+   ],
+   "author": [
+    {
+     "given": "Mark W.",
+     "family": "Lipsey",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Nana A.",
+     "family": "Landenberger",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2007
+     ]
+    ]
+   },
+   "container-title": [
+    "Preventing Crime"
+   ],
+   "is-referenced-by-count": 4,
+   "type": "book-chapter"
+  },
+  {
+   "DOI": "10.1177/0002716201578001009",
+   "title": [
+    "Cognitive-Behavioral Programs for Offenders"
+   ],
+   "author": [
+    {
+     "given": "M. W.",
+     "family": "LIPSEY",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "G. L.",
+     "family": "CHAPMAN",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "N. A.",
+     "family": "LANDENBERGER",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2001,
+      11,
+      1
+     ]
+    ]
+   },
+   "container-title": [
+    "The ANNALS of the American Academy of Political and Social Science"
+   ],
+   "is-referenced-by-count": 60,
+   "type": "journal-article"
+  }
+ ],
+ "Visher_travis2003": [
+  {
+   "DOI": "10.1146/annurev.soc.29.010202.095931",
+   "title": [
+    "Transitions from Prison to Community: Understanding Individual Pathways"
+   ],
+   "author": [
+    {
+     "given": "Christy A.",
+     "family": "Visher",
+     "sequence": "first",
+     "affiliation": [
+      {
+       "name": "The Urban Institute, Justice Policy Center, District of Columbia Washington, 20037;"
+      }
+     ],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Jeremy",
+     "family": "Travis",
+     "sequence": "additional",
+     "affiliation": [
+      {
+       "name": "The Urban Institute, Justice Policy Center, District of Columbia Washington, 20037;"
+      }
+     ],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2003,
+      8
+     ]
+    ]
+   },
+   "container-title": [
+    "Annual Review of Sociology"
+   ],
+   "abstract": "<jats:p>\u25aa Abstract\u2002 In 2002, over 600,000 individuals left state and federal prisons, four times as many as were released in 1975. However, according to a national study, within 3 years, almost 7 in 10 will have been rearrested and half will be back in prison, either for a new crime or for violating conditions of their release. Clearly, an individual's transition from prison back into a home and into a community is difficult, and avoiding crime can be the least of his or her problems. Understanding these pathways and the reasons for and the dimensions of an individual's success or failure is the focus of recent scholarly attention to the problem of \u201cprisoner reentry,\u201d the process of leaving prison and returning to free society. However, most of the existing research on prisoners' lives after release focuses solely on recidivism and ignores the reality that recidivism is directly affected by postprison reintegration and adjustment, which, in turn, depends on four sets of factors: personal and situational characteristics, including the individual's social environment of peers, family, community, and state-level policies. Moreover, individual transitions from prison to community are, we suggest, best understood in a longitudinal framework, taking into account an individual's circumstances before incarceration, experiences during incarceration, and the period after release\u2014both the immediate experience and long-term situational circumstances. This review summarizes what we know about the four specified dimensions and how they affect an individual's transition from prison to community. The review concludes with a call to the research community for interdisciplinary, multilevel, longitudinal studies of the processes of reintegration for former prisoners. Such research may illuminate many dimensions of social life, including the effects of recent social policies.</jats:p>",
+   "is-referenced-by-count": 572,
+   "type": "journal-article"
+  },
+  {
+   "DOI": "10.1177/0032885511415228",
+   "title": [
+    "Life on the Outside"
+   ],
+   "author": [
+    {
+     "given": "Christy A.",
+     "family": "Visher",
+     "sequence": "first",
+     "affiliation": [
+      {
+       "name": "University of Delaware"
+      }
+     ],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Jeremy",
+     "family": "Travis",
+     "sequence": "additional",
+     "affiliation": [
+      {
+       "name": "John Jay College of Criminal Justice"
+      }
+     ],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2011,
+      8,
+      19
+     ]
+    ]
+   },
+   "container-title": [
+    "The Prison Journal"
+   ],
+   "abstract": "<jats:p>With record-high incarceration rates, unprecedented extension of state supervision over individuals leaving prison, and a complex maze of legal barriers to reintegration, more people than ever before are returning home after serving time in prison. These individuals face daunting barriers to successful reintegration. Successful reentry requires strong community support networks and comprehensive services, both of which are lacking in urban areas to which most former prisoners return. Interventions that reflect these principles may hold the greatest promise for success. Yet reentry policies are still quite primitive; researchers are just now beginning to develop an approach to reentry based on evidence of best practices. At this moment, it is critically important that the federal government invest in the development and testing of new ideas and rigorous evaluations to determine which interventions are effective at promoting public safety and prisoner reintegration.</jats:p>",
+   "is-referenced-by-count": 133,
+   "type": "journal-article"
+  },
+  {
+   "DOI": "10.4324/9781315455693-4",
+   "title": [
+    "The transition from prison to community"
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2017,
+      8,
+      25
+     ]
+    ]
+   },
+   "container-title": [
+    "Women's Transitions from Prison"
+   ],
+   "is-referenced-by-count": 0,
+   "type": "book-chapter"
+  },
+  {
+   "DOI": "10.4324/9781315455693-5",
+   "title": [
+    "Adapting to community life"
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2017,
+      8,
+      25
+     ]
+    ]
+   },
+   "container-title": [
+    "Women's Transitions from Prison"
+   ],
+   "is-referenced-by-count": 0,
+   "type": "book-chapter"
+  },
+  {
+   "DOI": "10.1017/cbo9780511813580",
+   "title": [
+    "Prisoner Reentry and Crime in America"
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2005,
+      8,
+      1
+     ]
+    ]
+   },
+   "abstract": "<jats:p>Prisoner Reentry and Crime in America is intended to shed light on a question that fuels the public's concern about the number of returning prisoners. What are the public safety consequences of the fourfold increase in the number of individuals entering and leaving the nation's prisons each year? Many have speculated about the nexus between prisoner reentry and public safety. Journalistic accounts of the reentry phenomenon have painted a picture of a tidal wave of hardened criminals coming back home to resume their destructive lifestyles. Law enforcement officials have attributed increases in violence in their communities to the influx of returning prisoners. Politicians have recommended policies that keep former prisoners out of high crime neighborhoods in the belief that crime would be reduced. The chapters in this book address these issues and suggest policies that will keep released prisoners from committing new crimes.</jats:p>",
+   "is-referenced-by-count": 113,
+   "type": "edited-book"
+  }
+ ],
+ "Laub_sampson": [
+  {
+   "DOI": "10.1007/978-0-306-48247-2_14",
+   "title": [
+    "Desistance from Crime over the Life Course"
+   ],
+   "author": [
+    {
+     "given": "Robert J.",
+     "family": "Sampson",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "John H.",
+     "family": "Laub",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      null
+     ]
+    ]
+   },
+   "container-title": [
+    "Handbooks of Sociology and Social Research",
+    "Handbook of the Life Course"
+   ],
+   "is-referenced-by-count": 96,
+   "type": "book-chapter"
+  },
+  {
+   "DOI": "10.17576/akad-2023-9302-05",
+   "title": [
+    "Exploring The Concept of \u201cDesistance\u201d and Age Graded Theory of Informal Social Control by Sampson and Laub"
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2023,
+      7,
+      31
+     ]
+    ]
+   },
+   "container-title": [
+    "Akademika"
+   ],
+   "is-referenced-by-count": 0,
+   "type": "journal-article"
+  },
+  {
+   "DOI": "10.2307/2095859",
+   "title": [
+    "Crime and Deviance over the Life Course: The Salience of Adult Social Bonds"
+   ],
+   "author": [
+    {
+     "given": "Robert J.",
+     "family": "Sampson",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "John H.",
+     "family": "Laub",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      1990,
+      10
+     ]
+    ]
+   },
+   "container-title": [
+    "American Sociological Review"
+   ],
+   "is-referenced-by-count": 685,
+   "type": "journal-article"
+  },
+  {
+   "DOI": "10.1086/652208",
+   "title": [
+    "Understanding Desistance from Crime"
+   ],
+   "author": [
+    {
+     "given": "John H.",
+     "family": "Laub",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Robert J.",
+     "family": "Sampson",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2001,
+      1
+     ]
+    ]
+   },
+   "container-title": [
+    "Crime and Justice"
+   ],
+   "is-referenced-by-count": 772,
+   "type": "journal-article"
+  },
+  {
+   "DOI": "10.4324/9781315085081-26",
+   "title": [
+    "Trajectories of Change in Criminal Offending: Good Marriages and the Desistance Process*"
+   ],
+   "author": [
+    {
+     "given": "John H.",
+     "family": "Laub",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Daniel S.",
+     "family": "Nagin",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Robert J.",
+     "family": "Sampson",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2017,
+      7,
+      5
+     ]
+    ]
+   },
+   "container-title": [
+    "The Termination of Criminal Careers"
+   ],
+   "is-referenced-by-count": 6,
+   "type": "book-chapter"
+  }
+ ],
+ "Villetaz_king_2005": [
+  {
+   "DOI": "10.1080/13636820.2020.1715467",
+   "title": [
+    "Employment prospects after completing vocational training in Germany from 2008-2014: a comprehensive analysis"
+   ],
+   "author": [
+    {
+     "given": "Sandra",
+     "family": "Dummert",
+     "sequence": "first",
+     "affiliation": [
+      {
+       "name": "Research Data Centre (FDZ), Institute for Employment Research (IAB), Nuremberg, Germany"
+      }
+     ],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2020,
+      1,
+      30
+     ]
+    ]
+   },
+   "container-title": [
+    "Journal of Vocational Education &amp; Training"
+   ],
+   "is-referenced-by-count": 12,
+   "type": "journal-article"
+  },
+  {
+   "DOI": "10.4324/9781003499169-4",
+   "title": [
+    "Employment and training schemes, and offenders"
+   ],
+   "author": [
+    {
+     "given": "Iain",
+     "family": "Crow",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Paul",
+     "family": "Richardso",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Carol",
+     "family": "Riddington",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Frances",
+     "family": "Simon",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2024,
+      7,
+      30
+     ]
+    ]
+   },
+   "container-title": [
+    "Unemployment, Crime, and Offenders"
+   ],
+   "is-referenced-by-count": 0,
+   "type": "book-chapter"
+  },
+  {
+   "DOI": "10.1787/888932363748",
+   "title": [
+    "3.8. Employment rate of young adults and graduation from vocational training"
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      null
+     ]
+    ]
+   },
+   "is-referenced-by-count": 0,
+   "type": "component"
+  },
+  {
+   "DOI": "10.19088/ids.2026.034",
+   "title": [
+    "Bridging the Gap between Vocational Training and Employment"
+   ],
+   "author": [
+    {
+     "given": "Cati",
+     "family": "Coe",
+     "sequence": "first",
+     "affiliation": [
+      {
+       "name": "Carleton University"
+      }
+     ],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2026,
+      10,
+      22
+     ]
+    ]
+   },
+   "abstract": "<jats:p>Vocational and technical education is often praised because of its promotion of youth employment, its integration with local labour markets, and its contribution to national development. In West Africa, however, formal technical schooling is often not well integrated with employment markets, leading to underutilised cultural capital and underemployment. This policy brief explores the reasons for such gaps based on a study of the Healthcare Assistant Certificate offered in Ghana. It lays out how policymakers, the labour market, technical and vocational education services, and educational institutions in Ghana can bridge the gaps between training and employment.</jats:p>",
+   "is-referenced-by-count": 0,
+   "type": "report"
+  },
+  {
+   "DOI": "10.36907/krivet.2010.13.2.159",
+   "title": [
+    "An Analysis of Educational Needs for Development Employment Competency of Vocational Highschool Students"
+   ],
+   "author": [
+    {
+     "family": "\uc774\uac74\ub0a8",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    },
+    {
+     "family": "\uace0\uc7ac\uc131",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2010,
+      8
+     ]
+    ]
+   },
+   "container-title": [
+    "Journal of Vocational Education &amp; Training"
+   ],
+   "is-referenced-by-count": 0,
+   "type": "journal-article"
+  }
+ ],
+ "Visher2020_mentoring": [
+  {
+   "DOI": "10.1037/e720652011-001",
+   "title": [
+    "Illinois Prisoners' Reflections on Returning Home"
+   ],
+   "author": [
+    {
+     "given": "Christy",
+     "family": "Visher",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Nancy",
+     "family": "La Vigne",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Jill",
+     "family": "Farrell",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2003
+     ]
+    ]
+   },
+   "container-title": [
+    "PsycEXTRA Dataset"
+   ],
+   "is-referenced-by-count": 13,
+   "type": "dataset"
+  },
+  {
+   "DOI": "10.1037/e720322011-001",
+   "title": [
+    "Baltimore Prisoners' Experiences Returning Home"
+   ],
+   "author": [
+    {
+     "given": "Christy",
+     "family": "Visher",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Vera",
+     "family": "Kachnowski",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Nancy",
+     "family": "La Vigne",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Jeremy",
+     "family": "Travis",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2004
+     ]
+    ]
+   },
+   "container-title": [
+    "PsycEXTRA Dataset"
+   ],
+   "is-referenced-by-count": 88,
+   "type": "dataset"
+  },
+  {
+   "DOI": "10.1037/e718972011-001",
+   "title": [
+    "Life after Prison: Tracking the Experiences of Male Prisoners Returning to Chicago, Cleveland, and Houston"
+   ],
+   "author": [
+    {
+     "given": "Christy",
+     "family": "Visher",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    },
+    {
+     "given": "Jennifer",
+     "family": "Yahner",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    },
+    {
+     "given": "Nancy",
+     "family": "La Vigne",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2010
+     ]
+    ]
+   },
+   "container-title": [
+    "PsycEXTRA Dataset"
+   ],
+   "is-referenced-by-count": 17,
+   "type": "dataset"
+  },
+  {
+   "DOI": "10.1037/e719472011-001",
+   "title": [
+    "Returning Home on Parole: Former Prisoners' Experiences in Illinois, Ohio, and Texas"
+   ],
+   "author": [
+    {
+     "given": "Jennifer",
+     "family": "Yahner",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    },
+    {
+     "given": "Christy",
+     "family": "Visher",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    },
+    {
+     "given": "Amy",
+     "family": "Solomon",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2008
+     ]
+    ]
+   },
+   "container-title": [
+    "PsycEXTRA Dataset"
+   ],
+   "is-referenced-by-count": 0,
+   "type": "dataset"
+  },
+  {
+   "DOI": "10.3818/jrp.5.2.2003.55",
+   "title": [
+    "Returning Home: Preliminary Findings from a Pilot Study of Soon-to-be-Released Prisoners in Maryland"
+   ],
+   "author": [
+    {
+     "given": "Christy A.",
+     "family": "Visher",
+     "sequence": "first",
+     "affiliation": [
+      {
+       "name": "Urban Institute"
+      }
+     ],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    },
+    {
+     "given": "Nancy G.",
+     "family": "La Vigne",
+     "sequence": "additional",
+     "affiliation": [
+      {
+       "name": "Urban Institute"
+      }
+     ],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    },
+    {
+     "given": "Jennifer L.",
+     "family": "Castro",
+     "sequence": "additional",
+     "affiliation": [
+      {
+       "name": "Urban Institute"
+      }
+     ],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2003,
+      12
+     ]
+    ]
+   },
+   "container-title": [
+    "Justice Research and Policy"
+   ],
+   "abstract": "<jats:p> In 2001, researchers at the Urban Institute in Washington, D.C., launched a pilot study in the state of Maryland for a four-state, longitudinal research project examining prisoner reentry. The first stage of the pilot involved self-administered surveys with 324 prisoners in the 30 to 90 days prior to their expected release. These surveys presented many research challenges, including designing a self-administered instrument that would be accessible to the prison population, developing appropriate sampling and recruiting methods, and conducting research in a prison setting. This paper describes the research procedures that were employed to obtain this baseline data and presents some preliminary findings from our survey of soon-to-be-released prisoners. The results presented include descriptive information on prisoner demographics, criminal histories, substance use, and family relationships, as well as correlation analyses of prisoner attitudes and expectations for life after release. Implications of these preliminary findings and recommendations to researchers interested in conducting similar research are also discussed. </jats:p>",
+   "is-referenced-by-count": 20,
+   "type": "journal-article"
+  }
+ ],
+ "Bouffard_2000": [
+  {
+   "DOI": "10.1525/california/9780520290440.001.0001",
+   "title": [
+    "Dream Denied"
+   ],
+   "author": [
+    {
+     "given": "Michaela",
+     "family": "Soyer",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2016,
+      7,
+      12
+     ]
+    ]
+   },
+   "abstract": "<p>\n                  <italic>A Dream Denied: Incarceration, Recidivism, and Young Minority Men in America</italic> shows how the narrative of American dream shapes the offending trajectories of twenty-three young Latino and African American men in Boston and Chicago. Believing in the American dream helps the teenagers cope with the pains of incarceration. However, without the ability to experience themselves as creative actors, reproducing the rhetoric of American meritocracy leaves the teenagers unprepared to negotiate the complex and frustrating process of desistance and reentry.</p>",
+   "is-referenced-by-count": 22,
+   "type": "monograph"
+  },
+  {
+   "DOI": "10.4135/9781412959193.n127",
+   "title": [
+    "Incarceration and Recidivism"
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2010
+     ]
+    ]
+   },
+   "container-title": [
+    "Encyclopedia of Criminological Theory"
+   ],
+   "is-referenced-by-count": 0,
+   "type": "reference-entry"
+  },
+  {
+   "DOI": "10.1201/b11683-15",
+   "title": [
+    "Incarceration, Recidivism, and Rehabilitation"
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2011,
+      12,
+      7
+     ]
+    ]
+   },
+   "container-title": [
+    "Sexual Predators Amongst Us"
+   ],
+   "is-referenced-by-count": 0,
+   "type": "book-chapter"
+  },
+  {
+   "DOI": "10.22215/etd/2011-07387",
+   "title": [
+    "The relationship between length of incarceration, risk, age and sexual recidivism"
+   ],
+   "author": [
+    {
+     "given": "Jennifer",
+     "family": "Malcom",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      null
+     ]
+    ]
+   },
+   "is-referenced-by-count": 0,
+   "type": "dissertation"
+  },
+  {
+   "DOI": "10.3386/w22648",
+   "title": [
+    "Incarceration, Recidivism and Employment"
+   ],
+   "author": [
+    {
+     "given": "Manudeep",
+     "family": "Bhuller",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Gordon",
+     "family": "Dahl",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Katrine",
+     "family": "L\u00f8ken",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Magne",
+     "family": "Mogstad",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2016,
+      9
+     ]
+    ]
+   },
+   "is-referenced-by-count": 25,
+   "type": "report"
+  }
+ ],
+ "Harper_chitty": [
+  {
+   "DOI": "10.1037/e455022008-001",
+   "title": [
+    "The impact of corrections on re-offending: A review of 'what works': Home Office research study 291"
+   ],
+   "author": [
+    {
+     "given": "Gemma",
+     "family": "Harper",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Chloe",
+     "family": "Chitty",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2005
+     ]
+    ]
+   },
+   "container-title": [
+    "PsycEXTRA Dataset"
+   ],
+   "is-referenced-by-count": 25,
+   "type": "dataset"
+  },
+  {
+   "DOI": "10.1080/23774657.2016.1234952",
+   "title": [
+    "Capital and Punishment: A Novel Model of Reoffending"
+   ],
+   "author": [
+    {
+     "given": "Amanda P.",
+     "family": "Cook",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2016,
+      10,
+      6
+     ]
+    ]
+   },
+   "container-title": [
+    "Corrections"
+   ],
+   "is-referenced-by-count": 3,
+   "type": "journal-article"
+  },
+  {
+   "DOI": "10.4324/9781843926658-10",
+   "title": [
+    "Reoffending: understanding the \u2018problem\u2019"
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2013,
+      1,
+      10
+     ]
+    ]
+   },
+   "container-title": [
+    "Reducing Reoffending"
+   ],
+   "is-referenced-by-count": 0,
+   "type": "book-chapter"
+  },
+  {
+   "DOI": "10.4324/9780203080986-8",
+   "title": [
+    "Reoffending and the response from probation"
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2013,
+      10,
+      1
+     ]
+    ]
+   },
+   "container-title": [
+    "Desistance Transitions and the Impact of Probation"
+   ],
+   "is-referenced-by-count": 0,
+   "type": "book-chapter"
+  },
+  {
+   "DOI": "10.5784/29-1-138-56",
+   "title": [
+    "Corrections report"
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      null
+     ]
+    ]
+   },
+   "is-referenced-by-count": 0,
+   "type": "component"
+  }
+ ],
+ "Mears": [
+  {
+   "DOI": "10.4135/9781483390727.n8",
+   "title": [
+    "The Reentry Experience and\n\t\t\t\t\tReentry Challenges"
+   ],
+   "author": [
+    {
+     "given": "Daniel P.",
+     "family": "Mears",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Joshua C.",
+     "family": "Cochran",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2015
+     ]
+    ]
+   },
+   "container-title": [
+    "Prisoner Reentry in the Era of Mass Incarceration"
+   ],
+   "is-referenced-by-count": 0,
+   "type": "book-chapter"
+  },
+  {
+   "DOI": "10.4135/9781483390727",
+   "title": [
+    "Prisoner Reentry in the Era of Mass Incarceration"
+   ],
+   "author": [
+    {
+     "given": "Daniel P.",
+     "family": "Mears",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Joshua C.",
+     "family": "Cochran",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2015
+     ]
+    ]
+   },
+   "is-referenced-by-count": 95,
+   "type": "monograph"
+  },
+  {
+   "DOI": "10.4135/9781483390727.n10",
+   "title": [
+    "Diverse Inmate Populations\n\t\t\t\t\tand Reentry"
+   ],
+   "author": [
+    {
+     "given": "Daniel P.",
+     "family": "Mears",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Joshua C.",
+     "family": "Cochran",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2015
+     ]
+    ]
+   },
+   "container-title": [
+    "Prisoner Reentry in the Era of Mass Incarceration"
+   ],
+   "is-referenced-by-count": 0,
+   "type": "book-chapter"
+  },
+  {
+   "DOI": "10.4135/9781483390727.n11",
+   "title": [
+    "Reentry Policy and What Works\n\t\t\t\t\tto Improve Reentry Outcomes"
+   ],
+   "author": [
+    {
+     "given": "Daniel P.",
+     "family": "Mears",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Joshua C.",
+     "family": "Cochran",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2015
+     ]
+    ]
+   },
+   "container-title": [
+    "Prisoner Reentry in the Era of Mass Incarceration"
+   ],
+   "is-referenced-by-count": 0,
+   "type": "book-chapter"
+  },
+  {
+   "DOI": "10.4135/9781483390727.n12",
+   "title": [
+    "Conclusion"
+   ],
+   "author": [
+    {
+     "given": "Daniel P.",
+     "family": "Mears",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Joshua C.",
+     "family": "Cochran",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2015
+     ]
+    ]
+   },
+   "container-title": [
+    "Prisoner Reentry in the Era of Mass Incarceration"
+   ],
+   "is-referenced-by-count": 0,
+   "type": "book-chapter"
+  }
+ ],
+ "Braga_cse": [
+  {
+   "DOI": "10.4135/9781452218519.n165",
+   "title": [
+    "Second Chance Act"
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2012
+     ]
+    ]
+   },
+   "container-title": [
+    "Encyclopedia of Community Corrections"
+   ],
+   "is-referenced-by-count": 0,
+   "type": "reference-entry"
+  },
+  {
+   "DOI": "10.1037/e587782012-001",
+   "title": [
+    "Allowable Uses for Second Chance Act Program Grant Funds: Policy"
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2012
+     ]
+    ]
+   },
+   "container-title": [
+    "PsycEXTRA Dataset"
+   ],
+   "is-referenced-by-count": 1,
+   "type": "dataset"
+  },
+  {
+   "DOI": "10.5771/9781666922806-109",
+   "title": [
+    "Second Chance Act and Second Chance Pell Pilot Program"
+   ],
+   "author": [
+    {
+     "given": "Charles B.A.",
+     "family": "Ubah",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2023
+     ]
+    ]
+   },
+   "container-title": [
+    "Offender Rehabilitation Issues"
+   ],
+   "is-referenced-by-count": 0,
+   "type": "book-chapter"
+  },
+  {
+   "DOI": "10.2139/ssrn.5744603",
+   "title": [
+    "A Second Chance at Schooling? Unintended Consequences of Prison Education"
+   ],
+   "author": [
+    {
+     "given": "Romaine",
+     "family": "Campbell",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Logan",
+     "family": "Lee",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2025
+     ]
+    ]
+   },
+   "is-referenced-by-count": 0,
+   "type": "posted-content"
+  },
+  {
+   "DOI": "10.5040/9781666998245.ch-004",
+   "title": [
+    "Grandparenting as Second Chance"
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2019
+     ]
+    ]
+   },
+   "container-title": [
+    "Grandparents in a Digital Age"
+   ],
+   "is-referenced-by-count": 0,
+   "type": "other"
+  }
+ ],
+ "Duwe_housing": [
+  {
+   "DOI": "10.1080/07418825.2011.555414",
+   "title": [
+    "Evaluating the Minnesota Comprehensive Offender Reentry Plan (MCORP): Results from a Randomized Experiment"
+   ],
+   "author": [
+    {
+     "given": "Grant",
+     "family": "Duwe",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2011,
+      3,
+      9
+     ]
+    ]
+   },
+   "container-title": [
+    "Justice Quarterly"
+   ],
+   "is-referenced-by-count": 65,
+   "type": "journal-article"
+  },
+  {
+   "DOI": "10.1080/1478601x.2013.850081",
+   "title": [
+    "A randomized experiment of a prisoner reentry program: updated results from an evaluation of the Minnesota Comprehensive Offender Reentry Plan (MCORP)"
+   ],
+   "author": [
+    {
+     "given": "Grant",
+     "family": "Duwe",
+     "sequence": "first",
+     "affiliation": [
+      {
+       "name": "Minnesota Department of Corrections, Research and Evaluation, 1450 Energy Park Drive, Suite 200, St. Paul, MN 55108-5219, USA"
+      }
+     ],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2013,
+      10,
+      24
+     ]
+    ]
+   },
+   "container-title": [
+    "Criminal Justice Studies"
+   ],
+   "is-referenced-by-count": 16,
+   "type": "journal-article"
+  },
+  {
+   "DOI": "10.1111/j.1745-9125.2008.00114.x",
+   "title": [
+    "THE IMPACT OF MEGAN'S LAW ON SEX OFFENDER RECIDIVISM: THE MINNESOTA EXPERIENCE*"
+   ],
+   "author": [
+    {
+     "given": "GRANT",
+     "family": "DUWE",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "WILLIAM",
+     "family": "DONNAY",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2008,
+      5
+     ]
+    ]
+   },
+   "container-title": [
+    "Criminology"
+   ],
+   "abstract": "<jats:p>Although Megan's Law was passed more than 10 years ago, very little is known as to whether it reduces sex offender recidivism significantly. Using a retrospective quasi\u2010experimental design, we examine whether community notification has a deterrent effect by comparing the recidivism rates of 155 level 3 (\u201chigh public risk\u201d) sex offenders released from Minnesota prisons between 1997 and 2002 who were subject to broad notification with two separate control groups who were not. The first control group (referred to as the prenotification group) contained 125 sex offenders released between 1990 and 1996 (the 7 years preceding the implementation of the Community Notification Act) who likely would have been subject to broad community notification had the law been in effect at the time of their release. The second control group (referred to as the non\u2010notification group) was composed of 155 offenders (37 level 1 and 118 level 2) released between 1997 and 2002 who were not subject to broad community notification. The results from the Cox proportional hazards models reveal that broad community notification significantly reduced the risk of time to a sex reoffense (rearrest, reconviction, and reincarceration) compared with both control groups. The findings were mixed, however, for both non\u2010sex and general reoffending. Whereas broad community notification significantly reduced the risk of timing to both non\u2010sex and general recidivism compared with the prenotification group, no such effects were found in the non\u2010notification group analyses. We discuss the implications of these results and attempt to explain why Megan's Law seems to reduce sex offense recidivism in Minnesota.</jats:p>",
+   "is-referenced-by-count": 99,
+   "type": "journal-article"
+  },
+  {
+   "DOI": "10.1177/0734016813478823",
+   "title": [
+    "The Effects of Private Prison Confinement on Offender Recidivism"
+   ],
+   "author": [
+    {
+     "given": "Grant",
+     "family": "Duwe",
+     "sequence": "first",
+     "affiliation": [
+      {
+       "name": "Minnesota Department of Corrections, St. Paul, MN, USA"
+      }
+     ],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    },
+    {
+     "given": "Valerie",
+     "family": "Clark",
+     "sequence": "additional",
+     "affiliation": [
+      {
+       "name": "Minnesota Department of Corrections, St. Paul, MN, USA"
+      }
+     ],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2013,
+      2,
+      25
+     ]
+    ]
+   },
+   "container-title": [
+    "Criminal Justice Review"
+   ],
+   "abstract": "<jats:p>Evidence has been mixed as to whether private prisons are more effective than state-operated facilities in reducing recidivism. This study analyzes whether private prison confinement in Minnesota has had an impact on recidivism by examining 3,532 offenders released from prison between 2007 and 2009. Propensity score matching was used to individually match a comparison group of 1,766 inmates who had only been confined in state-run facilities with 1,766 offenders who had served time in a private prison facility. Using multiple measures of recidivism and private prison confinement, 20 Cox regression models were estimated. The results showed that offenders who had been incarcerated in a private prison had a greater hazard of recidivism in all 20 models, and the recidivism risk was significantly greater in 8 of the models. The evidence presented in this study suggests that private prisons are not more effective in reducing recidivism, which may be attributable to fewer visitation and rehabilitative programming opportunities for offenders incarcerated at private facilities.</jats:p>",
+   "is-referenced-by-count": 32,
+   "type": "journal-article"
+  },
+  {
+   "DOI": "10.1177/1079063209338490",
+   "title": [
+    "The Impact of Prison-Based Treatment on Sex Offender Recidivism"
+   ],
+   "author": [
+    {
+     "given": "Grant",
+     "family": "Duwe",
+     "sequence": "first",
+     "affiliation": [
+      {
+       "name": "Minnesota Department of Corrections, St. Paul,"
+      }
+     ],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    },
+    {
+     "given": "Robin A.",
+     "family": "Goldman",
+     "sequence": "additional",
+     "affiliation": [
+      {
+       "name": "Minnesota Department of Corrections, Lino Lakes"
+      }
+     ],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2009,
+      6,
+      16
+     ]
+    ]
+   },
+   "container-title": [
+    "Sexual Abuse"
+   ],
+   "abstract": "<jats:p>Using a retrospective quasi-experimental design, this study evaluates the effectiveness of prison-based treatment by examining recidivism outcomes among 2,040 sex offenders released from Minnesota prisons between 1990 and 2003 (average follow-up period of 9.3 years). To reduce observed selection bias, the authors used propensity score matching to create a comparison group of 1,020 untreated sex offenders who were not significantly different from the 1,020 treated offenders. In addition, intent-to-treat analyses and the Rosenbaum bounds method were used to test the sensitivity of the findings to treatment refuser and unobserved selection bias. Results from the Cox regression analyses revealed that participating in treatment significantly reduced the hazard ratio for rearrest by 27% for sexual recidivism, 18% for violent recidivism, and 12% for general recidivism. These findings are consistent with the growing body of research supporting the effectiveness of cognitive\u2014behavioral treatment for sex offenders.</jats:p>",
+   "is-referenced-by-count": 64,
+   "type": "journal-article"
+  }
+ ],
+ "Duwe_2017": [
+  {
+   "DOI": "10.2139/ssrn.4891486",
+   "title": [
+    "Use of Reentry Support Services and Recidivism: a Field Experiment Varying Dosage"
+   ],
+   "author": [
+    {
+     "given": "Marco",
+     "family": "Castillo",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    },
+    {
+     "given": "Sera",
+     "family": "Linardi",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    },
+    {
+     "given": "Ragan",
+     "family": "Petrie",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2024
+     ]
+    ]
+   },
+   "is-referenced-by-count": 0,
+   "type": "posted-content"
+  },
+  {
+   "DOI": "10.4135/9781526400611",
+   "title": [
+    "Reentry, Homelessness, &amp; Recidivism in Washington State"
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2017
+     ]
+    ]
+   },
+   "is-referenced-by-count": 2
+  },
+  {
+   "DOI": "10.70675/bf4e6b6dz1100z48e5zbccazcf1b8719334d",
+   "title": [
+    "Prison, reentry and recidivism : micro-econometric applications"
+   ],
+   "author": [
+    {
+     "ORCID": "https://orcid.org/0009-0009-1150-921X",
+     "authenticated-orcid": false,
+     "given": "Benjamin",
+     "family": "Monnery",
+     "sequence": "first",
+     "affiliation": [
+      {
+       "id": [
+        {
+         "id": "https://ror.org/01rk35k63",
+         "id-type": "ROR",
+         "asserted-by": "publisher"
+        }
+       ],
+       "name": "Lyon"
+      }
+     ],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      null
+     ]
+    ]
+   },
+   "abstract": "<jats:title>Prison, r\u00e9insertion et r\u00e9cidive : applications micro-\u00e9conom\u00e9triques</jats:title>\n                <jats:p xml:lang=\"fr\">Cette th\u00e8se de doctorat \u00e9tudie les liens entre prison, r\u00e9insertion et r\u00e9cidive. Chacun des quatre chapitres contribue au champ croissant de l\u2019\u00b4economie du crime, en appliquant diverses m\u00e9thodes \u00e9conom\u00e9triques sur des donn\u00e9es fran\u00e7aises pour r\u00e9pondre \u00e0 des questions essentielles pour les politiques publiques.Le Chapitre 1 explore la dynamique du risque de r\u00e9cidive apr\u00e8s la sortie de prison. Cet article est le premier \u00e0 documenter la forme du hasard de r\u00e9cidive dans le temps en France (une fonction rapidement d\u00e9croissante) et `a explorer les d\u00e9terminants individuels majeurs qui expliquent le niveau et la dynamique des risques dans le temps.Le Chapitre 2 \u00e9tudie l\u2019effet causal des r\u00e9ductions de peine sur la r\u00e9cidive. Cet article est le premier \u00e0 tenir explicitement compte du r\u00f4le essentiel des anticipations et de l\u2019adaptation des d\u00e9tenus. En exploitant la gr\u00e2ce collective fran\u00e7aise de Juillet 1996 comme une exp\u00e9rience naturelle, les r\u00e9sultats soutiennent l\u2019importance du design concret des r\u00e9ductions de peine.Le Chapitre 3 propose la premi\u00e8re \u00e9valuation des effets causaux d\u2019une politique p\u00e9nale majeure en France, l\u2019introduction du Placement sous Surveillance \u00c9lectronique (PSE) comme alternative aux courtes peines de prison fermes. En utilisant la mise en place progressive du PSE dans les tribunaux fran\u00e7ais, l\u2019article trouve des effets significatifs b\u00e9n\u00e9fiques du PSE sur la r\u00e9cidive, par rapport \u00e0 l\u2019incarc\u00e9ration.Enfin, le Chapitre 4 mesure l\u2019effet dissuasif d\u2019une incarc\u00e9ration plus ou moins rapide sur la d\u00e9linquance future. Cet article est le premier \u00e0 estimer les effets tr\u00e8s b\u00e9n\u00e9fiques de recourir \u00e0 des proc\u00e9dures rapides pour pr\u00e9venir la r\u00e9cidive apr\u00e8s la lib\u00e9ration.</jats:p>",
+   "is-referenced-by-count": 0,
+   "type": "dissertation"
+  },
+  {
+   "DOI": "10.1177/1049731503253364",
+   "title": [
+    "Reducing Juvenile Recidivism: Evaluating the Wraparound Services Model"
+   ],
+   "author": [
+    {
+     "given": "Michelle M.",
+     "family": "Carney",
+     "sequence": "first",
+     "affiliation": [
+      {
+       "name": "University of South Carolina,"
+      }
+     ],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    },
+    {
+     "given": "Frederick",
+     "family": "Buttell",
+     "sequence": "additional",
+     "affiliation": [
+      {
+       "name": "Tulane University"
+      }
+     ],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2003,
+      9
+     ]
+    ]
+   },
+   "container-title": [
+    "Research on Social Work Practice"
+   ],
+   "abstract": "<jats:p>Objective: The purpose of this study was to (a) evaluate the relative effectiveness of wraparound services versus conventional services for juvenile delinquent youth and (b) create a predictive model that would assist the juvenile court system in correctly identifying youth at greatest risk of reoffending. Method: The study employed a pretest/posttest, control group design, with 6-, 12-, and 18-month follow-up assessments, of 141 youth court-ordered into community-based treatment programs for delinquent youth. Results: Analysis indicated that few of the variables studied differentiated between wraparound services recipients and conventional service recipients. However, a logistic regression model was developed that correctly predicted recidivism for 79% of the sample at the 6-month follow-up assessment (chi-square = 27.211, df =6, p = .0001) and 78% of the sample at the 18-month follow-up assessment (chi-square = 16.453, df =8, p = .036). Conclusions: Implications of the findings for improving community-based juvenile diversion programs for delinquent youth were explored and discussed.</jats:p>",
+   "is-referenced-by-count": 64,
+   "type": "journal-article"
+  },
+  {
+   "DOI": "10.5040/9798216497202.ch-2",
+   "title": [
+    "Barriers to Reentry and Increased Recidivism"
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2010
+     ]
+    ]
+   },
+   "container-title": [
+    "Prisoner Reentry and Social Capital"
+   ],
+   "is-referenced-by-count": 0,
+   "type": "other"
+  }
+ ],
+ "Nally_2014": [
+  {
+   "DOI": "10.2139/ssrn.4083166",
+   "title": [
+    "The Impact of Post-Release Employment on Recidivism in North Carolina"
+   ],
+   "author": [
+    {
+     "given": "Andrew",
+     "family": "Berger-Gross",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2022
+     ]
+    ]
+   },
+   "abstract": "<jats:p>This study uses longitudinal data on a cohort of individuals exiting prison in North Carolina to examine the relationship between post-release employment and subsequent criminal justice contact. Individuals who found employment shortly after exiting prison in 2016 were significantly less likely to return to prison within the next two years than those who were not employed, controlling for observed covariates. The impact of employment on recidivism varied widely by earnings level: workers in the top quartile of wage earnings were only around half as likely to be reincarcerated, while the lowest-paid individuals returned to prison as often as their counterparts who found no employment at all. These findings add to a growing body of evidence establishing that high-quality employment is an important determinant of recidivism outcomes.</jats:p>",
+   "is-referenced-by-count": 1,
+   "type": "posted-content"
+  },
+  {
+   "DOI": "10.1007/s10940-012-9166-x",
+   "title": [
+    "Post-release Employment and Recidivism in Norway"
+   ],
+   "author": [
+    {
+     "given": "Torbj\u00f8rn",
+     "family": "Skardhamar",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Kjetil",
+     "family": "Telle",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2012,
+      2,
+      5
+     ]
+    ]
+   },
+   "container-title": [
+    "Journal of Quantitative Criminology"
+   ],
+   "is-referenced-by-count": 79,
+   "type": "journal-article"
+  },
+  {
+   "DOI": "10.21428/5487d235.bf8eef5c",
+   "title": [
+    "When Pre-Release Optimism Meets Post-Release Reality: Understanding Reentry Success Through a Longitudinal Framework Assessing Pre- and Post-Release Perceptions"
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2026,
+      4,
+      29
+     ]
+    ]
+   },
+   "container-title": [
+    "Reducing Recidivism Reader"
+   ],
+   "is-referenced-by-count": 0,
+   "type": "book-chapter"
+  },
+  {
+   "DOI": "10.1177/00111287231210836",
+   "title": [
+    "When Prison Becomes the Devil\u2019s Workshop: The Association Between Idleness and Post-Release Employment, Recidivism, and Mortality"
+   ],
+   "author": [
+    {
+     "ORCID": "https://orcid.org/0000-0003-0632-560X",
+     "authenticated-orcid": false,
+     "given": "Grant",
+     "family": "Duwe",
+     "sequence": "first",
+     "affiliation": [
+      {
+       "name": "Minnesota Department of Corrections, St. Paul, USA"
+      }
+     ],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "ORCID": "https://orcid.org/0000-0001-9733-5920",
+     "authenticated-orcid": false,
+     "given": "Valerie",
+     "family": "Clark",
+     "sequence": "additional",
+     "affiliation": [
+      {
+       "name": "Minnesota Department of Corrections, St. Paul, USA"
+      }
+     ],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "ORCID": "https://orcid.org/0000-0001-8923-6973",
+     "authenticated-orcid": false,
+     "given": "Susan",
+     "family": "McNeeley",
+     "sequence": "additional",
+     "affiliation": [
+      {
+       "name": "Minnesota Department of Corrections, St. Paul, USA"
+      }
+     ],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2023,
+      11,
+      17
+     ]
+    ]
+   },
+   "container-title": [
+    "Crime &amp; Delinquency"
+   ],
+   "abstract": "<jats:p>The existing literature has yet to examine the system-wide effects of idleness and participation in prison-based work and programing on multiple post-release outcomes. Using a sample of more than 77,000 releases from Minnesota prisons between 2010 and 2021, we examined the relationship between participation in prison labor and programing on post-release employment, recidivism, and mortality. The findings suggest that how people spend their time in prison significantly affects their chances of finding a job, their likelihood of recidivism, and how long they live following release from prison. As involvement in work and/or programing increased, the people released from prison were more likely to find employment while also having a reduced risk for recidivism and mortality.</jats:p>",
+   "is-referenced-by-count": 6,
+   "type": "journal-article"
+  },
+  {
+   "DOI": "10.4135/9781529686524",
+   "title": [
+    "What Happens in Prison Doesn\u2019t Stay in Prison: Witnessed Victimization, Post-Release Psychological Well-Being and Recidivism"
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2024
+     ]
+    ]
+   },
+   "is-referenced-by-count": 0,
+   "type": "database"
+  }
+ ],
+ "Severson_mentoring": [
+  {
+   "DOI": "10.4135/9781452218519.n148",
+   "title": [
+    "Recidivism"
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2012
+     ]
+    ]
+   },
+   "container-title": [
+    "Encyclopedia of Community Corrections"
+   ],
+   "is-referenced-by-count": 0,
+   "type": "reference-entry"
+  },
+  {
+   "DOI": "10.2139/ssrn.3974076",
+   "title": [
+    "Quantitative Analysis of Recidivism at Residential Community Corrections Programs in Pennsylvania"
+   ],
+   "author": [
+    {
+     "given": "Todd",
+     "family": "Clark",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2022
+     ]
+    ]
+   },
+   "abstract": "<jats:p>In Pennsylvania, people who are released on state parole without an approved home plan or who require certain programing are released to a Community Corrections Center (CCC) or a Community Contract Facility (CCF). The main difference between CCCs and CCFs is that CCCs are owned and operated by the government and CCFs are contracted by the government through private companies. In an effort to reduce recidivism among parolees released to CCFs, the Commonwealth of Pennsylvania introduced the Recidivism Monitoring Program in 2013. This program provides financial incentives to CCFs, which produce lower rates of recidivism. In this dissertation, the recidivism rates at CCCs are compared to those at CCFs to determine any differences. Recidivism rates at CCFs after the introduction of the Recidivism Monitoring Program are compared to those before the program\u2019s introduction to determine any changes in recidivism rates. Additionally, costs associated with differently priced CCFs are compared to recidivism rates to determine the relationship between the two variables. This study has found no statistically significant difference in recidivism between parolees released to CCCs and those released to CCFs. No statistically significant differences in recidivism were observed among parolees released to CCFs before the introduction of the Recidivism Monitoring Program and after the introduction of the program. Analysis of the relationship between the cost of CCFs and recidivism showed a weak-to-moderate positive statistically significant relationship between higher costs of CCFs and recidivism. This study recommends changes to the use of CCCs and CCFs as well as changes to the Recidivism Monitoring Program. This study recommends future research in the efficacy of individual programs offered at CCCs and CCFs.</jats:p>",
+   "is-referenced-by-count": 0,
+   "type": "posted-content"
+  },
+  {
+   "DOI": "10.1037/t73688-000",
+   "title": [
+    "Community Corrections Shared Decision Making Scale"
+   ],
+   "author": [
+    {
+     "given": "Jason",
+     "family": "Matejkowski",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    },
+    {
+     "given": "Sungkyu",
+     "family": "Lee",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    },
+    {
+     "given": "Margaret E.",
+     "family": "Severson",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2018
+     ]
+    ]
+   },
+   "container-title": [
+    "PsycTESTS Dataset"
+   ],
+   "is-referenced-by-count": 0,
+   "type": "dataset"
+  },
+  {
+   "DOI": "10.5771/9783845293738",
+   "title": [
+    "Reverse-Mentoring"
+   ],
+   "author": [
+    {
+     "given": "Werner",
+     "family": "Bruns",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Petra",
+     "family": "Bruns",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2018
+     ]
+    ]
+   },
+   "is-referenced-by-count": 0,
+   "type": "monograph"
+  },
+  {
+   "DOI": "10.5771/9783845293738-35",
+   "title": [
+    "II Begriffsverst\u00e4ndnis und Idealtypus \u201aMentoring\u2018"
+   ],
+   "author": [
+    {
+     "given": "Werner",
+     "family": "Bruns",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Petra",
+     "family": "Bruns",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2018
+     ]
+    ]
+   },
+   "container-title": [
+    "Reverse-Mentoring"
+   ],
+   "is-referenced-by-count": 0,
+   "type": "book-chapter"
+  }
+ ],
+ "Cid_martins2009": [
+  {
+   "DOI": "10.30707/etd2017.cottle.c",
+   "title": [
+    "The Impact Of Employment On Probationer Recidivism"
+   ],
+   "author": [
+    {
+     "given": "Clayton T.",
+     "family": "Cottle",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      null
+     ]
+    ]
+   },
+   "is-referenced-by-count": 1,
+   "type": "dissertation"
+  },
+  {
+   "DOI": "10.4324/9781843146148-14",
+   "title": [
+    "Labour Mobility and Women's Employment Profiles"
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2016,
+      9,
+      17
+     ]
+    ]
+   },
+   "container-title": [
+    "Key Issues in Women's Work"
+   ],
+   "is-referenced-by-count": 0,
+   "type": "book-chapter"
+  },
+  {
+   "DOI": "10.2139/ssrn.4509303",
+   "title": [
+    "Prison-Based Training Programs, Recidivism, and Employment"
+   ],
+   "author": [
+    {
+     "given": "Maria Antonella",
+     "family": "Mancino",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2023
+     ]
+    ]
+   },
+   "is-referenced-by-count": 0,
+   "type": "posted-content"
+  },
+  {
+   "DOI": "10.2139/ssrn.4672454",
+   "title": [
+    "Rehabilitating Futures: Assessing the Effects of Correctional Employment-Focused Programs on Recidivism and Employment"
+   ],
+   "author": [
+    {
+     "given": "Maria Antonella",
+     "family": "Mancino",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2023
+     ]
+    ]
+   },
+   "is-referenced-by-count": 0,
+   "type": "posted-content"
+  },
+  {
+   "DOI": "10.5040/9798216530787.ch11",
+   "title": [
+    "Employment Issues"
+   ],
+   "author": [
+    {
+     "given": "Ralph D.",
+     "family": "Mawdsley",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2013
+     ]
+    ]
+   },
+   "container-title": [
+    "Key Legal Issues for Schools"
+   ],
+   "is-referenced-by-count": 0,
+   "type": "other"
+  }
+ ],
+ "Uggen1999": [
+  {
+   "DOI": "10.1037/e564232006-008",
+   "title": [
+    "Asymmetrical Causation and Criminal Desistance"
+   ],
+   "author": [
+    {
+     "given": "Christopher",
+     "family": "Uggen",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    },
+    {
+     "given": "Irving",
+     "family": "Piliavin",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      1998
+     ]
+    ]
+   },
+   "container-title": [
+    "PsycEXTRA Dataset"
+   ],
+   "is-referenced-by-count": 1,
+   "type": "dataset"
+  },
+  {
+   "DOI": "10.1007/978-0-306-48247-2_15",
+   "title": [
+    "Desistance from Crime and Deviance as a Turning Point in the Life Course"
+   ],
+   "author": [
+    {
+     "given": "Christopher",
+     "family": "Uggen",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Michael",
+     "family": "Massoglia",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      null
+     ]
+    ]
+   },
+   "container-title": [
+    "Handbooks of Sociology and Social Research",
+    "Handbook of the Life Course"
+   ],
+   "is-referenced-by-count": 22,
+   "type": "book-chapter"
+  },
+  {
+   "DOI": "10.4324/9781315085081-19",
+   "title": [
+    "Crime in the Breaking: Gender Differences in Desistance"
+   ],
+   "author": [
+    {
+     "given": "Christopher",
+     "family": "Uggen",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Candace",
+     "family": "Kruttschnitt",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2017,
+      7,
+      5
+     ]
+    ]
+   },
+   "container-title": [
+    "The Termination of Criminal Careers"
+   ],
+   "is-referenced-by-count": 1,
+   "type": "book-chapter"
+  },
+  {
+   "DOI": "10.2307/1144260",
+   "title": [
+    "Asymmetrical Causation and Criminal Desistance"
+   ],
+   "author": [
+    {
+     "given": "Christopher",
+     "family": "Uggen",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    },
+    {
+     "given": "Irving",
+     "family": "Piliavin",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      1998
+     ]
+    ]
+   },
+   "container-title": [
+    "The Journal of Criminal Law and Criminology (1973-)"
+   ],
+   "is-referenced-by-count": 57,
+   "type": "journal-article"
+  },
+  {
+   "DOI": "10.1177/1043986206298950",
+   "title": [
+    "Subjective Desistance and the Transition to Adulthood"
+   ],
+   "author": [
+    {
+     "given": "Michael",
+     "family": "Massoglia",
+     "sequence": "first",
+     "affiliation": [
+      {
+       "name": "Pennsylvania State University"
+      }
+     ],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    },
+    {
+     "given": "Christopher",
+     "family": "Uggen",
+     "sequence": "additional",
+     "affiliation": [
+      {
+       "name": "University of Minnesota,"
+      }
+     ],
+     "role": [
+      {
+       "role": "author",
+       "vocabulary": "crossref"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2007,
+      2
+     ]
+    ]
+   },
+   "container-title": [
+    "Journal of Contemporary Criminal Justice"
+   ],
+   "abstract": "<jats:p>This article introduces two new conceptualizations of desistance based on individuals\u2019 personal assessments of their own movement away from crime. Drawing on qualitative accounts of changes in offending, survey items indexing subjective desistance and reference group desistance are developed. A representative community sample of young adults is used to compare these new conceptualizations of desistance against more established measures derived from changes in arrest and self-reported crime. Results indicate that the prevalence and predictors of desistance vary with these alternative conceptualizations. Although relationship quality is consistently related to each desistance measure, the effects of prior crime, peer relationships, race, gender, and parental status depend on the outcome under consideration. These results show both the generality of the desistance process and the utility of comparing subjective accounts of this process alongside official and self-reported behavioral measures.</jats:p>",
+   "is-referenced-by-count": 57,
+   "type": "journal-article"
+  }
+ ],
+ "Bouffard2003": [
+  {
+   "DOI": "10.21428/5487d235.1f654e8c",
+   "title": [
+    "Examining The Relation Between Education, Recidivism &amp; Crime Prevention"
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2026,
+      4,
+      29
+     ]
+    ]
+   },
+   "container-title": [
+    "Reducing Recidivism Reader"
+   ],
+   "is-referenced-by-count": 0,
+   "type": "book-chapter"
+  },
+  {
+   "DOI": "10.21428/cb6ab371.e034df28",
+   "title": [
+    "Is There a Relationship Between Prison Conditions and Recidivism?"
+   ],
+   "author": [
+    {
+     "given": "Esther F.J.C. van",
+     "family": "Ginneken",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Hanneke",
+     "family": "Palmen",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2022,
+      3,
+      4
+     ]
+    ]
+   },
+   "container-title": [
+    "CrimRxiv"
+   ],
+   "is-referenced-by-count": 1,
+   "type": "journal-article"
+  },
+  {
+   "DOI": "10.21428/cb6ab371.9870e4d0",
+   "title": [
+    "Conditions of Contact: Reexamining the Relationship between Prison Visitation and Recidivism"
+   ],
+   "author": [
+    {
+     "given": "Jillian J",
+     "family": "Turanovic",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    },
+    {
+     "given": "Melinda",
+     "family": "Tasca",
+     "sequence": "additional",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2021,
+      7,
+      7
+     ]
+    ]
+   },
+   "container-title": [
+    "CrimRxiv"
+   ],
+   "is-referenced-by-count": 1,
+   "type": "journal-article"
+  },
+  {
+   "DOI": "10.3102/1581418",
+   "title": [
+    "Examining the Effects of Moderating Factors on the Relationship Between Arkansas Correctional Education and Recidivism"
+   ],
+   "author": [
+    {
+     "given": "Kevin",
+     "family": "Roessger",
+     "sequence": "first",
+     "affiliation": [],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2020
+     ]
+    ]
+   },
+   "container-title": [
+    "Proceedings of the 2020 AERA Annual Meeting"
+   ],
+   "is-referenced-by-count": 0,
+   "type": "proceedings-article"
+  },
+  {
+   "DOI": "10.1111/1745-9133.12411",
+   "title": [
+    "The Consequences of Sanctioning Prisoners"
+   ],
+   "author": [
+    {
+     "given": "Thomas H.",
+     "family": "Cohen",
+     "sequence": "first",
+     "affiliation": [
+      {
+       "name": "Administrative Office of the U.S. Courts"
+      }
+     ],
+     "role": [
+      {
+       "vocabulary": "crossref",
+       "role": "author"
+      }
+     ]
+    }
+   ],
+   "issued": {
+    "date-parts": [
+     [
+      2018,
+      11
+     ]
+    ]
+   },
+   "container-title": [
+    "Criminology &amp; Public Policy"
+   ],
+   "is-referenced-by-count": 0,
+   "type": "journal-article"
+  }
+ ]
+}

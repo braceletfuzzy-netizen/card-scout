@@ -1,0 +1,93 @@
+{
+  "artifact": "axis_availability_v1",
+  "built": "2026-11-23",
+  "method": "every count below was read live from the file on 2026-11-23 (scripts: jsonl line-parse; pretty-JSON row-count). No figure is from memory. null = routes-tried-no-capture / not-yet-verified, per the TX/LA honest-null convention.",
+  "scan_inventory_note": "peer_review scans v1-v6 + v11 exist on disk (7 files); scans v7-v10 are NOT present in the build directory — availability table records them honestly as absent, not interpolated.",
+  "peer_review_scans": {
+    "root": "C:/Users/J/Documents/LLM/cardscout-2.0/For You/PolyScout/build/",
+    "scans": [
+      {"id": "v1",  "rows": 25, "yr_span": "1954-2026", "focus": "health-insurance/Medicaid-expansion -> crime (the ACCESS-shackle program evidence)", "quadrant_fit": "Q1 (SHACKLES x ACCESS)", "top_route": "europepmc/crossref-class routes"},
+      {"id": "v2",  "rows": 13, "yr_span": "1992-2026", "focus": "early-childhood + jobs + focused deterrence cost-per-unit (Perry, Abecedarian, Job Corps)", "quadrant_fit": "Q1/Q2 (access-side program costs)", "top_route": "cost_per_unit_where fields present"},
+      {"id": "v3",  "rows": 12, "yr_span": "1991-2026", "focus": "education lane: school spending, value-added, human-capital crime returns", "quadrant_fit": "Q1 (the education-shackle program side)", "top_route": "education_lever fields"},
+      {"id": "v4",  "rows": 14, "yr_span": "1990-2026", "focus": "correctional-education + cognitive-behavioral meta-analyses (in-custody program evidence)", "quadrant_fit": "Q2 (cage-side arc program anchors)", "top_route": "effect_size present in-row"},
+      {"id": "v5",  "rows": 14, "yr_span": "2001-2024", "focus": "family structure / single-mother / unstructured-socializing attachment threads", "quadrant_fit": "Q4 (BONDS program evidence)", "top_route": "abstract+metadata format"},
+      {"id": "v6",  "rows": 23, "yr_span": "1992-2026", "focus": "childcare/EITC/TANF/child-support: maternal-labor-supply + family-wellbeing trade-offs", "quadrant_fit": "Q1/Q4 bridge (care access <-> family bonds)", "top_route": "effect_direction strings, conf: high 3 / med-high 10 / med 4 / low 6"},
+      {"id": "v11", "rows": 36, "yr_span": "1969-2026", "focus": "BONDS threads: place-parks-crime, midnight-basketball, afterschool-causal (+meta), sports-delinquency, unstructured-time-mechanism, skateparks, evening-reporting-centers, GAP row", "quadrant_fit": "Q4 + Q3 (the bonds carriers)", "top_route": "doi-backed, confidence: high 4 / med-high 10 / med 11 / low 10; abstracts loaded for europepmc subset"},
+      {"id": "v7-v10", "rows": null, "yr_span": null, "focus": "NOT FOUND in build dir (glob peer_review_scan_v*.jsonl over Documents/LLM)", "quadrant_fit": null, "top_route": "HONEST-NULL: absent-from-disk, not a placeholder"}
+    ]
+  },
+  "panel_component_files": {
+    "root": "C:/Users/J/Documents/LLM/cardscout-2.0/For You/PolyScout/build/",
+    "files": [
+      {"file": "care_components_v1.jsonl",   "rows": 87,   "grain": "city x care_vintage x murder_year", "cities": 29, "yr_span": "2012-2014 (census COG cogs 2012)", "quadrant_fit": "Q3 primary + Q4 promoted", "notes": "component-grain E32/E52/E61/F32/F52/F61 codes_usd per city — the decomposition's 80x-winning grain"},
+      {"file": "city_component_annual_v1.jsonl", "rows": 2509, "grain": "city-year x lane/component", "cities": 6, "yr_span": "1980-2028", "quadrant_fit": "Q4 primary (deep arc)", "notes": "NYC-heavy (2283 rows); Cincinnati 96, Detroit 52, Denver 33 — the deep history for arc columns"},
+      {"file": "state_mh_series_v2.jsonl",   "rows": 103,  "grain": "state x fiscal_year", "cities": "10 states", "yr_span": "FY2017-2027", "quadrant_fit": "Q2 primary", "notes": "honest-null convention in _method_note (TX/LA null = routes-tried-no-capture); OH 25, TN 11, PA 10 rows"},
+      {"file": "state_mh_series_v1.jsonl",   "rows": 54,   "grain": "state x fiscal_year", "cities": "10 states", "yr_span": "FY2017-2027-class", "quadrant_fit": "Q2 (superseded by v2)", "notes": "v1 retained for provenance"},
+      {"file": "mental_health_series_v1.jsonl", "rows": 181, "grain": "city-year", "cities": 10, "yr_span": "2009-2026", "quadrant_fit": "Q2 + Q1", "notes": "city MH line + SAMHSA grant channel (+0.394 reverse-causation class banked) + suicide_rate"},
+      {"file": "bookings_facility_v1.jsonl", "rows": 1966,  "grain": "facility-year", "cities": "73 facilities", "yr_span": "1990-2026", "quadrant_fit": "Q4 primary (arc machinery)", "notes": "NYC wedge 61,585 -> 23,094; discharges/arrests 0.181 -> 0.089 [banked]"},
+      {"file": "bookings_series_v1.jsonl",   "rows": 91,   "grain": "city-year (jail bookings)", "cities": 9, "yr_span": "2015-2024", "quadrant_fit": "Q4 + Q2 outcome side", "notes": "CDE-API-class city routes"},
+      {"file": "care_arc_extension_v1.jsonl","rows": 24,   "grain": "city-year care+cage", "cities": 5, "yr_span": "1990-2026", "quadrant_fit": "Q2", "notes": "arc spine for care/cage usd"},
+      {"file": "care_arc_extension_v2.jsonl","rows": 12,   "grain": "city-year care+cage", "cities": 3, "yr_span": "2004-2026 (+2 short-year rows)", "quadrant_fit": "Q2", "notes": "Houston 7, Boston 4, Detroit 1"},
+      {"file": "care_cage_wide.jsonl",       "rows": 30,   "grain": "city cross-section", "cities": 15, "yr_span": "1992-2012 COG vintages", "quadrant_fit": "Q3", "notes": "care vs cage totals + ratio"},
+      {"file": "care_cage_wide_b.jsonl",     "rows": 15,   "grain": "city x 3 vintages (2012/2014/2017)", "cities": 15, "yr_span": "2012/2014/2017", "quadrant_fit": "Q3 (mini-arc)", "notes": "3-point within-city arc"},
+      {"file": "full_panel_v1.json",         "rows": 75,   "grain": "city-year", "cities": 8, "yr_span": "1990-2026", "quadrant_fit": "Q2 merge base", "notes": "care, crime_plus, officers, grad, migration, poverty, unemp"},
+      {"file": "triple_slider_v6d.json",     "rows": 100,  "grain": "city-year", "cities": 9, "yr_span": "1980-2027", "quadrant_fit": "Q2/Q3 merge base", "notes": "care_plus x crime_plus x edu_plus, provenance + partial_flag conventions"},
+      {"file": "wide_panel_pairs_v1.json",   "rows": 26,   "grain": "city pair cross-section", "cities": 3, "yr_span": "n/a (care_year/crime_year pairs)", "quadrant_fit": "Q3", "notes": "pair-geometry machinery banked"},
+      {"file": "wide_panel_pairs_v2.json",   "rows": 14,   "grain": "city pair cross-section", "cities": 14, "yr_span": "n/a", "quadrant_fit": "Q3", "notes": "one row per sunbelt city"},
+      {"file": "wide_panel_pairs_v3.json",   "rows": 44,   "grain": "city pair cross-section", "cities": 29, "yr_span": "n/a", "quadrant_fit": "Q3", "notes": "widest pair sweep"},
+      {"file": "crime_wide.jsonl",           "rows": 225,  "grain": "city-year murders", "cities": 15, "yr_span": "2011-2025", "quadrant_fit": "outcome side all quadrants", "notes": "months_reported + honest_gaps conventions"},
+      {"file": "officers_wide.jsonl",        "rows": 225,  "grain": "city-year officers", "cities": 15, "yr_span": "2011-2025", "quadrant_fit": "outcome side (+0.243 reaction class)", "notes": "male/female split"},
+      {"file": "edu_series_v2.jsonl",        "rows": 44,   "grain": "city education-usd", "cities": 9, "yr_span": "n/a (basis-fielded)", "quadrant_fit": "Q1 education-shackle side + Q3", "notes": "city_contribution_usd + per-capita est"},
+      {"file": "oh_county_mh_v1.jsonl",      "rows": 705,  "grain": "OH county x fiscal_year x department", "cities": "OH counties (FIPS-joinable)", "yr_span": "fiscal_year-fielded (multi-year)", "quadrant_fit": "Q2 county-mh grain", "notes": "mh_usd_per_100k, capital/subsidy splits, county FIPS joinable"}
+    ]
+  },
+  "axis_availability_matrix": {
+    "_legend": "rows = countable families; columns = quadrants; values = banked-rows / status. status: BANKED (rows on disk, provenance header present) | NULL (honest-null, route absent/unverified) | PIVOT (derivable from existing file)",
+    "Q1_SHACKLES_x_ACCESS": {
+      "providers_per_capita":      {"rows": 0, "status": "NULL", "route": "HRSA HPSA-class [named only, G3]"},
+      "insurance_coverage_pct":    {"rows": 0, "status": "NULL", "route": "ACS HIC [named only]"},
+      "transit_reachability":      {"rows": 0, "status": "NULL", "route": "MATA-class feeds [named only]"},
+      "medical_debt_per_zip":      {"rows": 0, "status": "NULL", "route": "CFPB-class [named, G1]"},
+      "student_debt_per_county":   {"rows": 0, "status": "NULL", "route": "NY-Fed-class [named, G1]"},
+      "insurance_to_crime_EVIDENCE": {"rows": 25, "status": "BANKED", "route": "peer_review_scan_v1.jsonl (program evidence, not panel data)"},
+      "education_cost_EVIDENCE":   {"rows": 12, "status": "BANKED", "route": "peer_review_scan_v3.jsonl"},
+      "education_usd_panel":       {"rows": 44, "status": "BANKED", "route": "edu_series_v2.jsonl (9 cities)"},
+      "care_usd_cross_section":    {"rows": 30, "status": "BANKED", "route": "care_cage_wide.jsonl (15 cities)"}
+    },
+    "Q2_SHACKLES_x_TIME-ARC": {
+      "state_mh_budget_arc":       {"rows": 103, "status": "BANKED", "route": "state_mh_series_v2.jsonl FY2017-2027, 10 states"},
+      "city_mh_line_arc":          {"rows": 181, "status": "BANKED", "route": "mental_health_series_v1.jsonl 2009-2026, 10 cities + suicide_rate"},
+      "oh_county_mh_arc":          {"rows": 705, "status": "BANKED", "route": "oh_county_mh_v1.jsonl county-FIPS grain"},
+      "care_cage_arc":             {"rows": 36,  "status": "BANKED", "route": "care_arc_extension_v1+v2 1990-2026 (5+3 cities)"},
+      "debt_arc":                  {"rows": 0,   "status": "NULL",  "route": "household-debt time-series (CFPB/NY-Fed) [named only, G1]"},
+      "corrections_program_EVIDENCE": {"rows": 14, "status": "BANKED", "route": "peer_review_scan_v4.jsonl (cage-side programs)"},
+      "care_full_panel_arc":       {"rows": 75,  "status": "BANKED", "route": "full_panel_v1.json 1990-2026"}
+    },
+    "Q3_BONDS_x_ACCESS": {
+      "libraries_parks_stock":     {"rows": 87,  "status": "BANKED-THIN", "route": "care_components_v1.jsonl E/F codes at 2012/2014 vintages only"},
+      "component_per_capita_wide": {"rows": 84,  "status": "BANKED", "route": "wide_panel_pairs_v1-v3.json (84 rows, 29 cities)"},
+      "civic_org_density":         {"rows": 0,   "status": "NULL",  "route": "civic-org route TBD [G2 gap]"},
+      "three_vintage_arc":         {"rows": 15,  "status": "PIVOT",  "route": "care_cage_wide_b.jsonl 2012/2014/2017 mini-arc"},
+      "family_bonds_EVIDENCE":     {"rows": 14,  "status": "BANKED", "route": "peer_review_scan_v5.jsonl"}
+    },
+    "Q4_BONDS_x_TIME-ARC": {
+      "bookings_facility_arc":     {"rows": 1966, "status": "BANKED", "route": "bookings_facility_v1.jsonl 1990-2026, 73 facilities"},
+      "city_bookings_arc":         {"rows": 91,  "status": "BANKED", "route": "bookings_series_v1.jsonl 2015-2024, 9 cities"},
+      "deep_component_arc":        {"rows": 2509, "status": "BANKED", "route": "city_component_annual_v1.jsonl 1980-2028, 6 cities (NYC-heavy)"},
+      "bonds_peer_EVIDENCE":       {"rows": 36,  "status": "BANKED", "route": "peer_review_scan_v11.jsonl (parks/afterschool/sports/unstructured-time threads)"},
+      "childcare_family_EVIDENCE": {"rows": 23,  "status": "BANKED", "route": "peer_review_scan_v6.jsonl (EITC/TANF/childcare trade-offs)"},
+      "pair_columns":              {"rows": 84,  "status": "PIVOT",  "route": "wide_panel_pairs machinery carries pair-columns (parks x health etc. banked)"}
+    }
+  },
+  "scan_version_coverage": {"present": ["v1","v2","v3","v4","v5","v6","v11"], "absent": ["v7","v8","v9","v10"], "note": "v7-v10 absent from disk = honest-null; nothing about them is inferred"},
+  "headline_counts": {
+    "peer_review_scan_rows_total_banked": 137,
+    "scan_files_present": 7,
+    "scan_versions_absent": 4,
+    "panel_rows_total_banked": 6225,
+    "panel_rows_by_quadrant": {"Q1": 111, "Q2": 1114, "Q3": 200, "Q4": 4625},
+    "largest_single_file": "city_component_annual_v1.jsonl (2,509 rows) -> Q4",
+    "null_routes_total": 6,
+    "null_routes_by_quadrant": {"Q1": 5, "Q2": 1, "Q3": 1, "Q4": 0}
+  }
+}

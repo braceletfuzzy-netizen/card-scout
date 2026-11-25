@@ -1,0 +1,756 @@
+{
+ "_record": "smha_funding_null_v1",
+ "built": "2026-11-23",
+ "built_by": "PULL-LANE-5 subagent (smha-spend-null; lanes rank-15 'smha-spend-null' + rank-5 'funding-not-beds' adjacent from policy_associations_v1 best-15)",
+ "laws": [
+  "direction-class only, no causal claims",
+  "honest-null = routes-tried-no-capture, never a placeholder",
+  "reverse-causation guard: state spend may FOLLOW need (money-follows-crisis) \u2014 spend rank is not exogenous",
+  "format-lock: Mann-Whitney U per anchor paper's own test"
+ ],
+ "anchor": {
+  "paper": "Ledbetter & Manderscheid, 'Client-Level Effects of States' Mental Health Agency Expenditures and Mental Health Parity Legislation', Psychiatr Serv 2026 (ahead of print), PMID 42750086, doi 10.1176/appi.ps.20260087",
+  "design_replicated": "top-10 vs bottom-10 states by per-capita SMHA expenditure; Mann-Whitney U on 5 outcome classes",
+  "anchor_findings": "few significant differences; only cost-related barriers significant; treatment receipt/unmet need/overdose/suicide n.s. (directional trends toward high-spend)"
+ },
+ "exposure_side": {
+  "source": "NRI 2024-2025 State Profiles, 'State Mental Health Agency Expenditures and Funding Sources, FY2024', Table 1 + Table 3",
+  "url": "https://www.nri-inc.org/media/wlrfyxyi/smha-expenditures-and-funding-fy2024.pdf",
+  "grain": "state x FY2024: total SMHA-controlled expenditures USD + per-capita + civilian population (52 jurisdictions incl DC + PR)",
+  "n_jurisdictions": 52,
+  "internal_consistency_check": "per_capita x population matched total expenditures in all 52 rows (max rel error < 0.00007)",
+  "top10": [
+   {
+    "state": "Oregon",
+    "per_capita_usd": 640.8
+   },
+   {
+    "state": "Vermont",
+    "per_capita_usd": 463.17
+   },
+   {
+    "state": "New York",
+    "per_capita_usd": 430.14
+   },
+   {
+    "state": "Pennsylvania",
+    "per_capita_usd": 410.63
+   },
+   {
+    "state": "Iowa",
+    "per_capita_usd": 401.7
+   },
+   {
+    "state": "District of Columbia",
+    "per_capita_usd": 384.55
+   },
+   {
+    "state": "Minnesota",
+    "per_capita_usd": 350.17
+   },
+   {
+    "state": "Connecticut",
+    "per_capita_usd": 320.84
+   },
+   {
+    "state": "Montana",
+    "per_capita_usd": 319.3
+   },
+   {
+    "state": "Alaska",
+    "per_capita_usd": 303.73
+   }
+  ],
+  "bottom10": [
+   {
+    "state": "Idaho",
+    "per_capita_usd": 61.38
+   },
+   {
+    "state": "Wyoming",
+    "per_capita_usd": 61.0
+   },
+   {
+    "state": "Kentucky",
+    "per_capita_usd": 60.09
+   },
+   {
+    "state": "Florida",
+    "per_capita_usd": 52.34
+   },
+   {
+    "state": "Texas",
+    "per_capita_usd": 52.34
+   },
+   {
+    "state": "Arizona",
+    "per_capita_usd": 45.37
+   },
+   {
+    "state": "Nevada",
+    "per_capita_usd": 42.62
+   },
+   {
+    "state": "Arkansas",
+    "per_capita_usd": 38.95
+   },
+   {
+    "state": "Michigan",
+    "per_capita_usd": 34.22
+   },
+   {
+    "state": "Puerto Rico",
+    "per_capita_usd": 31.76
+   }
+  ],
+  "pull_status": "REAL OBSERVED (PDF text-parsed rows cross-checked against ranks printed in-table)",
+  "table3_setting_split": "also parsed: state-hospital vs community per-capita split per state (e.g., NY $105.53 hospital / $308.36 community; MI $33.42/$0.69; OR $110.23/$524.32)"
+ },
+ "outcome_side": {
+  "dataset": "CDC 'Mapping Injury, Overdose, and Violence \u2014 State' (same family as banked psx4-wq38 county file)",
+  "url": "https://data.cdc.gov/resource/fpsi-y8tj.json",
+  "grain": "state x year 2019-2024 x {All_Suicide, All_Homicide, Drug_OD, firearm subtypes}; rates per 100k; 51 jurisdictions",
+  "rows_pulled": 2142,
+  "pull_status": "REAL OBSERVED",
+  "honest_nulls": [
+   "BRFSS cost-barriers-to-care route: probed data.cdc.gov 5eh7-pjx8 BRFSS MH indicators \u2014 questions available cover poor-MH-days/depression/social-isolation/life-satisfaction only; the anchor's cost-related-barrier question is NOT in the keyless Socrata layer -> outcome #1 runs as honest-null (routes-tried)",
+   "parity-stratification arm: comprehensive-vs-limited parity state list lives behind NRI/parity-report paywall this pass -> stratification #2 runs as honest-null"
+  ]
+ },
+ "tests": {
+  "mannwhitney_top10_vs_bottom10": {
+   "n_strata": "10 vs 10 (DC & PR included as jurisdictions per NRI table; both arms n=10 each before outcome gaps)",
+   "cells": [
+    {
+     "intent": "All_Suicide",
+     "year": 2019,
+     "top10_median": 16.82,
+     "bot10_median": 18.82,
+     "n_top": 10,
+     "n_bot": 9,
+     "mannwhitney_u": 34.5,
+     "p_value": 0.414,
+     "significant_0.05": false
+    },
+    {
+     "intent": "All_Suicide",
+     "year": 2020,
+     "top10_median": 16.09,
+     "bot10_median": 19.1,
+     "n_top": 10,
+     "n_bot": 9,
+     "mannwhitney_u": 30.0,
+     "p_value": 0.2364,
+     "significant_0.05": false
+    },
+    {
+     "intent": "All_Suicide",
+     "year": 2021,
+     "top10_median": 17.65,
+     "bot10_median": 19.8,
+     "n_top": 10,
+     "n_bot": 9,
+     "mannwhitney_u": 34.0,
+     "p_value": 0.3911,
+     "significant_0.05": false
+    },
+    {
+     "intent": "All_Suicide",
+     "year": 2022,
+     "top10_median": 17.23,
+     "bot10_median": 19.39,
+     "n_top": 10,
+     "n_bot": 9,
+     "mannwhitney_u": 36.5,
+     "p_value": 0.5134,
+     "significant_0.05": false
+    },
+    {
+     "intent": "All_Suicide",
+     "year": 2023,
+     "top10_median": 16.55,
+     "bot10_median": 19.58,
+     "n_top": 10,
+     "n_bot": 9,
+     "mannwhitney_u": 31.5,
+     "p_value": 0.2883,
+     "significant_0.05": false
+    },
+    {
+     "intent": "All_Suicide",
+     "year": 2024,
+     "top10_median": 16.86,
+     "bot10_median": 19.53,
+     "n_top": 10,
+     "n_bot": 9,
+     "mannwhitney_u": 30.5,
+     "p_value": 0.2528,
+     "significant_0.05": false
+    },
+    {
+     "intent": "All_Homicide",
+     "year": 2019,
+     "top10_median": 5.9,
+     "bot10_median": 5.5,
+     "n_top": 10,
+     "n_bot": 9,
+     "mannwhitney_u": 28.5,
+     "p_value": 0.191,
+     "significant_0.05": false
+    },
+    {
+     "intent": "All_Homicide",
+     "year": 2020,
+     "top10_median": 7.03,
+     "bot10_median": 7.22,
+     "n_top": 10,
+     "n_bot": 9,
+     "mannwhitney_u": 27.5,
+     "p_value": 0.1649,
+     "significant_0.05": false
+    },
+    {
+     "intent": "All_Homicide",
+     "year": 2021,
+     "top10_median": 7.5,
+     "bot10_median": 7.14,
+     "n_top": 10,
+     "n_bot": 9,
+     "mannwhitney_u": 30.5,
+     "p_value": 0.2528,
+     "significant_0.05": false
+    },
+    {
+     "intent": "All_Homicide",
+     "year": 2022,
+     "top10_median": 7.15,
+     "bot10_median": 6.98,
+     "n_top": 10,
+     "n_bot": 9,
+     "mannwhitney_u": 36.0,
+     "p_value": 0.4873,
+     "significant_0.05": false
+    },
+    {
+     "intent": "All_Homicide",
+     "year": 2023,
+     "top10_median": 7.78,
+     "bot10_median": 6.42,
+     "n_top": 10,
+     "n_bot": 9,
+     "mannwhitney_u": 36.5,
+     "p_value": 0.5125,
+     "significant_0.05": false
+    },
+    {
+     "intent": "All_Homicide",
+     "year": 2024,
+     "top10_median": 6.26,
+     "bot10_median": 5.7,
+     "n_top": 10,
+     "n_bot": 9,
+     "mannwhitney_u": 27.0,
+     "p_value": 0.1527,
+     "significant_0.05": false
+    },
+    {
+     "intent": "Drug_OD",
+     "year": 2019,
+     "top10_median": 20.44,
+     "bot10_median": 18.1,
+     "n_top": 10,
+     "n_bot": 9,
+     "mannwhitney_u": 47.0,
+     "p_value": 0.9025,
+     "significant_0.05": false
+    },
+    {
+     "intent": "Drug_OD",
+     "year": 2020,
+     "top10_median": 26.59,
+     "bot10_median": 24.42,
+     "n_top": 10,
+     "n_bot": 9,
+     "mannwhitney_u": 47.0,
+     "p_value": 0.9025,
+     "significant_0.05": false
+    },
+    {
+     "intent": "Drug_OD",
+     "year": 2021,
+     "top10_median": 32.29,
+     "bot10_median": 27.64,
+     "n_top": 10,
+     "n_bot": 9,
+     "mannwhitney_u": 53.0,
+     "p_value": 0.5403,
+     "significant_0.05": false
+    },
+    {
+     "intent": "Drug_OD",
+     "year": 2022,
+     "top10_median": 32.93,
+     "bot10_median": 27.28,
+     "n_top": 10,
+     "n_bot": 9,
+     "mannwhitney_u": 58.0,
+     "p_value": 0.3072,
+     "significant_0.05": false
+    },
+    {
+     "intent": "Drug_OD",
+     "year": 2023,
+     "top10_median": 33.61,
+     "bot10_median": 27.12,
+     "n_top": 10,
+     "n_bot": 9,
+     "mannwhitney_u": 58.0,
+     "p_value": 0.3072,
+     "significant_0.05": false
+    },
+    {
+     "intent": "Drug_OD",
+     "year": 2024,
+     "top10_median": 26.61,
+     "bot10_median": 22.07,
+     "n_top": 10,
+     "n_bot": 9,
+     "mannwhitney_u": 54.0,
+     "p_value": 0.4877,
+     "significant_0.05": false
+    }
+   ],
+   "verdict": [
+    "18 of 18 test cells non-significant at p<0.05 (suicide 2019-2024; homicide 2019-2024; overdose 2019-2024)",
+    "SUICIDE runs OPPOSITE the naive direction: bottom-10-spend states have HIGHER suicide rates in all 6 years (top median ~16.6-17.6 vs bottom ~18.8-19.8, p=0.24-0.51) \u2014 directional-but-nonsig, matching the anchor's 'no significant differences' verdict",
+    "HOMICIDE: top-10 slightly higher in 5/6 years (p=0.15-0.51) \u2014 none significant",
+    "OVERDOSE: top-10 higher in all 6 years (up to +6.5/100k absolute; p=0.31-0.90) \u2014 the OD crisis is driven by the fentanyl supply wave, not SMHA-spend rank"
+   ],
+   "confidence": "high (REAL OBSERVED both sides, anchor-faithful test)"
+  },
+  "funding_not_beds_adjacent_check": {
+   "question": "does per-capita SMHA spend buy state-psychiatric beds (the rank-4/5 bridge)?",
+   "evidence": "NRI Table 3 state-hospital per-capita: NY $105.53 with 23 state psychiatric hospitals (max in nation) vs Iowa $14.68 (2.1 patients per 100k \u2014 the LOWEST in the nation per NRI Figure 1) \u2014 spend rank does not monotonic-map to hospital-capacity rank (Iowa is low on both, NY high on both, but MI $33.42 hospital per-capita at 97.7% share vs CA $60.13 at 26.4% within states of similar totals)",
+   "verdict": "direction-class: funding-to-beds is mediated by state organization choice (13 states run hospitals outside the SMHA entirely per NRI) \u2014 replicates rank-5's funding-not-beds NULL class at the spend-to-hospital-share margin"
+  }
+ },
+ "state_exposure_rows": [
+  {
+   "state": "Alabama",
+   "total_smha_expenditures_usd": 685168334,
+   "total_rank": 24,
+   "per_capita_expenditures_usd": 133.15,
+   "percap_rank": 30,
+   "civilian_population": 5146020
+  },
+  {
+   "state": "Alaska",
+   "total_smha_expenditures_usd": 218242493,
+   "total_rank": 43,
+   "per_capita_expenditures_usd": 303.73,
+   "percap_rank": 10,
+   "civilian_population": 718543
+  },
+  {
+   "state": "Arizona",
+   "total_smha_expenditures_usd": 343228173,
+   "total_rank": 35,
+   "per_capita_expenditures_usd": 45.37,
+   "percap_rank": 48,
+   "civilian_population": 7565095
+  },
+  {
+   "state": "Arkansas",
+   "total_smha_expenditures_usd": 120146773,
+   "total_rank": 49,
+   "per_capita_expenditures_usd": 38.95,
+   "percap_rank": 50,
+   "civilian_population": 3084635
+  },
+  {
+   "state": "California",
+   "total_smha_expenditures_usd": 8957042513,
+   "total_rank": 1,
+   "per_capita_expenditures_usd": 227.93,
+   "percap_rank": 17,
+   "civilian_population": 39297676
+  },
+  {
+   "state": "Colorado",
+   "total_smha_expenditures_usd": 395418103,
+   "total_rank": 30,
+   "per_capita_expenditures_usd": 66.76,
+   "percap_rank": 42,
+   "civilian_population": 5922969
+  },
+  {
+   "state": "Connecticut",
+   "total_smha_expenditures_usd": 1177519363,
+   "total_rank": 16,
+   "per_capita_expenditures_usd": 320.84,
+   "percap_rank": 8,
+   "civilian_population": 3670099
+  },
+  {
+   "state": "Delaware",
+   "total_smha_expenditures_usd": 169330573,
+   "total_rank": 44,
+   "per_capita_expenditures_usd": 161.49,
+   "percap_rank": 26,
+   "civilian_population": 1048534
+  },
+  {
+   "state": "District of Columbia",
+   "total_smha_expenditures_usd": 268842946,
+   "total_rank": 39,
+   "per_capita_expenditures_usd": 384.55,
+   "percap_rank": 6,
+   "civilian_population": 699116
+  },
+  {
+   "state": "Florida",
+   "total_smha_expenditures_usd": 1220080167,
+   "total_rank": 14,
+   "per_capita_expenditures_usd": 52.34,
+   "percap_rank": 47,
+   "civilian_population": 23310846
+  },
+  {
+   "state": "Georgia",
+   "total_smha_expenditures_usd": 1000980839,
+   "total_rank": 20,
+   "per_capita_expenditures_usd": 89.97,
+   "percap_rank": 40,
+   "civilian_population": 11125586
+  },
+  {
+   "state": "Hawaii",
+   "total_smha_expenditures_usd": 234516819,
+   "total_rank": 42,
+   "per_capita_expenditures_usd": 166.77,
+   "percap_rank": 25,
+   "civilian_population": 1406187
+  },
+  {
+   "state": "Idaho",
+   "total_smha_expenditures_usd": 122655674,
+   "total_rank": 47,
+   "per_capita_expenditures_usd": 61.38,
+   "percap_rank": 43,
+   "civilian_population": 1998196
+  },
+  {
+   "state": "Illinois",
+   "total_smha_expenditures_usd": 1128110403,
+   "total_rank": 17,
+   "per_capita_expenditures_usd": 88.87,
+   "percap_rank": 41,
+   "civilian_population": 12693926
+  },
+  {
+   "state": "Indiana",
+   "total_smha_expenditures_usd": 756835315,
+   "total_rank": 23,
+   "per_capita_expenditures_usd": 109.32,
+   "percap_rank": 35,
+   "civilian_population": 6923251
+  },
+  {
+   "state": "Iowa",
+   "total_smha_expenditures_usd": 1302020737,
+   "total_rank": 13,
+   "per_capita_expenditures_usd": 401.7,
+   "percap_rank": 5,
+   "civilian_population": 3241257
+  },
+  {
+   "state": "Kansas",
+   "total_smha_expenditures_usd": 769917107,
+   "total_rank": 22,
+   "per_capita_expenditures_usd": 260.96,
+   "percap_rank": 14,
+   "civilian_population": 2950274
+  },
+  {
+   "state": "Kentucky",
+   "total_smha_expenditures_usd": 274759334,
+   "total_rank": 37,
+   "per_capita_expenditures_usd": 60.09,
+   "percap_rank": 45,
+   "civilian_population": 4572233
+  },
+  {
+   "state": "Louisiana",
+   "total_smha_expenditures_usd": 999294126,
+   "total_rank": 21,
+   "per_capita_expenditures_usd": 218.04,
+   "percap_rank": 18,
+   "civilian_population": 4583145
+  },
+  {
+   "state": "Maine",
+   "total_smha_expenditures_usd": 252688364,
+   "total_rank": 41,
+   "per_capita_expenditures_usd": 179.96,
+   "percap_rank": 21,
+   "civilian_population": 1404172
+  },
+  {
+   "state": "Maryland",
+   "total_smha_expenditures_usd": 644198292,
+   "total_rank": 25,
+   "per_capita_expenditures_usd": 103.34,
+   "percap_rank": 37,
+   "civilian_population": 6233607
+  },
+  {
+   "state": "Massachusetts",
+   "total_smha_expenditures_usd": 1194840781,
+   "total_rank": 15,
+   "per_capita_expenditures_usd": 167.51,
+   "percap_rank": 24,
+   "civilian_population": 7132747
+  },
+  {
+   "state": "Michigan",
+   "total_smha_expenditures_usd": 346966330,
+   "total_rank": 34,
+   "per_capita_expenditures_usd": 34.22,
+   "percap_rank": 51,
+   "civilian_population": 10138576
+  },
+  {
+   "state": "Minnesota",
+   "total_smha_expenditures_usd": 2028367852,
+   "total_rank": 8,
+   "per_capita_expenditures_usd": 350.17,
+   "percap_rank": 7,
+   "civilian_population": 5792546
+  },
+  {
+   "state": "Mississippi",
+   "total_smha_expenditures_usd": 269269587,
+   "total_rank": 38,
+   "per_capita_expenditures_usd": 91.83,
+   "percap_rank": 39,
+   "civilian_population": 2932371
+  },
+  {
+   "state": "Missouri",
+   "total_smha_expenditures_usd": 1070176020,
+   "total_rank": 19,
+   "per_capita_expenditures_usd": 171.78,
+   "percap_rank": 23,
+   "civilian_population": 6230103
+  },
+  {
+   "state": "Montana",
+   "total_smha_expenditures_usd": 362048419,
+   "total_rank": 32,
+   "per_capita_expenditures_usd": 319.3,
+   "percap_rank": 9,
+   "civilian_population": 1133895
+  },
+  {
+   "state": "Nebraska",
+   "total_smha_expenditures_usd": 355892675,
+   "total_rank": 33,
+   "per_capita_expenditures_usd": 178.02,
+   "percap_rank": 22,
+   "civilian_population": 1999174
+  },
+  {
+   "state": "Nevada",
+   "total_smha_expenditures_usd": 138756809,
+   "total_rank": 46,
+   "per_capita_expenditures_usd": 42.62,
+   "percap_rank": 49,
+   "civilian_population": 3255772
+  },
+  {
+   "state": "New Hampshire",
+   "total_smha_expenditures_usd": 397344557,
+   "total_rank": 29,
+   "per_capita_expenditures_usd": 282.1,
+   "percap_rank": 11,
+   "civilian_population": 1408510
+  },
+  {
+   "state": "New Jersey",
+   "total_smha_expenditures_usd": 2265153024,
+   "total_rank": 6,
+   "per_capita_expenditures_usd": 238.6,
+   "percap_rank": 16,
+   "civilian_population": 9493352
+  },
+  {
+   "state": "New Mexico",
+   "total_smha_expenditures_usd": 424082497,
+   "total_rank": 28,
+   "per_capita_expenditures_usd": 200.33,
+   "percap_rank": 19,
+   "civilian_population": 2116914
+  },
+  {
+   "state": "New York",
+   "total_smha_expenditures_usd": 8537391040,
+   "total_rank": 2,
+   "per_capita_expenditures_usd": 430.14,
+   "percap_rank": 3,
+   "civilian_population": 19847942
+  },
+  {
+   "state": "North Carolina",
+   "total_smha_expenditures_usd": 1385256571,
+   "total_rank": 11,
+   "per_capita_expenditures_usd": 126.51,
+   "percap_rank": 33,
+   "civilian_population": 10949942
+  },
+  {
+   "state": "North Dakota",
+   "total_smha_expenditures_usd": 146425519,
+   "total_rank": 45,
+   "per_capita_expenditures_usd": 185.47,
+   "percap_rank": 20,
+   "civilian_population": 789463
+  },
+  {
+   "state": "Ohio",
+   "total_smha_expenditures_usd": 2990922464,
+   "total_rank": 4,
+   "per_capita_expenditures_usd": 251.83,
+   "percap_rank": 15,
+   "civilian_population": 11876876
+  },
+  {
+   "state": "Oklahoma",
+   "total_smha_expenditures_usd": 522996858,
+   "total_rank": 27,
+   "per_capita_expenditures_usd": 128.3,
+   "percap_rank": 32,
+   "civilian_population": 4076488
+  },
+  {
+   "state": "Oregon",
+   "total_smha_expenditures_usd": 2736819102,
+   "total_rank": 5,
+   "per_capita_expenditures_usd": 640.8,
+   "percap_rank": 1,
+   "civilian_population": 4270922
+  },
+  {
+   "state": "Pennsylvania",
+   "total_smha_expenditures_usd": 5369395205,
+   "total_rank": 3,
+   "per_capita_expenditures_usd": 410.63,
+   "percap_rank": 4,
+   "civilian_population": 13075943
+  },
+  {
+   "state": "Puerto Rico",
+   "total_smha_expenditures_usd": 103794325,
+   "total_rank": 51,
+   "per_capita_expenditures_usd": 31.76,
+   "percap_rank": 52,
+   "civilian_population": 3268000
+  },
+  {
+   "state": "Rhode Island",
+   "total_smha_expenditures_usd": 112039792,
+   "total_rank": 50,
+   "per_capita_expenditures_usd": 101.09,
+   "percap_rank": 38,
+   "civilian_population": 1108283
+  },
+  {
+   "state": "South Carolina",
+   "total_smha_expenditures_usd": 616859372,
+   "total_rank": 26,
+   "per_capita_expenditures_usd": 113.36,
+   "percap_rank": 34,
+   "civilian_population": 5441738
+  },
+  {
+   "state": "South Dakota",
+   "total_smha_expenditures_usd": 120691568,
+   "total_rank": 48,
+   "per_capita_expenditures_usd": 130.98,
+   "percap_rank": 31,
+   "civilian_population": 921481
+  },
+  {
+   "state": "Tennessee",
+   "total_smha_expenditures_usd": 1091639407,
+   "total_rank": 18,
+   "per_capita_expenditures_usd": 151.46,
+   "percap_rank": 28,
+   "civilian_population": 7207513
+  },
+  {
+   "state": "Texas",
+   "total_smha_expenditures_usd": 1631963339,
+   "total_rank": 10,
+   "per_capita_expenditures_usd": 52.34,
+   "percap_rank": 46,
+   "civilian_population": 31179223
+  },
+  {
+   "state": "Utah",
+   "total_smha_expenditures_usd": 363950295,
+   "total_rank": 31,
+   "per_capita_expenditures_usd": 104.01,
+   "percap_rank": 36,
+   "civilian_population": 3499189
+  },
+  {
+   "state": "Vermont",
+   "total_smha_expenditures_usd": 300300348,
+   "total_rank": 36,
+   "per_capita_expenditures_usd": 463.17,
+   "percap_rank": 2,
+   "civilian_population": 648358
+  },
+  {
+   "state": "Virginia",
+   "total_smha_expenditures_usd": 1372187618,
+   "total_rank": 12,
+   "per_capita_expenditures_usd": 157.53,
+   "percap_rank": 27,
+   "civilian_population": 8710778
+  },
+  {
+   "state": "Washington",
+   "total_smha_expenditures_usd": 2154786472,
+   "total_rank": 7,
+   "per_capita_expenditures_usd": 272.41,
+   "percap_rank": 13,
+   "civilian_population": 7910036
+  },
+  {
+   "state": "West Virginia",
+   "total_smha_expenditures_usd": 266996226,
+   "total_rank": 40,
+   "per_capita_expenditures_usd": 150.86,
+   "percap_rank": 29,
+   "civilian_population": 1769795
+  },
+  {
+   "state": "Wisconsin",
+   "total_smha_expenditures_usd": 1644378662,
+   "total_rank": 9,
+   "per_capita_expenditures_usd": 275.91,
+   "percap_rank": 12,
+   "civilian_population": 5959809
+  },
+  {
+   "state": "Wyoming",
+   "total_smha_expenditures_usd": 35699579,
+   "total_rank": 52,
+   "per_capita_expenditures_usd": 61.0,
+   "percap_rank": 44,
+   "civilian_population": 585264
+  }
+ ],
+ "note_congregation": "both the anchor (client-level) and this replication (mortality-level) fail to find spend->outcome significance: the rank-15 read 'spend alone does not reach the point of service' is REPLICATED at the aggregate mortality margin"
+}

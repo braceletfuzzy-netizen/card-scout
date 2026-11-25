@@ -1,0 +1,148 @@
+{
+ "_record": "infrastructure_lane_v1 (output-vector v2, family D: water / bridges / 311-backlog)",
+ "sdwa": {
+  "systems": {
+   "Cincinnati": "OH3102612 (Cincinnati Public Water System, pop 800k; OH3100411 Miller inactive-I)",
+   "Denver": "CO0116001 (Denver Water Board, pop 1.287M)",
+   "Detroit": "MI0001800 (City of Detroit, pop 633k)",
+   "Memphis": "TN0000450 (MLGW, pop 659.5k)",
+   "New York": "NY7003493 (NYC System, pop 8.27M)",
+   "St. Louis": "MO6010715 (St Louis City PWS, pop 304.7k)"
+  },
+  "route": "https://data.epa.gov/efservice/Violation/PWSID/{id}/JSON (keyless, live Nov-25)",
+  "counts": {
+   "Cincinnati": {
+    "violations_total_10yr_file": 0,
+    "health_based": 0,
+    "by_begin_year": {}
+   },
+   "Denver": {
+    "violations_total_10yr_file": 128,
+    "health_based": 0,
+    "by_begin_year": {
+     "2014": 93,
+     "2019": 1,
+     "2022": 1,
+     "2023": 31,
+     "2024": 2
+    }
+   },
+   "Detroit": {
+    "violations_total_10yr_file": 1,
+    "health_based": 0,
+    "by_begin_year": {
+     "2020": 1
+    }
+   },
+   "Memphis": {
+    "violations_total_10yr_file": 1,
+    "health_based": 0,
+    "by_begin_year": {
+     "2008": 1
+    }
+   },
+   "New York": {
+    "violations_total_10yr_file": 10,
+    "health_based": 1,
+    "by_begin_year": {
+     "1998": 2,
+     "1999": 2,
+     "2000": 1,
+     "2001": 1,
+     "2002": 1,
+     "2003": 1,
+     "2004": 1,
+     "2017": 1
+    }
+   },
+   "St. Louis": {
+    "violations_total_10yr_file": 18,
+    "health_based": 0,
+    "by_begin_year": {
+     "2022": 16,
+     "2025": 2
+    }
+   }
+  }
+ },
+ "sdwa_read": "near-zero counts at the municipal-grain: five of six systems carry < 20 violations in the file window (Cincinnati 0, Detroit 1, Memphis 1, NYC 10, St. Louis 18; Denver's 128 = ALL 'MR' monitoring/reporting class, rule codes 320/122/340); ONE health-based-ind violation across all six (NYC 2017 TT treatment-technique, contaminant 0800). No city-year panel can be fit at this signal size -> honest-null for the SDWA output-fit, route banked.",
+ "bridges": {
+  "grain": "city lat/lon-box (FHWA NBI 2025 JSON, BL05/BL06 in city bounds)",
+  "counts": {
+   "St. Louis": {
+    "bridges_box": 280,
+    "poor": 23,
+    "poor_share": 0.082
+   },
+   "Cincinnati": {
+    "bridges_box": 308,
+    "poor": 7,
+    "poor_share": 0.023
+   },
+   "Detroit": {
+    "bridges_box": 379,
+    "poor": 28,
+    "poor_share": 0.074
+   },
+   "Memphis": {
+    "bridges_box": 535,
+    "poor": 44,
+    "poor_share": 0.082
+   },
+   "Denver": {
+    "bridges_box": 618,
+    "poor": 36,
+    "poor_share": 0.058
+   },
+   "New York": {
+    "bridges_box": 1200,
+    "poor": 113,
+    "poor_share": 0.094
+   }
+  },
+  "route": "https://www.fhwa.dot.gov/bridge/nbi/2025/JSON/{ST}25.json (keyless, live)",
+  "verdict": "REAL VARIANCE across cities (poor share 0.023-0.094) \u2014 one cross-section (n=6), fit NOT attempted (law: direction-class needs city-year panel); banked for the v2 deeper pull (2020-2024 archives for the arc)."
+ },
+ "calls_311": {
+  "grain": "banked gray_safety_lane panel (97 city-years, 6 cities)",
+  "paired_care_rows": 37,
+  "within_city_spearman_care_to_calls_per1k": [
+   {
+    "city": "Cincinnati",
+    "n": 12,
+    "rho": 0.636,
+    "p": 0.026
+   },
+   {
+    "city": "Detroit",
+    "n": 6,
+    "rho": 0.257,
+    "p": 0.623
+   },
+   {
+    "city": "Memphis",
+    "n": 6,
+    "rho": 0.771,
+    "p": 0.072
+   },
+   {
+    "city": "NYC",
+    "n": 6,
+    "rho": 0.829,
+    "p": 0.042
+   },
+   {
+    "city": "St. Louis",
+    "n": 7,
+    "rho": 0.821,
+    "p": 0.023
+   }
+  ],
+  "verdict": "explanatory read only (n tiny per city); the calls lane is BANKED and direction-fit-ready at n=97 when inputs are deepened (v2)"
+ },
+ "honest_nulls": [
+  "SDWA output-fit: signal too thin (0 health-based violations across 6 systems) \u2014 route banked: data.epa.gov/efservice/Violation/PWSID/{pwsid}/JSON",
+  "Bridges fit: single cross-section (NBI 2025) \u2014 2020-2024 archives exist at fhwa.dot.gov/bridge/nbi/ascii.cfm for the v2 arc; city-box grain noted (owner agencies mix inside boxes, e.g. NYSDOT 84000 codes in NYC)",
+  "311 fit: inputs (care_per_100k) banked for only 18 of 97 call-years \u2014 honest-null on the fit, lane stays ready"
+ ]
+}

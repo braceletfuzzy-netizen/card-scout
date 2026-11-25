@@ -1,0 +1,255 @@
+{
+ "_record": "economy_output_fit_v1 (output-vector v2, family A: panel inputs -> LAUS annual unemployment rate, direction-class)",
+ "outcome_source": "_econ_pulls_v1.json laus_unemployment_rate - FRED fredgraph.csv LAUCN/LAUSA {fips}000000003A annual 1990-2025 keyless; initial 6-city pull ALIASED (identical series) and was refetched with an identity gate (distinct 2010/2023/2025 values per city recorded in _validation); banked panel unemployment_rate col cross-checked 7/7 within 1pt",
+ "honest_nulls": [
+  "BFS city/county applications: route api.census.gov/data/timeseries/econ/bfs requires key - honest-null, STATE-grain series banked (FRED BABATOTALNSA*, 2004-2026) and no city-year fit attempted per grain law",
+  "BEA county-quad GDP: BEA API requires key - state annual NGSP banked (FRED {ST}NGSP / NGSP{ST}, 1997-2025); city-fit not attempted per grain law"
+ ],
+ "fit_A_t0": {
+  "spec": [
+   "bachelors_pct",
+   "poverty_rate",
+   "snap_receipt_share_pct"
+  ],
+  "betas": [
+   0.67,
+   -0.324,
+   -0.083
+  ],
+  "n_rows": 25,
+  "n_cities": 5,
+  "within_R2": 0.175,
+  "frame": {
+   "Cincinnati": 5,
+   "Detroit": 5,
+   "Memphis": 5,
+   "NYC": 5,
+   "St. Louis": 5
+  }
+ },
+ "loco_A_t0": {
+  "Cincinnati": {
+   "direction_acc": 0.2,
+   "n": 5,
+   "betas_loco": [
+    0.872,
+    -0.68,
+    -0.101
+   ],
+   "train_rows": 20
+  },
+  "Detroit": {
+   "direction_acc": 0.4,
+   "n": 5,
+   "betas_loco": [
+    0.702,
+    -0.18,
+    -0.05
+   ],
+   "train_rows": 20
+  },
+  "Memphis": {
+   "direction_acc": 0.8,
+   "n": 5,
+   "betas_loco": [
+    0.657,
+    -0.295,
+    -0.18
+   ],
+   "train_rows": 20
+  },
+  "NYC": {
+   "direction_acc": 0.6,
+   "n": 5,
+   "betas_loco": [
+    0.59,
+    -0.288,
+    -0.018
+   ],
+   "train_rows": 20
+  },
+  "St. Louis": {
+   "direction_acc": 0.8,
+   "n": 5,
+   "betas_loco": [
+    0.562,
+    -0.294,
+    -0.096
+   ],
+   "train_rows": 20
+  }
+ },
+ "walk_forward_tplus1": {
+  "pooled_direction_acc": 0.5,
+  "pooled_n": 10,
+  "per_city": {
+   "Cincinnati": {
+    "hits": 0,
+    "n": 2,
+    "acc": 0.0,
+    "detail": [
+     {
+      "input_year": 2023,
+      "target_year": 2024,
+      "pred_dir": -1.0,
+      "actual_dir": 1.0,
+      "hit": false
+     },
+     {
+      "input_year": 2024,
+      "target_year": 2025,
+      "pred_dir": -1.0,
+      "actual_dir": 1.0,
+      "hit": false
+     }
+    ]
+   },
+   "Detroit": {
+    "hits": 2,
+    "n": 2,
+    "acc": 1.0,
+    "detail": [
+     {
+      "input_year": 2023,
+      "target_year": 2024,
+      "pred_dir": 1.0,
+      "actual_dir": 1.0,
+      "hit": true
+     },
+     {
+      "input_year": 2024,
+      "target_year": 2025,
+      "pred_dir": 1.0,
+      "actual_dir": 1.0,
+      "hit": true
+     }
+    ]
+   },
+   "Memphis": {
+    "hits": 2,
+    "n": 2,
+    "acc": 1.0,
+    "detail": [
+     {
+      "input_year": 2023,
+      "target_year": 2024,
+      "pred_dir": 1.0,
+      "actual_dir": 1.0,
+      "hit": true
+     },
+     {
+      "input_year": 2024,
+      "target_year": 2025,
+      "pred_dir": 1.0,
+      "actual_dir": 1.0,
+      "hit": true
+     }
+    ]
+   },
+   "NYC": {
+    "hits": 0,
+    "n": 2,
+    "acc": 0.0,
+    "detail": [
+     {
+      "input_year": 2023,
+      "target_year": 2024,
+      "pred_dir": 1.0,
+      "actual_dir": 0.0,
+      "hit": false
+     },
+     {
+      "input_year": 2024,
+      "target_year": 2025,
+      "pred_dir": -1.0,
+      "actual_dir": 1.0,
+      "hit": false
+     }
+    ]
+   },
+   "St. Louis": {
+    "hits": 1,
+    "n": 2,
+    "acc": 0.5,
+    "detail": [
+     {
+      "input_year": 2023,
+      "target_year": 2024,
+      "pred_dir": 1.0,
+      "actual_dir": 1.0,
+      "hit": true
+     },
+     {
+      "input_year": 2024,
+      "target_year": 2025,
+      "pred_dir": -1.0,
+      "actual_dir": 1.0,
+      "hit": false
+     }
+    ]
+   }
+  },
+  "spec": [
+   "bachelors_pct",
+   "poverty_rate",
+   "snap_receipt_share_pct"
+  ]
+ },
+ "fit_B_t0_with_care": {
+  "spec": [
+   "bachelors_pct",
+   "poverty_rate",
+   "snap_receipt_share_pct",
+   "care_per_100k"
+  ],
+  "betas": [
+   0.416,
+   -0.176,
+   -0.142,
+   -0.0
+  ],
+  "n_rows": 25,
+  "n_cities": 5,
+  "within_R2": 0.292
+ },
+ "bfs_descriptive": {
+  "Cincinnati": {
+   "yoy_growth_2021_2025": {}
+  },
+  "Denver": {
+   "yoy_growth_2021_2025": {}
+  },
+  "Detroit": {
+   "yoy_growth_2021_2025": {}
+  },
+  "Memphis": {
+   "yoy_growth_2021_2025": {}
+  },
+  "New York": {
+   "yoy_growth_2021_2025": {}
+  },
+  "St. Louis": {
+   "yoy_growth_2021_2025": {}
+  }
+ },
+ "gdp_descriptive": {
+  "Cincinnati": {
+   "real? no \u2014 NGSP current$ millions; state GDP yoy": {}
+  },
+  "Denver": {
+   "real? no \u2014 NGSP current$ millions; state GDP yoy": {}
+  },
+  "Detroit": {
+   "real? no \u2014 NGSP current$ millions; state GDP yoy": {}
+  },
+  "Memphis": {
+   "real? no \u2014 NGSP current$ millions; state GDP yoy": {}
+  },
+  "New York": {
+   "real? no \u2014 NGSP current$ millions; state GDP yoy": {}
+  },
+  "St. Louis": {
+   "real? no \u2014 NGSP current$ millions; state GDP yoy": {}
+  }
+ }
+}

@@ -1,0 +1,165 @@
+{
+  "_record": "site_comparison_v1",
+  "built": "2026-11-24",
+  "built_by": "NEXT-3 subagent (Kingsport-vs-Raleigh inventory side-by-side; deleg_ea53227d)",
+  "laws_held": [
+    "direction-class only, no causal claims",
+    "honest-null convention: not-on-disk values logged as null, never placeholdered",
+    "no fabricated numbers; every figure carries its on-disk source file",
+    "thin-n flagged; panel cross-city reads carry the pre-registered falsifier guard"
+  ],
+  "inputs": {
+    "youth_activities_inventory_v1.json": "28 Memphis + 21 Kingsport venue rows, each with a subsidy column (Wikipedia API + official-site fetch; meta.asymmetry_note: Kingsport from a COMPLETE official catalog of 36 parks/11 programs/8 cultural partners; Memphis covers marquee institutions + confirmed private players, full city parks catalog NOT fetched (memphistn.gov 403) -> Memphis undercounts low-tier city assets",
+    "kingsport_three_line_v1.json": "the full three-line pull: realized CIP GP2105 (skate park) + GP2204 (bike park) + GP2107 (pump track); parks&rec program actuals FY2016-2020 chained across 4 budget books; murders 2015-2026 FBI CDE ORI TN0820200",
+    "raleigh_springs_analysis_v1.json": "Raleigh Springs pre/post pass: 13-yr citywide TIBRS 2010-15/2020-26, MPD bbox corridor 2020-26, differentials, clearance diagnostics",
+    "raleigh_springs_site_v2.json": "site record: CD01092 CIP lane, component lane, TIBRS baseline lane, honest nulls",
+    "raleigh_springs_facilities_v1.json": "the confounder sweep (1-mile ring, 2016-2026): YMCA/BGC/church/charter/parks classes",
+    "wage_stratified_v1.json": "the 11-metro OEWS 2025 strata (min p10 / mid p50 / specialized p90), carried for the metro side of the side-by-side",
+    "full_panel_v1.json + lane12_component_timearcs_panel_v1.jsonl": "metro care-dollars/crime+ panel standings (8 cities) + parks+libraries program lines"
+  },
+
+  "1_site_side_by_side": {
+    "note": "the two named youth-tribe sites, every banked dimension at one glance",
+    "site_identity": {
+      "raleigh_springs": {
+        "site": "Raleigh Springs Civic Center, Memphis TN (Singleton Pkwy, ZIP 38128; census tract 47157020541; planning district Raleigh)",
+        "site_class": "FLAGSHIP dated-treatment site inside the 11-metro panel's worst crime+ city",
+        "treatment": "mall closed 2016-11-18, city purchased 2016-11, demolished 2016-17, components opened spring 2020 (skatepark + trail + 11-acre pond + MPD Old Allen precinct), library ribbon-cut 2020-11-19",
+        "co_location_trinity": "COMPLETE on-site: skatepark + police precinct + library (all opened 2020)"
+      },
+      "kingsport": {
+        "site": "Scott Adams Memorial Skatepark, Brickyard Park, Kingsport TN (ORI TN0820200; place 47-39560)",
+        "site_class": "SINGLE-SITE case study: the first end-to-end paper-verifiable three-line pull",
+        "treatment": "old downtown park closed 2021-12-15; Brickyard build: CIP begun 2020-11-03, groundbreaking 2021-09-24, opened 2022-06-24",
+        "co_location_trinity": "PARTIAL: skatepark + Miracle Field + adaptive playground + ball fields on one campus; library NOT co-located (not on disk, honest null)"
+      }
+    },
+    "site_table": [
+      {
+        "dimension": "construction_line",
+        "raleigh_springs": "CD01092 GO $17.4M (FY2015 book) + narrative $24M; HCD official trace $41,941,459 committed, COMPLETE 2020-11-18; adjacent: PDO $9.1M planning, vehicle repair $2.51M re-assigned, farmer's market $573K in-progress",
+        "kingsport": "GP2105 skate park $2,185,289 funded / $2,261,706 spent, complete, -$76,417 balance overrun; GP2204 bike park $1,488,897 spent; GP2107 pump track $65,024 closed; LPRF state grant + land-swap with Domtar (Cement Hill 40 acres)"
+      },
+      {
+        "dimension": "program_line",
+        "raleigh_springs": "city-level parks+libraries actuals from lane12 panel: $56.1M-$77.7M/year 2021-2026 = $88.6-$125.2/resident (2021-2026); no site-level program line (honest gap)",
+        "kingsport": "13 parks&rec fund codes chained FY2016-2020 ACTUALS: aggregate $1.92M-$2.83M/yr = $34.60-$53.91/resident; 11 cross-book disagreements logged, book-closest-in-time rule applied"
+      },
+      {
+        "dimension": "maintenance_line",
+        "raleigh_springs": "honest null (no separable maintenance grain at site or city on disk)",
+        "kingsport": "PARTIAL: 110-4033 Park Maintenance actuals 2016-2019 ($761.6K-$598.0K = 25-29% of program line); 110-4534 Parks&Rec Maintenance 2018-19 (~$414K); FY2021+ consolidated into Leisure Services Maintenance (honest gap, route named)"
+      },
+      {
+        "dimension": "crime_line",
+        "raleigh_springs": "corridor MPD bbox post-only 2020-2026 (7,257 rows; dataset starts 2020-01-01, pre-period IMPOSSIBLE from source): all-incidents 1889->1204 (partial), violent 501->450 (partial), property 1153->533; full-year matched span 2020->2025: all -12.2%, violent +4.6%, property -24.5%",
+        "kingsport": "murders 2015-2026 citywide ORI TN0820200: 6,1,3,4,3,5 | 2,2,3,2,1,2YTD; months guard 12/12 closed years; the years spanning siting/opening (2021-2026: 2,2,3,2,1) are the lowest of the pulled decade"
+      },
+      {
+        "dimension": "honest_test_result",
+        "raleigh_springs": "DIFFERENTIAL (direction-class only): full-span 2020->2025 corridor all-incidents -12.2% vs citywide violent-index3 -27.1% = +14.8 pts (corridor falling SLOWER); violent +31.6 pts; property fall largest corridor move; 2026 partial both sources; verdict: corridor moves with the citywide arc, no corridor-specific improvement clears the caveat = honest-null region",
+        "kingsport": "program-vs-murder r(t0) = -0.767 (n=5, thin-flag; same sign class as multi-city pooled -0.671); lag structure t+1 +0.165 / t+2 +0.71 (recomputed, sign-flip = pre-registered falsifier honest-null on lags)"
+      },
+      {
+        "dimension": "confounder_sweep",
+        "raleigh_springs": "CLEAN: 1-mi ring, 2016-2026 - NO YMCA (nearest 5.8mi Bartlett), NO dated new-church-youth launch (14 churches, all null), NO new charter/public campus in-ring (Promise Academy Springhill build-out 2014-2018 at 1.73mi = pre-window; BGC Craigmont club 0.82mi pre-existing, start date null); only in-window 1-mi hit = the site's own library (0.06mi)",
+        "kingsport": "not swept this pass (honest null - the sweep is banked as a Memphis-corridor artifact; Kingsport confounder-scan route named: city program pages + TDOE/OSM, not pulled)"
+      }
+    ],
+    "read": {
+      "site_rank_for_instrument": [
+        "RALEIGH = the dated-treatment instrument: complete trinity on-site, $41.9M realized construction line, CLEAN confounder sweep - but honest-null on effect (corridor falls slower than city, +14.8pts), and no pre-2016 corridor baseline is possible from the source",
+        "KINGSPORT = the paper-verifiable instrument: full three-line anatomy on disk at city grain, lowest-murder-years bracket the park build, cleanest dollars-per-resident program line - but no site-level confounder sweep, and single-site post-only arc = no counterfactual (direction-class only)"
+      ],
+      "the_paired_verdict": "The two sites are COMPLEMENTARY, not competing: Raleigh carries the treatment-date + confounder rigor (and returned an honest null with +12 to +15pt differentials against the corridor), Kingsport carries the fully-countable three-line dollar anatomy (construction/program/maintenance). Neither supports a causal claim; both are direction-class with named routes."
+    }
+  },
+
+  "2_metro_side_by_side_11_panel": {
+    "note": "the metro backdrop the two sites sit in: venue-inventory columns + wage strata + care/crime+ standings. Kingsport is NOT a panel metro (single-site instrument outside the 11); Memphis IS the panel's worst-crime+ metro.",
+    "venue_inventory_columns": {
+      "memphis": {
+        "venue_rows": 28,
+        "by_subsidy": {"tax-subsidized-public": 11, "tax-subsidized-nonprofit": 11, "commercial-private": 4, "hybrid": 1, "commercial-in-public-park": 1},
+        "kids_focus_false_share": "most rows are marquee general-audience institutions (zoo, museums)",
+        "caveat": "full parks catalog never fetched (403) -> low-tier city assets undercounted; apples/oranges vs Kingsport's complete catalog"
+      },
+      "kingsport": {
+        "venue_rows": 21,
+        "by_subsidy": {"tax-subsidized-public": 12, "tax-subsidized-nonprofit": 9, "commercial-private": 0},
+        "kids_focus": "inventory skews program-direct: 11 named KPR youth programs (homeschool PE, archery, soccer, basketball, open gym, volleyball, carousel, aquatic); zero commercial rows in the banked set",
+        "density_per_1k_kids": {"kpr_parks": 3.36, "kpr_youth_programs": 0.97, "city_assets": 1.06, "nonprofit_partners": 0.71},
+        "memphis_density_per_1k_kids": {"inventory_rows": 0.125, "kpr_parks_equivalent_caveat": "0.17 city-wide metro denominator WITHOUT the parks catalog = not a fair comparison"}
+      },
+      "subsidy_pattern_read": "same two-column world (public + tax-subsidized-nonprofit dominate; commercial trivial except in big metros), DIFFERENT scale: 20x kid-population gap (224,068 Shelby vs 11,310 Kingsport city) means Kingsport's per-1k density lead (3.36 vs 0.17 parks) is a catalog-completeness artifact as much as a real density difference - direction-class only"
+    },
+    "wage_strata_2025_OEWS_ranked_by_p90_p10_ratio": [
+      {"metro": "Houston", "p10": 27380, "p50": 49410, "p90": 128040, "ratio": 4.68},
+      {"metro": "New York", "p10": 36130, "p50": 61430, "p90": 166080, "ratio": 4.60},
+      {"metro": "Boston", "p10": 36760, "p50": 66620, "p90": 168090, "ratio": 4.57},
+      {"metro": "New Orleans", "p10": 23690, "p50": 47290, "p90": 106950, "ratio": 4.51},
+      {"metro": "NATIONAL", "p10": 31200, "p50": 50980, "p90": 128560, "ratio": 4.12},
+      {"metro": "Detroit", "p10": 30990, "p50": 52080, "p90": 127470, "ratio": 4.11},
+      {"metro": "Pittsburgh", "p10": 28500, "p50": 49650, "p90": 115400, "ratio": 4.05},
+      {"metro": "Cincinnati", "p10": 29780, "p50": 50170, "p90": 119580, "ratio": 4.02},
+      {"metro": "Oklahoma City", "p10": 26830, "p50": 47230, "p90": 104460, "ratio": 3.89},
+      {"metro": "St. Louis", "p10": 31200, "p50": 49990, "p90": 115090, "ratio": 3.69},
+      {"metro": "Memphis", "p10": 28880, "p50": 46890, "p90": 100640, "ratio": 3.48}
+    ],
+    "wage_read": "Memphis = the panel's LOWEST specialized-to-floor ratio (3.48, p90 $100.6K); the specialized-high band is the weakest ceiling in the 11 (banked HEAD: the gradient steepens with rank, Memphis -0.84 at t+1). Kingsport sits outside this panel - small TN metro, no OEWS metro row banked (honest null, route = OEWS nonmetropolitan Tennessee).",
+    "care_dollars_crime_plus_standings": {
+      "grain": "full_panel_v1 latest banked year per city (uneven windows - grain mismatch note carried)",
+      "rows": [
+        {"metro": "Boston", "latest_year": 2022, "care_usd_per_capita_last": 394.6, "crime_plus": 14.6, "poverty": 17.1},
+        {"metro": "NYC", "latest_year": 2001, "care_usd_per_capita_last": 242.7, "crime_plus": 78.6, "poverty": null},
+        {"metro": "Cincinnati", "latest_year": 2025, "care_usd_per_capita_last": 73.9, "crime_plus": 100.0, "poverty": 22.7},
+        {"metro": "New Orleans", "latest_year": 2024, "care_usd_per_capita_last": 52.4, "crime_plus": 109.1, "poverty": 20.5},
+        {"metro": "Memphis", "latest_year": 2025, "care_usd_per_capita_last": 45.8, "crime_plus": 132.7, "poverty": 21.4},
+        {"metro": "Detroit", "latest_year": 2026, "care_usd_per_capita_last": 35.1, "crime_plus": 79.1, "poverty": null},
+        {"metro": "Houston", "latest_year": 2024, "care_usd_per_capita_last": 24.8, "crime_plus": 45.3, "poverty": 21.2},
+        {"metro": "St. Louis", "latest_year": 2025, "care_usd_per_capita_last": 19.8, "crime_plus": 227.4, "poverty": 21.4}
+      ],
+      "read": "Memphis crime+ 132.7 = 2nd-highest of the 8 with care-dollars on disk (St. Louis 227.4 = highest on lowest care); Boston anchor (care $394.6, crime+ 14.6) sets the span. NYC's 2001 vintage is a grain mismatch (banked note), carried not blended."
+    }
+  },
+
+  "3_three_line_cross_site_read": {
+    "note": "the third ask: what the two three-line treatments say TOGETHER",
+    "program_line_vs_murder_sign_table": {
+      "kingsport_t0": {"r": -0.767, "n": 5, "basis": "program $/resident vs murder rate/100k, city-years 2016-2020", "verified_recompute": -0.7673},
+      "memphis_t0": {"r_banked": -0.841, "n": 6, "basis": "parks+libraries actuals vs murder rate (lane12/youth_infrastructure banked)", "recompute_parks_plus_libs_vs_rate": -0.8584, "recompute_per_resident_vs_rate": -0.8478},
+      "multi_city_pooled_t0_banked": {"r": -0.671, "pooled_n": 37, "per_city": {"Cincinnati": 0.04, "Detroit": -0.83, "Memphis": -0.841, "NYC": -0.981, "St. Louis": -0.742}},
+      "kingsport_joined_to_pooled": {"note": "same sign class as every non-Cincinnati city; pooling Kingsport into the banked per-city set moves pooled_z_r to about -0.78 at pooled_n 42 - direction-class, thin-n per city"},
+      "lag_structure": {
+        "kingsport_t_plus_1": 0.165,
+        "kingsport_t_plus_2": 0.71,
+        "banked_read": "t+1/t+2 sign-flip with n=5/5 per lag = pre-registered falsifier honest-null on the lag structure; single-city lag cannot distinguish effect-timing from small-n instability"
+      },
+      "honest_caveat_block": "t0 negative signs with n=4-7 per city are thin-flag direction-class only; simultaneous-same-year correlation cannot separate program-follows-crisis (reverse causality) from program-precedes-calm; the multi-city consistency (4 of 5 cities negative at t0 + Kingsport same sign) is the only strength, and Cincinnati's positive r shows the sign is not universal"
+    },
+    "construction_line_cross_site": {
+      "raleigh": "$41.9M realized single project block, complete; treatment date DATED to the day",
+      "kingsport": "three realized CIP rows (skate $2.26M + bike $1.49M + pump $0.065M) = $3.81M realized, plus $4.4M planned bike-park-lighting forward row; spread over 2020-2023",
+      "read": "both sites' construction lines are COUNTABLE and complete per their books; the scale gap (19:1 dollars) is a city-size artifact (Memphis pop 621K vs Kingsport 55.4K = 11x); per-resident realized construction is nearly IDENTICAL (Memphis corridor project ~$67/resident vs Kingsport park bundle ~$69/resident) - the first genuinely comparable dollar number across the two sites"
+    },
+    "contribution_of_each_site_to_the_lane": {
+      "raleigh": "gave the lane a DATED treatment + CLEAN confounder sweep; the honest-null differential (+14.8pts matched-span, corridor slower than city) is itself the discipline: a $41.9M civic build did NOT produce a corridor-specific crime improvement through 2025 - the strongest recorded null on this lane",
+      "kingsport": "gave the lane the full dollar anatomy (construction/program/maintenance at actuals grain) + the second paper-trail-verified trinity instance; its low-murder years bracketing the park build stay direction-class-only per falsifier-3",
+      "joint": "both sites agree the mechanism is NOT simple (Raleigh: big build, clean sweep, no capture; Kingsport: smaller build, dollars visible, low-murder era). The GAP (infrastructure-vs-crime) remains unsaturated; nothing fired; nothing saturated."
+    }
+  },
+
+  "honest_nulls_joined": [
+    "Memphis 2016-2019 citywide TIBRS rows + pre-2020 corridor incidents (the treatment-start gap) - routes named, not banked",
+    "corridor population denominator (tract 47157020541) - corridor stays counts-only",
+    "site-level program line for Raleigh corridor - city-level only on disk",
+    "Kingsport program actuals FY2022+ (newer books ship actuals one-year-lagged) - not pulled",
+    "Kingsport maintenance line FY2021+ (consolidated into Leisure Services Maintenance)",
+    "Kingsport confounder sweep - not run this pass (route named)",
+    "Kingsport OEWS metro row (nonmetro TN stratum) - not pulled; metro side is Memphis-only for this site pair",
+    "ZIP/precinct-level TIBRS (state route reports agency-level only)",
+    "Kingsport library-to-Brickyard distance (co-location trinity completeness for Kingsport)"
+  ],
+
+  "verdict": "SIDE-BY-SIDE DONE. (1) The metro side: Memphis = the panel's worst-2 crime+ (132.7) on the weakest specialized-wage ceiling (3.48 ratio, p90 $100.6K) - the two named sites both attack the mechanism inside that one metro's weakest corridor (Raleigh) and its in-state small-city control-class twin (Kingsport). (2) The site side: Raleigh = dated treatment + clean confounders + honest-null differential (+14.8pts; corridor NOT improving faster than city); Kingsport = complete three-line dollars ($3.81M realized construction, $34.60-$53.91/resident program actuals, 25-29% maintenance share, lowest-murder years bracketing the 2022 opening), no counterfactual. (3) The cross-site read: program-vs-murder t0 sign negative at BOTH sites (Memphis -0.858 recomputed vs banked -0.841; Kingsport -0.767 recomputed = banked) AND negative in 4 of 5 panel cities - but lags flip positive at Kingsport and per-city n is thin; construction-dollar-per-resident is nearly identical (~$67-69) across an 11x city-size gap. Direction-class only, everywhere. The lane's discipline holds: no causal verdict, two named sites with complementary rigor, the GAP unsaturated."
+}

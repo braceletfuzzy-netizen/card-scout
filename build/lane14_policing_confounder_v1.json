@@ -1,0 +1,52 @@
+{
+ "_record": "lane14_policing_confounder_v1",
+ "built": "2026-11-24",
+ "lane": "LANE-14 \u2014 THE POLICING-CONFOUNDER LANES (the founder's interrogate-first demand: 'Policing-initiatives? Policing-scandals?'), executed on the care/crime panel's own outcome side",
+ "parent_lane": "working-notes.md THE POLICING-LANES + THE REGRESSION-READINESS-AUDIT confounders list ('the-policing-tactics' = the named confounder class)",
+ "laws_held": [
+  "direction-class only, no causal claims",
+  "component-grain within-city discipline (the 80x rule): every rho below is WITHIN-CITY rank, not pooled cross-section",
+  "honest-null = routes-tried-no-capture; not a placeholder",
+  "the confounders-army read is the DELIVERABLE: does adding the officer lane to the panel de-confound the care-lane, or is officers itself a co-mover with murders?"
+ ],
+ "data": {
+  "officers": "officers_wide.jsonl (CDE-LATEST/PE keyless, 15 sun-belt class cities, 2011-2025, sworn-personnel counts)",
+  "murders": "crime_wide.jsonl (CDE summarizer HOM monthly actuals, same 15 cities, months_reported>=12 only)",
+  "join": "203 city-years, 14 cities with >=6-year overlap (Jacksonville honest-null: 4 rows = below the 6-year thin-floor)"
+ },
+ "tests": [
+  {
+   "id": "T1-within-city-lag-arc",
+   "design": "spearman within-city officers_t0 vs murders_t+lag, lag 0..4, 14 cities",
+   "result": "POOLED within-city rho: t+0 +0.023, t+1 +0.020, t+2 +0.098, t+3 +0.123, t+4 +0.100 (pooled-z 0.04..0.67, ALL non-significant)",
+   "reading": "the officer headcount lane carries ~ZERO independent crime signal in-panel \u2014 it is NOT the confounder that moves the care-crime read; cities split internally (Austin/Charlotte/Dallas/Seattle negative vs Denver/FortWorth/Indy/Nashville positive), signs cancel"
+  },
+  {
+   "id": "T2-first-diff-covid-window",
+   "design": "2019->2022 first differences across 13 cities (the police-defunding / George-Floyd stress window), Pearson + spearman",
+   "result": "d-officers vs d-murders: r=-0.259 (t=-0.89, n=13, ns); spearman -0.272; officer-decline cities (n=7, mean -12.3%) murder-rise 54.6% vs steady cities (n=6) 40.6% \u2014 direction positive-narrative but NOT significant (t~0.8)",
+   "reading": "the 2020-2022 murder spike was a NATIONAL phenomenon that happened AT cities whose officer counts also fell \u2014 the size-class correlation is weak; officer-count decline does not clear the bar as the murder-spike explanation on this panel"
+  },
+  {
+   "id": "T3-recovery-window",
+   "design": "2022->2024 first differences (re-policing recovery) vs murder decline",
+   "result": "r=+0.231 (t=0.79, n=13, ns) \u2014 the recovery side also carries no significant officer-crime coupling"
+  }
+ ],
+ "the_verdict": [
+  "THE FOUNDER'S QUESTION ANSWERED AT THE DATA LANES: the policing-initiative/scandal confounder, armed at sworn-headcount grain, is ~ORTHOGONAL to the murder margin on this panel (all lags ns, both windows ns) \u2014 the care-crime lane does NOT ride on the officer headcount axis",
+  "the +0.243 'officers reaction-class' note (funding-follows-crisis) is carried as the honest framing: officers move WITH the budget, not as the crime driver",
+  "the lane now has a REUSABLE officer series (15 cities 2011-2025) for any future within-city de-confound pass",
+  "WHAT IS NOT CLAIMED: no arrest-rate/solve-rate/clearance data exists on-disk (the tactics margin) \u2014 the officer-heADCOUNT lane tests FORCE, not TACTICS; the initiative/scandal margins (specific programs) are event-class, not panel-class, and stay honest-null"
+ ],
+ "honest_nulls": [
+  "Jacksonville: only 4 joined rows = below the 6-year thin-floor, dropped",
+  "clearance/arrest-rate tactics data: no keyless route attempted-and-verified this pass (the CDE summarized arrest-rate tables remain city-grain monthly; not joined yet)",
+  "Columbus t+1/t+2 n=7 cells thin-flagged"
+ ],
+ "artifacts": [
+  "lane14_policing_confounder_v1.json",
+  "_lane14_officers_test_debug.json",
+  "_lane14_officers_firstdiff.json"
+ ]
+}

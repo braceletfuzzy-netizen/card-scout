@@ -1,0 +1,169 @@
+{
+ "_record": "policy_associations_v1",
+ "built": "2026-11-23",
+ "built_by": "BEST-15 assembly (subagent) — mined scan15_raw/15b (138 unique PubMed hits, 19 threads) + peer_review_scan_v1..v14 + tonight's 4 banked tests",
+ "laws": [
+  "direction-class only, no causal claims",
+  "per-item stratification: BANKED = testable now with artifacts on disk / PULL-REQUIRED = needs new data lanes",
+  "honest-nulls carried as findings (OH county-grain null, IMD-waiver funding null, SMHA-spend client-outcome null)"
+ ],
+ "items": [
+  {
+   "rank": 1,
+   "id": "care-bookings-ordering",
+   "association": "Care-spending (lead) -> bookings/arrest intake (proximate) -> murders",
+   "direction": "care leads bookings in the Simes-Jahn frame; lag ordering testable",
+   "evidence": "BANKED TONIGHT (care_bookings_ordering_v1.json, 9-city panel, NYC facility wedge); pattern-lead status",
+   "novelty": "NOVEL-ANGLE (ordering as signature, v8 lag-arc)",
+   "stratification": "BANKED",
+   "testable_with": "city_component_annual_v1.jsonl + bookings_series_v1/bookings_facility_v1 + murders_all_v1"
+  },
+  {
+   "rank": 2,
+   "id": "congregation-thesis",
+   "association": "Within-city component care-per-capita (parks+libraries+health+human_services) vs murder rate, lag-arc strengthening",
+   "direction": "NEGATIVE (spend up -> murders down): pooled r=-0.509 n=28; t-1 r=-0.572, t-2 r=-0.628 (strengthens with lag); libraries Memphis r=-0.90, parks Cincinnati r=-0.80",
+   "evidence": "BANKED-TONIGHT (congregation_test_v1.json; replicated direction-class) + v7/v8 verified-within-city",
+   "novelty": "NOVEL-ANGLE replicated; county-grain null (oh_within_arc_test_v1) = wrong-conductor evidence",
+   "stratification": "BANKED",
+   "testable_with": "_congregation_panel_v2.json carry-verbatim + city components"
+  },
+  {
+   "rank": 3,
+   "id": "beds-suicide-within",
+   "association": "Psychiatric inpatient bed capacity vs suicide mortality, WITHIN-county",
+   "direction": "NEGATIVE: +10 beds/100k -> -7.6% suicide (RR 0.924, CI 0.881-0.969, p=0.001); beds fell 30.6->24.2/100k 2015-2024",
+   "evidence": "MINED scan15 (PMID 42164341, Sweden 20 counties 2015-2024, 2026; between-county RR 0.892); v10 capacity-crime VERIFIED side",
+   "novelty": "VERIFIED (new strongest within-design); US-state/county replication untested",
+   "stratification": "PULL-REQUIRED (US replication needs bed-capacity lane)",
+   "testable_with": "needs US county bed-supply series + suicide/mortality files"
+  },
+  {
+   "rank": 4,
+   "id": "beds-jail-swap",
+   "association": "Local psychiatric bed capacity <-> jail populations (the US Penrose micro-arc)",
+   "direction": "BIDIRECTIONAL: abrupt bed DECREASE -> +256 jail inmates (CI 3.3-509); bed INCREASE -> -199 jail inmates (CI -457 to +59)",
+   "evidence": "MINED scan15 (PMID 33438865, event-study 1988-2015, c=4) + v10 Penrose canon (Mundt, Rajkumar, Wild) + CEECA 33.8% bed decline vs +36% prison (PMID 34557842, c=17) + SSA (36056592) + NZ discharge->prison rise (41778630)",
+   "novelty": "VERIFIED across designs; the jail-swap is the mechanism bridge for care-crime",
+   "stratification": "PULL-REQUIRED (bank a US-county beds x jail panel; Murder/crime side on disk)"
+  },
+  {
+   "rank": 5,
+   "id": "funding-not-beds",
+   "association": "Funding policy (Medicaid SMI/SED 1115 IMD waivers) -> bed capacity: NULL",
+   "direction": "NULL: DiD ~ -24 beds/100k (CI -115,+67); waiver option uncorrelated with capacity, SMI prevalence, or suicide rates",
+   "evidence": "MINED scan15 (PMID 41035307, 50 states DiD 2014-2023) — the honest-null that sharpens the congregation thesis (dollars do not automatically become beds where the service sits)",
+   "novelty": "VERIFIED-null; no on-disk analog yet",
+   "stratification": "PULL-REQUIRED"
+  },
+  {
+   "rank": 6,
+   "id": "insurance-crime",
+   "association": "Health-insurance expansion (Medicaid/ACA) -> crime",
+   "direction": "NEGATIVE (coverage up -> crime down), small-but-real across DiD/RCT designs",
+   "evidence": "BANKED v1 (5 expansions studies) + v14 (Oregon-RCT 2024, AEJ 2025, SSRN 2017 DiD, child-maltreatment PMID 35213252)",
+   "novelty": "VERIFIED",
+   "stratification": "PULL-REQUIRED (state Medicaid-lane for city panel join)"
+  },
+  {
+   "rank": 7,
+   "id": "medical-debt-crime-GAP",
+   "association": "MEDICAL DEBT (county debt-in-collections) -> violent crime: NOBODY has tested it",
+   "direction": "Predicted NEGATIVE (more collections -> more stress/predation -> more crime); the single crime-adjacent study runs the arrow in REVERSE (incarceration -> medical debt)",
+   "evidence": "v14 GAP verdict: county ecological designs point at cancer/mortality/housing only (42612687; 35442439; 41525068)",
+   "novelty": "NOVEL-ANGLE leaning GAP (founder one-pager #4 slot)",
+   "stratification": "PULL-REQUIRED (needs collections/debt-county lane)"
+  },
+  {
+   "rank": 8,
+   "id": "summer-jobs-13-18",
+   "association": "13-18 summer youth employment (wage-stipend + structured time) -> violent-crime arrests",
+   "direction": "NEGATIVE, large: -43% violent-crime arrests (Heller 2014 Science RCT n=1,634); READI risk-tail ~1/3 fewer shooting/homicide arrests",
+   "evidence": "v12 age-ladder VERIFIED side (Kessler 2021, Leos-Urbel 2014, Modestino & Paulsen 2019)",
+   "novelty": "VERIFIED effect; age-band split + transport lever NOVEL",
+   "stratification": "PULL-REQUIRED (city program-funding lanes)"
+  },
+  {
+   "rank": 9,
+   "id": "under-13-crime-GAP",
+   "association": "Under-13 after-school/summer programming -> crime endpoint",
+   "direction": "Behavior VERIFIED (Durlak metas), crime endpoint UNTESTED; the one direct test null-to-small (Gottfredson 2004); deviancy-training backfire risk (Rorie 2011)",
+   "evidence": "v12",
+   "novelty": "GAP (under-13 band never compared to 13-18 in one design)",
+   "stratification": "PULL-REQUIRED"
+  },
+  {
+   "rank": 10,
+   "id": "unstructured-time",
+   "association": "Unstructured out-of-home spare time (13-17y) -> adolescent crime prevalence",
+   "direction": "POSITIVE (more unstructured time -> more offending), cross-national 2026; structured-setting caveat (youth clubs not uniformly protective)",
+   "evidence": "v11 (Buil-Gil 2026 + integrative model 2026; routine-activities canon)",
+   "novelty": "VERIFIED mechanism; feeds congregation design",
+   "stratification": "PULL-REQUIRED (time-use lane)"
+  },
+  {
+   "rank": 11,
+   "id": "library-crime-pair",
+   "association": "LIBRARY (cultural-institution) spending -> crime: park-within-city negative confirmed, library side near-empty in literature",
+   "direction": "Parks NEGATIVE-within-city (verified-with-nuance); libraries banked locally: Memphis r=-0.90, Detroit r=-0.734, pooled r=-0.527; 80x cross-area composition gradient NOVEL",
+   "evidence": "v7 + tonight's congregation/q4-bonds banked tests",
+   "novelty": "NOVEL-ANGLE (library half near-GAP)",
+   "stratification": "BANKED (library+park components already in city_component panel)"
+  },
+  {
+   "rank": 12,
+   "id": "welfare-reactive-harm",
+   "association": "Reactive/timing policy: TANF welfare-to-work push -> ADOLESCENT delinquency UP",
+   "direction": "POSITIVE (reform -> adolescent delinquency/risky behavior up) — the reactive-book harm signature; EITC side mixed (maternal work up, child cognition -0.14 SD)",
+   "evidence": "v6 (TANF intergenerational 2020; EITC unintended-consequence 2026) feeding v9 two-book frame (reactive $3.31-$1 MST-CAN ledger)",
+   "novelty": "Two-book timing model NOVEL-ANGLE (components verified)",
+   "stratification": "PULL-REQUIRED"
+  },
+  {
+   "rank": 13,
+   "id": "penrose-transinstitutional",
+   "association": "Deinstitutionalization bed-decline -> criminal-legal institutionalization (transinstitutionalization)",
+   "direction": "POSITIVE with inverse bed-prison trends in 17/30 CEECA countries; Med-illness jail-share growth canon; one honest counter-anchor (Salisbury & Thornicroft 2016)",
+   "evidence": "v10 (Penrose canon VERIFIED) + mined cross-national confirmations (34557842, 36056592, 41778630)",
+   "novelty": "VERIFIED",
+   "stratification": "PULL-REQUIRED (own-panel replication)"
+  },
+  {
+   "rank": 14,
+   "id": "indenture-frame",
+   "association": "Student-loan indenture as NAMED mechanism (person-following obligation + wage capture + no bankruptcy exit) -> civic outcomes",
+   "direction": "Mechanics each VERIFIED (non-dischargeability->SLABS, homeownership delay 60+ cites, family-formation delay 42+ cites, MH century-review); single named-mechanism + civic-outcome test ABSENT",
+   "evidence": "v13 (Dissent 2008 named-frame essays exist; no peer-reviewed operationalization)",
+   "novelty": "NOVEL-ANGLE leaning GAP",
+   "stratification": "PULL-REQUIRED (needs debt/cohort + county civic-outcome lanes)"
+  },
+  {
+   "rank": 15,
+   "id": "smha-spend-null",
+   "association": "State MH-agency per-capita expenditure + parity -> client-level outcomes",
+   "direction": "MOSTLY NULL: top-10 vs bottom-10 spend states — NO significant difference in treatment receipt, unmet need, suicide or overdose mortality; significant only for cost-related barriers. System-level: parity -> infrastructure allocation (p=0.0002)",
+   "evidence": "MINED scan15 (PMID 42750086 client-level 2026; PMID 40426012 system-level 2025) — spend alone does not reach the point of service: the congregation thesis' sharpest published corroborator",
+   "novelty": "VERIFIED-null supporting the founder's resource-congregation claim",
+   "stratification": "PULL-REQUIRED"
+  }
+ ],
+ "overflow": [
+  {
+   "id": "lag-arc-signature",
+   "note": "v8: named lag-arc (effects peaking t-0..t-2) NOVEL-ANGLE; carried by items 1-2"
+  },
+  {
+   "id": "two-book-model",
+   "note": "v9: proactive-vs-reactive ledger split NOVEL-ANGLE; carried by item 12"
+  },
+  {
+   "id": "capacity-vs-prevalence-rival",
+   "note": "v10: capacity vs MH-prevalence as rival ecological predictors NOVEL-ANGLE (leaning GAP); capacity side = item 13/3"
+  }
+ ],
+ "counts": {
+  "banked": 3,
+  "pull_required": 12,
+  "total": 15
+ }
+}

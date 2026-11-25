@@ -1,0 +1,4298 @@
+{
+ "_record": "budget_efficiency_panel_v1 — THE BUDGET-EFFICIENCY PANEL: fitted-equation PREDICTED (banked betas verbatim) vs ACTUAL per city-year; EFFICIENCY = ACTUAL − PREDICTED; administration-boundary reads; Memphis deep-dive; guards",
+ "built": "2026-11-24",
+ "parent_artifacts": [
+  "maslow_joint_panel_v1.jsonl (94 city-years, banked)",
+  "joint_regression_v2.json (banked FE-3 t0 R2=0.695 / FE-3_arc_t+1 0.748 / FE-6 / FE-2 betas — carried VERBATIM, format-lock)",
+  "_backwards_outcome_series_v1.json (583 source-labeled cells)",
+  "city_component_annual_v1.jsonl (care-lane component dollars, 2509 rows)",
+  "care_bookings_ordering_v1.json (bookings intake proxy + care_per_capita)",
+  "mata_diagnosis_v1.json (the $82-vs-$514 transit archetype)",
+  "memphis_care_cage_series_v1.json (care/cage ratio band + Young-Jan-2024 boundary)",
+  "mamdani_vs_young_v1.json + band_a_candidates_v1.json (administration dating)",
+  "_bob19_outputs/pit_homelessness_lane_v1.json + eviction_rate_lane_v1.json + health_outcome_lane_v1.json (guard honest-nulls)",
+  "elasticities_v1.json (delta lane, direction cross-check)"
+ ],
+ "laws": [
+  "zero fabricated numbers — every cell traces to a banked file or a named honest-null",
+  "banked FE betas carried VERBATIM (format-lock); refit shown as sensitivity only",
+  "direction-class only; no causal claims at small n; every rank cell carries its n",
+  "efficiency measured AFTER the FE equation absorbs inputs/need/structure; context columns ride with every row"
+ ],
+ "model_frames_banked": {
+  "FE-2_care_cage_bookings": {
+   "betas_within_std": {
+    "care_per_100k": -0.452,
+    "cage_per_100k": 0.419,
+    "bookings_per_1000": 0.013
+   },
+   "within_r2": 0.423,
+   "n_banked": 19
+  },
+  "FE-3_maslow_joint": {
+   "betas_within_std": {
+    "care_per_100k": -0.181,
+    "cost_burden_30pct_plus_share": -0.28,
+    "median_home_value": -0.099,
+    "snap_receipt_share_pct": 0.64,
+    "bachelors_pct": -0.003
+   },
+   "within_r2": 0.695,
+   "n_banked": 24
+  },
+  "FE-3_arc_tplus1": {
+   "betas_within_std": {
+    "care_per_100k": -0.197,
+    "cost_burden_30pct_plus_share": 0.056,
+    "median_home_value": -0.263,
+    "snap_receipt_share_pct": 0.544,
+    "bachelors_pct": -0.189
+   },
+   "within_r2": 0.748,
+   "n_banked": 18
+  },
+  "FE-6_care_plus_unemp": {
+   "betas_within_std": {
+    "care_per_100k": -0.304,
+    "unemployment_rate": 0.312
+   },
+   "within_r2": 0.263,
+   "n_banked": 36
+  }
+ },
+ "row_application_frames": {
+  "FE-3_t0_anchor": {
+   "n_rows_applied": 20,
+   "cities": [
+    "Cincinnati",
+    "Detroit",
+    "Memphis",
+    "St. Louis"
+   ],
+   "note": "murder_rate_t0 outcome; all five need/structure inputs complete"
+  },
+  "FE-6_wide": {
+   "n_rows_applied": 31,
+   "cities": [
+    "Cincinnati",
+    "Detroit",
+    "Memphis",
+    "NYC",
+    "St. Louis"
+   ]
+  },
+  "FE-2_care_cage_bookings": {
+   "n_rows_applied": 19,
+   "cities": [
+    "Cincinnati",
+    "Detroit",
+    "Memphis",
+    "St. Louis"
+   ]
+  },
+  "FE-3_arc_tplus1_secondary": {
+   "n_rows_applied": 18
+  }
+ },
+ "panel": [
+  {
+   "city": "Cincinnati",
+   "year": 2004,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 68760729,
+    "care_lanes_usd_component_book": {
+     "health": 33731686.0,
+     "housing": 1653502.0,
+     "libraries": 0.0,
+     "parks": 33375541.0
+    },
+    "unemployment_rate": 5.8
+   },
+   "need_structure_context": {
+    "unemployment_rate": 5.8
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2005,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": -8200,
+    "care_lanes_usd_component_book": {
+     "health": 0.0,
+     "housing": 0.0,
+     "libraries": 0.0,
+     "parks": -8200.0
+    },
+    "unemployment_rate": 5.7
+   },
+   "need_structure_context": {
+    "unemployment_rate": 5.7
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2006,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 61067448,
+    "care_lanes_usd_component_book": {
+     "health": 25833283.0,
+     "housing": 1936897.0,
+     "libraries": 0.0,
+     "parks": 33297268.0
+    },
+    "unemployment_rate": 5.1
+   },
+   "need_structure_context": {
+    "unemployment_rate": 5.1
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2007,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 69647820,
+    "care_lanes_usd_component_book": {
+     "health": 32600345.0,
+     "housing": 1551359.0,
+     "libraries": 0.0,
+     "parks": 35496116.0
+    },
+    "unemployment_rate": 5.1
+   },
+   "need_structure_context": {
+    "unemployment_rate": 5.1
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2008,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 68882119,
+    "care_lanes_usd_component_book": {
+     "health": 32042589.0,
+     "housing": 1440200.0,
+     "libraries": 0.0,
+     "parks": 35399330.0
+    },
+    "unemployment_rate": 5.8
+   },
+   "need_structure_context": {
+    "unemployment_rate": 5.8
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2009,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 70196441,
+    "care_lanes_usd_component_book": {
+     "health": 31473060.0,
+     "housing": 3503861.0,
+     "libraries": 0.0,
+     "parks": 35219520.0
+    },
+    "unemployment_rate": 9.2
+   },
+   "need_structure_context": {
+    "unemployment_rate": 9.2
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2010,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 68967180,
+    "care_lanes_usd_component_book": {
+     "health": 33121680.0,
+     "housing": 1076990.0,
+     "libraries": 0.0,
+     "parks": 34768510.0
+    },
+    "unemployment_rate": 9.7
+   },
+   "need_structure_context": {
+    "unemployment_rate": 9.7
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2011,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 66565160,
+    "care_lanes_usd_component_book": {
+     "health": 30967800.0,
+     "housing": 1179020.0,
+     "libraries": 0.0,
+     "parks": 34418340.0
+    },
+    "unemployment_rate": 8.8
+   },
+   "need_structure_context": {
+    "unemployment_rate": 8.8
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2012,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 85656785,
+    "care_lanes_usd_component_book": {
+     "health": 41297210.0,
+     "housing": 1166005.0,
+     "libraries": 0.0,
+     "parks": 43193570.0
+    },
+    "unemployment_rate": 7.4
+   },
+   "need_structure_context": {
+    "unemployment_rate": 7.4
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2013,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 42463135,
+    "care_lanes_usd_component_book": {
+     "health": 20358175.0,
+     "housing": 590912.0,
+     "libraries": 0.0,
+     "parks": 21514048.0
+    },
+    "unemployment_rate": 7.2
+   },
+   "need_structure_context": {
+    "unemployment_rate": 7.2
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {
+    "murder_rate_t+1_banked": 21.1
+   }
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2014,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 88984655,
+    "care_lanes_usd_component_book": {
+     "health": 41869700.0,
+     "housing": 2553268.0,
+     "libraries": 0.0,
+     "parks": 44561686.68
+    },
+    "cage_usd_panel": 125981850.0,
+    "care_per_100k": 29805612.125272147,
+    "care_per_capita": 298.93625741170626,
+    "unemployment_rate": 5.5
+   },
+   "need_structure_context": {
+    "care_per_100k": 29805612.125272147,
+    "cage_per_100k": 42197906.548316866,
+    "unemployment_rate": 5.5
+   },
+   "actual": {
+    "murder_rate": 21.1,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {
+    "FE-6_wide": 23.97
+   },
+   "residual": {
+    "FE-6_wide": -2.87
+   },
+   "model_rows": {
+    "FE-6_wide": {
+     "n_rows": 31,
+     "n_cities": 5
+    }
+   },
+   "secondary_outcomes": {
+    "murder_rate_t+1_banked": 22.42
+   }
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2015,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 87519815,
+    "care_lanes_usd_component_book": {
+     "health": 41271951.0,
+     "housing": 2931400.0,
+     "libraries": 0.0,
+     "parks": 43316464.0
+    },
+    "cage_usd_panel": 126274290.0,
+    "care_per_100k": 29290433.40026774,
+    "care_per_capita": 294.0152550970703,
+    "bookings_total_intake_proxy": 0,
+    "unemployment_rate": 4.6
+   },
+   "need_structure_context": {
+    "care_per_100k": 29290433.40026774,
+    "cage_per_100k": 42260471.8875502,
+    "unemployment_rate": 4.6
+   },
+   "actual": {
+    "murder_rate": 22.4,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {
+    "FE-6_wide": 23.82
+   },
+   "residual": {
+    "FE-6_wide": -1.4
+   },
+   "model_rows": {
+    "FE-6_wide": {
+     "n_rows": 31,
+     "n_cities": 5
+    }
+   },
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null,
+    "murder_rate_t+1_banked": 19.69
+   }
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2016,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 95382094,
+    "care_lanes_usd_component_book": {
+     "health": 47001260.0,
+     "housing": 4280560.0,
+     "libraries": 0.0,
+     "parks": 44100274.0
+    },
+    "cage_usd_panel": 133260280.0,
+    "care_per_100k": 31826919.149788115,
+    "care_per_capita": 320.4279019454364,
+    "bookings_total_intake_proxy": 0,
+    "unemployment_rate": 4.4
+   },
+   "need_structure_context": {
+    "care_per_100k": 31826919.149788115,
+    "cage_per_100k": 44466041.5762955,
+    "unemployment_rate": 4.4
+   },
+   "actual": {
+    "murder_rate": 19.7,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {
+    "FE-6_wide": 23.72
+   },
+   "residual": {
+    "FE-6_wide": -4.04
+   },
+   "model_rows": {
+    "FE-6_wide": {
+     "n_rows": 31,
+     "n_cities": 5
+    }
+   },
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null,
+    "murder_rate_t+1_banked": 23.9
+   }
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2017,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 99146094,
+    "care_lanes_usd_component_book": {
+     "health": 49816461.0,
+     "housing": 3728046.17,
+     "libraries": 0.0,
+     "parks": 45601586.83
+    },
+    "cage_usd_panel": 135975300.0,
+    "care_per_100k": 32905995.665464103,
+    "care_per_capita": 333.07273466343713,
+    "bookings_total_intake_proxy": 7073,
+    "bookings_per_1000": 23.5,
+    "unemployment_rate": 4.3
+   },
+   "need_structure_context": {
+    "care_per_100k": 32905995.665464103,
+    "cage_per_100k": 45129388.88354171,
+    "unemployment_rate": 4.3
+   },
+   "actual": {
+    "murder_rate": 23.9,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {
+    "FE-6_wide": 23.68,
+    "FE-2_care_cage_bookings": 24.82
+   },
+   "residual": {
+    "FE-6_wide": 0.22,
+    "FE-2_care_cage_bookings": -0.93
+   },
+   "model_rows": {
+    "FE-6_wide": {
+     "n_rows": 31,
+     "n_cities": 5
+    },
+    "FE-2_care_cage_bookings": {
+     "n_rows": 19,
+     "n_cities": 4
+    }
+   },
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null,
+    "murder_rate_t+1_banked": 20.16
+   }
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2018,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 109938497,
+    "care_lanes_usd_component_book": {
+     "health": 60543290.0,
+     "housing": 3408767.0,
+     "libraries": 0.0,
+     "parks": 45986440.0
+    },
+    "cage_usd_panel": 152901610.0,
+    "care_per_100k": 36330694.1392244,
+    "care_per_capita": 364.0926273050021,
+    "bookings_total_intake_proxy": 7022,
+    "bookings_per_1000": 23.2,
+    "unemployment_rate": 4.0
+   },
+   "need_structure_context": {
+    "care_per_100k": 36330694.1392244,
+    "cage_per_100k": 50528447.976735346,
+    "unemployment_rate": 4.0
+   },
+   "actual": {
+    "murder_rate": 20.2,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {
+    "FE-6_wide": 23.54,
+    "FE-2_care_cage_bookings": 24.83
+   },
+   "residual": {
+    "FE-6_wide": -3.38,
+    "FE-2_care_cage_bookings": -4.67
+   },
+   "model_rows": {
+    "FE-6_wide": {
+     "n_rows": 31,
+     "n_cities": 5
+    },
+    "FE-2_care_cage_bookings": {
+     "n_rows": 19,
+     "n_cities": 4
+    }
+   },
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null,
+    "murder_rate_t+1_banked": 22.04
+   }
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2019,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 107340340,
+    "care_lanes_usd_component_book": {
+     "health": 53837398.0,
+     "housing": 4351350.0,
+     "libraries": 0.0,
+     "parks": 49151592.0
+    },
+    "cage_usd_panel": 153653450.0,
+    "care_per_100k": 35316292.68934658,
+    "care_per_capita": 353.1629268934658,
+    "bookings_total_intake_proxy": 7167,
+    "bookings_per_1000": 23.6,
+    "unemployment_rate": 3.7
+   },
+   "need_structure_context": {
+    "care_per_100k": 35316292.68934658,
+    "cage_per_100k": 50553875.764953606,
+    "unemployment_rate": 3.7
+   },
+   "actual": {
+    "murder_rate": 22.0,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {
+    "FE-6_wide": 23.51,
+    "FE-2_care_cage_bookings": 24.87
+   },
+   "residual": {
+    "FE-6_wide": -1.47,
+    "FE-2_care_cage_bookings": -2.83
+   },
+   "model_rows": {
+    "FE-6_wide": {
+     "n_rows": 31,
+     "n_cities": 5
+    },
+    "FE-2_care_cage_bookings": {
+     "n_rows": 19,
+     "n_cities": 4
+    }
+   },
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null,
+    "murder_rate_t+1_banked": 31.04
+   }
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2020,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 109705514,
+    "care_lanes_usd_component_book": {
+     "health": 55705976.32,
+     "housing": 4261154.04,
+     "libraries": 0.0,
+     "parks": 49738384.0
+    },
+    "cage_usd_panel": 154133200.0,
+    "care_per_100k": 35467017.33173411,
+    "care_per_capita": 354.2658777408209,
+    "bookings_total_intake_proxy": 6096,
+    "bookings_per_1000": 19.7,
+    "unemployment_rate": 7.7
+   },
+   "need_structure_context": {
+    "care_per_100k": 35467017.33173411,
+    "cage_per_100k": 49830174.22256132,
+    "unemployment_rate": 7.7
+   },
+   "actual": {
+    "murder_rate": 31.0,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {
+    "FE-6_wide": 24.21,
+    "FE-2_care_cage_bookings": 24.84
+   },
+   "residual": {
+    "FE-6_wide": 6.82,
+    "FE-2_care_cage_bookings": 6.2
+   },
+   "model_rows": {
+    "FE-6_wide": {
+     "n_rows": 31,
+     "n_cities": 5
+    },
+    "FE-2_care_cage_bookings": {
+     "n_rows": 19,
+     "n_cities": 4
+    }
+   },
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null,
+    "murder_rate_t+1_banked": 30.1
+   }
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2021,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 107060504,
+    "care_lanes_usd_component_book": {
+     "health": 54333594.0,
+     "housing": 3441030.0,
+     "libraries": 0.0,
+     "parks": 49285880.0
+    },
+    "cage_usd_panel": 154992860.0,
+    "care_per_100k": 34654702.121805556,
+    "care_per_capita": 346.91197304040696,
+    "bookings_total_intake_proxy": 5706,
+    "bookings_per_1000": 18.5,
+    "unemployment_rate": 4.9
+   },
+   "need_structure_context": {
+    "care_per_100k": 34654702.121805556,
+    "cage_per_100k": 50170055.18960299,
+    "cost_burden_30pct_plus_share": 52.9,
+    "median_home_value": 190300,
+    "snap_receipt_share_pct": 20.6,
+    "bachelors_pct": 10.2,
+    "poverty_rate": 27.3,
+    "unemployment_rate": 4.9
+   },
+   "actual": {
+    "murder_rate": 30.1,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {
+    "FE-3_t0_anchor": 25.68,
+    "FE-6_wide": 23.74,
+    "FE-2_care_cage_bookings": 24.88,
+    "FE-3_arc_tplus1_secondary": 24.27
+   },
+   "residual": {
+    "FE-3_t0_anchor": 4.42,
+    "FE-6_wide": 6.36,
+    "FE-2_care_cage_bookings": 5.22,
+    "FE-3_arc_tplus1_secondary": 0.57
+   },
+   "model_rows": {
+    "FE-3_t0_anchor": {
+     "n_rows": 20,
+     "n_cities": 4
+    },
+    "FE-6_wide": {
+     "n_rows": 31,
+     "n_cities": 5
+    },
+    "FE-2_care_cage_bookings": {
+     "n_rows": 19,
+     "n_cities": 4
+    },
+    "FE-3_arc_tplus1_secondary": {
+     "n_rows": 18,
+     "n_cities": 4
+    }
+   },
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null,
+    "murder_rate_t+1_banked": 24.84
+   },
+   "input_z_contributions": {
+    "care_per_100k": 0.09,
+    "cost_burden_30pct_plus_share": -0.06,
+    "median_home_value": 0.22,
+    "snap_receipt_share_pct": 0.76,
+    "bachelors_pct": -0.0
+   }
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2022,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 118001046,
+    "care_lanes_usd_component_book": {
+     "health": 64459339.0,
+     "housing": 3377175.0,
+     "libraries": 0.0,
+     "parks": 50164532.0
+    },
+    "cage_usd_panel": 167352540.0,
+    "care_per_100k": 38069765.77622919,
+    "care_per_capita": 380.50983351230036,
+    "bookings_total_intake_proxy": 6037,
+    "bookings_per_1000": 19.5,
+    "unemployment_rate": 3.6
+   },
+   "need_structure_context": {
+    "care_per_100k": 38069765.77622919,
+    "cage_per_100k": 53991656.98799845,
+    "cost_burden_30pct_plus_share": 51.2,
+    "median_home_value": 227800,
+    "snap_receipt_share_pct": 19.1,
+    "bachelors_pct": 10.2,
+    "poverty_rate": 26.6,
+    "unemployment_rate": 3.6
+   },
+   "actual": {
+    "murder_rate": 24.8,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {
+    "FE-3_t0_anchor": 25.28,
+    "FE-6_wide": 23.43,
+    "FE-2_care_cage_bookings": 24.85,
+    "FE-3_arc_tplus1_secondary": 23.29
+   },
+   "residual": {
+    "FE-3_t0_anchor": -0.44,
+    "FE-6_wide": 1.41,
+    "FE-2_care_cage_bookings": -0.0,
+    "FE-3_arc_tplus1_secondary": -0.34
+   },
+   "model_rows": {
+    "FE-3_t0_anchor": {
+     "n_rows": 20,
+     "n_cities": 4
+    },
+    "FE-6_wide": {
+     "n_rows": 31,
+     "n_cities": 5
+    },
+    "FE-2_care_cage_bookings": {
+     "n_rows": 19,
+     "n_cities": 4
+    },
+    "FE-3_arc_tplus1_secondary": {
+     "n_rows": 18,
+     "n_cities": 4
+    }
+   },
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null,
+    "murder_rate_t+1_banked": 22.95
+   },
+   "input_z_contributions": {
+    "care_per_100k": 0.04,
+    "cost_burden_30pct_plus_share": 0.24,
+    "median_home_value": 0.06,
+    "snap_receipt_share_pct": 0.27,
+    "bachelors_pct": -0.0
+   }
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2023,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 123968492,
+    "care_lanes_usd_component_book": {
+     "health": 64909830.0,
+     "housing": 3626470.0,
+     "libraries": 0.0,
+     "parks": 55432192.38
+    },
+    "cage_usd_panel": 168190360.0,
+    "care_per_100k": 40078137.31544015,
+    "care_per_capita": 396.40995491289556,
+    "bookings_total_intake_proxy": 5522,
+    "bookings_per_1000": 17.9,
+    "unemployment_rate": 3.4
+   },
+   "need_structure_context": {
+    "care_per_100k": 40078137.31544015,
+    "cage_per_100k": 54374754.701487474,
+    "cost_burden_30pct_plus_share": 52.6,
+    "median_home_value": 247300,
+    "snap_receipt_share_pct": 19.6,
+    "bachelors_pct": 8.4,
+    "poverty_rate": 21.3,
+    "unemployment_rate": 3.4
+   },
+   "actual": {
+    "murder_rate": 23.0,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {
+    "FE-3_t0_anchor": 25.1,
+    "FE-6_wide": 23.34,
+    "FE-2_care_cage_bookings": 24.77,
+    "FE-3_arc_tplus1_secondary": 23.59
+   },
+   "residual": {
+    "FE-3_t0_anchor": -2.14,
+    "FE-6_wide": -0.39,
+    "FE-2_care_cage_bookings": -1.82,
+    "FE-3_arc_tplus1_secondary": -0.05
+   },
+   "model_rows": {
+    "FE-3_t0_anchor": {
+     "n_rows": 20,
+     "n_cities": 4
+    },
+    "FE-6_wide": {
+     "n_rows": 31,
+     "n_cities": 5
+    },
+    "FE-2_care_cage_bookings": {
+     "n_rows": 19,
+     "n_cities": 4
+    },
+    "FE-3_arc_tplus1_secondary": {
+     "n_rows": 18,
+     "n_cities": 4
+    }
+   },
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null,
+    "grad_hs_completion_pct_banked_2023_vintage": 80.0,
+    "murder_rate_t+1_banked": 23.54
+   },
+   "input_z_contributions": {
+    "care_per_100k": 0.01,
+    "cost_burden_30pct_plus_share": -0.01,
+    "median_home_value": -0.02,
+    "snap_receipt_share_pct": 0.43,
+    "bachelors_pct": 0.0
+   }
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2024,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 137685732,
+    "care_lanes_usd_component_book": {
+     "health": 68003350.0,
+     "housing": 11104488.0,
+     "libraries": 0.0,
+     "parks": 58577893.88
+    },
+    "cage_usd_panel": 182063770.0,
+    "care_per_100k": 43797768.84978385,
+    "care_per_capita": 437.2988578234425,
+    "bookings_total_intake_proxy": 5332,
+    "bookings_per_1000": 17.0,
+    "unemployment_rate": 4.2
+   },
+   "need_structure_context": {
+    "care_per_100k": 43797768.84978385,
+    "cage_per_100k": 57914402.5931475,
+    "cost_burden_30pct_plus_share": 53.1,
+    "median_home_value": 263300,
+    "snap_receipt_share_pct": 15.6,
+    "bachelors_pct": 9.0,
+    "poverty_rate": 25.7,
+    "unemployment_rate": 4.2
+   },
+   "actual": {
+    "murder_rate": 23.5,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {
+    "FE-3_t0_anchor": 23.57,
+    "FE-6_wide": 23.39,
+    "FE-2_care_cage_bookings": 24.71,
+    "FE-3_arc_tplus1_secondary": 22.13
+   },
+   "residual": {
+    "FE-3_t0_anchor": -0.03,
+    "FE-6_wide": 0.15,
+    "FE-2_care_cage_bookings": -1.17,
+    "FE-3_arc_tplus1_secondary": -0.18
+   },
+   "model_rows": {
+    "FE-3_t0_anchor": {
+     "n_rows": 20,
+     "n_cities": 4
+    },
+    "FE-6_wide": {
+     "n_rows": 31,
+     "n_cities": 5
+    },
+    "FE-2_care_cage_bookings": {
+     "n_rows": 19,
+     "n_cities": 4
+    },
+    "FE-3_arc_tplus1_secondary": {
+     "n_rows": 18,
+     "n_cities": 4
+    }
+   },
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null,
+    "murder_rate_t+1_banked": 21.95
+   },
+   "input_z_contributions": {
+    "care_per_100k": -0.04,
+    "cost_burden_30pct_plus_share": -0.1,
+    "median_home_value": -0.09,
+    "snap_receipt_share_pct": -0.88,
+    "bachelors_pct": 0.0
+   }
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2025,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 149581097,
+    "care_lanes_usd_component_book": {
+     "health": 71369620.0,
+     "housing": 13171355.0,
+     "libraries": 0.0,
+     "parks": 65040121.56
+    },
+    "cage_usd_panel": 181286480.0,
+    "care_per_100k": 47581679.056643985,
+    "care_per_capita": 475.81678916680187,
+    "unemployment_rate": 4.6
+   },
+   "need_structure_context": {
+    "care_per_100k": 47581679.056643985,
+    "cage_per_100k": 57667146.99698123,
+    "cost_burden_30pct_plus_share": 53.0,
+    "median_home_value": 283300,
+    "snap_receipt_share_pct": 16.5,
+    "bachelors_pct": 8.3,
+    "poverty_rate": 22.7,
+    "unemployment_rate": 4.6
+   },
+   "actual": {
+    "murder_rate": 21.9,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {
+    "FE-3_t0_anchor": 23.75,
+    "FE-6_wide": 23.37
+   },
+   "residual": {
+    "FE-3_t0_anchor": -1.8,
+    "FE-6_wide": -1.42
+   },
+   "model_rows": {
+    "FE-3_t0_anchor": {
+     "n_rows": 20,
+     "n_cities": 4
+    },
+    "FE-6_wide": {
+     "n_rows": 31,
+     "n_cities": 5
+    }
+   },
+   "secondary_outcomes": {},
+   "input_z_contributions": {
+    "care_per_100k": -0.09,
+    "cost_burden_30pct_plus_share": -0.08,
+    "median_home_value": -0.17,
+    "snap_receipt_share_pct": -0.58,
+    "bachelors_pct": 0.0
+   }
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2026,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 158760879,
+    "care_lanes_usd_component_book": {
+     "health": 78033880.0,
+     "housing": 11238760.0,
+     "libraries": 0.0,
+     "parks": 69488239.0
+    },
+    "cage_usd_panel": 190043650.0,
+    "care_per_capita": 513.2627013710853
+   },
+   "need_structure_context": {},
+   "actual": {
+    "murder_rate": 14.55,
+    "source": "outcome-series priority=murders_all src=murders_all / pop-bank"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "Cincinnati",
+   "year": 2027,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 139264047,
+    "care_lanes_usd_component_book": {
+     "health": 71072820.0,
+     "housing": 0.0,
+     "libraries": 0.0,
+     "parks": 68191227.0
+    },
+    "cage_usd_panel": 191956400.0,
+    "care_per_100k": 44299830.134842396
+   },
+   "need_structure_context": {
+    "care_per_100k": 44299830.134842396,
+    "cage_per_100k": 61061243.70560523
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "Detroit",
+   "year": 2020,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 160373216,
+    "care_lanes_usd_component_book": {
+     "health": 33769914.0,
+     "housing": 93080547.0,
+     "libraries": 33522999.0,
+     "parks": -244.0
+    },
+    "care_per_100k": 25120370.164421797,
+    "care_per_capita": 251.20370164421797,
+    "bookings_total_intake_proxy": 13891,
+    "bookings_per_1000": 21.8,
+    "unemployment_rate": 13.6
+   },
+   "need_structure_context": {
+    "care_per_100k": 25120370.164421797,
+    "unemployment_rate": 13.6
+   },
+   "actual": {
+    "murder_rate": 50.3,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {
+    "FE-6_wide": 42.27
+   },
+   "residual": {
+    "FE-6_wide": 8.01
+   },
+   "model_rows": {
+    "FE-6_wide": {
+     "n_rows": 31,
+     "n_cities": 5
+    }
+   },
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null,
+    "murder_rate_t+1_banked": 48.19
+   }
+  },
+  {
+   "city": "Detroit",
+   "year": 2021,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 186498323,
+    "care_lanes_usd_component_book": {
+     "health": 41410471.0,
+     "housing": 62427194.0,
+     "libraries": 35466670.0,
+     "parks": 47193988.0
+    },
+    "care_per_100k": 29367687.222657885,
+    "care_per_capita": 293.67687222657884,
+    "bookings_total_intake_proxy": 12916,
+    "bookings_per_1000": 20.3,
+    "unemployment_rate": 7.6
+   },
+   "need_structure_context": {
+    "care_per_100k": 29367687.222657885,
+    "cost_burden_30pct_plus_share": 59.8,
+    "median_home_value": 69300,
+    "snap_receipt_share_pct": 39.6,
+    "bachelors_pct": 15.8,
+    "poverty_rate": 30.2,
+    "unemployment_rate": 7.6
+   },
+   "actual": {
+    "murder_rate": 48.2,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {
+    "FE-3_t0_anchor": 39.47,
+    "FE-6_wide": 41.11,
+    "FE-3_arc_tplus1_secondary": 36.92
+   },
+   "residual": {
+    "FE-3_t0_anchor": 8.72,
+    "FE-6_wide": 7.07,
+    "FE-3_arc_tplus1_secondary": 11.42
+   },
+   "model_rows": {
+    "FE-3_t0_anchor": {
+     "n_rows": 20,
+     "n_cities": 4
+    },
+    "FE-6_wide": {
+     "n_rows": 31,
+     "n_cities": 5
+    },
+    "FE-3_arc_tplus1_secondary": {
+     "n_rows": 18,
+     "n_cities": 4
+    }
+   },
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null,
+    "murder_rate_t+1_banked": 48.35
+   },
+   "input_z_contributions": {
+    "care_per_100k": 0.38,
+    "cost_burden_30pct_plus_share": 0.15,
+    "median_home_value": 0.08,
+    "snap_receipt_share_pct": 0.37,
+    "bachelors_pct": 0.0
+   }
+  },
+  {
+   "city": "Detroit",
+   "year": 2022,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 189319625,
+    "care_lanes_usd_component_book": {
+     "health": 42757539.0,
+     "housing": 69936162.0,
+     "libraries": 27835308.0,
+     "parks": 48790616.0
+    },
+    "cage_usd_panel": 357320900.0,
+    "care_per_100k": 29622338.686081134,
+    "care_per_capita": 298.50828341629625,
+    "bookings_total_intake_proxy": 10571,
+    "bookings_per_1000": 16.5,
+    "unemployment_rate": 4.7
+   },
+   "need_structure_context": {
+    "care_per_100k": 29622338.686081134,
+    "cage_per_100k": 55909051.79225518,
+    "cost_burden_30pct_plus_share": 61.3,
+    "median_home_value": 83600,
+    "snap_receipt_share_pct": 41.7,
+    "bachelors_pct": 17.7,
+    "poverty_rate": 33.8,
+    "unemployment_rate": 4.7
+   },
+   "actual": {
+    "murder_rate": 48.3,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {
+    "FE-3_t0_anchor": 39.82,
+    "FE-6_wide": 40.59,
+    "FE-2_care_cage_bookings": 41.1,
+    "FE-3_arc_tplus1_secondary": 36.98
+   },
+   "residual": {
+    "FE-3_t0_anchor": 8.53,
+    "FE-6_wide": 7.75,
+    "FE-2_care_cage_bookings": 7.25,
+    "FE-3_arc_tplus1_secondary": 2.24
+   },
+   "model_rows": {
+    "FE-3_t0_anchor": {
+     "n_rows": 20,
+     "n_cities": 4
+    },
+    "FE-6_wide": {
+     "n_rows": 31,
+     "n_cities": 5
+    },
+    "FE-2_care_cage_bookings": {
+     "n_rows": 19,
+     "n_cities": 4
+    },
+    "FE-3_arc_tplus1_secondary": {
+     "n_rows": 18,
+     "n_cities": 4
+    }
+   },
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null,
+    "murder_rate_t+1_banked": 39.22
+   },
+   "input_z_contributions": {
+    "care_per_100k": 0.37,
+    "cost_burden_30pct_plus_share": -0.12,
+    "median_home_value": 0.02,
+    "snap_receipt_share_pct": 1.06,
+    "bachelors_pct": -0.01
+   }
+  },
+  {
+   "city": "Detroit",
+   "year": 2023,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 429071989,
+    "care_lanes_usd_component_book": {
+     "health": 94608619.0,
+     "housing": 172819831.0,
+     "libraries": 65457126.0,
+     "parks": 96186413.0
+    },
+    "care_per_100k": 67310478.12227431,
+    "care_per_capita": 673.1047812227431,
+    "bookings_total_intake_proxy": 11355,
+    "bookings_per_1000": 17.8,
+    "unemployment_rate": 4.3
+   },
+   "need_structure_context": {
+    "care_per_100k": 67310478.12227431,
+    "cost_burden_30pct_plus_share": 59.5,
+    "median_home_value": 86400,
+    "snap_receipt_share_pct": 37.4,
+    "bachelors_pct": 15.5,
+    "poverty_rate": 31.9,
+    "unemployment_rate": 4.3
+   },
+   "actual": {
+    "murder_rate": 39.2,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {
+    "FE-3_t0_anchor": 38.19,
+    "FE-6_wide": 39.58,
+    "FE-3_arc_tplus1_secondary": 35.6
+   },
+   "residual": {
+    "FE-3_t0_anchor": 1.02,
+    "FE-6_wide": -0.36,
+    "FE-3_arc_tplus1_secondary": -4.33
+   },
+   "model_rows": {
+    "FE-3_t0_anchor": {
+     "n_rows": 20,
+     "n_cities": 4
+    },
+    "FE-6_wide": {
+     "n_rows": 31,
+     "n_cities": 5
+    },
+    "FE-3_arc_tplus1_secondary": {
+     "n_rows": 18,
+     "n_cities": 4
+    }
+   },
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null,
+    "murder_rate_t+1_banked": 31.27
+   },
+   "input_z_contributions": {
+    "care_per_100k": -0.16,
+    "cost_burden_30pct_plus_share": 0.2,
+    "median_home_value": 0.0,
+    "snap_receipt_share_pct": -0.35,
+    "bachelors_pct": 0.0
+   }
+  },
+  {
+   "city": "Detroit",
+   "year": 2024,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 600025644,
+    "care_lanes_usd_component_book": {
+     "health": 129858370.0,
+     "housing": 203241599.0,
+     "libraries": 98574695.0,
+     "parks": 168350980.0
+    },
+    "cage_usd_panel": 370731109.0,
+    "care_per_100k": 92440342.93901509,
+    "care_per_capita": 931.6662044764648,
+    "bookings_total_intake_proxy": 11047,
+    "bookings_per_1000": 17.0,
+    "unemployment_rate": 5.5
+   },
+   "need_structure_context": {
+    "care_per_100k": 92440342.93901509,
+    "cage_per_100k": 57115076.99181168,
+    "cost_burden_30pct_plus_share": 61.6,
+    "median_home_value": 95900,
+    "snap_receipt_share_pct": 36.6,
+    "bachelors_pct": 16.5,
+    "poverty_rate": 34.5,
+    "unemployment_rate": 5.5
+   },
+   "actual": {
+    "murder_rate": 31.3,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {
+    "FE-3_t0_anchor": 37.16,
+    "FE-6_wide": 39.16,
+    "FE-2_care_cage_bookings": 38.53,
+    "FE-3_arc_tplus1_secondary": 34.76
+   },
+   "residual": {
+    "FE-3_t0_anchor": -5.89,
+    "FE-6_wide": -7.89,
+    "FE-2_care_cage_bookings": -7.25,
+    "FE-3_arc_tplus1_secondary": -9.34
+   },
+   "model_rows": {
+    "FE-3_t0_anchor": {
+     "n_rows": 20,
+     "n_cities": 4
+    },
+    "FE-6_wide": {
+     "n_rows": 31,
+     "n_cities": 5
+    },
+    "FE-2_care_cage_bookings": {
+     "n_rows": 19,
+     "n_cities": 4
+    },
+    "FE-3_arc_tplus1_secondary": {
+     "n_rows": 18,
+     "n_cities": 4
+    }
+   },
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null,
+    "murder_rate_t+1_banked": 25.42
+   },
+   "input_z_contributions": {
+    "care_per_100k": -0.51,
+    "cost_burden_30pct_plus_share": -0.17,
+    "median_home_value": -0.04,
+    "snap_receipt_share_pct": -0.61,
+    "bachelors_pct": -0.0
+   }
+  },
+  {
+   "city": "Detroit",
+   "year": 2025,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 405303627,
+    "care_lanes_usd_component_book": {
+     "health": 87891672.0,
+     "housing": 148009352.0,
+     "libraries": 68159398.0,
+     "parks": 101243205.0
+    },
+    "care_per_100k": 62441341.71423289,
+    "care_per_capita": 624.413417142329,
+    "unemployment_rate": 6.0
+   },
+   "need_structure_context": {
+    "care_per_100k": 62441341.71423289,
+    "cost_burden_30pct_plus_share": 61.0,
+    "median_home_value": 102600,
+    "snap_receipt_share_pct": 37.0,
+    "bachelors_pct": 14.6,
+    "poverty_rate": 30.4,
+    "unemployment_rate": 6.0
+   },
+   "actual": {
+    "murder_rate": 25.4,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {
+    "FE-3_t0_anchor": 37.8,
+    "FE-6_wide": 40.0
+   },
+   "residual": {
+    "FE-3_t0_anchor": -12.38,
+    "FE-6_wide": -14.58
+   },
+   "model_rows": {
+    "FE-3_t0_anchor": {
+     "n_rows": 20,
+     "n_cities": 4
+    },
+    "FE-6_wide": {
+     "n_rows": 31,
+     "n_cities": 5
+    }
+   },
+   "secondary_outcomes": {},
+   "input_z_contributions": {
+    "care_per_100k": -0.09,
+    "cost_burden_30pct_plus_share": -0.06,
+    "median_home_value": -0.06,
+    "snap_receipt_share_pct": -0.48,
+    "bachelors_pct": 0.0
+   }
+  },
+  {
+   "city": "Detroit",
+   "year": 2026,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 199307497,
+    "care_lanes_usd_component_book": {
+     "health": 44235715.0,
+     "housing": 67600702.0,
+     "libraries": 40419705.0,
+     "parks": 47051375.0
+    },
+    "cage_usd_panel": 436600205.0,
+    "care_per_capita": 307.054432710158
+   },
+   "need_structure_context": {},
+   "actual": {
+    "murder_rate": 18.95,
+    "source": "outcome-series priority=murders_all src=murders_all / pop-bank"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "Detroit",
+   "year": 2027,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 203586617,
+    "care_lanes_usd_component_book": {
+     "health": 45073585.0,
+     "housing": 68742212.0,
+     "libraries": 41228098.0,
+     "parks": 48542722.0
+    }
+   },
+   "need_structure_context": {},
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "Detroit",
+   "year": 2028,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 207927892,
+    "care_lanes_usd_component_book": {
+     "health": 45927992.0,
+     "housing": 69905519.0,
+     "libraries": 42052660.0,
+     "parks": 50041721.0
+    }
+   },
+   "need_structure_context": {},
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "Memphis",
+   "year": 2021,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 130440246,
+    "care_lanes_usd_component_book": {
+     "housing": 6465421.0,
+     "human_services": 67895674.0,
+     "libraries": 21206316.0,
+     "parks": 34872835.0
+    },
+    "cage_usd_panel": 283008537.0,
+    "care_per_100k": 20603288.87512952,
+    "care_per_capita": 209.52876356737949,
+    "bookings_total_intake_proxy": 19949,
+    "bookings_per_1000": 31.5,
+    "unemployment_rate": 6.9
+   },
+   "need_structure_context": {
+    "care_per_100k": 20603288.87512952,
+    "cage_per_100k": 44701745.21089742,
+    "cost_burden_30pct_plus_share": 55.4,
+    "median_home_value": 142800,
+    "snap_receipt_share_pct": 20.1,
+    "bachelors_pct": 12.8,
+    "poverty_rate": 22.6,
+    "unemployment_rate": 6.9
+   },
+   "actual": {
+    "murder_rate": 54.5,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {
+    "FE-3_t0_anchor": 46.7,
+    "FE-6_wide": 46.17,
+    "FE-2_care_cage_bookings": 49.66,
+    "FE-3_arc_tplus1_secondary": 40.46
+   },
+   "residual": {
+    "FE-3_t0_anchor": 7.79,
+    "FE-6_wide": 8.33,
+    "FE-2_care_cage_bookings": 4.84,
+    "FE-3_arc_tplus1_secondary": 7.56
+   },
+   "model_rows": {
+    "FE-3_t0_anchor": {
+     "n_rows": 20,
+     "n_cities": 4
+    },
+    "FE-6_wide": {
+     "n_rows": 31,
+     "n_cities": 5
+    },
+    "FE-2_care_cage_bookings": {
+     "n_rows": 19,
+     "n_cities": 4
+    },
+    "FE-3_arc_tplus1_secondary": {
+     "n_rows": 18,
+     "n_cities": 4
+    }
+   },
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null,
+    "murder_rate_t+1_banked": 48.02
+   },
+   "input_z_contributions": {
+    "care_per_100k": 0.02,
+    "cost_burden_30pct_plus_share": 0.15,
+    "median_home_value": 0.18,
+    "snap_receipt_share_pct": 0.57,
+    "bachelors_pct": -0.0
+   }
+  },
+  {
+   "city": "Memphis",
+   "year": 2022,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 105006818,
+    "care_lanes_usd_component_book": {
+     "housing": 4832737.0,
+     "human_services": 38304904.0,
+     "libraries": 22919401.0,
+     "parks": 38949776.0
+    },
+    "cage_usd_panel": 287688669.0,
+    "care_per_100k": 16586029.78341631,
+    "care_per_capita": 169.666583185356,
+    "bookings_total_intake_proxy": 22563,
+    "bookings_per_1000": 35.6,
+    "unemployment_rate": 4.4
+   },
+   "need_structure_context": {
+    "care_per_100k": 16586029.78341631,
+    "cage_per_100k": 45440981.102630846,
+    "cost_burden_30pct_plus_share": 57.9,
+    "median_home_value": 173400,
+    "snap_receipt_share_pct": 21.1,
+    "bachelors_pct": 11.3,
+    "poverty_rate": 21.4,
+    "unemployment_rate": 4.4
+   },
+   "actual": {
+    "murder_rate": 48.0,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {
+    "FE-3_t0_anchor": 46.52,
+    "FE-6_wide": 45.83,
+    "FE-2_care_cage_bookings": 49.85,
+    "FE-3_arc_tplus1_secondary": 40.82
+   },
+   "residual": {
+    "FE-3_t0_anchor": 1.5,
+    "FE-6_wide": 2.19,
+    "FE-2_care_cage_bookings": -1.83,
+    "FE-3_arc_tplus1_secondary": 15.06
+   },
+   "model_rows": {
+    "FE-3_t0_anchor": {
+     "n_rows": 20,
+     "n_cities": 4
+    },
+    "FE-6_wide": {
+     "n_rows": 31,
+     "n_cities": 5
+    },
+    "FE-2_care_cage_bookings": {
+     "n_rows": 19,
+     "n_cities": 4
+    },
+    "FE-3_arc_tplus1_secondary": {
+     "n_rows": 18,
+     "n_cities": 4
+    }
+   },
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null,
+    "murder_rate_t+1_banked": 55.88
+   },
+   "input_z_contributions": {
+    "care_per_100k": 0.07,
+    "cost_burden_30pct_plus_share": -0.29,
+    "median_home_value": 0.05,
+    "snap_receipt_share_pct": 0.9,
+    "bachelors_pct": 0.0
+   }
+  },
+  {
+   "city": "Memphis",
+   "year": 2023,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 127084880,
+    "care_lanes_usd_component_book": {
+     "housing": 4808050.0,
+     "human_services": 58526010.0,
+     "libraries": 22872537.0,
+     "parks": 40878283.0
+    },
+    "cage_usd_panel": 292653661.0,
+    "care_per_100k": 20642927.45364941,
+    "care_per_capita": 206.4292745364941,
+    "bookings_total_intake_proxy": 14821,
+    "bookings_per_1000": 24.1,
+    "unemployment_rate": 4.2
+   },
+   "need_structure_context": {
+    "care_per_100k": 20642927.45364941,
+    "cage_per_100k": 47536955.5612588,
+    "cost_burden_30pct_plus_share": 54.6,
+    "median_home_value": 200900,
+    "snap_receipt_share_pct": 19.1,
+    "bachelors_pct": 11.9,
+    "poverty_rate": 22.6,
+    "unemployment_rate": 4.2
+   },
+   "actual": {
+    "murder_rate": 55.9,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {
+    "FE-3_t0_anchor": 46.27,
+    "FE-6_wide": 45.69,
+    "FE-2_care_cage_bookings": 49.72,
+    "FE-3_arc_tplus1_secondary": 39.63
+   },
+   "residual": {
+    "FE-3_t0_anchor": 9.61,
+    "FE-6_wide": 10.19,
+    "FE-2_care_cage_bookings": 6.16,
+    "FE-3_arc_tplus1_secondary": 0.74
+   },
+   "model_rows": {
+    "FE-3_t0_anchor": {
+     "n_rows": 20,
+     "n_cities": 4
+    },
+    "FE-6_wide": {
+     "n_rows": 31,
+     "n_cities": 5
+    },
+    "FE-2_care_cage_bookings": {
+     "n_rows": 19,
+     "n_cities": 4
+    },
+    "FE-3_arc_tplus1_secondary": {
+     "n_rows": 18,
+     "n_cities": 4
+    }
+   },
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null,
+    "grad_hs_completion_pct_banked_2023_vintage": 81.0,
+    "murder_rate_t+1_banked": 40.38
+   },
+   "input_z_contributions": {
+    "care_per_100k": 0.01,
+    "cost_burden_30pct_plus_share": 0.29,
+    "median_home_value": -0.07,
+    "snap_receipt_share_pct": 0.24,
+    "bachelors_pct": 0.0
+   }
+  },
+  {
+   "city": "Memphis",
+   "year": 2024,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 165662953,
+    "care_lanes_usd_component_book": {
+     "housing": 4407394.0,
+     "human_services": 85419441.0,
+     "libraries": 22504072.0,
+     "parks": 53332046.0
+    },
+    "cage_usd_panel": 310025710.0,
+    "care_per_100k": 26971185.17409015,
+    "care_per_capita": 269.7118517409015,
+    "bookings_total_intake_proxy": 16489,
+    "bookings_per_1000": 26.8,
+    "unemployment_rate": 4.4
+   },
+   "need_structure_context": {
+    "care_per_100k": 26971185.17409015,
+    "cage_per_100k": 50474536.89382666,
+    "cost_burden_30pct_plus_share": 56.8,
+    "median_home_value": 209800,
+    "snap_receipt_share_pct": 16.7,
+    "bachelors_pct": 13.2,
+    "poverty_rate": 24.0,
+    "unemployment_rate": 4.4
+   },
+   "actual": {
+    "murder_rate": 40.4,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {
+    "FE-3_t0_anchor": 44.96,
+    "FE-6_wide": 45.57,
+    "FE-2_care_cage_bookings": 49.54,
+    "FE-3_arc_tplus1_secondary": 38.57
+   },
+   "residual": {
+    "FE-3_t0_anchor": -4.59,
+    "FE-6_wide": -5.19,
+    "FE-2_care_cage_bookings": -9.17,
+    "FE-3_arc_tplus1_secondary": -8.39
+   },
+   "model_rows": {
+    "FE-3_t0_anchor": {
+     "n_rows": 20,
+     "n_cities": 4
+    },
+    "FE-6_wide": {
+     "n_rows": 31,
+     "n_cities": 5
+    },
+    "FE-2_care_cage_bookings": {
+     "n_rows": 19,
+     "n_cities": 4
+    },
+    "FE-3_arc_tplus1_secondary": {
+     "n_rows": 18,
+     "n_cities": 4
+    }
+   },
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null,
+    "murder_rate_t+1_banked": 30.18
+   },
+   "input_z_contributions": {
+    "care_per_100k": -0.07,
+    "cost_burden_30pct_plus_share": -0.1,
+    "median_home_value": -0.11,
+    "snap_receipt_share_pct": -0.54,
+    "bachelors_pct": -0.0
+   }
+  },
+  {
+   "city": "Memphis",
+   "year": 2025,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 144167104,
+    "care_lanes_usd_component_book": {
+     "housing": 6165685.0,
+     "human_services": 65726249.0,
+     "libraries": 24977210.0,
+     "parks": 47297960.0
+    },
+    "cage_usd_panel": 309422737.0,
+    "care_per_100k": 23647636.09104941,
+    "care_per_capita": 236.4763609104941,
+    "unemployment_rate": 4.6
+   },
+   "need_structure_context": {
+    "care_per_100k": 23647636.09104941,
+    "cage_per_100k": 50754409.84700983,
+    "cost_burden_30pct_plus_share": 56.5,
+    "median_home_value": 198200,
+    "snap_receipt_share_pct": 14.8,
+    "bachelors_pct": 11.2,
+    "poverty_rate": 21.4,
+    "unemployment_rate": 4.6
+   },
+   "actual": {
+    "murder_rate": 30.2,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {
+    "FE-3_t0_anchor": 44.49,
+    "FE-6_wide": 45.69,
+    "FE-3_arc_tplus1_secondary": 38.64
+   },
+   "residual": {
+    "FE-3_t0_anchor": -14.31,
+    "FE-6_wide": -15.51,
+    "FE-3_arc_tplus1_secondary": -14.97
+   },
+   "model_rows": {
+    "FE-3_t0_anchor": {
+     "n_rows": 20,
+     "n_cities": 4
+    },
+    "FE-6_wide": {
+     "n_rows": 31,
+     "n_cities": 5
+    },
+    "FE-3_arc_tplus1_secondary": {
+     "n_rows": 18,
+     "n_cities": 4
+    }
+   },
+   "secondary_outcomes": {
+    "murder_rate_t+1_banked": 23.67
+   },
+   "input_z_contributions": {
+    "care_per_100k": -0.03,
+    "cost_burden_30pct_plus_share": -0.05,
+    "median_home_value": -0.06,
+    "snap_receipt_share_pct": -1.17,
+    "bachelors_pct": 0.0
+   }
+  },
+  {
+   "city": "Memphis",
+   "year": 2026,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 148694050,
+    "care_lanes_usd_component_book": {
+     "housing": 6293120.0,
+     "human_services": 64653371.0,
+     "libraries": 26144616.0,
+     "parks": 51602943.0
+    },
+    "cage_usd_panel": 314040649.0,
+    "care_per_100k": 23942132.43250206,
+    "care_per_capita": 239.4213243250206
+   },
+   "need_structure_context": {
+    "care_per_100k": 23942132.43250206,
+    "cage_per_100k": 50565592.95780091
+   },
+   "actual": {
+    "murder_rate": 23.7,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "St. Louis",
+   "year": 2019,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 70072095,
+    "care_lanes_usd_component_book": {
+     "health": 21913981.0,
+     "human_services": 18412451.0,
+     "parks": 29745663.0
+    },
+    "cage_usd_panel": 254577601.0,
+    "care_per_100k": 23312604.79878633,
+    "care_per_capita": 233.1260479878633,
+    "bookings_total_intake_proxy": 21005,
+    "bookings_per_1000": 69.9,
+    "unemployment_rate": 3.5
+   },
+   "need_structure_context": {
+    "care_per_100k": 23312604.79878633,
+    "cage_per_100k": 84696582.89417651,
+    "unemployment_rate": 3.5
+   },
+   "actual": {
+    "murder_rate": 64.5,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {
+    "FE-6_wide": 64.5,
+    "FE-2_care_cage_bookings": 68.97
+   },
+   "residual": {
+    "FE-6_wide": 0.04,
+    "FE-2_care_cage_bookings": -4.42
+   },
+   "model_rows": {
+    "FE-6_wide": {
+     "n_rows": 31,
+     "n_cities": 5
+    },
+    "FE-2_care_cage_bookings": {
+     "n_rows": 19,
+     "n_cities": 4
+    }
+   },
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null,
+    "murder_rate_t+1_banked": 87.21
+   }
+  },
+  {
+   "city": "St. Louis",
+   "year": 2020,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 68050086,
+    "care_lanes_usd_component_book": {
+     "health": 22635482.0,
+     "human_services": 17893262.0,
+     "parks": 27521342.0
+    },
+    "cage_usd_panel": 435802532.0,
+    "care_per_100k": 22564671.82619422,
+    "care_per_capita": 225.6467182619422,
+    "bookings_total_intake_proxy": 13466,
+    "bookings_per_1000": 44.7,
+    "unemployment_rate": 8.1
+   },
+   "need_structure_context": {
+    "care_per_100k": 22564671.82619422,
+    "cage_per_100k": 144507401.7335482,
+    "unemployment_rate": 8.1
+   },
+   "actual": {
+    "murder_rate": 87.2,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {
+    "FE-6_wide": 65.33,
+    "FE-2_care_cage_bookings": 70.6
+   },
+   "residual": {
+    "FE-6_wide": 21.88,
+    "FE-2_care_cage_bookings": 16.61
+   },
+   "model_rows": {
+    "FE-6_wide": {
+     "n_rows": 31,
+     "n_cities": 5
+    },
+    "FE-2_care_cage_bookings": {
+     "n_rows": 19,
+     "n_cities": 4
+    }
+   },
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null,
+    "murder_rate_t+1_banked": 69.21
+   }
+  },
+  {
+   "city": "St. Louis",
+   "year": 2021,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 68994044,
+    "care_lanes_usd_component_book": {
+     "health": 22560624.0,
+     "human_services": 19525922.0,
+     "parks": 26907498.0
+    },
+    "cage_usd_panel": 427352568.0,
+    "care_per_100k": 23522567.93154001,
+    "care_per_capita": 235.03096204092617,
+    "bookings_total_intake_proxy": 9378,
+    "bookings_per_1000": 32.0,
+    "unemployment_rate": 5.5
+   },
+   "need_structure_context": {
+    "care_per_100k": 23522567.93154001,
+    "cage_per_100k": 145699965.2245065,
+    "cost_burden_30pct_plus_share": 45.5,
+    "median_home_value": 170800,
+    "snap_receipt_share_pct": 19.4,
+    "bachelors_pct": 10.8,
+    "poverty_rate": 20.4,
+    "unemployment_rate": 5.5
+   },
+   "actual": {
+    "murder_rate": 69.2,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {
+    "FE-3_t0_anchor": 61.05,
+    "FE-6_wide": 64.85,
+    "FE-2_care_cage_bookings": 70.57,
+    "FE-3_arc_tplus1_secondary": 53.32
+   },
+   "residual": {
+    "FE-3_t0_anchor": 8.16,
+    "FE-6_wide": 4.36,
+    "FE-2_care_cage_bookings": -1.36,
+    "FE-3_arc_tplus1_secondary": 17.04
+   },
+   "model_rows": {
+    "FE-3_t0_anchor": {
+     "n_rows": 20,
+     "n_cities": 4
+    },
+    "FE-6_wide": {
+     "n_rows": 31,
+     "n_cities": 5
+    },
+    "FE-2_care_cage_bookings": {
+     "n_rows": 19,
+     "n_cities": 4
+    },
+    "FE-3_arc_tplus1_secondary": {
+     "n_rows": 18,
+     "n_cities": 4
+    }
+   },
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null,
+    "murder_rate_t+1_banked": 70.36
+   },
+   "input_z_contributions": {
+    "care_per_100k": 0.16,
+    "cost_burden_30pct_plus_share": 0.16,
+    "median_home_value": 0.12,
+    "snap_receipt_share_pct": 0.67,
+    "bachelors_pct": -0.0
+   }
+  },
+  {
+   "city": "St. Louis",
+   "year": 2022,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 102426533,
+    "care_lanes_usd_component_book": {
+     "health": 34646545.0,
+     "human_services": 32160153.0,
+     "parks": 35619835.0
+    },
+    "cage_usd_panel": 238772348.0,
+    "care_per_100k": 35856350.25099944,
+    "care_per_capita": 357.49848346823313,
+    "bookings_total_intake_proxy": 9038,
+    "bookings_per_1000": 31.6,
+    "unemployment_rate": 3.0
+   },
+   "need_structure_context": {
+    "care_per_100k": 35856350.25099944,
+    "cage_per_100k": 83586788.39731427,
+    "cost_burden_30pct_plus_share": 45.3,
+    "median_home_value": 190400,
+    "snap_receipt_share_pct": 18.1,
+    "bachelors_pct": 7.9,
+    "poverty_rate": 20.4,
+    "unemployment_rate": 3.0
+   },
+   "actual": {
+    "murder_rate": 70.4,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {
+    "FE-3_t0_anchor": 60.41,
+    "FE-6_wide": 64.1,
+    "FE-2_care_cage_bookings": 68.35,
+    "FE-3_arc_tplus1_secondary": 53.14
+   },
+   "residual": {
+    "FE-3_t0_anchor": 9.96,
+    "FE-6_wide": 6.26,
+    "FE-2_care_cage_bookings": 2.01,
+    "FE-3_arc_tplus1_secondary": 2.65
+   },
+   "model_rows": {
+    "FE-3_t0_anchor": {
+     "n_rows": 20,
+     "n_cities": 4
+    },
+    "FE-6_wide": {
+     "n_rows": 31,
+     "n_cities": 5
+    },
+    "FE-2_care_cage_bookings": {
+     "n_rows": 19,
+     "n_cities": 4
+    },
+    "FE-3_arc_tplus1_secondary": {
+     "n_rows": 18,
+     "n_cities": 4
+    }
+   },
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null,
+    "murder_rate_t+1_banked": 55.79
+   },
+   "input_z_contributions": {
+    "care_per_100k": -0.01,
+    "cost_burden_30pct_plus_share": 0.19,
+    "median_home_value": 0.04,
+    "snap_receipt_share_pct": 0.24,
+    "bachelors_pct": 0.0
+   }
+  },
+  {
+   "city": "St. Louis",
+   "year": 2023,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 89555171,
+    "care_lanes_usd_component_book": {
+     "health": 30158360.0,
+     "human_services": 27590743.0,
+     "parks": 31806068.0
+    },
+    "cage_usd_panel": 247141231.0,
+    "care_per_100k": 31623705.286203608,
+    "care_per_capita": 316.2370528620361,
+    "bookings_total_intake_proxy": 9147,
+    "bookings_per_1000": 32.3,
+    "unemployment_rate": 3.5
+   },
+   "need_structure_context": {
+    "care_per_100k": 31623705.286203608,
+    "cage_per_100k": 87270465.41191426,
+    "cost_burden_30pct_plus_share": 46.3,
+    "median_home_value": 192800,
+    "snap_receipt_share_pct": 16.8,
+    "bachelors_pct": 8.4,
+    "poverty_rate": 19.6,
+    "unemployment_rate": 3.5
+   },
+   "actual": {
+    "murder_rate": 55.8,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {
+    "FE-3_t0_anchor": 59.85,
+    "FE-6_wide": 64.3,
+    "FE-2_care_cage_bookings": 68.63,
+    "FE-3_arc_tplus1_secondary": 52.75
+   },
+   "residual": {
+    "FE-3_t0_anchor": -4.06,
+    "FE-6_wide": -8.5,
+    "FE-2_care_cage_bookings": -12.84,
+    "FE-3_arc_tplus1_secondary": 0.88
+   },
+   "model_rows": {
+    "FE-3_t0_anchor": {
+     "n_rows": 20,
+     "n_cities": 4
+    },
+    "FE-6_wide": {
+     "n_rows": 31,
+     "n_cities": 5
+    },
+    "FE-2_care_cage_bookings": {
+     "n_rows": 19,
+     "n_cities": 4
+    },
+    "FE-3_arc_tplus1_secondary": {
+     "n_rows": 18,
+     "n_cities": 4
+    }
+   },
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null,
+    "grad_hs_completion_pct_banked_2023_vintage": 70.0,
+    "murder_rate_t+1_banked": 53.63
+   },
+   "input_z_contributions": {
+    "care_per_100k": 0.05,
+    "cost_burden_30pct_plus_share": 0.01,
+    "median_home_value": 0.03,
+    "snap_receipt_share_pct": -0.18,
+    "bachelors_pct": 0.0
+   }
+  },
+  {
+   "city": "St. Louis",
+   "year": 2024,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 122053162,
+    "care_lanes_usd_component_book": {
+     "health": 33205131.0,
+     "human_services": 49833073.0,
+     "parks": 39014958.0
+    },
+    "care_per_100k": 43637949.194658466,
+    "care_per_capita": 436.37949194658466,
+    "bookings_total_intake_proxy": 9260,
+    "bookings_per_1000": 33.1,
+    "unemployment_rate": 4.2
+   },
+   "need_structure_context": {
+    "care_per_100k": 43637949.194658466,
+    "cost_burden_30pct_plus_share": 51.5,
+    "median_home_value": 214500,
+    "snap_receipt_share_pct": 17.9,
+    "bachelors_pct": 9.2,
+    "poverty_rate": 21.7,
+    "unemployment_rate": 4.2
+   },
+   "actual": {
+    "murder_rate": 53.6,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {
+    "FE-3_t0_anchor": 59.03,
+    "FE-6_wide": 64.12,
+    "FE-3_arc_tplus1_secondary": 52.62
+   },
+   "residual": {
+    "FE-3_t0_anchor": -5.4,
+    "FE-6_wide": -10.49,
+    "FE-3_arc_tplus1_secondary": -1.92
+   },
+   "model_rows": {
+    "FE-3_t0_anchor": {
+     "n_rows": 20,
+     "n_cities": 4
+    },
+    "FE-6_wide": {
+     "n_rows": 31,
+     "n_cities": 5
+    },
+    "FE-3_arc_tplus1_secondary": {
+     "n_rows": 18,
+     "n_cities": 4
+    }
+   },
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null,
+    "murder_rate_t+1_banked": 50.69
+   },
+   "input_z_contributions": {
+    "care_per_100k": -0.12,
+    "cost_burden_30pct_plus_share": -0.91,
+    "median_home_value": -0.06,
+    "snap_receipt_share_pct": 0.18,
+    "bachelors_pct": 0.0
+   }
+  },
+  {
+   "city": "St. Louis",
+   "year": 2025,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 115843343,
+    "care_lanes_usd_component_book": {
+     "health": 35726433.0,
+     "human_services": 37169260.0,
+     "parks": 42947650.0
+    },
+    "cage_usd_panel": 254810117.0,
+    "care_per_100k": 41648693.842038654,
+    "care_per_capita": 416.48693842038654,
+    "unemployment_rate": 4.6
+   },
+   "need_structure_context": {
+    "care_per_100k": 41648693.842038654,
+    "cage_per_100k": 91610862.3590658,
+    "cost_burden_30pct_plus_share": 43.3,
+    "median_home_value": 230900,
+    "snap_receipt_share_pct": 14.6,
+    "bachelors_pct": 10.4,
+    "poverty_rate": 21.4,
+    "unemployment_rate": 4.6
+   },
+   "actual": {
+    "murder_rate": 50.7,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {
+    "FE-3_t0_anchor": 59.35,
+    "FE-6_wide": 64.24,
+    "FE-3_arc_tplus1_secondary": 51.01
+   },
+   "residual": {
+    "FE-3_t0_anchor": -8.66,
+    "FE-6_wide": -13.55,
+    "FE-3_arc_tplus1_secondary": -18.65
+   },
+   "model_rows": {
+    "FE-3_t0_anchor": {
+     "n_rows": 20,
+     "n_cities": 4
+    },
+    "FE-6_wide": {
+     "n_rows": 31,
+     "n_cities": 5
+    },
+    "FE-3_arc_tplus1_secondary": {
+     "n_rows": 18,
+     "n_cities": 4
+    }
+   },
+   "secondary_outcomes": {
+    "murder_rate_t+1_banked": 32.36
+   },
+   "input_z_contributions": {
+    "care_per_100k": -0.09,
+    "cost_burden_30pct_plus_share": 0.54,
+    "median_home_value": -0.13,
+    "snap_receipt_share_pct": -0.91,
+    "bachelors_pct": -0.0
+   }
+  },
+  {
+   "city": "NYC",
+   "year": 1980,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 3607291969,
+    "care_lanes_usd_component_book": {
+     "health": 198105750.0,
+     "housing": 476018058.0,
+     "human_services": 6251616088.0,
+     "libraries": 115809962.0,
+     "parks": 173034080.0,
+     "youth": 0.0
+    }
+   },
+   "need_structure_context": {},
+   "actual": {
+    "murder_rate": 25.65,
+    "source": "outcome-series priority=wiki_nyc src=NYPD count / decennial census pop"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 1981,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 3786736538,
+    "care_lanes_usd_component_book": {
+     "health": 200465202.0,
+     "housing": 528398752.0,
+     "human_services": 6530454650.0,
+     "libraries": 125713034.0,
+     "parks": 188441438.0,
+     "youth": 0.0
+    }
+   },
+   "need_structure_context": {},
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 1982,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 4052759233,
+    "care_lanes_usd_component_book": {
+     "health": 197878178.0,
+     "housing": 555823548.0,
+     "human_services": 6983165010.0,
+     "libraries": 143976006.0,
+     "parks": 224675724.0,
+     "youth": 0.0
+    }
+   },
+   "need_structure_context": {},
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 1983,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 4339482506,
+    "care_lanes_usd_component_book": {
+     "health": 209326212.0,
+     "housing": 572901190.0,
+     "human_services": 7429050348.0,
+     "libraries": 236075932.0,
+     "parks": 231611330.0,
+     "youth": 0.0
+    }
+   },
+   "need_structure_context": {},
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 1984,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 4722893390,
+    "care_lanes_usd_component_book": {
+     "health": 236761410.0,
+     "housing": 626257696.0,
+     "human_services": 8162114894.0,
+     "libraries": 174846874.0,
+     "parks": 245805906.0,
+     "youth": 0.0
+    }
+   },
+   "need_structure_context": {},
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 1985,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 5141650674,
+    "care_lanes_usd_component_book": {
+     "health": 265030524.0,
+     "housing": 722237182.0,
+     "human_services": 8881893858.0,
+     "libraries": 126355632.0,
+     "parks": 287784152.0,
+     "youth": 0.0
+    }
+   },
+   "need_structure_context": {},
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 1986,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 5590002214,
+    "care_lanes_usd_component_book": {
+     "health": 307783290.0,
+     "housing": 743010342.0,
+     "human_services": 9582833156.0,
+     "libraries": 229089342.0,
+     "parks": 317288298.0,
+     "youth": 0.0
+    }
+   },
+   "need_structure_context": {},
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 1987,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 5604738395,
+    "care_lanes_usd_component_book": {
+     "health": 355296738.0,
+     "housing": 776937516.0,
+     "human_services": 9500630234.0,
+     "libraries": 239912572.0,
+     "parks": 336699730.0,
+     "youth": 0.0
+    }
+   },
+   "need_structure_context": {},
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 1988,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 5780646482,
+    "care_lanes_usd_component_book": {
+     "health": 388483630.0,
+     "housing": 870541326.0,
+     "human_services": 9677675884.0,
+     "libraries": 265914070.0,
+     "parks": 358678054.0,
+     "youth": 0.0
+    }
+   },
+   "need_structure_context": {},
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 1989,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 6238449234,
+    "care_lanes_usd_component_book": {
+     "health": 460443018.0,
+     "housing": 926654976.0,
+     "human_services": 10355038732.0,
+     "libraries": 370138858.0,
+     "parks": 364622884.0,
+     "youth": 0.0
+    }
+   },
+   "need_structure_context": {},
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 1990,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 6838254755,
+    "care_lanes_usd_component_book": {
+     "health": 583239152.0,
+     "housing": 942053606.0,
+     "human_services": 11509735182.0,
+     "libraries": 190070842.0,
+     "parks": 377497762.0,
+     "youth": 73912966.0
+    },
+    "unemployment_rate": 5.9
+   },
+   "need_structure_context": {
+    "unemployment_rate": 5.9
+   },
+   "actual": {
+    "murder_rate": 30.66,
+    "source": "outcome-series priority=wiki_nyc src=NYPD count / decennial census pop"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 1991,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 7637238468,
+    "care_lanes_usd_component_book": {
+     "health": 601600264.0,
+     "housing": 921314932.0,
+     "human_services": 13023726888.0,
+     "libraries": 277521942.0,
+     "parks": 368611896.0,
+     "youth": 81701014.0
+    },
+    "unemployment_rate": 7.8
+   },
+   "need_structure_context": {
+    "unemployment_rate": 7.8
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 1992,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 7869527521,
+    "care_lanes_usd_component_book": {
+     "health": 536788566.0,
+     "housing": 793984750.0,
+     "human_services": 13767786176.0,
+     "libraries": 258338300.0,
+     "parks": 287055396.0,
+     "youth": 95101854.0
+    },
+    "unemployment_rate": 9.5
+   },
+   "need_structure_context": {
+    "unemployment_rate": 9.5
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 1993,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 8198743365,
+    "care_lanes_usd_component_book": {
+     "health": 629940916.0,
+     "housing": 749542950.0,
+     "human_services": 14279395294.0,
+     "libraries": 292926768.0,
+     "parks": 316787616.0,
+     "youth": 128893186.0
+    },
+    "unemployment_rate": 9.0
+   },
+   "need_structure_context": {
+    "unemployment_rate": 9.0
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 1994,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 8956726781,
+    "care_lanes_usd_component_book": {
+     "health": 703146498.0,
+     "housing": 891330782.0,
+     "human_services": 15515836320.0,
+     "libraries": 345143506.0,
+     "parks": 322522398.0,
+     "youth": 135474058.0
+    },
+    "unemployment_rate": 7.6
+   },
+   "need_structure_context": {
+    "unemployment_rate": 7.6
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 1995,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 9060852414,
+    "care_lanes_usd_component_book": {
+     "health": 829202978.0,
+     "housing": 858238714.0,
+     "human_services": 15655595382.0,
+     "libraries": 335733758.0,
+     "parks": 312660348.0,
+     "youth": 130273648.0
+    },
+    "unemployment_rate": 7.0
+   },
+   "need_structure_context": {
+    "unemployment_rate": 7.0
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 1996,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 8926278561,
+    "care_lanes_usd_component_book": {
+     "health": 838615302.0,
+     "housing": 814375064.0,
+     "human_services": 15281926590.0,
+     "libraries": 505997458.0,
+     "parks": 314734816.0,
+     "youth": 96907892.0
+    },
+    "unemployment_rate": 7.4
+   },
+   "need_structure_context": {
+    "unemployment_rate": 7.4
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 1997,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 7254935444,
+    "care_lanes_usd_component_book": {
+     "health": 840550814.0,
+     "housing": 817394318.0,
+     "human_services": 12159109858.0,
+     "libraries": 215153550.0,
+     "parks": 304869840.0,
+     "youth": 172792508.0
+    },
+    "unemployment_rate": 7.8
+   },
+   "need_structure_context": {
+    "unemployment_rate": 7.8
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 1998,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 6911014917,
+    "care_lanes_usd_component_book": {
+     "health": 944059268.0,
+     "housing": 777839560.0,
+     "human_services": 11186205500.0,
+     "libraries": 404099572.0,
+     "parks": 333014388.0,
+     "youth": 176811546.0
+    },
+    "cage_usd_panel": 3567500000.0,
+    "care_per_capita": 930.90455238418,
+    "unemployment_rate": 6.7
+   },
+   "need_structure_context": {
+    "unemployment_rate": 6.7
+   },
+   "actual": {
+    "murder_rate": 8.53,
+    "source": "outcome-series priority=murders_all src=murders_all / pop-bank"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 1999,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 6887070583,
+    "care_lanes_usd_component_book": {
+     "health": 983205210.0,
+     "housing": 743275370.0,
+     "human_services": 11052605050.0,
+     "libraries": 424486678.0,
+     "parks": 353686138.0,
+     "youth": 216882720.0
+    },
+    "cage_usd_panel": 3913100000.0,
+    "care_per_capita": 923.8491050747865,
+    "unemployment_rate": 5.9
+   },
+   "need_structure_context": {
+    "unemployment_rate": 5.9
+   },
+   "actual": {
+    "murder_rate": 9.0,
+    "source": "outcome-series priority=murders_all src=murders_all / pop-bank"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 2000,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 7531776708,
+    "care_lanes_usd_component_book": {
+     "health": 1581453004.0,
+     "housing": 731330714.0,
+     "human_services": 11665709902.0,
+     "libraries": 465041126.0,
+     "parks": 375206460.0,
+     "youth": 244812210.0
+    },
+    "cage_usd_panel": 4208300000.0,
+    "care_per_capita": 1007.5618485000501,
+    "unemployment_rate": 5.0
+   },
+   "need_structure_context": {
+    "unemployment_rate": 5.0
+   },
+   "actual": {
+    "murder_rate": 8.92,
+    "source": "outcome-series priority=murders_all src=murders_all / pop-bank"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {
+    "murder_rate_t+1_banked": 8.1
+   }
+  },
+  {
+   "city": "NYC",
+   "year": 2001,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 8186859083,
+    "care_lanes_usd_component_book": {
+     "health": 1813893900.0,
+     "housing": 806297758.0,
+     "human_services": 12316831068.0,
+     "libraries": 765550980.0,
+     "parks": 393990880.0,
+     "youth": 277153580.0
+    },
+    "cage_usd_panel": 4421700000.0,
+    "care_per_100k": 102229675.24942872,
+    "care_per_capita": 1091.5873239556809,
+    "unemployment_rate": 5.7
+   },
+   "need_structure_context": {
+    "care_per_100k": 102229675.24942872,
+    "cage_per_100k": 55213965.51078256,
+    "unemployment_rate": 5.7
+   },
+   "actual": {
+    "murder_rate": 8.1,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {
+    "FE-6_wide": 8.1
+   },
+   "residual": {
+    "FE-6_wide": 0.0
+   },
+   "model_rows": {
+    "FE-6_wide": {
+     "n_rows": 31,
+     "n_cities": 5
+    }
+   },
+   "secondary_outcomes": {
+    "grad_hs_completion_pct_banked_2023_vintage": 46.5
+   }
+  },
+  {
+   "city": "NYC",
+   "year": 2002,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 8329578924,
+    "care_lanes_usd_component_book": {
+     "health": 2098269110.0,
+     "housing": 770646270.0,
+     "human_services": 12863526866.0,
+     "libraries": 247616140.0,
+     "parks": 396329330.0,
+     "youth": 282770132.0
+    },
+    "cage_usd_panel": 4893200000.0,
+    "care_per_100k": 104011824.2823071,
+    "unemployment_rate": 7.6
+   },
+   "need_structure_context": {
+    "care_per_100k": 104011824.2823071,
+    "cage_per_100k": 61101607.08265175,
+    "unemployment_rate": 7.6
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 2003,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 9136231604,
+    "care_lanes_usd_component_book": {
+     "health": 2829846348.0,
+     "housing": 752739406.0,
+     "human_services": 13347191888.0,
+     "libraries": 675277944.0,
+     "parks": 379362670.0,
+     "youth": 288044952.0
+    },
+    "unemployment_rate": 7.4
+   },
+   "need_structure_context": {
+    "unemployment_rate": 7.4
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 2004,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 9745742821,
+    "care_lanes_usd_component_book": {
+     "health": 2882493540.0,
+     "housing": 810174956.0,
+     "human_services": 14407095562.0,
+     "libraries": 483580790.0,
+     "parks": 435374368.0,
+     "youth": 472766426.0
+    },
+    "unemployment_rate": 6.1
+   },
+   "need_structure_context": {
+    "unemployment_rate": 6.1
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 2005,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 10597348612,
+    "care_lanes_usd_component_book": {
+     "health": 2864094230.0,
+     "housing": 921034288.0,
+     "human_services": 15726781864.0,
+     "libraries": 724619626.0,
+     "parks": 482125358.0,
+     "youth": 476041858.0
+    },
+    "unemployment_rate": 4.9
+   },
+   "need_structure_context": {
+    "unemployment_rate": 4.9
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 2006,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 10385522352,
+    "care_lanes_usd_component_book": {
+     "health": 2935572086.0,
+     "housing": 1066424900.0,
+     "human_services": 15164045514.0,
+     "libraries": 522280706.0,
+     "parks": 523975800.0,
+     "youth": 558745698.0
+    },
+    "unemployment_rate": 4.2
+   },
+   "need_structure_context": {
+    "unemployment_rate": 4.2
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 2007,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 11066241802,
+    "care_lanes_usd_component_book": {
+     "health": 3027757308.0,
+     "housing": 1134735882.0,
+     "human_services": 16179986542.0,
+     "libraries": 660122648.0,
+     "parks": 569509392.0,
+     "youth": 560371832.0
+    },
+    "unemployment_rate": 4.2
+   },
+   "need_structure_context": {
+    "unemployment_rate": 4.2
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 2008,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 12484787390,
+    "care_lanes_usd_component_book": {
+     "health": 3100543424.0,
+     "housing": 1189491644.0,
+     "human_services": 18784769756.0,
+     "libraries": 532799088.0,
+     "parks": 633437484.0,
+     "youth": 728533384.0
+    },
+    "unemployment_rate": 4.8
+   },
+   "need_structure_context": {
+    "unemployment_rate": 4.8
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 2009,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 12438336711,
+    "care_lanes_usd_component_book": {
+     "health": 3322196284.0,
+     "housing": 1396130534.0,
+     "human_services": 18065949774.0,
+     "libraries": 732614088.0,
+     "parks": 651489830.0,
+     "youth": 708292912.0
+    },
+    "unemployment_rate": 8.4
+   },
+   "need_structure_context": {
+    "unemployment_rate": 8.4
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 2010,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 12565355272,
+    "care_lanes_usd_component_book": {
+     "health": 3310421944.0,
+     "housing": 1451738924.0,
+     "human_services": 18530361538.0,
+     "libraries": 421069648.0,
+     "parks": 654139282.0,
+     "youth": 762979208.0
+    },
+    "unemployment_rate": 8.7
+   },
+   "need_structure_context": {
+    "unemployment_rate": 8.7
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 2011,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 12112664612,
+    "care_lanes_usd_component_book": {
+     "health": 3164096152.0,
+     "housing": 1404643736.0,
+     "human_services": 17739599340.0,
+     "libraries": 591979596.0,
+     "parks": 687347244.0,
+     "youth": 637663156.0
+    },
+    "unemployment_rate": 7.9
+   },
+   "need_structure_context": {
+    "unemployment_rate": 7.9
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 2012,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 13293749418,
+    "care_lanes_usd_component_book": {
+     "health": 3057038030.0,
+     "housing": 1458296730.0,
+     "human_services": 20431781672.0,
+     "libraries": 398729524.0,
+     "parks": 641718406.0,
+     "youth": 599934474.0
+    },
+    "unemployment_rate": 8.1
+   },
+   "need_structure_context": {
+    "unemployment_rate": 8.1
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 2013,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 13580886970,
+    "care_lanes_usd_component_book": {
+     "health": 2960573890.0,
+     "housing": 1332791574.0,
+     "human_services": 20912050436.0,
+     "libraries": 597252106.0,
+     "parks": 743643536.0,
+     "youth": 615462398.0
+    },
+    "unemployment_rate": 7.5
+   },
+   "need_structure_context": {
+    "unemployment_rate": 7.5
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 2014,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 13553231749,
+    "care_lanes_usd_component_book": {
+     "health": 2789506328.0,
+     "housing": 1369672354.0,
+     "human_services": 21007820762.0,
+     "libraries": 477147682.0,
+     "parks": 726208382.0,
+     "youth": 736107990.0
+    },
+    "unemployment_rate": 6.0
+   },
+   "need_structure_context": {
+    "unemployment_rate": 6.0
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "NYC",
+   "year": 2015,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 14268497017,
+    "care_lanes_usd_component_book": {
+     "health": 2940238100.0,
+     "housing": 1429528900.0,
+     "human_services": 21804593392.0,
+     "libraries": 644784930.0,
+     "parks": 879061174.0,
+     "youth": 838787538.0
+    },
+    "bookings_total_intake_proxy": 339470,
+    "unemployment_rate": 4.8
+   },
+   "need_structure_context": {
+    "unemployment_rate": 4.8
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null
+   }
+  },
+  {
+   "city": "NYC",
+   "year": 2016,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 14293238630,
+    "care_lanes_usd_component_book": {
+     "health": 2850364244.0,
+     "housing": 1684326766.0,
+     "human_services": 21471449460.0,
+     "libraries": 719096762.0,
+     "parks": 844969738.0,
+     "youth": 1016270290.0
+    },
+    "bookings_total_intake_proxy": 314864,
+    "unemployment_rate": 4.6
+   },
+   "need_structure_context": {
+    "unemployment_rate": 4.6
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null
+   }
+  },
+  {
+   "city": "NYC",
+   "year": 2017,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 15315570288,
+    "care_lanes_usd_component_book": {
+     "health": 3190789944.0,
+     "housing": 2044560312.0,
+     "human_services": 22608755716.0,
+     "libraries": 739742034.0,
+     "parks": 947651536.0,
+     "youth": 1099641034.0
+    },
+    "bookings_total_intake_proxy": 286225,
+    "unemployment_rate": 4.1
+   },
+   "need_structure_context": {
+    "unemployment_rate": 4.1
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null
+   }
+  },
+  {
+   "city": "NYC",
+   "year": 2018,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 16083451082,
+    "care_lanes_usd_component_book": {
+     "health": 3317071380.0,
+     "housing": 1989732636.0,
+     "human_services": 23888468700.0,
+     "libraries": 755751458.0,
+     "parks": 974393372.0,
+     "youth": 1241484618.0
+    },
+    "bookings_total_intake_proxy": 246773,
+    "unemployment_rate": 3.8
+   },
+   "need_structure_context": {
+    "unemployment_rate": 3.8
+   },
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null
+   }
+  },
+  {
+   "city": "NYC",
+   "year": 2020,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 13813800000,
+    "care_lanes_usd_component_book": {
+     "health": 2836596000.0,
+     "housing": 1421357000.0,
+     "human_services": 22912294000.0,
+     "libraries": 853427000.0,
+     "parks": 946163000.0,
+     "youth": 5097892000.0
+    },
+    "care_per_100k": 157850568.40282714,
+    "care_per_capita": 3892.9261947063646,
+    "bookings_total_intake_proxy": 140413,
+    "bookings_per_1000": 16.0,
+    "unemployment_rate": 9.8
+   },
+   "need_structure_context": {
+    "care_per_100k": 157850568.40282714,
+    "unemployment_rate": 9.8
+   },
+   "actual": {
+    "murder_rate": 5.3,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null
+   }
+  },
+  {
+   "city": "NYC",
+   "year": 2021,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 12547769000,
+    "care_lanes_usd_component_book": {
+     "health": 3268295000.0,
+     "housing": 1402629000.0,
+     "human_services": 22197873000.0,
+     "libraries": 846905000.0,
+     "parks": 882371000.0,
+     "youth": 4515571000.0
+    },
+    "care_per_100k": 148530201.0260941,
+    "care_per_capita": 3919.7216652829,
+    "bookings_total_intake_proxy": 155507,
+    "bookings_per_1000": 18.4,
+    "unemployment_rate": 8.1
+   },
+   "need_structure_context": {
+    "care_per_100k": 148530201.0260941,
+    "cost_burden_30pct_plus_share": 54.1,
+    "median_home_value": 685700,
+    "snap_receipt_share_pct": 20.5,
+    "bachelors_pct": 16.1,
+    "poverty_rate": 18.0,
+    "unemployment_rate": 8.1
+   },
+   "actual": {
+    "murder_rate": 5.8,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null
+   }
+  },
+  {
+   "city": "NYC",
+   "year": 2022,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 14496260000,
+    "care_lanes_usd_component_book": {
+     "health": 3684803000.0,
+     "housing": 1475185000.0,
+     "human_services": 24270937000.0,
+     "libraries": 847940000.0,
+     "parks": 984389000.0,
+     "youth": 5153173000.0
+    },
+    "care_per_100k": 173344980.33820558,
+    "care_per_capita": 4354.643764876388,
+    "bookings_total_intake_proxy": 189774,
+    "bookings_per_1000": 22.7,
+    "unemployment_rate": 4.7
+   },
+   "need_structure_context": {
+    "care_per_100k": 173344980.33820558,
+    "cost_burden_30pct_plus_share": 52.1,
+    "median_home_value": 724400,
+    "snap_receipt_share_pct": 22.1,
+    "bachelors_pct": 16.4,
+    "poverty_rate": 18.3,
+    "unemployment_rate": 4.7
+   },
+   "actual": {
+    "murder_rate": 5.2,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null
+   }
+  },
+  {
+   "city": "NYC",
+   "year": 2023,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 15747849000,
+    "care_lanes_usd_component_book": {
+     "health": 3531242000.0,
+     "housing": 1712353000.0,
+     "human_services": 25905339000.0,
+     "libraries": 931937000.0,
+     "parks": 1057820000.0,
+     "youth": 5888053000.0
+    },
+    "care_per_100k": 186722302.09890306,
+    "care_per_capita": 4627.402436424525,
+    "bookings_total_intake_proxy": 226872,
+    "bookings_per_1000": 26.9,
+    "unemployment_rate": 4.5
+   },
+   "need_structure_context": {
+    "care_per_100k": 186722302.09890306,
+    "cost_burden_30pct_plus_share": 51.9,
+    "median_home_value": 743000,
+    "snap_receipt_share_pct": 21.9,
+    "bachelors_pct": 15.8,
+    "poverty_rate": 18.2,
+    "unemployment_rate": 4.5
+   },
+   "actual": {
+    "murder_rate": 4.8,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null
+   }
+  },
+  {
+   "city": "NYC",
+   "year": 2024,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 16694959000,
+    "care_lanes_usd_component_book": {
+     "health": 3408487000.0,
+     "housing": 2732109000.0,
+     "human_services": 28057325000.0,
+     "libraries": 915746000.0,
+     "parks": 1135730000.0,
+     "youth": 6533658000.0
+    },
+    "care_per_100k": 194199125.84006304,
+    "care_per_capita": 4976.611132598372,
+    "bookings_total_intake_proxy": 260503,
+    "bookings_per_1000": 30.3,
+    "unemployment_rate": 4.6
+   },
+   "need_structure_context": {
+    "care_per_100k": 194199125.84006304,
+    "cost_burden_30pct_plus_share": 51.6,
+    "median_home_value": 778600,
+    "snap_receipt_share_pct": 22.4,
+    "bachelors_pct": 16.2,
+    "poverty_rate": 18.0,
+    "unemployment_rate": 4.6
+   },
+   "actual": {
+    "murder_rate": 4.2,
+    "source": "panel maslow_joint_panel_v1 murder_rate (FE-frame convention)"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {
+    "bookings_intake_per_100k": null
+   }
+  },
+  {
+   "city": "NYC",
+   "year": 2025,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 18808292000,
+    "care_lanes_usd_component_book": {
+     "health": 3778409000.0,
+     "housing": 2759500000.0,
+     "human_services": 30410580000.0,
+     "libraries": 998556000.0,
+     "parks": 1219969000.0,
+     "youth": 7949854000.0
+    },
+    "care_per_100k": 219092659.68278885,
+    "care_per_capita": 5488.515345275841,
+    "unemployment_rate": 4.7
+   },
+   "need_structure_context": {
+    "care_per_100k": 219092659.68278885,
+    "cost_burden_30pct_plus_share": 51.9,
+    "median_home_value": 810700,
+    "snap_receipt_share_pct": 22.0,
+    "bachelors_pct": 15.1,
+    "poverty_rate": 17.7,
+    "unemployment_rate": 4.7
+   },
+   "actual": {
+    "murder_rate": 3.53,
+    "source": "outcome-series priority=wiki_nyc src=NYPD count / decennial census pop"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "Denver",
+   "year": 2021,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 402549272,
+    "care_lanes_usd_component_book": {
+     "health": 83074806.0,
+     "housing": 23807086.0,
+     "human_services": 156408570.0,
+     "libraries": 46763483.0,
+     "parks": 92495327.0
+    }
+   },
+   "need_structure_context": {},
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "Denver",
+   "year": 2022,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 589376656,
+    "care_lanes_usd_component_book": {
+     "health": 128766126.0,
+     "housing": 33765977.0,
+     "human_services": 210233658.0,
+     "libraries": 56528685.0,
+     "parks": 160082210.0
+    }
+   },
+   "need_structure_context": {},
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  },
+  {
+   "city": "Denver",
+   "year": 2023,
+   "input_lanes_usd": {
+    "care_lane_usd_panel": 605428183,
+    "care_lanes_usd_component_book": {
+     "health": 140998366.0,
+     "housing": 35905642.0,
+     "human_services": 227483413.0,
+     "libraries": 60421737.0,
+     "parks": 140619025.0
+    }
+   },
+   "need_structure_context": {},
+   "actual": {
+    "murder_rate": null,
+    "source": "honest-null: no banked rate for this city-year"
+   },
+   "predicted": {},
+   "residual": {},
+   "model_rows": {},
+   "secondary_outcomes": {}
+  }
+ ],
+ "rank_anchor_FE3": {
+  "frame": "FE-3_maslow_joint_t0 (the anchor; n=20 rows, 4 cities, 2021-2025)",
+  "cities": [
+   {
+    "city": "Cincinnati",
+    "n_city_years": 5,
+    "years": [
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "mean_efficiency_residual_ratepts": 0.0,
+    "first_half_mean": 1.99,
+    "second_half_mean": -0.92,
+    "trend_ratepts_per_year": -1.2,
+    "direction_class": "improving",
+    "small_n_flag": true,
+    "arc_rank_score": 2.905,
+    "rank_best_to_worst": 1
+   },
+   {
+    "city": "Memphis",
+    "n_city_years": 5,
+    "years": [
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "mean_efficiency_residual_ratepts": -0.0,
+    "first_half_mean": 4.64,
+    "second_half_mean": -9.45,
+    "trend_ratepts_per_year": -5.03,
+    "direction_class": "improving",
+    "small_n_flag": true,
+    "arc_rank_score": 14.095,
+    "rank_best_to_worst": 2
+   },
+   {
+    "city": "St. Louis",
+    "n_city_years": 5,
+    "years": [
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "mean_efficiency_residual_ratepts": 0.0,
+    "first_half_mean": 9.06,
+    "second_half_mean": -7.03,
+    "trend_ratepts_per_year": -4.9,
+    "direction_class": "improving",
+    "small_n_flag": true,
+    "arc_rank_score": 16.09,
+    "rank_best_to_worst": 3
+   },
+   {
+    "city": "Detroit",
+    "n_city_years": 5,
+    "years": [
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "mean_efficiency_residual_ratepts": -0.0,
+    "first_half_mean": 8.62,
+    "second_half_mean": -9.13,
+    "trend_ratepts_per_year": -5.66,
+    "direction_class": "improving",
+    "small_n_flag": true,
+    "arc_rank_score": 17.76,
+    "rank_best_to_worst": 4
+   }
+  ]
+ },
+ "rank_wide_FE6": {
+  "frame": "FE-6_care_plus_unemp_t0 (wide frame; NYC single-row dropped)",
+  "cities": [
+   {
+    "city": "Cincinnati",
+    "n_city_years": 12,
+    "years": [
+     "2014",
+     "2015",
+     "2016",
+     "2017",
+     "2018",
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "mean_efficiency_residual_ratepts": -0.0,
+    "first_half_mean": -2.16,
+    "second_half_mean": 2.15,
+    "trend_ratepts_per_year": 0.35,
+    "direction_class": "declining",
+    "small_n_flag": false,
+    "arc_rank_score": -4.312,
+    "rank_best_to_worst": 1
+   },
+   {
+    "city": "Detroit",
+    "n_city_years": 6,
+    "years": [
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "mean_efficiency_residual_ratepts": -0.0,
+    "first_half_mean": 7.61,
+    "second_half_mean": -7.61,
+    "trend_ratepts_per_year": -4.74,
+    "direction_class": "improving",
+    "small_n_flag": true,
+    "arc_rank_score": 15.22,
+    "rank_best_to_worst": 2
+   },
+   {
+    "city": "Memphis",
+    "n_city_years": 5,
+    "years": [
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "mean_efficiency_residual_ratepts": 0.0,
+    "first_half_mean": 5.26,
+    "second_half_mean": -10.35,
+    "trend_ratepts_per_year": -5.51,
+    "direction_class": "improving",
+    "small_n_flag": true,
+    "arc_rank_score": 15.61,
+    "rank_best_to_worst": 3
+   },
+   {
+    "city": "St. Louis",
+    "n_city_years": 7,
+    "years": [
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024",
+     "2025"
+    ],
+    "mean_efficiency_residual_ratepts": -0.0,
+    "first_half_mean": 8.76,
+    "second_half_mean": -10.85,
+    "trend_ratepts_per_year": -4.23,
+    "direction_class": "improving",
+    "small_n_flag": true,
+    "arc_rank_score": 19.607,
+    "rank_best_to_worst": 4
+   }
+  ]
+ },
+ "rank_FE2_verify_lane": {
+  "frame": "FE-2_care_cage_bookings_t0",
+  "cities": [
+   {
+    "city": "Cincinnati",
+    "n_city_years": 8,
+    "years": [
+     "2017",
+     "2018",
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023",
+     "2024"
+    ],
+    "mean_efficiency_residual_ratepts": 0.0,
+    "first_half_mean": -0.56,
+    "second_half_mean": 0.56,
+    "trend_ratepts_per_year": 0.24,
+    "direction_class": "declining",
+    "small_n_flag": false,
+    "arc_rank_score": -1.115,
+    "rank_best_to_worst": 1
+   },
+   {
+    "city": "Memphis",
+    "n_city_years": 4,
+    "years": [
+     "2021",
+     "2022",
+     "2023",
+     "2024"
+    ],
+    "mean_efficiency_residual_ratepts": 0.0,
+    "first_half_mean": 1.5,
+    "second_half_mean": -1.5,
+    "trend_ratepts_per_year": -3.4,
+    "direction_class": "improving",
+    "small_n_flag": true,
+    "arc_rank_score": 3.01,
+    "rank_best_to_worst": 2
+   },
+   {
+    "city": "St. Louis",
+    "n_city_years": 5,
+    "years": [
+     "2019",
+     "2020",
+     "2021",
+     "2022",
+     "2023"
+    ],
+    "mean_efficiency_residual_ratepts": 0.0,
+    "first_half_mean": 6.09,
+    "second_half_mean": -5.42,
+    "trend_ratepts_per_year": -3.14,
+    "direction_class": "improving",
+    "small_n_flag": true,
+    "arc_rank_score": 11.51,
+    "rank_best_to_worst": 3
+   },
+   {
+    "city": "Detroit",
+    "n_city_years": 2,
+    "years": [
+     "2022",
+     "2024"
+    ],
+    "mean_efficiency_residual_ratepts": 0.0,
+    "first_half_mean": 7.25,
+    "second_half_mean": -7.25,
+    "trend_ratepts_per_year": null,
+    "direction_class": "flat-undefined",
+    "small_n_flag": true,
+    "arc_rank_score": 14.5,
+    "rank_best_to_worst": 4
+   }
+  ]
+ },
+ "sensitivity_refit_check": {
+  "note": "banked betas vs refit-on-current-frame — BOTH ARC ranks reported (arc = first-half mean minus second-half mean, the same metric the rank uses); verification-only, headline stays banked-betas per format-lock. Mean-level ranks are undefined (~0 by construction) and are NOT used.",
+  "banked_beta_arc_rank": {
+   "Cincinnati": 1,
+   "Memphis": 2,
+   "St. Louis": 3,
+   "Detroit": 4
+  },
+  "refit_arc_rank_current_frame": {
+   "Cincinnati": 1,
+   "Memphis": 2,
+   "Detroit": 3,
+   "St. Louis": 4
+  },
+  "refit_arc_scores_current_frame": {
+   "Cincinnati": -4.833,
+   "Detroit": 2.842,
+   "Memphis": -1.4,
+   "St. Louis": 6.292
+  },
+  "refit_betas_current_frame": {
+   "care_per_100k": -0.067,
+   "cost_burden_30pct_plus_share": -0.33,
+   "median_home_value": 0.025,
+   "snap_receipt_share_pct": 0.781,
+   "bachelors_pct": -0.001
+  },
+  "banked_betas_carried": {
+   "care_per_100k": -0.181,
+   "cost_burden_30pct_plus_share": -0.28,
+   "median_home_value": -0.099,
+   "snap_receipt_share_pct": 0.64,
+   "bachelors_pct": -0.003
+  },
+  "ranks_agree": false,
+  "frame_drift_note": "joint_regression_v2 banked FE-3 records n=24/cities=5 at fit time; the current on-disk panel yields n=20 complete rows for the same spec (panel file evidently extended post-fit with budget-forecast years). Format-lock law: banked betas carried verbatim; frame-drift quantified here, never silently refit into the headline."
+ },
+ "administration_boundary_reads": {
+  "anchor_frame": [
+   {
+    "city": "Memphis",
+    "boundary": "2024-01: Jim Strickland era -> Paul Young administration (banked: memphis_care_cage_series_v1 'Paul Young took office Jan 2024')",
+    "frame": "FE-3_maslow_joint_t0",
+    "pre_boundary_years": [
+     2021,
+     2022,
+     2023
+    ],
+    "post_boundary_years": [
+     2024,
+     2025
+    ],
+    "pre_mean_residual": 6.3,
+    "pre_n": 3,
+    "post_mean_residual": -9.45,
+    "post_n": 2,
+    "delta_post_minus_pre": -15.75,
+    "direction_class": "residual-improved-after-change",
+    "descriptive_only": "small-n boundary read; no causal claim; election-cycle composition, COVID-era lag, and multi-actor operations ride outside this read",
+    "second_boundary": "2025-09-29: Memphis Safe Task Force federal deployment begins (banked; MULTI-ACTOR guard — the crime-delta attribution is federal+state+city, the who-gets-credit lane)"
+   },
+   {
+    "city": "St. Louis",
+    "boundary": "2021-04: Lyda Krewson era -> Tishaura Jones administration; 2025-04: Jones era ends -> Cara Spencer (banked: band_a_candidates_v1 'the Tishaura-Jones-era = the ended-May-2025 + the NEW-mayor-Spencer took-office-Apr-2025')",
+    "frame": "FE-3_maslow_joint_t0",
+    "pre_boundary_years": [
+     2021,
+     2022,
+     2023,
+     2024
+    ],
+    "post_boundary_years": [
+     2025
+    ],
+    "pre_mean_residual": 2.17,
+    "pre_n": 4,
+    "post_mean_residual": -8.66,
+    "post_n": 1,
+    "delta_post_minus_pre": -10.83,
+    "direction_class": "residual-improved-after-change",
+    "descriptive_only": "small-n boundary read; no causal claim; election-cycle composition, COVID-era lag, and multi-actor operations ride outside this read"
+   },
+   {
+    "city": "Cincinnati",
+    "boundary": "2022-01: John Cranley era -> Aftab Pureval administration (banked: band_a_foursome_v1 names 'Aftab Pureval' as the city's mayor 'the transmittal-letter-found'; the Jan-2022 swearing-in is context-asserted, not banked-dated — tagged [context-asserted])",
+    "frame": "FE-3_maslow_joint_t0",
+    "pre_boundary_years": [
+     2021
+    ],
+    "post_boundary_years": [
+     2022,
+     2023,
+     2024,
+     2025
+    ],
+    "pre_mean_residual": 4.42,
+    "pre_n": 1,
+    "post_mean_residual": -1.1,
+    "post_n": 4,
+    "delta_post_minus_pre": -5.52,
+    "direction_class": "residual-improved-after-change",
+    "descriptive_only": "small-n boundary read; no causal claim; election-cycle composition, COVID-era lag, and multi-actor operations ride outside this read"
+   }
+  ],
+  "wide_frame_where_thinner": {
+   "Memphis": {
+    "city": "Memphis",
+    "boundary": "2024-01: Jim Strickland era -> Paul Young administration (banked: memphis_care_cage_series_v1 'Paul Young took office Jan 2024')",
+    "frame": "FE-6_care_plus_unemp_t0",
+    "pre_boundary_years": [
+     2021,
+     2022,
+     2023
+    ],
+    "post_boundary_years": [
+     2024,
+     2025
+    ],
+    "pre_mean_residual": 6.9,
+    "pre_n": 3,
+    "post_mean_residual": -10.35,
+    "post_n": 2,
+    "delta_post_minus_pre": -17.25,
+    "direction_class": "residual-improved-after-change",
+    "descriptive_only": "small-n boundary read; no causal claim; election-cycle composition, COVID-era lag, and multi-actor operations ride outside this read",
+    "second_boundary": "2025-09-29: Memphis Safe Task Force federal deployment begins (banked; MULTI-ACTOR guard — the crime-delta attribution is federal+state+city, the who-gets-credit lane)"
+   },
+   "St. Louis": {
+    "city": "St. Louis",
+    "boundary": "2021-04: Lyda Krewson era -> Tishaura Jones administration; 2025-04: Jones era ends -> Cara Spencer (banked: band_a_candidates_v1 'the Tishaura-Jones-era = the ended-May-2025 + the NEW-mayor-Spencer took-office-Apr-2025')",
+    "frame": "FE-6_care_plus_unemp_t0",
+    "pre_boundary_years": [
+     2021,
+     2022,
+     2023,
+     2024
+    ],
+    "post_boundary_years": [
+     2025
+    ],
+    "pre_mean_residual": -2.09,
+    "pre_n": 4,
+    "post_mean_residual": -13.55,
+    "post_n": 1,
+    "delta_post_minus_pre": -11.46,
+    "direction_class": "residual-improved-after-change",
+    "descriptive_only": "small-n boundary read; no causal claim; election-cycle composition, COVID-era lag, and multi-actor operations ride outside this read"
+   },
+   "Cincinnati": {
+    "city": "Cincinnati",
+    "boundary": "2022-01: John Cranley era -> Aftab Pureval administration (banked: band_a_foursome_v1 names 'Aftab Pureval' as the city's mayor 'the transmittal-letter-found'; the Jan-2022 swearing-in is context-asserted, not banked-dated — tagged [context-asserted])",
+    "frame": "FE-6_care_plus_unemp_t0",
+    "pre_boundary_years": [
+     2021
+    ],
+    "post_boundary_years": [
+     2022,
+     2023,
+     2024,
+     2025
+    ],
+    "pre_mean_residual": 6.36,
+    "pre_n": 1,
+    "post_mean_residual": -0.06,
+    "post_n": 4,
+    "delta_post_minus_pre": -6.42,
+    "direction_class": "residual-improved-after-change",
+    "descriptive_only": "small-n boundary read; no causal claim; election-cycle composition, COVID-era lag, and multi-actor operations ride outside this read"
+   }
+  },
+  "dating_sources": [
+   "memphis_care_cage_series_v1.json (Young took office Jan 2024)",
+   "band_a_candidates_v1.json (Spencer took office Apr 2025; Jones era ended May 2025)",
+   "band_a_foursome_v1.json (Pureval named current Cincinnati mayor)"
+  ]
+ },
+ "memphis_deep_dive": {
+  "residual_by_year_Fe3_anchor": [
+   {
+    "year": 2021,
+    "residual_ratepts": 7.79,
+    "predicted": 46.7,
+    "actual": 54.49,
+    "largest_input_z_contributors": {}
+   },
+   {
+    "year": 2022,
+    "residual_ratepts": 1.5,
+    "predicted": 46.52,
+    "actual": 48.02,
+    "largest_input_z_contributors": {}
+   },
+   {
+    "year": 2023,
+    "residual_ratepts": 9.61,
+    "predicted": 46.27,
+    "actual": 55.88,
+    "largest_input_z_contributors": {}
+   },
+   {
+    "year": 2024,
+    "residual_ratepts": -4.59,
+    "predicted": 44.96,
+    "actual": 40.38,
+    "largest_input_z_contributors": {}
+   },
+   {
+    "year": 2025,
+    "residual_ratepts": -14.31,
+    "predicted": 44.49,
+    "actual": 30.18,
+    "largest_input_z_contributors": {}
+   }
+  ],
+  "transit_lane_the_archetype": {
+   "archetype": "the MATA transit lane = THE efficiency archetype: Memphis runs transit at roughly one-fifth to one-half the per-resident dollars of every banked functioning peer (banked mata_diagnosis_v1)",
+   "mata_ops_usd_per_resident_by_year_uza_denominator": {
+    "2022": 97.4,
+    "2023": 85.9,
+    "2024": 83.4,
+    "2025": 90.2
+   },
+   "peer_ops_usd_per_resident_2024": {
+    "Cincinnati (SORTA)": 94.2,
+    "St. Louis (Bi-State)": 145.6,
+    "Detroit (DDOT)": 44.8,
+    "Columbus (COTA)": 138.1,
+    "Indianapolis (IndyGo)": 80.2,
+    "Memphis (MATA, 2024)": 83.4
+   },
+   "ntd_voms": null,
+   "taxes_levied_by_agency": null,
+   "service_cut_arc_banked": "fixed-route service hours 320,000/yr (2017) -> 215,000/yr (2026); VRH bus 261k (2022) -> 216k (2025); OTP ~60% through 2026; missed trips 26-30% of scheduled late-2025 -> 7% by Oct-2026 (trustee-reported)",
+   "governance_lane_banked": "unrestricted net deficit -$90M (2014) / -$91M (2019) disclosed only 2024-09-10; full board replaced Oct 2024 (Young); 5 resignations Sept 2025; city trust + trustee at $75,000/month from Sept 2025; 4 CEOs/interims in 30 months"
+  },
+  "care_lane_dollars": {
+   "Cincinnati": {
+    "mean_care_per_capita_2021_2025": 407.4,
+    "n": 5
+   },
+   "Detroit": {
+    "mean_care_per_capita_2021_2025": 564.3,
+    "n": 5
+   },
+   "Memphis": {
+    "mean_care_per_capita_2021_2025": 218.4,
+    "n": 5
+   },
+   "St. Louis": {
+    "mean_care_per_capita_2021_2025": 352.3,
+    "n": 5
+   }
+  },
+  "cage_lane_dollars_per_capita": {
+   "Cincinnati": {
+    "mean_cage_per_100k_2021_2025": 548236.0,
+    "n": 5
+   },
+   "Detroit": {
+    "mean_cage_per_100k_2021_2025": 565120.6,
+    "n": 2
+   },
+   "Memphis": {
+    "mean_cage_per_100k_2021_2025": 477817.3,
+    "n": 5
+   },
+   "St. Louis": {
+    "mean_cage_per_100k_2021_2025": 1020420.2,
+    "n": 4
+   }
+  },
+  "lane_leak_reads_banked": [
+   "TRANSIT: $82/city-res ops (NTD 2024) vs Cincy $514 / STL $1,041 / Detroit $264 — 5.7x-12.7x below the functioning peers; the ranked-cause-1 funding-starved lane (mata_diagnosis_v1 diagnosis.ranked_causes[0])",
+   "GOVERNANCE-OVERHEAD LEAK: trustee cost $75,000/month + $1.3M TransPro crisis contract + $336K diagnostic — dollars spent on failure-of-institutions, not service",
+   "SERVICE-DELIVERY LEAK: 23->18 routes Nov-2024, 60-min headways everywhere, trolley suspended since 2024-08; a case-study rider took 6 hrs for a 3-mile grocery trip (WREG, banked)",
+   "FEDERAL/STATE REPLACEMENT FLAG: the crime-delta since Sept-2025 is carried by the MSTF external op (13,020 arrests by Sept-2026) + TN $100M Downtown Public Safety Grant — OUTSIDE the city ledger; the city-budget efficiency instrument does NOT score it (memphis_care_cage_series_v1 task_force_attribution)"
+  ],
+  "care_cage_ratio_band_banked": "NO INVERSE FINGERPRINT IN THE CITY BOOKS — the founder's pre-registered lens is CONFIRMED STRUCTURALLY",
+  "the_2024_care_jump_banked": "FY2024 care jumps +31% (Grants & Subsidies 48.3M->82.9M actual; Parks 40.9M->49.9M). This is the mayorial-transition year (Paul Young took office Jan 2024). Cage rose only +7%. The city-side response to the crime-emergency era was a CARE-lead, not a DETERRENCE-lead."
+ },
+ "elasticities_cross_check_banked": {
+  "per_city_dln_care_vs_d_murder_rho": {
+   "Cincinnati": {
+    "n": 11,
+    "rho_dln": -0.718
+   },
+   "Detroit": {
+    "n": 5,
+    "rho_dln": -0.2
+   },
+   "Memphis": {
+    "n": 5,
+    "rho_dln": -0.3
+   },
+   "NYC": {
+    "n": 4,
+    "rho_dln": -0.4
+   },
+   "St. Louis": {
+    "n": 6,
+    "rho_dln": 0.543
+   }
+  },
+  "note": "the delta lane's per-city rho cells (Mem -0.30, CIN -0.72, STL +0.543) are the direction cross-check on the residual arcs — a city whose dln-care reads murder-down is consistent with a negative efficiency trend when care rose"
+ },
+ "guards": {
+  "measurement_order_law": "efficiency is measured AFTER the fitted equation accounts for inputs/need/structure: the residual is what the within-city FE frame does NOT explain from the banked care/cage/bookings/need/structure lanes at that city-year's input levels",
+  "composition_guard": "every panel row carries need_structure_context (care_per_100k, cage_per_100k, cost_burden 30%+ share, median home value, SNAP share, bachelors share, unemployment) so the rank can be checked against the context columns: e.g. St. Louis ranks worst on raw murder level but its FE-3 residual mean is a different read; the rank is NOT a poverty-rank re-derivation because the poverty/need columns entered the prediction",
+  "honest_nulls": {
+   "PIT_homelessness_2013_and_2016": "HUD published nothing at the per-CoC report route for ANY CoC in 2013 + 2016 (verified 8/8 = 404) — banked null in pit_homelessness_lane_v1, never backfilled",
+   "PIT_grain": "CoC (count-of-care) grain; not blended into the city-year panel (grain-law)",
+   "eviction_lane_2020_21": "court closures/CTR pause: Eviction Lab published no 2019-2020 standardized judgment rates; 2020-21 rows carry covid_freeze_flag=1 (banked)",
+   "health_lane_grain": "life-expectancy + drug-poisoning = COUNTY grain only; shipped as companion, never blended into the city-year panel (banked grain-law)",
+   "Denver": "no murder-rate denominator rows banked in the panel window; zero efficiency rows",
+   "NYC": "single complete predicted city-year (2001); no city rank computed",
+   "bookings_facility_non_NYC": "facility-grain bookings honest-null for Detroit/St. Louis Metro/Shelby(Memphis)/Harris/Orleans routes-tried-no-capture; the bookings column rides the UCR-arrest intake proxy (care_bookings_ordering_v1), labeled as proxy",
+   "grad": "grad lane carries 4 banked city-year cells only (CIN/STL/MEM 2023, NYC 2001) — secondary column, not an efficiency outcome",
+   "frame_drift": "joint_regression_v2 banked FE-3 records n=24/cities=5 at fit time; the current on-disk panel yields n=20 complete rows for the same spec (panel file evidently extended post-fit with budget-forecast years). Format-lock law: banked betas carried verbatim; frame-drift quantified here, never silently refit into the headline."
+  },
+  "no_causal_claims": "this instrument is descriptive + direction-class ONLY; n=4-5 city-years per city on the anchor frame; every rank cell carries its n; no administration is CAUSALLY credited or charged by this read",
+  "small_n_flags": "every city with <8 city-years flagged in the rank table (ALL of them are — max n=5 on the anchor)",
+  "multi_actor_guard_memphis": "the 2025+ Memphis crime-delta coincides with the federal MSTF deployment; the Young-administration boundary read covers the residual BEFORE/at the deployment edge and cannot separate them at this n",
+  "sign_convention": "EFFICIENCY = ACTUAL - PREDICTED murder-rate; NEGATIVE residual = better-than-model = efficient delivery; POSITIVE = underperformer"
+ }
+}

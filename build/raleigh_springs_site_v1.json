@@ -1,0 +1,313 @@
+{
+ "build": {
+  "id": "raleigh_springs_site_v1",
+  "name": "Raleigh Springs Civic Center \u2014 site-level treatment test",
+  "built_at": "2026-11-23T14:40:47",
+  "method": "public-data-only; keyless HTTPS routes (ArcGIS REST queries, ArcGIS Hub DCAT feeds, city budget-book PDFs already on disk); no API keys, no scrapers",
+  "tooling_notes": "Nous web_search/web_extract gateway unavailable (config error) during this build \u2014 all external pulls were keyless HTTP against ArcGIS REST + data.memphistn.gov DCAT + memphis3point0.com.",
+  "treatment_window": {
+   "pre_period": {
+    "available": false,
+    "reason": "MPD Public Safety Incidents dataset begins 2020 (verified count pre-2016 in bbox = 0); no public keyless route to pre-2016 incident-level data was found."
+   },
+   "post_period": {
+    "available": true,
+    "start": "2020-01-01"
+   }
+  }
+ },
+ "site": {
+  "name": "Raleigh Springs Civic Center",
+  "city": "Memphis",
+  "county": "Shelby County",
+  "state": "TN",
+  "zip": "38128",
+  "lat": 35.2192058,
+  "lon": -89.9083968,
+  "corridor": "Austin Peay Hwy / Yale Rd / Singleton Pkwy \u2014 Raleigh community",
+  "mpd_precinct": "AUSTIN PEAY (per crime layer Precinct field); MPD Old Allen Precinct building located on-site per Wikipedia/redevelopment plan",
+  "mp3_anchor": {
+   "type": "Urban Center",
+   "treatment": "ACCELERATE",
+   "evidence": "Raleigh Town Center Anchor Neighborhood Summary Report (Aug 2019): 'Raleigh Town Center is an Urban Center anchor type'; 'ACCELERATE Raleigh Springs Mall URBAN CENTER'"
+  },
+  "site_history": {
+   "mall_opened": "1971-08-11",
+   "mall_closed": "2016-11-18",
+   "mall_purchased_by_city": "2016-11",
+   "mall_demolished": "2016\u20132017",
+   "site_components_opened": "spring 2020 (skatepark, walking trail, 11-acre detention pond, MPD precinct building)",
+   "library_opened": "2020-11 (ribbon cutting 2020-11-19)",
+   "project_number": "CD01092",
+   "fy2015_go_funding": 17400000,
+   "fy2015_narrative_investment": 24000000,
+   "hcd_total_funds_committed": 41941459,
+   "hcd_status": "Complete",
+   "hcd_completion_date": "2020-11-18",
+   "census_tract": "47157020541",
+   "planning_district": "Raleigh"
+  },
+  "sources": [
+   "https://en.wikipedia.org/wiki/Raleigh_Springs_Mall",
+   "C:/Users/J/memphis_fy15_book.pdf (project CD01092 Raleigh Springs Mall \u2014 G.O. $17.4M)",
+   "C:/Users/J/memphis_fy17_book.pdf (operations narrative mention)",
+   "C:/Users/J/memphis_fy25_book.pdf (HCD CIP line, Raleigh Springs, status TBD)",
+   "https://services2.arcgis.com/saWmpKJIUAjyyNVc/arcgis/rest/services/HCD_Property_Investments/FeatureServer/0"
+  ]
+ },
+ "lanes": {
+  "1_crime_series": {
+   "status": "PARTIAL-POST-ONLY (honest null for pre-2016)",
+   "dataset": "MPD Public Safety Incidents (keyless FeatureServer)",
+   "service": "https://services2.arcgis.com/saWmpKJIUAjyyNVc/arcgis/rest/services/MPD_Public_Safety_Incidents/FeatureServer/0",
+   "hub_page": "https://data.memphistn.gov/datasets/MEMEGIS::mpd-public-safety-incidents-1",
+   "bbox_definition": "\u00b10.014\u00b0 lat (\u22481.55 km N-S), \u00b10.017\u00b0/0.020\u00b0 lon (\u22481.5\u20131.8 km E-W) around site centroid; envelope intersects; spatialRel=esriSpatialRelIntersects; inSR=102100",
+   "dataset_total_rows": 9699,
+   "rows_in_bbox_all_years": 7257,
+   "pre_2016_rows_in_bbox": 0,
+   "earliest_offense_in_bbox": "2020-01-01",
+   "nulls": {
+    "pre_2016_series": null,
+    "note": "No public keyless route to pre-2016 incident-level MPD data was found; the open dataset starts 2020. Cannot build a pre/mid/post diff here honestly."
+   },
+   "annual_counts_bbox": {
+    "2020": 1889,
+    "2021": 1861,
+    "2022": 2294,
+    "2023": 2446,
+    "2024": 2024,
+    "2025": 1658,
+    "2026": 1204
+   },
+   "violent_counts_bbox": {
+    "2020": 501,
+    "2021": 554,
+    "2022": 537,
+    "2023": 594,
+    "2024": 570,
+    "2025": 524,
+    "2026": 450
+   },
+   "property_counts_bbox": {
+    "2020": 1153,
+    "2021": 1036,
+    "2022": 1478,
+    "2023": 1624,
+    "2024": 1150,
+    "2025": 870,
+    "2026": 533
+   },
+   "categories_2020": {
+    "AGGRAVATED ASSAULT": 103,
+    "ALL OTHER OFFENSES ": 10,
+    "ANIMAL CRUELTY": 3,
+    "ARSON": 2,
+    "ASSAULT": 368,
+    "BURG/BREAK & ENTER": 71,
+    "COUNTERFEITING/FORGERY": 18,
+    "DEST/DAM/VAND OF PROPERTY": 188,
+    "DISORDERLY CONDUCT": 1,
+    "DRIVING UNDER THE INFLUENCE": 5,
+    "DRUG/NARCOTIC": 54,
+    "EMBEZZLEMENT": 21,
+    "EXTORTION/BLACKMAIL": 1,
+    "FRAUD": 74,
+    "HOMICIDE": 4,
+    "KIDNAPPING/ABDUCTION": 12,
+    "LARCENY/THEFT": 796,
+    "MOTOR VEHICLE THEFT": 96,
+    "PORNOGRAPHY/OBSCN MAT": 1,
+    "ROBBERY": 26,
+    "STOLEN PROPERTY": 1,
+    "TRESPASS OF REAL PROPERTY ": 10,
+    "WEAPON LAW VIOLATION": 24
+   },
+   "categories_full_2020plus": null,
+   "caveats": [
+    "Offense_Datetime null count in bbox: 0",
+    "2026 partial through pull date",
+    "No population denominator in this layer \u2014 counts are absolute, per-bbox, not rates."
+   ]
+  },
+  "2_cip_lane": {
+   "status": "VERIFIED-PARTIAL",
+   "project_number": "CD01092",
+   "fy2015": {
+    "project_name": "Raleigh Springs Mall",
+    "go_funding": "$17.4M",
+    "debt_service_impact": "$1.4M",
+    "description": "Development of the Raleigh Civic Plaza including replacement of the North Police Precinct, Traffic Precinct and the Raleigh Springs Library.",
+    "mayor_narrative_total": "$24M purchase+demo+redevelop (proposed FY2015)"
+   },
+   "fy2016": {
+    "narrative": "Capital projects list includes 'redevelopment of the Raleigh Springs Mall' under HCD budget summary"
+   },
+   "fy2017": {
+    "narrative": "General Services reported maintaining Raleigh Springs Mall (pre-demolition)"
+   },
+   "fy2018_fy2024_books_on_disk": [
+    "fy15",
+    "fy16",
+    "fy17",
+    "fy18",
+    "fy22",
+    "fy23",
+    "fy24"
+   ],
+   "fy2018_fy2024_raleigh_hits": 0,
+   "fy2025": "HCD CIP table lists 'CD-TBD Raleigh Springs' project line (amounts in adjacent columns; TBD-coded in budget book)",
+   "hcd_official_funding_trace": {
+    "funds_committed": 41941459,
+    "status": "Complete",
+    "completed": "2020-11-18",
+    "source": "HCD_Property_Investments FeatureServer (City of Memphis)",
+    "adjacent_projects": [
+     {
+      "name": "Raleigh Springs PDO (Private Development Opportunity)",
+      "funds": 9100000,
+      "status": "Planning"
+     },
+     {
+      "name": "Raleigh Vehicle Repair Shop",
+      "funds": 2510915,
+      "status": "Re-assigned"
+     },
+     {
+      "name": "Raleigh Community Farmer's Market & Food Truck Park",
+      "funds": 573232,
+      "status": "In Progress"
+     }
+    ]
+   },
+   "nulls": {
+    "fy19_fy21_books": "not on disk; not pulled (route not attempted \u2014 budget books local only)",
+    "line_item_level_CIP_spread": null
+   }
+  },
+  "3_component_lane": {
+   "status": "VERIFIED",
+   "plan": "Memphis 3.0 Comprehensive Plan (adopted Feb 2019, unanimously; Exec Order May 2021; City Council adoption Dec 2021)",
+   "raleigh_small_area_plan": {
+    "title": "Raleigh Town Center Anchor Neighborhood Summary Report",
+    "date": "August 2019",
+    "url_pdf": "https://www.memphis3point0.com/_files/ugd/100a0d_ec2ac28cbe884974871ec5334e39147a.pdf",
+    "anchor_type": "Urban Center",
+    "anchor_treatment": "ACCELERATE",
+    "accelerate_actions_quotes": [
+     "ACCELERATE Raleigh Springs Mall URBAN CENTER",
+     "Provide incentives to small and minority owned businesses to locate in commercial districts (short-term 1-2 yrs)",
+     "Encourage and incentivize infill on parking lots at anchors with excess parking (short-term 1-2 yrs)",
+     "Apply traffic calming measures along Austin Peay (short-term 1-2 yrs)",
+     "Activate Kennedy Park and Pierotti Park to decrease nuisance issues (medium-term 2-5 yrs)"
+    ],
+    "big_ideas": [
+     "Create a Main Street for Raleigh",
+     "Create Mixed-Use Neighborhoods",
+     "Introduce New Housing Types",
+     "Mobility Improvements"
+    ],
+    "demographics_2017": {
+     "households": 19195,
+     "median_income_est": 35600,
+     "median_home_value_est": 97800,
+     "annual_market_potential_households": 5850,
+     "ami_buckets": {
+      "100%+ AMI": "1,975 (34%)",
+      "50-100% AMI": "1,700 (29%)",
+      "Below 50% AMI": "2,175 (37%)"
+     }
+    }
+   },
+   "civic_center_components_cross_check": {
+    "skatepark": true,
+    "walking_trail": true,
+    "pond_11_acre": true,
+    "mpd_precinct_on_site": true,
+    "library_on_site": true,
+    "note": "All five components cross-checked against Wikipedia redevelopment section."
+   }
+  },
+  "4_assessor_lane": {
+   "status": "HONEST-NULL (attribute route unavailable)",
+   "what_was_attempted": [
+    "Shelby County parcel layers found on AGO: services1.arcgis.com/hwQMmmEzVzbTfv5U/.../Shelby_Parcels/FeatureServer/2 (Tax Parcels) \u2014 geometry-only fields (PARCELID, CALC_ACRE, WARD); NO owner/appraisal/land value attributes exposed.",
+    "tiles.arcgis.com/tiles/VqPd1Ybcc46AvijK/.../Parcels/MapServer (Shelby County Parcels, item b3f2cce117c247259da85fa0d30c1e60) \u2014 tile-only caches; query 404.",
+    "tiles.arcgis.com/tiles/s9fZ9Xw5NF8fOMXl/.../Memphis_Parcels/MapServer (seealliance) \u2014 same schema, no valuation fields, tile caches.",
+    "assessor.shelbycountytn.gov DNS does not resolve from this environment.",
+    "tnmap.tn.gov services folder sweep \u2014 no parcel/assessor service published."
+   ],
+   "near_site_parcels_sampled": [
+    {
+     "parcelid": "085017  00001",
+     "acres": 15.23,
+     "ward": 85,
+     "y": 35.22081,
+     "x": -89.90669
+    },
+    {
+     "parcelid": "085017  00003",
+     "acres": 12.34,
+     "ward": 85,
+     "y": 35.21823,
+     "x": -89.90677
+    },
+    {
+     "parcelid": "085016  00035C",
+     "acres": 9.5,
+     "ward": 85,
+     "y": 35.22022,
+     "x": -89.9114
+    }
+   ],
+   "sampled_note": "Geometry + parcel-ID only; these are candidate civic-center footprints near the site but carry no valuation data.",
+   "nulls": {
+    "owner_names": null,
+    "assessed_values_time_series": null,
+    "pre_2016_valuations": null,
+    "reason": "Shelby County Assessor does not expose attribute-level valuation data on any keyless REST route reachable from this environment; only parcel geometry is public-API accessible."
+   }
+  },
+  "5_city_ownership_lane": {
+   "status": "VERIFIED",
+   "city_ownership": true,
+   "evidence": [
+    "Wikipedia: 'In November 2016, the City of Memphis purchased the Raleigh Springs Mall property...'",
+    "City HCD Property Investments layer: project 'Raleigh Mall Redevelop Project (now Raleigh Springs Civic Center)' listed Complete, $41,941,459 committed, Planning_District=Raleigh, tract 47157020541",
+    "FY2015 budget narrative: purchase, demolition and redevelopment proposed as CIP priority"
+   ],
+   "hcd_investments_within_1p5km": {
+    "total_records": 45,
+    "strategic_initiatives": [
+     {
+      "name": "Raleigh Mall Redevelop Project (now Raleigh Springs Civic Center)",
+      "funds": 41941459,
+      "status": "Complete"
+     },
+     {
+      "name": "Raleigh Springs PDO (Private Development Opportunity)",
+      "funds": 9100000,
+      "status": "Planning"
+     },
+     {
+      "name": "Raleigh Vehicle Repair Shop",
+      "funds": 2510915,
+      "status": "Re-assigned"
+     },
+     {
+      "name": "Raleigh Community Farmer's Market & Food Truck Park",
+      "funds": 573232,
+      "status": "In Progress"
+     }
+    ],
+    "other_programs_summary": "Remaining 41 records within 1.5km are CHDO/NSP1/DPA/WAP/Lead-hazard investments totaling ~$1.6M across Frayser CDC, CAAP Inc, Neighborhood Housing Ops, United Housing, HCD."
+   }
+  }
+ },
+ "confidence": {
+  "site_facts": "HIGH (Wikipedia + city budget books + city GIS layer all agree)",
+  "cip_funding": "HIGH (budget book + HCD layer agree; $41.9M committed trace)",
+  "crime_post_2020": "HIGH (direct keyless query of official City of Memphis FeatureServer)",
+  "crime_pre_2016": "NULL \u2014 dataset does not go back; honest null recorded",
+  "assessor_valuations": "NULL \u2014 attribute route unavailable; honest null recorded"
+ }
+}

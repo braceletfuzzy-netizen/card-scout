@@ -1,0 +1,62 @@
+{
+ "Police Department": {
+  "fy2026_thousands": 758531,
+  "funding_total_thousands": 6276536
+ },
+ "Admin For Children's Services": {
+  "fy2026_thousands": 227260,
+  "funding_total_thousands": 3141750
+ },
+ "Department Of Social Services": {
+  "fy2026_thousands": 67590,
+  "funding_total_thousands": 11974308
+ },
+ "Department Of Homeless Services": {
+  "fy2026_thousands": 8575,
+  "funding_total_thousands": 3554427
+ },
+ "Department Of Correction": {
+  "fy2026_thousands": 16071,
+  "funding_total_thousands": 1212565
+ },
+ "Department For The Aging": {
+  "fy2026_thousands": 47584,
+  "funding_total_thousands": 605475
+ },
+ "Department Of Youth & Community Dev": {
+  "fy2026_thousands": 143766,
+  "funding_total_thousands": 1514141
+ },
+ "Department Of Small Business Services": {
+  "fy2026_thousands": 59540,
+  "funding_total_thousands": 279712
+ },
+ "Housing Preservation And Development": {
+  "fy2026_thousands": 79979,
+  "funding_total_thousands": 1611121
+ },
+ "Department Of Health And Mental Hygiene": {
+  "fy2026_thousands": 156996,
+  "funding_total_thousands": null
+ },
+ "Department Of Environmental Protect.": {
+  "fy2026_thousands": 158402,
+  "funding_total_thousands": 1751639
+ },
+ "Department Of Sanitation": {
+  "fy2026_thousands": 702,
+  "funding_total_thousands": 1987964
+ },
+ "Department Of Finance": {
+  "fy2026_thousands": 89990,
+  "funding_total_thousands": 371193
+ },
+ "Department Of Transportation": {
+  "fy2026_thousands": 34332,
+  "funding_total_thousands": 1503042
+ },
+ "Department Of Parks And Recreation": {
+  "fy2026_thousands": 3911,
+  "funding_total_thousands": 687638
+ }
+}

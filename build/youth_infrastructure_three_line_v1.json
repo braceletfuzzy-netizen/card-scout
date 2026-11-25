@@ -1,0 +1,348 @@
+{
+ "_record": "youth_infrastructure_three_line_v1",
+ "built": "2026-11-24",
+ "built_by": "KNOCKOUT-RESUME lane-9 subagent (ranks 8/9/10 + one-pager #9: the purpose-built youth-tribe-activity-infrastructure lane)",
+ "laws": [
+  "direction-class only, no causal claims",
+  "honest-null convention \u2014 the three-line anatomy's construction/maintenance lines are NOT on disk: logged, never placeholdered",
+  "no fabricated dollars"
+ ],
+ "the_three_line_anatomy_banked_check": {
+  "program_line": {
+   "countable_on_disk": "parks+libraries operating (63 city-years with both) \u2014 the PROXY the panel carries",
+   "availability": {
+    "Cincinnati": [
+     "parks only (libraries=county-levy honest-null)"
+    ],
+    "Denver": [
+     "parks+libraries 2021-23"
+    ],
+    "Detroit": [
+     "parks+libraries 2020-28"
+    ],
+    "Memphis": [
+     "parks+libraries 2021-26"
+    ],
+    "NYC": [
+     "parks+libraries 1980-2018+2020-25"
+    ],
+    "St. Louis": [
+     "parks only"
+    ]
+   }
+  },
+  "construction_line_CIP": {
+   "countable_on_disk": "MEMPHIS-ONLY anchor (raleigh_springs_site_v1: CD01092 GO $17.4M FY2015; $41,941,459 committed, complete 2020-11-18) \u2014 the single realized CIP row; multi-city CIP lane NOT on disk = logged gap for Kingsport pull",
+   "honest_status": "HONEST-GAP (routes named: city CIP books, keyless per one-pager #9 \u00a77; not pulled this pass)"
+  },
+  "maintenance_line": {
+   "countable_on_disk": null,
+   "honest_status": "HONEST-GAP \u2014 public-works maintenance line grain not banked for any city; rides the same city-own-books route as CIP"
+  }
+ },
+ "program_line_vs_murder_arcs_within_city": {
+  "program_line_t_vs_rate_t+0": {
+   "per_city": {
+    "Cincinnati": {
+     "r": 0.04,
+     "n": 12
+    },
+    "Detroit": {
+     "r": -0.83,
+     "n": 6
+    },
+    "Memphis": {
+     "r": -0.841,
+     "n": 6
+    },
+    "NYC": {
+     "r": -0.981,
+     "n": 6
+    },
+    "St. Louis": {
+     "r": -0.742,
+     "n": 7
+    }
+   },
+   "pooled_z_r": -0.671,
+   "pooled_n": 37
+  },
+  "program_line_t_vs_rate_t+1": {
+   "per_city": {
+    "Cincinnati": {
+     "r": 0.174,
+     "n": 11
+    },
+    "Detroit": {
+     "r": -0.923,
+     "n": 5
+    },
+    "Memphis": {
+     "r": -0.858,
+     "n": 5
+    },
+    "NYC": {
+     "r": -0.871,
+     "n": 4
+    },
+    "St. Louis": {
+     "r": -0.747,
+     "n": 6
+    }
+   },
+   "pooled_z_r": -0.588,
+   "pooled_n": 27
+  },
+  "program_line_t_vs_rate_t+2": {
+   "per_city": {
+    "Cincinnati": {
+     "r": 0.086,
+     "n": 10
+    },
+    "Detroit": {
+     "r": -0.887,
+     "n": 4
+    },
+    "Memphis": {
+     "r": -0.912,
+     "n": 4
+    },
+    "St. Louis": {
+     "r": -0.633,
+     "n": 5
+    }
+   },
+   "pooled_z_r": -0.274,
+   "pooled_n": 15
+  }
+ },
+ "flagship_corridor_banked_not_rerun": {
+  "note": "Raleigh Springs corridor arc (violent -10.2%, property -53.8% 2020->2026, pre-2016 honest-null) is BANKED in raleigh_springs_site_v1 + one-pager #9 \u00a76 \u2014 carried verbatim per format-lock, no re-run",
+  "guard": "single site, post-only, no counterfactual \u2014 never cited as evidence of effect (pre-registered falsifier 3 holds)"
+ },
+ "nyc_youth_line": {
+  "note": "NYC = the only city with a named youth line on disk (city_component_annual 'youth' lane)",
+  "arc_rows": [
+   {
+    "year": 1990,
+    "youth_per100k": 504.7,
+    "murder_rate": null,
+    "bookings_per1000": null
+   },
+   {
+    "year": 1991,
+    "youth_per100k": 557.1,
+    "murder_rate": null,
+    "bookings_per1000": null
+   },
+   {
+    "year": 1992,
+    "youth_per100k": 648.3,
+    "murder_rate": null,
+    "bookings_per1000": null
+   },
+   {
+    "year": 1993,
+    "youth_per100k": 876.3,
+    "murder_rate": null,
+    "bookings_per1000": null
+   },
+   {
+    "year": 1994,
+    "youth_per100k": 915.4,
+    "murder_rate": null,
+    "bookings_per1000": null
+   },
+   {
+    "year": 1995,
+    "youth_per100k": 868.5,
+    "murder_rate": null,
+    "bookings_per1000": null
+   },
+   {
+    "year": 1996,
+    "youth_per100k": 637.6,
+    "murder_rate": null,
+    "bookings_per1000": null
+   },
+   {
+    "year": 1997,
+    "youth_per100k": 1122.0,
+    "murder_rate": null,
+    "bookings_per1000": null
+   },
+   {
+    "year": 1998,
+    "youth_per100k": 1133.4,
+    "murder_rate": 8.12,
+    "bookings_per1000": null
+   },
+   {
+    "year": 1999,
+    "youth_per100k": 1372.7,
+    "murder_rate": 8.49,
+    "bookings_per1000": null
+   },
+   {
+    "year": 2000,
+    "youth_per100k": 1528.5,
+    "murder_rate": 8.33,
+    "bookings_per1000": null
+   },
+   {
+    "year": 2001,
+    "youth_per100k": null,
+    "murder_rate": null,
+    "bookings_per1000": null
+   },
+   {
+    "year": 2002,
+    "youth_per100k": null,
+    "murder_rate": null,
+    "bookings_per1000": null
+   },
+   {
+    "year": 2003,
+    "youth_per100k": null,
+    "murder_rate": null,
+    "bookings_per1000": null
+   },
+   {
+    "year": 2004,
+    "youth_per100k": null,
+    "murder_rate": null,
+    "bookings_per1000": null
+   },
+   {
+    "year": 2005,
+    "youth_per100k": null,
+    "murder_rate": null,
+    "bookings_per1000": null
+   },
+   {
+    "year": 2006,
+    "youth_per100k": null,
+    "murder_rate": null,
+    "bookings_per1000": null
+   },
+   {
+    "year": 2007,
+    "youth_per100k": null,
+    "murder_rate": null,
+    "bookings_per1000": null
+   },
+   {
+    "year": 2008,
+    "youth_per100k": null,
+    "murder_rate": null,
+    "bookings_per1000": null
+   },
+   {
+    "year": 2009,
+    "youth_per100k": null,
+    "murder_rate": null,
+    "bookings_per1000": null
+   },
+   {
+    "year": 2010,
+    "youth_per100k": null,
+    "murder_rate": null,
+    "bookings_per1000": null
+   },
+   {
+    "year": 2011,
+    "youth_per100k": null,
+    "murder_rate": null,
+    "bookings_per1000": null
+   },
+   {
+    "year": 2012,
+    "youth_per100k": null,
+    "murder_rate": null,
+    "bookings_per1000": null
+   },
+   {
+    "year": 2013,
+    "youth_per100k": null,
+    "murder_rate": null,
+    "bookings_per1000": null
+   },
+   {
+    "year": 2014,
+    "youth_per100k": null,
+    "murder_rate": null,
+    "bookings_per1000": null
+   },
+   {
+    "year": 2015,
+    "youth_per100k": null,
+    "murder_rate": null,
+    "bookings_per1000": null
+   },
+   {
+    "year": 2016,
+    "youth_per100k": null,
+    "murder_rate": null,
+    "bookings_per1000": null
+   },
+   {
+    "year": 2017,
+    "youth_per100k": null,
+    "murder_rate": null,
+    "bookings_per1000": null
+   },
+   {
+    "year": 2018,
+    "youth_per100k": null,
+    "murder_rate": null,
+    "bookings_per1000": null
+   },
+   {
+    "year": 2020,
+    "youth_per100k": null,
+    "murder_rate": null,
+    "bookings_per1000": null
+   },
+   {
+    "year": 2021,
+    "youth_per100k": null,
+    "murder_rate": null,
+    "bookings_per1000": null
+   },
+   {
+    "year": 2022,
+    "youth_per100k": null,
+    "murder_rate": null,
+    "bookings_per1000": null
+   },
+   {
+    "year": 2023,
+    "youth_per100k": null,
+    "murder_rate": null,
+    "bookings_per1000": null
+   },
+   {
+    "year": 2024,
+    "youth_per100k": null,
+    "murder_rate": null,
+    "bookings_per1000": null
+   },
+   {
+    "year": 2025,
+    "youth_per100k": null,
+    "murder_rate": null,
+    "bookings_per1000": null
+   }
+  ],
+  "read": "youth$-per-100k rises 1990 505 -> 2000 1,529 (arc banked); the 1998-2000 murder-window join is n=3 (thin-flag, no verdict); NYC bookings series starts 2015 = no overlap with the youth-line arc \u2014 the NYC youth-line x crime read SHIPS AS NOT-INFORMATIVE this pass (honest-null), the multi-city youth-line pull is the open half"
+ },
+ "rank8_summer_jobs_literature_side": "VERIFIED-canon banked in peer_review_scan_v12 (Heller 2014 -43%; SYEP lotteries; READI) \u2014 funding-lane pull remains PULL-REQUIRED (unchanged)",
+ "rank10_unstructured_time": "VERIFIED mechanism banked in peer_review_scan_v11/v12 (Buil-Gil 2026) \u2014 time-use lane PULL-REQUIRED (unchanged)",
+ "verdict": "THE LANE'S OWN SLOT SURVIVES THE CHECK: with the program-line proxy (parks+libraries), the within-city reads are t0 -0.671 / t+1 -0.588 / t+2 -0.274 (pooled-z; 37/27/15 city-years) with 4-of-5 cities negative at t0 \u2014 the mechanism lane has real within-city signal, but the TREATMENT the one-pager names (three-line anatomy: program+maintenance+construction) is only 1/3 on disk (program line), 1 realized single-site CIP anchor (Raleigh), and honest-gapped on maintenance multi-city \u2014 the GAP (infrastructure-vs-crime never tested) remains UNSATURATED, and the first real tests are the Kingsport three-line pull + a multi-city CIP lane. Nothing fired; nothing saturated.",
+ "honest_nulls": [
+  "multi-city CIP construction line: not on disk (city CIP books = named route, not pulled)",
+  "maintenance line: not on disk (public-works grain)",
+  "NYC youth-line x crime: n<=3 overlap \u2014 not-informative, shipped as honest-null",
+  "Kingsport TN three-line end-to-end: named queued pull, not pulled this pass"
+ ]
+}

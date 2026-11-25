@@ -1,0 +1,155 @@
+[
+ {
+  "city": "Memphis",
+  "year": "2023",
+  "edu": 2145475257,
+  "pop": 633104,
+  "epc": 3388.8,
+  "basis": "district",
+  "edu_plus": 100.0
+ },
+ {
+  "city": "St. Louis",
+  "year": "2023",
+  "edu": 670724852,
+  "pop": 278144,
+  "epc": 2411.4,
+  "basis": "district",
+  "edu_plus": 71.2
+ },
+ {
+  "city": "Memphis",
+  "year": "2024",
+  "edu": 1715058217,
+  "pop": 621056,
+  "epc": 2761.5,
+  "basis": "district",
+  "edu_plus": 128.5
+ },
+ {
+  "city": "Boston",
+  "year": "2024",
+  "edu": 1445846054,
+  "pop": 672973,
+  "epc": 2148.4,
+  "basis": "city-run",
+  "edu_plus": 100.0
+ },
+ {
+  "city": "St. Louis",
+  "year": "2024",
+  "edu": 489035549,
+  "pop": 278144,
+  "epc": 1758.2,
+  "basis": "district",
+  "edu_plus": 81.8
+ },
+ {
+  "city": "Memphis",
+  "year": "2025",
+  "edu": 1849603015,
+  "pop": 621056,
+  "epc": 2978.2,
+  "basis": "district",
+  "edu_plus": 127.8
+ },
+ {
+  "city": "Boston",
+  "year": "2025",
+  "edu": 1568263587,
+  "pop": 672973,
+  "epc": 2330.4,
+  "basis": "city-run",
+  "edu_plus": 100.0
+ },
+ {
+  "city": "St. Louis",
+  "year": "2025",
+  "edu": 442707505,
+  "pop": 278144,
+  "epc": 1591.6,
+  "basis": "district",
+  "edu_plus": 68.3
+ },
+ {
+  "city": "Houston",
+  "year": "2025",
+  "edu": 2120000000,
+  "pop": 2397315,
+  "epc": 884.3,
+  "basis": "external-district",
+  "edu_plus": 37.9
+ },
+ {
+  "city": "Cincinnati",
+  "year": "2026",
+  "edu": 970400000,
+  "pop": 314367,
+  "epc": 3086.8,
+  "basis": "district",
+  "edu_plus": 143.4
+ },
+ {
+  "city": "Boston",
+  "year": "2026",
+  "edu": 1662138095,
+  "pop": 672973,
+  "epc": 2469.8,
+  "basis": "city-run",
+  "edu_plus": 114.7
+ },
+ {
+  "city": "Detroit",
+  "year": "2026",
+  "edu": 1397508272,
+  "pop": 649095,
+  "epc": 2153.0,
+  "basis": "external-district",
+  "edu_plus": 100.0
+ },
+ {
+  "city": "New Orleans",
+  "year": "2026",
+  "edu": 625288630,
+  "pop": 362154,
+  "epc": 1726.6,
+  "basis": "district (AOR, all-charter-class)",
+  "edu_plus": 80.2
+ },
+ {
+  "city": "Houston",
+  "year": "2026",
+  "edu": 2120000000,
+  "pop": 2397315,
+  "epc": 884.3,
+  "basis": "external-district",
+  "edu_plus": 41.1
+ },
+ {
+  "city": "Memphis",
+  "year": "2027",
+  "edu": 1679759131,
+  "pop": 621056,
+  "epc": 2704.7,
+  "basis": "district",
+  "edu_plus": 105.4
+ },
+ {
+  "city": "Boston",
+  "year": "2027",
+  "edu": 1726565143,
+  "pop": 672973,
+  "epc": 2565.6,
+  "basis": "city-run",
+  "edu_plus": 100.0
+ },
+ {
+  "city": "New Orleans",
+  "year": "2027",
+  "edu": 597714405,
+  "pop": 362154,
+  "epc": 1650.4,
+  "basis": "district (AOR, all-charter-class)",
+  "edu_plus": 64.3
+ }
+]

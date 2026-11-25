@@ -1,0 +1,61 @@
+{
+ "_record": "lane15_diminished_choices_moderator_v1",
+ "built": "2026-11-24",
+ "lane": "LANE-15 \u2014 THE DIMINISHED-CHOICES MODERATOR (the founder's own frame, formalized method-thoughts Nov-22: choices = f(income-band + education-access + family-structure + neighborhood-stock) as a COMPOSITE; the pre-registered question: does care-money work differently where the choice-set is diminished?)",
+ "laws_held": [
+  "direction-class only, no causal claims",
+  "composite by construction (the frame's law: the CHOICE-SET predicts, not the single var)",
+  "honest-null/thin-floor discipline: within-city cells under 6 rows are thin-flagged",
+  "the deep-panel's banked unemployment-split (commit 6b69cc33) is the pre-registered comparator carried verbatim"
+ ],
+ "composite": {
+  "definition": "z-mean(poverty_rate + children_poverty_pct \u2212 bachelors_pct) on the 50-row ACS block (10 cities x 2021-2025, socioeconomic_series_v1, ACS-table-based-SF keyless)",
+  "city_means": {
+   "Detroit": 0.28,
+   "Memphis": 0.21,
+   "Cincinnati": 0.18,
+   "New Orleans": 0.1,
+   "Oklahoma City": 0.01,
+   "St. Louis": -0.02,
+   "Pittsburgh": -0.05,
+   "NYC": -0.21,
+   "Houston": -0.24,
+   "Boston": -0.25
+  },
+  "note": "Memphis = 2nd-highest diminished-choice composite in the panel \u2014 the founder's home-lane sits in the HIGH group by construction"
+ },
+ "tests": [
+  {
+   "id": "T1-city-level-median-split (75 city-years, 8 cities 1990-2026, full_panel_v1)",
+   "design": "HIGH-DM (Detroit/Memphis/Cincinnati/New Orleans) vs LOW-DM (Boston/Houston/NYC/St. Louis) \u2014 within-city care-x-murder rho pooled per group (Fisher-z)",
+   "result": {
+    "HIGH-DM": "+0.136 mean rho (z=+0.33, 4 cities)",
+    "LOW-DM": "-0.167 mean rho (z=-0.35, 4 cities)",
+    "diff": "+0.31 pooled-z-se units (0.37/0.82 = NOT significant)"
+   }
+  },
+  {
+   "id": "T2-exact-grain-composite (22 city-years joined at the 2021-25 ACS block)",
+   "result": "Cincinnati +0.10 (n=5), Memphis -0.400 (n=5, thin-flag); pooled mixed-grain -0.582 (the mixed-grain confound class \u2014 carried, not claimed)"
+  },
+  {
+   "id": "T3-comparator (the banked deep-panel unemp split, commit 6b69cc33, carried verbatim)",
+   "result": "HIGH-unemp rho -0.275 vs LOW-unemp rho -0.462 = care matters MORE where the stability basis is LOW-loss (the honest honest-opposite read banked Nov-22)"
+  }
+ ],
+ "the_verdict": [
+  "THE DIMINISHED-CHOICES HYPOTHESIS DOES NOT SURVIVE ON THIS PANEL \u2014 and the direction is CONSISTENT with the banked unemployment-split: the care-protective rho is carried by the STABLE-BASIS cities (LOW-DM -0.167), not the diminished-choice cities (HIGH-DM +0.136)",
+  "the interaction is NOT significant at this grain (0.37/0.82) \u2014 the honest verdict carries as DIRECTION-CLASS: the composite moderation runs OPPOSITE the founder's diminished-choices prior, replicating 6b69cc33's banked honest read on a SECOND moderator axis (income-education composite vs unemployment)",
+  "the MECHANISM READ that survives: care-money's association-with-lower-murder shows where the civic basis (the choice-set infrastructure) is ALREADY present \u2014 care is not a substitute for the choice-set; the two-shackles frame (the debt lane + the access lane) remains the paper's structure",
+  "Memphis note (the founder's exact interest): Memphis = HIGH-DM (+0.21 composite) AND positive within-city care-x-rate (+0.189) \u2014 the home-lane is where the care-effect is WEAKEST, consistent with the composite read"
+ ],
+ "honest_nulls": [
+  "Pittsburgh/Oklahoma City rows carry the ACS block but no care/crime join in full_panel_v1 \u2014 excluded (not interpolated)",
+  "the 22-row exact-composite arm is thin-flagged (n<=5 per city)",
+  "family-structure + neighborhood-stock composite components remain 0-row honest-nulls (single_parent_pct absent from ACS keyless extraction this pass)"
+ ],
+ "artifacts": [
+  "lane15_diminished_choices_moderator_v1.json",
+  "_lane15_dm_test_debug.json"
+ ]
+}

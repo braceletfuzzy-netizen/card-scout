@@ -1,0 +1,95 @@
+{
+  "artifact": "quadrants_spec_v1",
+  "built": "2026-11-23",
+  "spec_source": "one-pager #8 — 2x2-grid-expansion-spec (For You/Plans/2026-11-23-action-plan-one-pagers-8-2x2-grid-expansion-spec.md)",
+  "frame": "HOW DO YOU PROVE A PHILOSOPHY? COUNT IT [Certain — banked verbatim, working-notes.md THE TRIBE-THEORY]",
+  "laws_held": [
+    "component-grain by construction (the 80x rule: joint-R2 0.086 vs sum-R2 0.001) [Certain]",
+    "honest-null convention: null = routes-tried-no-capture, never a placeholder (TX/LA precedent) [Certain]",
+    "reverse-causation guard on every funding axis: money-follows-crisis class (SAMHSA +0.394, officers +0.243) — reaction/intent separation by design [Certain]",
+    "examine-first, not advocate-first: this spec proposes; the founder picks the axes [Certain — THE LAW]",
+    "format-lock: the cube extends, it does not rewrite existing city formats [Certain — banked Nov-22]"
+  ],
+  "axes": {
+    "AX-FREQUENCY": {
+      "question": "what DOES the countable capture — the squeeze on the household (SHACKLES) or the civic fabric holding them (BONDS)?",
+      "poles": {
+        "SHACKLES": "negative-freedom dimension: household-debt composition (medical per-zip, student per-county), education-and-healthcare costs/access = the two-forms-of-shackles = the modern-day-indentured-servitude [Certain — founder-verbatim, working-notes.md THE SHACKLES-VEIN]; the economic-bleed to lenders = the macro-arithmetic made countable",
+        "BONDS": "community-attachment infrastructure: the decomposition's winning carriers (libraries, parks) promoted from care_components, plus civic-org density and the afterschool/sports/attachment program evidence [Certain — framing; civic-org route [Guess]]"
+      }
+    },
+    "AX-LOCATION": {
+      "question": "WHERE does the countable live — in the present-availability of the thing (ACCESS) or in the shape over time (TIME-ARC, t+0/t+1/t+2 as columns, not re-runs)?",
+      "poles": {
+        "ACCESS": "static per-capita availability: providers-per-capita, insurance-coverage-%, transit-reachability, facilities/civic-infra present on the ground in the city-year [Certain — structure; routes need verification pass]",
+        "TIME-ARC": "the lag-structure as a first-class panel column: every series returns t+0/t+1/t+2 in one run; the arc stops being a lesson and becomes a datatype [Certain — design; machinery proven via bookings facility file]"
+      }
+    }
+  },
+  "quadrants": [
+    {
+      "id": "Q1",
+      "name": "SHACKLES x ACCESS",
+      "label": "the access-shackle",
+      "definition": "The squeeze measured as present-day availability denial: the household cannot reach care (providers-per-capita), coverage (insurance %/HIC), or the debt-side route to it (household-debt-composition per-zip/county sitting on the same axes). Founder's shackles-vein lanes 1+3 rendered as static grid columns.",
+      "countables": [
+        "providers-per-capita (HRSA HPSA-class) [route named, NOT verified — one-pager #5 G3]",
+        "insurance-coverage-% (ACS HIC) [route named, NOT verified]",
+        "transit-reachability (MATA-class feeds) [route named, NOT verified]",
+        "medical-debt per-zip (CFPB-class) + student-debt per-county (NY-Fed-class) [route named, NOT verified — G1]"
+      ],
+      "pre_registered_test": "corr(debt-composition per-zip, spend/outcome proxies per-zip), negative [one-pager #4]",
+      "falsifier_note": "failed keyless routes ship as logged honest-nulls; the cell proceeds without them [Certain — pre-registered]",
+      "confidence": "[Guess — for survival of all four routes; the procedure is Certain]"
+    },
+    {
+      "id": "Q2",
+      "name": "SHACKLES x TIME-ARC",
+      "label": "the shackle-arc",
+      "definition": "The squeeze measured longitudinally: the funding-shackle lanes (state-MH, city-MH, care, cage) carried on t+0/t+1/t+2 columns with the reverse-causation class separated by timing-structure — reaction vs intent read off the arc shape without re-running history.",
+      "countables": [
+        "state-MH budget arc per state-year FY2017-2027 (state_mh_series_v2, honest-null convention) [Certain — banked]",
+        "city-MH line arc 2009-2026, 10 cities (mental_health_series_v1 incl SAMHSA grant channel) [Certain — banked]",
+        "care/cage spending arc 1990-2026 (care_arc_extension v1+v2; full_panel_v1) [Certain — banked]",
+        "DEBT-ARC: medical/student debt composition over time [0 rows banked — honest-null until CFPB/NY-Fed route verification]"
+      ],
+      "pre_registered_test": "access-arc / funding-arc vs care-consumable + crime outcomes at t0/t+1/t+2; reaction/intent separation test on every funding series",
+      "falsifier_note": "arc-viability: if most series are too short for t+2 the arc-columns ship but 3-lag claims limited to supporting series, listed explicitly [Certain — pre-registered]",
+      "confidence": "[Likely — machinery Certain, debt half is a null]"
+    },
+    {
+      "id": "Q3",
+      "name": "BONDS x ACCESS",
+      "label": "the bond-stock",
+      "definition": "The civic fabric measured as static per-capita stock: the decomposition's winning carriers (libraries, parks) at component grain from the Census COG codes in care_components_v1, cross-sectional pair logic carried by the wide_panel_pairs merge.",
+      "countables": [
+        "component-grain care census E/F-codes per capita, 29 cities, 2012/2014 COG vintages (care_components_v1: 87 rows) [Certain — banked]",
+        "care/cage ratios cross-section, 29 cities (wide_panel_pairs v1-v3, 84 rows) [Certain — banked]",
+        "civic-org density per city-year [route TBD — G2 gap; honest-null if it fails]"
+      ],
+      "pre_registered_test": "component-arc pre-registered per one-pager #7 needs TIME; static cell only carries the stock side",
+      "falsifier_note": "composition-violation: any axis that can only be built at aggregate grain is marked second-class — the 80x rule is enforced [Certain — pre-registered]",
+      "confidence": "[Likely — components banked, but vintage-thin (2012/2014 only) and civic-org route unverified]"
+    },
+    {
+      "id": "Q4",
+      "name": "BONDS x TIME-ARC",
+      "label": "the bond-arc",
+      "definition": "The civic fabric measured longitudinally: libraries/parks components and the bookings/suicide-rate outcome arcs at t+0/t+1/t+2, the decomposition's temporal margin; program-level peer evidence (afterschool, sports, midnight-basketball, unstructured-time mechanics) anchored by the bookings facility machinery.",
+      "countables": [
+        "bookings facility arc 1990-2026, 73 facilities, 1,966 rows (bookings_facility_v1; NYC wedge 61,585->23,094, discharges/arrests 0.181->0.089) [Certain — banked]",
+        "city bookings arc 2015-2024, 9 cities, 91 rows (bookings_series_v1) [Certain — banked]",
+        "deep component history 1980-2028, 6 cities, 2,509 rows (city_component_annual_v1, NYC-heavy) [Certain — banked]",
+        "peer-review anchor sets: scan v11 bonds threads (36 rows) + scan v5 family/attachment threads (14 rows) [Certain — banked as evidence, not panel data]"
+      ],
+      "pre_registered_test": "component-arc: libraries/parks vs murder/bookings arcs (the decomposition's temporal margin) [one-pager #7]",
+      "falsifier_note": "pair-columns ship alongside raw axes (parks x health, libraries x health negative synergies are banked pair findings) [Certain]",
+      "confidence": "[Likely-to-Certain — richest banked base, zero unverified routes for the promotion build]"
+    }
+  ],
+  "build_order_recommendation": {
+    "order": "Q4 -> Q2 -> Q3 -> Q1",
+    "reads_as": "mirrors spec #8's D->B->C->A: machinery first (TIME-ARC columns), then the BONDS promotion (banked components), then ACCESS routes, then the debt SHACKLE routes",
+    "tag": "[prior — design judgment, this brief's own; the founder gate is THE gate per the examine-first law]"
+  }
+}

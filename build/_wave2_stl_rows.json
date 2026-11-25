@@ -1,0 +1,71 @@
+[
+ {
+  "city": "St. Louis",
+  "year": 2002,
+  "murders": 111,
+  "violent_crime_total": 50429,
+  "population": 353004,
+  "murder_rate_per_100k": 31.4,
+  "data_quality": "A-",
+  "notes": "FBI CDE keyless summarizer (cde.ucr.cjis.gov/LATEST/summarized/agency/MOSPD0000/HOM?from=01-1999&to=12-2003): SLMPD 2002 homicides = 111, 12/12 months summed. Corroborates the FBI-UCR-sourced 2002 row in the Crime-in-St.-Louis table (pop 353,004; index 50,429; 111 homicides; 31.4/100k). Rate = 111/353,004*100k = 31.4.",
+  "honest_gaps": [
+   "violent_crime_total (50,429 index crimes) taken from the same FBI-UCR table, not pulled via CDE VO lane"
+  ],
+  "source_refs": [
+   "https://cde.ucr.cjis.gov/LATEST/summarized/agency/MOSPD0000/HOM?from=01-1999&to=12-2003 (fetched 2026-11-22; monthly actuals summed)",
+   "en.wikipedia.org/wiki/Crime_in_St._Louis 2002 row (FBI UCR-cited) - corroboration only"
+  ]
+ },
+ {
+  "city": "St. Louis",
+  "year": 2016,
+  "murders": 188,
+  "violent_crime_total": 24670,
+  "population": 314507,
+  "murder_rate_per_100k": 59.8,
+  "data_quality": "A",
+  "notes": "FBI CDE keyless route MOSPD0000/HOM 2016 = 188 (12/12 months). Triple-corroborated: FBI CIUS 2016 Table 4 (Wayback MSA table: 'City of St. Louis, MO 314,507 ... 188'); press 'up 9% from' 188 \u2192 205 in 2017; city-UCR table row (pop 314,507, rate 59.8). Rate = 188/314,507*100k = 59.8. Population is the UCR-reported city total (also closest to PEP-interp 312,152).",
+  "honest_gaps": [
+   "violent_crime_total (24,670) carried from the FBI-UCR table, not via CDE VO lane"
+  ],
+  "source_refs": [
+   "https://cde.ucr.cjis.gov/LATEST/summarized/agency/MOSPD0000/HOM?from=01-2016&to=12-2018 (fetched 2026-11-22)",
+   "web.archive.org/web/2018id_/https://ucr.fbi.gov/crime-in-the-u.s/2016/crime-in-the-u.s.-2016/topic-pages/tables/table-4 - 'City of St. Louis, MO 314,507 ... 188'"
+  ]
+ },
+ {
+  "city": "St. Louis",
+  "year": 2017,
+  "murders": 205,
+  "violent_crime_total": null,
+  "population": 308293,
+  "murder_rate_per_100k": 66.5,
+  "data_quality": "B+",
+  "notes": "FBI CDE keyless route MOSPD0000/HOM 2017 = 205 (12/12 months); matches press figure '205 murders at the end of 2017, up 9% from 2016' (188*1.09=204.9) - St. Louis' all-time modern high. Population interpolated linear between PEP2015 (316,010) and PEP2019 (300,576) per pop-series convention. Rate = 205/308,293*100k = 66.5.",
+  "honest_gaps": [
+   "violent_crime_total not pulled (slider needs murders)",
+   "city PEP 2017 not in pop series - interpolated"
+  ],
+  "source_refs": [
+   "https://cde.ucr.cjis.gov/LATEST/summarized/agency/MOSPD0000/HOM?from=01-2016&to=12-2018 (fetched 2026-11-22)",
+   "Crime in St. Louis (wiki) press-cited: 'St. Louis had 205 murders, up 9% from 2016' - corroboration"
+  ]
+ },
+ {
+  "city": "St. Louis",
+  "year": 2018,
+  "murders": 187,
+  "violent_crime_total": null,
+  "population": 304434,
+  "murder_rate_per_100k": 61.4,
+  "data_quality": "B+",
+  "notes": "FBI CDE keyless route MOSPD0000/HOM 2018 = 187 (12/12 months). Population interpolated linear PEP2015\u2192PEP2019 (same convention). Rate = 187/304,434*100k = 61.4.",
+  "honest_gaps": [
+   "violent_crime_total not pulled",
+   "city PEP 2018 interpolated"
+  ],
+  "source_refs": [
+   "https://cde.ucr.cjis.gov/LATEST/summarized/agency/MOSPD0000/HOM?from=01-2016&to=12-2018 (fetched 2026-11-22)"
+  ]
+ }
+]

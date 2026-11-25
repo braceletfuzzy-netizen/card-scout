@@ -1,0 +1,96 @@
+{
+  "flip_era": null,
+  "flip_era_note": "No care-ratio break detected anywhere in the retrievable official series (FY2014-FY2027). OTR renewal era (2003-2013) book volumes are not publicly retrievable (empty folder pages on city site; no Wayback captures pre-2014). The visible story: ratio dips to a trough in FY2018-19 (0.637-0.643, police surge years post-2017 consent-era spending) then climbs steadily to 0.728 (FY2027) - a MODERN-era care tilt (2020→2027), not an OTR-era flip. Interpretively consistent with the OTR narrative: OTR renewal money was never inside the city care/cage ledger - it ran through 3CDC (private) and tax-increment/credits, so the fingerprint test on Cincinnati city budgets cannot see the OTR era and shows no break where it can see.",
+  "ratio_series": [
+    {
+      "year": "FY2014",
+      "ratio_core": 0.659,
+      "ratio_incl_ced": 0.7009
+    },
+    {
+      "year": "FY2015",
+      "ratio_core": 0.6608,
+      "ratio_incl_ced": 0.7204
+    },
+    {
+      "year": "FY2016",
+      "ratio_core": 0.6778,
+      "ratio_incl_ced": 0.7623
+    },
+    {
+      "year": "FY2017",
+      "ratio_core": 0.6627,
+      "ratio_incl_ced": 0.7434
+    },
+    {
+      "year": "FY2018",
+      "ratio_core": 0.6371,
+      "ratio_incl_ced": 0.6978
+    },
+    {
+      "year": "FY2019",
+      "ratio_core": 0.6429,
+      "ratio_incl_ced": 0.6992
+    },
+    {
+      "year": "FY2020",
+      "ratio_core": 0.6868,
+      "ratio_incl_ced": 0.7554
+    },
+    {
+      "year": "FY2021",
+      "ratio_core": 0.6913,
+      "ratio_incl_ced": 0.7547
+    },
+    {
+      "year": "FY2022",
+      "ratio_core": 0.6787,
+      "ratio_incl_ced": 0.7082
+    },
+    {
+      "year": "FY2023",
+      "ratio_core": 0.6843,
+      "ratio_incl_ced": 0.7115
+    },
+    {
+      "year": "FY2024",
+      "ratio_core": 0.6862,
+      "ratio_incl_ced": 0.7171
+    },
+    {
+      "year": "FY2025",
+      "ratio_core": 0.7105,
+      "ratio_incl_ced": 0.7392
+    },
+    {
+      "year": "FY2026",
+      "ratio_core": 0.717,
+      "ratio_incl_ced": 0.7456
+    },
+    {
+      "year": "FY2027",
+      "ratio_core": 0.728,
+      "ratio_incl_ced": 0.728
+    },
+    {
+      "year": "FY2026 (local band_a anchor)",
+      "ratio_core": 0.717,
+      "ratio_incl_ced": 0.7456
+    }
+  ],
+  "confidence": "high for FY2014-FY2027 (official city PDF tables, parsed programmatically, cross-book FY-value consistency verified: Police FY2016 identical in two books, FY2026 = local ingested anchor exact-match); zero for 2000-2013 (unretrievable volumes, honest gap); OTR 3CDC figures [Likely] via Wikipedia-cited press ($1.3B+ invested by May 2018)",
+  "falsifier": "If pre-FY2014 volumes were retrieved and showed care/cage ratios materially below 0.5 rising through the 2000s, it would point to a real care flip that our FY2014+ window mischaracterizes. Also falsifiable: if C&ED general-fund spend in 2004-2013 was predominantly housing-care (unlikely: C&ED is development; type-split shows CDBG pass-throughs), the C&ED line would shift the conclusion",
+  "sources": [
+    "vendorselfservice.cincinnati-oh.gov/sites/budget/ (budget-documents pages serve book PDFs directly)",
+    "www.cincinnati-oh.gov/sites/budget/assets/File/ older volumes (unlisted but live)",
+    "band_a_ingestion_v1.json (local FY2026 anchor, 28 rows delta-0)",
+    "en.wikipedia.org/wiki/Over-the-Rhine (3CDC figures, [Likely])"
+  ],
+  "honest_gaps": [
+    "2001-02, 2003-04, 2005-06, 2007-08, 2009-10 official-era folders exist on city site but contain zero documents",
+    "Wayback CDX and pre-2014 snapshot retrieval blocked on this host (Bitdefender page-block on web.archive.org/cdx/)",
+    "FY2012-13 and FY2014-15 update books exist in the pattern (FY2014-15 referenced as prior-year in FY16-17 book) but file names could not be resolved; series starts FY2014 from the FY16-17 historical-column table",
+    "Municipal court / jail / 911 are not separate top-level departments in the biennial books (jail = Hamilton County; 911/ECC inside City Manager accounts; municipal court is a county-court entity with city contribution) - CAGE restricted to Police per instructions",
+    "Cincinnati fire is largely EMS-service - flagged per instructions, and if included the care-side dominance is even stronger (~1.5 ratio)"
+  ]
+}

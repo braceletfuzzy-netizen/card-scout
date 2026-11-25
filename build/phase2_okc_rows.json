@@ -1,0 +1,29 @@
+[
+ {
+  "year": "2022",
+  "edu_total_usd": 758277000,
+  "basis": "district",
+  "source_refs": [
+   "OKCPS FY2022 Budget (okcps.org /fs/resource-manager/view/08b18135-ca4f-4d48-acc5-af7b9ba30f22, revised Dec 2021 vintage also on file), TOTAL BUDGETED EXPENDITURES BY OBJECT = $758,277,000 (all funds)"
+  ],
+  "data_quality": "Certain-as-published (official budget book, all-funds expenditures total)",
+  "notes": "OKCPS = Oklahoma City Public Schools, independent district. City of OKC carries no general schools appropriation; city_contribution null.",
+  "honest_gaps": [
+   "All-funds budget basis (OK School District Budget Act presentation includes bond funds, building fund, sinking fund)",
+   "Revised Dec-2021 vintage available + June-2001-layout original - total identical in both (758,277,000)"
+  ]
+ },
+ {
+  "year": "2027",
+  "edu_total_usd": 1165518000,
+  "basis": "district",
+  "source_refs": [
+   "OKCPS FY2027 Budget Book (resources.finalsite.net/images/v1785273345/okcpsorg/xqtmflbv8pylsoo9gk5t/FY2027BudgetBookBoardAgendaFinal.pdf), TOTAL BUDGETED EXPENDITURES BY OBJECT = $1,165,518,000 (all funds)"
+  ],
+  "data_quality": "Certain-as-published (official FY27 budget book)",
+  "notes": "FY2027 all-funds budgeted expenditures.",
+  "honest_gaps": [
+   "All-funds basis; year is futureFY (2026-27 school year)"
+  ]
+ }
+]

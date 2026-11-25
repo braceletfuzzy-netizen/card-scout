@@ -1,0 +1,15 @@
+[
+ {
+  "year": "2023",
+  "edu_total_usd": 1054580966,
+  "basis": "external-district",
+  "source_refs": [
+   "DPSCD ACFR FY2023 (detroitk12.org /fs/resource-manager/view/9e28815b-6172-4b3e-bdbc-730c3d2639f9), p.60 Comparison of Unassigned GF Balance to Expenditures: 2023 = $1,054,580,966 (all governmental funds trend = $1,123,590,186)"
+  ],
+  "data_quality": "Certain-as-published (audited ACFR)",
+  "notes": "DPSCD FY2023 GF expenditures and transfers out.",
+  "honest_gaps": [
+   "GF-only; all-funds governmental total = 1,123,590,186"
+  ]
+ }
+]

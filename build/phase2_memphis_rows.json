@@ -1,0 +1,57 @@
+[
+ {
+  "year": "2020",
+  "edu_total_usd": 1773089590,
+  "basis": "district",
+  "source_refs": [
+   "MSCS FY2024-25 Adopted Budget Book (scsk12.org/finance/files/24/FY25 Adopted Budget Book.pdf), FISCAL YEAR 2024-25 DISTRICT ALL FUNDS BUDGET statement, 2020-21 Actual column: Total Expenditures $1,773,089,590 (verified vs Net Change -$64,377,632 = revenues $1,708,711,958 - $1,773,089,590)"
+  ],
+  "data_quality": "Certain-as-published (official book table, arithmetic cross-checked against Revenue and Net Change rows)",
+  "notes": "MSCS (Memphis-Shelby County Schools) = independent county-wide district. City of Memphis revenue 2020-21 Actual $526,514,124 (settlement-agreement class).",
+  "honest_gaps": [
+   "Column-wrapped extraction: expenditure total read from the Excess-labeled row (the table wraps Total-Expenditures/revenues); verified arithmetically: revenues + Net Change = expenditures for all 5 columns",
+   "City of Memphis settlement revenue varies by year (526.5M / 530.2M / 542.3M across 20-21/21-22/22-23)"
+  ]
+ },
+ {
+  "year": "2021",
+  "edu_total_usd": 2287124371,
+  "basis": "district",
+  "source_refs": [
+   "MSCS FY2024-25 book, ALL FUNDS statement 2021-22 Actual column $2,287,124,371 (verified: $2,256,100,899 revenues - $2,287,124,371 = Net Change -$31,023,472 as printed)"
+  ],
+  "data_quality": "Certain-as-published (official book table, arithmetic verified)",
+  "notes": "ESSER 2.0 peak year (Federal Government revenue $1,083,653,116 in 21-22). City of Memphis revenue 21-22 actual $530,177,227.",
+  "honest_gaps": [
+   "ESSER-inflated year: federal funds alone were $1.08B; per-capita comparability flag",
+   "City of Memphis contribution NOT ~$514M in operating terms - settlement-class revenue only"
+  ]
+ },
+ {
+  "year": "2022",
+  "edu_total_usd": 1690842766,
+  "basis": "district",
+  "source_refs": [
+   "MSCS FY2024-25 book, ALL FUNDS statement 2022-23 Actuals column $1,690,842,766 (verified: $1,743,249,736 - $1,690,842,766 = Net Change +$52,406,970 as printed)"
+  ],
+  "data_quality": "Certain-as-published (official book table, arithmetic verified)",
+  "notes": "NOTE: v1 row \"Memphis 2023\" used $2,145,475,257 which is the FY2023-24 AMENDED column, not FY2022-23 actual. This v2 row corrects the year-label.",
+  "honest_gaps": [
+   "v1 2023-row year-label mismatch corrected in v2: FY22-23 actual = 1,690,842,766; the 2,145,475,257 belongs to FY23-24 amended (and v1 carries it as 2023)",
+   "EDU+ v2 recompute affects the v1 Memphis-2023 EDU+ (3388.8 epc) -> v2 will compute 2023 with either value flagged"
+  ]
+ },
+ {
+  "year": "2026",
+  "edu_total_usd": 1880000000,
+  "basis": "district",
+  "source_refs": [
+   "MSCS FY2026-27 Adopted Budget Book (scsk12.org/finance/files/26/FY27 Adopted Budget Book.pdf), Combined Funds narrative: FY27 all-funds adopted = $1.68B, a $204.2M (10.8%) decrease FROM the FY26 amended budget -> FY26 amended \u2248 $1,884,200,000 (arithmetic-derived; v1 noted the books print FY26 amended = $1,883,997,262)"
+  ],
+  "data_quality": "Derived-from-official (arithmetic from printed deltas in the FY27 book; exact FY26 amended row not visible in text layer)",
+  "notes": "FY2025-26 = amended basis (the FY27 book only prints FY26 as amended; FY26 adopted book not found on scsk12.org).",
+  "honest_gaps": [
+   "FY26 value = amended (not adopted, not actual); figure = 1.68B + 204.2M arithmetic, \u00b1rounding noise (~\u00b150K)"
+  ]
+ }
+]

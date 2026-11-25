@@ -1,0 +1,915 @@
+{
+ "step3_composition_bias": {
+  "models": {
+   "FE-3_maslow_joint_t0": {
+    "n_frame": 24,
+    "frame_cities": [
+     "Cincinnati",
+     "Detroit",
+     "Memphis",
+     "NYC",
+     "St. Louis"
+    ],
+    "banked_betas": [
+     -0.181,
+     -0.28,
+     -0.099,
+     0.64,
+     -0.003
+    ],
+    "refit_betas_current_frame": [
+     -0.181,
+     -0.28,
+     -0.099,
+     0.64,
+     -0.003
+    ],
+    "se_current_frame": [
+     0.027,
+     0.022,
+     0.028,
+     0.026,
+     0.023
+    ],
+    "within_r2_current": 0.695,
+    "variants": {
+     "drop_2025plus_forecast_vintage": {
+      "n": 20,
+      "betas": [
+       -0.371,
+       -0.475,
+       -0.094,
+       0.376,
+       -0.034
+      ],
+      "se": [
+       0.039,
+       0.03,
+       0.037,
+       0.035,
+       0.031
+      ],
+      "within_r2": 0.755
+     },
+     "drop_city_Cincinnati": {
+      "n": 19,
+      "betas": [
+       -0.044,
+       -0.349,
+       -0.248,
+       0.723,
+       0.025
+      ],
+      "se": [
+       0.023,
+       0.018,
+       0.022,
+       0.02,
+       0.018
+      ],
+      "within_r2": 0.829
+     },
+     "drop_city_Detroit": {
+      "n": 19,
+      "betas": [
+       -0.25,
+       -0.326,
+       0.013,
+       0.715,
+       -0.084
+      ],
+      "se": [
+       0.055,
+       0.031,
+       0.064,
+       0.039,
+       0.032
+      ],
+      "within_r2": 0.658
+     },
+     "drop_city_Memphis": {
+      "n": 19,
+      "betas": [
+       -0.269,
+       -0.233,
+       -0.148,
+       0.54,
+       -0.048
+      ],
+      "se": [
+       0.04,
+       0.031,
+       0.04,
+       0.038,
+       0.034
+      ],
+      "within_r2": 0.653
+     },
+     "drop_city_NYC": {
+      "n": 20,
+      "betas": [
+       -0.065,
+       -0.331,
+       0.025,
+       0.782,
+       -0.002
+      ],
+      "se": [
+       0.029,
+       0.024,
+       0.032,
+       0.038,
+       0.023
+      ],
+      "within_r2": 0.711
+     },
+     "drop_city_St. Louis": {
+      "n": 19,
+      "betas": [
+       -0.293,
+       -0.271,
+       -0.028,
+       0.504,
+       0.174
+      ],
+      "se": [
+       0.032,
+       0.027,
+       0.033,
+       0.032,
+       0.029
+      ],
+      "within_r2": 0.717
+     }
+    }
+   },
+   "FE-3_arc_tplus1": {
+    "n_frame": 18,
+    "frame_cities": [
+     "Cincinnati",
+     "Detroit",
+     "Memphis",
+     "St. Louis"
+    ],
+    "banked_betas": [
+     -0.197,
+     0.056,
+     -0.263,
+     0.544,
+     -0.189
+    ],
+    "refit_betas_current_frame": [
+     -0.197,
+     0.056,
+     -0.263,
+     0.544,
+     -0.189
+    ],
+    "se_current_frame": [
+     0.024,
+     0.02,
+     0.026,
+     0.031,
+     0.019
+    ],
+    "within_r2_current": 0.748,
+    "variants": {
+     "drop_2025plus_forecast_vintage": {
+      "n": 16,
+      "betas": [
+       -0.475,
+       0.018,
+       -0.366,
+       0.199,
+       -0.19
+      ],
+      "se": [
+       0.045,
+       0.036,
+       0.046,
+       0.055,
+       0.032
+      ],
+      "within_r2": 0.691
+     },
+     "drop_city_Cincinnati": {
+      "n": 14,
+      "betas": [
+       -0.069,
+       0.024,
+       -0.385,
+       0.606,
+       -0.117
+      ],
+      "se": [
+       0.017,
+       0.015,
+       0.018,
+       0.023,
+       0.013
+      ],
+      "within_r2": 0.9
+     },
+     "drop_city_Detroit": {
+      "n": 14,
+      "betas": [
+       -0.543,
+       0.205,
+       0.114,
+       0.553,
+       -0.059
+      ],
+      "se": [
+       0.031,
+       0.021,
+       0.032,
+       0.03,
+       0.019
+      ],
+      "within_r2": 0.831
+     },
+     "drop_city_Memphis": {
+      "n": 13,
+      "betas": [
+       -0.514,
+       0.209,
+       -0.493,
+       0.014,
+       -0.185
+      ],
+      "se": [
+       0.046,
+       0.037,
+       0.047,
+       0.063,
+       0.032
+      ],
+      "within_r2": 0.712
+     },
+     "drop_city_St. Louis": {
+      "n": 13,
+      "betas": [
+       -0.202,
+       0.043,
+       -0.144,
+       0.679,
+       -0.306
+      ],
+      "se": [
+       0.037,
+       0.029,
+       0.039,
+       0.046,
+       0.03
+      ],
+      "within_r2": 0.754
+     }
+    }
+   },
+   "FE-6_care_plus_unemp": {
+    "n_frame": 36,
+    "frame_cities": [
+     "Cincinnati",
+     "Detroit",
+     "Memphis",
+     "NYC",
+     "St. Louis"
+    ],
+    "banked_betas": [
+     -0.304,
+     0.312
+    ],
+    "refit_betas_current_frame": [
+     -0.304,
+     0.312
+    ],
+    "se_current_frame": [
+     0.023,
+     0.023
+    ],
+    "within_r2_current": 0.263,
+    "variants": {
+     "drop_2025plus_forecast_vintage": {
+      "n": 32,
+      "betas": [
+       -0.286,
+       0.381
+      ],
+      "se": [
+       0.029,
+       0.029
+      ],
+      "within_r2": 0.311
+     },
+     "drop_city_Cincinnati": {
+      "n": 24,
+      "betas": [
+       -0.335,
+       0.28
+      ],
+      "se": [
+       0.025,
+       0.025
+      ],
+      "within_r2": 0.267
+     },
+     "drop_city_Detroit": {
+      "n": 30,
+      "betas": [
+       -0.14,
+       0.388
+      ],
+      "se": [
+       0.027,
+       0.027
+      ],
+      "within_r2": 0.202
+     },
+     "drop_city_Memphis": {
+      "n": 31,
+      "betas": [
+       -0.33,
+       0.328
+      ],
+      "se": [
+       0.026,
+       0.026
+      ],
+      "within_r2": 0.302
+     },
+     "drop_city_NYC": {
+      "n": 30,
+      "betas": [
+       -0.434,
+       0.275
+      ],
+      "se": [
+       0.022,
+       0.022
+      ],
+      "within_r2": 0.375
+     },
+     "drop_city_St. Louis": {
+      "n": 29,
+      "betas": [
+       -0.351,
+       0.239
+      ],
+      "se": [
+       0.032,
+       0.032
+      ],
+      "within_r2": 0.246
+     }
+    }
+   },
+   "FE-2_care_cage_bookings": {
+    "n_frame": 19,
+    "frame_cities": [
+     "Cincinnati",
+     "Detroit",
+     "Memphis",
+     "St. Louis"
+    ],
+    "banked_betas": [
+     -0.452,
+     0.419,
+     0.013
+    ],
+    "refit_betas_current_frame": [
+     -0.452,
+     0.419,
+     0.013
+    ],
+    "se_current_frame": [
+     0.034,
+     0.034,
+     0.035
+    ],
+    "within_r2_current": 0.423,
+    "variants": {
+     "drop_2025plus_forecast_vintage": {
+      "n": 19,
+      "betas": [
+       -0.452,
+       0.419,
+       0.013
+      ],
+      "se": [
+       0.034,
+       0.034,
+       0.035
+      ],
+      "within_r2": 0.423
+     },
+     "drop_city_Cincinnati": {
+      "n": 11,
+      "betas": [
+       -0.448,
+       0.458,
+       0.055
+      ],
+      "se": [
+       0.043,
+       0.044,
+       0.044
+      ],
+      "within_r2": 0.47
+     },
+     "drop_city_Detroit": {
+      "n": 17,
+      "betas": [
+       -0.301,
+       0.391,
+       -0.067
+      ],
+      "se": [
+       0.055,
+       0.049,
+       0.053
+      ],
+      "within_r2": 0.324
+     },
+     "drop_city_Memphis": {
+      "n": 15,
+      "betas": [
+       -0.447,
+       0.487,
+       0.045
+      ],
+      "se": [
+       0.036,
+       0.037,
+       0.037
+      ],
+      "within_r2": 0.491
+     },
+     "drop_city_St. Louis": {
+      "n": 14,
+      "betas": [
+       -0.603,
+       -0.476,
+       -0.576
+      ],
+      "se": [
+       0.044,
+       0.056,
+       0.054
+      ],
+      "within_r2": 0.655
+     }
+    }
+   }
+  },
+  "sign_stability": {
+   "FE-3_maslow_joint_t0": {
+    "columns": [
+     "care_per_100k",
+     "cost_burden_30pct_plus_share",
+     "median_home_value",
+     "snap_receipt_share_pct",
+     "bachelors_pct"
+    ],
+    "stability": {
+     "care_per_100k": {
+      "banked": "neg",
+      "current_refit": "neg",
+      "dropped_city_signs": {
+       "drop_2025plus_forecast_vintage": "neg",
+       "drop_city_Cincinnati": "neg",
+       "drop_city_Detroit": "neg",
+       "drop_city_Memphis": "neg",
+       "drop_city_NYC": "neg",
+       "drop_city_St. Louis": "neg"
+      }
+     },
+     "cost_burden_30pct_plus_share": {
+      "banked": "neg",
+      "current_refit": "neg",
+      "dropped_city_signs": {
+       "drop_2025plus_forecast_vintage": "neg",
+       "drop_city_Cincinnati": "neg",
+       "drop_city_Detroit": "neg",
+       "drop_city_Memphis": "neg",
+       "drop_city_NYC": "neg",
+       "drop_city_St. Louis": "neg"
+      }
+     },
+     "median_home_value": {
+      "banked": "neg",
+      "current_refit": "neg",
+      "dropped_city_signs": {
+       "drop_2025plus_forecast_vintage": "neg",
+       "drop_city_Cincinnati": "neg",
+       "drop_city_Detroit": "pos",
+       "drop_city_Memphis": "neg",
+       "drop_city_NYC": "pos",
+       "drop_city_St. Louis": "neg"
+      }
+     },
+     "snap_receipt_share_pct": {
+      "banked": "pos",
+      "current_refit": "pos",
+      "dropped_city_signs": {
+       "drop_2025plus_forecast_vintage": "pos",
+       "drop_city_Cincinnati": "pos",
+       "drop_city_Detroit": "pos",
+       "drop_city_Memphis": "pos",
+       "drop_city_NYC": "pos",
+       "drop_city_St. Louis": "pos"
+      }
+     },
+     "bachelors_pct": {
+      "banked": "neg",
+      "current_refit": "neg",
+      "dropped_city_signs": {
+       "drop_2025plus_forecast_vintage": "neg",
+       "drop_city_Cincinnati": "pos",
+       "drop_city_Detroit": "neg",
+       "drop_city_Memphis": "neg",
+       "drop_city_NYC": "neg",
+       "drop_city_St. Louis": "pos"
+      }
+     }
+    },
+    "sign_flip_columns": [
+     "median_home_value",
+     "bachelors_pct"
+    ],
+    "all_signs_hold": false
+   },
+   "FE-3_arc_tplus1": {
+    "columns": [
+     "care_per_100k",
+     "cost_burden_30pct_plus_share",
+     "median_home_value",
+     "snap_receipt_share_pct",
+     "bachelors_pct"
+    ],
+    "stability": {
+     "care_per_100k": {
+      "banked": "neg",
+      "current_refit": "neg",
+      "dropped_city_signs": {
+       "drop_2025plus_forecast_vintage": "neg",
+       "drop_city_Cincinnati": "neg",
+       "drop_city_Detroit": "neg",
+       "drop_city_Memphis": "neg",
+       "drop_city_St. Louis": "neg"
+      }
+     },
+     "cost_burden_30pct_plus_share": {
+      "banked": "pos",
+      "current_refit": "pos",
+      "dropped_city_signs": {
+       "drop_2025plus_forecast_vintage": "pos",
+       "drop_city_Cincinnati": "pos",
+       "drop_city_Detroit": "pos",
+       "drop_city_Memphis": "pos",
+       "drop_city_St. Louis": "pos"
+      }
+     },
+     "median_home_value": {
+      "banked": "neg",
+      "current_refit": "neg",
+      "dropped_city_signs": {
+       "drop_2025plus_forecast_vintage": "neg",
+       "drop_city_Cincinnati": "neg",
+       "drop_city_Detroit": "pos",
+       "drop_city_Memphis": "neg",
+       "drop_city_St. Louis": "neg"
+      }
+     },
+     "snap_receipt_share_pct": {
+      "banked": "pos",
+      "current_refit": "pos",
+      "dropped_city_signs": {
+       "drop_2025plus_forecast_vintage": "pos",
+       "drop_city_Cincinnati": "pos",
+       "drop_city_Detroit": "pos",
+       "drop_city_Memphis": "pos",
+       "drop_city_St. Louis": "pos"
+      }
+     },
+     "bachelors_pct": {
+      "banked": "neg",
+      "current_refit": "neg",
+      "dropped_city_signs": {
+       "drop_2025plus_forecast_vintage": "neg",
+       "drop_city_Cincinnati": "neg",
+       "drop_city_Detroit": "neg",
+       "drop_city_Memphis": "neg",
+       "drop_city_St. Louis": "neg"
+      }
+     }
+    },
+    "sign_flip_columns": [
+     "median_home_value"
+    ],
+    "all_signs_hold": false
+   },
+   "FE-6_care_plus_unemp": {
+    "columns": [
+     "care_per_100k",
+     "unemployment_rate"
+    ],
+    "stability": {
+     "care_per_100k": {
+      "banked": "neg",
+      "current_refit": "neg",
+      "dropped_city_signs": {
+       "drop_2025plus_forecast_vintage": "neg",
+       "drop_city_Cincinnati": "neg",
+       "drop_city_Detroit": "neg",
+       "drop_city_Memphis": "neg",
+       "drop_city_NYC": "neg",
+       "drop_city_St. Louis": "neg"
+      }
+     },
+     "unemployment_rate": {
+      "banked": "pos",
+      "current_refit": "pos",
+      "dropped_city_signs": {
+       "drop_2025plus_forecast_vintage": "pos",
+       "drop_city_Cincinnati": "pos",
+       "drop_city_Detroit": "pos",
+       "drop_city_Memphis": "pos",
+       "drop_city_NYC": "pos",
+       "drop_city_St. Louis": "pos"
+      }
+     }
+    },
+    "sign_flip_columns": [],
+    "all_signs_hold": true
+   },
+   "FE-2_care_cage_bookings": {
+    "columns": [
+     "care_per_100k",
+     "cage_per_100k",
+     "bookings_per_1000"
+    ],
+    "stability": {
+     "care_per_100k": {
+      "banked": "neg",
+      "current_refit": "neg",
+      "dropped_city_signs": {
+       "drop_2025plus_forecast_vintage": "neg",
+       "drop_city_Cincinnati": "neg",
+       "drop_city_Detroit": "neg",
+       "drop_city_Memphis": "neg",
+       "drop_city_St. Louis": "neg"
+      }
+     },
+     "cage_per_100k": {
+      "banked": "pos",
+      "current_refit": "pos",
+      "dropped_city_signs": {
+       "drop_2025plus_forecast_vintage": "pos",
+       "drop_city_Cincinnati": "pos",
+       "drop_city_Detroit": "pos",
+       "drop_city_Memphis": "pos",
+       "drop_city_St. Louis": "neg"
+      }
+     },
+     "bookings_per_1000": {
+      "banked": "pos",
+      "current_refit": "pos",
+      "dropped_city_signs": {
+       "drop_2025plus_forecast_vintage": "pos",
+       "drop_city_Cincinnati": "pos",
+       "drop_city_Detroit": "neg",
+       "drop_city_Memphis": "pos",
+       "drop_city_St. Louis": "neg"
+      }
+     }
+    },
+    "sign_flip_columns": [
+     "cage_per_100k",
+     "bookings_per_1000"
+    ],
+    "all_signs_hold": false
+   }
+  },
+  "honest_null_cities": {
+   "in_outcome_series_not_in_panel": 35,
+   "note": "outcome-series carries 40 cities; panel carries 6. The 34 non-panel cities are the honest-null class: they could not enter ANY fit because care/cage $ books (city budget-dept grain) were never pulled for them — the selection is by input availability, not outcome availability.",
+   "months_guard_fails_banked": {
+    "Raleigh": [
+     2014,
+     2015,
+     2016,
+     2017,
+     2018
+    ],
+    "Jacksonville": [
+     2011,
+     2012,
+     2013,
+     2014,
+     2015,
+     2016,
+     2017,
+     2018,
+     2019,
+     2020
+    ],
+    "Omaha": [
+     2021,
+     2023
+    ],
+    "Fresno": [
+     2019
+    ],
+    "Baltimore": [
+     2021
+    ],
+    "Long Beach": [
+     2021
+    ],
+    "Sacramento": [
+     2021
+    ],
+    "Tucson": [
+     2021
+    ],
+    "San Francisco": [
+     2021
+    ],
+    "Phoenix": [
+     2021
+    ],
+    "Pittsburgh": [
+     2019,
+     2021
+    ],
+    "Detroit": [
+     2026
+    ]
+   }
+  }
+ },
+ "step4_power_curve": {
+  "FE-3_maslow_joint_t0": {
+   "n_current": 24,
+   "k_inputs": 5,
+   "within_r2_current": 0.695,
+   "se_current_per_input": [
+    0.027,
+    0.022,
+    0.028,
+    0.026,
+    0.023
+   ],
+   "banked_betas": [
+    -0.181,
+    -0.28,
+    -0.099,
+    0.64,
+    -0.003
+   ],
+   "min_abs_t_current": 0.14,
+   "new_city_year_within_info_share": 0.137,
+   "between_city_year_info_share": 0.863,
+   "se_shrink_projection": {
+    "150": {
+     "n_target": 150,
+     "se_relative_to_today": 0.4
+    },
+    "250": {
+     "n_target": 250,
+     "se_relative_to_today": 0.31
+    },
+    "400": {
+     "n_target": 400,
+     "se_relative_to_today": 0.245
+    }
+   },
+   "deepen_vs_expand": {},
+   "verdict_terms": {
+    "expand_gains": "sqrt(n) SE shrink on the POOLED within read + each new city tests transfer (LOCO class)",
+    "expand_costs": "each new city adds a fixed-effect intercept (dof cost) and a new honest-null surface; between-city share of variance (see above) is absorbed, not explained",
+    "deepen_gains": "sqrt(n) SE shrink WITHOUT new intercept dof + longer within-city arcs (lag t+2/t+3 cells), no new data-quality surface to learn",
+    "deepen_costs": "no new transfer evidence — the LOCO question (does it hold on unseen cities?) stays unanswered at greater precision"
+   }
+  },
+  "FE-3_arc_tplus1": {
+   "n_current": 18,
+   "k_inputs": 5,
+   "within_r2_current": 0.748,
+   "se_current_per_input": [
+    0.024,
+    0.02,
+    0.026,
+    0.031,
+    0.019
+   ],
+   "banked_betas": [
+    -0.197,
+    0.056,
+    -0.263,
+    0.544,
+    -0.189
+   ],
+   "min_abs_t_current": 2.8,
+   "new_city_year_within_info_share": 0.47,
+   "between_city_year_info_share": 0.53,
+   "se_shrink_projection": {
+    "150": {
+     "n_target": 150,
+     "se_relative_to_today": 0.346
+    },
+    "250": {
+     "n_target": 250,
+     "se_relative_to_today": 0.268
+    },
+    "400": {
+     "n_target": 400,
+     "se_relative_to_today": 0.212
+    }
+   },
+   "deepen_vs_expand": {},
+   "verdict_terms": {
+    "expand_gains": "sqrt(n) SE shrink on the POOLED within read + each new city tests transfer (LOCO class)",
+    "expand_costs": "each new city adds a fixed-effect intercept (dof cost) and a new honest-null surface; between-city share of variance (see above) is absorbed, not explained",
+    "deepen_gains": "sqrt(n) SE shrink WITHOUT new intercept dof + longer within-city arcs (lag t+2/t+3 cells), no new data-quality surface to learn",
+    "deepen_costs": "no new transfer evidence — the LOCO question (does it hold on unseen cities?) stays unanswered at greater precision"
+   }
+  },
+  "FE-6_care_plus_unemp": {
+   "n_current": 36,
+   "k_inputs": 2,
+   "within_r2_current": 0.263,
+   "se_current_per_input": [
+    0.023,
+    0.023
+   ],
+   "banked_betas": [
+    -0.304,
+    0.312
+   ],
+   "min_abs_t_current": 13.15,
+   "new_city_year_within_info_share": 0.133,
+   "between_city_year_info_share": 0.867,
+   "se_shrink_projection": {
+    "150": {
+     "n_target": 150,
+     "se_relative_to_today": 0.49
+    },
+    "250": {
+     "n_target": 250,
+     "se_relative_to_today": 0.379
+    },
+    "400": {
+     "n_target": 400,
+     "se_relative_to_today": 0.3
+    }
+   },
+   "deepen_vs_expand": {},
+   "verdict_terms": {
+    "expand_gains": "sqrt(n) SE shrink on the POOLED within read + each new city tests transfer (LOCO class)",
+    "expand_costs": "each new city adds a fixed-effect intercept (dof cost) and a new honest-null surface; between-city share of variance (see above) is absorbed, not explained",
+    "deepen_gains": "sqrt(n) SE shrink WITHOUT new intercept dof + longer within-city arcs (lag t+2/t+3 cells), no new data-quality surface to learn",
+    "deepen_costs": "no new transfer evidence — the LOCO question (does it hold on unseen cities?) stays unanswered at greater precision"
+   }
+  },
+  "FE-2_care_cage_bookings": {
+   "n_current": 19,
+   "k_inputs": 3,
+   "within_r2_current": 0.423,
+   "se_current_per_input": [
+    0.034,
+    0.034,
+    0.035
+   ],
+   "banked_betas": [
+    -0.452,
+    0.419,
+    0.013
+   ],
+   "min_abs_t_current": 0.37,
+   "new_city_year_within_info_share": 0.127,
+   "between_city_year_info_share": 0.873,
+   "se_shrink_projection": {
+    "150": {
+     "n_target": 150,
+     "se_relative_to_today": 0.356
+    },
+    "250": {
+     "n_target": 250,
+     "se_relative_to_today": 0.276
+    },
+    "400": {
+     "n_target": 400,
+     "se_relative_to_today": 0.218
+    }
+   },
+   "deepen_vs_expand": {},
+   "verdict_terms": {
+    "expand_gains": "sqrt(n) SE shrink on the POOLED within read + each new city tests transfer (LOCO class)",
+    "expand_costs": "each new city adds a fixed-effect intercept (dof cost) and a new honest-null surface; between-city share of variance (see above) is absorbed, not explained",
+    "deepen_gains": "sqrt(n) SE shrink WITHOUT new intercept dof + longer within-city arcs (lag t+2/t+3 cells), no new data-quality surface to learn",
+    "deepen_costs": "no new transfer evidence — the LOCO question (does it hold on unseen cities?) stays unanswered at greater precision"
+   }
+  }
+ }
+}

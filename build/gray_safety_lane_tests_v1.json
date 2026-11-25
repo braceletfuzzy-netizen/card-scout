@@ -1,0 +1,79 @@
+{
+ "tests": {
+  "calls_per1k_t_vs_murder_rate_t0": {
+   "r": 0.006,
+   "t_approx": 0.05,
+   "n_city_years": 53,
+   "cities": {
+    "Memphis": 7,
+    "Cincinnati": 12,
+    "Detroit": 9,
+    "St. Louis": 16,
+    "NYC": 6,
+    "Houston": 3
+   }
+  },
+  "calls_per1k_t_vs_murder_rate_t+1": {
+   "r": 0.344,
+   "t_approx": 2.34,
+   "n_city_years": 43,
+   "cities": {
+    "Memphis": 6,
+    "Cincinnati": 11,
+    "Detroit": 7,
+    "St. Louis": 14,
+    "NYC": 5
+   }
+  },
+  "calls_per1k_t_vs_murder_rate_t+2": {
+   "r": 0.394,
+   "t_approx": 2.54,
+   "n_city_years": 37,
+   "cities": {
+    "Memphis": 5,
+    "Cincinnati": 10,
+    "Detroit": 5,
+    "St. Louis": 13,
+    "NYC": 4
+   }
+  },
+  "murder_rate_t0_vs_calls_per1k_t+1": {
+   "r": 0.027,
+   "t_approx": 0.17,
+   "n_city_years": 44,
+   "cities": {
+    "Memphis": 6,
+    "Cincinnati": 11,
+    "Detroit": 7,
+    "St. Louis": 14,
+    "NYC": 6
+   }
+  }
+ },
+ "per_city": {
+  "Memphis": {
+   "n": 7,
+   "within_city_r_raw": -0.76
+  },
+  "Cincinnati": {
+   "n": 12,
+   "within_city_r_raw": -0.402
+  },
+  "Detroit": {
+   "n": 9,
+   "within_city_r_raw": -0.424
+  },
+  "St. Louis": {
+   "n": 16,
+   "within_city_r_raw": 0.514
+  },
+  "NYC": {
+   "n": 6,
+   "within_city_r_raw": 0.239
+  },
+  "Houston": {
+   "n": 3,
+   "within_city_r_raw": -0.864
+  }
+ }
+}

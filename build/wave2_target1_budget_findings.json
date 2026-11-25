@@ -1,0 +1,18 @@
+{
+ "NO_FY2025_budget": {
+  "total_all_funds": {
+   "exec_proposal": 1470000000,
+   "council_adopted": "~1.8B (council.nola.gov 2024-11-19 press release: 'The $1.8 billion budget')"
+  },
+  "GF": {
+   "exec_proposal": 575900000,
+   "council_adopted": "NOT FOUND: no adopted GF total published; exec book shows 776,115,673 REVENUE (p12) vs 575.9M 'other sources' figure on p13; press (nola.com town hall 2024-12-07) cited 'about $775 million available for the general fund'"
+  }
+ },
+ "STL_murders": {
+  "2002": 111,
+  "2016": 188,
+  "2017": 205,
+  "2018": 187
+ }
+}

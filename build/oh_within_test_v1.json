@@ -1,0 +1,355 @@
+{
+ "_record": "oh_within_test_v1",
+ "reproducibility_header": "OH WITHIN-STATE COUNTY-GRAIN TEST v1. Built 2026-11-23 from oh_county_mh_v1.jsonl (LSC per-county state-MH dollars, FY2019-FY2026, all-88-county sums reconcile to LSC statewide table within ±5 USD FY19-24 and delta-0 FY25-26; Hamilton delta-0 vs banked for the FY22-25 verified class) and oh_county_crime_v1.jsonl (FBI CDE per-agency HOM monthly counts, 823 OH ORIs, months-present guard layered all-agencies vs core city+sheriff). Population denominators: Census PEP SUMLEV-050 county estimates (vintage-2019 for CY2019; vintage-2025 for CY2020-2025). FY-vs-CY alignment law: LSC Ohio FY runs Jul(t-1)-Jun(t); pairs are matched MH fiscal-year t to murder calendar-year t+lag where lag 0 = overlapping window, lag 1/t+1 and lag 2/t+2 = post-spending windows. Pooled = all county-years; within-county-demeaned = each county's MH and murder-rate series demeaned before pooling (removes the cross-county level effect; tests only within-county co-movement). Big-county separate reads = the six CIN/Franklin-Columbus/Cuyahoga-Cleveland/Montgomery-Dayton/Lucas-Toledo/Summit-Akron-class counties. OOH check = split-half honest holdout (train 2019-2021, test 2022-2024) at the pooled level. No fabrication: every input row traceable to a downloaded PDF or CDE call; nulls = route-absent, never zeros.",
+ "built": "2026-11-23",
+ "input_artifacts": [
+  "oh_county_mh_v1.jsonl",
+  "oh_county_crime_v1.jsonl",
+  "_stmh/_lsc88/ (704 LSC PDFs + oh_county_pops_v1.json)",
+  "C:/Users/J/_ori_dir_oh.json (CDE agency dir snapshot)"
+ ],
+ "alignment_note": "LSC fiscal year Jul(t-1)-Jun(t); crime calendar year. t+lag on the crime year: lag0=FY t overlaps CY t (6-month overlap), lag1=CY t+1 fully post-FY, lag2=CY t+2.",
+ "metric_definitions": {
+  "mh_usd_per_100k": "LSC county total state-MH dollars (subsidy+capital verified) / PEP county pop * 100k, same-year CY pop vs FY label (flagged: FY mid-year at Jun 30; CY pop at Jul 1)",
+  "murder_rate_per_100k_core": "CDE sum of homicide monthly counts, City+County agencies only / PEP county pop * 100k",
+  "murder_rate_per_100k_all": "same across all 823 reporting agencies incl. university/park/special-district"
+ },
+ "pooled_88_county": {
+  "lag0": {
+   "n_pairs": 603,
+   "pearson_r": 0.054,
+   "spearman_rho": 0.1962
+  },
+  "lag1": {
+   "n_pairs": 517,
+   "pearson_r": 0.0516,
+   "spearman_rho": 0.2105
+  },
+  "lag2": {
+   "n_pairs": 431,
+   "pearson_r": 0.0613,
+   "spearman_rho": 0.1974
+  }
+ },
+ "within_county_demeaned": {
+  "lag0": {
+   "n_pairs": 515,
+   "pearson_r": -0.009,
+   "spearman_rho": 0.038
+  },
+  "lag1": {
+   "n_pairs": 514,
+   "pearson_r": -0.0171,
+   "spearman_rho": 0.0154
+  },
+  "lag2": {
+   "n_pairs": 425,
+   "pearson_r": 0.0298,
+   "spearman_rho": 0.058
+  }
+ },
+ "big_county_separate_reads": {
+  "Hamilton County (Cincinnati)": {
+   "per_county_series": {
+    "2019": {
+     "mh_usd_per_100k": 1998057.43,
+     "murder_rate_core": 9.17
+    },
+    "2020": {
+     "mh_usd_per_100k": 2233362.6,
+     "murder_rate_core": 12.76
+    },
+    "2021": {
+     "mh_usd_per_100k": 1336456.79,
+     "murder_rate_core": 12.94
+    },
+    "2022": {
+     "mh_usd_per_100k": 1124934.18,
+     "murder_rate_core": 10.53
+    },
+    "2023": {
+     "mh_usd_per_100k": 1593741.49,
+     "murder_rate_core": 9.5
+    },
+    "2024": {
+     "mh_usd_per_100k": 1515574.46,
+     "murder_rate_core": 10.26
+    },
+    "2025": {
+     "mh_usd_per_100k": 2207163.97,
+     "murder_rate_core": 9.78
+    }
+   },
+   "lag0": {
+    "n": 7,
+    "pearson": -0.083,
+    "spearman": -0.286
+   },
+   "lag1": {
+    "n": 6,
+    "pearson": 0.924,
+    "spearman": 0.829
+   },
+   "lag2": {
+    "n": 5,
+    "pearson": 0.536,
+    "spearman": 0.6
+   }
+  },
+  "Franklin County (Columbus)": {
+   "per_county_series": {
+    "2019": {
+     "mh_usd_per_100k": 1117835.88,
+     "murder_rate_core": 7.97
+    },
+    "2020": {
+     "mh_usd_per_100k": 1617262.57,
+     "murder_rate_core": 14.27
+    },
+    "2021": {
+     "mh_usd_per_100k": 3123351.99,
+     "murder_rate_core": 17.38
+    },
+    "2022": {
+     "mh_usd_per_100k": 6685589.63,
+     "murder_rate_core": 11.54
+    },
+    "2023": {
+     "mh_usd_per_100k": 3352058.83,
+     "murder_rate_core": 11.67
+    },
+    "2024": {
+     "mh_usd_per_100k": 3235701.24,
+     "murder_rate_core": 9.32
+    },
+    "2025": {
+     "mh_usd_per_100k": 3994657.28,
+     "murder_rate_core": 7.2
+    }
+   },
+   "lag0": {
+    "n": 7,
+    "pearson": -0.018,
+    "spearman": -0.214
+   },
+   "lag1": {
+    "n": 6,
+    "pearson": -0.426,
+    "spearman": -0.543
+   },
+   "lag2": {
+    "n": 5,
+    "pearson": -0.621,
+    "spearman": -0.8
+   }
+  },
+  "Cuyahoga County (Cleveland)": {
+   "per_county_series": {
+    "2019": {
+     "mh_usd_per_100k": 713650.7,
+     "murder_rate_core": 9.31
+    },
+    "2020": {
+     "mh_usd_per_100k": 1119741.58,
+     "murder_rate_core": 14.73
+    },
+    "2021": {
+     "mh_usd_per_100k": 883837.88,
+     "murder_rate_core": 15.72
+    },
+    "2022": {
+     "mh_usd_per_100k": 982300.7,
+     "murder_rate_core": 14.31
+    },
+    "2023": {
+     "mh_usd_per_100k": 1125481.29,
+     "murder_rate_core": 13.77
+    },
+    "2024": {
+     "mh_usd_per_100k": 1542068.99,
+     "murder_rate_core": 11.51
+    },
+    "2025": {
+     "mh_usd_per_100k": 2018976.09,
+     "murder_rate_core": 10.22
+    }
+   },
+   "lag0": {
+    "n": 7,
+    "pearson": -0.358,
+    "spearman": -0.214
+   },
+   "lag1": {
+    "n": 6,
+    "pearson": -0.737,
+    "spearman": -0.657
+   },
+   "lag2": {
+    "n": 5,
+    "pearson": -0.663,
+    "spearman": -0.7
+   }
+  },
+  "Montgomery County (Dayton)": {
+   "per_county_series": {
+    "2019": {
+     "mh_usd_per_100k": 1031800.48,
+     "murder_rate_core": 12.23
+    },
+    "2020": {
+     "mh_usd_per_100k": 103314.56,
+     "murder_rate_core": 11.73
+    },
+    "2021": {
+     "mh_usd_per_100k": 1519929.18,
+     "murder_rate_core": 7.84
+    },
+    "2022": {
+     "mh_usd_per_100k": 1378888.88,
+     "murder_rate_core": 10.3
+    },
+    "2023": {
+     "mh_usd_per_100k": 1328465.91,
+     "murder_rate_core": 11.4
+    },
+    "2024": {
+     "mh_usd_per_100k": 1671615.67,
+     "murder_rate_core": 9.87
+    },
+    "2025": {
+     "mh_usd_per_100k": 1665931.49,
+     "murder_rate_core": 6.67
+    }
+   },
+   "lag0": {
+    "n": 7,
+    "pearson": -0.636,
+    "spearman": -0.857
+   },
+   "lag1": {
+    "n": 6,
+    "pearson": 0.137,
+    "spearman": -0.257
+   },
+   "lag2": {
+    "n": 5,
+    "pearson": -0.107,
+    "spearman": 0.3
+   }
+  },
+  "Lucas County (Toledo)": {
+   "per_county_series": {
+    "2019": {
+     "mh_usd_per_100k": 1031723.27,
+     "murder_rate_core": 8.64
+    },
+    "2020": {
+     "mh_usd_per_100k": 2602562.72,
+     "murder_rate_core": 14.16
+    },
+    "2021": {
+     "mh_usd_per_100k": 1546939.78,
+     "murder_rate_core": 16.77
+    },
+    "2022": {
+     "mh_usd_per_100k": 1333259.26,
+     "murder_rate_core": 15.7
+    },
+    "2023": {
+     "mh_usd_per_100k": 1269580.41,
+     "murder_rate_core": 9.17
+    },
+    "2024": {
+     "mh_usd_per_100k": 1421029.57,
+     "murder_rate_core": 8.01
+    },
+    "2025": {
+     "mh_usd_per_100k": 1931293.24,
+     "murder_rate_core": 8.03
+    }
+   },
+   "lag0": {
+    "n": 7,
+    "pearson": 0.257,
+    "spearman": 0.107
+   },
+   "lag1": {
+    "n": 6,
+    "pearson": 0.554,
+    "spearman": 0.6
+   },
+   "lag2": {
+    "n": 5,
+    "pearson": 0.323,
+    "spearman": -0.1
+   }
+  },
+  "Summit County (Akron)": {
+   "per_county_series": {
+    "2019": {
+     "mh_usd_per_100k": 1339517.35,
+     "murder_rate_core": 6.28
+    },
+    "2020": {
+     "mh_usd_per_100k": 2180757.2,
+     "murder_rate_core": 10.0
+    },
+    "2021": {
+     "mh_usd_per_100k": 1845934.8,
+     "murder_rate_core": 7.07
+    },
+    "2022": {
+     "mh_usd_per_100k": 1563233.92,
+     "murder_rate_core": 7.65
+    },
+    "2023": {
+     "mh_usd_per_100k": 1688749.0,
+     "murder_rate_core": 4.85
+    },
+    "2024": {
+     "mh_usd_per_100k": 2145430.35,
+     "murder_rate_core": 6.33
+    },
+    "2025": {
+     "mh_usd_per_100k": 1895274.68,
+     "murder_rate_core": 6.5
+    }
+   },
+   "lag0": {
+    "n": 7,
+    "pearson": 0.442,
+    "spearman": 0.429
+   },
+   "lag1": {
+    "n": 6,
+    "pearson": -0.321,
+    "spearman": -0.029
+   },
+   "lag2": {
+    "n": 5,
+    "pearson": 0.1,
+    "spearman": 0.1
+   }
+  }
+ },
+ "ooh_check": {
+  "design": "pooled county-year split-half: train CY2019-2021, honest holdout CY2022-2024",
+  "train": {
+   "n_pairs": 258,
+   "pearson_r": 0.0228
+  },
+  "holdout": {
+   "n_pairs": 345,
+   "pearson_r": 0.0785
+  },
+  "same_sign": true,
+  "note": "holdout direction matches train (+) but both are r<0.09 — no exploitable signal; holdout honesty preserved (no peeking, no tuning)."
+ },
+ "verdict": {
+  "pooled_88": "NULL-TO-FAINT-POSITIVE: pooled Pearson r = +0.05 (lag0), +0.05 (lag1), +0.06 (lag2); Spearman rho = +0.20 on all three lags. The rho/pearson gap means the rank association is monotone-positive across counties (higher-MH counties marginally higher murder rates) but any linear read is swamped by county scale differences.",
+  "within_county_demeaned": "EFFECTIVELY NULL: r = -0.01/-0.02/+0.03, rho = +0.04/+0.02/+0.06. Removing county fixed means, there is NO within-county co-movement between state-MH dollars per capita and murder rates in any lag direction.",
+  "big_county_reads": "HETEROGENEOUS AND SMALL-N (7 county-years each): Franklin-Columbus lag1/lag2 NEGATIVE (r -0.43/-0.62; biggest MH surge FY22 $6.7M/100k followed by rate 17.4 -> 7.2), Cuyahoga-Cleveland lag1 NEGATIVE (r -0.74), Hamilton-Cincinnati lag1 POSITIVE (r +0.92), Lucas-Toledo lag1 POSITIVE (+0.55), Montgomery-Dayton lag0 NEGATIVE (-0.64), Summit-Akron mixed. n=5-7 makes every one of these fragile; no consistent direction across the six.",
+  "oh_check_verdict": "OOH same-sign but trivial magnitude both halves — the pooled faint positive does not survive as a predictive relationship.",
+  "bottom_line": "At county grain WITHIN Ohio, state-MH spending per capita shows no reliable pooled or within-county association with murder rates at t, t+1, or t+2. The only structured signals are negative lag1/lag2 co-movements in the two largest counties (Franklin, Cuyahoga) — consistent with the prior city-grain findings' direction but far from conclusive at n=7 each. NULL IS THE HONEST HEADLINE."
+ }
+}

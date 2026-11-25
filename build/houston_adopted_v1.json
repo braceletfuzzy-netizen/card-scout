@@ -1,0 +1,42 @@
+{
+ "city": "Houston",
+ "band": "C",
+ "fiscal_year": "FY2026",
+ "budget_total_adopted_adopted_verified": 7050000000,
+ "budget_total_adopted_note": "Citywide Expenditure Summary, FY2026 Budget column: $7,050 million total expenditure across all City funds (General, Special, Enterprise, with interfund eliminations). Published rounded to millions; excludes Service Chargeback and Internal Service Funds; it is an expenditure-based total (not a total-appropriation figure including fund-balance application).",
+ "gf_adopted": 3047770272,
+ "gf_adopted_basis": "General Fund Summary (book section II-3): Total Expenditures and Other Uses FY2026 = $3,047,770,272 (= $2,539,770,524 expenditures other than debt/PAYGO + $507,999,748 debt service and PAYGO capital projects). Total GF budget including fund-balance application = $3,352,720,551.",
+ "source_url": "https://www.houstontx.gov/budget/26budadopt/index.html",
+ "source_files": [
+  {
+   "file": "FY2026_Adopted_Budget.pdf",
+   "url": "https://www.houstontx.gov/sites/default/files/migrated/budget/26budadopt/FY2026_Adopted_Budget.pdf",
+   "bytes": 87615925,
+   "pages": 679,
+   "gf_summary_page": "PDF p.94 (book page II-3)"
+  },
+  {
+   "file": "II_GFS.pdf",
+   "url": "https://www.houstontx.gov/sites/default/files/migrated/budget/26budadopt/II_GFS.pdf",
+   "gf_summary_page": "p.2 (book page II-3)"
+  },
+  {
+   "file": "I_CES.pdf",
+   "url": "https://www.houstontx.gov/sites/default/files/migrated/budget/26budadopt/I_CES.pdf",
+   "citywide_summary_page": "p.1 (book page I-18)"
+  },
+  {
+   "file": "I_Maylet.pdf",
+   "url": "https://www.houstontx.gov/sites/default/files/migrated/budget/26budadopt/I_Maylet.pdf",
+   "note": "Mayor's letter: PROPOSED all-funds $7.0B, PROPOSED GF $3.03B"
+  }
+ ],
+ "honest_gaps": [
+  "No exact-dollar all-funds adopted total is published: the Citywide Expenditure Summary is rounded to $ millions ($7,050M) and excludes Service Chargeback and Internal Service Funds, so the 7050000000 figure is a rounded, expenditure-scoped adopted total, not a total-appropriations figure.",
+  "The widely-quoted $7.5B/$7.0B figures trace to the Mayor's PROPOSED budget (letter, book page I-x); the adopted figures extracted here come from the adopted book's FY2026 Budget columns (council action June 2025).",
+  "Adoption amendments between proposed and adopted are not itemized in a single table; GF adopted ($3,047.8M) vs GF proposed ($3.03B per letter) differ modestly.",
+  "Component volumes II_GFEC/II_GFR (General Fund expenditures/revenues) were fetched but not fully parsed; totals were taken from the General Fund Summary instead."
+ ],
+ "extraction_notes": "houstontx.gov is plain-curl accessible (unlike okc.gov). Downloaded 8 PDFs from the FY2026 adopted budget hub. Combined book parsed with PyMuPDF; GF summary columns rebuilt from word coordinates (raw text stream interleaves columns). Extracted 2026-11-22 UTC.",
+ "extracted_at_utc": "2026-11-22T12:06:31.607193Z"
+}

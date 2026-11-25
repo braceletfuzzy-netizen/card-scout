@@ -1,0 +1,62 @@
+{
+ "1998": {
+  "murder": 633,
+  "violent": 85915,
+  "n": 5,
+  "mr": null
+ },
+ "1999": {
+  "murder": 671,
+  "violent": 78971,
+  "n": 5,
+  "mr": null
+ },
+ "2000": {
+  "murder": 667,
+  "violent": 75739,
+  "n": 5,
+  "mr": null
+ },
+ "2001": {
+  "murder": 649,
+  "violent": 68737,
+  "n": 5,
+  "mr": null
+ },
+ "2019": {
+  "murder": 319,
+  "violent": 47821,
+  "n": 5,
+  "mr": null
+ },
+ "2020": {
+  "murder": 468,
+  "violent": 47959,
+  "n": 5,
+  "mr": null
+ },
+ "2021": {
+  "murder": 488,
+  "violent": 53364,
+  "n": 5,
+  "mr": null
+ },
+ "2022": {
+  "murder": 438,
+  "violent": 61293,
+  "n": 5,
+  "mr": null
+ },
+ "2023": {
+  "murder": 404,
+  "violent": 56006,
+  "n": 5,
+  "mr": null
+ },
+ "2024": {
+  "murder": 357,
+  "violent": 58116,
+  "n": 5,
+  "mr": null
+ }
+}
