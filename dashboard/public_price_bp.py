@@ -372,6 +372,16 @@ def price_page(player_slug: str, lane_slug: str):
         ts_svg = TS.sparkline_svg(pts)
     except Exception:
         ts_svg = ""  # honest degrade: the page renders without the chart
+    # Daily-activity counter (the shared-footer dependency, the Nov-27 /price-500 fix):
+    # the FOOTER_STATEMENT renders {{ daily.today }} — the price-lane must pass the
+    # daily context exactly like band_pages does (read-only bump+read; never raise).
+    daily = {"today": 0, "total": 0}
+    try:
+        from daily_activity_counter import bump, read_today
+        bump()
+        daily = read_today()
+    except Exception:
+        pass
     return render_template_string(
         PRICE_PAGE_TEMPLATE,
         lane=lane,
@@ -379,6 +389,7 @@ def price_page(player_slug: str, lane_slug: str):
         chip=_chip_class(lane["band_class"], lane["n"]),
         ts_svg=ts_svg,
         ebay=ebay_search_url(raw.get("search_q") or "", lane["slug"]),
+        daily=daily,
     )
 
 
@@ -386,14 +397,32 @@ def price_page(player_slug: str, lane_slug: str):
 def monthly_list():
     export = load_monthly_export()
     rows = export["rows"] if export else []
+    # The same shared-footer dependency (the /lists/monthly-500 fix):
+    daily = {"today": 0, "total": 0}
+    try:
+        from daily_activity_counter import bump, read_today
+        bump()
+        daily = read_today()
+    except Exception:
+        pass
     return render_template_string(
         MONTHLY_LIST_TEMPLATE,
         rows=rows,
         month=(export or {}).get("month", ""),
+        daily=daily,
     )
 
 
 @bp.errorhandler(404)
 def price_404(e):
     """Honest 404 for this blueprint — real content, real 404 status (law 4)."""
-    return render_template_string(PRICE_404_TEMPLATE), 404
+    # The shared-footer daily dependency (the 404-handler must pass it too —
+    # this was the other leg of the Nov-27 /price-500: the missing-lane 404s
+    # crashed the same way the live-lane renders did).
+    daily = {"today": 0, "total": 0}
+    try:
+        from daily_activity_counter import bump, read_today
+        daily = read_today()
+    except Exception:
+        pass
+    return render_template_string(PRICE_404_TEMPLATE, daily=daily), 404
